@@ -1,0 +1,174 @@
+.landing-page {
+    min-height: 100vh;
+    padding: 3.5rem 1.5rem 2rem;
+    background: #f5f8fc;
+    color: #172b4d;
+}
+
+.page-content {
+    width: min(100%, 68rem);
+    margin: 0 auto;
+}
+
+.hero {
+    max-width: 52rem;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+}
+
+.eyebrow {
+    margin: 0 0 0.6rem;
+    color: #155eef;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    margin: 0;
+    color: #102a56;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 750;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    max-width: 42rem;
+    margin: 1rem auto 0;
+    color: #425675;
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    line-height: 1.6;
+}
+
+.introduction {
+    max-width: 54rem;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.introduction h2,
+.section-heading h2 {
+    margin: 0;
+    color: #102a56;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    letter-spacing: -0.025em;
+}
+
+.introduction p {
+    margin: 0.8rem 0 0;
+    color: #425675;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.section-heading {
+    margin-bottom: 1.25rem;
+}
+
+.country-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.1rem;
+}
+
+.country-card {
+    display: flex;
+    min-height: 13.5rem;
+    flex-direction: column;
+    padding: 1.5rem;
+    border: 1px solid #d8e1ee;
+    border-radius: 0.85rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgb(16 42 86 / 4%);
+    transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.country-card:hover {
+    transform: translateY(-2px);
+    border-color: #8eb5f8;
+    box-shadow: 0 8px 20px rgb(16 42 86 / 9%);
+}
+
+.country-card h3 {
+    margin: 0;
+    color: #102a56;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.country-card p {
+    margin: 0.75rem 0 1.25rem;
+    color: #425675;
+    line-height: 1.6;
+}
+
+.country-card a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    width: fit-content;
+    margin-top: auto;
+    border-radius: 0.2rem;
+    color: #155eef;
+    font-weight: 650;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.country-card a:hover {
+    color: #0b45b5;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.country-card a:focus-visible {
+    outline: 3px solid #155eef;
+    outline-offset: 4px;
+}
+
+.information-note {
+    margin-top: 2rem;
+    padding: 1rem 1.2rem;
+    border-left: 4px solid #3978df;
+    border-radius: 0.25rem;
+    background: #e9f1ff;
+    color: #263f66;
+}
+
+.information-note p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+    .country-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 540px) {
+    .landing-page {
+        padding: 2.5rem 1rem 1.5rem;
+    }
+
+    .hero {
+        margin-bottom: 2rem;
+    }
+
+    .introduction {
+        margin-bottom: 2.25rem;
+        text-align: left;
+    }
+
+    .country-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .country-card {
+        transition: none;
+    }
+}
