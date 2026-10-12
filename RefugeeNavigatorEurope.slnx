@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/src/">
+    <Project Path="src/RefugeeNavigator.Domain/RefugeeNavigator.Domain.csproj" />
     <Project Path="src/RefugeeNavigator.Web/RefugeeNavigator.Web.csproj" />
   </Folder>
   <Folder Name="/tests/">
