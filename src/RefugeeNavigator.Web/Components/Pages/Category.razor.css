@@ -1,0 +1,121 @@
+.category-page {
+    min-height: 100vh;
+    padding: 2.5rem 1.5rem 2rem;
+    background: #f5f8fc;
+    color: #172b4d;
+}
+
+.page-content {
+    width: min(100%, 68rem);
+    margin: 0 auto;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 2rem;
+    border-radius: 0.2rem;
+    color: #155eef;
+    font-weight: 650;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: #0b45b5;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.back-link:focus-visible {
+    outline: 3px solid #155eef;
+    outline-offset: 4px;
+}
+
+.category-header {
+    max-width: 52rem;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+}
+
+.eyebrow {
+    margin: 0 0 0.6rem;
+    color: #155eef;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.category-header h1 {
+    margin: 0;
+    color: #102a56;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 750;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+}
+
+.subtitle {
+    max-width: 42rem;
+    margin: 1rem auto 0;
+    color: #425675;
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    line-height: 1.6;
+}
+
+.content-placeholder {
+    max-width: 54rem;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid #d8e1ee;
+    border-radius: 0.85rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgb(16 42 86 / 4%);
+    text-align: center;
+}
+
+.content-placeholder h2 {
+    margin: 0;
+    color: #102a56;
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    letter-spacing: -0.025em;
+}
+
+.content-placeholder p {
+    margin: 0.8rem 0 0;
+    color: #425675;
+    line-height: 1.7;
+}
+
+.information-note {
+    margin-top: 2rem;
+    padding: 1rem 1.2rem;
+    border-left: 4px solid #3978df;
+    border-radius: 0.25rem;
+    background: #e9f1ff;
+    color: #263f66;
+}
+
+.information-note p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 540px) {
+    .category-page {
+        padding: 1.75rem 1rem 1.5rem;
+    }
+
+    .back-link {
+        margin-bottom: 1.5rem;
+    }
+
+    .category-header {
+        margin-bottom: 2rem;
+    }
+
+    .content-placeholder {
+        padding: 1.5rem 1.1rem;
+        text-align: left;
+    }
+}

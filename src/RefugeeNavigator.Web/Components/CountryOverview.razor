@@ -25,37 +25,37 @@
                 <article class="category-card">
                     <h3>Temporary protection</h3>
                     <p>Residence status and administrative procedures.</p>
-                    <span class="availability">Information coming soon</span>
+                    <a class="category-link" href="/countries/@CountrySlug/categories/temporary-protection">Explore category <span aria-hidden="true">→</span></a>
                 </article>
 
                 <article class="category-card">
                     <h3>Employment</h3>
                     <p>Finding work and understanding employment requirements.</p>
-                    <span class="availability">Information coming soon</span>
+                    <a class="category-link" href="/countries/@CountrySlug/categories/employment">Explore category <span aria-hidden="true">→</span></a>
                 </article>
 
                 <article class="category-card">
                     <h3>Healthcare</h3>
                     <p>Accessing healthcare services.</p>
-                    <span class="availability">Information coming soon</span>
+                    <a class="category-link" href="/countries/@CountrySlug/categories/healthcare">Explore category <span aria-hidden="true">→</span></a>
                 </article>
 
                 <article class="category-card">
                     <h3>Housing</h3>
                     <p>Finding accommodation and understanding housing options.</p>
-                    <span class="availability">Information coming soon</span>
+                    <a class="category-link" href="/countries/@CountrySlug/categories/housing">Explore category <span aria-hidden="true">→</span></a>
                 </article>
 
                 <article class="category-card">
                     <h3>Education</h3>
                     <p>Education and learning opportunities.</p>
-                    <span class="availability">Information coming soon</span>
+                    <a class="category-link" href="/countries/@CountrySlug/categories/education">Explore category <span aria-hidden="true">→</span></a>
                 </article>
 
                 <article class="category-card">
                     <h3>Social assistance</h3>
                     <p>Available support and assistance programs.</p>
-                    <span class="availability">Information coming soon</span>
+                    <a class="category-link" href="/countries/@CountrySlug/categories/social-assistance">Explore category <span aria-hidden="true">→</span></a>
                 </article>
             </div>
         </section>
@@ -69,4 +69,12 @@
 @code {
     [Parameter]
     public required string CountryName { get; set; }
+
+    private string CountrySlug => CountryName switch
+    {
+        "Denmark" => "denmark",
+        "Germany" => "germany",
+        "Poland" => "poland",
+        _ => string.Empty
+    };
 }

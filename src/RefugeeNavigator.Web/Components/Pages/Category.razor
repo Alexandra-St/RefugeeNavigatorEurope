@@ -1,0 +1,64 @@
+@page "/countries/{CountrySlug}/categories/{CategorySlug}"
+@using Microsoft.AspNetCore.Components
+@inject NavigationManager Navigation
+
+@if (CountryName is { } countryName && CategoryDetails is { } category)
+{
+    <PageTitle>@category.Name | @countryName | Refugee Navigator Europe</PageTitle>
+
+    <main class="category-page">
+        <div class="page-content">
+            <a class="back-link" href="/countries/@CountrySlug" aria-label="Back to @countryName">← Back to @countryName</a>
+
+            <header class="category-header">
+                <p class="eyebrow">@countryName</p>
+                <h1>@category.Name</h1>
+                <p class="subtitle">@category.Description</p>
+            </header>
+
+            <section class="content-placeholder" aria-labelledby="placeholder-heading">
+                <h2 id="placeholder-heading">Information coming soon</h2>
+                <p>Detailed information for this category will be added after verification against official sources.</p>
+            </section>
+
+            <footer class="information-note">
+                <p>Information may change. Always confirm important requirements with official authorities.</p>
+            </footer>
+        </div>
+    </main>
+}
+
+@code {
+    [Parameter]
+    public string CountrySlug { get; set; } = string.Empty;
+
+    [Parameter]
+    public string CategorySlug { get; set; } = string.Empty;
+
+    private string? CountryName => CountrySlug switch
+    {
+        "denmark" => "Denmark",
+        "germany" => "Germany",
+        "poland" => "Poland",
+        _ => null
+    };
+
+    private (string Name, string Description)? CategoryDetails => CategorySlug switch
+    {
+        "temporary-protection" => ("Temporary protection", "Residence status and administrative procedures."),
+        "employment" => ("Employment", "Finding work and understanding employment requirements."),
+        "healthcare" => ("Healthcare", "Accessing healthcare services."),
+        "housing" => ("Housing", "Finding accommodation and understanding housing options."),
+        "education" => ("Education", "Education and learning opportunities."),
+        "social-assistance" => ("Social assistance", "Available support and assistance programs."),
+        _ => null
+    };
+
+    protected override void OnParametersSet()
+    {
+        if (CountryName is null || CategoryDetails is null)
+        {
+            Navigation.NotFound();
+        }
+    }
+}

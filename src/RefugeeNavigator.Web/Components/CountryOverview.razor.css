@@ -105,6 +105,11 @@
     box-shadow: 0 2px 8px rgb(16 42 86 / 4%);
 }
 
+.category-card:hover {
+    border-color: #8eb5f8;
+    box-shadow: 0 8px 20px rgb(16 42 86 / 9%);
+}
+
 .category-card h3 {
     margin: 0;
     color: #102a56;
@@ -112,13 +117,30 @@
     font-weight: 700;
 }
 
-.availability {
+.category-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
     width: fit-content;
     margin-top: auto;
     padding-top: 1.25rem;
-    color: #425675;
+    border-radius: 0.2rem;
+    color: #155eef;
     font-size: 0.9rem;
     font-weight: 650;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.category-link:hover {
+    color: #0b45b5;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.category-link:focus-visible {
+    outline: 3px solid #155eef;
+    outline-offset: 4px;
 }
 
 .information-note {
