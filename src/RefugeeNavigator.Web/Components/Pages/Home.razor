@@ -1,56 +1,57 @@
 @page "/"
+@inject IStringLocalizer<SharedResource> Localizer
 
-<PageTitle>Refugee Navigator Europe</PageTitle>
+<PageTitle>@Localizer["Home.PageTitle"]</PageTitle>
 
 <main id="main-content" class="landing-page">
     <div class="page-content">
         <header class="hero">
-            <p class="eyebrow">A guide to getting settled</p>
+            <p class="eyebrow">@Localizer["Home.Eyebrow"]</p>
             <h1>Refugee Navigator Europe</h1>
-            <p class="hero-subtitle">Practical information for Ukrainians under temporary protection in Europe.</p>
+            <p class="hero-subtitle">@Localizer["Home.HeroSubtitle"]</p>
         </header>
 
         <section class="introduction" aria-labelledby="introduction-heading">
-            <h2 id="introduction-heading">Find practical guidance</h2>
-            <p>Explore essential information about temporary protection, employment, healthcare, housing, education, and social assistance.</p>
-            <p>Information is organized by country and supported by official sources.</p>
+            <h2 id="introduction-heading">@Localizer["Home.FindGuidance"]</h2>
+            <p>@Localizer["Home.IntroductionDescription"]</p>
+            <p>@Localizer["Home.OfficialSources"]</p>
         </section>
 
         <section class="country-selection" aria-labelledby="country-heading">
             <div class="section-heading">
-                <p class="eyebrow">Explore by location</p>
-                <h2 id="country-heading">Choose a country</h2>
+                <p class="eyebrow">@Localizer["Home.ExploreByLocation"]</p>
+                <h2 id="country-heading">@Localizer["Home.ChooseCountry"]</h2>
             </div>
 
             <div class="country-grid">
                 <article class="country-card">
-                    <h3>Denmark</h3>
-                    <p>Explore practical information about living in Denmark under temporary protection.</p>
-                    <a href="/countries/denmark" aria-label="Explore practical information for Denmark">
-                        Explore Denmark <span aria-hidden="true">→</span>
+                    <h3>@Localizer["Country.Denmark"]</h3>
+                    <p>@Localizer["Home.CountryDescription", Localizer["Country.Denmark"].Value]</p>
+                    <a href="/countries/denmark" aria-label="@Localizer["Home.CountryLinkLabel", Localizer["Country.Denmark"].Value]">
+                        @Localizer["Home.ExploreCountry", Localizer["Country.Denmark"].Value] <span aria-hidden="true">→</span>
                     </a>
                 </article>
 
                 <article class="country-card">
-                    <h3>Germany</h3>
-                    <p>Explore practical information about living in Germany under temporary protection.</p>
-                    <a href="/countries/germany" aria-label="Explore practical information for Germany">
-                        Explore Germany <span aria-hidden="true">→</span>
+                    <h3>@Localizer["Country.Germany"]</h3>
+                    <p>@Localizer["Home.CountryDescription", Localizer["Country.Germany"].Value]</p>
+                    <a href="/countries/germany" aria-label="@Localizer["Home.CountryLinkLabel", Localizer["Country.Germany"].Value]">
+                        @Localizer["Home.ExploreCountry", Localizer["Country.Germany"].Value] <span aria-hidden="true">→</span>
                     </a>
                 </article>
 
                 <article class="country-card">
-                    <h3>Poland</h3>
-                    <p>Explore practical information about living in Poland under temporary protection.</p>
-                    <a href="/countries/poland" aria-label="Explore practical information for Poland">
-                        Explore Poland <span aria-hidden="true">→</span>
+                    <h3>@Localizer["Country.Poland"]</h3>
+                    <p>@Localizer["Home.CountryDescription", Localizer["Country.Poland"].Value]</p>
+                    <a href="/countries/poland" aria-label="@Localizer["Home.CountryLinkLabel", Localizer["Country.Poland"].Value]">
+                        @Localizer["Home.ExploreCountry", Localizer["Country.Poland"].Value] <span aria-hidden="true">→</span>
                     </a>
                 </article>
             </div>
         </section>
 
         <footer class="information-note">
-            <p>Information may change. Always confirm important requirements with official authorities.</p>
+            <p>@Localizer["Common.Disclaimer"]</p>
         </footer>
     </div>
 </main>

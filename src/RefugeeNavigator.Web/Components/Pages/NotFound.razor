@@ -1,3 +1,4 @@
 @page "/not-found"
+@inject IStringLocalizer<SharedResource> Localizer
 
-<PageTitle>Not found</PageTitle>
+<PageTitle>@Localizer["NotFound.PageTitle"]</PageTitle>

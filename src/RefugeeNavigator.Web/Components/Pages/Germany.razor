@@ -1,5 +1,6 @@
 @page "/countries/germany"
+@inject IStringLocalizer<SharedResource> Localizer
 
-<PageTitle>Germany | Refugee Navigator Europe</PageTitle>
+<PageTitle>@Localizer["Country.PageTitle", Localizer["Country.Germany"].Value]</PageTitle>
 
 <CountryOverview CountryName="Germany" />

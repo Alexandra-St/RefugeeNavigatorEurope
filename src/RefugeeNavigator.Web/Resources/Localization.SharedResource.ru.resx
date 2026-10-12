@@ -15,4 +15,130 @@
   <data name="LocalizationReady" xml:space="preserve">
     <value>Локализация настроена</value>
   </data>
+  <data name="Common.SkipToContent" xml:space="preserve">
+    <value>Перейти к основному содержимому</value>
+  </data>
+  <data name="Common.Disclaimer" xml:space="preserve">
+    <value>Информация может меняться. Всегда уточняйте важные требования в официальных органах.</value>
+  </data>
+  <data name="Home.PageTitle" xml:space="preserve">
+    <value>Refugee Navigator Europe</value>
+  </data>
+  <data name="Home.Eyebrow" xml:space="preserve">
+    <value>Путеводитель для обустройства</value>
+  </data>
+  <data name="Home.HeroSubtitle" xml:space="preserve">
+    <value>Практическая информация для украинцев, находящихся под временной защитой в Европе.</value>
+  </data>
+  <data name="Home.FindGuidance" xml:space="preserve">
+    <value>Полезные практические советы</value>
+  </data>
+  <data name="Home.IntroductionDescription" xml:space="preserve">
+    <value>Здесь собрана важная информация о временной защите, трудоустройстве, здравоохранении, жилье, образовании и социальной помощи.</value>
+  </data>
+  <data name="Home.OfficialSources" xml:space="preserve">
+    <value>Информация сгруппирована по странам и основана на официальных источниках.</value>
+  </data>
+  <data name="Home.ExploreByLocation" xml:space="preserve">
+    <value>Выберите место</value>
+  </data>
+  <data name="Home.ChooseCountry" xml:space="preserve">
+    <value>Выберите страну</value>
+  </data>
+  <data name="Home.CountryDescription" xml:space="preserve">
+    <value>Практическая информация о жизни в стране «{0}» под временной защитой.</value>
+  </data>
+  <data name="Home.CountryLinkLabel" xml:space="preserve">
+    <value>Практическая информация о стране: {0}</value>
+  </data>
+  <data name="Home.ExploreCountry" xml:space="preserve">
+    <value>Информация о стране: {0}</value>
+  </data>
+  <data name="Country.PageTitle" xml:space="preserve">
+    <value>{0} | Refugee Navigator Europe</value>
+  </data>
+  <data name="Country.Denmark" xml:space="preserve">
+    <value>Дания</value>
+  </data>
+  <data name="Country.Germany" xml:space="preserve">
+    <value>Германия</value>
+  </data>
+  <data name="Country.Poland" xml:space="preserve">
+    <value>Польша</value>
+  </data>
+  <data name="Country.BackToCountries" xml:space="preserve">
+    <value>К списку стран</value>
+  </data>
+  <data name="Country.Overview" xml:space="preserve">
+    <value>Обзор страны</value>
+  </data>
+  <data name="Country.HeaderSubtitle" xml:space="preserve">
+    <value>Практическая информация для украинцев под временной защитой в стране «{0}».</value>
+  </data>
+  <data name="Country.LivingIn" xml:space="preserve">
+    <value>Жизнь в стране «{0}»</value>
+  </data>
+  <data name="Country.LivingDescription" xml:space="preserve">
+    <value>Основные темы, связанные с жизнью в стране «{0}» под временной защитой.</value>
+  </data>
+  <data name="Country.ExploreTopics" xml:space="preserve">
+    <value>Основные темы</value>
+  </data>
+  <data name="Country.InformationCategories" xml:space="preserve">
+    <value>Категории информации</value>
+  </data>
+  <data name="Country.ExploreCategory" xml:space="preserve">
+    <value>Подробнее: {0}</value>
+  </data>
+  <data name="Category.PageTitle" xml:space="preserve">
+    <value>{0} | {1} | Refugee Navigator Europe</value>
+  </data>
+  <data name="Category.BackToCountry" xml:space="preserve">
+    <value>Назад к стране: {0}</value>
+  </data>
+  <data name="Category.InformationComingSoon" xml:space="preserve">
+    <value>Информация скоро появится</value>
+  </data>
+  <data name="Category.PlaceholderDescription" xml:space="preserve">
+    <value>Подробная информация об этой категории будет добавлена после проверки по официальным источникам.</value>
+  </data>
+  <data name="Category.TemporaryProtection" xml:space="preserve">
+    <value>Временная защита</value>
+  </data>
+  <data name="Category.TemporaryProtectionDescription" xml:space="preserve">
+    <value>Статус проживания и административные процедуры.</value>
+  </data>
+  <data name="Category.Employment" xml:space="preserve">
+    <value>Трудоустройство</value>
+  </data>
+  <data name="Category.EmploymentDescription" xml:space="preserve">
+    <value>Поиск работы и требования к трудоустройству.</value>
+  </data>
+  <data name="Category.Healthcare" xml:space="preserve">
+    <value>Здравоохранение</value>
+  </data>
+  <data name="Category.HealthcareDescription" xml:space="preserve">
+    <value>Доступ к медицинским услугам.</value>
+  </data>
+  <data name="Category.Housing" xml:space="preserve">
+    <value>Жильё</value>
+  </data>
+  <data name="Category.HousingDescription" xml:space="preserve">
+    <value>Поиск жилья и доступные варианты проживания.</value>
+  </data>
+  <data name="Category.Education" xml:space="preserve">
+    <value>Образование</value>
+  </data>
+  <data name="Category.EducationDescription" xml:space="preserve">
+    <value>Возможности для обучения и образования.</value>
+  </data>
+  <data name="Category.SocialAssistance" xml:space="preserve">
+    <value>Социальная помощь</value>
+  </data>
+  <data name="Category.SocialAssistanceDescription" xml:space="preserve">
+    <value>Доступные программы поддержки и помощи.</value>
+  </data>
+  <data name="NotFound.PageTitle" xml:space="preserve">
+    <value>Страница не найдена</value>
+  </data>
 </root>

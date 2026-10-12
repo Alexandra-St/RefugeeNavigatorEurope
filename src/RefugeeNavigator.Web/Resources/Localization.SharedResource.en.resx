@@ -15,4 +15,130 @@
   <data name="LocalizationReady" xml:space="preserve">
     <value>Localization configured</value>
   </data>
+  <data name="Common.SkipToContent" xml:space="preserve">
+    <value>Skip to main content</value>
+  </data>
+  <data name="Common.Disclaimer" xml:space="preserve">
+    <value>Information may change. Always confirm important requirements with official authorities.</value>
+  </data>
+  <data name="Home.PageTitle" xml:space="preserve">
+    <value>Refugee Navigator Europe</value>
+  </data>
+  <data name="Home.Eyebrow" xml:space="preserve">
+    <value>A guide to getting settled</value>
+  </data>
+  <data name="Home.HeroSubtitle" xml:space="preserve">
+    <value>Practical information for Ukrainians under temporary protection in Europe.</value>
+  </data>
+  <data name="Home.FindGuidance" xml:space="preserve">
+    <value>Find practical guidance</value>
+  </data>
+  <data name="Home.IntroductionDescription" xml:space="preserve">
+    <value>Explore essential information about temporary protection, employment, healthcare, housing, education, and social assistance.</value>
+  </data>
+  <data name="Home.OfficialSources" xml:space="preserve">
+    <value>Information is organized by country and supported by official sources.</value>
+  </data>
+  <data name="Home.ExploreByLocation" xml:space="preserve">
+    <value>Explore by location</value>
+  </data>
+  <data name="Home.ChooseCountry" xml:space="preserve">
+    <value>Choose a country</value>
+  </data>
+  <data name="Home.CountryDescription" xml:space="preserve">
+    <value>Explore practical information about living in {0} under temporary protection.</value>
+  </data>
+  <data name="Home.CountryLinkLabel" xml:space="preserve">
+    <value>Explore practical information for {0}</value>
+  </data>
+  <data name="Home.ExploreCountry" xml:space="preserve">
+    <value>Explore {0}</value>
+  </data>
+  <data name="Country.PageTitle" xml:space="preserve">
+    <value>{0} | Refugee Navigator Europe</value>
+  </data>
+  <data name="Country.Denmark" xml:space="preserve">
+    <value>Denmark</value>
+  </data>
+  <data name="Country.Germany" xml:space="preserve">
+    <value>Germany</value>
+  </data>
+  <data name="Country.Poland" xml:space="preserve">
+    <value>Poland</value>
+  </data>
+  <data name="Country.BackToCountries" xml:space="preserve">
+    <value>Back to countries</value>
+  </data>
+  <data name="Country.Overview" xml:space="preserve">
+    <value>Country overview</value>
+  </data>
+  <data name="Country.HeaderSubtitle" xml:space="preserve">
+    <value>Practical information for Ukrainians under temporary protection in {0}.</value>
+  </data>
+  <data name="Country.LivingIn" xml:space="preserve">
+    <value>Living in {0}</value>
+  </data>
+  <data name="Country.LivingDescription" xml:space="preserve">
+    <value>Explore essential topics related to living in {0} under temporary protection.</value>
+  </data>
+  <data name="Country.ExploreTopics" xml:space="preserve">
+    <value>Explore essential topics</value>
+  </data>
+  <data name="Country.InformationCategories" xml:space="preserve">
+    <value>Information categories</value>
+  </data>
+  <data name="Country.ExploreCategory" xml:space="preserve">
+    <value>Explore {0}</value>
+  </data>
+  <data name="Category.PageTitle" xml:space="preserve">
+    <value>{0} | {1} | Refugee Navigator Europe</value>
+  </data>
+  <data name="Category.BackToCountry" xml:space="preserve">
+    <value>Back to {0}</value>
+  </data>
+  <data name="Category.InformationComingSoon" xml:space="preserve">
+    <value>Information coming soon</value>
+  </data>
+  <data name="Category.PlaceholderDescription" xml:space="preserve">
+    <value>Detailed information for this category will be added after verification against official sources.</value>
+  </data>
+  <data name="Category.TemporaryProtection" xml:space="preserve">
+    <value>Temporary protection</value>
+  </data>
+  <data name="Category.TemporaryProtectionDescription" xml:space="preserve">
+    <value>Residence status and administrative procedures.</value>
+  </data>
+  <data name="Category.Employment" xml:space="preserve">
+    <value>Employment</value>
+  </data>
+  <data name="Category.EmploymentDescription" xml:space="preserve">
+    <value>Finding work and understanding employment requirements.</value>
+  </data>
+  <data name="Category.Healthcare" xml:space="preserve">
+    <value>Healthcare</value>
+  </data>
+  <data name="Category.HealthcareDescription" xml:space="preserve">
+    <value>Accessing healthcare services.</value>
+  </data>
+  <data name="Category.Housing" xml:space="preserve">
+    <value>Housing</value>
+  </data>
+  <data name="Category.HousingDescription" xml:space="preserve">
+    <value>Finding accommodation and understanding housing options.</value>
+  </data>
+  <data name="Category.Education" xml:space="preserve">
+    <value>Education</value>
+  </data>
+  <data name="Category.EducationDescription" xml:space="preserve">
+    <value>Education and learning opportunities.</value>
+  </data>
+  <data name="Category.SocialAssistance" xml:space="preserve">
+    <value>Social assistance</value>
+  </data>
+  <data name="Category.SocialAssistanceDescription" xml:space="preserve">
+    <value>Available support and assistance programs.</value>
+  </data>
+  <data name="NotFound.PageTitle" xml:space="preserve">
+    <value>Not found</value>
+  </data>
 </root>

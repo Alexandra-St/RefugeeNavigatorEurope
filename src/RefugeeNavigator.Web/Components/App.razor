@@ -1,5 +1,8 @@
+@using System.Globalization
+@inject IStringLocalizer<SharedResource> Localizer
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="@CultureInfo.CurrentUICulture.TwoLetterISOLanguageName">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +12,7 @@
     <HeadOutlet />
 </head>
 <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <a class="skip-link" href="#main-content">@Localizer["Common.SkipToContent"]</a>
     <Routes />
 </body>
 </html>

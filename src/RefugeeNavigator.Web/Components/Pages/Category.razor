@@ -1,14 +1,15 @@
 @page "/countries/{CountrySlug}/categories/{CategorySlug}"
 @using Microsoft.AspNetCore.Components
 @inject NavigationManager Navigation
+@inject IStringLocalizer<SharedResource> Localizer
 
 @if (CountryName is { } countryName && CategoryDetails is { } category)
 {
-    <PageTitle>@category.Name | @countryName | Refugee Navigator Europe</PageTitle>
+    <PageTitle>@Localizer["Category.PageTitle", category.Name, countryName]</PageTitle>
 
     <main id="main-content" class="category-page">
         <div class="page-content">
-            <a class="back-link" href="/countries/@CountrySlug" aria-label="Back to @countryName"><span aria-hidden="true">←</span> Back to @countryName</a>
+            <a class="back-link" href="/countries/@CountrySlug" aria-label="@Localizer["Category.BackToCountry", countryName]"><span aria-hidden="true">←</span> @Localizer["Category.BackToCountry", countryName]</a>
 
             <header class="category-header">
                 <p class="eyebrow">@countryName</p>
@@ -17,12 +18,12 @@
             </header>
 
             <section class="content-placeholder" aria-labelledby="placeholder-heading">
-                <h2 id="placeholder-heading">Information coming soon</h2>
-                <p>Detailed information for this category will be added after verification against official sources.</p>
+                <h2 id="placeholder-heading">@Localizer["Category.InformationComingSoon"]</h2>
+                <p>@Localizer["Category.PlaceholderDescription"]</p>
             </section>
 
             <footer class="information-note">
-                <p>Information may change. Always confirm important requirements with official authorities.</p>
+                <p>@Localizer["Common.Disclaimer"]</p>
             </footer>
         </div>
     </main>
@@ -37,20 +38,20 @@
 
     private string? CountryName => CountrySlug switch
     {
-        "denmark" => "Denmark",
-        "germany" => "Germany",
-        "poland" => "Poland",
+        "denmark" => Localizer["Country.Denmark"].Value,
+        "germany" => Localizer["Country.Germany"].Value,
+        "poland" => Localizer["Country.Poland"].Value,
         _ => null
     };
 
     private (string Name, string Description)? CategoryDetails => CategorySlug switch
     {
-        "temporary-protection" => ("Temporary protection", "Residence status and administrative procedures."),
-        "employment" => ("Employment", "Finding work and understanding employment requirements."),
-        "healthcare" => ("Healthcare", "Accessing healthcare services."),
-        "housing" => ("Housing", "Finding accommodation and understanding housing options."),
-        "education" => ("Education", "Education and learning opportunities."),
-        "social-assistance" => ("Social assistance", "Available support and assistance programs."),
+        "temporary-protection" => (Localizer["Category.TemporaryProtection"].Value, Localizer["Category.TemporaryProtectionDescription"].Value),
+        "employment" => (Localizer["Category.Employment"].Value, Localizer["Category.EmploymentDescription"].Value),
+        "healthcare" => (Localizer["Category.Healthcare"].Value, Localizer["Category.HealthcareDescription"].Value),
+        "housing" => (Localizer["Category.Housing"].Value, Localizer["Category.HousingDescription"].Value),
+        "education" => (Localizer["Category.Education"].Value, Localizer["Category.EducationDescription"].Value),
+        "social-assistance" => (Localizer["Category.SocialAssistance"].Value, Localizer["Category.SocialAssistanceDescription"].Value),
         _ => null
     };
 
