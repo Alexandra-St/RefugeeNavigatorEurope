@@ -1,0 +1,21 @@
+name: Feature request
+description: Suggest an improvement.
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Describe needs using fictional examples. Do not share personal, immigration, health, or other sensitive information. Planned features are not yet implemented."
+  - type: textarea
+    id: need
+    attributes:
+      label: Need
+      description: What problem would this improvement address?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed improvement
+      description: Describe the smallest useful change and any alternatives.
+    validations:
+      required: true

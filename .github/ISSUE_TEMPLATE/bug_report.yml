@@ -1,0 +1,26 @@
+name: Bug report
+description: Report a reproducible problem.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Use fictional examples. Do not include names, contact details, immigration records, health information, credentials, or other sensitive data. Redact screenshots and logs."
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide minimal steps using fictional data.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Relevant browser, operating system, or .NET SDK version. Omit personal identifiers and local paths.
