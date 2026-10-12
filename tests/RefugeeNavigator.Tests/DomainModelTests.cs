@@ -35,13 +35,31 @@ public class DomainModelTests
         var countryId = Guid.NewGuid();
         var categoryId = Guid.NewGuid();
 
-        var entry = new InformationEntry(id, countryId, categoryId, "Example Title", "Example Content");
+        var entry = new InformationEntry(id, countryId, categoryId, "Example Title", "Example Content", VerificationStatus.NeedsReview);
 
         Assert.Equal(id, entry.Id);
         Assert.Equal(countryId, entry.CountryId);
         Assert.Equal(categoryId, entry.CategoryId);
         Assert.Equal("Example Title", entry.Title);
         Assert.Equal("Example Content", entry.Content);
+        Assert.Equal(VerificationStatus.NeedsReview, entry.VerificationStatus);
+    }
+
+    [Theory]
+    [InlineData(VerificationStatus.NeedsReview)]
+    [InlineData(VerificationStatus.Verified)]
+    [InlineData(VerificationStatus.Outdated)]
+    public void InformationEntryPreservesSuppliedVerificationStatus(VerificationStatus verificationStatus)
+    {
+        var entry = new InformationEntry(
+            Guid.NewGuid(),
+            Guid.NewGuid(),
+            Guid.NewGuid(),
+            "Example Title",
+            "Example Content",
+            verificationStatus);
+
+        Assert.Equal(verificationStatus, entry.VerificationStatus);
     }
 
     [Fact]
@@ -51,8 +69,8 @@ public class DomainModelTests
         var countryId = Guid.Parse("22222222-2222-2222-2222-222222222222");
         var categoryId = Guid.Parse("33333333-3333-3333-3333-333333333333");
 
-        var entry = new InformationEntry(id, countryId, categoryId, "Example Title", "Example Content");
-        var swappedEntry = new InformationEntry(id, categoryId, countryId, "Example Title", "Example Content");
+        var entry = new InformationEntry(id, countryId, categoryId, "Example Title", "Example Content", VerificationStatus.NeedsReview);
+        var swappedEntry = new InformationEntry(id, categoryId, countryId, "Example Title", "Example Content", VerificationStatus.NeedsReview);
 
         Assert.Equal(countryId, entry.CountryId);
         Assert.Equal(categoryId, entry.CategoryId);
@@ -64,7 +82,7 @@ public class DomainModelTests
     [Fact]
     public void InformationEntryPropertiesHaveNoSetters()
     {
-        foreach (var propertyName in new[] { "Id", "CountryId", "CategoryId", "Title", "Content" })
+        foreach (var propertyName in new[] { "Id", "CountryId", "CategoryId", "Title", "Content", "VerificationStatus" })
         {
             var property = typeof(InformationEntry).GetProperty(propertyName);
 
