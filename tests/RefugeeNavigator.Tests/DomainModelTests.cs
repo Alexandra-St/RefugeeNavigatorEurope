@@ -73,6 +73,50 @@ public class DomainModelTests
         }
     }
 
+    [Fact]
+    public void OfficialSourceConstructorPreservesPropertyValues()
+    {
+        var id = Guid.Parse("11111111-1111-1111-1111-111111111111");
+        var informationEntryId = Guid.Parse("22222222-2222-2222-2222-222222222222");
+        var url = new Uri("https://example.org/source");
+        var lastCheckedAt = new DateTimeOffset(2026, 10, 12, 9, 30, 0, TimeSpan.Zero);
+
+        var source = new OfficialSource(id, informationEntryId, "Example Source", url, lastCheckedAt);
+
+        Assert.Equal(id, source.Id);
+        Assert.Equal(informationEntryId, source.InformationEntryId);
+        Assert.Equal("Example Source", source.Title);
+        Assert.Equal(url, source.Url);
+        Assert.Equal(lastCheckedAt, source.LastCheckedAt);
+    }
+
+    [Fact]
+    public void OfficialSourcePropertiesHaveNoSetters()
+    {
+        foreach (var propertyName in new[] { "Id", "InformationEntryId", "Title", "Url", "LastCheckedAt" })
+        {
+            var property = typeof(OfficialSource).GetProperty(propertyName);
+
+            Assert.NotNull(property);
+            Assert.Null(property.GetSetMethod(nonPublic: true));
+        }
+    }
+
+    [Fact]
+    public void OfficialSourcePreservesTimestampOffset()
+    {
+        var lastCheckedAt = new DateTimeOffset(2026, 10, 12, 14, 45, 0, TimeSpan.FromHours(5.5));
+        var source = new OfficialSource(
+            Guid.Parse("11111111-1111-1111-1111-111111111111"),
+            Guid.Parse("22222222-2222-2222-2222-222222222222"),
+            "Example Source",
+            new Uri("https://example.org/source"),
+            lastCheckedAt);
+
+        Assert.Equal(lastCheckedAt, source.LastCheckedAt);
+        Assert.Equal(lastCheckedAt.Offset, source.LastCheckedAt.Offset);
+    }
+
     [Theory]
     [InlineData(typeof(Country))]
     [InlineData(typeof(InformationCategory))]
