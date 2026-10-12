@@ -1,0 +1,72 @@
+@using Microsoft.AspNetCore.Components
+
+<main class="country-page">
+    <div class="page-content">
+        <a class="back-link" href="/">← Back to countries</a>
+
+        <header class="country-header">
+            <p class="eyebrow">Country overview</p>
+            <h1>@CountryName</h1>
+            <p class="subtitle">Practical information for Ukrainians under temporary protection in @CountryName.</p>
+        </header>
+
+        <section class="introduction" aria-labelledby="living-heading">
+            <h2 id="living-heading">Living in @CountryName</h2>
+            <p>Explore essential topics related to living in @CountryName under temporary protection.</p>
+        </section>
+
+        <section class="categories" aria-labelledby="categories-heading">
+            <div class="section-heading">
+                <p class="eyebrow">Explore essential topics</p>
+                <h2 id="categories-heading">Information categories</h2>
+            </div>
+
+            <div class="category-grid">
+                <article class="category-card">
+                    <h3>Temporary protection</h3>
+                    <p>Residence status and administrative procedures.</p>
+                    <span class="availability">Information coming soon</span>
+                </article>
+
+                <article class="category-card">
+                    <h3>Employment</h3>
+                    <p>Finding work and understanding employment requirements.</p>
+                    <span class="availability">Information coming soon</span>
+                </article>
+
+                <article class="category-card">
+                    <h3>Healthcare</h3>
+                    <p>Accessing healthcare services.</p>
+                    <span class="availability">Information coming soon</span>
+                </article>
+
+                <article class="category-card">
+                    <h3>Housing</h3>
+                    <p>Finding accommodation and understanding housing options.</p>
+                    <span class="availability">Information coming soon</span>
+                </article>
+
+                <article class="category-card">
+                    <h3>Education</h3>
+                    <p>Education and learning opportunities.</p>
+                    <span class="availability">Information coming soon</span>
+                </article>
+
+                <article class="category-card">
+                    <h3>Social assistance</h3>
+                    <p>Available support and assistance programs.</p>
+                    <span class="availability">Information coming soon</span>
+                </article>
+            </div>
+        </section>
+
+        <footer class="information-note">
+            <p>Information may change. Always confirm important requirements with official authorities.</p>
+        </footer>
+    </div>
+</main>
+
+@code {
+    [Parameter]
+    public required string CountryName { get; set; }
+}
