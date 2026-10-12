@@ -1,5 +1,9 @@
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Abstractions;
+using Microsoft.AspNetCore.Mvc.Routing;
+using Microsoft.AspNetCore.Routing;
 using RefugeeNavigator.Web.Components;
 using RefugeeNavigator.Web.Localization;
 
@@ -41,6 +45,32 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRequestLocalization();
 app.UseAntiforgery();
+app.MapGet("/set-language", (HttpContext context, string? culture, string? returnUrl) =>
+{
+    if (culture is not ("uk" or "en" or "ru"))
+    {
+        return Results.BadRequest();
+    }
+
+    var actionContext = new ActionContext(context, context.GetRouteData() ?? new RouteData(), new ActionDescriptor());
+    var urlHelper = new UrlHelper(actionContext);
+    var redirectUrl = urlHelper.IsLocalUrl(returnUrl) ? returnUrl! : "/";
+
+    context.Response.Cookies.Append(
+        CookieRequestCultureProvider.DefaultCookieName,
+        CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+        new CookieOptions
+        {
+            HttpOnly = true,
+            Secure = context.Request.IsHttps,
+            SameSite = SameSiteMode.Lax,
+            IsEssential = true,
+            Expires = DateTimeOffset.UtcNow.AddYears(1),
+            Path = "/"
+        });
+
+    return Results.LocalRedirect(redirectUrl);
+});
 app.MapStaticAssets();
 app.MapRazorComponents<App>();
 app.Run();

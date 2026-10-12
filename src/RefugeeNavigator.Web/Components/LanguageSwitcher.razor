@@ -1,0 +1,22 @@
+@using System.Globalization
+@inject NavigationManager Navigation
+
+<nav class="language-switcher" aria-label="Language">
+    <ul>
+        <li><a href="@BuildSwitchUrl("uk")" lang="uk" aria-current="@(IsCurrentLanguage("uk") ? "true" : null)">Українська</a></li>
+        <li><a href="@BuildSwitchUrl("en")" lang="en" aria-current="@(IsCurrentLanguage("en") ? "true" : null)">English</a></li>
+        <li><a href="@BuildSwitchUrl("ru")" lang="ru" aria-current="@(IsCurrentLanguage("ru") ? "true" : null)">Русский</a></li>
+    </ul>
+</nav>
+
+@code {
+    private static string CurrentLanguage => CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+
+    private static bool IsCurrentLanguage(string culture) => CurrentLanguage == culture;
+
+    private string BuildSwitchUrl(string culture)
+    {
+        var returnUrl = new Uri(Navigation.Uri).PathAndQuery;
+        return $"/set-language?culture={Uri.EscapeDataString(culture)}&returnUrl={Uri.EscapeDataString(returnUrl)}";
+    }
+}
