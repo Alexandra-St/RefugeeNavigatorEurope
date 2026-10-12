@@ -2,3 +2,18 @@
 @inject IStringLocalizer<SharedResource> Localizer
 
 <PageTitle>@Localizer["NotFound.PageTitle"]</PageTitle>
+
+<main id="main-content" class="not-found-page">
+    <div class="page-content">
+        <section class="not-found-card" aria-labelledby="not-found-heading">
+            <p class="eyebrow">404</p>
+            <h1 id="not-found-heading">@Localizer["NotFound.Heading"]</h1>
+            <p class="description">@Localizer["NotFound.Description"]</p>
+            <a class="home-link" href="/">@Localizer["NotFound.BackHome"]</a>
+        </section>
+
+        <footer class="information-note">
+            <p>@Localizer["Common.Disclaimer"]</p>
+        </footer>
+    </div>
+</main>

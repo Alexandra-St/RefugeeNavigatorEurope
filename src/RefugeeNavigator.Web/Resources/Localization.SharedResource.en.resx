@@ -144,4 +144,13 @@
   <data name="NotFound.PageTitle" xml:space="preserve">
     <value>Not found</value>
   </data>
+  <data name="NotFound.Heading" xml:space="preserve">
+    <value>Page not found</value>
+  </data>
+  <data name="NotFound.Description" xml:space="preserve">
+    <value>The page you are looking for does not exist or has been moved.</value>
+  </data>
+  <data name="NotFound.BackHome" xml:space="preserve">
+    <value>Back to homepage</value>
+  </data>
 </root>
