@@ -21,6 +21,9 @@
   <data name="Common.Disclaimer" xml:space="preserve">
     <value>Information may change. Always confirm important requirements with official authorities.</value>
   </data>
+  <data name="Common.LanguageSelection" xml:space="preserve">
+    <value>Language selection</value>
+  </data>
   <data name="Home.PageTitle" xml:space="preserve">
     <value>Refugee Navigator Europe</value>
   </data>

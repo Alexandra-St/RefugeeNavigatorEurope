@@ -1,7 +1,8 @@
 @using System.Globalization
 @inject NavigationManager Navigation
+@inject IStringLocalizer<SharedResource> Localizer
 
-<nav class="language-switcher" aria-label="Language">
+<nav class="language-switcher" aria-label="@Localizer["Common.LanguageSelection"]">
     <ul>
         <li><a href="@BuildSwitchUrl("uk")" lang="uk" aria-current="@(IsCurrentLanguage("uk") ? "true" : null)">Українська</a></li>
         <li><a href="@BuildSwitchUrl("en")" lang="en" aria-current="@(IsCurrentLanguage("en") ? "true" : null)">English</a></li>
