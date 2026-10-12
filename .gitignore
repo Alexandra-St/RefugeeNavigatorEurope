@@ -1,0 +1,33 @@
+# .NET build and test output
+**/bin/
+**/obj/
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# IDEs and user settings
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+*.sln.docstates
+_ReSharper*/
+*.DotSettings.user
+
+# macOS
+.DS_Store
+._*
+
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+secrets.json
+appsettings.Local.json
+appsettings.*.Local.json
+*.pfx
+*.p12
+*.pem
+*.key
