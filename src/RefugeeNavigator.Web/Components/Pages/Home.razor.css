@@ -29,7 +29,7 @@
     margin: 0;
     color: #102a56;
     font-size: clamp(2.2rem, 5vw, 3.5rem);
-    font-weight: 750;
+    font-weight: 700;
     letter-spacing: -0.04em;
     line-height: 1.1;
 }
@@ -39,7 +39,6 @@
     margin: 1rem auto 0;
     color: #425675;
     font-size: clamp(1.1rem, 2vw, 1.35rem);
-    line-height: 1.6;
 }
 
 .introduction {
@@ -53,6 +52,7 @@
     margin: 0;
     color: #102a56;
     font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
     letter-spacing: -0.025em;
 }
 
@@ -60,7 +60,6 @@
     margin: 0.8rem 0 0;
     color: #425675;
     font-size: 1.05rem;
-    line-height: 1.7;
 }
 
 .section-heading {
@@ -101,7 +100,6 @@
 .country-card p {
     margin: 0.75rem 0 1.25rem;
     color: #425675;
-    line-height: 1.6;
 }
 
 .country-card a {
@@ -139,7 +137,6 @@
 
 .information-note p {
     margin: 0;
-    line-height: 1.6;
 }
 
 @media (max-width: 760px) {

@@ -50,7 +50,7 @@
     margin: 0;
     color: #102a56;
     font-size: clamp(2.2rem, 5vw, 3.5rem);
-    font-weight: 750;
+    font-weight: 700;
     letter-spacing: -0.04em;
     line-height: 1.1;
 }
@@ -60,7 +60,6 @@
     margin: 1rem auto 0;
     color: #425675;
     font-size: clamp(1.1rem, 2vw, 1.35rem);
-    line-height: 1.6;
 }
 
 .content-placeholder {
@@ -77,14 +76,14 @@
 .content-placeholder h2 {
     margin: 0;
     color: #102a56;
-    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
     letter-spacing: -0.025em;
 }
 
 .content-placeholder p {
     margin: 0.8rem 0 0;
     color: #425675;
-    line-height: 1.7;
 }
 
 .information-note {
@@ -98,7 +97,6 @@
 
 .information-note p {
     margin: 0;
-    line-height: 1.6;
 }
 
 @media (max-width: 540px) {

@@ -50,7 +50,7 @@
     margin: 0;
     color: #102a56;
     font-size: clamp(2.2rem, 5vw, 3.5rem);
-    font-weight: 750;
+    font-weight: 700;
     letter-spacing: -0.04em;
     line-height: 1.1;
 }
@@ -60,7 +60,6 @@
     margin: 1rem auto 0;
     color: #425675;
     font-size: clamp(1.1rem, 2vw, 1.35rem);
-    line-height: 1.6;
 }
 
 .introduction {
@@ -74,6 +73,7 @@
     margin: 0;
     color: #102a56;
     font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
     letter-spacing: -0.025em;
 }
 
@@ -81,7 +81,6 @@
 .category-card p {
     margin: 0.75rem 0 0;
     color: #425675;
-    line-height: 1.65;
 }
 
 .section-heading {
@@ -126,7 +125,7 @@
     padding-top: 1.25rem;
     border-radius: 0.2rem;
     color: #155eef;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 650;
     line-height: 1.5;
     text-decoration: none;
@@ -154,7 +153,6 @@
 
 .information-note p {
     margin: 0;
-    line-height: 1.6;
 }
 
 @media (max-width: 760px) {
