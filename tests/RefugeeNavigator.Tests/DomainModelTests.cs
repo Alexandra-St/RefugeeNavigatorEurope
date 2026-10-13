@@ -35,31 +35,11 @@ public class DomainModelTests
         var countryId = Guid.NewGuid();
         var categoryId = Guid.NewGuid();
 
-        var entry = new InformationEntry(id, countryId, categoryId, "Example Title", "Example Content", VerificationStatus.NeedsReview);
+        var entry = new InformationEntry(id, countryId, categoryId);
 
         Assert.Equal(id, entry.Id);
         Assert.Equal(countryId, entry.CountryId);
         Assert.Equal(categoryId, entry.CategoryId);
-        Assert.Equal("Example Title", entry.Title);
-        Assert.Equal("Example Content", entry.Content);
-        Assert.Equal(VerificationStatus.NeedsReview, entry.VerificationStatus);
-    }
-
-    [Theory]
-    [InlineData(VerificationStatus.NeedsReview)]
-    [InlineData(VerificationStatus.Verified)]
-    [InlineData(VerificationStatus.Outdated)]
-    public void InformationEntryPreservesSuppliedVerificationStatus(VerificationStatus verificationStatus)
-    {
-        var entry = new InformationEntry(
-            Guid.NewGuid(),
-            Guid.NewGuid(),
-            Guid.NewGuid(),
-            "Example Title",
-            "Example Content",
-            verificationStatus);
-
-        Assert.Equal(verificationStatus, entry.VerificationStatus);
     }
 
     [Fact]
@@ -69,8 +49,8 @@ public class DomainModelTests
         var countryId = Guid.Parse("22222222-2222-2222-2222-222222222222");
         var categoryId = Guid.Parse("33333333-3333-3333-3333-333333333333");
 
-        var entry = new InformationEntry(id, countryId, categoryId, "Example Title", "Example Content", VerificationStatus.NeedsReview);
-        var swappedEntry = new InformationEntry(id, categoryId, countryId, "Example Title", "Example Content", VerificationStatus.NeedsReview);
+        var entry = new InformationEntry(id, countryId, categoryId);
+        var swappedEntry = new InformationEntry(id, categoryId, countryId);
 
         Assert.Equal(countryId, entry.CountryId);
         Assert.Equal(categoryId, entry.CategoryId);
@@ -82,9 +62,52 @@ public class DomainModelTests
     [Fact]
     public void InformationEntryPropertiesHaveNoSetters()
     {
-        foreach (var propertyName in new[] { "Id", "CountryId", "CategoryId", "Title", "Content", "VerificationStatus" })
+        foreach (var propertyName in new[] { "Id", "CountryId", "CategoryId" })
         {
             var property = typeof(InformationEntry).GetProperty(propertyName);
+
+            Assert.NotNull(property);
+            Assert.Null(property.GetSetMethod(nonPublic: true));
+        }
+    }
+
+    [Theory]
+    [InlineData("uk")]
+    [InlineData("en")]
+    [InlineData("ru")]
+    public void InformationEntryTranslationConstructorPreservesPropertyValues(string languageCode)
+    {
+        var entryId = Guid.Parse("44444444-4444-4444-4444-444444444444");
+        var updatedAt = new DateTimeOffset(2020, 1, 2, 3, 4, 5, TimeSpan.FromHours(2));
+
+        var translation = new InformationEntryTranslation(
+            entryId,
+            languageCode,
+            "Example Title",
+            "Example Summary",
+            "Example Content",
+            VerificationStatus.Verified,
+            updatedAt);
+
+        Assert.Equal(entryId, translation.InformationEntryId);
+        Assert.Equal(languageCode, translation.LanguageCode);
+        Assert.Equal("Example Title", translation.Title);
+        Assert.Equal("Example Summary", translation.Summary);
+        Assert.Equal("Example Content", translation.Content);
+        Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
+        Assert.Equal(updatedAt, translation.LastUpdatedAt);
+        Assert.Equal(updatedAt.Offset, translation.LastUpdatedAt.Offset);
+    }
+
+    [Fact]
+    public void InformationEntryTranslationPropertiesHaveNoSetters()
+    {
+        foreach (var propertyName in new[]
+        {
+            "InformationEntryId", "LanguageCode", "Title", "Summary", "Content", "VerificationStatus", "LastUpdatedAt"
+        })
+        {
+            var property = typeof(InformationEntryTranslation).GetProperty(propertyName);
 
             Assert.NotNull(property);
             Assert.Null(property.GetSetMethod(nonPublic: true));

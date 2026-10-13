@@ -8,9 +8,20 @@ public static class DataRelationshipValidator
         IEnumerable<InformationEntry> entries,
         IEnumerable<OfficialSource> sources)
     {
+        return Validate(countries, categories, entries, Array.Empty<InformationEntryTranslation>(), sources);
+    }
+
+    public static IReadOnlyList<string> Validate(
+        IEnumerable<Country> countries,
+        IEnumerable<InformationCategory> categories,
+        IEnumerable<InformationEntry> entries,
+        IEnumerable<InformationEntryTranslation> translations,
+        IEnumerable<OfficialSource> sources)
+    {
         ArgumentNullException.ThrowIfNull(countries);
         ArgumentNullException.ThrowIfNull(categories);
         ArgumentNullException.ThrowIfNull(entries);
+        ArgumentNullException.ThrowIfNull(translations);
         ArgumentNullException.ThrowIfNull(sources);
 
         var countryIds = new HashSet<Guid>();
@@ -39,6 +50,14 @@ public static class DataRelationshipValidator
             if (!categoryIds.Contains(entry.CategoryId))
             {
                 errors.Add("InformationEntry: CategoryId references a missing InformationCategory.");
+            }
+        }
+
+        foreach (var translation in translations)
+        {
+            if (!entryIds.Contains(translation.InformationEntryId))
+            {
+                errors.Add("InformationEntryTranslation: InformationEntryId references a missing InformationEntry.");
             }
         }
 

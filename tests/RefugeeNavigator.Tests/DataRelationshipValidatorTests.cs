@@ -66,6 +66,34 @@ public class DataRelationshipValidatorTests
     }
 
     [Fact]
+    public void ExistingTranslationReferenceReturnsNoErrors()
+    {
+        var errors = DataRelationshipValidator.Validate(
+            new[] { Country(Id1) },
+            new[] { Category(Id2) },
+            new[] { Entry(Id3, Id1, Id2) },
+            new[] { Translation(Id3, "uk") },
+            new[] { Source(Id4, Id3) });
+
+        Assert.Empty(errors);
+    }
+
+    [Fact]
+    public void MissingTranslationEntryReferenceReturnsError()
+    {
+        var errors = DataRelationshipValidator.Validate(
+            Array.Empty<Country>(),
+            Array.Empty<InformationCategory>(),
+            Array.Empty<InformationEntry>(),
+            new[] { Translation(Id3, "uk") },
+            Array.Empty<OfficialSource>());
+
+        Assert.Equal(
+            new[] { "InformationEntryTranslation: InformationEntryId references a missing InformationEntry." },
+            errors);
+    }
+
+    [Fact]
     public void MultipleErrorsPreserveRequiredRecordAndPropertyOrder()
     {
         var entries = new[]
@@ -127,6 +155,9 @@ public class DataRelationshipValidatorTests
             Array.Empty<Country>(), Array.Empty<InformationCategory>(), null!, Array.Empty<OfficialSource>()));
         Assert.Throws<ArgumentNullException>(() => DataRelationshipValidator.Validate(
             Array.Empty<Country>(), Array.Empty<InformationCategory>(), Array.Empty<InformationEntry>(), null!));
+        Assert.Throws<ArgumentNullException>(() => DataRelationshipValidator.Validate(
+            Array.Empty<Country>(), Array.Empty<InformationCategory>(), Array.Empty<InformationEntry>(),
+            (IEnumerable<InformationEntryTranslation>)null!, Array.Empty<OfficialSource>()));
     }
 
     [Fact]
@@ -183,7 +214,10 @@ public class DataRelationshipValidatorTests
     private static InformationCategory Category(Guid id) => new(id, "Example Category", "example-category");
 
     private static InformationEntry Entry(Guid id, Guid countryId, Guid categoryId) =>
-        new(id, countryId, categoryId, "Example Title", "Example Content", VerificationStatus.Verified);
+        new(id, countryId, categoryId);
+
+    private static InformationEntryTranslation Translation(Guid entryId, string languageCode) =>
+        new(entryId, languageCode, "Title", "Summary", "Content", VerificationStatus.Verified, CheckedAt);
 
     private static OfficialSource Source(Guid id, Guid entryId) =>
         new(id, entryId, "Example Source", new Uri("https://example.org/source"), CheckedAt);

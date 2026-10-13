@@ -68,6 +68,24 @@ public static class DataUniquenessValidator
         return errors.AsReadOnly();
     }
 
+    public static IReadOnlyList<string> Validate(IEnumerable<InformationEntryTranslation> translations)
+    {
+        ArgumentNullException.ThrowIfNull(translations);
+
+        var errors = new List<string>();
+        var translationKeys = new HashSet<(Guid InformationEntryId, string LanguageCode)>();
+
+        foreach (var translation in translations)
+        {
+            if (!translationKeys.Add((translation.InformationEntryId, translation.LanguageCode)))
+            {
+                errors.Add("InformationEntryTranslation: duplicate InformationEntryId and LanguageCode.");
+            }
+        }
+
+        return errors.AsReadOnly();
+    }
+
     public static IReadOnlyList<string> Validate(IEnumerable<OfficialSource> sources)
     {
         ArgumentNullException.ThrowIfNull(sources);

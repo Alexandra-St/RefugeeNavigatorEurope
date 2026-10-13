@@ -83,13 +83,7 @@ public class DomainModelValidatorTests
     [Fact]
     public void InformationEntryWithEmptyIdentifiersReturnsErrors()
     {
-        var entry = new InformationEntry(
-            Guid.Empty,
-            Guid.Empty,
-            Guid.Empty,
-            "Title",
-            "Content",
-            VerificationStatus.NeedsReview);
+        var entry = new InformationEntry(Guid.Empty, Guid.Empty, Guid.Empty);
 
         var errors = DomainModelValidator.Validate(entry);
 
@@ -99,23 +93,79 @@ public class DomainModelValidatorTests
     }
 
     [Theory]
-    [InlineData("", "Content", "Title is required.")]
-    [InlineData("Title", "   ", "Content is required.")]
-    public void InformationEntryWithMissingTextReturnsError(string title, string content, string expectedError)
+    [InlineData("uk")]
+    [InlineData("en")]
+    [InlineData("ru")]
+    public void SupportedTranslationLanguageCodesReturnNoErrors(string languageCode)
     {
-        var entry = new InformationEntry(
-            ValidId, ValidCountryId, ValidCategoryId, title, content, VerificationStatus.Verified);
+        Assert.Empty(DomainModelValidator.Validate(CreateTranslation(languageCode)));
+    }
 
-        Assert.Contains(expectedError, DomainModelValidator.Validate(entry));
+    [Theory]
+    [InlineData("de")]
+    [InlineData("UK")]
+    public void UnsupportedTranslationLanguageCodeReturnsError(string languageCode)
+    {
+        var errors = DomainModelValidator.Validate(CreateTranslation(languageCode));
+
+        Assert.Contains("LanguageCode must be one of the supported values: uk, en, ru.", errors);
     }
 
     [Fact]
-    public void InformationEntryWithUndefinedVerificationStatusReturnsError()
+    public void TranslationWithMissingLanguageCodeReturnsRequiredError()
     {
-        var entry = new InformationEntry(
-            ValidId, ValidCountryId, ValidCategoryId, "Title", "Content", (VerificationStatus)99);
+        var translation = CreateTranslation(languageCode: " ");
 
-        Assert.Contains("VerificationStatus must be a defined value.", DomainModelValidator.Validate(entry));
+        Assert.Contains("LanguageCode is required.", DomainModelValidator.Validate(translation));
+    }
+
+    [Fact]
+    public void TranslationWithEmptyEntryIdReturnsError()
+    {
+        var translation = new InformationEntryTranslation(
+            Guid.Empty, "uk", "Title", "Summary", "Content", VerificationStatus.NeedsReview, ValidTimestamp);
+
+        Assert.Contains("InformationEntryId must not be empty.", DomainModelValidator.Validate(translation));
+    }
+
+    [Theory]
+    [InlineData("", "Summary", "Content", "Title is required.")]
+    [InlineData("Title", " ", "Content", "Summary is required.")]
+    [InlineData("Title", "Summary", "", "Content is required.")]
+    public void TranslationWithMissingTextReturnsError(
+        string title,
+        string summary,
+        string content,
+        string expectedError)
+    {
+        var translation = new InformationEntryTranslation(
+            ValidEntryId, "uk", title, summary, content, VerificationStatus.Verified, ValidTimestamp);
+
+        Assert.Contains(expectedError, DomainModelValidator.Validate(translation));
+    }
+
+    [Fact]
+    public void TranslationWithUndefinedVerificationStatusReturnsError()
+    {
+        var translation = CreateTranslation(verificationStatus: (VerificationStatus)99);
+
+        Assert.Contains("VerificationStatus must be a defined value.", DomainModelValidator.Validate(translation));
+    }
+
+    [Fact]
+    public void TranslationWithDefaultLastUpdatedAtReturnsError()
+    {
+        var translation = CreateTranslation(lastUpdatedAt: new DateTimeOffset());
+
+        Assert.Contains("LastUpdatedAt must not be default.", DomainModelValidator.Validate(translation));
+    }
+
+    [Fact]
+    public void TranslationWithFutureLastUpdatedAtReturnsError()
+    {
+        var translation = CreateTranslation(lastUpdatedAt: new DateTimeOffset(2999, 1, 1, 0, 0, 0, TimeSpan.Zero));
+
+        Assert.Contains("LastUpdatedAt must not be in the future.", DomainModelValidator.Validate(translation));
     }
 
     [Fact]
@@ -187,38 +237,57 @@ public class DomainModelValidatorTests
         Assert.Throws<ArgumentNullException>(() => DomainModelValidator.Validate((Country)null!));
         Assert.Throws<ArgumentNullException>(() => DomainModelValidator.Validate((InformationCategory)null!));
         Assert.Throws<ArgumentNullException>(() => DomainModelValidator.Validate((InformationEntry)null!));
+        Assert.Throws<ArgumentNullException>(() => DomainModelValidator.Validate((InformationEntryTranslation)null!));
         Assert.Throws<ArgumentNullException>(() => DomainModelValidator.Validate((OfficialSource)null!));
     }
 
     [Fact]
     public void MultipleInvalidFieldsProduceMultipleErrors()
     {
-        var entry = new InformationEntry(
-            Guid.Empty,
-            Guid.Empty,
-            Guid.Empty,
-            " ",
-            "",
-            (VerificationStatus)99);
+        var entry = new InformationEntry(Guid.Empty, Guid.Empty, Guid.Empty);
 
         var errors = DomainModelValidator.Validate(entry);
 
-        Assert.Equal(6, errors.Count);
+        Assert.Equal(3, errors.Count);
         Assert.Contains("Id must not be empty.", errors);
         Assert.Contains("CountryId must not be empty.", errors);
         Assert.Contains("CategoryId must not be empty.", errors);
+    }
+
+    [Fact]
+    public void TranslationWithMultipleInvalidFieldsProducesMultipleErrors()
+    {
+        var translation = new InformationEntryTranslation(
+            Guid.Empty, "de", " ", "", " ", (VerificationStatus)99, default);
+
+        var errors = DomainModelValidator.Validate(translation);
+
+        Assert.Equal(7, errors.Count);
+        Assert.Contains("InformationEntryId must not be empty.", errors);
+        Assert.Contains("LanguageCode must be one of the supported values: uk, en, ru.", errors);
         Assert.Contains("Title is required.", errors);
+        Assert.Contains("Summary is required.", errors);
         Assert.Contains("Content is required.", errors);
         Assert.Contains("VerificationStatus must be a defined value.", errors);
+        Assert.Contains("LastUpdatedAt must not be default.", errors);
     }
 
     private static InformationEntry CreateInformationEntry() => new(
         ValidId,
         ValidCountryId,
-        ValidCategoryId,
-        "Title",
-        "Content",
-        VerificationStatus.Verified);
+        ValidCategoryId);
+
+    private static InformationEntryTranslation CreateTranslation(
+        string languageCode = "uk",
+        VerificationStatus verificationStatus = VerificationStatus.Verified,
+        DateTimeOffset? lastUpdatedAt = null) => new(
+            ValidEntryId,
+            languageCode,
+            "Title",
+            "Summary",
+            "Content",
+            verificationStatus,
+            lastUpdatedAt ?? ValidTimestamp);
 
     private static OfficialSource CreateOfficialSource() => new(
         ValidId,

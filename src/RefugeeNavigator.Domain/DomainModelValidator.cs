@@ -2,6 +2,13 @@ namespace RefugeeNavigator.Domain;
 
 public static class DomainModelValidator
 {
+    private static readonly HashSet<string> SupportedLanguageCodes = new(StringComparer.Ordinal)
+    {
+        "uk",
+        "en",
+        "ru"
+    };
+
     public static IReadOnlyList<string> Validate(Country model)
     {
         ArgumentNullException.ThrowIfNull(model);
@@ -32,12 +39,37 @@ public static class DomainModelValidator
         ValidateId(model.Id, nameof(model.Id), errors);
         ValidateId(model.CountryId, nameof(model.CountryId), errors);
         ValidateId(model.CategoryId, nameof(model.CategoryId), errors);
+        return errors.AsReadOnly();
+    }
+
+    public static IReadOnlyList<string> Validate(InformationEntryTranslation model)
+    {
+        ArgumentNullException.ThrowIfNull(model);
+
+        var errors = new List<string>();
+        ValidateId(model.InformationEntryId, nameof(model.InformationEntryId), errors);
+        ValidateRequiredString(model.LanguageCode, nameof(model.LanguageCode), errors);
+        if (!string.IsNullOrWhiteSpace(model.LanguageCode) && !SupportedLanguageCodes.Contains(model.LanguageCode))
+        {
+            errors.Add("LanguageCode must be one of the supported values: uk, en, ru.");
+        }
+
         ValidateRequiredString(model.Title, nameof(model.Title), errors);
+        ValidateRequiredString(model.Summary, nameof(model.Summary), errors);
         ValidateRequiredString(model.Content, nameof(model.Content), errors);
 
         if (!Enum.IsDefined(model.VerificationStatus))
         {
             errors.Add("VerificationStatus must be a defined value.");
+        }
+
+        if (model.LastUpdatedAt == default)
+        {
+            errors.Add("LastUpdatedAt must not be default.");
+        }
+        else if (model.LastUpdatedAt > DateTimeOffset.UtcNow)
+        {
+            errors.Add("LastUpdatedAt must not be in the future.");
         }
 
         return errors.AsReadOnly();

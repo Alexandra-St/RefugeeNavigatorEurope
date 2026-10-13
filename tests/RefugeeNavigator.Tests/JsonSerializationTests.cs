@@ -39,19 +39,13 @@ public class JsonSerializationTests
         Assert.Equal(model.Slug, result.Slug);
     }
 
-    [Theory]
-    [InlineData(VerificationStatus.NeedsReview)]
-    [InlineData(VerificationStatus.Verified)]
-    [InlineData(VerificationStatus.Outdated)]
-    public void InformationEntryRoundTripsThroughJson(VerificationStatus verificationStatus)
+    [Fact]
+    public void InformationEntryRoundTripsThroughJson()
     {
         var model = new InformationEntry(
             Guid.Parse("33333333-3333-3333-3333-333333333333"),
             Guid.Parse("44444444-4444-4444-4444-444444444444"),
-            Guid.Parse("55555555-5555-5555-5555-555555555555"),
-            "Example Title",
-            "Example Content",
-            verificationStatus);
+            Guid.Parse("55555555-5555-5555-5555-555555555555"));
 
         var json = JsonSerializer.Serialize(model);
         var result = JsonSerializer.Deserialize<InformationEntry>(json);
@@ -60,9 +54,37 @@ public class JsonSerializationTests
         Assert.Equal(model.Id, result.Id);
         Assert.Equal(model.CountryId, result.CountryId);
         Assert.Equal(model.CategoryId, result.CategoryId);
+    }
+
+    [Theory]
+    [InlineData("uk", VerificationStatus.NeedsReview)]
+    [InlineData("en", VerificationStatus.Verified)]
+    [InlineData("ru", VerificationStatus.Outdated)]
+    public void InformationEntryTranslationRoundTripsThroughJson(
+        string languageCode,
+        VerificationStatus verificationStatus)
+    {
+        var model = new InformationEntryTranslation(
+            Guid.Parse("88888888-8888-8888-8888-888888888888"),
+            languageCode,
+            "Example Title",
+            "Example Summary",
+            "Example Content",
+            verificationStatus,
+            new DateTimeOffset(2020, 1, 2, 3, 4, 5, TimeSpan.FromHours(2)));
+
+        var json = JsonSerializer.Serialize(model);
+        var result = JsonSerializer.Deserialize<InformationEntryTranslation>(json);
+
+        Assert.NotNull(result);
+        Assert.Equal(model.InformationEntryId, result.InformationEntryId);
+        Assert.Equal(model.LanguageCode, result.LanguageCode);
         Assert.Equal(model.Title, result.Title);
+        Assert.Equal(model.Summary, result.Summary);
         Assert.Equal(model.Content, result.Content);
         Assert.Equal(model.VerificationStatus, result.VerificationStatus);
+        Assert.Equal(model.LastUpdatedAt, result.LastUpdatedAt);
+        Assert.Equal(model.LastUpdatedAt.Offset, result.LastUpdatedAt.Offset);
     }
 
     [Fact]

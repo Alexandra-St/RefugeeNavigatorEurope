@@ -82,9 +82,9 @@ public class DataUniquenessValidatorTests
     }
 
     [Fact]
-    public void UniqueInformationEntriesReturnNoErrorsAndAllowRepeatedTitles()
+    public void UniqueInformationEntriesReturnNoErrors()
     {
-        var entries = new[] { Entry(Id1, "Same title"), Entry(Id2, "Same title") };
+        var entries = new[] { Entry(Id1), Entry(Id2) };
 
         Assert.Empty(DataUniquenessValidator.Validate(entries));
     }
@@ -92,9 +92,27 @@ public class DataUniquenessValidatorTests
     [Fact]
     public void DuplicateInformationEntryIdIsDetected()
     {
-        var entries = new[] { Entry(Id1, "First"), Entry(Id1, "Second") };
+        var entries = new[] { Entry(Id1), Entry(Id1) };
 
         Assert.Equal(new[] { "InformationEntry: duplicate Id." }, DataUniquenessValidator.Validate(entries));
+    }
+
+    [Fact]
+    public void UniqueTranslationsForDifferentLanguagesReturnNoErrors()
+    {
+        var translations = new[] { Translation(Id1, "uk"), Translation(Id1, "en"), Translation(Id1, "ru") };
+
+        Assert.Empty(DataUniquenessValidator.Validate(translations));
+    }
+
+    [Fact]
+    public void DuplicateTranslationEntryAndLanguagePairIsDetected()
+    {
+        var translations = new[] { Translation(Id1, "uk"), Translation(Id1, "uk") };
+
+        Assert.Equal(
+            new[] { "InformationEntryTranslation: duplicate InformationEntryId and LanguageCode." },
+            DataUniquenessValidator.Validate(translations));
     }
 
     [Fact]
@@ -120,6 +138,7 @@ public class DataUniquenessValidatorTests
         Assert.Empty(DataUniquenessValidator.Validate(Array.Empty<Country>()));
         Assert.Empty(DataUniquenessValidator.Validate(Array.Empty<InformationCategory>()));
         Assert.Empty(DataUniquenessValidator.Validate(Array.Empty<InformationEntry>()));
+        Assert.Empty(DataUniquenessValidator.Validate(Array.Empty<InformationEntryTranslation>()));
         Assert.Empty(DataUniquenessValidator.Validate(Array.Empty<OfficialSource>()));
     }
 
@@ -129,6 +148,7 @@ public class DataUniquenessValidatorTests
         Assert.Throws<ArgumentNullException>(() => DataUniquenessValidator.Validate((IEnumerable<Country>)null!));
         Assert.Throws<ArgumentNullException>(() => DataUniquenessValidator.Validate((IEnumerable<InformationCategory>)null!));
         Assert.Throws<ArgumentNullException>(() => DataUniquenessValidator.Validate((IEnumerable<InformationEntry>)null!));
+        Assert.Throws<ArgumentNullException>(() => DataUniquenessValidator.Validate((IEnumerable<InformationEntryTranslation>)null!));
         Assert.Throws<ArgumentNullException>(() => DataUniquenessValidator.Validate((IEnumerable<OfficialSource>)null!));
     }
 
@@ -190,8 +210,10 @@ public class DataUniquenessValidatorTests
 
     private static InformationCategory Category(Guid id, string slug) => new(id, slug, slug);
 
-    private static InformationEntry Entry(Guid id, string title) => new(
-        id, Id2, Id3, title, "Content", VerificationStatus.Verified);
+    private static InformationEntry Entry(Guid id) => new(id, Id2, Id3);
+
+    private static InformationEntryTranslation Translation(Guid entryId, string languageCode) => new(
+        entryId, languageCode, "Title", "Summary", "Content", VerificationStatus.Verified, CheckedAt);
 
     private static OfficialSource Source(Guid id, string title, Uri? url = null) => new(
         id, Id2, title, url ?? new Uri("https://example.org/source"), CheckedAt);
