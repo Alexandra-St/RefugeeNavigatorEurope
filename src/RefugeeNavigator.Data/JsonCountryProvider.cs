@@ -1,4 +1,3 @@
-using System.Text.Json;
 using RefugeeNavigator.Domain;
 
 namespace RefugeeNavigator.Data;
@@ -14,19 +13,11 @@ public sealed class JsonCountryProvider
 
     public async Task<IReadOnlyList<Country>> LoadAsync(CancellationToken cancellationToken = default)
     {
-        await using var stream = new FileStream(
+        var countries = await JsonArrayFileReader.ReadAsync<Country>(
             _filePath,
-            FileMode.Open,
-            FileAccess.Read,
-            FileShare.Read,
-            bufferSize: 4096,
-            useAsync: true);
+            "country data",
+            cancellationToken);
 
-        var countries = await JsonSerializer.DeserializeAsync<List<Country>>(
-            stream,
-            cancellationToken: cancellationToken);
-
-        return countries?.AsReadOnly()
-            ?? throw new JsonException("The country data must be a JSON array.");
+        return countries.AsReadOnly();
     }
 }

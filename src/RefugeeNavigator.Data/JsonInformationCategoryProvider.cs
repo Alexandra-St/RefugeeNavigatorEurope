@@ -1,4 +1,3 @@
-using System.Text.Json;
 using RefugeeNavigator.Domain;
 
 namespace RefugeeNavigator.Data;
@@ -15,19 +14,11 @@ public sealed class JsonInformationCategoryProvider
     public async Task<IReadOnlyList<InformationCategory>> LoadAsync(
         CancellationToken cancellationToken = default)
     {
-        await using var stream = new FileStream(
+        var categories = await JsonArrayFileReader.ReadAsync<InformationCategory>(
             _filePath,
-            FileMode.Open,
-            FileAccess.Read,
-            FileShare.Read,
-            bufferSize: 4096,
-            useAsync: true);
+            "information category data",
+            cancellationToken);
 
-        var categories = await JsonSerializer.DeserializeAsync<List<InformationCategory>>(
-            stream,
-            cancellationToken: cancellationToken);
-
-        return categories?.AsReadOnly()
-            ?? throw new JsonException("The information category data must be a JSON array.");
+        return categories.AsReadOnly();
     }
 }
