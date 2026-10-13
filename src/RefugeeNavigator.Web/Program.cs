@@ -6,10 +6,13 @@ using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Routing;
 using RefugeeNavigator.Web.Components;
 using RefugeeNavigator.Web.Localization;
+using RefugeeNavigator.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents();
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+var catalog = await new JsonCatalogProvider(builder.Environment.ContentRootPath).LoadAsync();
+builder.Services.AddSingleton(catalog);
 
 var supportedCultures = new[]
 {

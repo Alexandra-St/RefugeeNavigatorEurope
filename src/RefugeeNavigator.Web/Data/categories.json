@@ -1,0 +1,32 @@
+[
+  {
+    "Id": "20000000-0000-0000-0000-000000000001",
+    "Name": "Temporary protection",
+    "Slug": "temporary-protection"
+  },
+  {
+    "Id": "20000000-0000-0000-0000-000000000002",
+    "Name": "Employment",
+    "Slug": "employment"
+  },
+  {
+    "Id": "20000000-0000-0000-0000-000000000003",
+    "Name": "Healthcare",
+    "Slug": "healthcare"
+  },
+  {
+    "Id": "20000000-0000-0000-0000-000000000004",
+    "Name": "Housing",
+    "Slug": "housing"
+  },
+  {
+    "Id": "20000000-0000-0000-0000-000000000005",
+    "Name": "Education",
+    "Slug": "education"
+  },
+  {
+    "Id": "20000000-0000-0000-0000-000000000006",
+    "Name": "Social assistance",
+    "Slug": "social-assistance"
+  }
+]
