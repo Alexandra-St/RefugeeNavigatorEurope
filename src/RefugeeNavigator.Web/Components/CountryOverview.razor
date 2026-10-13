@@ -32,41 +32,17 @@
             </div>
 
             <div class="category-grid">
-                <article class="category-card">
-                    <h3>@Localizer["Category.TemporaryProtection"]</h3>
-                    <p>@Localizer["Category.TemporaryProtectionDescription"]</p>
-                    <a class="category-link" href="/countries/@CountrySlug/categories/temporary-protection">@Localizer["Country.ExploreCategory", Localizer["Category.TemporaryProtection"].Value] <span aria-hidden="true">→</span></a>
-                </article>
+                @foreach (var category in Catalog.Categories)
+                {
+                    var categoryName = Localizer[CatalogLocalizationKeyResolver.CategoryName(category)].Value;
+                    var categoryDescription = Localizer[CatalogLocalizationKeyResolver.CategoryDescription(category)].Value;
 
-                <article class="category-card">
-                    <h3>@Localizer["Category.Employment"]</h3>
-                    <p>@Localizer["Category.EmploymentDescription"]</p>
-                    <a class="category-link" href="/countries/@CountrySlug/categories/employment">@Localizer["Country.ExploreCategory", Localizer["Category.Employment"].Value] <span aria-hidden="true">→</span></a>
-                </article>
-
-                <article class="category-card">
-                    <h3>@Localizer["Category.Healthcare"]</h3>
-                    <p>@Localizer["Category.HealthcareDescription"]</p>
-                    <a class="category-link" href="/countries/@CountrySlug/categories/healthcare">@Localizer["Country.ExploreCategory", Localizer["Category.Healthcare"].Value] <span aria-hidden="true">→</span></a>
-                </article>
-
-                <article class="category-card">
-                    <h3>@Localizer["Category.Housing"]</h3>
-                    <p>@Localizer["Category.HousingDescription"]</p>
-                    <a class="category-link" href="/countries/@CountrySlug/categories/housing">@Localizer["Country.ExploreCategory", Localizer["Category.Housing"].Value] <span aria-hidden="true">→</span></a>
-                </article>
-
-                <article class="category-card">
-                    <h3>@Localizer["Category.Education"]</h3>
-                    <p>@Localizer["Category.EducationDescription"]</p>
-                    <a class="category-link" href="/countries/@CountrySlug/categories/education">@Localizer["Country.ExploreCategory", Localizer["Category.Education"].Value] <span aria-hidden="true">→</span></a>
-                </article>
-
-                <article class="category-card">
-                    <h3>@Localizer["Category.SocialAssistance"]</h3>
-                    <p>@Localizer["Category.SocialAssistanceDescription"]</p>
-                    <a class="category-link" href="/countries/@CountrySlug/categories/social-assistance">@Localizer["Country.ExploreCategory", Localizer["Category.SocialAssistance"].Value] <span aria-hidden="true">→</span></a>
-                </article>
+                    <article class="category-card">
+                        <h3>@categoryName</h3>
+                        <p>@categoryDescription</p>
+                        <a class="category-link" href="/countries/@CountrySlug/categories/@category.Slug">@Localizer["Country.ExploreCategory", categoryName] <span aria-hidden="true">→</span></a>
+                    </article>
+                }
             </div>
         </section>
 

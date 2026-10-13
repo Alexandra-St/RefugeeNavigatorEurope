@@ -1,5 +1,8 @@
 @page "/countries/{CountrySlug}/categories/{CategorySlug}"
 @using Microsoft.AspNetCore.Components
+@using RefugeeNavigator.Data
+@using RefugeeNavigator.Domain
+@inject CatalogData Catalog
 @inject NavigationManager Navigation
 @inject IStringLocalizer<SharedResource> Localizer
 
@@ -36,28 +39,25 @@
     [Parameter]
     public string CategorySlug { get; set; } = string.Empty;
 
-    private string? CountryName => CountrySlug switch
-    {
-        "denmark" => Localizer["Country.Denmark"].Value,
-        "germany" => Localizer["Country.Germany"].Value,
-        "poland" => Localizer["Country.Poland"].Value,
-        _ => null
-    };
+    private Country? Country => Catalog.Countries.FirstOrDefault(country =>
+        string.Equals(country.Slug, CountrySlug, StringComparison.OrdinalIgnoreCase));
 
-    private (string Name, string Description)? CategoryDetails => CategorySlug switch
-    {
-        "temporary-protection" => (Localizer["Category.TemporaryProtection"].Value, Localizer["Category.TemporaryProtectionDescription"].Value),
-        "employment" => (Localizer["Category.Employment"].Value, Localizer["Category.EmploymentDescription"].Value),
-        "healthcare" => (Localizer["Category.Healthcare"].Value, Localizer["Category.HealthcareDescription"].Value),
-        "housing" => (Localizer["Category.Housing"].Value, Localizer["Category.HousingDescription"].Value),
-        "education" => (Localizer["Category.Education"].Value, Localizer["Category.EducationDescription"].Value),
-        "social-assistance" => (Localizer["Category.SocialAssistance"].Value, Localizer["Category.SocialAssistanceDescription"].Value),
-        _ => null
-    };
+    private InformationCategory? SelectedCategory => Catalog.Categories.FirstOrDefault(category =>
+        string.Equals(category.Slug, CategorySlug, StringComparison.OrdinalIgnoreCase));
+
+    private string? CountryName => Country is { } country
+        ? Localizer[CatalogLocalizationKeyResolver.CountryName(country)].Value
+        : null;
+
+    private (string Name, string Description)? CategoryDetails => SelectedCategory is { } category
+        ? (
+            Localizer[CatalogLocalizationKeyResolver.CategoryName(category)].Value,
+            Localizer[CatalogLocalizationKeyResolver.CategoryDescription(category)].Value)
+        : null;
 
     protected override void OnParametersSet()
     {
-        if (CountryName is null || CategoryDetails is null)
+        if (Country is null || SelectedCategory is null)
         {
             Navigation.NotFound();
         }
