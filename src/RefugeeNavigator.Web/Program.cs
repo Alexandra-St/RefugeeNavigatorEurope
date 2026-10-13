@@ -44,6 +44,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRequestLocalization();
+app.UseStatusCodePagesWithReExecute("/not-found");
 app.UseAntiforgery();
 app.MapGet("/set-language", (HttpContext context, string? culture, string? returnUrl) =>
 {
