@@ -1,4 +1,5 @@
 using System.Globalization;
+using System.Resources;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Abstractions;
@@ -12,6 +13,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents();
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 var catalog = await new JsonCatalogProvider(builder.Environment.ContentRootPath).LoadAsync();
+var resourceManager = new ResourceManager(
+    "RefugeeNavigator.Web.Resources.Localization.SharedResource",
+    typeof(SharedResource).Assembly);
+CatalogLocalizationValidator.Validate(catalog, resourceManager.GetString);
 builder.Services.AddSingleton(catalog);
 
 var supportedCultures = new[]
