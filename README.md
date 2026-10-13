@@ -62,6 +62,8 @@ RefugeeNavigatorEurope/
 
 See [contribution guidelines](docs/CONTRIBUTING.md). Discuss new functionality in an issue before implementation.
 
+For the manual research, verification, translation, and publication process for information content, see the [content publishing workflow](docs/CONTENT_WORKFLOW.md).
+
 ## License
 
 [MIT](LICENSE).
