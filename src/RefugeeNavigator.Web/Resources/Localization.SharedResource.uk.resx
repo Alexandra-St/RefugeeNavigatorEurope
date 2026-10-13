@@ -105,6 +105,27 @@
   <data name="Category.PlaceholderDescription" xml:space="preserve">
     <value>Детальну інформацію про цю категорію буде додано після перевірки за офіційними джерелами.</value>
   </data>
+  <data name="Category.VerificationStatus" xml:space="preserve">
+    <value>Статус перевірки</value>
+  </data>
+  <data name="Category.Status.NeedsReview" xml:space="preserve">
+    <value>Потребує перевірки</value>
+  </data>
+  <data name="Category.Status.Verified" xml:space="preserve">
+    <value>Перевірено</value>
+  </data>
+  <data name="Category.Status.Outdated" xml:space="preserve">
+    <value>Може бути застарілою</value>
+  </data>
+  <data name="Category.LastUpdated" xml:space="preserve">
+    <value>Останнє оновлення перекладу</value>
+  </data>
+  <data name="Category.SourceLastChecked" xml:space="preserve">
+    <value>Джерело востаннє перевірено</value>
+  </data>
+  <data name="Category.Sources" xml:space="preserve">
+    <value>Джерела інформації</value>
+  </data>
   <data name="Category.TemporaryProtection" xml:space="preserve">
     <value>Тимчасовий захист</value>
   </data>

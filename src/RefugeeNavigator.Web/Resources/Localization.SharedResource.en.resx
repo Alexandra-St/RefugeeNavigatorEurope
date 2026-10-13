@@ -105,6 +105,27 @@
   <data name="Category.PlaceholderDescription" xml:space="preserve">
     <value>Detailed information for this category will be added after verification against official sources.</value>
   </data>
+  <data name="Category.VerificationStatus" xml:space="preserve">
+    <value>Review status</value>
+  </data>
+  <data name="Category.Status.NeedsReview" xml:space="preserve">
+    <value>Needs review</value>
+  </data>
+  <data name="Category.Status.Verified" xml:space="preserve">
+    <value>Reviewed</value>
+  </data>
+  <data name="Category.Status.Outdated" xml:space="preserve">
+    <value>May be outdated</value>
+  </data>
+  <data name="Category.LastUpdated" xml:space="preserve">
+    <value>Translation last updated</value>
+  </data>
+  <data name="Category.SourceLastChecked" xml:space="preserve">
+    <value>Source last checked</value>
+  </data>
+  <data name="Category.Sources" xml:space="preserve">
+    <value>Supporting sources</value>
+  </data>
   <data name="Category.TemporaryProtection" xml:space="preserve">
     <value>Temporary protection</value>
   </data>

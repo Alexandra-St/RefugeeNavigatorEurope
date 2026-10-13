@@ -86,6 +86,108 @@
     color: #425675;
 }
 
+.information-entries {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.information-entry {
+    padding: 1.75rem;
+    border: 1px solid #d8e1ee;
+    border-radius: 0.85rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgb(16 42 86 / 4%);
+}
+
+.information-entry h2,
+.entry-sources h3 {
+    margin: 0;
+    color: #102a56;
+    font-weight: 700;
+}
+
+.information-entry h2 {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+}
+
+.entry-summary {
+    margin: 0.75rem 0 0;
+    color: #263f66;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.entry-content {
+    margin: 1rem 0 0;
+    color: #425675;
+    line-height: 1.7;
+    white-space: pre-line;
+}
+
+.entry-metadata {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 2rem;
+    margin: 1.5rem 0 0;
+}
+
+.entry-metadata div {
+    display: grid;
+    gap: 0.2rem;
+}
+
+.entry-metadata dt {
+    color: #425675;
+    font-size: 0.9rem;
+    font-weight: 650;
+}
+
+.entry-metadata dd {
+    margin: 0;
+    color: #172b4d;
+}
+
+.entry-sources {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #d8e1ee;
+}
+
+.entry-sources h3 {
+    font-size: 1.1rem;
+}
+
+.entry-sources ul {
+    display: grid;
+    gap: 0.9rem;
+    margin: 0.75rem 0 0;
+    padding-left: 1.25rem;
+}
+
+.entry-sources a {
+    color: #155eef;
+    font-weight: 650;
+    overflow-wrap: anywhere;
+}
+
+.entry-sources a:hover {
+    color: #0b45b5;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.15em;
+}
+
+.entry-sources a:focus-visible {
+    outline: 3px solid #155eef;
+    outline-offset: 3px;
+}
+
+.source-checked {
+    display: block;
+    margin-top: 0.2rem;
+    color: #425675;
+    font-size: 0.9rem;
+}
+
 .information-note {
     margin-top: 2rem;
     padding: 1rem 1.2rem;
@@ -115,5 +217,9 @@
     .content-placeholder {
         padding: 1.5rem 1.1rem;
         text-align: left;
+    }
+
+    .information-entry {
+        padding: 1.4rem 1.1rem;
     }
 }

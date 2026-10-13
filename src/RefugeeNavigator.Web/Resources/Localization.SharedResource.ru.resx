@@ -105,6 +105,27 @@
   <data name="Category.PlaceholderDescription" xml:space="preserve">
     <value>Подробная информация об этой категории будет добавлена после проверки по официальным источникам.</value>
   </data>
+  <data name="Category.VerificationStatus" xml:space="preserve">
+    <value>Статус проверки</value>
+  </data>
+  <data name="Category.Status.NeedsReview" xml:space="preserve">
+    <value>Требует проверки</value>
+  </data>
+  <data name="Category.Status.Verified" xml:space="preserve">
+    <value>Проверено</value>
+  </data>
+  <data name="Category.Status.Outdated" xml:space="preserve">
+    <value>Возможно, устарело</value>
+  </data>
+  <data name="Category.LastUpdated" xml:space="preserve">
+    <value>Последнее обновление перевода</value>
+  </data>
+  <data name="Category.SourceLastChecked" xml:space="preserve">
+    <value>Источник проверен</value>
+  </data>
+  <data name="Category.Sources" xml:space="preserve">
+    <value>Источники информации</value>
+  </data>
   <data name="Category.TemporaryProtection" xml:space="preserve">
     <value>Временная защита</value>
   </data>

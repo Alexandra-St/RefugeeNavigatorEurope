@@ -1,5 +1,6 @@
 @page "/countries/{CountrySlug}/categories/{CategorySlug}"
 @using Microsoft.AspNetCore.Components
+@using System.Globalization
 @using RefugeeNavigator.Data
 @using RefugeeNavigator.Domain
 @inject CatalogData Catalog
@@ -20,10 +21,53 @@
                 <p class="subtitle">@category.Description</p>
             </header>
 
-            <section class="content-placeholder" aria-labelledby="placeholder-heading">
-                <h2 id="placeholder-heading">@Localizer["Category.InformationComingSoon"]</h2>
-                <p>@Localizer["Category.PlaceholderDescription"]</p>
-            </section>
+            @if (_renderedEntries.Count == 0)
+            {
+                <section class="content-placeholder" aria-labelledby="placeholder-heading">
+                    <h2 id="placeholder-heading">@Localizer["Category.InformationComingSoon"]</h2>
+                    <p>@Localizer["Category.PlaceholderDescription"]</p>
+                </section>
+            }
+            else
+            {
+                <section class="information-entries" aria-label="@category.Name">
+                    @foreach (var item in _renderedEntries)
+                    {
+                        <article class="information-entry" aria-labelledby="entry-heading-@item.Entry.Id.ToString("N")">
+                            <h2 id="entry-heading-@item.Entry.Id.ToString("N")">@item.Translation.Title</h2>
+                            <p class="entry-summary">@item.Translation.Summary</p>
+                            <p class="entry-content">@item.Translation.Content</p>
+
+                            <dl class="entry-metadata">
+                                <div>
+                                    <dt>@Localizer["Category.VerificationStatus"]</dt>
+                                    <dd>@Localizer[VerificationStatusResourceKey(item.Translation.VerificationStatus)]</dd>
+                                </div>
+                                <div>
+                                    <dt>@Localizer["Category.LastUpdated"]</dt>
+                                    <dd><time datetime="@item.Translation.LastUpdatedAt.ToString("O", CultureInfo.InvariantCulture)">@FormatDate(item.Translation.LastUpdatedAt)</time></dd>
+                                </div>
+                            </dl>
+
+                            @if (item.Sources.Count > 0)
+                            {
+                                <section class="entry-sources" aria-labelledby="sources-heading-@item.Entry.Id.ToString("N")">
+                                    <h3 id="sources-heading-@item.Entry.Id.ToString("N")">@Localizer["Category.Sources"]</h3>
+                                    <ul>
+                                        @foreach (var source in item.Sources)
+                                        {
+                                            <li>
+                                                <a href="@source.Url.AbsoluteUri" target="_blank" rel="noopener noreferrer">@source.Title</a>
+                                                <span class="source-checked">@Localizer["Category.SourceLastChecked"] <time datetime="@source.LastCheckedAt.ToString("O", CultureInfo.InvariantCulture)">@FormatDate(source.LastCheckedAt)</time></span>
+                                            </li>
+                                        }
+                                    </ul>
+                                </section>
+                            }
+                        </article>
+                    }
+                </section>
+            }
 
             <footer class="information-note">
                 <p>@Localizer["Common.Disclaimer"]</p>
@@ -38,6 +82,8 @@
 
     [Parameter]
     public string CategorySlug { get; set; } = string.Empty;
+
+    private IReadOnlyList<RenderedInformationEntry> _renderedEntries = Array.Empty<RenderedInformationEntry>();
 
     private Country? Country => Catalog.Countries.FirstOrDefault(country =>
         string.Equals(country.Slug, CountrySlug, StringComparison.OrdinalIgnoreCase));
@@ -55,11 +101,60 @@
             Localizer[CatalogLocalizationKeyResolver.CategoryDescription(category)].Value)
         : null;
 
+    private IReadOnlyList<RenderedInformationEntry> GetRenderedEntries()
+    {
+        if (Country is not { } country || SelectedCategory is not { } category)
+        {
+            return Array.Empty<RenderedInformationEntry>();
+        }
+
+        var languageCode = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+        if (languageCode is not ("uk" or "en" or "ru"))
+        {
+            throw new InvalidOperationException($"The current UI culture '{CultureInfo.CurrentUICulture.Name}' is not supported.");
+        }
+
+        return Catalog.InformationEntries
+            .Where(entry => entry.CountryId == country.Id && entry.CategoryId == category.Id)
+            .Select(entry =>
+            {
+                var translation = Catalog.InformationEntryTranslations.SingleOrDefault(item =>
+                    item.InformationEntryId == entry.Id && item.LanguageCode == languageCode)
+                    ?? throw new InvalidOperationException(
+                        $"Information entry '{entry.Id}' has no '{languageCode}' translation.");
+
+                var sources = Catalog.OfficialSources
+                    .Where(source => source.InformationEntryId == entry.Id)
+                    .ToArray();
+
+                return new RenderedInformationEntry(entry, translation, sources);
+            })
+            .ToArray();
+    }
+
+    private static string VerificationStatusResourceKey(VerificationStatus status) => status switch
+    {
+        VerificationStatus.NeedsReview => "Category.Status.NeedsReview",
+        VerificationStatus.Verified => "Category.Status.Verified",
+        VerificationStatus.Outdated => "Category.Status.Outdated",
+        _ => throw new InvalidOperationException($"Unsupported verification status '{status}'.")
+    };
+
+    private static string FormatDate(DateTimeOffset value) => value.ToString("d MMM yyyy", CultureInfo.CurrentCulture);
+
+    private sealed record RenderedInformationEntry(
+        InformationEntry Entry,
+        InformationEntryTranslation Translation,
+        IReadOnlyList<OfficialSource> Sources);
+
     protected override void OnParametersSet()
     {
         if (Country is null || SelectedCategory is null)
         {
             Navigation.NotFound();
+            return;
         }
+
+        _renderedEntries = GetRenderedEntries();
     }
 }
