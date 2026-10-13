@@ -1,5 +1,14 @@
 @using Microsoft.AspNetCore.Components
+@using RefugeeNavigator.Data
+@using RefugeeNavigator.Domain
+@page "/countries/{CountrySlug}"
+@inject CatalogData Catalog
+@inject NavigationManager Navigation
 @inject IStringLocalizer<SharedResource> Localizer
+
+@if (Country is not null)
+{
+<PageTitle>@Localizer["Country.PageTitle", CountryDisplayName]</PageTitle>
 
 <main id="main-content" class="country-page">
     <div class="page-content">
@@ -66,24 +75,24 @@
         </footer>
     </div>
 </main>
+}
 
 @code {
     [Parameter]
-    public required string CountryName { get; set; }
+    public string CountrySlug { get; set; } = string.Empty;
 
-    private string CountrySlug => CountryName switch
-    {
-        "Denmark" => "denmark",
-        "Germany" => "germany",
-        "Poland" => "poland",
-        _ => string.Empty
-    };
+    private Country? Country => Catalog.Countries.FirstOrDefault(country =>
+        string.Equals(country.Slug, CountrySlug, StringComparison.OrdinalIgnoreCase));
 
-    private string CountryDisplayName => CountryName switch
+    private string CountryDisplayName => Country is { } country
+        ? Localizer[CatalogLocalizationKeyResolver.CountryName(country)].Value
+        : string.Empty;
+
+    protected override void OnParametersSet()
     {
-        "Denmark" => Localizer["Country.Denmark"].Value,
-        "Germany" => Localizer["Country.Germany"].Value,
-        "Poland" => Localizer["Country.Poland"].Value,
-        _ => CountryName
-    };
+        if (Country is null)
+        {
+            Navigation.NotFound();
+        }
+    }
 }

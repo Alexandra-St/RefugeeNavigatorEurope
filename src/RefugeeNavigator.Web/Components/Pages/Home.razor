@@ -1,4 +1,6 @@
 @page "/"
+@using RefugeeNavigator.Data
+@inject CatalogData Catalog
 @inject IStringLocalizer<SharedResource> Localizer
 
 <PageTitle>@Localizer["Home.PageTitle"]</PageTitle>
@@ -24,29 +26,18 @@
             </div>
 
             <div class="country-grid">
-                <article class="country-card">
-                    <h3>@Localizer["Country.Denmark"]</h3>
-                    <p>@Localizer["Home.CountryDescription", Localizer["Country.Denmark"].Value]</p>
-                    <a href="/countries/denmark" aria-label="@Localizer["Home.CountryLinkLabel", Localizer["Country.Denmark"].Value]">
-                        @Localizer["Home.ExploreCountry", Localizer["Country.Denmark"].Value] <span aria-hidden="true">→</span>
-                    </a>
-                </article>
+                @foreach (var country in Catalog.Countries)
+                {
+                    var countryDisplayName = Localizer[CatalogLocalizationKeyResolver.CountryName(country)].Value;
 
-                <article class="country-card">
-                    <h3>@Localizer["Country.Germany"]</h3>
-                    <p>@Localizer["Home.CountryDescription", Localizer["Country.Germany"].Value]</p>
-                    <a href="/countries/germany" aria-label="@Localizer["Home.CountryLinkLabel", Localizer["Country.Germany"].Value]">
-                        @Localizer["Home.ExploreCountry", Localizer["Country.Germany"].Value] <span aria-hidden="true">→</span>
-                    </a>
-                </article>
-
-                <article class="country-card">
-                    <h3>@Localizer["Country.Poland"]</h3>
-                    <p>@Localizer["Home.CountryDescription", Localizer["Country.Poland"].Value]</p>
-                    <a href="/countries/poland" aria-label="@Localizer["Home.CountryLinkLabel", Localizer["Country.Poland"].Value]">
-                        @Localizer["Home.ExploreCountry", Localizer["Country.Poland"].Value] <span aria-hidden="true">→</span>
-                    </a>
-                </article>
+                    <article class="country-card">
+                        <h3>@countryDisplayName</h3>
+                        <p>@Localizer["Home.CountryDescription", countryDisplayName]</p>
+                        <a href="/countries/@country.Slug" aria-label="@Localizer["Home.CountryLinkLabel", countryDisplayName]">
+                            @Localizer["Home.ExploreCountry", countryDisplayName] <span aria-hidden="true">→</span>
+                        </a>
+                    </article>
+                }
             </div>
         </section>
 
