@@ -22,6 +22,8 @@ jobs:
         run: dotnet build RefugeeNavigatorEurope.slnx --configuration Release --no-restore
       - name: Test
         run: dotnet test RefugeeNavigatorEurope.slnx --configuration Release --no-build
+      - name: Test deployment verification script
+        run: python3 -m unittest discover -s .github/scripts -p 'test_*.py' -v
       - name: Build production Docker image
         run: docker build --file Dockerfile --tag refugee-navigator-europe:ci .
       - name: Run Docker integration smoke tests

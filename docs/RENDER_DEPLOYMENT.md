@@ -89,3 +89,9 @@ After an operator confirms the actual Render Free compute plan in the Dashboard:
 - [Render health checks](https://render.com/docs/health-checks)
 - [Render Free instance limitations](https://render.com/docs/free)
 - [Render outbound IP addresses](https://render.com/docs/outbound-ip-addresses) (outbound ranges only; not inbound proxy addresses)
+
+## Post-deployment verification
+
+After deployment is approved and the service URL and credentials are available, run the read-only verification from a trusted local environment. The script requires `RENDER_TARGET_URL`, `PRIVATE_ALPHA_USERNAME`, and `PRIVATE_ALPHA_PASSWORD` in the process environment; it accepts only an HTTPS `*.onrender.com` origin, uses bounded requests, does not follow redirects, and never prints credentials or Authorization headers. Provide credentials interactively and do not place them in a file or command history. See [the Private Alpha launch checklist](PRIVATE_ALPHA_LAUNCH_CHECKLIST.md) for a safe invocation and manual acceptance steps.
+
+The script checks a live deployment only when explicitly run with a real URL. CI tests its logic using synthetic responses and never contacts Render. A passing script does not verify the actual Render compute plan or independently prove Render edge behavior; confirm those manually in the dashboard and browser.
