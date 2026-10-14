@@ -23,4 +23,9 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="../../src/RefugeeNavigator.Web/Components/Pages/Search.razor.css" Link="AccessibilityStyles/Search.razor.css" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="../../src/RefugeeNavigator.Web/Components/Pages/Compare.razor.css" Link="AccessibilityStyles/Compare.razor.css" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>

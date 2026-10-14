@@ -44,6 +44,48 @@ public sealed class AlphaPreviewPageTests
     }
 
     [Theory]
+    [InlineData("uk", "Данія", "Німеччина", "Польща", "Докладніше про країну «{0}»")]
+    [InlineData("en", "Denmark", "Germany", "Poland", "Explore {0}")]
+    [InlineData("ru", "Дания", "Германия", "Польша", "Информация о стране: {0}")]
+    public async Task CountryLinksUseVisibleLocalizedNamesAndKeepTheirRoutes(
+        string language,
+        string denmark,
+        string germany,
+        string poland,
+        string linkLabelTemplate)
+    {
+        var html = await RenderAsync<Home>(language);
+        var visibleHtml = WebUtility.HtmlDecode(html);
+        var countries = new[]
+        {
+            (Slug: "denmark", Name: denmark),
+            (Slug: "germany", Name: germany),
+            (Slug: "poland", Name: poland)
+        };
+
+        var renderedHeadings = Regex.Matches(visibleHtml, @"<h3\b[^>]*>(?<name>.*?)</h3>", RegexOptions.Singleline)
+            .Select(match => match.Groups["name"].Value.Trim())
+            .TakeLast(3)
+            .ToArray();
+        Assert.True(countries.Select(country => country.Name).SequenceEqual(renderedHeadings), visibleHtml);
+
+        foreach (var country in countries)
+        {
+            var link = Regex.Match(
+                html,
+                $@"<a(?<attributes>[^>]*href=""/countries/{Regex.Escape(country.Slug)}""[^>]*)>(?<content>.*?)</a>",
+                RegexOptions.Singleline);
+
+            Assert.True(link.Success, $"Expected a link to {country.Slug}.");
+            Assert.DoesNotContain("aria-label=", link.Groups["attributes"].Value, StringComparison.OrdinalIgnoreCase);
+            Assert.Contains("aria-hidden=\"true\"", link.Groups["content"].Value);
+
+            var linkText = Regex.Replace(link.Groups["content"].Value, "<span[^>]*>.*?</span>", string.Empty, RegexOptions.Singleline);
+            Assert.Equal(string.Format(CultureInfo.GetCultureInfo(language), linkLabelTemplate, country.Name), WebUtility.HtmlDecode(linkText).Trim());
+        }
+    }
+
+    [Theory]
     [InlineData("uk", "Пошук інформації", "Порівняння країн", "опубліковані статті")]
     [InlineData("en", "Search information", "Compare countries", "currently published")]
     [InlineData("ru", "Поиск информации", "Сравнение стран", "опубликованные статьи")]

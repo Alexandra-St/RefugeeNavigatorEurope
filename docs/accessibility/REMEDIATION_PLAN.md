@@ -4,24 +4,26 @@ This plan is based on [AUDIT_3_6B.md](AUDIT_3_6B.md). Items are independent and 
 
 ## P0 — Must fix before family testing
 
-### P0-1 — Increase form-control boundary contrast
+### P0-1 — Increase form-control boundary contrast — IMPLEMENTED (manual verification pending)
 
 - **Problem addressed:** A11Y-01; the `#9aabc2` boundary is 2.34:1 against white, below WCAG 2.2 SC 1.4.11.
 - **Affected components:** Search input and filters; comparison selects.
 - **Affected files:** `Components/Pages/Search.razor.css`, `Components/Pages/Compare.razor.css`.
 - **Proposed change:** Select a border color with at least 3:1 contrast against the adjacent control surface. Preserve the existing focus outline and layout.
+- **Implementation and test evidence:** Search and comparison control borders now use `#6b7e99` against their explicit white control surfaces. The WCAG sRGB relative-luminance calculation is 4.14:1. `AccessibilityRegressionTests` reads both CSS rules, verifies the 1px border and at least 3:1 contrast, and confirms the existing focus-visible outline declarations.
 - **Acceptance criteria:** Every affected control boundary reaches 3:1 or higher against its adjacent surface; focus remains visible; no control becomes less distinguishable in any supported culture.
-- **Suggested automated tests:** Add a lightweight regression check using the existing Python CI runtime to calculate the sRGB contrast of the declared boundary and surface colors; no browser package is required.
+- **Automated regression tests:** `AccessibilityRegressionTests` calculates WCAG sRGB contrast from the declared border and control-surface colors, checks the existing border width, and confirms focus-visible outline declarations.
 - **Manual verification:** Inspect search and compare forms at desktop and 375px widths, including keyboard focus and high-contrast settings.
 
-### P0-2 — Match accessible country-link names to visible text
+### P0-2 — Match accessible country-link names to visible text — IMPLEMENTED (manual verification pending)
 
 - **Problem addressed:** A11Y-02; English and Ukrainian `aria-label` values replace the visible country link text instead of containing it.
 - **Affected component:** Landing-page country cards.
 - **Affected files:** `Components/Pages/Home.razor`, localization resources for `Home.CountryLinkLabel` and `Home.ExploreCountry` if retained.
 - **Proposed change:** Remove the redundant `aria-label`, or revise the accessible name so that it starts with and contains the entire visible label for each country in Ukrainian, English, and Russian.
+- **Implementation and test evidence:** Removed the redundant `aria-label` from the country-card links. Rendered-output tests verify all three localized country names, visible link labels, decorative hidden arrows, and existing country destinations in Ukrainian, English, and Russian.
 - **Acceptance criteria:** For every country and culture, the accessibility tree name contains the rendered visible link text in the same order; no raw localization key is exposed.
-- **Suggested automated tests:** Add a parameterized test for all three cultures asserting that the visible label is a substring of the computed/localized accessible label; retain a browser accessibility-tree check where available.
+- **Automated regression tests:** Parameterized rendered-output tests verify country-card headings, link text, decorative arrow hiding, and destination routes in all three cultures. A local browser accessibility-tree check also confirmed link names match the visible localized text.
 - **Manual verification:** Use speech input or a screen reader's link list to activate each country link by its visible name in all three languages.
 
 ### P0-3 — Verify the private-alpha authentication prompt
