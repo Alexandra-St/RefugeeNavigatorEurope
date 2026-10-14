@@ -116,15 +116,15 @@ assert_status 404 "$public_url" /unknown-ci-route
 
 for culture in uk en ru; do
   case "$culture" in
-    uk) localized_country='Данія' ;;
-    en) localized_country='Denmark' ;;
-    ru) localized_country='Дания' ;;
+    uk) localized_heading='Сторінку не знайдено' ;;
+    en) localized_heading='Page not found' ;;
+    ru) localized_heading='Страница не найдена' ;;
   esac
-  assert_status 200 "$public_url" /countries/denmark -H "Accept-Language: $culture"
+  assert_status 200 "$public_url" /not-found -H "Accept-Language: $culture"
   grep --ignore-case --fixed-strings "<html lang=\"$culture\"" "$work_dir/response-body" >/dev/null \
     || fail "the $culture document language was not rendered"
-  grep --fixed-strings "$localized_country" "$work_dir/response-body" >/dev/null \
-    || fail "the $culture country translation was not rendered"
+  grep --fixed-strings "$localized_heading" "$work_dir/response-body" >/dev/null \
+    || fail "the $culture localized heading was not rendered"
 done
 check_startup_logs "$public_container"
 printf 'Public-mode routes, catalogs, localization and CSS: passed\n'
