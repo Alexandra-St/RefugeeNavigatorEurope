@@ -1,6 +1,7 @@
 using System.Text.Json;
 using RefugeeNavigator.Data;
 using RefugeeNavigator.Domain;
+using RefugeeNavigator.Web.Localization;
 
 namespace RefugeeNavigator.Tests;
 
@@ -39,9 +40,16 @@ public class JsonCatalogProviderTests
                 (Guid.Parse("20000000-0000-0000-0000-000000000006"), "Social assistance", "social-assistance")
             },
             catalog.Categories.Select(category => (category.Id, category.Name, category.Slug)));
-        Assert.Empty(catalog.InformationEntries);
-        Assert.Empty(catalog.InformationEntryTranslations);
-        Assert.Empty(catalog.OfficialSources);
+        CatalogLocalizationValidator.Validate(catalog, (_, _) => "translated");
+        Assert.All(catalog.InformationEntries, entry =>
+        {
+            Assert.Contains(catalog.Countries, country => country.Id == entry.CountryId);
+            Assert.Contains(catalog.Categories, category => category.Id == entry.CategoryId);
+        });
+        Assert.All(catalog.InformationEntryTranslations, translation =>
+            Assert.Contains(catalog.InformationEntries, entry => entry.Id == translation.InformationEntryId));
+        Assert.All(catalog.OfficialSources, source =>
+            Assert.Contains(catalog.InformationEntries, entry => entry.Id == source.InformationEntryId));
     }
 
     [Fact]
@@ -71,6 +79,7 @@ public class JsonCatalogProviderTests
                 Assert.Equal(
                     categories.Select(category => (category.Id, category.Name, category.Slug)),
                     catalog.Categories.Select(category => (category.Id, category.Name, category.Slug)));
+                CatalogLocalizationValidator.Validate(catalog, (_, _) => "translated");
                 Assert.IsAssignableFrom<IReadOnlyList<Country>>(catalog.Countries);
                 Assert.IsAssignableFrom<IReadOnlyList<InformationCategory>>(catalog.Categories);
                 Assert.Empty(catalog.InformationEntries);

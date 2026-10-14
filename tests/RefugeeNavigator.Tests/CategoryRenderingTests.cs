@@ -24,7 +24,7 @@ public sealed class CategoryRenderingTests
     [Fact]
     public async Task EmptyCategoryRendersExistingPlaceholder()
     {
-        var catalog = await new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync();
+        var catalog = await CreateCatalogAsync(Array.Empty<EntryFixture>());
         var html = await RenderAsync(catalog, "en");
         var visibleHtml = WebUtility.HtmlDecode(html);
 
