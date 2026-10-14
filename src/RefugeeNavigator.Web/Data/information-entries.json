@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "Id": "c2356631-3fa2-4553-8fda-50a4419262c0",
+    "CountryId": "10000000-0000-0000-0000-000000000001",
+    "CategoryId": "20000000-0000-0000-0000-000000000002",
+    "Translations": [
+      {
+        "InformationEntryId": "c2356631-3fa2-4553-8fda-50a4419262c0",
+        "LanguageCode": "uk",
+        "Title": "Де шукати роботу та інформацію про пошук роботи в Данії",
+        "Summary": "Workindenmark і Jobnet — офіційні ресурси для пошуку вакансій. Місцева влада також може допомагати з пошуком роботи.",
+        "Content": "Шукати вакансії можна на порталі Workindenmark. Там можна вводити ключові слова або назву посади й уточнювати результати за місцем роботи, тривалістю зайнятості та повною чи частковою зайнятістю.\n\nWorkindenmark публікує вакансії англійською мовою, але це не означає, що англійської достатньо для кожної посади. Натиснувши на оголошення, ви перейдете до публікації роботодавця. Інструкції щодо подання заявки можуть відрізнятися, тому перевіряйте їх для кожної вакансії.\n\nWorkindenmark також надає міжнародним шукачам роботи інформацію та консультації.\n\nУ Jobnet функцією Find Job можна користуватися без входу в систему; інструкція доступна данською мовою. Місцева влада також може допомагати з пошуком роботи. Уточніть у своєму муніципалітеті, які послуги доступні.",
+        "VerificationStatus": 1,
+        "LastUpdatedAt": "2026-10-14T08:41:09+00:00"
+      },
+      {
+        "InformationEntryId": "c2356631-3fa2-4553-8fda-50a4419262c0",
+        "LanguageCode": "en",
+        "Title": "Find jobs and job-search guidance in Denmark",
+        "Summary": "Workindenmark and Jobnet are official starting points for searching vacancies. Your municipality may also offer help with finding a job.",
+        "Content": "You can search for vacancies on Workindenmark’s job portal. Enter a keyword or job title, then narrow results by location, employment duration, and full-time or part-time work.\n\nWorkindenmark provides job listings in English, but this does not mean English alone is sufficient for every job. Selecting a listing takes you to the employer’s own posting. Application instructions can differ, so check them for each job.\n\nWorkindenmark also offers information and guidance for international jobseekers.\n\nOn Jobnet, you can use the Find Job function without logging in; its guide is in Danish. Your municipality may also offer help with finding a job. Check with your municipality directly to learn what services are available.",
+        "VerificationStatus": 1,
+        "LastUpdatedAt": "2026-10-14T08:41:09+00:00"
+      },
+      {
+        "InformationEntryId": "c2356631-3fa2-4553-8fda-50a4419262c0",
+        "LanguageCode": "ru",
+        "Title": "Где искать работу и информацию о поиске работы в Дании",
+        "Summary": "Workindenmark и Jobnet — официальные ресурсы для поиска вакансий. Муниципалитет также может помогать с поиском работы.",
+        "Content": "Искать вакансии можно на портале Workindenmark. Введите ключевое слово или название должности, затем уточните результаты по месту работы, продолжительности занятости и полной или частичной занятости.\n\nWorkindenmark размещает вакансии на английском языке, но это не означает, что английского достаточно для каждой должности. При выборе вакансии вы перейдёте к объявлению работодателя. Инструкции по подаче заявки могут различаться, поэтому проверяйте их для каждой вакансии.\n\nWorkindenmark также предоставляет международным соискателям информацию и консультации.\n\nНа Jobnet функцией Find Job можно пользоваться без входа в систему; руководство доступно на датском языке. Муниципалитет также может помогать с поиском работы. Уточните напрямую в своём муниципалитете, какие услуги доступны.",
+        "VerificationStatus": 1,
+        "LastUpdatedAt": "2026-10-14T08:41:09+00:00"
+      }
+    ]
+  }
+]

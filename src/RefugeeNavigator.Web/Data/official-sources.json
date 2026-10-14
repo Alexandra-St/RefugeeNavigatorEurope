@@ -1,1 +1,37 @@
-[]
+[
+  {
+    "Id": "fffe5fdb-0c81-47fc-9539-6bcc90949435",
+    "InformationEntryId": "c2356631-3fa2-4553-8fda-50a4419262c0",
+    "Title": "Workindenmark — Use our Job Portal",
+    "Url": "https://www.workindenmark.dk/getting-started/finding-vacancies-in-denmark/use-our-job-portal",
+    "LastCheckedAt": "2026-10-14T08:50:11+00:00"
+  },
+  {
+    "Id": "bb31ad0e-05cb-4e57-8164-c40d22e1d27f",
+    "InformationEntryId": "c2356631-3fa2-4553-8fda-50a4419262c0",
+    "Title": "Workindenmark — Our services for jobseekers",
+    "Url": "https://www.workindenmark.dk/for-job-seekers/",
+    "LastCheckedAt": "2026-10-14T08:50:11+00:00"
+  },
+  {
+    "Id": "b9577c82-6be2-4a73-a159-fcaa85968b8e",
+    "InformationEntryId": "c2356631-3fa2-4553-8fda-50a4419262c0",
+    "Title": "Jobnet — Sådan søger du job på Jobnet",
+    "Url": "https://jobnet.dk/hjaelp-og-support/vejledninger-og-guides/saadan-soeger-du-job-paa-jobnet",
+    "LastCheckedAt": "2026-10-14T08:50:11+00:00"
+  },
+  {
+    "Id": "02b2ab33-206c-4853-91c7-88e8c25b84f1",
+    "InformationEntryId": "c2356631-3fa2-4553-8fda-50a4419262c0",
+    "Title": "Danish Agency for Labour Market and Recruitment (STAR) — Find Job og Joblog",
+    "Url": "https://star.dk/digital-service/borger-it/find-job-og-joblog",
+    "LastCheckedAt": "2026-10-14T08:50:11+00:00"
+  },
+  {
+    "Id": "d7b01181-5f06-4210-b86c-12ef9e7858e8",
+    "InformationEntryId": "c2356631-3fa2-4553-8fda-50a4419262c0",
+    "Title": "Life in Denmark — Finding and taking a job",
+    "Url": "https://lifeindenmark.borger.dk/working/finding-a-job/finding-and-taking-a-job",
+    "LastCheckedAt": "2026-10-14T08:50:11+00:00"
+  }
+]
