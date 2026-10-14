@@ -63,6 +63,8 @@ if (trustedProxyAddresses.Count > 0)
     app.UseForwardedHeaders(forwardedHeadersOptions);
 }
 
+app.UseMiddleware<RenderFreeEdgeHttpsMiddleware>();
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler(errorApp => errorApp.Run(context =>

@@ -12,6 +12,12 @@ public enum PrivateAlphaAccessMode
     Public
 }
 
+public enum PrivateAlphaTlsMode
+{
+    Strict,
+    RenderFreeEdge
+}
+
 public sealed class PrivateAlphaAccessOptions
 {
     private readonly byte[]? _usernameHash;
@@ -19,11 +25,13 @@ public sealed class PrivateAlphaAccessOptions
 
     private PrivateAlphaAccessOptions(
         PrivateAlphaAccessMode mode,
+        PrivateAlphaTlsMode tlsMode,
         bool isDevelopment,
         string? username,
         string? password)
     {
         Mode = mode;
+        TlsMode = tlsMode;
         IsDevelopment = isDevelopment;
 
         if (mode == PrivateAlphaAccessMode.Private)
@@ -35,6 +43,10 @@ public sealed class PrivateAlphaAccessOptions
 
     public PrivateAlphaAccessMode Mode { get; }
 
+    public PrivateAlphaTlsMode TlsMode { get; }
+
+    public bool UsesRenderFreeEdgeTls => TlsMode == PrivateAlphaTlsMode.RenderFreeEdge;
+
     public bool IsDevelopment { get; }
 
     public bool RequiresAuthentication => Mode == PrivateAlphaAccessMode.Private;
@@ -45,11 +57,28 @@ public sealed class PrivateAlphaAccessOptions
     {
         ArgumentNullException.ThrowIfNull(configuration);
 
+        var tlsMode = configuration["PRIVATE_ALPHA_TLS_MODE"]?.Trim().ToLowerInvariant() switch
+        {
+            null or "" or "strict" => PrivateAlphaTlsMode.Strict,
+            "render-free-edge" => PrivateAlphaTlsMode.RenderFreeEdge,
+            _ => throw new InvalidOperationException(
+                "PRIVATE_ALPHA_TLS_MODE must be 'strict' or 'render-free-edge'.")
+        };
+
         var configuredMode = configuration["PRIVATE_ALPHA_ACCESS_MODE"];
         if (string.IsNullOrWhiteSpace(configuredMode) && isDevelopment)
         {
+            if (tlsMode == PrivateAlphaTlsMode.RenderFreeEdge)
+            {
+                ValidateRenderFreeEdgeConfiguration(
+                    configuration,
+                    PrivateAlphaAccessMode.Development,
+                    isDevelopment);
+            }
+
             return new PrivateAlphaAccessOptions(
                 PrivateAlphaAccessMode.Development,
+                tlsMode,
                 isDevelopment,
                 null,
                 null);
@@ -63,9 +92,14 @@ public sealed class PrivateAlphaAccessOptions
                 "PRIVATE_ALPHA_ACCESS_MODE must be explicitly set to 'private' or 'public'.")
         };
 
+        if (tlsMode == PrivateAlphaTlsMode.RenderFreeEdge)
+        {
+            ValidateRenderFreeEdgeConfiguration(configuration, mode, isDevelopment);
+        }
+
         if (mode == PrivateAlphaAccessMode.Public)
         {
-            return new PrivateAlphaAccessOptions(mode, isDevelopment, null, null);
+            return new PrivateAlphaAccessOptions(mode, tlsMode, isDevelopment, null, null);
         }
 
         var username = configuration["PRIVATE_ALPHA_USERNAME"];
@@ -82,7 +116,7 @@ public sealed class PrivateAlphaAccessOptions
                 "PRIVATE_ALPHA_PASSWORD must be at least 16 characters and include at least three of lowercase, uppercase, digits, and symbols.");
         }
 
-        return new PrivateAlphaAccessOptions(mode, isDevelopment, username, password);
+        return new PrivateAlphaAccessOptions(mode, tlsMode, isDevelopment, username, password);
     }
 
     public static IReadOnlyList<IPAddress> ParseTrustedProxyAddresses(string? configuredAddresses)
@@ -137,6 +171,43 @@ public sealed class PrivateAlphaAccessOptions
         characterTypes += password.Any(char.IsDigit) ? 1 : 0;
         characterTypes += password.Any(character => !char.IsLetterOrDigit(character)) ? 1 : 0;
         return characterTypes >= 3;
+    }
+
+    private static void ValidateRenderFreeEdgeConfiguration(
+        IConfiguration configuration,
+        PrivateAlphaAccessMode mode,
+        bool isDevelopment)
+    {
+        if (isDevelopment || mode != PrivateAlphaAccessMode.Private)
+        {
+            throw new InvalidOperationException(
+                "PRIVATE_ALPHA_TLS_MODE=render-free-edge requires non-Development private access mode.");
+        }
+
+        if (!string.Equals(configuration["RENDER"]?.Trim(), "true", StringComparison.OrdinalIgnoreCase)
+            || !string.Equals(configuration["RENDER_SERVICE_TYPE"]?.Trim(), "web", StringComparison.OrdinalIgnoreCase)
+            || !IsRenderExternalUrl(configuration["RENDER_EXTERNAL_URL"]))
+        {
+            throw new InvalidOperationException(
+                "PRIVATE_ALPHA_TLS_MODE=render-free-edge requires Render web-service runtime indicators and an HTTPS onrender.com external URL.");
+        }
+
+        if (!string.IsNullOrWhiteSpace(configuration["PRIVATE_ALPHA_TRUSTED_PROXY_IPS"]))
+        {
+            throw new InvalidOperationException(
+                "PRIVATE_ALPHA_TLS_MODE=render-free-edge cannot be combined with PRIVATE_ALPHA_TRUSTED_PROXY_IPS.");
+        }
+    }
+
+    private static bool IsRenderExternalUrl(string? configuredUrl)
+    {
+        return Uri.TryCreate(configuredUrl, UriKind.Absolute, out var uri)
+            && uri.Scheme == Uri.UriSchemeHttps
+            && uri.Host.EndsWith(".onrender.com", StringComparison.OrdinalIgnoreCase)
+            && uri.UserInfo.Length == 0
+            && uri.Query.Length == 0
+            && uri.Fragment.Length == 0
+            && uri.AbsolutePath == "/";
     }
 
     private static byte[] HashCredential(string credential) =>
