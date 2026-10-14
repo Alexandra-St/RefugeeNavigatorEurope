@@ -1,20 +1,134 @@
 @page "/search"
+@using System.Globalization
+@using Microsoft.AspNetCore.WebUtilities
+@using RefugeeNavigator.Data
+@using RefugeeNavigator.Domain
+@using RefugeeNavigator.Web.Localization
+@using RefugeeNavigator.Web.Search
+@inject CatalogData Catalog
+@inject NavigationManager Navigation
 @inject IStringLocalizer<SharedResource> Localizer
 
 <PageTitle>@Localizer["Search.PageTitle"]</PageTitle>
 
-<main id="main-content" class="preview-page">
+<main id="main-content" class="search-page">
     <div class="page-content">
-        <section class="preview-card" aria-labelledby="preview-heading">
+        <header class="page-heading">
             <p class="eyebrow">@Localizer["Common.Preview"]</p>
-            <h1 id="preview-heading">@Localizer["Search.Heading"]</h1>
+            <h1>@Localizer["Search.Heading"]</h1>
             <p class="description">@Localizer["Search.Description"]</p>
-            <p class="preview-notice">@Localizer["Search.PreviewNotice"]</p>
-            <a class="home-link" href="/">@Localizer["Search.BackHome"]</a>
-        </section>
+            <p class="scope-note">@Localizer["Search.PreviewNotice"] @Localizer["Search.Scope"]</p>
+        </header>
+
+        <form class="search-form" method="get" action="/search">
+            <div class="query-field">
+                <label for="search-query">@Localizer["Search.InputLabel"]</label>
+                <input id="search-query" type="search" name="q" value="@Query" placeholder="@Localizer["Search.Placeholder"]" />
+            </div>
+
+            <div class="filters">
+                <div class="filter-field">
+                    <label for="country-filter">@Localizer["Search.CountryFilter"]</label>
+                    <select id="country-filter" name="country">
+                        <option value="">@Localizer["Search.AllCountries"]</option>
+                        @foreach (var country in Catalog.Countries)
+                        {
+                            <option value="@country.Slug" selected="@string.Equals(country.Slug, CountrySlug, StringComparison.OrdinalIgnoreCase)">@Localizer[CatalogLocalizationKeyResolver.CountryName(country)]</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="filter-field">
+                    <label for="category-filter">@Localizer["Search.CategoryFilter"]</label>
+                    <select id="category-filter" name="category">
+                        <option value="">@Localizer["Search.AllCategories"]</option>
+                        @foreach (var category in Catalog.Categories)
+                        {
+                            <option value="@category.Slug" selected="@string.Equals(category.Slug, CategorySlug, StringComparison.OrdinalIgnoreCase)">@Localizer[CatalogLocalizationKeyResolver.CategoryName(category)]</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="filter-field">
+                    <label for="status-filter">@Localizer["Search.StatusFilter"]</label>
+                    <select id="status-filter" name="status">
+                        <option value="">@Localizer["Search.AllStatuses"]</option>
+                        @foreach (var status in Enum.GetValues<VerificationStatus>())
+                        {
+                            <option value="@status" selected="@string.Equals(StatusValue, status.ToString(), StringComparison.OrdinalIgnoreCase)">@Localizer[$"Category.Status.{status}"]</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit">@Localizer["Search.Submit"]</button>
+                <a class="reset-link" href="/search">@Localizer["Search.Reset"]</a>
+            </div>
+        </form>
+        <a class="home-link" href="/">@Localizer["Search.BackHome"]</a>
+
+        @if (Catalog.InformationEntries.Count == 0)
+        {
+            <section class="results-state" aria-live="polite">
+                <h2>@Localizer["Search.NoContent"]</h2>
+            </section>
+        }
+        else if (Results.Count == 0)
+        {
+            <section class="results-state" aria-live="polite">
+                <h2>@Localizer["Search.NoResults"]</h2>
+            </section>
+        }
+        else
+        {
+            <section class="results-section" aria-labelledby="results-heading">
+                <div class="results-heading">
+                    <h2 id="results-heading">@Localizer["Search.ResultsHeading"]</h2>
+                    <p>@Localizer["Search.ResultsCount", Results.Count]</p>
+                </div>
+                <div class="results-list">
+                    @foreach (var result in Results)
+                    {
+                        var countryName = Localizer[CatalogLocalizationKeyResolver.CountryName(result.Country)];
+                        var categoryName = Localizer[CatalogLocalizationKeyResolver.CategoryName(result.Category)];
+                        <article class="result-card">
+                            <h3><a href="/countries/@result.Country.Slug/categories/@result.Category.Slug">@result.Translation.Title</a></h3>
+                            <p class="result-summary">@result.Translation.Summary</p>
+                            <dl class="result-metadata">
+                                <div><dt>@Localizer["Search.ResultCountry"]</dt><dd>@countryName</dd></div>
+                                <div><dt>@Localizer["Search.ResultCategory"]</dt><dd>@categoryName</dd></div>
+                                <div><dt>@Localizer["Search.ResultStatus"]</dt><dd>@Localizer[$"Category.Status.{result.Translation.VerificationStatus}"]</dd></div>
+                            </dl>
+                        </article>
+                    }
+                </div>
+            </section>
+        }
 
         <footer class="information-note">
             <p>@Localizer["Common.Disclaimer"]</p>
         </footer>
     </div>
 </main>
+
+@code {
+    private IReadOnlyDictionary<string, Microsoft.Extensions.Primitives.StringValues> QueryParameters =>
+        QueryHelpers.ParseQuery(new Uri(Navigation.Uri).Query);
+
+    private string? Query => QueryParameters.GetValueOrDefault("q").FirstOrDefault();
+
+    private string? CountrySlug => QueryParameters.GetValueOrDefault("country").FirstOrDefault();
+
+    private string? CategorySlug => QueryParameters.GetValueOrDefault("category").FirstOrDefault();
+
+    private string? StatusValue => QueryParameters.GetValueOrDefault("status").FirstOrDefault();
+
+    private IReadOnlyList<ArticleSearchResult> Results => ArticleSearch.Search(
+        Catalog,
+        Query,
+        CountrySlug,
+        CategorySlug,
+        StatusValue,
+        CultureInfo.CurrentUICulture.TwoLetterISOLanguageName);
+}

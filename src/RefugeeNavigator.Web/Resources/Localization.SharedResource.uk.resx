@@ -184,7 +184,7 @@
     <value>Пошук інформації</value>
   </data>
   <data name="Home.SearchDescription" xml:space="preserve">
-    <value>Майбутній пошук допоможе знаходити опубліковані матеріали за запитом, країною та категорією.</value>
+    <value>Шукайте в заголовках, коротких описах і текстах опублікованих статей та звужуйте результати за країною, категорією і статусом перекладу.</value>
   </data>
   <data name="Home.OpenSearchPreview" xml:space="preserve">
     <value>Відкрити попередній перегляд пошуку</value>
@@ -205,14 +205,32 @@
     <value>Пошук інформації</value>
   </data>
   <data name="Search.Description" xml:space="preserve">
-    <value>Пошук за словами, країною та категорією допоможе знаходити потрібні опубліковані матеріали.</value>
+    <value>Шукайте в заголовках, коротких описах і текстах опублікованих статей та звужуйте результати за країною, категорією і статусом перевірки.</value>
   </data>
   <data name="Search.PreviewNotice" xml:space="preserve">
-    <value>Функція ще розробляється. Пошук наразі недоступний.</value>
+    <value>Це початкова версія пошуку, яка охоплює лише опубліковані статті.</value>
   </data>
   <data name="Search.BackHome" xml:space="preserve">
     <value>Повернутися на головну</value>
   </data>
+  <data name="Search.Scope" xml:space="preserve"><value>Результати показано лише вибраною мовою.</value></data>
+  <data name="Search.InputLabel" xml:space="preserve"><value>Пошукові слова</value></data>
+  <data name="Search.Placeholder" xml:space="preserve"><value>Введіть слово або фразу</value></data>
+  <data name="Search.Submit" xml:space="preserve"><value>Шукати</value></data>
+  <data name="Search.CountryFilter" xml:space="preserve"><value>Країна</value></data>
+  <data name="Search.CategoryFilter" xml:space="preserve"><value>Категорія інформації</value></data>
+  <data name="Search.StatusFilter" xml:space="preserve"><value>Статус перекладу</value></data>
+  <data name="Search.AllCountries" xml:space="preserve"><value>Усі країни</value></data>
+  <data name="Search.AllCategories" xml:space="preserve"><value>Усі категорії</value></data>
+  <data name="Search.AllStatuses" xml:space="preserve"><value>Усі статуси</value></data>
+  <data name="Search.Reset" xml:space="preserve"><value>Скинути фільтри</value></data>
+  <data name="Search.ResultsHeading" xml:space="preserve"><value>Результати пошуку</value></data>
+  <data name="Search.ResultsCount" xml:space="preserve"><value>Результатів: {0}</value></data>
+  <data name="Search.NoResults" xml:space="preserve"><value>За цими умовами статей не знайдено.</value></data>
+  <data name="Search.NoContent" xml:space="preserve"><value>Опублікованих статей поки немає.</value></data>
+  <data name="Search.ResultCountry" xml:space="preserve"><value>Країна</value></data>
+  <data name="Search.ResultCategory" xml:space="preserve"><value>Категорія</value></data>
+  <data name="Search.ResultStatus" xml:space="preserve"><value>Статус перекладу</value></data>
   <data name="Compare.PageTitle" xml:space="preserve">
     <value>Порівняння країн | Refugee Navigator Europe</value>
   </data>

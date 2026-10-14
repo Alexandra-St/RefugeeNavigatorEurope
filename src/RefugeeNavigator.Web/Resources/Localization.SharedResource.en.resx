@@ -184,7 +184,7 @@
     <value>Search information</value>
   </data>
   <data name="Home.SearchDescription" xml:space="preserve">
-    <value>Future search will help find published information by query, country, and category.</value>
+    <value>Find published articles by searching their text and filtering by country, category, and translation status.</value>
   </data>
   <data name="Home.OpenSearchPreview" xml:space="preserve">
     <value>Open search preview</value>
@@ -205,14 +205,34 @@
     <value>Search information</value>
   </data>
   <data name="Search.Description" xml:space="preserve">
-    <value>Search by words, country, and category will help you find relevant published information.</value>
+    <value>Find published information by searching its title, summary, or content, then narrow results by country, category, and review status.</value>
   </data>
   <data name="Search.PreviewNotice" xml:space="preserve">
-    <value>This feature is in development. Search is not available yet.</value>
+    <value>This early search covers only articles that are currently published.</value>
   </data>
   <data name="Search.BackHome" xml:space="preserve">
     <value>Back to homepage</value>
   </data>
+  <data name="Search.Scope" xml:space="preserve">
+    <value>Search results are shown only in your selected language.</value>
+  </data>
+  <data name="Search.InputLabel" xml:space="preserve"><value>Search words</value></data>
+  <data name="Search.Placeholder" xml:space="preserve"><value>Enter a word or phrase</value></data>
+  <data name="Search.Submit" xml:space="preserve"><value>Search</value></data>
+  <data name="Search.CountryFilter" xml:space="preserve"><value>Country</value></data>
+  <data name="Search.CategoryFilter" xml:space="preserve"><value>Information category</value></data>
+  <data name="Search.StatusFilter" xml:space="preserve"><value>Translation status</value></data>
+  <data name="Search.AllCountries" xml:space="preserve"><value>All countries</value></data>
+  <data name="Search.AllCategories" xml:space="preserve"><value>All categories</value></data>
+  <data name="Search.AllStatuses" xml:space="preserve"><value>All statuses</value></data>
+  <data name="Search.Reset" xml:space="preserve"><value>Reset filters</value></data>
+  <data name="Search.ResultsHeading" xml:space="preserve"><value>Search results</value></data>
+  <data name="Search.ResultsCount" xml:space="preserve"><value>Results: {0}</value></data>
+  <data name="Search.NoResults" xml:space="preserve"><value>No articles match these search criteria.</value></data>
+  <data name="Search.NoContent" xml:space="preserve"><value>No articles are currently available.</value></data>
+  <data name="Search.ResultCountry" xml:space="preserve"><value>Country</value></data>
+  <data name="Search.ResultCategory" xml:space="preserve"><value>Category</value></data>
+  <data name="Search.ResultStatus" xml:space="preserve"><value>Translation status</value></data>
   <data name="Compare.PageTitle" xml:space="preserve">
     <value>Compare countries | Refugee Navigator Europe</value>
   </data>

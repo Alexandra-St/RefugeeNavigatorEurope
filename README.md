@@ -6,7 +6,7 @@ An open-source web application helping Ukrainians under temporary protection nav
 
 **Active development.** Country and category navigation is data-driven, and the interface is available in Ukrainian, English, and Russian. Information content and official source references are loaded from validated JSON catalogs. The application currently includes one published Denmark employment article in all three languages, with its supporting sources and translation review status.
 
-Search and country comparison are under development. Their current pages are previews only; neither feature is functional yet. The private alpha has not been deployed. A public beta is planned for a later phase.
+Basic search and country, category, and translation-status filters are available for currently published articles. Country comparison remains a nonfunctional prototype. The private alpha has not been deployed. A public beta is planned for a later phase.
 
 ## Current scope
 
@@ -14,7 +14,8 @@ Search and country comparison are under development. Their current pages are pre
 - Categories: temporary protection, employment, healthcare, housing, education, and social assistance.
 - Published content is organized by country and category and includes language-specific review status and official source check dates.
 - Supported interface and content languages: Ukrainian (`uk`), English (`en`), and Russian (`ru`).
-- Search and country comparison are marked as previews and do not provide results.
+- Basic search and filters search only currently published articles in the selected language.
+- Country comparison remains a preview and is not functional.
 
 ## Technology
 

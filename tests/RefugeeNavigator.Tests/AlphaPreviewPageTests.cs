@@ -44,21 +44,31 @@ public sealed class AlphaPreviewPageTests
     }
 
     [Theory]
-    [InlineData("uk", "Пошук інформації", "Порівняння країн", "Функція ще розробляється", "Функція ще розробляється")]
-    [InlineData("en", "Search information", "Compare countries", "This feature is in development", "This feature is in development")]
-    [InlineData("ru", "Поиск информации", "Сравнение стран", "Функция находится в разработке", "Функция находится в разработке")]
-    public async Task PreviewPagesAreLocalizedAccessibleAndExplicitlyNotFunctional(
+    [InlineData("uk", "Пошук інформації", "Порівняння країн", "опубліковані статті")]
+    [InlineData("en", "Search information", "Compare countries", "currently published")]
+    [InlineData("ru", "Поиск информации", "Сравнение стран", "опубликованные статьи")]
+    public async Task SearchIsFunctionalAndCompareRemainsPreviewOnly(
         string language,
         string searchHeading,
         string compareHeading,
-        string searchNotice,
-        string compareNotice)
+        string searchScope)
     {
         var searchHtml = await RenderAsync<Search>(language);
         var compareHtml = await RenderAsync<Compare>(language);
 
-        AssertPreviewPage(searchHtml, searchHeading, searchNotice, GetResource("Search.PageTitle", language), language);
-        AssertPreviewPage(compareHtml, compareHeading, compareNotice, GetResource("Compare.PageTitle", language), language);
+        var visibleSearchHtml = WebUtility.HtmlDecode(searchHtml);
+        Assert.Contains("<main id=\"main-content\"", visibleSearchHtml);
+        Assert.Matches($"<h1[^>]*>{Regex.Escape(searchHeading)}</h1>", visibleSearchHtml);
+        Assert.Single(Regex.Matches(searchHtml, "<h1\\b").Cast<Match>());
+        Assert.Contains("method=\"get\"", searchHtml);
+        Assert.Contains("action=\"/search\"", searchHtml);
+        Assert.Contains("name=\"q\"", searchHtml);
+        Assert.Contains(searchScope, visibleSearchHtml);
+        Assert.DoesNotContain("Search.", visibleSearchHtml);
+        Assert.Contains("href=\"/\"", searchHtml);
+        Assert.Contains(GetResource("Common.Disclaimer", language), visibleSearchHtml);
+
+        AssertPreviewPage(compareHtml, heading: compareHeading, notice: GetResource("Compare.PreviewNotice", language), pageTitle: GetResource("Compare.PageTitle", language), language: language);
         Assert.Contains(language switch
         {
             "uk" => "які можна зіставити між країнами",

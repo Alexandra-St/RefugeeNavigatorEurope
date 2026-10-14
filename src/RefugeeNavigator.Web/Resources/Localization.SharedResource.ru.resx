@@ -184,7 +184,7 @@
     <value>Поиск информации</value>
   </data>
   <data name="Home.SearchDescription" xml:space="preserve">
-    <value>Будущий поиск поможет находить опубликованные материалы по запросу, стране и категории.</value>
+    <value>Ищите по заголовкам, кратким описаниям и текстам опубликованных статей, а затем фильтруйте результаты по стране, категории и статусу перевода.</value>
   </data>
   <data name="Home.OpenSearchPreview" xml:space="preserve">
     <value>Открыть предварительный просмотр поиска</value>
@@ -205,14 +205,32 @@
     <value>Поиск информации</value>
   </data>
   <data name="Search.Description" xml:space="preserve">
-    <value>Поиск по словам, стране и категории поможет находить нужные опубликованные материалы.</value>
+    <value>Ищите по заголовкам, кратким описаниям и текстам опубликованных статей, а затем фильтруйте результаты по стране, категории и статусу проверки.</value>
   </data>
   <data name="Search.PreviewNotice" xml:space="preserve">
-    <value>Функция находится в разработке. Поиск пока недоступен.</value>
+    <value>Это ранняя версия поиска, которая охватывает только опубликованные статьи.</value>
   </data>
   <data name="Search.BackHome" xml:space="preserve">
     <value>Вернуться на главную</value>
   </data>
+  <data name="Search.Scope" xml:space="preserve"><value>Результаты показываются только на выбранном языке.</value></data>
+  <data name="Search.InputLabel" xml:space="preserve"><value>Поисковые слова</value></data>
+  <data name="Search.Placeholder" xml:space="preserve"><value>Введите слово или фразу</value></data>
+  <data name="Search.Submit" xml:space="preserve"><value>Найти</value></data>
+  <data name="Search.CountryFilter" xml:space="preserve"><value>Страна</value></data>
+  <data name="Search.CategoryFilter" xml:space="preserve"><value>Категория информации</value></data>
+  <data name="Search.StatusFilter" xml:space="preserve"><value>Статус перевода</value></data>
+  <data name="Search.AllCountries" xml:space="preserve"><value>Все страны</value></data>
+  <data name="Search.AllCategories" xml:space="preserve"><value>Все категории</value></data>
+  <data name="Search.AllStatuses" xml:space="preserve"><value>Все статусы</value></data>
+  <data name="Search.Reset" xml:space="preserve"><value>Сбросить фильтры</value></data>
+  <data name="Search.ResultsHeading" xml:space="preserve"><value>Результаты поиска</value></data>
+  <data name="Search.ResultsCount" xml:space="preserve"><value>Результатов: {0}</value></data>
+  <data name="Search.NoResults" xml:space="preserve"><value>По этим критериям статей не найдено.</value></data>
+  <data name="Search.NoContent" xml:space="preserve"><value>Опубликованных статей пока нет.</value></data>
+  <data name="Search.ResultCountry" xml:space="preserve"><value>Страна</value></data>
+  <data name="Search.ResultCategory" xml:space="preserve"><value>Категория</value></data>
+  <data name="Search.ResultStatus" xml:space="preserve"><value>Статус перевода</value></data>
   <data name="Compare.PageTitle" xml:space="preserve">
     <value>Сравнение стран | Refugee Navigator Europe</value>
   </data>
