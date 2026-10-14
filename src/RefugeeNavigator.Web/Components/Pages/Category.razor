@@ -1,6 +1,7 @@
 @page "/countries/{CountrySlug}/categories/{CategorySlug}"
 @using Microsoft.AspNetCore.Components
 @using System.Globalization
+@using System.Text.RegularExpressions
 @using RefugeeNavigator.Data
 @using RefugeeNavigator.Domain
 @inject CatalogData Catalog
@@ -36,7 +37,10 @@
                         <article class="information-entry" aria-labelledby="entry-heading-@item.Entry.Id.ToString("N")">
                             <h2 id="entry-heading-@item.Entry.Id.ToString("N")">@item.Translation.Title</h2>
                             <p class="entry-summary">@item.Translation.Summary</p>
-                            <p class="entry-content">@item.Translation.Content</p>
+                            @foreach (var paragraph in ContentParagraphs(item.Translation.Content))
+                            {
+                                <p class="entry-content">@paragraph</p>
+                            }
 
                             <dl class="entry-metadata">
                                 <div>
@@ -84,6 +88,7 @@
     public string CategorySlug { get; set; } = string.Empty;
 
     private IReadOnlyList<RenderedInformationEntry> _renderedEntries = Array.Empty<RenderedInformationEntry>();
+    private static readonly Regex ParagraphSeparator = new(@"\r?\n[^\S\r\n]*(?:\r?\n)+", RegexOptions.Compiled | RegexOptions.CultureInvariant);
 
     private Country? Country => Catalog.Countries.FirstOrDefault(country =>
         string.Equals(country.Slug, CountrySlug, StringComparison.OrdinalIgnoreCase));
@@ -94,6 +99,11 @@
     private string? CountryName => Country is { } country
         ? Localizer[CatalogLocalizationKeyResolver.CountryName(country)].Value
         : null;
+
+    private static IReadOnlyList<string> ContentParagraphs(string content) => ParagraphSeparator
+        .Split(content)
+        .Where(paragraph => !string.IsNullOrWhiteSpace(paragraph))
+        .ToArray();
 
     private (string Name, string Description)? CategoryDetails => SelectedCategory is { } category
         ? (

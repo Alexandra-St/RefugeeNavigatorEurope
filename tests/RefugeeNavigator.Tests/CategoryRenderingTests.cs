@@ -2,6 +2,7 @@ using System.Globalization;
 using System.Net;
 using System.Reflection;
 using System.Text.Json;
+using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,6 +21,18 @@ public sealed class CategoryRenderingTests
     private static readonly Guid OtherCategoryId = Guid.Parse("20000000-0000-0000-0000-000000000002");
     private static readonly DateTimeOffset UpdatedAt = new(2024, 2, 3, 4, 5, 0, TimeSpan.Zero);
     private static readonly DateTimeOffset CheckedAt = new(2024, 4, 5, 6, 7, 0, TimeSpan.Zero);
+
+    public static IEnumerable<object[]> ContentParagraphCases() =>
+    [
+        ["Single paragraph.", new[] { "Single paragraph." }],
+        ["First line.\nSecond line remains the same paragraph.", new[] { "First line.\nSecond line remains the same paragraph." }],
+        ["First paragraph.\n\nSecond paragraph.", new[] { "First paragraph.", "Second paragraph." }],
+        ["First paragraph.\r\n\r\nSecond paragraph.", new[] { "First paragraph.", "Second paragraph." }],
+        ["First paragraph.\n\n\n\nSecond paragraph.", new[] { "First paragraph.", "Second paragraph." }],
+        ["First paragraph.\n \t \nSecond paragraph.", new[] { "First paragraph.", "Second paragraph." }],
+        ["\n\nFirst paragraph.\n\nSecond paragraph.\n\n", new[] { "First paragraph.", "Second paragraph." }],
+        ["\r\n \t\r\nFirst paragraph.\r\n\r\nSecond paragraph.\r\n  \r\n", new[] { "First paragraph.", "Second paragraph." }]
+    ];
 
     [Fact]
     public async Task EmptyCategoryRendersExistingPlaceholder()
@@ -93,7 +106,7 @@ public sealed class CategoryRenderingTests
     [Fact]
     public async Task RendersTranslationAndSourceDatesSeparatelyForMultipleSources()
     {
-        var entry = FixtureEntry(Guid.NewGuid());
+        var entry = FixtureEntry(Guid.NewGuid(), content: "First paragraph.\n\nSecond paragraph.");
         var sources = new[]
         {
             FixtureSource(Guid.NewGuid(), entry.Entry.Id, "First official page", "https://example.gov/first"),
@@ -111,6 +124,7 @@ public sealed class CategoryRenderingTests
         Assert.Contains("First official page", visibleHtml);
         Assert.Contains("Second official page", visibleHtml);
         Assert.Contains("target=\"_blank\" rel=\"noopener noreferrer\"", visibleHtml);
+        Assert.Equal(new[] { "First paragraph.", "Second paragraph." }, ReadContentParagraphs(html));
     }
 
     [Fact]
@@ -128,13 +142,33 @@ public sealed class CategoryRenderingTests
     [Fact]
     public async Task RendersEntryContentAsEncodedPlainText()
     {
-        var entry = FixtureEntry(Guid.NewGuid(), content: "<script>alert('x')</script>");
+        var entry = FixtureEntry(Guid.NewGuid(), content: "<script>alert('x')</script>\n\n<img src=x onerror='alert(1)'>");
         var catalog = await CreateCatalogAsync(new[] { entry });
 
         var html = await RenderAsync(catalog, "en");
+        var paragraphs = Regex.Matches(html, """<p class="entry-content"[^>]*>(.*?)</p>""", RegexOptions.Singleline)
+            .Cast<Match>()
+            .Select(match => match.Groups[1].Value)
+            .ToArray();
 
-        Assert.Contains("&lt;script&gt;alert(&#x27;x&#x27;)&lt;/script&gt;", html);
+        Assert.Equal(2, paragraphs.Length);
+        Assert.Contains("&lt;script&gt;alert(&#x27;x&#x27;)&lt;/script&gt;", paragraphs[0]);
+        Assert.Contains("&lt;img src=x onerror=&#x27;alert(1)&#x27;&gt;", paragraphs[1]);
         Assert.DoesNotContain("<script>", html);
+        Assert.DoesNotContain("<img", html);
+    }
+
+    [Theory]
+    [MemberData(nameof(ContentParagraphCases))]
+    public async Task RendersPlainTextContentAsNonemptyParagraphsInOrder(string content, string[] expectedParagraphs)
+    {
+        var catalog = await CreateCatalogAsync(new[] { FixtureEntry(Guid.NewGuid(), content: content) });
+
+        var html = await RenderAsync(catalog, "en");
+        var paragraphs = ReadContentParagraphs(html);
+
+        Assert.Equal(expectedParagraphs, paragraphs);
+        Assert.All(paragraphs, paragraph => Assert.False(string.IsNullOrWhiteSpace(paragraph)));
     }
 
     [Fact]
@@ -163,6 +197,14 @@ public sealed class CategoryRenderingTests
 
     private static OfficialSource FixtureSource(Guid id, Guid entryId, string title, string url) =>
         new(id, entryId, title, new Uri(url), CheckedAt);
+
+    private static string[] ReadContentParagraphs(string html) => Regex.Matches(
+            html,
+            """<p class="entry-content"[^>]*>(.*?)</p>""",
+            RegexOptions.Singleline)
+        .Cast<Match>()
+        .Select(match => WebUtility.HtmlDecode(match.Groups[1].Value))
+        .ToArray();
 
     private static Task<CatalogData> CreateCatalogAsync(
         IReadOnlyList<EntryFixture> entries,
