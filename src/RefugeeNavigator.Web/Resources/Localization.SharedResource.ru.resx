@@ -193,7 +193,7 @@
     <value>Сравнение стран</value>
   </data>
   <data name="Home.CompareDescription" xml:space="preserve">
-    <value>Будущая функция поможет просматривать информацию о разных странах рядом.</value>
+    <value>Выберите две страны и тему, чтобы посмотреть макет будущего сравнения. Фактическое сравнение пока недоступно.</value>
   </data>
   <data name="Home.OpenComparePreview" xml:space="preserve">
     <value>Открыть предварительный просмотр сравнения</value>
@@ -238,12 +238,31 @@
     <value>Сравнение стран</value>
   </data>
   <data name="Compare.Description" xml:space="preserve">
-    <value>Эта функция позволит просматривать информацию о разных странах рядом.</value>
+    <value>Выберите две страны и тему, чтобы увидеть макет рядом. Выбор не создаёт фактического сравнения.</value>
   </data>
   <data name="Compare.PreviewNotice" xml:space="preserve">
-    <value>Функция находится в разработке. Для надёжного сравнения нужны проверенные сведения, которые можно сопоставить между странами. Сравнение пока недоступно.</value>
+    <value>Это предварительный просмотр интерфейса. Выбор стран не создаёт фактического сравнения. Надёжные сравнения появятся, когда для выбранной темы будет подготовлена проверенная структурированная информация. Эти панели показывают только доступные статьи и навигацию.</value>
   </data>
   <data name="Compare.BackHome" xml:space="preserve">
     <value>Вернуться на главную</value>
   </data>
+  <data name="Compare.CountryOne" xml:space="preserve"><value>Первая страна</value></data>
+  <data name="Compare.CountryTwo" xml:space="preserve"><value>Вторая страна</value></data>
+  <data name="Compare.SelectCountry" xml:space="preserve"><value>Выберите страну</value></data>
+  <data name="Compare.Category" xml:space="preserve"><value>Категория информации</value></data>
+  <data name="Compare.SelectCategory" xml:space="preserve"><value>Выберите категорию</value></data>
+  <data name="Compare.Submit" xml:space="preserve"><value>Показать предварительный просмотр</value></data>
+  <data name="Compare.Reset" xml:space="preserve"><value>Сбросить выбор</value></data>
+  <data name="Compare.SelectionInstructionsHeading" xml:space="preserve"><value>Выберите, что посмотреть</value></data>
+  <data name="Compare.SelectionInstructions" xml:space="preserve"><value>Выберите две разные страны и одну категорию информации, чтобы увидеть макет предварительного просмотра.</value></data>
+  <data name="Compare.InvalidCountry" xml:space="preserve"><value>Одна или обе выбранные страны недоступны. Выберите страны из списков.</value></data>
+  <data name="Compare.InvalidCategory" xml:space="preserve"><value>Выбранная категория недоступна. Выберите категорию из списка.</value></data>
+  <data name="Compare.SameCountry" xml:space="preserve"><value>Выберите две разные страны.</value></data>
+  <data name="Compare.CountryPanelHeading" xml:space="preserve"><value>Информация о стране: {0}</value></data>
+  <data name="Compare.OpenCategory" xml:space="preserve"><value>Открыть информацию: {0}</value></data>
+  <data name="Compare.AvailableInformation" xml:space="preserve"><value>Доступные опубликованные статьи</value></data>
+  <data name="Compare.EmptyPanel" xml:space="preserve"><value>Опубликованных статей для этой страны и категории пока нет.</value></data>
+  <data name="Compare.PreviewLimitationsHeading" xml:space="preserve"><value>Об этом предварительном просмотре</value></data>
+  <data name="Compare.PanelsHeading" xml:space="preserve"><value>Панели информации о странах</value></data>
+  <data name="Compare.ArticleStatus" xml:space="preserve"><value>Статус перевода: {0}</value></data>
 </root>

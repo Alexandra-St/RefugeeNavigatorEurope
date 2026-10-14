@@ -47,7 +47,7 @@ public sealed class AlphaPreviewPageTests
     [InlineData("uk", "Пошук інформації", "Порівняння країн", "опубліковані статті")]
     [InlineData("en", "Search information", "Compare countries", "currently published")]
     [InlineData("ru", "Поиск информации", "Сравнение стран", "опубликованные статьи")]
-    public async Task SearchIsFunctionalAndCompareRemainsPreviewOnly(
+    public async Task SearchIsFunctionalAndCompareHasInteractiveSelectionPreview(
         string language,
         string searchHeading,
         string compareHeading,
@@ -68,13 +68,19 @@ public sealed class AlphaPreviewPageTests
         Assert.Contains("href=\"/\"", searchHtml);
         Assert.Contains(GetResource("Common.Disclaimer", language), visibleSearchHtml);
 
-        AssertPreviewPage(compareHtml, heading: compareHeading, notice: GetResource("Compare.PreviewNotice", language), pageTitle: GetResource("Compare.PageTitle", language), language: language);
-        Assert.Contains(language switch
-        {
-            "uk" => "які можна зіставити між країнами",
-            "en" => "can be compared across countries",
-            _ => "которые можно сопоставить между странами"
-        }, WebUtility.HtmlDecode(compareHtml));
+        var visibleCompareHtml = WebUtility.HtmlDecode(compareHtml);
+        Assert.Contains("<main id=\"main-content\"", visibleCompareHtml);
+        Assert.Matches($"<h1[^>]*>{Regex.Escape(compareHeading)}</h1>", visibleCompareHtml);
+        Assert.Single(Regex.Matches(compareHtml, "<h1\\b").Cast<Match>());
+        Assert.Contains("method=\"get\"", compareHtml);
+        Assert.Contains("action=\"/compare\"", compareHtml);
+        Assert.Contains("name=\"country1\"", compareHtml);
+        Assert.Contains("name=\"country2\"", compareHtml);
+        Assert.Contains("name=\"category\"", compareHtml);
+        Assert.Contains(GetResource("Compare.SelectionInstructions", language), visibleCompareHtml);
+        Assert.Contains(GetResource("Common.Preview", language), visibleCompareHtml);
+        Assert.Contains(GetResource("Common.Disclaimer", language), visibleCompareHtml);
+        Assert.DoesNotContain("Compare.", visibleCompareHtml);
     }
 
     [Theory]
@@ -108,21 +114,6 @@ public sealed class AlphaPreviewPageTests
 
         Assert.NotNull(route);
         Assert.Equal(expectedRoute, route!.Template);
-    }
-
-    private static void AssertPreviewPage(string html, string heading, string notice, string pageTitle, string language)
-    {
-        var visibleHtml = WebUtility.HtmlDecode(html);
-        Assert.Contains("<main id=\"main-content\"", visibleHtml);
-        Assert.Matches($"<h1[^>]*>{Regex.Escape(heading)}</h1>", visibleHtml);
-        Assert.Single(Regex.Matches(html, "<h1\\b").Cast<Match>());
-        Assert.Contains(notice, visibleHtml);
-        Assert.Contains("href=\"/\"", visibleHtml);
-        Assert.Contains(GetResource("Common.Disclaimer", language), visibleHtml);
-        Assert.DoesNotContain("Search.", visibleHtml);
-        Assert.DoesNotContain("Compare.", visibleHtml);
-        Assert.False(string.IsNullOrWhiteSpace(pageTitle));
-        Assert.DoesNotContain("PageTitle", pageTitle);
     }
 
     private static string GetResource(string key, string language) =>

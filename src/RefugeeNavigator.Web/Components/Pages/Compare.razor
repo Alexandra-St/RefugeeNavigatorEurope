@@ -1,20 +1,182 @@
 @page "/compare"
+@using System.Globalization
+@using Microsoft.AspNetCore.WebUtilities
+@using RefugeeNavigator.Data
+@using RefugeeNavigator.Domain
+@using RefugeeNavigator.Web.Localization
+@inject CatalogData Catalog
+@inject NavigationManager Navigation
 @inject IStringLocalizer<SharedResource> Localizer
 
 <PageTitle>@Localizer["Compare.PageTitle"]</PageTitle>
 
-<main id="main-content" class="preview-page">
+<main id="main-content" class="compare-page">
     <div class="page-content">
-        <section class="preview-card" aria-labelledby="preview-heading">
+        <header class="page-heading">
             <p class="eyebrow">@Localizer["Common.Preview"]</p>
-            <h1 id="preview-heading">@Localizer["Compare.Heading"]</h1>
+            <h1>@Localizer["Compare.Heading"]</h1>
             <p class="description">@Localizer["Compare.Description"]</p>
-            <p class="preview-notice">@Localizer["Compare.PreviewNotice"]</p>
-            <a class="home-link" href="/">@Localizer["Compare.BackHome"]</a>
-        </section>
+        </header>
+
+        <form class="compare-form" method="get" action="/compare">
+            <div class="selection-grid">
+                <div class="selection-field">
+                    <label for="country-one">@Localizer["Compare.CountryOne"]</label>
+                    <select id="country-one" name="country1" required>
+                        <option value="">@Localizer["Compare.SelectCountry"]</option>
+                        @foreach (var country in Catalog.Countries)
+                        {
+                            <option value="@country.Slug" selected="@IsSelected(country.Slug, CountryOneSlug)">@Localizer[CatalogLocalizationKeyResolver.CountryName(country)]</option>
+                        }
+                    </select>
+                </div>
+                <div class="selection-field">
+                    <label for="country-two">@Localizer["Compare.CountryTwo"]</label>
+                    <select id="country-two" name="country2" required>
+                        <option value="">@Localizer["Compare.SelectCountry"]</option>
+                        @foreach (var country in Catalog.Countries)
+                        {
+                            <option value="@country.Slug" selected="@IsSelected(country.Slug, CountryTwoSlug)">@Localizer[CatalogLocalizationKeyResolver.CountryName(country)]</option>
+                        }
+                    </select>
+                </div>
+                <div class="selection-field">
+                    <label for="category">@Localizer["Compare.Category"]</label>
+                    <select id="category" name="category" required>
+                        <option value="">@Localizer["Compare.SelectCategory"]</option>
+                        @foreach (var category in Catalog.Categories)
+                        {
+                            <option value="@category.Slug" selected="@IsSelected(category.Slug, CategorySlug)">@Localizer[CatalogLocalizationKeyResolver.CategoryName(category)]</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit">@Localizer["Compare.Submit"]</button>
+                <a class="reset-link" href="/compare">@Localizer["Compare.Reset"]</a>
+            </div>
+        </form>
+
+        @if (SelectionMessage is { } message)
+        {
+            <p class="selection-message" role="status">@Localizer[message]</p>
+        }
+        else if (SelectedCountryOne is null || SelectedCountryTwo is null || SelectedCategory is null)
+        {
+            <section class="selection-state" aria-live="polite">
+                <h2>@Localizer["Compare.SelectionInstructionsHeading"]</h2>
+                <p>@Localizer["Compare.SelectionInstructions"]</p>
+            </section>
+        }
+        else
+        {
+            <aside class="preview-notice" aria-label="@Localizer["Compare.PreviewLimitationsHeading"]">
+                <h2>@Localizer["Compare.PreviewLimitationsHeading"]</h2>
+                <p>@Localizer["Compare.PreviewNotice"]</p>
+            </aside>
+
+            <section class="comparison" aria-label="@Localizer["Compare.PanelsHeading"]">
+                @foreach (var country in new[] { SelectedCountryOne!, SelectedCountryTwo! })
+                {
+                    var countryName = Localizer[CatalogLocalizationKeyResolver.CountryName(country)];
+                    var entries = GetEntries(country);
+                    <section class="country-panel" aria-labelledby="country-heading-@country.Id.ToString("N")">
+                        <header class="panel-heading">
+                            <p class="eyebrow">@Localizer[CatalogLocalizationKeyResolver.CategoryName(SelectedCategory!)]</p>
+                            <h2 id="country-heading-@country.Id.ToString("N")">@Localizer["Compare.CountryPanelHeading", countryName]</h2>
+                        </header>
+                        <a class="category-link" href="/countries/@country.Slug/categories/@SelectedCategory!.Slug">@Localizer["Compare.OpenCategory", Localizer[CatalogLocalizationKeyResolver.CategoryName(SelectedCategory!)] ]</a>
+                        <h3>@Localizer["Compare.AvailableInformation"]</h3>
+                        @if (entries.Count == 0)
+                        {
+                            <p class="empty-state">@Localizer["Compare.EmptyPanel"]</p>
+                        }
+                        else
+                        {
+                            <ul class="article-list">
+                                @foreach (var item in entries)
+                                {
+                                    <li>
+                                        <a href="/countries/@country.Slug/categories/@SelectedCategory!.Slug">@item.Translation.Title</a>
+                                        <p class="article-status">@Localizer["Compare.ArticleStatus", Localizer[$"Category.Status.{item.Translation.VerificationStatus}"]]</p>
+                                    </li>
+                                }
+                            </ul>
+                        }
+                    </section>
+                }
+            </section>
+        }
+
+        <a class="home-link" href="/">@Localizer["Compare.BackHome"]</a>
 
         <footer class="information-note">
             <p>@Localizer["Common.Disclaimer"]</p>
         </footer>
     </div>
 </main>
+
+@code {
+    private IReadOnlyDictionary<string, Microsoft.Extensions.Primitives.StringValues> QueryParameters =>
+        QueryHelpers.ParseQuery(new Uri(Navigation.Uri).Query);
+
+    private string? CountryOneSlug => QueryParameters.GetValueOrDefault("country1").FirstOrDefault();
+
+    private string? CountryTwoSlug => QueryParameters.GetValueOrDefault("country2").FirstOrDefault();
+
+    private string? CategorySlug => QueryParameters.GetValueOrDefault("category").FirstOrDefault();
+
+    private Country? SelectedCountryOne => FindCountry(CountryOneSlug);
+
+    private Country? SelectedCountryTwo => FindCountry(CountryTwoSlug);
+
+    private InformationCategory? SelectedCategory => Catalog.Categories.FirstOrDefault(category =>
+        string.Equals(category.Slug, CategorySlug, StringComparison.OrdinalIgnoreCase));
+
+    private string? SelectionMessage
+    {
+        get
+        {
+            if (!string.IsNullOrWhiteSpace(CountryOneSlug) && SelectedCountryOne is null ||
+                !string.IsNullOrWhiteSpace(CountryTwoSlug) && SelectedCountryTwo is null)
+            {
+                return "Compare.InvalidCountry";
+            }
+
+            if (!string.IsNullOrWhiteSpace(CategorySlug) && SelectedCategory is null)
+            {
+                return "Compare.InvalidCategory";
+            }
+
+            if (SelectedCountryOne is not null && SelectedCountryTwo is not null &&
+                SelectedCountryOne.Id == SelectedCountryTwo.Id)
+            {
+                return "Compare.SameCountry";
+            }
+
+            return null;
+        }
+    }
+
+    private static bool IsSelected(string slug, string? selectedSlug) =>
+        string.Equals(slug, selectedSlug, StringComparison.OrdinalIgnoreCase);
+
+    private Country? FindCountry(string? slug) => string.IsNullOrWhiteSpace(slug)
+        ? null
+        : Catalog.Countries.FirstOrDefault(country =>
+            string.Equals(country.Slug, slug, StringComparison.OrdinalIgnoreCase));
+
+    private IReadOnlyList<(InformationEntry Entry, InformationEntryTranslation Translation)> GetEntries(Country country)
+    {
+        var languageCode = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+        return Catalog.InformationEntries
+            .Where(entry => entry.CountryId == country.Id && entry.CategoryId == SelectedCategory!.Id)
+            .Select(entry => (
+                entry,
+                Catalog.InformationEntryTranslations.SingleOrDefault(translation =>
+                    translation.InformationEntryId == entry.Id && translation.LanguageCode == languageCode)
+                    ?? throw new InvalidOperationException(
+                        $"Information entry '{entry.Id}' has no '{languageCode}' translation.")))
+            .ToArray();
+    }
+}

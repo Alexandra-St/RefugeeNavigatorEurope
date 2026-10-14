@@ -193,7 +193,7 @@
     <value>Compare countries</value>
   </data>
   <data name="Home.CompareDescription" xml:space="preserve">
-    <value>A future feature will let you view information for different countries side by side.</value>
+    <value>Select two countries and a topic to preview the future side-by-side layout. Factual comparisons are not available yet.</value>
   </data>
   <data name="Home.OpenComparePreview" xml:space="preserve">
     <value>Open comparison preview</value>
@@ -240,12 +240,31 @@
     <value>Compare countries</value>
   </data>
   <data name="Compare.Description" xml:space="preserve">
-    <value>This feature will let you view information for different countries side by side.</value>
+    <value>Select two countries and one topic to preview the side-by-side layout. The selections do not produce a factual comparison.</value>
   </data>
   <data name="Compare.PreviewNotice" xml:space="preserve">
-    <value>This feature is in development. Reliable comparisons require verified information that can be compared across countries. Comparison is not available yet.</value>
+    <value>This comparison interface is a preview. Selecting countries does not create a factual comparison. Reliable comparisons will be available when verified, structured information is prepared for the selected topic. These panels show available articles and navigation only.</value>
   </data>
   <data name="Compare.BackHome" xml:space="preserve">
     <value>Back to homepage</value>
   </data>
+  <data name="Compare.CountryOne" xml:space="preserve"><value>First country</value></data>
+  <data name="Compare.CountryTwo" xml:space="preserve"><value>Second country</value></data>
+  <data name="Compare.SelectCountry" xml:space="preserve"><value>Select a country</value></data>
+  <data name="Compare.Category" xml:space="preserve"><value>Information category</value></data>
+  <data name="Compare.SelectCategory" xml:space="preserve"><value>Select a category</value></data>
+  <data name="Compare.Submit" xml:space="preserve"><value>Show preview</value></data>
+  <data name="Compare.Reset" xml:space="preserve"><value>Reset selections</value></data>
+  <data name="Compare.SelectionInstructionsHeading" xml:space="preserve"><value>Choose what to view</value></data>
+  <data name="Compare.SelectionInstructions" xml:space="preserve"><value>Select two different countries and one information category to see the preview layout.</value></data>
+  <data name="Compare.InvalidCountry" xml:space="preserve"><value>One or both selected countries are unavailable. Choose countries from the lists.</value></data>
+  <data name="Compare.InvalidCategory" xml:space="preserve"><value>The selected category is unavailable. Choose a category from the list.</value></data>
+  <data name="Compare.SameCountry" xml:space="preserve"><value>Choose two different countries.</value></data>
+  <data name="Compare.CountryPanelHeading" xml:space="preserve"><value>Information for {0}</value></data>
+  <data name="Compare.OpenCategory" xml:space="preserve"><value>Open {0} information</value></data>
+  <data name="Compare.AvailableInformation" xml:space="preserve"><value>Available published articles</value></data>
+  <data name="Compare.EmptyPanel" xml:space="preserve"><value>No published articles are available for this country and category.</value></data>
+  <data name="Compare.PreviewLimitationsHeading" xml:space="preserve"><value>About this preview</value></data>
+  <data name="Compare.PanelsHeading" xml:space="preserve"><value>Country information panels</value></data>
+  <data name="Compare.ArticleStatus" xml:space="preserve"><value>Translation status: {0}</value></data>
 </root>
