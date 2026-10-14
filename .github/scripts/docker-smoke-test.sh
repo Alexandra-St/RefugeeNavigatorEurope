@@ -123,8 +123,20 @@ for culture in uk en ru; do
   assert_status 200 "$public_url" /not-found -H "Accept-Language: $culture"
   grep --ignore-case --fixed-strings "<html lang=\"$culture\"" "$work_dir/response-body" >/dev/null \
     || fail "the $culture document language was not rendered"
-  grep --fixed-strings "$localized_heading" "$work_dir/response-body" >/dev/null \
-    || fail "the $culture localized heading was not rendered"
+  if ! python3 - "$work_dir/response-body" "$localized_heading" <<'PY'
+import html
+import re
+import sys
+from pathlib import Path
+
+response = html.unescape(Path(sys.argv[1]).read_text(encoding="utf-8"))
+heading = re.search(r"<h1\b[^>]*>(.*?)</h1>", response, flags=re.IGNORECASE | re.DOTALL)
+visible_text = " ".join(re.sub(r"<[^>]*>", "", heading.group(1)).split()) if heading else ""
+sys.exit(0 if visible_text == sys.argv[2] else 1)
+PY
+  then
+    fail "the $culture localized h1 was not rendered"
+  fi
 done
 check_startup_logs "$public_container"
 printf 'Public-mode routes, catalogs, localization and CSS: passed\n'
