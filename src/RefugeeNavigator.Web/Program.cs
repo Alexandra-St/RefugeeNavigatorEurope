@@ -5,11 +5,19 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Abstractions;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.AspNetCore.HttpOverrides;
 using RefugeeNavigator.Web.Components;
 using RefugeeNavigator.Web.Localization;
+using RefugeeNavigator.Web.Security;
 using RefugeeNavigator.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+var accessOptions = PrivateAlphaAccessOptions.FromConfiguration(
+    builder.Configuration,
+    builder.Environment.IsDevelopment());
+var trustedProxyAddresses = PrivateAlphaAccessOptions.ParseTrustedProxyAddresses(
+    builder.Configuration["PRIVATE_ALPHA_TRUSTED_PROXY_IPS"]);
+builder.Services.AddSingleton(accessOptions);
 builder.Services.AddRazorComponents();
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 var catalog = await new JsonCatalogProvider(builder.Environment.ContentRootPath).LoadAsync();
@@ -40,6 +48,21 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
 
 var app = builder.Build();
 
+if (trustedProxyAddresses.Count > 0)
+{
+    var forwardedHeadersOptions = new ForwardedHeadersOptions
+    {
+        ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto,
+        ForwardLimit = 1
+    };
+    foreach (var address in trustedProxyAddresses)
+    {
+        forwardedHeadersOptions.KnownProxies.Add(address);
+    }
+
+    app.UseForwardedHeaders(forwardedHeadersOptions);
+}
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler(errorApp => errorApp.Run(context =>
@@ -50,6 +73,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseMiddleware<PrivateAlphaAuthenticationMiddleware>();
 app.UseHttpsRedirection();
 app.UseRequestLocalization();
 app.UseStatusCodePagesWithReExecute("/not-found");
