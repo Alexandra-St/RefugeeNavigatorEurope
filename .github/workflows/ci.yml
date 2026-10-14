@@ -22,3 +22,7 @@ jobs:
         run: dotnet build RefugeeNavigatorEurope.slnx --configuration Release --no-restore
       - name: Test
         run: dotnet test RefugeeNavigatorEurope.slnx --configuration Release --no-build
+      - name: Build production Docker image
+        run: docker build --file Dockerfile --tag refugee-navigator-europe:ci .
+      - name: Run Docker integration smoke tests
+        run: .github/scripts/docker-smoke-test.sh refugee-navigator-europe:ci

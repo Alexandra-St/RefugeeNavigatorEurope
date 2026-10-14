@@ -16,6 +16,8 @@ docker run --rm -p 10000:10000 \
 
 This local-only `public` mode is for checking packaging and routes. Do not use it for a private alpha deployment. The container listens on `0.0.0.0` at `PORT`, defaulting to `10000`. Its working directory is `/app`, which is also the application content root; published JSON catalogs are copied there by the web project, and the publish output includes the Blazor static assets and embedded localization resources.
 
+GitHub Actions builds the root production Dockerfile without pushing the image and runs public-mode and synthetic private-mode container smoke tests. These checks verify application behavior under the supplied configuration; they do not verify a real Render service, its selected compute plan, or traffic through Render’s HTTPS edge. Public mode is used only in isolated CI packaging checks and must not be used for the Private Alpha deployment.
+
 To test private authentication locally, provide synthetic credentials through environment variables. Do not commit them or put real credentials in shell history. The password must be at least 16 characters and contain at least three character types. In strict mode, a direct HTTP connection to a production-mode private container intentionally receives HTTP 426; test authenticated private requests through a local HTTPS-terminating proxy configured as an exact trusted proxy. Do not use `render-free-edge` for ordinary local access: it deliberately treats requests as HTTPS, and manually supplied Render environment variables do not prove that the request passed through Render's edge.
 
 ## Runtime configuration
