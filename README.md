@@ -44,6 +44,7 @@ dotnet run --project src/RefugeeNavigator.Web
 Open the local address printed by the command. Catalog data is in `src/RefugeeNavigator.Web/Data/`; invalid data or missing required translations prevents startup.
 
 For Private Alpha access modes and secure environment configuration, see [Private Alpha access](docs/PRIVATE_ALPHA_ACCESS.md).
+For Docker packaging and the current Render deployment blocker, see [Render deployment preparation](docs/RENDER_DEPLOYMENT.md).
 
 ## Repository structure
 

@@ -1,0 +1,47 @@
+# Source control and build output
+.git
+.github
+**/bin/
+**/obj/
+TestResults/
+**/TestResults/
+
+# IDE and local machine files
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+.DS_Store
+._*
+
+# Temporary files and screenshots
+**/tmp/
+**/temp/
+**/*.tmp
+**/*.temp
+screenshots/
+Screenshots/
+**/screenshots/
+**/Screenshots/
+**/*.screenshot.*
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+**/*.env
+secrets.json
+**/secrets.json
+credentials.json
+**/credentials.json
+appsettings.Development.json
+**/appsettings.Development.json
+*.pfx
+**/*.pfx
+*.p12
+**/*.p12
+*.pem
+**/*.pem
+*.key
+**/*.key
