@@ -174,4 +174,58 @@
   <data name="NotFound.BackHome" xml:space="preserve">
     <value>Back to homepage</value>
   </data>
+  <data name="Common.Preview" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="Home.FeaturePreviewsHeading" xml:space="preserve">
+    <value>Features in development</value>
+  </data>
+  <data name="Home.SearchTitle" xml:space="preserve">
+    <value>Search information</value>
+  </data>
+  <data name="Home.SearchDescription" xml:space="preserve">
+    <value>Future search will help find published information by query, country, and category.</value>
+  </data>
+  <data name="Home.OpenSearchPreview" xml:space="preserve">
+    <value>Open search preview</value>
+  </data>
+  <data name="Home.CompareTitle" xml:space="preserve">
+    <value>Compare countries</value>
+  </data>
+  <data name="Home.CompareDescription" xml:space="preserve">
+    <value>A future feature will let you view information for different countries side by side.</value>
+  </data>
+  <data name="Home.OpenComparePreview" xml:space="preserve">
+    <value>Open comparison preview</value>
+  </data>
+  <data name="Search.PageTitle" xml:space="preserve">
+    <value>Search information | Refugee Navigator Europe</value>
+  </data>
+  <data name="Search.Heading" xml:space="preserve">
+    <value>Search information</value>
+  </data>
+  <data name="Search.Description" xml:space="preserve">
+    <value>Search by words, country, and category will help you find relevant published information.</value>
+  </data>
+  <data name="Search.PreviewNotice" xml:space="preserve">
+    <value>This feature is in development. Search is not available yet.</value>
+  </data>
+  <data name="Search.BackHome" xml:space="preserve">
+    <value>Back to homepage</value>
+  </data>
+  <data name="Compare.PageTitle" xml:space="preserve">
+    <value>Compare countries | Refugee Navigator Europe</value>
+  </data>
+  <data name="Compare.Heading" xml:space="preserve">
+    <value>Compare countries</value>
+  </data>
+  <data name="Compare.Description" xml:space="preserve">
+    <value>This feature will let you view information for different countries side by side.</value>
+  </data>
+  <data name="Compare.PreviewNotice" xml:space="preserve">
+    <value>This feature is in development. Reliable comparisons require verified information that can be compared across countries. Comparison is not available yet.</value>
+  </data>
+  <data name="Compare.BackHome" xml:space="preserve">
+    <value>Back to homepage</value>
+  </data>
 </root>

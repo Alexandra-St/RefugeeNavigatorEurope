@@ -1,30 +1,32 @@
 # Refugee Navigator Europe
 
-An open-source web application intended to help Ukrainians under temporary protection navigate essential information about living in European countries.
+An open-source web application helping Ukrainians under temporary protection navigate essential information about living in European countries.
 
 ## Status
 
-**Initial development — Phase 0: repository initialization.** Application functionality has not yet been implemented. The repository contains a minimal .NET solution, an empty Blazor placeholder page, and one infrastructure smoke test.
+**Active development.** Country and category navigation is data-driven, and the interface is available in Ukrainian, English, and Russian. Information content and official source references are loaded from validated JSON catalogs. The application currently includes one published Denmark employment article in all three languages, with its supporting sources and translation review status.
 
-## Project goals
+Search and country comparison are under development. Their current pages are previews only; neither feature is functional yet. The private alpha has not been deployed. A public beta is planned for a later phase.
 
-- Make essential information easier to find and navigate.
-- Start with Denmark, Germany, and Poland; country content is not yet available.
-- Plan coverage of temporary protection, employment, healthcare, housing, social assistance, and education.
-- Build a maintainable, portfolio-quality open-source application.
+## Current scope
 
-## Planned technology stack
+- Countries: Denmark, Germany, and Poland.
+- Categories: temporary protection, employment, healthcare, housing, education, and social assistance.
+- Published content is organized by country and category and includes language-specific review status and official source check dates.
+- Supported interface and content languages: Ukrainian (`uk`), English (`en`), and Russian (`ru`).
+- Search and country comparison are marked as previews and do not provide results.
 
-- .NET 10 LTS and C#
-- ASP.NET Core and Blazor Web App
-- xUnit
+## Technology
+
+- .NET 10 and C#
+- ASP.NET Core Blazor Web App
+- JSON catalogs with startup validation
 - Built-in dependency injection
-
-Future infrastructure will be selected when needed.
+- xUnit tests
 
 ## Local development
 
-Install the .NET 10 SDK, then run from the repository root:
+Install the .NET 10 SDK. From the repository root, restore, build, and run the tests:
 
 ```sh
 dotnet restore RefugeeNavigatorEurope.slnx
@@ -32,37 +34,31 @@ dotnet build RefugeeNavigatorEurope.slnx --configuration Release --no-restore
 dotnet test RefugeeNavigatorEurope.slnx --configuration Release --no-build
 ```
 
-To run the empty web placeholder:
+Run the web application with:
 
 ```sh
 dotnet run --project src/RefugeeNavigator.Web
 ```
+
+Open the local address printed by the command. Catalog data is in `src/RefugeeNavigator.Web/Data/`; invalid data or missing required translations prevents startup.
 
 ## Repository structure
 
 ```text
 RefugeeNavigatorEurope/
 ├── src/
-│   └── RefugeeNavigator.Web/
-├── tests/
-│   └── RefugeeNavigator.Tests/
-├── docs/
-│   └── CONTRIBUTING.md
-├── .github/
-│   └── workflows/
-│       └── ci.yml
-├── .editorconfig
-├── .gitignore
-├── LICENSE
-├── README.md
+│   ├── RefugeeNavigator.Domain/  # Domain models and validation
+│   ├── RefugeeNavigator.Data/    # JSON catalog loading and validation
+│   └── RefugeeNavigator.Web/     # Blazor application, localization, and JSON catalogs
+├── tests/                        # xUnit tests
+├── docs/                         # Contribution and content publishing guidance
+├── .github/workflows/            # GitHub Actions CI
 └── RefugeeNavigatorEurope.slnx
 ```
 
 ## Contributing
 
-See [contribution guidelines](docs/CONTRIBUTING.md). Discuss new functionality in an issue before implementation.
-
-For the manual research, verification, translation, and publication process for information content, see the [content publishing workflow](docs/CONTENT_WORKFLOW.md).
+See [contribution guidelines](docs/CONTRIBUTING.md). For research, source verification, translation, and publication requirements, see the [content publishing workflow](docs/CONTENT_WORKFLOW.md).
 
 ## License
 

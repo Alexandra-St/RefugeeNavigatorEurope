@@ -174,4 +174,58 @@
   <data name="NotFound.BackHome" xml:space="preserve">
     <value>Повернутися на головну</value>
   </data>
+  <data name="Common.Preview" xml:space="preserve">
+    <value>Попередній перегляд</value>
+  </data>
+  <data name="Home.FeaturePreviewsHeading" xml:space="preserve">
+    <value>Можливості в розробці</value>
+  </data>
+  <data name="Home.SearchTitle" xml:space="preserve">
+    <value>Пошук інформації</value>
+  </data>
+  <data name="Home.SearchDescription" xml:space="preserve">
+    <value>Майбутній пошук допоможе знаходити опубліковані матеріали за запитом, країною та категорією.</value>
+  </data>
+  <data name="Home.OpenSearchPreview" xml:space="preserve">
+    <value>Відкрити попередній перегляд пошуку</value>
+  </data>
+  <data name="Home.CompareTitle" xml:space="preserve">
+    <value>Порівняння країн</value>
+  </data>
+  <data name="Home.CompareDescription" xml:space="preserve">
+    <value>Майбутня функція допоможе переглядати інформацію за країнами поруч.</value>
+  </data>
+  <data name="Home.OpenComparePreview" xml:space="preserve">
+    <value>Відкрити попередній перегляд порівняння</value>
+  </data>
+  <data name="Search.PageTitle" xml:space="preserve">
+    <value>Пошук інформації | Refugee Navigator Europe</value>
+  </data>
+  <data name="Search.Heading" xml:space="preserve">
+    <value>Пошук інформації</value>
+  </data>
+  <data name="Search.Description" xml:space="preserve">
+    <value>Пошук за словами, країною та категорією допоможе знаходити потрібні опубліковані матеріали.</value>
+  </data>
+  <data name="Search.PreviewNotice" xml:space="preserve">
+    <value>Функція ще розробляється. Пошук наразі недоступний.</value>
+  </data>
+  <data name="Search.BackHome" xml:space="preserve">
+    <value>Повернутися на головну</value>
+  </data>
+  <data name="Compare.PageTitle" xml:space="preserve">
+    <value>Порівняння країн | Refugee Navigator Europe</value>
+  </data>
+  <data name="Compare.Heading" xml:space="preserve">
+    <value>Порівняння країн</value>
+  </data>
+  <data name="Compare.Description" xml:space="preserve">
+    <value>Ця функція допоможе переглядати інформацію за різними країнами поруч.</value>
+  </data>
+  <data name="Compare.PreviewNotice" xml:space="preserve">
+    <value>Функція ще розробляється. Надійне порівняння потребує перевірених відомостей, які можна зіставити між країнами. Порівняння наразі недоступне.</value>
+  </data>
+  <data name="Compare.BackHome" xml:space="preserve">
+    <value>Повернутися на головну</value>
+  </data>
 </root>

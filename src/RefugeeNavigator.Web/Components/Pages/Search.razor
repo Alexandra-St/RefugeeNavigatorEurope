@@ -1,0 +1,20 @@
+@page "/search"
+@inject IStringLocalizer<SharedResource> Localizer
+
+<PageTitle>@Localizer["Search.PageTitle"]</PageTitle>
+
+<main id="main-content" class="preview-page">
+    <div class="page-content">
+        <section class="preview-card" aria-labelledby="preview-heading">
+            <p class="eyebrow">@Localizer["Common.Preview"]</p>
+            <h1 id="preview-heading">@Localizer["Search.Heading"]</h1>
+            <p class="description">@Localizer["Search.Description"]</p>
+            <p class="preview-notice">@Localizer["Search.PreviewNotice"]</p>
+            <a class="home-link" href="/">@Localizer["Search.BackHome"]</a>
+        </section>
+
+        <footer class="information-note">
+            <p>@Localizer["Common.Disclaimer"]</p>
+        </footer>
+    </div>
+</main>
