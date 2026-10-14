@@ -32,7 +32,7 @@ request_status() {
   local path="$2"
   shift 2
   local status
-  status="$(curl --silent --show-error --connect-timeout 2 --max-time 10 \
+  status="$(curl --silent --connect-timeout 2 --max-time 10 \
     --output "$work_dir/response-body" --write-out '%{http_code}' "$@" "$base_url$path")" \
     || status="000"
   printf '%s' "$status"
@@ -103,7 +103,7 @@ done
 
 assert_status 200 "$public_url" /
 mapfile -t stylesheet_urls < <(grep --only-matching --extended-regexp 'href="[^"]+\.css[^"]*"' \
-  "$work_dir/response-body" | sed --extended-regexp 's/^href="([^"]+)"$/\1/')
+  "$work_dir/response-body" | sed -E 's/^href="([^"]+)"$/\1/')
 [[ "${#stylesheet_urls[@]}" -ge 2 ]] || fail "the page did not publish both global and isolated CSS assets"
 primary_stylesheet_path=""
 for stylesheet_url in "${stylesheet_urls[@]}"; do
@@ -151,7 +151,7 @@ assert_status 401 "$private_url" "$primary_stylesheet_path"
 assert_status 200 "$private_url" "$primary_stylesheet_path" --user "$test_username:$test_password"
 assert_status 401 "$private_url" '/set-language?culture=en&returnUrl=%2F'
 
-language_status="$(curl --silent --show-error --connect-timeout 2 --max-time 10 \
+language_status="$(curl --silent --connect-timeout 2 --max-time 10 \
   --user "$test_username:$test_password" \
   --dump-header "$work_dir/language-headers" --output /dev/null --write-out '%{http_code}' \
   "$private_url/set-language?culture=en&returnUrl=%2F")" || language_status="000"
