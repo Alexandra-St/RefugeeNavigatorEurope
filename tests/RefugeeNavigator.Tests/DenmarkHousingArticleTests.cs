@@ -40,11 +40,12 @@ public sealed class DenmarkHousingArticleTests
         "https://lifeindenmark.borger.dk/money-and-tax/social-benefits/financial-support-from-the-municipality",
         "https://lifeindenmark.borger.dk/housing-and-moving/rental-property/tenancy-deposit-loans",
         "https://lifeindenmark.borger.dk/housing-and-moving/moving/change-address?selfserviceId=72929690-5c60-4079-8740-bdb114d81279",
-        "https://www.borger.dk/bolig-og-flytning/lejebolig/beboerklagenaevn-og-huslejenaevn"
+        "https://www.borger.dk/bolig-og-flytning/lejebolig/beboerklagenaevn-og-huslejenaevn",
+        "https://www.retsinformation.dk/eli/lta/2026/453/pdf"
     ];
 
     [Fact]
-    public async Task CatalogContainsVerifiedArticleWithAllSourcesAndPreservesExistingDenmarkArticles()
+    public async Task CatalogContainsNeedsReviewArticleWithAllSourcesAndPreservesExistingDenmarkArticles()
     {
         var catalog = await LoadProductionCatalogAsync();
         var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == ArticleId);
@@ -57,7 +58,7 @@ public sealed class DenmarkHousingArticleTests
         Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(translation => translation.LanguageCode).OrderBy(code => code));
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
@@ -75,6 +76,9 @@ public sealed class DenmarkHousingArticleTests
 
         var sources = catalog.OfficialSources.Where(source => source.InformationEntryId == ArticleId).ToArray();
         Assert.Equal(RequiredSources.OrderBy(url => url), sources.Select(source => source.Url.AbsoluteUri).OrderBy(url => url));
+        var statuteSource = Assert.Single(sources, source =>
+            source.Url.AbsoluteUri == "https://www.retsinformation.dk/eli/lta/2026/453/pdf");
+        Assert.Equal("Bekendtgørelse af lov om integration af udlændinge i Danmark (integrationsloven), LBK nr. 453 af 16. april 2026", statuteSource.Title);
         Assert.All(sources, source =>
         {
             Assert.Equal(ArticleId, source.InformationEntryId);
@@ -87,16 +91,20 @@ public sealed class DenmarkHousingArticleTests
     }
 
     [Theory]
-    [InlineData("uk", "Як знайти житло в Данії", "З чого почати|Житло через муніципалітет|Самостійна оренда житла|Фінансова підтримка на житло|Переїзд і реєстрація адреси|Де отримати допомогу", "він має визначити тимчасове місце проживання", "може натомість призначити постійне житло", "15 робочих днів", "протягом перших трьох років", "за чотири тижні до переїзду", "не пізніше ніж через п’ять днів", "подали заяву на дозвіл за Спеціальним законом або подадуть її протягом п’яти робочих днів", "очевидно не перебувають поза цільовою групою Спеціального закону", "може подати заяву, якщо має постійне місце проживання")]
-    [InlineData("en", "How to find housing in Denmark", "Where to start|Accommodation through municipalities|Renting housing independently|Housing-related financial support|Moving and address registration|Where to get help", "must designate a temporary place to stay", "may instead designate permanent housing", "15 working days", "within the first three years", "four weeks before moving", "five days after the move", "applied for a permit under the Special Act (or apply within five working days)", "not obviously outside the Special Act’s target group", "may apply if they have fixed residence in Denmark")]
-    [InlineData("ru", "Как найти жильё в Дании", "С чего начать|Жильё через муниципалитет|Самостоятельная аренда жилья|Финансовая поддержка на жильё|Переезд и регистрация адреса|Где получить помощь", "обязан определить временное место проживания", "может вместо этого назначить постоянное жильё", "15 рабочих дней", "в течение первых трёх лет", "за четыре недели до переезда", "не позднее пяти дней после него", "подали заявление на разрешение по Специальному закону или подадут его в течение пяти рабочих дней", "не находятся явно вне целевой группы Специального закона", "может подать заявление, если имеет постоянное место жительства")]
+    [InlineData("uk", "Як знайти житло в Данії", "З чого почати|Житло через муніципалітет|Самостійна оренда житла|Фінансова підтримка на житло|Переїзд і реєстрація адреси|Де отримати допомогу", "§57(5) Закону про інтеграцію прямо передбачає, що людині", "Імміграційна служба може вирішити інакше за наявності винятково особливих особистих обставин", "конкретна квартира, постійне житло чи муніципалітет на ваш вибір не гарантуються", "цей виняток автоматично скасовує інші обов’язки", "15 робочих днів", "Цей строк сам по собі не створює права на житло", "Потребує перевірки", "протягом перших трьох років", "за чотири тижні до переїзду", "не пізніше ніж через п’ять днів", "подали заяву на дозвіл за Спеціальним законом або подадуть її протягом п’яти робочих днів", "очевидно не перебувають поза цільовою групою Спеціального закону", "може подати заяву, якщо має постійне місце проживання")]
+    [InlineData("en", "How to find housing in Denmark", "Where to start|Accommodation through municipalities|Renting housing independently|Housing-related financial support|Moving and address registration|Where to get help", "section 57(5) of the Integration Act specifically says that a person", "The Danish Immigration Service may decide otherwise where very special personal circumstances exist", "a particular apartment, permanent home, or municipality of your choice is not guaranteed", "this exception automatically removes other municipality-assignment or integration responsibilities", "15 working days", "This timing rule does not itself create an entitlement to accommodation", "Needs review", "within the first three years", "four weeks before moving", "five days after the move", "applied for a permit under the Special Act (or apply within five working days)", "not obviously outside the Special Act’s target group", "may apply if they have fixed residence in Denmark")]
+    [InlineData("ru", "Как найти жильё в Дании", "С чего начать|Жильё через муниципалитет|Самостоятельная аренда жилья|Финансовая поддержка на жильё|Переезд и регистрация адреса|Где получить помощь", "§57(5) Закона об интеграции прямо предусматривает, что человеку", "Иммиграционная служба может принять иное решение при наличии исключительно особых личных обстоятельств", "конкретная квартира, постоянное жильё или муниципалитет по вашему выбору не гарантируются", "это исключение автоматически отменяет другие обязанности по определению муниципалитета или интеграции", "15 рабочих дней", "Сам по себе этот срок не создаёт права на жильё", "Требует проверки", "в течение первых трёх лет", "за четыре недели до переезда", "не позднее пяти дней после него", "подали заявление на разрешение по Специальному закону или подадут его в течение пяти рабочих дней", "не находятся явно вне целевой группы Специального закона", "может подать заявление, если имеет постоянное место жительства")]
     public async Task LocalizedArticleRendersPlacementConditionsSourcesAndSixSections(
         string language,
         string expectedTitle,
         string expectedHeadings,
-        string temporaryPlacement,
-        string permanentAlternative,
+        string statutoryException,
+        string serviceException,
+        string noGuarantee,
+        string noAutomaticExemption,
         string responsibilityPeriod,
+        string transferDisclaimer,
+        string localizedReviewStatus,
         string depositLoanCondition,
         string addressAdvanceNotice,
         string addressDeadline,
@@ -120,9 +128,13 @@ public sealed class DenmarkHousingArticleTests
             .Select(match => WebUtility.HtmlDecode(match.Groups[1].Value))
             .ToArray();
         Assert.Equal(expectedHeadings.Split('|'), headings);
-        Assert.Contains(temporaryPlacement, visibleHtml);
-        Assert.Contains(permanentAlternative, visibleHtml);
+        Assert.Contains(statutoryException, visibleHtml);
+        Assert.Contains(serviceException, visibleHtml);
+        Assert.Contains(noGuarantee, visibleHtml);
+        Assert.Contains(noAutomaticExemption, visibleHtml);
         Assert.Contains(responsibilityPeriod, visibleHtml);
+        Assert.Contains(transferDisclaimer, visibleHtml);
+        Assert.Contains(localizedReviewStatus, visibleHtml);
         Assert.Contains(depositLoanCondition, visibleHtml);
         Assert.Contains(addressAdvanceNotice, visibleHtml);
         Assert.Contains(addressDeadline, visibleHtml);
@@ -130,7 +142,7 @@ public sealed class DenmarkHousingArticleTests
         Assert.Contains(applicantTargetGroupCondition, visibleHtml);
         Assert.Contains(housingBenefitCondition, visibleHtml);
         Assert.Equal(RequiredSources.Length, RequiredSources.Count(url => html.Contains($"href=\"{url}\"", StringComparison.Ordinal)));
-        Assert.Equal(VerificationStatus.Verified, Assert.Single(catalog.InformationEntryTranslations,
+        Assert.Equal(VerificationStatus.NeedsReview, Assert.Single(catalog.InformationEntryTranslations,
             translation => translation.InformationEntryId == ArticleId && translation.LanguageCode == language).VerificationStatus);
     }
 
