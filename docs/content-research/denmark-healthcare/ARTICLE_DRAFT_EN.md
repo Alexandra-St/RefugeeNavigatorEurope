@@ -18,7 +18,7 @@ A residence permit, CPR registration and the health card are different things. I
 
 The card documents your access to services under the Danish national health insurance scheme. It shows your name, address, CPR number and information for contacting your GP. It is ordered after CPR registration and sent to your Danish address. A digital card app is also available.
 
-Official pages give different delivery estimates: the general “When you arrive” guide says approximately 2–3 weeks, while ICS East in Copenhagen says 2–4 weeks and advises contacting local Borgerservice if the card has not arrived after four weeks. That four-week instruction is specific to ICS East, not a nationwide guarantee. If your card is missing, check the instructions from the office that registered you; confirm your registered address and ask that office what to do next.
+After CPR registration, the card is ordered and sent to your Danish address. Delivery generally takes several weeks. If it has not arrived, check with your local Borgerservice.
 
 ## Find and contact your GP
 

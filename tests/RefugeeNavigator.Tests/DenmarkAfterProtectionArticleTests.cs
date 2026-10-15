@@ -1,6 +1,7 @@
 using System.Globalization;
 using System.Net;
 using System.Reflection;
+using System.Text.Json.Nodes;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,6 +19,8 @@ public sealed class DenmarkAfterProtectionArticleTests
     private static readonly Guid TemporaryProtectionId = Guid.Parse("20000000-0000-0000-0000-000000000001");
     private static readonly Guid ArticleId = Guid.Parse("2d106fd3-e981-4ef9-9733-568b654dfca5");
     private static readonly Guid ExistingEmploymentEntryId = Guid.Parse("c2356631-3fa2-4553-8fda-50a4419262c0");
+    private static readonly Guid HealthcareCategoryId = Guid.Parse("20000000-0000-0000-0000-000000000003");
+    private static readonly Guid HealthcareArticleId = Guid.Parse("b1e4aed1-bbaf-4f09-9468-74000bf96430");
     private static readonly string[] RequiredSources =
     [
         "https://www.retsinformation.dk/eli/lta/2026/828",
@@ -26,6 +29,18 @@ public sealed class DenmarkAfterProtectionArticleTests
         "https://nyidanmark.dk/en-GB/You-want-to-apply/Study/Educational-attachment-and-change-of-education/Educational-Attachment",
         "https://nyidanmark.dk/en-GB/You-want-to-apply/Work/Pay-limit-scheme",
         "https://nyidanmark.dk/en-GB/You-want-to-apply/Study/Higher-Education"
+    ];
+    private static readonly string[] RequiredHealthcareSources =
+    [
+        "https://www.ism.dk/nyheder/2022/april/sundhedshjaelp-til-ukrainske-flygtninge",
+        "https://www.borger.dk/udlaendinge-i-danmark/flytte-til-danmark/sygesikring-for-udlaendinge-i-danmark",
+        "https://lifeindenmark.borger.dk/theme/when-you-arrive",
+        "https://lifeindenmark.borger.dk/settle-in-denmark/ics-international-citizen-service/ics-east-in-copenhagen",
+        "https://www.borger.dk/sundhed-og-sygdom/sundhedskort--laegevalg-og-tandlaege/nyt-sundhedskort",
+        "https://www.borger.dk/sundhed-og-sygdom/sundhedskort--laegevalg-og-tandlaege/valg-af-laege",
+        "https://lifeindenmark.borger.dk/healthcare/Emergencies",
+        "https://www.borger.dk/sundhed-og-sygdom/dine-rettigheder-som-patient/Tolkning-for-patienter",
+        "https://www.borger.dk/sundhed-og-sygdom/sundhedskort--laegevalg-og-tandlaege/sygesikring-og-sikringsgrupper"
     ];
 
     [Fact]
@@ -130,6 +145,131 @@ public sealed class DenmarkAfterProtectionArticleTests
             "/compare?country1=denmark&country2=germany&category=temporary-protection");
         Assert.Contains("Residence options after temporary protection in Denmark", WebUtility.HtmlDecode(compareHtml));
         Assert.Contains("href=\"/countries/denmark/categories/temporary-protection\"", compareHtml);
+    }
+
+    [Fact]
+    public async Task HealthcareCandidateHasThreeCompleteNeedsReviewTranslationsAndNineSources()
+    {
+        var catalog = await LoadProductionCatalogAsync();
+        var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == HealthcareArticleId);
+        Assert.Equal(DenmarkId, article.CountryId);
+        Assert.Equal(HealthcareCategoryId, article.CategoryId);
+
+        var translations = catalog.InformationEntryTranslations
+            .Where(translation => translation.InformationEntryId == HealthcareArticleId)
+            .ToArray();
+        Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(translation => translation.LanguageCode).OrderBy(code => code));
+        Assert.All(translations, translation =>
+        {
+            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+            Assert.False(string.IsNullOrWhiteSpace(translation.Title));
+            Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
+            Assert.False(string.IsNullOrWhiteSpace(translation.Content));
+            Assert.Equal(new DateOnly(2026, 10, 15), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
+        });
+
+        var sources = catalog.OfficialSources.Where(source => source.InformationEntryId == HealthcareArticleId).ToArray();
+        Assert.Equal(RequiredHealthcareSources.OrderBy(url => url), sources.Select(source => source.Url.AbsoluteUri).OrderBy(url => url));
+        Assert.All(sources, source =>
+        {
+            Assert.Equal(HealthcareArticleId, source.InformationEntryId);
+            Assert.Equal(new DateOnly(2026, 10, 15), DateOnly.FromDateTime(source.LastCheckedAt.UtcDateTime));
+        });
+    }
+
+    [Theory]
+    [InlineData("uk", "Як отримати медичну допомогу в Данії", "Почніть із реєстрації в CPR і медичної картки|Жовта медична картка (sundhedskort)|Як знайти сімейного лікаря та звернутися до нього|Невідкладна та екстрена допомога|Усний переклад і мовна допомога|Витрати та покриття", "Стан або травма, що загрожує життю: телефонуйте 112", "Номери й порядок звернення відрізняються залежно від регіону", "Потребує перевірки")]
+    [InlineData("en", "How to access healthcare in Denmark", "Start with CPR registration and your healthcare card|The yellow health card (sundhedskort)|Find and contact your GP|Urgent and emergency care|Interpretation and language support|Costs and coverage", "Life-threatening illness or injury: call 112", "out-of-hours medical service for your region", "Needs review")]
+    [InlineData("ru", "Как получить медицинскую помощь в Дании", "Начните с регистрации в CPR и медицинской карточки|Жёлтая медицинская карточка (sundhedskort)|Как найти семейного врача и обратиться к нему|Срочная и экстренная помощь|Устный перевод и языковая помощь|Расходы и покрытие", "Состояние или травма, угрожающие жизни: звоните 112", "службу медицинской помощи в нерабочее время вашего региона", "Требует проверки")]
+    public async Task HealthcareArticleRendersLocalizedSectionsEmergencyGuidanceAndSources(
+        string language,
+        string expectedTitle,
+        string expectedHeadings,
+        string expected112,
+        string expectedRegionalGuidance,
+        string expectedStatus)
+    {
+        var catalog = await LoadProductionCatalogAsync();
+        var html = await RenderAsync<Category>(catalog, language,
+            "/countries/denmark/categories/healthcare",
+            new Dictionary<string, object?>
+            {
+                [nameof(Category.CountrySlug)] = "denmark",
+                [nameof(Category.CategorySlug)] = "healthcare"
+            });
+        var visibleHtml = WebUtility.HtmlDecode(html);
+
+        Assert.Contains(expectedTitle, visibleHtml);
+        Assert.Contains(expectedStatus, visibleHtml);
+        Assert.Contains(expected112, visibleHtml);
+        Assert.Contains(expectedRegionalGuidance, visibleHtml);
+        var headings = System.Text.RegularExpressions.Regex.Matches(html, "<h3\\b[^>]*class=\"entry-section-heading\"[^>]*>(.*?)</h3>")
+            .Cast<System.Text.RegularExpressions.Match>()
+            .Select(match => WebUtility.HtmlDecode(match.Groups[1].Value))
+            .ToArray();
+        Assert.Equal(expectedHeadings.Split('|'), headings);
+        Assert.Single(System.Text.RegularExpressions.Regex.Matches(html, "<ul\\b[^>]*class=\"entry-list\"").Cast<System.Text.RegularExpressions.Match>());
+        var entryList = System.Text.RegularExpressions.Regex.Match(html, "<ul\\b[^>]*class=\"entry-list\"[^>]*>(.*?)</ul>", System.Text.RegularExpressions.RegexOptions.Singleline);
+        Assert.True(entryList.Success);
+        var listItems = System.Text.RegularExpressions.Regex.Matches(entryList.Groups[1].Value, "<li\\b");
+        Assert.Collection(listItems, _ => { }, _ => { }, _ => { }, _ => { });
+        Assert.Equal(RequiredHealthcareSources.Length, RequiredHealthcareSources.Count(url => html.Contains($"href=\"{url}\"", StringComparison.Ordinal)));
+        Assert.DoesNotContain("<script>", html);
+        Assert.DoesNotContain("<img", html);
+    }
+
+    [Fact]
+    public async Task HealthcareArticleAppearsInSearchAndCountryComparison()
+    {
+        var catalog = await LoadProductionCatalogAsync();
+        var searchHtml = await RenderAsync<Search>(catalog, "en",
+            "/search?q=How%20to%20access%20healthcare%20in%20Denmark&country=denmark&category=healthcare");
+        Assert.Contains("href=\"/countries/denmark/categories/healthcare\"", searchHtml);
+        Assert.Contains("How to access healthcare in Denmark", WebUtility.HtmlDecode(searchHtml));
+
+        var compareHtml = await RenderAsync<Compare>(catalog, "en",
+            "/compare?country1=denmark&country2=germany&category=healthcare");
+        Assert.Contains("How to access healthcare in Denmark", WebUtility.HtmlDecode(compareHtml));
+        Assert.Contains("href=\"/countries/denmark/categories/healthcare\"", compareHtml);
+    }
+
+    [Fact]
+    public async Task HealthcareArticleRendersUntrustedContentAsEncodedText()
+    {
+        var temporaryRoot = Path.Combine(Path.GetTempPath(), "RefugeeNavigatorHealthcareEncoding", Guid.NewGuid().ToString("N"));
+        var dataDirectory = Path.Combine(temporaryRoot, "Data");
+        Directory.CreateDirectory(dataDirectory);
+        try
+        {
+            foreach (var fileName in new[] { "countries.json", "categories.json", "information-entries.json", "official-sources.json" })
+            {
+                File.Copy(Path.Combine(AppContext.BaseDirectory, "Data", fileName), Path.Combine(dataDirectory, fileName));
+            }
+
+            var entriesPath = Path.Combine(dataDirectory, "information-entries.json");
+            var entries = JsonNode.Parse(await File.ReadAllTextAsync(entriesPath))!.AsArray();
+            var article = entries.Single(entry => entry!["Id"]!.GetValue<string>() == HealthcareArticleId.ToString());
+            var english = article!["Translations"]!.AsArray()
+                .Single(translation => translation!["LanguageCode"]!.GetValue<string>() == "en");
+            english!["Content"] = "<script>alert('x')</script>";
+            await File.WriteAllTextAsync(entriesPath, entries.ToJsonString());
+
+            var syntheticCatalog = await new JsonCatalogProvider(temporaryRoot).LoadAsync();
+            var html = await RenderAsync<Category>(syntheticCatalog, "en",
+                "/countries/denmark/categories/healthcare",
+                new Dictionary<string, object?>
+                {
+                    [nameof(Category.CountrySlug)] = "denmark",
+                    [nameof(Category.CategorySlug)] = "healthcare"
+                });
+
+            Assert.Contains("&lt;script&gt;alert(&#x27;x&#x27;)&lt;/script&gt;", html);
+            Assert.DoesNotContain("<script>", html);
+        }
+        finally
+        {
+            Directory.Delete(temporaryRoot, recursive: true);
+        }
     }
 
     private static Task<CatalogData> LoadProductionCatalogAsync() =>

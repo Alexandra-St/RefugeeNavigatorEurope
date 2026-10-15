@@ -75,5 +75,68 @@
     "Title": "SIRI (Danish Agency for International Recruitment and Integration) — Higher educational programmes",
     "Url": "https://nyidanmark.dk/en-GB/You-want-to-apply/Study/Higher-Education",
     "LastCheckedAt": "2026-10-15T14:55:02+00:00"
+  },
+  {
+    "Id": "d3520d2c-2fc2-4cdf-89dc-eb192aa9b64a",
+    "InformationEntryId": "b1e4aed1-bbaf-4f09-9468-74000bf96430",
+    "Title": "Sundhedshjælp til ukrainske flygtninge",
+    "Url": "https://www.ism.dk/nyheder/2022/april/sundhedshjaelp-til-ukrainske-flygtninge",
+    "LastCheckedAt": "2026-10-15T16:37:09+00:00"
+  },
+  {
+    "Id": "0163c42d-cc40-4f65-b06e-6535d23ea740",
+    "InformationEntryId": "b1e4aed1-bbaf-4f09-9468-74000bf96430",
+    "Title": "Sygesikring for udlændinge i Danmark",
+    "Url": "https://www.borger.dk/udlaendinge-i-danmark/flytte-til-danmark/sygesikring-for-udlaendinge-i-danmark",
+    "LastCheckedAt": "2026-10-15T16:37:09+00:00"
+  },
+  {
+    "Id": "a5a8c70c-8fff-4261-b4a5-21550677af83",
+    "InformationEntryId": "b1e4aed1-bbaf-4f09-9468-74000bf96430",
+    "Title": "When you arrive",
+    "Url": "https://lifeindenmark.borger.dk/theme/when-you-arrive",
+    "LastCheckedAt": "2026-10-15T16:37:09+00:00"
+  },
+  {
+    "Id": "0722a950-46c0-4a64-bcd9-166f2024a805",
+    "InformationEntryId": "b1e4aed1-bbaf-4f09-9468-74000bf96430",
+    "Title": "ICS East in Copenhagen",
+    "Url": "https://lifeindenmark.borger.dk/settle-in-denmark/ics-international-citizen-service/ics-east-in-copenhagen",
+    "LastCheckedAt": "2026-10-15T16:37:09+00:00"
+  },
+  {
+    "Id": "0fb3c1da-0eb0-45ea-be5b-fa11f8fc2b7d",
+    "InformationEntryId": "b1e4aed1-bbaf-4f09-9468-74000bf96430",
+    "Title": "Nyt sundhedskort",
+    "Url": "https://www.borger.dk/sundhed-og-sygdom/sundhedskort--laegevalg-og-tandlaege/nyt-sundhedskort",
+    "LastCheckedAt": "2026-10-15T16:37:09+00:00"
+  },
+  {
+    "Id": "0f49ae88-21f1-478b-8c88-36f459088a6e",
+    "InformationEntryId": "b1e4aed1-bbaf-4f09-9468-74000bf96430",
+    "Title": "Valg af læge",
+    "Url": "https://www.borger.dk/sundhed-og-sygdom/sundhedskort--laegevalg-og-tandlaege/valg-af-laege",
+    "LastCheckedAt": "2026-10-15T16:37:09+00:00"
+  },
+  {
+    "Id": "1b63eb37-84ce-46c2-a6aa-51405800bc02",
+    "InformationEntryId": "b1e4aed1-bbaf-4f09-9468-74000bf96430",
+    "Title": "Emergencies",
+    "Url": "https://lifeindenmark.borger.dk/healthcare/Emergencies",
+    "LastCheckedAt": "2026-10-15T16:37:09+00:00"
+  },
+  {
+    "Id": "b59c0064-9d1e-4e6c-8e8a-a37f7007e88d",
+    "InformationEntryId": "b1e4aed1-bbaf-4f09-9468-74000bf96430",
+    "Title": "Tolkning for patienter",
+    "Url": "https://www.borger.dk/sundhed-og-sygdom/dine-rettigheder-som-patient/Tolkning-for-patienter",
+    "LastCheckedAt": "2026-10-15T16:37:09+00:00"
+  },
+  {
+    "Id": "5b9eaffd-59e9-4d59-9280-8abb5af7ef02",
+    "InformationEntryId": "b1e4aed1-bbaf-4f09-9468-74000bf96430",
+    "Title": "Sygesikring og sikringsgrupper",
+    "Url": "https://www.borger.dk/sundhed-og-sygdom/sundhedskort--laegevalg-og-tandlaege/sygesikring-og-sikringsgrupper",
+    "LastCheckedAt": "2026-10-15T16:37:09+00:00"
   }
 ]
