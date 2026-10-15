@@ -16,9 +16,11 @@ Employers must check a foreign employee’s right to work. Show your actual resi
 
 ## Employment contracts
 
-Written employment information is legally required when a job lasts at least one month and average working time is more than eight hours per week. The written terms should cover matters such as the job, start date, duration if temporary, pay and payment frequency, working hours, holidays, notice and any applicable collective agreement. The legal threshold does not cover every short or low-hours job.
+The written-information rules generally cover employees whose predetermined or actual working time exceeds an average of 3 hours per week over 4 consecutive weeks. Hours with employers in the same company, group or entity are counted together. The rules also cover work where no guaranteed amount of paid hours was set before employment began. Seafarers are covered by separate legislation. Statutory collective-agreement exceptions apply: some written-information and minimum-terms duties may be met through an agreement that provides at least equivalent protection, and specified provisions do not apply to agreements made by the most representative labour-market parties, covering all Denmark and ensuring overall protection. Whether an exception applies depends on the agreement and legal conditions.
 
-Read the terms before signing and keep a copy. Check whether you are employed full-time, part-time, temporarily or in another category, and whether a collective agreement applies. There is no single probation period or notice period for every worker. Your terms depend on the law that covers your job, your contract and any collective agreement; the employer is not required by law to translate the contract.
+Essential employment terms must be provided in writing. Some specified information is due no later than 7 calendar days after employment starts; other information is due no later than one month after it starts. These are delivery deadlines, not a minimum job duration or the threshold for legal coverage.
+
+Read the terms when you receive them and keep a copy. Check whether you are employed full-time, part-time, temporarily or in another category, and whether a collective agreement applies. There is no single probation period or notice period for every worker. Your terms depend on the law that covers your job, your contract and any collective agreement; the employer is not required by law to translate the contract.
 
 ## Salary and working hours
 
@@ -48,7 +50,7 @@ Employers must provide a safe and healthy working environment, including assessi
 
 If you experience discrimination at work, Danish equality laws may apply. Depending on the facts, a complaint may be made to the Board on Equal Treatment or you may seek help through a trade union or the courts. The route and possible outcome depend on the case.
 
-If you are injured at work, tell your employer promptly and keep relevant information. Employers or doctors report many injuries; in some circumstances a worker can report an injury directly. The Labour Market Insurance (AES) must recognize an injury before compensation can be paid. Reporting does not guarantee compensation.
+If you are injured at work, tell your employer promptly and keep relevant records. Employers or doctors report many work injuries. Under applicable conditions, an injured worker can also report the injury directly. The Labour Market Insurance (AES) must recognize an injury before compensation can be paid. Reporting does not guarantee compensation.
 
 ## If a job ends or you change employers
 
