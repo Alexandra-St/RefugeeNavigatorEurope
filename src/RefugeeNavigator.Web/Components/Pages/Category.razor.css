@@ -118,14 +118,57 @@
 }
 
 .entry-content {
+    max-width: 72ch;
     margin: 1rem 0 0;
     color: #425675;
-    line-height: 1.7;
+    line-height: 1.75;
     white-space: pre-line;
+    overflow-wrap: anywhere;
 }
 
 .entry-content + .entry-content {
     margin-top: 0.75rem;
+}
+
+.entry-section-heading {
+    max-width: 72ch;
+    margin: 1.5rem 0 0.55rem;
+    color: #102a56;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.entry-summary + .entry-section-heading {
+    margin-top: 1.4rem;
+}
+
+.entry-section-heading + .entry-content,
+.entry-section-heading + .entry-list {
+    margin-top: 0;
+}
+
+.entry-list {
+    max-width: 72ch;
+    margin: 0.8rem 0 0;
+    padding-left: 1.5rem;
+    color: #425675;
+    line-height: 1.7;
+}
+
+.entry-list + .entry-content,
+.entry-list + .entry-section-heading,
+.entry-content + .entry-list {
+    margin-top: 0.9rem;
+}
+
+.entry-list li {
+    overflow-wrap: anywhere;
+}
+
+.entry-list li + li {
+    margin-top: 0.35rem;
 }
 
 .entry-metadata {

@@ -29,7 +29,7 @@ public sealed class DenmarkAfterProtectionArticleTests
     ];
 
     [Fact]
-    public async Task CatalogContainsVerifiedArticleAndPreservesExistingEmploymentEntry()
+    public async Task CatalogContainsNeedsReviewArticleAndPreservesExistingEmploymentEntry()
     {
         var catalog = await LoadProductionCatalogAsync();
         var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == ArticleId);
@@ -42,7 +42,7 @@ public sealed class DenmarkAfterProtectionArticleTests
         Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(translation => translation.LanguageCode).OrderBy(code => code));
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
             Assert.Equal(new DateOnly(2026, 10, 15), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
         });
 
@@ -57,9 +57,9 @@ public sealed class DenmarkAfterProtectionArticleTests
     }
 
     [Theory]
-    [InlineData("uk", "Які є варіанти проживання після тимчасового захисту в Данії?", "BEK nr. 828/2026", "17 березня 2028 року", "17 березня 2027 року", "Перевірено", "Джерело востаннє перевірено")]
-    [InlineData("en", "Residence options after temporary protection in Denmark", "BEK no. 828/2026", "17 March 2028", "17 March 2027", "Reviewed", "Source last checked")]
-    [InlineData("ru", "Какие есть варианты проживания после временной защиты в Дании?", "BEK № 828/2026", "17 марта 2028 года", "17 марта 2027 года", "Проверено", "Источник проверен")]
+    [InlineData("uk", "Які є варіанти проживання після тимчасового захисту в Данії?", "BEK nr. 828/2026", "17 березня 2028 року", "17 березня 2027 року", "Потребує перевірки", "Джерело востаннє перевірено", "Тимчасове проживання та строки продовження|Варіанти проживання, пов’язані з роботою|Варіанти проживання, пов’язані з навчанням|Інші дозволи на проживання|Постійне проживання|Де знайти офіційну інформацію")]
+    [InlineData("en", "Residence options after temporary protection in Denmark", "BEK no. 828/2026", "17 March 2028", "17 March 2027", "Needs review", "Source last checked", "Temporary residence and extension dates|Employment-related residence options|Education-related residence options|Other residence permits|Permanent residence|Where to find official information")]
+    [InlineData("ru", "Какие есть варианты проживания после временной защиты в Дании?", "BEK № 828/2026", "17 марта 2028 года", "17 марта 2027 года", "Требует проверки", "Источник проверен", "Временное проживание и сроки продления|Варианты проживания, связанные с работой|Варианты проживания, связанные с обучением|Другие разрешения на проживание|Постоянное проживание|Где найти официальную информацию")]
     public async Task LocalizedCategoryRendersArticleStatusDatesAndOfficialSources(
         string language,
         string expectedTitle,
@@ -67,7 +67,8 @@ public sealed class DenmarkAfterProtectionArticleTests
         string expectedExtensionDate,
         string expectedAgencyDate,
         string expectedStatus,
-        string expectedSourceLabel)
+        string expectedSourceLabel,
+        string expectedHeadings)
     {
         var catalog = await LoadProductionCatalogAsync();
         var html = await RenderAsync<Category>(catalog, language,
@@ -87,6 +88,33 @@ public sealed class DenmarkAfterProtectionArticleTests
         Assert.Equal(RequiredSources.Length, RequiredSources.Count(url => html.Contains($"href=\"{url}\"", StringComparison.Ordinal)));
         Assert.Contains(expectedSourceLabel, visibleHtml);
         Assert.DoesNotContain("2d106fd3-e981-4ef9-9733-568b654dfca5", visibleHtml);
+        Assert.Single(System.Text.RegularExpressions.Regex.Matches(html, "<h1\\b").Cast<System.Text.RegularExpressions.Match>());
+        Assert.Single(System.Text.RegularExpressions.Regex.Matches(html, "<h2\\b").Cast<System.Text.RegularExpressions.Match>());
+        Assert.True(System.Text.RegularExpressions.Regex.Matches(html, "<h3\\b").Count == 7);
+        Assert.True(System.Text.RegularExpressions.Regex.Matches(html, "<ul\\b").Count == 3);
+        Assert.True(System.Text.RegularExpressions.Regex.Matches(html, "<li\\b").Count == 12);
+        Assert.All(expectedHeadings.Split('|'), heading =>
+            Assert.Matches($"<h3\\b[^>]*class=\"entry-section-heading\"[^>]*>{System.Text.RegularExpressions.Regex.Escape(heading)}</h3>", visibleHtml));
+    }
+
+    [Fact]
+    public async Task ExistingEmploymentArticleRemainsVerifiedAndPlainText()
+    {
+        var catalog = await LoadProductionCatalogAsync();
+        var employmentTranslation = Assert.Single(catalog.InformationEntryTranslations,
+            translation => translation.InformationEntryId == ExistingEmploymentEntryId && translation.LanguageCode == "en");
+        Assert.Equal(VerificationStatus.Verified, employmentTranslation.VerificationStatus);
+        Assert.Contains("Workindenmark provides job listings in English", employmentTranslation.Content);
+
+        var html = await RenderAsync<Category>(catalog, "en", "/countries/denmark/categories/employment",
+            new Dictionary<string, object?>
+            {
+                [nameof(Category.CountrySlug)] = "denmark",
+                [nameof(Category.CategorySlug)] = "employment"
+            });
+        Assert.Contains("Workindenmark provides job listings in English", WebUtility.HtmlDecode(html));
+        Assert.DoesNotContain("entry-section-heading", html);
+        Assert.DoesNotContain("class=\"entry-list\"", html);
     }
 
     [Fact]

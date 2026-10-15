@@ -172,6 +172,60 @@ public sealed class CategoryRenderingTests
     }
 
     [Fact]
+    public async Task RendersStructuredBlocksInOrderWithSemanticHeadingAndListElements()
+    {
+        const string content = "Opening paragraph.\n\n## Section heading\n\nFirst body paragraph.\nContinued line.\n\n- First item\n- Second item\n\nClosing paragraph.";
+        var catalog = await CreateCatalogAsync(new[] { FixtureEntry(Guid.NewGuid(), content: content) });
+
+        var html = await RenderAsync(catalog, "en");
+        var heading = Regex.Match(html, "<h3\\b[^>]*class=\"entry-section-heading\"[^>]*>Section heading</h3>");
+        var list = Regex.Match(html, "<ul\\b[^>]*class=\"entry-list\"");
+
+        Assert.Single(Regex.Matches(html, "<h1\\b").Cast<Match>());
+        Assert.Single(Regex.Matches(html, "<h2\\b").Cast<Match>());
+        Assert.Single(Regex.Matches(html, "<h3\\b").Cast<Match>());
+        Assert.True(heading.Success);
+        Assert.True(list.Success);
+        Assert.True(html.IndexOf("Opening paragraph.", StringComparison.Ordinal) < heading.Index);
+        Assert.True(heading.Index < html.IndexOf("First body paragraph.", StringComparison.Ordinal));
+        Assert.True(html.IndexOf("Continued line.", StringComparison.Ordinal) < list.Index);
+        Assert.True(list.Index < html.IndexOf("First item", StringComparison.Ordinal));
+        Assert.True(html.IndexOf("Second item", StringComparison.Ordinal) < html.IndexOf("Closing paragraph.", StringComparison.Ordinal));
+        Assert.Matches("<li\\b[^>]*>First item</li>", html);
+        Assert.Matches("<li\\b[^>]*>Second item</li>", html);
+        Assert.Equal(new[] { "Opening paragraph.", "First body paragraph.\nContinued line.", "Closing paragraph." }, ReadContentParagraphs(html));
+    }
+
+    [Fact]
+    public async Task EncodesTextInHeadingsListsAndParagraphs()
+    {
+        const string content = "## <script>alert('heading')</script>\n\n- <img src=x onerror='list'>\n\n<p>paragraph</p>";
+        var catalog = await CreateCatalogAsync(new[] { FixtureEntry(Guid.NewGuid(), content: content) });
+
+        var html = await RenderAsync(catalog, "en");
+
+        Assert.Contains("&lt;script&gt;alert(&#x27;heading&#x27;)&lt;/script&gt;", html);
+        Assert.Contains("&lt;img src=x onerror=&#x27;list&#x27;&gt;", html);
+        Assert.Contains("&lt;p&gt;paragraph&lt;/p&gt;", html);
+        Assert.DoesNotContain("<script>", html);
+        Assert.DoesNotContain("<img", html);
+        Assert.DoesNotContain("<p>paragraph</p>", html);
+    }
+
+    [Fact]
+    public async Task MalformedAndUnsupportedFormattingRemainsVisibleAsSafeParagraphText()
+    {
+        const string content = "### Unsupported heading\n\n## \n\n- \n\n- First item\nordinary text";
+        var catalog = await CreateCatalogAsync(new[] { FixtureEntry(Guid.NewGuid(), content: content) });
+
+        var html = await RenderAsync(catalog, "en");
+
+        Assert.Equal(new[] { "### Unsupported heading", "##", "-", "- First item\nordinary text" }, ReadContentParagraphs(html));
+        Assert.DoesNotContain("<ul class=\"entry-list\">", html);
+        Assert.DoesNotContain("<h3 class=\"entry-section-heading\">", html);
+    }
+
+    [Fact]
     public async Task MissingCurrentTranslationFailsInsteadOfFallingBack()
     {
         var validCatalog = await CreateCatalogAsync(new[] { FixtureEntry(Guid.NewGuid()) });

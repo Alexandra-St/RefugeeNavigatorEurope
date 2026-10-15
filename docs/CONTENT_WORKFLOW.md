@@ -30,6 +30,10 @@ Each entry must have exactly one translation for each supported language: `uk`, 
 
 The current `OfficialSource` model has no separate organization field: include the issuing organization in the human-readable `Title` when it helps identify the exact page. Do not copy placeholder values from this document into the catalogs.
 
+## Article content formatting
+
+`Content` remains plain text. Separate blocks with a blank line. A block whose line starts with `## ` is rendered as an article section heading; a block of consecutive lines starting with `- ` is rendered as an unordered list. All other blocks are paragraphs. This limited convention supports block structure only: do not use inline Markdown, HTML, or markup attributes. Unknown or malformed markers are shown as encoded paragraph text.
+
 ## Acceptable sources and conflicts
 
 Prefer primary pages from government websites, official immigration authorities, official social protection agencies, public employment services, healthcare authorities, and official EU institutions. Use a source only when its page directly supports the claim being published. Record the page title in `Title`, its exact page URL in `Url`, the related logical entry ID in `InformationEntryId`, and the date that page was actually checked in `LastCheckedAt`.
