@@ -41,7 +41,7 @@ public sealed class DenmarkSocialAssistanceArticleTests
     ];
 
     [Fact]
-    public async Task CatalogContainsNeedsReviewArticleWithThreeTranslationsAndPreservesExistingDenmarkArticles()
+    public async Task CatalogContainsVerifiedArticleWithThreeTranslationsAndPreservesExistingDenmarkArticles()
     {
         var catalog = await LoadProductionCatalogAsync();
         var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == ArticleId);
@@ -55,7 +55,7 @@ public sealed class DenmarkSocialAssistanceArticleTests
         Assert.Equal(3, translations.Length);
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
