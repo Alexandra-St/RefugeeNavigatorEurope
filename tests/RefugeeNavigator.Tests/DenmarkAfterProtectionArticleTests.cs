@@ -148,7 +148,7 @@ public sealed class DenmarkAfterProtectionArticleTests
     }
 
     [Fact]
-    public async Task HealthcareCandidateHasThreeCompleteNeedsReviewTranslationsAndNineSources()
+    public async Task HealthcareArticleHasThreeCompleteVerifiedTranslationsAndNineSources()
     {
         var catalog = await LoadProductionCatalogAsync();
         var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == HealthcareArticleId);
@@ -161,7 +161,7 @@ public sealed class DenmarkAfterProtectionArticleTests
         Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(translation => translation.LanguageCode).OrderBy(code => code));
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
@@ -193,7 +193,7 @@ public sealed class DenmarkAfterProtectionArticleTests
         var translation = Assert.Single(catalog.InformationEntryTranslations,
             item => item.InformationEntryId == HealthcareArticleId && item.LanguageCode == language);
 
-        Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+        Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
         Assert.Contains(expectedPurpose, translation.Content);
         Assert.Contains(expectedDigitalCard, translation.Content);
         Assert.Contains(expectedTiming, translation.Content);
@@ -202,9 +202,9 @@ public sealed class DenmarkAfterProtectionArticleTests
     }
 
     [Theory]
-    [InlineData("uk", "Як отримати медичну допомогу в Данії", "Почніть із реєстрації в CPR і медичної картки|Жовта медична картка (sundhedskort)|Як знайти сімейного лікаря та звернутися до нього|Невідкладна та екстрена допомога|Усний переклад і мовна допомога|Витрати та покриття", "Стан або травма, що загрожує життю: телефонуйте 112", "Номери й порядок звернення відрізняються залежно від регіону", "Потребує перевірки")]
-    [InlineData("en", "How to access healthcare in Denmark", "Start with CPR registration and your healthcare card|The yellow health card (sundhedskort)|Find and contact your GP|Urgent and emergency care|Interpretation and language support|Costs and coverage", "Life-threatening illness or injury: call 112", "out-of-hours medical service for your region", "Needs review")]
-    [InlineData("ru", "Как получить медицинскую помощь в Дании", "Начните с регистрации в CPR и медицинской карточки|Жёлтая медицинская карточка (sundhedskort)|Как найти семейного врача и обратиться к нему|Срочная и экстренная помощь|Устный перевод и языковая помощь|Расходы и покрытие", "Состояние или травма, угрожающие жизни: звоните 112", "службу медицинской помощи в нерабочее время вашего региона", "Требует проверки")]
+    [InlineData("uk", "Як отримати медичну допомогу в Данії", "Почніть із реєстрації в CPR і медичної картки|Жовта медична картка (sundhedskort)|Як знайти сімейного лікаря та звернутися до нього|Невідкладна та екстрена допомога|Усний переклад і мовна допомога|Витрати та покриття", "Стан або травма, що загрожує життю: телефонуйте 112", "Номери й порядок звернення відрізняються залежно від регіону", "Перевірено")]
+    [InlineData("en", "How to access healthcare in Denmark", "Start with CPR registration and your healthcare card|The yellow health card (sundhedskort)|Find and contact your GP|Urgent and emergency care|Interpretation and language support|Costs and coverage", "Life-threatening illness or injury: call 112", "out-of-hours medical service for your region", "Reviewed")]
+    [InlineData("ru", "Как получить медицинскую помощь в Дании", "Начните с регистрации в CPR и медицинской карточки|Жёлтая медицинская карточка (sundhedskort)|Как найти семейного врача и обратиться к нему|Срочная и экстренная помощь|Устный перевод и языковая помощь|Расходы и покрытие", "Состояние или травма, угрожающие жизни: звоните 112", "службу медицинской помощи в нерабочее время вашего региона", "Проверено")]
     public async Task HealthcareArticleRendersLocalizedSectionsEmergencyGuidanceAndSources(
         string language,
         string expectedTitle,
