@@ -42,6 +42,14 @@ Tuition and application-fee rules are institution-specific. For example, the Uni
 
 ## Costs, financial support and where to apply
 
-Public folkeskole education is free, but private-school, childcare, language-course, adult-learning and higher-education costs differ. Ask the municipality about childcare fees and possible subsidies; ask a language centre or municipality about course classification and deposits; ask a VUC or education provider about course fees; and ask the university about tuition and application costs.
+Public folkeskole education is free, but private-school, childcare, language-course, adult-learning and higher-education costs differ. Fees and support depend on the municipality or institution.
 
-SU (the Danish State Educational Grant) is not automatic for foreign citizens or Ukraine Special Act permit holders. A person covered by the Special Act may apply for equal status under section 2(2) of the Integration Act, but must also meet the general SU conditions, including admission to an SU-approved programme. The educational institution handles questions about an application and the relevant status assessment. Confirm current rules before relying on financial support.
+Where to start:
+
+- Contact the municipality about a child’s school placement or childcare registration, waiting lists, local fees and possible subsidies.
+- Ask a school or youth guidance service about upper-secondary and vocational study options.
+- Ask the municipality or language centre to confirm Danish-course eligibility, placement, and any fee or deposit before enrolling.
+- Contact a VUC about AVU assessment, subjects and current fees.
+- Contact the chosen institution about admission, programme requirements and tuition. Many undergraduate applications use Optagelse.dk. The Danish Agency for Higher Education and Science can assess completed foreign qualifications, but the institution decides admission.
+
+SU (the Danish State Educational Grant) is not automatic for foreign citizens or Ukraine Special Act permit holders. A person covered by the Special Act may apply for equal status under section 2(2) of the Integration Act, but must also meet the general SU conditions, including admission to an SU-approved programme. Contact the educational institution about an application and the relevant status assessment. Confirm current rules before relying on financial support.

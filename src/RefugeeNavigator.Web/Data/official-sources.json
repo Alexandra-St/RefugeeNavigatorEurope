@@ -215,5 +215,145 @@
     "Title": "Social and Housing Agency / Borger.dk — Beboerklagenævn og Huslejenævn",
     "Url": "https://www.borger.dk/bolig-og-flytning/lejebolig/beboerklagenaevn-og-huslejenaevn",
     "LastCheckedAt": "2026-10-15T17:14:35+00:00"
+  },
+  {
+    "Id": "8d7fd8a1-73f3-4af8-b0f3-d877607fb97f",
+    "InformationEntryId": "fee9dcf0-447d-4402-92a2-8b1bec125944",
+    "Title": "Danish Ministry of Children and Education (UVM) — Adgang til undervisning",
+    "Url": "https://uvm.dk/aktuelt/i-fokus/ukraine/vejledning/grundskolen/adgang-til-undervisning",
+    "LastCheckedAt": "2026-10-15T17:47:05+00:00"
+  },
+  {
+    "Id": "fcb08b16-c39a-4e68-9a7e-25ce55571450",
+    "InformationEntryId": "fee9dcf0-447d-4402-92a2-8b1bec125944",
+    "Title": "Danish Ministry of Children and Education (UVM) — Indskrivning af elever fordrevet fra Ukraine",
+    "Url": "https://uvm.dk/aktuelt/i-fokus/ukraine/vejledning/grundskolen/indskrivning-af-elever-fordrevet-fra-ukraine/",
+    "LastCheckedAt": "2026-10-15T17:47:05+00:00"
+  },
+  {
+    "Id": "072d16da-7d66-4125-ab27-2d28d88f2e79",
+    "InformationEntryId": "fee9dcf0-447d-4402-92a2-8b1bec125944",
+    "Title": "Danish Ministry of Children and Education (UVM) — Sprog og tolkebistand",
+    "Url": "https://uvm.dk/aktuelt/i-fokus/ukraine/vejledning/grundskolen/sprog-og-tolkebistand/",
+    "LastCheckedAt": "2026-10-15T17:47:05+00:00"
+  },
+  {
+    "Id": "29ada7b1-92c8-40be-bfd5-b284e42bb0c7",
+    "InformationEntryId": "fee9dcf0-447d-4402-92a2-8b1bec125944",
+    "Title": "Danish Ministry of Children and Education (UVM) — Modtagelsesklasser og særlige hold",
+    "Url": "https://uvm.dk/aktuelt/i-fokus/ukraine/vejledning/grundskolen/modtagelsesklasser-og-saerlige-hold/",
+    "LastCheckedAt": "2026-10-15T17:47:05+00:00"
+  },
+  {
+    "Id": "bcaa486e-ec5e-48fe-82a3-44055c026555",
+    "InformationEntryId": "fee9dcf0-447d-4402-92a2-8b1bec125944",
+    "Title": "Danish Ministry of Children and Education (UVM) — Skolestart og undervisningspligt",
+    "Url": "https://uvm.dk/grundskole/folkeskolen/om-folkeskolen/skolestart/",
+    "LastCheckedAt": "2026-10-15T17:47:05+00:00"
+  },
+  {
+    "Id": "08d28663-4285-49dd-a395-775c16920298",
+    "InformationEntryId": "fee9dcf0-447d-4402-92a2-8b1bec125944",
+    "Title": "Life in Denmark / Ministry of Education — Enrolment to start school",
+    "Url": "https://lifeindenmark.borger.dk/school-and-education/school/enrolment-to-start-school",
+    "LastCheckedAt": "2026-10-15T17:47:05+00:00"
+  },
+  {
+    "Id": "d74e0f31-b921-44c1-87d9-655e593c2492",
+    "InformationEntryId": "fee9dcf0-447d-4402-92a2-8b1bec125944",
+    "Title": "Life in Denmark / Ministry of Children, Senior Citizens and Housing — Family daycare, nurseries and kindergartens",
+    "Url": "https://lifeindenmark.borger.dk/family-and-children/childcare/family-daycare--nurseries-and-kindergartens",
+    "LastCheckedAt": "2026-10-15T17:47:05+00:00"
+  },
+  {
+    "Id": "55c3e79d-1c9f-43fe-b01f-b0c0787571a4",
+    "InformationEntryId": "fee9dcf0-447d-4402-92a2-8b1bec125944",
+    "Title": "Danish Ministry of Children and Education (UVM) — Pasningsgaranti",
+    "Url": "https://uvm.dk/aktuelt/i-fokus/ukraine/vejledning/dagtilbud/pasningsgaranti",
+    "LastCheckedAt": "2026-10-15T17:47:05+00:00"
+  },
+  {
+    "Id": "3786dfad-7f9f-4504-a455-caef18902f32",
+    "InformationEntryId": "fee9dcf0-447d-4402-92a2-8b1bec125944",
+    "Title": "Life in Denmark / Ministry of Children, Senior Citizens and Housing — Income-based daycare subsidy, sibling subsidy and other subsidies",
+    "Url": "https://lifeindenmark.borger.dk/family-and-children/childcare/income-based-daycare-subsidy--sibling-subsidy-and-other-subsidies",
+    "LastCheckedAt": "2026-10-15T17:47:05+00:00"
+  },
+  {
+    "Id": "d5946b7f-0dd7-4ab2-87eb-211aad010af9",
+    "InformationEntryId": "fee9dcf0-447d-4402-92a2-8b1bec125944",
+    "Title": "Life in Denmark / Ministry of Education — The Higher General Education Programme (stx)",
+    "Url": "https://lifeindenmark.borger.dk/school-and-education/upper-secondary-education/the-higher-general-education-programme---stx",
+    "LastCheckedAt": "2026-10-15T17:47:05+00:00"
+  },
+  {
+    "Id": "4bd33c5c-7f71-4458-a283-1e6451b82321",
+    "InformationEntryId": "fee9dcf0-447d-4402-92a2-8b1bec125944",
+    "Title": "Life in Denmark / Ministry of Education — Vocational education and training (VET courses)",
+    "Url": "https://lifeindenmark.borger.dk/school-and-education/upper-secondary-education/vocational-education-and-training---vet---courses",
+    "LastCheckedAt": "2026-10-15T17:47:05+00:00"
+  },
+  {
+    "Id": "fac2ebb1-6c5a-4ea2-bd20-9addd12f78c9",
+    "InformationEntryId": "fee9dcf0-447d-4402-92a2-8b1bec125944",
+    "Title": "Life in Denmark / SIRI — Danish language training",
+    "Url": "https://lifeindenmark.borger.dk/leisure-and-networking/danish-language-training",
+    "LastCheckedAt": "2026-10-15T17:47:05+00:00"
+  },
+  {
+    "Id": "5ec2135c-cbf2-410b-9ba9-874bbbb7ca4c",
+    "InformationEntryId": "fee9dcf0-447d-4402-92a2-8b1bec125944",
+    "Title": "SIRI — Dansk og Prøver — Danskuddannelserne",
+    "Url": "https://danskogproever.dk/sprogcenter/om-danskuddannelserne/danskuddannelserne/",
+    "LastCheckedAt": "2026-10-15T17:47:05+00:00"
+  },
+  {
+    "Id": "12b2a6e7-a5c4-45e3-aa7b-31771977b602",
+    "InformationEntryId": "fee9dcf0-447d-4402-92a2-8b1bec125944",
+    "Title": "SIRI — Dansk og Prøver — Henvisning og visitation til danskuddannelse",
+    "Url": "https://danskogproever.dk/kommune/danskuddannelse-til-udlaendinge/henvisning-og-visitation-til-danskuddannelse/",
+    "LastCheckedAt": "2026-10-15T17:47:05+00:00"
+  },
+  {
+    "Id": "c39945bd-73c4-4789-aa29-4558e548ac95",
+    "InformationEntryId": "fee9dcf0-447d-4402-92a2-8b1bec125944",
+    "Title": "Life in Denmark / Ministry of Education — General adult education",
+    "Url": "https://lifeindenmark.borger.dk/school-and-education/education-for-adults/general-adult-education",
+    "LastCheckedAt": "2026-10-15T17:47:05+00:00"
+  },
+  {
+    "Id": "26d3ab08-b46b-47c6-81c9-854d643fce6a",
+    "InformationEntryId": "fee9dcf0-447d-4402-92a2-8b1bec125944",
+    "Title": "Life in Denmark — Admission to higher education in Denmark",
+    "Url": "https://lifeindenmark.borger.dk/school-and-education/higher-education/admission-to-higher-education-in-denmark",
+    "LastCheckedAt": "2026-10-15T17:47:05+00:00"
+  },
+  {
+    "Id": "c93a984e-f83d-4e5f-9c8f-a2074984236c",
+    "InformationEntryId": "fee9dcf0-447d-4402-92a2-8b1bec125944",
+    "Title": "Danish Agency for Higher Education and Science / Life in Denmark — Recognition of foreign qualifications",
+    "Url": "https://lifeindenmark.borger.dk/working/finding-a-job/recognition-of-foreign-qualifications",
+    "LastCheckedAt": "2026-10-15T17:47:05+00:00"
+  },
+  {
+    "Id": "2c5248de-f006-4edd-86c2-e067a8f67016",
+    "InformationEntryId": "fee9dcf0-447d-4402-92a2-8b1bec125944",
+    "Title": "University of Copenhagen (UCPH) — How Much Are Tuition Fees? Costs for Master’s at UCPH",
+    "Url": "https://www.ku.dk/studies/admission/application-deposit-fee-and-tuition-fees",
+    "LastCheckedAt": "2026-10-15T17:47:05+00:00"
+  },
+  {
+    "Id": "186153a2-5805-43d8-b615-85eb0c64a256",
+    "InformationEntryId": "fee9dcf0-447d-4402-92a2-8b1bec125944",
+    "Title": "SU — Danish State Educational Grant and Loan Scheme — Refugees from Ukraine",
+    "Url": "https://www.su.dk/english/refugees-from-ukraine",
+    "LastCheckedAt": "2026-10-15T17:47:05+00:00"
+  },
+  {
+    "Id": "074a3ecf-0f17-4cf2-bf6b-40f0f27b873c",
+    "InformationEntryId": "fee9dcf0-447d-4402-92a2-8b1bec125944",
+    "Title": "SU — Life in Denmark — SU – State Educational Grant",
+    "Url": "https://lifeindenmark.borger.dk/school-and-education/student-finance/su---state-educational-grant",
+    "LastCheckedAt": "2026-10-15T17:47:05+00:00"
   }
 ]
