@@ -50,7 +50,7 @@ public sealed class DenmarkEducationArticleTests
     ];
 
     [Fact]
-    public async Task CatalogContainsNeedsReviewArticleWithTwentySourcesAndPreservesExistingDenmarkArticles()
+    public async Task CatalogContainsVerifiedArticleWithTwentySourcesAndPreservesExistingDenmarkArticles()
     {
         var catalog = await LoadProductionCatalogAsync();
         var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == ArticleId);
@@ -63,7 +63,7 @@ public sealed class DenmarkEducationArticleTests
         Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(item => item.LanguageCode).OrderBy(code => code));
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
@@ -148,14 +148,14 @@ public sealed class DenmarkEducationArticleTests
         Assert.Equal(expectedHeadings.Split('|'), headings);
         Assert.Equal(RequiredSources.Length, RequiredSources.Count(url => html.Contains($"href=\"{url}\"", StringComparison.Ordinal)));
         Assert.Contains("<ul class=\"entry-list\"", html);
-        var localizedNeedsReview = language switch
+        var localizedVerified = language switch
         {
-            "uk" => "Потребує перевірки",
-            "en" => "Needs review",
-            "ru" => "Требует проверки",
+            "uk" => "Перевірено",
+            "en" => "Reviewed",
+            "ru" => "Проверено",
             _ => throw new ArgumentOutOfRangeException(nameof(language))
         };
-        Assert.Contains(localizedNeedsReview, visibleHtml);
+        Assert.Contains(localizedVerified, visibleHtml);
     }
 
     [Fact]
