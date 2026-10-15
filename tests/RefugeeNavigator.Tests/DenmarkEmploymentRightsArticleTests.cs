@@ -73,7 +73,7 @@ public sealed class DenmarkEmploymentRightsArticleTests
         Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(item => item.LanguageCode).OrderBy(code => code));
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
@@ -108,9 +108,9 @@ public sealed class DenmarkEmploymentRightsArticleTests
     }
 
     [Theory]
-    [InlineData("uk", "Робота в Данії: дозвіл на працю та права працівників", "Хто може працювати в Данії|Трудовий договір|Зарплата та робочий час|Відпустка, хвороба та умови праці|Податки та реєстрація|Права на роботі та куди звертатися|Якщо робота завершується або ви змінюєте роботодавця|Де отримати допомогу", "Потребує перевірки")]
-    [InlineData("en", "Working in Denmark: work authorization and employee rights", "Who can work in Denmark|Employment contracts|Salary and working hours|Holidays, sickness and working conditions|Taxes and registration|Workplace rights and where to raise a concern|If a job ends or you change employers|Where to get help", "Needs review")]
-    [InlineData("ru", "Работа в Дании: разрешение на работу и права работников", "Кто может работать в Дании|Трудовой договор|Зарплата и рабочее время|Отпуск, болезнь и условия труда|Налоги и регистрация|Права на работе и куда обратиться|Если работа заканчивается или вы меняете работодателя|Где получить помощь", "Требует проверки")]
+    [InlineData("uk", "Робота в Данії: дозвіл на працю та права працівників", "Хто може працювати в Данії|Трудовий договір|Зарплата та робочий час|Відпустка, хвороба та умови праці|Податки та реєстрація|Права на роботі та куди звертатися|Якщо робота завершується або ви змінюєте роботодавця|Де отримати допомогу", "Перевірено")]
+    [InlineData("en", "Working in Denmark: work authorization and employee rights", "Who can work in Denmark|Employment contracts|Salary and working hours|Holidays, sickness and working conditions|Taxes and registration|Workplace rights and where to raise a concern|If a job ends or you change employers|Where to get help", "Reviewed")]
+    [InlineData("ru", "Работа в Дании: разрешение на работу и права работников", "Кто может работать в Дании|Трудовой договор|Зарплата и рабочее время|Отпуск, болезнь и условия труда|Налоги и регистрация|Права на работе и куда обратиться|Если работа заканчивается или вы меняете работодателя|Где получить помощь", "Проверено")]
     public async Task LocalizedArticleRendersEightSectionsAndSources(string language, string title, string expectedHeadings, string status)
     {
         var catalog = await LoadProductionCatalogAsync();
