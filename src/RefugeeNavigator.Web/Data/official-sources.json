@@ -33,5 +33,47 @@
     "Title": "Life in Denmark — Finding and taking a job",
     "Url": "https://lifeindenmark.borger.dk/working/finding-a-job/finding-and-taking-a-job",
     "LastCheckedAt": "2026-10-14T08:50:11+00:00"
+  },
+  {
+    "Id": "f947d1e6-c475-4676-844b-dff215001a87",
+    "InformationEntryId": "2d106fd3-e981-4ef9-9733-568b654dfca5",
+    "Title": "Bekendtgørelse om forlængelse af opholdsgrundlag efter Ukraine-Særloven (BEK nr. 828 af 23/09/2026) — Ministry of Immigration and Integration / Retsinformation",
+    "Url": "https://www.retsinformation.dk/eli/lta/2026/828",
+    "LastCheckedAt": "2026-10-15T14:55:02+00:00"
+  },
+  {
+    "Id": "826eb02a-ac4a-4d10-80d7-b32c4123dff7",
+    "InformationEntryId": "2d106fd3-e981-4ef9-9733-568b654dfca5",
+    "Title": "Danish Immigration Service — Information to people from Ukraine",
+    "Url": "https://nyidanmark.dk/en-GB/Words-and-concepts/F%C3%A6lles/Information-to-Ukrainian-citizens",
+    "LastCheckedAt": "2026-10-15T14:55:02+00:00"
+  },
+  {
+    "Id": "4b278bd5-dcc7-4a9d-96eb-ecf20719d9d3",
+    "InformationEntryId": "2d106fd3-e981-4ef9-9733-568b654dfca5",
+    "Title": "SIRI (Danish Agency for International Recruitment and Integration) — Labour Market Attachment",
+    "Url": "https://nyidanmark.dk/en-GB/You-want-to-apply/Work/Labout-Market-Attachment",
+    "LastCheckedAt": "2026-10-15T14:55:02+00:00"
+  },
+  {
+    "Id": "adac4bdc-17cb-459f-b675-b6581995c1f3",
+    "InformationEntryId": "2d106fd3-e981-4ef9-9733-568b654dfca5",
+    "Title": "SIRI (Danish Agency for International Recruitment and Integration) — Educational Attachment",
+    "Url": "https://nyidanmark.dk/en-GB/You-want-to-apply/Study/Educational-attachment-and-change-of-education/Educational-Attachment",
+    "LastCheckedAt": "2026-10-15T14:55:02+00:00"
+  },
+  {
+    "Id": "6dd24d38-f2a3-4703-b864-5caf4db2baef",
+    "InformationEntryId": "2d106fd3-e981-4ef9-9733-568b654dfca5",
+    "Title": "SIRI (Danish Agency for International Recruitment and Integration) — The Pay Limit Scheme",
+    "Url": "https://nyidanmark.dk/en-GB/You-want-to-apply/Work/Pay-limit-scheme",
+    "LastCheckedAt": "2026-10-15T14:55:02+00:00"
+  },
+  {
+    "Id": "5a726bd6-2169-4a65-9a43-a99d3ee8660e",
+    "InformationEntryId": "2d106fd3-e981-4ef9-9733-568b654dfca5",
+    "Title": "SIRI (Danish Agency for International Recruitment and Integration) — Higher educational programmes",
+    "Url": "https://nyidanmark.dk/en-GB/You-want-to-apply/Study/Higher-Education",
+    "LastCheckedAt": "2026-10-15T14:55:02+00:00"
   }
 ]

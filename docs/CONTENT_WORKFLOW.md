@@ -10,12 +10,12 @@ Use this sequence for every information item:
 2. **Collect sources:** find the official page that directly supports each claim and record its exact URL. Read the page itself, including relevant dates and conditions; a homepage alone is not sufficient evidence.
 3. **Draft:** write a concise title, summary, and content in the source language. Keep the wording within what the cited pages support. Do not infer eligibility or legal outcomes from incomplete information.
 4. **Translate:** prepare Ukrainian (`uk`), English (`en`), and Russian (`ru`) versions of the same logical entry. Preserve official terminology where possible and compare all versions for equivalent meaning.
-5. **Manually verify:** review every language version against the supporting pages, check links and dates, and assign that translation's `VerificationStatus`.
-6. **Publish:** add the complete entry and its sources to the JSON catalogs in a reviewed change. Run catalog validation and automated tests, then have a human review the content and diff before merging or deploying.
+5. **Review and accept:** review every language version against the supporting pages, check links and dates, and record the translation's current status. Human acceptance is required before assigning `Verified` or deploying the entry.
+6. **Integrate:** add the complete entry and its sources to the JSON catalogs in a reviewed change. Run catalog validation and automated tests, then have a human review the content and diff. The application renders `NeedsReview` entries, so a publication candidate in the catalogs must not be deployed until the owner accepts it.
 7. **Review:** re-open the source pages when rules change, a link fails or redirects, a discrepancy is reported, or a translation is questioned. Also schedule manual review according to the subject's risk and how often its rules change.
 8. **Update or withdraw:** update affected language versions and timestamps, or mark them `Outdated` while they are being corrected. If content must no longer be served, remove the entry and its source records from the production catalogs; the current application has no withdrawal field or editorial archive.
 
-The rendered page shows all entries in the catalogs, including `NeedsReview` and `Outdated` entries, with their status labels. It does not suppress unreviewed or outdated content. Therefore, do not put draft or unresolved claims in the production catalogs, and never describe a `NeedsReview` or `Outdated` item as confirmed or current guidance.
+The rendered page shows all entries in the catalogs, including `NeedsReview` and `Outdated` entries, with their status labels. It does not suppress unreviewed or outdated content. Include only claims supported by the cited sources, and never describe a `NeedsReview` or `Outdated` item as confirmed or current guidance. Do not deploy a candidate until a human has accepted its claims, translations, sources, and disclosed limitations.
 
 ## Current JSON shape
 
@@ -28,7 +28,7 @@ Each entry must have exactly one translation for each supported language: `uk`, 
 
 [`official-sources.json`](../src/RefugeeNavigator.Web/Data/official-sources.json) is a separate array. Each object has `Id`, `InformationEntryId`, `Title`, `Url`, and `LastCheckedAt`. The source's `InformationEntryId` identifies the logical entry, so multiple source records can support one entry. `Url` is serialized as a URI string and must be an absolute HTTP or HTTPS URI; `Guid` values are serialized as strings, and timestamps are ISO 8601 `DateTimeOffset` values.
 
-The current `OfficialSource` model has no separate organization field: include the issuing organization in the human-readable `Title` when it helps identify the exact page. The catalogs currently contain no production entries or source records. Do not copy placeholder values from this document into production.
+The current `OfficialSource` model has no separate organization field: include the issuing organization in the human-readable `Title` when it helps identify the exact page. Do not copy placeholder values from this document into the catalogs.
 
 ## Acceptable sources and conflicts
 
@@ -36,7 +36,7 @@ Prefer primary pages from government websites, official immigration authorities,
 
 Check the destination page, not just the domain or homepage. Confirm that the page loads, is relevant to the country and subject, and still contains the supporting detail. Do not invent source URLs or cite a search result as the source.
 
-If official pages contradict one another or are unclear, do not choose the more convenient interpretation or present an uncertain claim as settled. Record the discrepancy in the review discussion for the change, seek clarification from the responsible authority where practical, and hold the affected entry out of production until the wording can be supported. The current content model has no source-priority, conflict-note, or escalation fields.
+If official pages contradict one another or are unclear, do not choose one statement as settled law or infer which applies to an individual. When each competing statement is itself supported by an official source, a candidate may report the discrepancy transparently: attribute each statement to its source, state that the reviewed materials have not reconciled them, and link readers to the documents. Contacting an authority is optional, not a publication prerequisite. Human acceptance is still required before assigning `Verified` or deploying. If a statement lacks adequate support, exclude it; if the uncertainty cannot be explained clearly without misleading readers, hold that content back. Articles provide general information and source navigation, not individualized legal or immigration advice; do not tell readers which application they personally should submit. The current content model has no source-priority, conflict-note, or escalation fields.
 
 ## Status and review policy
 
@@ -83,8 +83,6 @@ When a source changes, determine which specific claims and language versions are
 
 If guidance should no longer be shown, remove its logical entry and associated source records from the production JSON arrays. Git history retains prior catalog revisions, but the running application has no withdrawal state, audit screen, or automatic expiry. Do not rely on `Outdated` as a mechanism that hides an item.
 
-## Recommended first pilot
+## Editorial example
 
-Start with **Denmark × Employment**, narrowly limited to official job-search support and how a person can find or contact the relevant public employment service. This is a bounded service-navigation topic and can avoid making claims about immigration status or legal entitlement.
-
-Consult the relevant official public employment service and government employment authority. If the draft touches permission to work or temporary-protection conditions, verify those claims separately with the competent official immigration authority—or leave them out of this pilot. Check any proposed statements about who a service is for, how to access it, required steps or documents, language availability, and whether an apparent exception changes the guidance. Keep the initial entry short: one defined question, only claims supported by the checked pages, and the required three independently reviewed translations. This is a topic recommendation only; no legal guidance or sources were researched for this document.
+The Denmark × Employment entry demonstrates a narrow service-navigation topic. A later Denmark × Temporary protection candidate addresses residence options after protection. For legal or policy topics, attribute each claim to an official source, preserve relevant conditions and exceptions, and distinguish an unresolved official-source discrepancy from settled guidance. A candidate is not a publication: the owner must review the claims, translations, and sources before deployment.
