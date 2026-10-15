@@ -1,0 +1,48 @@
+# Denmark × Healthcare — sources and claim review
+
+**Research checked:** 15 October 2026
+**Scope:** Practical access to public healthcare for people displaced from Ukraine who reside in Denmark under the Ukraine Special Act. This is a draft evidence record, not individualized medical or legal advice.
+
+## Official source register
+
+All pages below were opened and read on 15 October 2026. The “page date” is included only when the source itself displayed one.
+
+| ID | Issuing authority | Exact page title | URL | Relevant material |
+|---|---|---|---|---|
+| S1 | Danish Ministry of the Interior and Health | *Sundhedshjælp til ukrainske flygtninge* (12 April 2022) | https://www.ism.dk/nyheder/2022/april/sundhedshjaelp-til-ukrainske-flygtninge | The ministry states that people granted residence under the Ukraine Special Act have access to all Health Act services if registered in CPR and issued the yellow health card. It separately describes necessary services for applicants awaiting a permit. Only the permit-holder statement is used here. |
+| S2 | Borger.dk, Danish public authorities | *Sygesikring for udlændinge i Danmark* | https://www.borger.dk/udlaendinge-i-danmark/flytte-til-danmark/sygesikring-for-udlaendinge-i-danmark | A person resident in Denmark and registered in the population register has access to public healthcare; the health card from the municipality documents the rights. The page also distinguishes people merely staying in Denmark, for whom hospital charges may apply. |
+| S3 | Life in Denmark / Borger.dk | *When you arrive* | https://lifeindenmark.borger.dk/theme/when-you-arrive | CPR context; health-card purpose, issue after CPR registration, fields on the card; GP appointment; referral for hospital treatment; charges for dental care, physiotherapy, chiropractic care and prescribed medicine. Page gives an approximate 2–3-week card delivery estimate. |
+| S4 | International Citizen Service East, via Life in Denmark / Borger.dk | *ICS East in Copenhagen* | https://lifeindenmark.borger.dk/settle-in-denmark/ics-international-citizen-service/ics-east-in-copenhagen | The non-EU section says CPR registration follows a valid residence/work permit and that a yellow card is ordered after registration; it gives a 2–4-week estimate and says to contact local Borgerservice if not received after four weeks. This is Copenhagen/ICS East guidance, not treated as a nationwide timeline. Page marked last updated 8 September 2026. |
+| S5 | Borger.dk, Danish public authorities | *Nyt sundhedskort* | https://www.borger.dk/sundhed-og-sygdom/sundhedskort--laegevalg-og-tandlaege/nyt-sundhedskort | Card documents access and shows name, address, CPR number and doctor contact details; a digital card app is also available. |
+| S6 | Borger.dk, Danish public authorities | *Valg af læge* | https://www.borger.dk/sundhed-og-sygdom/sundhedskort--laegevalg-og-tandlaege/valg-af-laege | Residents can search for doctors on sundhed.dk; availability information is indicative, and choosing a doctor depends on open patient intake and applicable rules. |
+| S7 | Life in Denmark / Borger.dk | *Emergencies* | https://lifeindenmark.borger.dk/healthcare/Emergencies | 112 for life-threatening illness/injury; out-of-hours medical service for a problem that cannot wait for the GP; regional directory; some regions require a call before attending an emergency department. Page links the five official regional emergency-care pages. |
+| S8 | Borger.dk, Danish public authorities | *Tolkning for patienter* | https://www.borger.dk/sundhed-og-sygdom/dine-rettigheder-som-patient/Tolkning-for-patienter | Interpreter assistance at GP, specialist and hospital care when the stated conditions apply; clinician assesses need and books a professional interpreter. A fee may apply for language-related interpretation after more than three years in Denmark, with listed exceptions. |
+| S9 | Borger.dk, Danish public authorities | *Sygesikring og sikringsgrupper* | https://www.borger.dk/sundhed-og-sygdom/sundhedskort--laegevalg-og-tandlaege/sygesikring-og-sikringsgrupper | Group 1/2 differences; free GP and specialist treatment under group 1 when the provider has a regional agreement; referrals for specified services; subsidies and possible patient payments. |
+
+## Claim review matrix
+
+Checked against the pages above on **15 October 2026**. “Supported” means the cited official pages directly state the bounded claim; it is not a guarantee about an individual case.
+
+| Claim ID | Proposed statement | Source(s) | Result | Conditions / limitations |
+|---|---|---|---|---|
+| H-01 | For a person granted residence under the Ukraine Special Act, the Ministry says access to all Health Act services applies when the person is registered in CPR and has been issued the yellow health card. | S1; cross-check S2 | **SUPPORTED** | S1 is a ministry announcement dated 12 April 2022, not a recently updated personal eligibility decision. S2 currently states the general registered-resident rule. Article directs readers to their municipality if their registration or coverage is unclear. Do not extend this statement to pending applicants. |
+| H-02 | A residence permit, CPR population registration, and the yellow health card have different functions; the card documents public-healthcare rights and is issued through the municipality after CPR registration. | S1–S3, S5 | **SUPPORTED** | The sources describe distinct steps and roles. Do not suggest the permit itself is the CPR registration or card. |
+| H-03 | The yellow *sundhedskort* displays personal name, address, CPR number and doctor contact details; the card identifies the person’s GP. | S3, S5 | **SUPPORTED** | The card/app display may be limited where CPR address/name protection applies. The article does not cover those special cases. |
+| H-04 | The card is ordered after CPR registration and mailed; the cited general guide estimates 2–3 weeks while ICS East states 2–4 weeks and advises contacting local Citizen Service after four weeks. | S3, S4 | **PARTIALLY SUPPORTED** | Delivery estimates differ and S4 is specific to ICS East/Copenhagen. No single nationwide processing time is asserted. Article advises checking with the local registration office and labels the four-week instruction as ICS East guidance. |
+| H-05 | Use the GP details on the card to contact the family doctor; make an appointment before attending. The official directory can help locate doctors and shows indicative new-patient availability. | S3, S5, S6 | **SUPPORTED** | Availability is indicative; not every doctor accepts new patients. Appointment/contact arrangements may differ by practice. |
+| H-06 | Call 112 for a life-threatening illness or injury. For urgent problems outside the GP’s hours that cannot wait, use the out-of-hours service for the person’s region; some regions require calling before attending emergency departments. | S7 | **SUPPORTED** | 112 is the national emergency number. Out-of-hours numbers and instructions are regional; no single nationwide medical helpline number is claimed. |
+| H-07 | Interpreter assistance may be available at GP, specialist and hospital care when Danish is insufficient or the other stated conditions apply; the clinician assesses need and arranges a professional interpreter. | S8 | **SUPPORTED** | It is not described as automatically provided in every interaction. A language-related fee may apply after more than three years in Denmark; exceptions apply. |
+| H-08 | Costs depend on insurance group and service. Under group 1, GP/specialist treatment at a provider with a regional agreement is free, while medicines, dental care and some other services may involve payment or subsidy rules. | S3, S9 | **SUPPORTED** | Some services require referral; private treatment or a group-2 fee difference may be payable. Do not say all healthcare is free. |
+
+## Important limitations and open questions
+
+- The Ukraine-specific Ministry page is dated 12 April 2022. Its narrow CPR-plus-card statement is supported by current general Borger.dk guidance for registered residents, but the ministry page itself does not show a later update. Keep its date visible in editorial records and recheck before publication.
+- The published card-delivery estimates differ (2–3 weeks on the general “When you arrive” page versus 2–4 weeks on ICS East). The latter’s contact-after-four-weeks instruction is specific to ICS East; a national processing guarantee is not established.
+- The sources do not establish that every person with a permit automatically has completed CPR registration, received a card, or has identical practical access before registration. Do not generalize to applicants waiting for a permit; their circumstances are outside this article’s audience.
+- The interpreter page has Danish-language content and sets out eligibility, clinician assessment, fee rules and exceptions. The draft must not promise free interpretation.
+- Out-of-hours and emergency-department entry arrangements vary by region. Readers should use the official region finder and the relevant regional page; the article must not list Copenhagen’s 1813 as a national number.
+- Personal coverage, referrals, insurance group and charges should be checked with the person’s municipality, region, GP or patient adviser when uncertain.
+
+## Publication readiness
+
+**Ready for human content review; not published.** Eight material claims were reviewed: seven are supported and one delivery-timing claim is partially supported and presented with its source-specific limitation. No claim is marked verified for production, and the drafts must not be added to the production JSON catalog until all three translations and this evidence record receive human review.
