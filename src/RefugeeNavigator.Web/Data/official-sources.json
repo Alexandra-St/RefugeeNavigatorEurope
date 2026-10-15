@@ -138,5 +138,82 @@
     "Title": "Sygesikring og sikringsgrupper",
     "Url": "https://www.borger.dk/sundhed-og-sygdom/sundhedskort--laegevalg-og-tandlaege/sygesikring-og-sikringsgrupper",
     "LastCheckedAt": "2026-10-15T16:37:09+00:00"
+  },
+  {
+    "Id": "34c74f84-af39-4c58-a0f2-2926fae5ec1f",
+    "InformationEntryId": "19afdd19-e2cc-4da6-bde3-6dc3d64b7503",
+    "Title": "Danish Immigration Service — You are waiting for an answer",
+    "Url": "https://www.nyidanmark.dk/en-GB/You-are-waiting-for-an-answer/Fordreven-fra-Ukraine",
+    "LastCheckedAt": "2026-10-15T17:14:35+00:00"
+  },
+  {
+    "Id": "0a955d26-d79c-4ba1-8b6b-a69928d0fd8a",
+    "InformationEntryId": "19afdd19-e2cc-4da6-bde3-6dc3d64b7503",
+    "Title": "Danish Immigration Service — You have got a yes to residence permit",
+    "Url": "https://www.nyidanmark.dk/en-GB/You-have-received-an-answer/Ukraine/Ja-Ukraine",
+    "LastCheckedAt": "2026-10-15T17:14:35+00:00"
+  },
+  {
+    "Id": "9372a0e8-baad-406b-a24f-65f7071ae06c",
+    "InformationEntryId": "19afdd19-e2cc-4da6-bde3-6dc3d64b7503",
+    "Title": "Ministry of Immigration and Integration — Bekendtgørelse om forholdsmæssige kommunetal for 2026 til fordeling af personer omfattet af lov om midlertidig opholdstilladelse til personer, der er fordrevet fra Ukraine",
+    "Url": "https://www.retsinformation.dk/eli/lta/2026/339",
+    "LastCheckedAt": "2026-10-15T17:20:10+00:00"
+  },
+  {
+    "Id": "0ec1125f-052a-4107-8325-f19fbe5a46d5",
+    "InformationEntryId": "19afdd19-e2cc-4da6-bde3-6dc3d64b7503",
+    "Title": "Danish Agency for International Recruitment and Integration (SIRI) — FAQ om fordrevne fra Ukraine",
+    "Url": "https://integrationogjob.dk/nyankomne/faq-ukraine/",
+    "LastCheckedAt": "2026-10-15T17:14:35+00:00"
+  },
+  {
+    "Id": "771e221f-dbe5-423b-995c-196ef247f361",
+    "InformationEntryId": "19afdd19-e2cc-4da6-bde3-6dc3d64b7503",
+    "Title": "Life in Denmark — Renting a home",
+    "Url": "https://lifeindenmark.borger.dk/housing-and-moving/rental-property/renting-a-home",
+    "LastCheckedAt": "2026-10-15T17:14:35+00:00"
+  },
+  {
+    "Id": "ee40a28c-8be0-4471-8336-aab8ce453f0d",
+    "InformationEntryId": "19afdd19-e2cc-4da6-bde3-6dc3d64b7503",
+    "Title": "Udbetaling Danmark / Life in Denmark — Housing benefits",
+    "Url": "https://lifeindenmark.borger.dk/housing-and-moving/housing-benefits",
+    "LastCheckedAt": "2026-10-15T17:14:35+00:00"
+  },
+  {
+    "Id": "4d779e3b-6659-417c-91ab-6e2dcacd9c05",
+    "InformationEntryId": "19afdd19-e2cc-4da6-bde3-6dc3d64b7503",
+    "Title": "Danish Agency for Labour Market and Recruitment — Bekendtgørelse af lov om individuel boligstøtte, LBK nr. 995 af 1. juli 2025",
+    "Url": "https://www.retsinformation.dk/eli/lta/2025/995/pdf",
+    "LastCheckedAt": "2026-10-15T17:14:35+00:00"
+  },
+  {
+    "Id": "d01f8540-b9bc-4747-a6ea-ef2441c95691",
+    "InformationEntryId": "19afdd19-e2cc-4da6-bde3-6dc3d64b7503",
+    "Title": "Life in Denmark — Financial support from the municipality",
+    "Url": "https://lifeindenmark.borger.dk/money-and-tax/social-benefits/financial-support-from-the-municipality",
+    "LastCheckedAt": "2026-10-15T17:14:35+00:00"
+  },
+  {
+    "Id": "ce1d50d7-9177-4e11-ada4-7475053a7c2f",
+    "InformationEntryId": "19afdd19-e2cc-4da6-bde3-6dc3d64b7503",
+    "Title": "Life in Denmark — Tenancy deposit loans",
+    "Url": "https://lifeindenmark.borger.dk/housing-and-moving/rental-property/tenancy-deposit-loans",
+    "LastCheckedAt": "2026-10-15T17:14:35+00:00"
+  },
+  {
+    "Id": "31395a56-aa01-4b2f-95d9-4d86ed4d9724",
+    "InformationEntryId": "19afdd19-e2cc-4da6-bde3-6dc3d64b7503",
+    "Title": "Life in Denmark — Change address",
+    "Url": "https://lifeindenmark.borger.dk/housing-and-moving/moving/change-address?selfserviceId=72929690-5c60-4079-8740-bdb114d81279",
+    "LastCheckedAt": "2026-10-15T17:14:35+00:00"
+  },
+  {
+    "Id": "69e80782-f977-42b7-8357-cbd310269bed",
+    "InformationEntryId": "19afdd19-e2cc-4da6-bde3-6dc3d64b7503",
+    "Title": "Social and Housing Agency / Borger.dk — Beboerklagenævn og Huslejenævn",
+    "Url": "https://www.borger.dk/bolig-og-flytning/lejebolig/beboerklagenaevn-og-huslejenaevn",
+    "LastCheckedAt": "2026-10-15T17:14:35+00:00"
   }
 ]
