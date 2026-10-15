@@ -37,7 +37,7 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
     ];
 
     [Fact]
-    public async Task CatalogContainsNeedsReviewCandidateWithFifteenSourcesAndPreservesExistingArticles()
+    public async Task CatalogContainsVerifiedCandidateWithFifteenSourcesAndPreservesExistingArticles()
     {
         var catalog = await LoadProductionCatalogAsync();
         var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == ArticleId);
@@ -50,7 +50,7 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
         Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(item => item.LanguageCode).OrderBy(code => code));
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
@@ -84,9 +84,9 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
     }
 
     [Theory]
-    [InlineData("uk", "Хто може подати заяву|Як подати заяву|Поки триває розгляд|Що відбувається після схвалення|Продовження та строк дії дозволу|Члени сім’ї та особливі обставини|Де отримати допомогу", "Потребує перевірки")]
-    [InlineData("en", "Who can apply|How to submit an application|While waiting for a decision|What happens after approval|Extension and permit validity|Family members and special circumstances|Where to get help", "Needs review")]
-    [InlineData("ru", "Кто может подать заявление|Как подать заявление|Пока заявление рассматривается|Что происходит после одобрения|Продление и срок действия разрешения|Члены семьи и особые обстоятельства|Где получить помощь", "Требует проверки")]
+    [InlineData("uk", "Хто може подати заяву|Як подати заяву|Поки триває розгляд|Що відбувається після схвалення|Продовження та строк дії дозволу|Члени сім’ї та особливі обставини|Де отримати допомогу", "Перевірено")]
+    [InlineData("en", "Who can apply|How to submit an application|While waiting for a decision|What happens after approval|Extension and permit validity|Family members and special circumstances|Where to get help", "Reviewed")]
+    [InlineData("ru", "Кто может подать заявление|Как подать заявление|Пока заявление рассматривается|Что происходит после одобрения|Продление и срок действия разрешения|Члены семьи и особые обстоятельства|Где получить помощь", "Проверено")]
     public async Task LocalizedArticleRendersSevenSectionsAndBothAttributedExtensionDates(
         string language, string expectedHeadings, string expectedStatus)
     {
