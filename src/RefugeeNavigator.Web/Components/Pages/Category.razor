@@ -12,6 +12,8 @@
 {
     <PageTitle>@Localizer["Category.PageTitle", category.Name, countryName]</PageTitle>
 
+    <HomeLink Placement="top" />
+
     <main id="main-content" class="category-page">
         <div class="page-content">
             <a class="back-link" href="/countries/@CountrySlug" aria-label="@Localizer["Category.BackToCountry", countryName]"><span aria-hidden="true">←</span> @Localizer["Category.BackToCountry", countryName]</a>
@@ -72,6 +74,8 @@
                     }
                 </section>
             }
+
+            <HomeLink Placement="bottom" />
 
             <footer class="information-note">
                 <p>@Localizer["Common.Disclaimer"]</p>

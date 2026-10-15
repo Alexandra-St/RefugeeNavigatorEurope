@@ -1,0 +1,28 @@
+@using Microsoft.AspNetCore.Components
+@inject NavigationManager Navigation
+@inject IStringLocalizer<SharedResource> Localizer
+
+<header class="site-header">
+    <nav class="primary-navigation" aria-label="@Localizer["Navigation.Label"]">
+        <ul>
+            <li><a href="/" aria-current="@CurrentPage("/")">@Localizer["Common.Home"]</a></li>
+            <li><a href="/search" aria-current="@CurrentPage("/search")">@Localizer["Navigation.Search"]</a></li>
+            <li><a href="/compare" aria-current="@CurrentPage("/compare")">@Localizer["Navigation.Compare"]</a></li>
+        </ul>
+    </nav>
+    <LanguageSwitcher />
+</header>
+
+@code {
+    private string CurrentPath
+    {
+        get
+        {
+            var path = new Uri(Navigation.Uri).AbsolutePath.TrimEnd('/');
+            return path.Length == 0 ? "/" : path;
+        }
+    }
+
+    private string? CurrentPage(string path) =>
+        string.Equals(CurrentPath, path, StringComparison.OrdinalIgnoreCase) ? "page" : null;
+}

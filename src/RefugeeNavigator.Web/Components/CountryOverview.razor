@@ -10,10 +10,10 @@
 {
 <PageTitle>@Localizer["Country.PageTitle", CountryDisplayName]</PageTitle>
 
+<HomeLink Placement="top" />
+
 <main id="main-content" class="country-page">
     <div class="page-content">
-        <a class="back-link" href="/"><span aria-hidden="true">←</span> @Localizer["Country.BackToCountries"]</a>
-
         <header class="country-header">
             <p class="eyebrow">@Localizer["Country.Overview"]</p>
             <h1>@CountryDisplayName</h1>
@@ -45,6 +45,8 @@
                 }
             </div>
         </section>
+
+        <HomeLink Placement="bottom" />
 
         <footer class="information-note">
             <p>@Localizer["Common.Disclaimer"]</p>

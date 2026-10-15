@@ -1,0 +1,39 @@
+.home-link-area {
+    margin-top: 1.25rem;
+}
+
+.home-link-area.top {
+    max-width: 72rem;
+    margin: 0 auto 0.25rem;
+    padding: 0 1.5rem;
+}
+
+.home-return-link {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.25rem 0.35rem;
+    border-radius: 0.25rem;
+    color: #155eef;
+    font-weight: 650;
+    line-height: 1.4;
+    text-decoration: none;
+}
+
+.home-return-link:hover {
+    color: #0b45b5;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.home-return-link:focus-visible {
+    outline: 3px solid #155eef;
+    outline-offset: 2px;
+}
+
+@media (max-width: 540px) {
+    .home-link-area.top {
+        padding: 0 1rem;
+    }
+}

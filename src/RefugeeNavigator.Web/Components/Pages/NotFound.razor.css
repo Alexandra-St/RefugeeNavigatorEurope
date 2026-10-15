@@ -43,26 +43,6 @@ h1 {
     font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
-.home-link {
-    display: inline-block;
-    border-radius: 0.2rem;
-    color: #155eef;
-    font-weight: 650;
-    line-height: 1.5;
-    text-decoration: none;
-}
-
-.home-link:hover {
-    color: #0b45b5;
-    text-decoration: underline;
-    text-underline-offset: 0.2em;
-}
-
-.home-link:focus-visible {
-    outline: 3px solid #155eef;
-    outline-offset: 4px;
-}
-
 .information-note {
     margin-top: 2rem;
     padding: 1rem 1.2rem;

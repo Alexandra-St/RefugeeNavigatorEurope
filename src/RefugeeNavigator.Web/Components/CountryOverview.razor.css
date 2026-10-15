@@ -10,27 +10,6 @@
     margin: 0 auto;
 }
 
-.back-link {
-    display: inline-block;
-    margin-bottom: 2rem;
-    border-radius: 0.2rem;
-    color: #155eef;
-    font-weight: 650;
-    line-height: 1.5;
-    text-decoration: none;
-}
-
-.back-link:hover {
-    color: #0b45b5;
-    text-decoration: underline;
-    text-underline-offset: 0.2em;
-}
-
-.back-link:focus-visible {
-    outline: 3px solid #155eef;
-    outline-offset: 4px;
-}
-
 .country-header {
     max-width: 52rem;
     margin: 0 auto 2.5rem;
@@ -164,10 +143,6 @@
 @media (max-width: 540px) {
     .country-page {
         padding: 1.75rem 1rem 1.5rem;
-    }
-
-    .back-link {
-        margin-bottom: 1.5rem;
     }
 
     .country-header {

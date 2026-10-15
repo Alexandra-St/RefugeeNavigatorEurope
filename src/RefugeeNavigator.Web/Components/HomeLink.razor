@@ -1,0 +1,13 @@
+@inject IStringLocalizer<SharedResource> Localizer
+
+<div class="home-link-area @Placement">
+    <a class="home-return-link" href="/">
+        <span aria-hidden="true">←</span>
+        @Localizer["Common.Home"]
+    </a>
+</div>
+
+@code {
+    [Parameter]
+    public string Placement { get; set; } = "bottom";
+}

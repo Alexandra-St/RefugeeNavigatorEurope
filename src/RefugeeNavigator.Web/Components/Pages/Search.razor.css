@@ -125,7 +125,6 @@ button:hover {
 }
 
 .reset-link,
-.home-link,
 .result-card h3 a {
     color: #155eef;
     font-weight: 650;
@@ -133,7 +132,6 @@ button:hover {
 }
 
 .reset-link:hover,
-.home-link:hover,
 .result-card h3 a:hover {
     color: #0b45b5;
     text-decoration: underline;

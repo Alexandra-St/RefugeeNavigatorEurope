@@ -44,6 +44,81 @@ public sealed class AlphaPreviewPageTests
     }
 
     [Theory]
+    [InlineData("uk", "Основна навігація", "На головну", "Пошук", "Порівняння країн")]
+    [InlineData("en", "Primary navigation", "Home", "Search", "Compare countries")]
+    [InlineData("ru", "Основная навигация", "На главную", "Поиск", "Сравнение стран")]
+    public async Task GlobalNavigationHasLocalizedNamedLinksAndPreservesLanguageReturnUrl(
+        string language,
+        string navigationName,
+        string homeLabel,
+        string searchLabel,
+        string compareLabel)
+    {
+        var html = WebUtility.HtmlDecode(await RenderAsync<SiteHeader>(language, currentPath: "/search?q=jobs"));
+
+        Assert.Contains($"aria-label=\"{navigationName}\"", html);
+        Assert.Collection(Regex.Matches(html, "<nav\\b").Cast<Match>(), _ => { }, _ => { });
+        Assert.Contains($"aria-label=\"{GetResource("Common.LanguageSelection", language)}\"", html);
+        AssertNavigationLink(html, "/", homeLabel, isCurrent: false);
+        AssertNavigationLink(html, "/search", searchLabel, isCurrent: true);
+        AssertNavigationLink(html, "/compare", compareLabel, isCurrent: false);
+        Assert.Contains("href=\"/set-language?culture=uk&amp;returnUrl=%2Fsearch%3Fq%3Djobs\"", await RenderAsync<SiteHeader>(language, currentPath: "/search?q=jobs"));
+        Assert.DoesNotContain("Navigation.", html);
+    }
+
+    [Theory]
+    [InlineData("/", "/")]
+    [InlineData("/search?q=jobs", "/search")]
+    [InlineData("/compare?country1=denmark", "/compare")]
+    public async Task GlobalNavigationMarksTheCurrentSection(string currentPath, string activeRoute)
+    {
+        var html = WebUtility.HtmlDecode(await RenderAsync<SiteHeader>("en", currentPath: currentPath));
+        var activeLinks = Regex.Matches(html, "<a\\b(?<attributes>[^>]*)>(?<content>.*?)</a>", RegexOptions.Singleline)
+            .Cast<Match>()
+            .Where(match => Regex.IsMatch(match.Groups["attributes"].Value, "aria-current=\"page\""))
+            .Select(match => Regex.Match(match.Groups["attributes"].Value, "href=\"(?<route>[^\"]+)\"").Groups["route"].Value)
+            .ToArray();
+
+        Assert.Equal([activeRoute], activeLinks);
+    }
+
+    [Theory]
+    [InlineData("uk", "На головну")]
+    [InlineData("en", "Home")]
+    [InlineData("ru", "На главную")]
+    public async Task InternalPagesHaveTopAndBottomHomeLinksButHomepageDoesNot(
+        string language,
+        string homeLabel)
+    {
+        var countryParameters = new Dictionary<string, object?>
+        {
+            [nameof(CountryOverview.CountrySlug)] = "denmark"
+        };
+        var categoryParameters = new Dictionary<string, object?>
+        {
+            [nameof(Category.CountrySlug)] = "denmark",
+            [nameof(Category.CategorySlug)] = "employment"
+        };
+        var pages = new[]
+        {
+            await RenderAsync<Search>(language, currentPath: "/search"),
+            await RenderAsync<Compare>(language, currentPath: "/compare"),
+            await RenderAsync<CountryOverview>(language, countryParameters, "/countries/denmark"),
+            await RenderAsync<Category>(language, categoryParameters, "/countries/denmark/categories/employment"),
+            await RenderAsync<NotFound>(language, currentPath: "/not-found")
+        };
+
+        foreach (var page in pages)
+        {
+            AssertHomeLinksAtTopAndBottom(page, homeLabel);
+            Assert.Single(Regex.Matches(page, "<main\\b"));
+        }
+
+        var homepage = await RenderAsync<Home>(language);
+        Assert.DoesNotContain("home-return-link", homepage);
+    }
+
+    [Theory]
     [InlineData("uk", "Данія", "Німеччина", "Польща", "Докладніше про країну «{0}»")]
     [InlineData("en", "Denmark", "Germany", "Poland", "Explore {0}")]
     [InlineData("ru", "Дания", "Германия", "Польша", "Информация о стране: {0}")]
@@ -163,7 +238,8 @@ public sealed class AlphaPreviewPageTests
 
     private static async Task<string> RenderAsync<TComponent>(
         string language,
-        IDictionary<string, object?>? parameters = null)
+        IDictionary<string, object?>? parameters = null,
+        string currentPath = "/")
         where TComponent : IComponent
     {
         var originalCulture = CultureInfo.CurrentCulture;
@@ -178,7 +254,7 @@ public sealed class AlphaPreviewPageTests
             services.AddLogging();
             services.AddLocalization(options => options.ResourcesPath = "Resources");
             services.AddSingleton(CreateCatalog());
-            services.AddSingleton<NavigationManager, TestNavigationManager>();
+            services.AddSingleton<NavigationManager>(new TestNavigationManager(currentPath));
             using var provider = services.BuildServiceProvider();
             await using var renderer = new HtmlRenderer(provider, provider.GetRequiredService<ILoggerFactory>());
 
@@ -223,13 +299,44 @@ public sealed class AlphaPreviewPageTests
 
     private sealed class TestNavigationManager : NavigationManager
     {
-        public TestNavigationManager()
+        public TestNavigationManager(string currentPath)
         {
-            Initialize("http://localhost/", "http://localhost/");
+            Initialize("http://localhost/", $"http://localhost{currentPath}");
         }
 
         protected override void NavigateToCore(string uri, bool forceLoad)
         {
         }
+    }
+
+    private static void AssertHomeLinksAtTopAndBottom(string html, string expectedLabel)
+    {
+        var links = Regex.Matches(html, "<a\\b(?<attributes>[^>]*)>(?<content>.*?)</a>", RegexOptions.Singleline)
+            .Cast<Match>()
+            .Where(link => Regex.IsMatch(link.Groups["attributes"].Value, "class=\"home-return-link\"") &&
+                           Regex.IsMatch(link.Groups["attributes"].Value, "href=\"/\""))
+            .ToArray();
+
+        Assert.Equal(2, links.Length);
+        Assert.All(links, link => Assert.Contains(expectedLabel, WebUtility.HtmlDecode(link.Groups["content"].Value)));
+        Assert.All(links, link => Assert.Contains("aria-hidden=\"true\"", link.Groups["content"].Value));
+
+        var mainStart = html.IndexOf("<main", StringComparison.Ordinal);
+        var mainEnd = html.LastIndexOf("</main>", StringComparison.Ordinal);
+        Assert.True(links[0].Index < mainStart, "The first homepage link should appear before main content.");
+        Assert.True(links[1].Index > mainStart && links[1].Index < mainEnd, "The second homepage link should appear near the end of main content.");
+    }
+
+    private static void AssertNavigationLink(string html, string route, string label, bool isCurrent)
+    {
+        var link = Regex.Matches(html, "<a\\b(?<attributes>[^>]*)>(?<content>.*?)</a>", RegexOptions.Singleline)
+            .Cast<Match>()
+            .SingleOrDefault(match => Regex.IsMatch(
+                match.Groups["attributes"].Value,
+                $"href=\"{Regex.Escape(route)}\""));
+
+        Assert.NotNull(link);
+        Assert.Equal(label, WebUtility.HtmlDecode(Regex.Replace(link!.Groups["content"].Value, "<[^>]+>", string.Empty)).Trim());
+        Assert.Equal(isCurrent, Regex.IsMatch(link.Groups["attributes"].Value, "aria-current=\"page\""));
     }
 }

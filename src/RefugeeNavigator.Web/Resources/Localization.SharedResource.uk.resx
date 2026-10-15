@@ -24,6 +24,18 @@
   <data name="Common.LanguageSelection" xml:space="preserve">
     <value>Вибір мови</value>
   </data>
+  <data name="Common.Home" xml:space="preserve">
+    <value>На головну</value>
+  </data>
+  <data name="Navigation.Label" xml:space="preserve">
+    <value>Основна навігація</value>
+  </data>
+  <data name="Navigation.Search" xml:space="preserve">
+    <value>Пошук</value>
+  </data>
+  <data name="Navigation.Compare" xml:space="preserve">
+    <value>Порівняння країн</value>
+  </data>
   <data name="Home.PageTitle" xml:space="preserve">
     <value>Refugee Navigator Europe</value>
   </data>

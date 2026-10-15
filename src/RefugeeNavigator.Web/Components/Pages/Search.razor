@@ -11,6 +11,8 @@
 
 <PageTitle>@Localizer["Search.PageTitle"]</PageTitle>
 
+<HomeLink Placement="top" />
+
 <main id="main-content" class="search-page">
     <div class="page-content">
         <header class="page-heading">
@@ -66,7 +68,6 @@
                 <a class="reset-link" href="/search">@Localizer["Search.Reset"]</a>
             </div>
         </form>
-        <a class="home-link" href="/">@Localizer["Search.BackHome"]</a>
 
         @if (Catalog.InformationEntries.Count == 0)
         {
@@ -105,6 +106,8 @@
                 </div>
             </section>
         }
+
+        <HomeLink Placement="bottom" />
 
         <footer class="information-note">
             <p>@Localizer["Common.Disclaimer"]</p>
