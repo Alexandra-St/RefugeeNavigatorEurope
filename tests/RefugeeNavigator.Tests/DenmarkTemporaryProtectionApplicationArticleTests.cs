@@ -37,7 +37,7 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
     ];
 
     [Fact]
-    public async Task CatalogContainsNeedsReviewCandidateWithThirteenSourcesAndPreservesExistingArticles()
+    public async Task CatalogContainsNeedsReviewCandidateWithFifteenSourcesAndPreservesExistingArticles()
     {
         var catalog = await LoadProductionCatalogAsync();
         var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == ArticleId);
@@ -60,9 +60,11 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
         });
 
         var sources = catalog.OfficialSources.Where(source => source.InformationEntryId == ArticleId).ToArray();
-        Assert.Equal(13, sources.Length);
-        Assert.Equal(13, sources.Select(source => source.Id).Distinct().Count());
-        Assert.Equal(13, sources.Select(source => source.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(15, sources.Length);
+        Assert.Equal(15, sources.Select(source => source.Id).Distinct().Count());
+        Assert.Equal(15, sources.Select(source => source.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
+        Assert.Contains(sources, source => source.Url.AbsoluteUri == "https://www.retsinformation.dk/api/pdf/229946");
+        Assert.Contains(sources, source => source.Url.AbsoluteUri == "https://www.retsinformation.dk/eli/lta/2026/453/pdf");
         Assert.All(sources, source =>
         {
             Assert.Equal(ArticleId, source.InformationEntryId);
@@ -112,6 +114,23 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
         Assert.Contains("2027", translation.Content);
         var extensionParagraphs = translation.Content.Split("\n\n", StringSplitOptions.RemoveEmptyEntries);
         Assert.Contains(extensionParagraphs, paragraph => paragraph.Contains("2028", StringComparison.Ordinal) && paragraph.Contains("BEK", StringComparison.Ordinal));
+        var extensionGuarantee = language switch
+        {
+            "uk" => "Це можлива дата продовження за регламентом, а не гарантія",
+            "en" => "This is a possible extension date under the regulation, not a guarantee",
+            "ru" => "Это возможная дата продления по регламенту, а не гарантия",
+            _ => throw new ArgumentOutOfRangeException(nameof(language))
+        };
+        Assert.Contains(extensionGuarantee, translation.Content, StringComparison.OrdinalIgnoreCase);
+        var noAutomaticExtension = language switch
+        {
+            "uk" => "Це можлива дата продовження за регламентом, а не гарантія, що саме такою буде особиста дата завершення кожного дозволу",
+            "en" => "This is a possible extension date under the regulation, not a guarantee that every permit holder has that personal expiry date",
+            "ru" => "Это возможная дата продления по регламенту, а не гарантия, что именно такова личная дата окончания каждого разрешения",
+            _ => throw new ArgumentOutOfRangeException(nameof(language))
+        };
+        Assert.Contains(noAutomaticExtension, translation.Content, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("2027", translation.Content, StringComparison.Ordinal);
         var localizedAgencyName = language switch
         {
             "uk" => "Імміграційної служби",
@@ -125,7 +144,7 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
             .Cast<Match>().Select(match => WebUtility.HtmlDecode(match.Groups[1].Value)).ToArray();
         Assert.Equal(expectedHeadings.Split('|'), headings);
         Assert.DoesNotContain("L 43", visibleHtml);
-        Assert.Equal(13, catalog.OfficialSources.Where(source => source.InformationEntryId == ArticleId)
+        Assert.Equal(15, catalog.OfficialSources.Where(source => source.InformationEntryId == ArticleId)
             .Count(source => articleHtml.Contains($"href=\"{source.Url.AbsoluteUri}\"", StringComparison.Ordinal)));
         Assert.DoesNotContain("<script", html, StringComparison.OrdinalIgnoreCase);
     }
@@ -152,8 +171,8 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
 
     [Theory]
     [InlineData("uk", "негайно прочитайте рішення", "інструкцій щодо оскарження", "не гарантує права залишатися")]
-    [InlineData("en", "read the decision immediately", "follow its appeal instructions", "does not guarantee permission to remain")]
-    [InlineData("ru", "немедленно прочитайте решение", "следуйте приведённым в нём инструкциям", "не гарантирует право оставаться")]
+    [InlineData("en", "read the decision immediately", "follow the specific appeal instructions in it", "does not by itself guarantee permission to remain")]
+    [InlineData("ru", "немедленно прочитайте решение", "следуйте приведённым в нём конкретным инструкциям", "не гарантирует право оставаться")]
     public async Task AppealAdviceHasNoUnverifiedNumericDeadlinesOrPromiseToRemain(
         string language, string readPrompt, string instructionsPrompt, string noGuarantee)
     {
@@ -169,6 +188,55 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
         Assert.DoesNotContain("сім днів", translation.Content, StringComparison.OrdinalIgnoreCase);
         Assert.DoesNotContain("восемь недель", translation.Content, StringComparison.OrdinalIgnoreCase);
         Assert.DoesNotContain("семь дней", translation.Content, StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Theory]
+    [InlineData("uk", "порядок оскарження залежить від виду рішення", "сам факт подання скарги не гарантує права залишатися", "чинність строків і наслідків", "не вдалося незалежно підтвердити")]
+    [InlineData("en", "appeal procedures depend on the type of decision", "filing an appeal does not by itself guarantee permission to remain", "current validity of the deadlines and effects", "could not be independently confirmed")]
+    [InlineData("ru", "порядок обжалования зависит от вида решения", "сам факт подачи апелляции не гарантирует право оставаться", "актуальность указанных сроков и последствий", "подтвердить актуальность")]
+    public async Task AppealCopyUsesDecisionSpecificGuidanceWithoutTheOutdatedDisclaimer(
+        string language, string decisionSpecificGuidance, string noAutomaticRightToRemain,
+        string obsoleteDisclaimerFragmentOne, string obsoleteDisclaimerFragmentTwo)
+    {
+        var catalog = await LoadProductionCatalogAsync();
+        var translation = Assert.Single(catalog.InformationEntryTranslations,
+            item => item.InformationEntryId == ArticleId && item.LanguageCode == language);
+        Assert.Contains(decisionSpecificGuidance, translation.Content, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains(noAutomaticRightToRemain, translation.Content, StringComparison.OrdinalIgnoreCase);
+        Assert.DoesNotContain(obsoleteDisclaimerFragmentOne, translation.Content, StringComparison.OrdinalIgnoreCase);
+        Assert.DoesNotContain(obsoleteDisclaimerFragmentTwo, translation.Content, StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Theory]
+    [InlineData("uk", "За § 57(5) Закону про інтеграцію", "дозволу за § 2(1)", "дуже особливих особистих обставин", "не тотожне праву на житло", "окремому матеріалі про житло в Данії", "Бажаний муніципалітет або конкретне помешкання не гарантуються", "звичайне розміщення за § 12 не застосовується")]
+    [InlineData("en", "Under section 57(5) of the Integration Act", "permit under section 2(1)", "very special personal circumstances", "separate from entitlement to accommodation", "separate Denmark Housing guide", "A preferred municipality or particular dwelling is not guaranteed", "ordinary section 12 accommodation placement does not apply")]
+    [InlineData("ru", "Согласно § 57(5) Закона об интеграции", "разрешению по § 2(1)", "очень особых личных обстоятельств", "не означает право на жильё", "отдельной статье о жилье в Дании", "Предпочтительный муниципалитет или конкретное жильё не гарантируются", "обычное размещение по § 12 не применяется")]
+    public async Task ApprovedRouteHousingGuidanceIsScopedAndRenderedForEachLanguage(
+        string language, string sectionReference, string permitBasis, string exception,
+        string assignmentQualification, string housingGuideReference, string noPlacementGuarantee,
+        string sectionTwelveExclusion)
+    {
+        var catalog = await LoadProductionCatalogAsync();
+        var translation = Assert.Single(catalog.InformationEntryTranslations,
+            item => item.InformationEntryId == ArticleId && item.LanguageCode == language);
+        Assert.Contains(sectionReference, translation.Content, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains(permitBasis, translation.Content, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains(exception, translation.Content, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains(assignmentQualification, translation.Content, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains(housingGuideReference, translation.Content, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains(noPlacementGuarantee, translation.Content, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains(sectionTwelveExclusion, translation.Content, StringComparison.OrdinalIgnoreCase);
+
+        var html = await RenderAsync<Category>(catalog, language,
+            "/countries/denmark/categories/temporary-protection",
+            new Dictionary<string, object?>
+            {
+                [nameof(Category.CountrySlug)] = "denmark",
+                [nameof(Category.CategorySlug)] = "temporary-protection"
+            });
+        var visibleHtml = WebUtility.HtmlDecode(html);
+        Assert.Contains(permitBasis, visibleHtml, StringComparison.OrdinalIgnoreCase);
+        Assert.DoesNotContain("<script", html, StringComparison.OrdinalIgnoreCase);
     }
 
     [Fact]
