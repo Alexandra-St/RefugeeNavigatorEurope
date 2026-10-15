@@ -178,6 +178,30 @@ public sealed class DenmarkAfterProtectionArticleTests
     }
 
     [Theory]
+    [InlineData("uk", "Картка підтверджує право", "цифровий застосунок картки", "картку замовляють і надсилають на вашу адресу в Данії", "Зазвичай доставка триває кілька тижнів", "у своєму місцевому Borgerservice")]
+    [InlineData("en", "The card documents your access", "A digital card app is also available", "the card is ordered and sent to your Danish address", "Delivery generally takes several weeks", "check with your local Borgerservice")]
+    [InlineData("ru", "Карточка подтверждает право", "доступно цифровое приложение карточки", "карточку заказывают и отправляют на ваш адрес в Дании", "Обычно доставка занимает несколько недель", "уточните это в местном Borgerservice")]
+    public async Task YellowCardInformationAppearsOncePerTranslation(
+        string language,
+        string expectedPurpose,
+        string expectedDigitalCard,
+        string expectedDelivery,
+        string expectedTiming,
+        string expectedBorgerserviceAdvice)
+    {
+        var catalog = await LoadProductionCatalogAsync();
+        var translation = Assert.Single(catalog.InformationEntryTranslations,
+            item => item.InformationEntryId == HealthcareArticleId && item.LanguageCode == language);
+
+        Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+        Assert.Contains(expectedPurpose, translation.Content);
+        Assert.Contains(expectedDigitalCard, translation.Content);
+        Assert.Contains(expectedTiming, translation.Content);
+        Assert.Contains(expectedBorgerserviceAdvice, translation.Content);
+        Assert.Equal(1, translation.Content.Split(expectedDelivery, StringSplitOptions.None).Length - 1);
+    }
+
+    [Theory]
     [InlineData("uk", "Як отримати медичну допомогу в Данії", "Почніть із реєстрації в CPR і медичної картки|Жовта медична картка (sundhedskort)|Як знайти сімейного лікаря та звернутися до нього|Невідкладна та екстрена допомога|Усний переклад і мовна допомога|Витрати та покриття", "Стан або травма, що загрожує життю: телефонуйте 112", "Номери й порядок звернення відрізняються залежно від регіону", "Потребує перевірки")]
     [InlineData("en", "How to access healthcare in Denmark", "Start with CPR registration and your healthcare card|The yellow health card (sundhedskort)|Find and contact your GP|Urgent and emergency care|Interpretation and language support|Costs and coverage", "Life-threatening illness or injury: call 112", "out-of-hours medical service for your region", "Needs review")]
     [InlineData("ru", "Как получить медицинскую помощь в Дании", "Начните с регистрации в CPR и медицинской карточки|Жёлтая медицинская карточка (sundhedskort)|Как найти семейного врача и обратиться к нему|Срочная и экстренная помощь|Устный перевод и языковая помощь|Расходы и покрытие", "Состояние или травма, угрожающие жизни: звоните 112", "службу медицинской помощи в нерабочее время вашего региона", "Требует проверки")]

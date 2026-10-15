@@ -16,7 +16,7 @@ A residence permit, CPR registration and the health card are different things. I
 
 ## The yellow health card (sundhedskort)
 
-The card documents your access to services under the Danish national health insurance scheme. It shows your name, address, CPR number and information for contacting your GP. It is ordered after CPR registration and sent to your Danish address. A digital card app is also available.
+The card documents your access to services under the Danish national health insurance scheme. It shows your name, address, CPR number and information for contacting your GP. A digital card app is also available.
 
 After CPR registration, the card is ordered and sent to your Danish address. Delivery generally takes several weeks. If it has not arrived, check with your local Borgerservice.
 
