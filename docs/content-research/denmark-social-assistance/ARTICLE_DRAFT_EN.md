@@ -16,7 +16,7 @@ Other people living in Denmark are assessed under the general social-assistance 
 
 The main cash-assistance benefit is called kontanthjælp. Since the reform that took effect on 1 July 2025, this is the name used for assistance in the cash-benefit system. It may be considered when a change in circumstances, such as illness, unemployment or the end of a relationship, leaves a person unable to meet necessary needs for themselves or their family and no other benefit covers that need.
 
-The type and rate depend on factors including age, residence and work history, income and assets. General residence and previous-work requirements apply to certain rates. A spouse’s income and assets may also be considered. Separate provisions can apply to people under the Ukraine Special Act, so the municipality must determine which rules and rate apply to an individual case.
+The type and rate depend on factors including age, residence and work history, income and assets. General residence and previous-work requirements apply to certain rates. A spouse’s income and assets may also be considered. Separate provisions can apply to people under the Ukraine Special Act, so the municipality must determine which rules and rate apply to an individual case. A separate rule may apply to some married holders of this permit who support their shared minor children in Denmark, if their spouse remains in Ukraine and cannot contribute, fully or partly, to supporting the family. If the conditions are met, assistance may be calculated under rules comparable to those for a single parent. The municipality assesses each case. This does not apply automatically just because spouses live apart; the assets of both spouses may still be considered.
 
 ## Benefits for families with children
 
@@ -36,7 +36,7 @@ Help is not automatic. The municipality considers whether the expense is necessa
 
 If you receive kontanthjælp, the municipality may assess whether you need to be available for work, search for jobs or take part in activities. Requirements depend on an individual assessment and may take health or other circumstances into account. Failing to meet a requirement without a reasonable reason can affect payments.
 
-As of 15 October 2026, people holding a Ukraine Special Act permit are outside the separate arbejdspligt regime. This does not mean there are no other appointments, integration-programme activities or benefit conditions. Bill L 43 proposes a change, but it had not been enacted when checked. This information must be rechecked before publication.
+As of 15 October 2026, people holding a Ukraine Special Act permit are not covered by the separate arbejdspligt regime. This exemption is specific to arbejdspligt; it does not remove other integration-programme requirements, individual appointments or benefit conditions.
 
 If you receive assistance, tell the municipality about changes that may affect eligibility or the amount, such as changes in income or household circumstances. Follow the requirements in your own decision and plan.
 

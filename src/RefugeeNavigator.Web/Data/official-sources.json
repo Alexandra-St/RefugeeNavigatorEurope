@@ -355,5 +355,75 @@
     "Title": "SU — Life in Denmark — SU – State Educational Grant",
     "Url": "https://lifeindenmark.borger.dk/school-and-education/student-finance/su---state-educational-grant",
     "LastCheckedAt": "2026-10-15T17:47:05+00:00"
+  },
+  {
+    "Id": "74d68055-ee15-4b60-8173-0752127b82be",
+    "InformationEntryId": "1a19c1f9-1111-4d60-8490-da548f33083f",
+    "Title": "Danish Immigration Service (New to Denmark) — You are waiting for an answer",
+    "Url": "https://www.nyidanmark.dk/en-GB/You-are-waiting-for-an-answer/Fordreven-fra-Ukraine",
+    "LastCheckedAt": "2026-10-15T18:24:01+00:00"
+  },
+  {
+    "Id": "daf90a0e-392d-4a5f-831c-50d7e14f28f9",
+    "InformationEntryId": "1a19c1f9-1111-4d60-8490-da548f33083f",
+    "Title": "SIRI — FAQ om fordrevne fra Ukraine",
+    "Url": "https://integrationogjob.dk/nyankomne/faq-ukraine/",
+    "LastCheckedAt": "2026-10-15T18:24:01+00:00"
+  },
+  {
+    "Id": "b64fed15-d770-4a60-a908-c4cfb8b4df6b",
+    "InformationEntryId": "1a19c1f9-1111-4d60-8490-da548f33083f",
+    "Title": "Borger.dk — Kontanthjælp",
+    "Url": "https://www.borger.dk/arbejde-dagpenge-ferie/Dagpenge-kontanthjaelp-og-sygedagpenge/Kontanthjaelp/kontanthjaelp",
+    "LastCheckedAt": "2026-10-15T18:24:01+00:00"
+  },
+  {
+    "Id": "b58e04a4-fba8-4e6f-b6b8-eb17de46c3e9",
+    "InformationEntryId": "1a19c1f9-1111-4d60-8490-da548f33083f",
+    "Title": "STAR / Retsinformation — Bekendtgørelse af lov om aktiv socialpolitik (LBK nr. 793 af 11. september 2026)",
+    "Url": "https://www.retsinformation.dk/eli/accn/A20260079329",
+    "LastCheckedAt": "2026-10-15T18:24:01+00:00"
+  },
+  {
+    "Id": "c1f2c424-b1e0-4cfe-8d3a-2c5573f2f59a",
+    "InformationEntryId": "1a19c1f9-1111-4d60-8490-da548f33083f",
+    "Title": "Danish Parliament / Retsinformation — Lov om ændring af lov om aktiv socialpolitik, lov om en aktiv beskæftigelsesindsats og forskellige andre love (Reform af kontanthjælpssystemet, ophævelse af 225-timersreglen og kontanthjælpsloftet, fritidstillæg til børn, afklaring, rettighedsbaseret tilskud til medicin m.v.)",
+    "Url": "https://www.retsinformation.dk/eli/lta/2024/1655",
+    "LastCheckedAt": "2026-10-15T18:24:01+00:00"
+  },
+  {
+    "Id": "bf5a5cb2-f724-4957-9af7-7a091903e365",
+    "InformationEntryId": "1a19c1f9-1111-4d60-8490-da548f33083f",
+    "Title": "STAR / Life in Denmark — Financial support from the municipality",
+    "Url": "https://lifeindenmark.borger.dk/money-and-tax/social-benefits/financial-support-from-the-municipality",
+    "LastCheckedAt": "2026-10-15T18:24:01+00:00"
+  },
+  {
+    "Id": "675030ce-d243-48a2-a548-d1c2ae7ca323",
+    "InformationEntryId": "1a19c1f9-1111-4d60-8490-da548f33083f",
+    "Title": "Udbetaling Danmark / Life in Denmark — Child and youth benefits",
+    "Url": "https://lifeindenmark.borger.dk/family-and-children/family-benefits/child-and-youth-benefits",
+    "LastCheckedAt": "2026-10-15T18:24:01+00:00"
+  },
+  {
+    "Id": "8ea726b2-a273-4e47-8c79-02083553557f",
+    "InformationEntryId": "1a19c1f9-1111-4d60-8490-da548f33083f",
+    "Title": "Ministry of Children, Senior Citizens and Housing / Life in Denmark — Income-based daycare subsidy, sibling subsidy and other subsidies",
+    "Url": "https://lifeindenmark.borger.dk/family-and-children/childcare/income-based-daycare-subsidy--sibling-subsidy-and-other-subsidies",
+    "LastCheckedAt": "2026-10-15T18:24:01+00:00"
+  },
+  {
+    "Id": "998ac7ad-fc3f-4907-9a36-eff872bc9a7b",
+    "InformationEntryId": "1a19c1f9-1111-4d60-8490-da548f33083f",
+    "Title": "SIRI / Integration og Job — FAQ om arbejdspligt",
+    "Url": "https://integrationogjob.dk/beskaeftigelse/faq-arbejdspligt/",
+    "LastCheckedAt": "2026-10-15T18:24:01+00:00"
+  },
+  {
+    "Id": "6a90bf10-f705-4f9b-b3aa-02ea2e45d4a3",
+    "InformationEntryId": "1a19c1f9-1111-4d60-8490-da548f33083f",
+    "Title": "STAR / Retsinformation — Bekendtgørelse om rådighed for personer, der ansøger om eller modtager kontanthjælp som aktivitetsparate (BEK nr. 804 af 26. juni 2025)",
+    "Url": "https://www.retsinformation.dk/eli/lta/2025/804",
+    "LastCheckedAt": "2026-10-15T18:24:01+00:00"
   }
 ]

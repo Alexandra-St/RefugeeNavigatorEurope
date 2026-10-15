@@ -23,7 +23,8 @@ public sealed class DenmarkEducationArticleTests
         "c2356631-3fa2-4553-8fda-50a4419262c0",
         "2d106fd3-e981-4ef9-9733-568b654dfca5",
         "b1e4aed1-bbaf-4f09-9468-74000bf96430",
-        "19afdd19-e2cc-4da6-bde3-6dc3d64b7503"
+        "19afdd19-e2cc-4da6-bde3-6dc3d64b7503",
+        "1a19c1f9-1111-4d60-8490-da548f33083f"
     ];
     private static readonly string[] RequiredSources =
     [
@@ -83,7 +84,7 @@ public sealed class DenmarkEducationArticleTests
 
         Assert.All(ExistingDenmarkArticleIds, id =>
             Assert.Contains(catalog.InformationEntries, entry => entry.Id == Guid.Parse(id) && entry.CountryId == DenmarkId));
-        Assert.Equal(5, catalog.InformationEntries.Count(entry => entry.CountryId == DenmarkId));
+        Assert.Equal(6, catalog.InformationEntries.Count(entry => entry.CountryId == DenmarkId));
     }
 
     [Theory]
