@@ -64,7 +64,7 @@ public sealed class DenmarkSocialAssistanceArticleTests
             Assert.DoesNotContain("**", translation.Content, StringComparison.Ordinal);
             Assert.Equal(new DateOnly(2026, 10, 15), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
         });
-        Assert.Equal(6, catalog.InformationEntries.Count(entry => entry.CountryId == DenmarkId));
+        Assert.Equal(7, catalog.InformationEntries.Count(entry => entry.CountryId == DenmarkId));
         Assert.All(ExistingDenmarkArticleIds, id =>
             Assert.Contains(catalog.InformationEntries, entry => entry.Id == Guid.Parse(id) && entry.CountryId == DenmarkId));
     }

@@ -82,7 +82,7 @@ public sealed class DenmarkHousingArticleTests
 
         Assert.All(ExistingDenmarkArticleIds, id =>
             Assert.Contains(catalog.InformationEntries, entry => entry.Id == Guid.Parse(id) && entry.CountryId == DenmarkId));
-        Assert.Equal(6, catalog.InformationEntries.Count(entry => entry.CountryId == DenmarkId));
+        Assert.Equal(7, catalog.InformationEntries.Count(entry => entry.CountryId == DenmarkId));
     }
 
     [Theory]

@@ -104,12 +104,18 @@ public sealed class DenmarkAfterProtectionArticleTests
         Assert.Contains(expectedSourceLabel, visibleHtml);
         Assert.DoesNotContain("2d106fd3-e981-4ef9-9733-568b654dfca5", visibleHtml);
         Assert.Single(System.Text.RegularExpressions.Regex.Matches(html, "<h1\\b").Cast<System.Text.RegularExpressions.Match>());
-        Assert.Single(System.Text.RegularExpressions.Regex.Matches(html, "<h2\\b").Cast<System.Text.RegularExpressions.Match>());
-        Assert.True(System.Text.RegularExpressions.Regex.Matches(html, "<h3\\b").Count == 7);
-        Assert.True(System.Text.RegularExpressions.Regex.Matches(html, "<ul\\b").Count == 3);
-        Assert.True(System.Text.RegularExpressions.Regex.Matches(html, "<li\\b").Count == 12);
+        var existingArticle = System.Text.RegularExpressions.Regex.Match(
+            html,
+            $"<article class=\"information-entry\" aria-labelledby=\"entry-heading-{ArticleId:N}\"[^>]*>(.*?)</article>",
+            System.Text.RegularExpressions.RegexOptions.Singleline);
+        Assert.True(existingArticle.Success);
+        var existingArticleHtml = WebUtility.HtmlDecode(existingArticle.Groups[1].Value);
+        Assert.Single(System.Text.RegularExpressions.Regex.Matches(existingArticleHtml, "<h2\\b").Cast<System.Text.RegularExpressions.Match>());
+        Assert.Equal(7, System.Text.RegularExpressions.Regex.Matches(existingArticleHtml, "<h3\\b").Count);
+        Assert.Equal(3, System.Text.RegularExpressions.Regex.Matches(existingArticleHtml, "<ul\\b").Count);
+        Assert.Equal(12, System.Text.RegularExpressions.Regex.Matches(existingArticleHtml, "<li\\b").Count);
         Assert.All(expectedHeadings.Split('|'), heading =>
-            Assert.Matches($"<h3\\b[^>]*class=\"entry-section-heading\"[^>]*>{System.Text.RegularExpressions.Regex.Escape(heading)}</h3>", visibleHtml));
+            Assert.Matches($"<h3\\b[^>]*class=\"entry-section-heading\"[^>]*>{System.Text.RegularExpressions.Regex.Escape(heading)}</h3>", existingArticleHtml));
     }
 
     [Fact]
