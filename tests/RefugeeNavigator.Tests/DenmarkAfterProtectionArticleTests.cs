@@ -29,7 +29,7 @@ public sealed class DenmarkAfterProtectionArticleTests
     ];
 
     [Fact]
-    public async Task CatalogContainsNeedsReviewArticleAndPreservesExistingEmploymentEntry()
+    public async Task CatalogContainsVerifiedArticleAndPreservesExistingEmploymentEntry()
     {
         var catalog = await LoadProductionCatalogAsync();
         var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == ArticleId);
@@ -42,7 +42,7 @@ public sealed class DenmarkAfterProtectionArticleTests
         Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(translation => translation.LanguageCode).OrderBy(code => code));
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
             Assert.Equal(new DateOnly(2026, 10, 15), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
         });
 
@@ -57,9 +57,9 @@ public sealed class DenmarkAfterProtectionArticleTests
     }
 
     [Theory]
-    [InlineData("uk", "Які є варіанти проживання після тимчасового захисту в Данії?", "BEK nr. 828/2026", "17 березня 2028 року", "17 березня 2027 року", "Потребує перевірки", "Джерело востаннє перевірено")]
-    [InlineData("en", "Residence options after temporary protection in Denmark", "BEK no. 828/2026", "17 March 2028", "17 March 2027", "Needs review", "Source last checked")]
-    [InlineData("ru", "Какие есть варианты проживания после временной защиты в Дании?", "BEK № 828/2026", "17 марта 2028 года", "17 марта 2027 года", "Требует проверки", "Источник проверен")]
+    [InlineData("uk", "Які є варіанти проживання після тимчасового захисту в Данії?", "BEK nr. 828/2026", "17 березня 2028 року", "17 березня 2027 року", "Перевірено", "Джерело востаннє перевірено")]
+    [InlineData("en", "Residence options after temporary protection in Denmark", "BEK no. 828/2026", "17 March 2028", "17 March 2027", "Reviewed", "Source last checked")]
+    [InlineData("ru", "Какие есть варианты проживания после временной защиты в Дании?", "BEK № 828/2026", "17 марта 2028 года", "17 марта 2027 года", "Проверено", "Источник проверен")]
     public async Task LocalizedCategoryRendersArticleStatusDatesAndOfficialSources(
         string language,
         string expectedTitle,
