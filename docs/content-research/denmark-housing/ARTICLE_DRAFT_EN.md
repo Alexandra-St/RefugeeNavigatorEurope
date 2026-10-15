@@ -29,7 +29,7 @@ A standard private rental contract is available in Danish and English. Keep a co
 
 ## Housing-related financial support
 
-Housing benefit (*boligstøtte*) is separate from municipal accommodation. It is administered by Udbetaling Danmark. In general, the home must have its own kitchen and be your permanent residence. The amount depends on factors such as rent, home size, household members, income and assets. You must apply; payment is not automatic.
+Housing benefit (boligstøtte) is separate from municipal accommodation. It is administered by Udbetaling Danmark. In general, the home must have its own kitchen and be your permanent residence. The amount depends on factors such as rent, home size, household members, income and assets. You must apply; payment is not automatic.
 
 Official guidance says that a person with a residence permit under the Ukraine Special Act may apply if they have fixed residence in Denmark and meet the other conditions. This does not guarantee an award. The guidance reviewed does not treat an application alone as fixed residence for housing-benefit purposes. Check your situation and application with Udbetaling Danmark.
 
@@ -39,7 +39,7 @@ Municipalities also assess some requests for help with specific expenses, such a
 
 ## Moving and address registration
 
-When you move to another address in Denmark, report the change to the Civil Registration System (CPR). You can normally report it from four weeks before moving and must do so no later than five days after the move. The online service requires MitID; your local Citizen Service office (*Borgerservice*) can explain how to get help.
+When you move to another address in Denmark, report the change to the Civil Registration System (CPR). You can normally report it from four weeks before moving and must do so no later than five days after the move. The online service requires MitID; your local Citizen Service office (Borgerservice) can explain how to get help.
 
 If your municipality was assigned under the Special Act or manages your integration programme, contact it before moving to another municipality. Also check whether you need to update a housing-benefit application with Udbetaling Danmark.
 
@@ -47,4 +47,4 @@ If your municipality was assigned under the Special Act or manages your integrat
 
 - For accommodation while an application is pending or questions about municipal assignment, contact the Danish Immigration Service or the municipality handling your case.
 - For housing benefit, contact Udbetaling Danmark. For a deposit loan or individually assessed help with expenses, contact the municipality.
-- For a tenancy problem, first contact your landlord and keep written records. Depending on the type of home and dispute, the municipality’s Rent Control Board (*Huslejenævn*) or Residents’ Complaints Board (*Beboerklagenævn*) may be able to decide the case. These boards do not handle every dispute or provide general legal advice; check the local rules and the appropriate route.
+- For a tenancy problem, first contact your landlord and keep written records. Depending on the type of home and dispute, the municipality’s Rent Control Board (Huslejenævn) or Residents’ Complaints Board (Beboerklagenævn) may be able to decide the case. These boards do not handle every dispute or provide general legal advice; check the local rules and the appropriate route.

@@ -41,7 +41,7 @@ public sealed class DenmarkHousingArticleTests
     ];
 
     [Fact]
-    public async Task CatalogContainsNeedsReviewCandidateWithAllSourcesAndPreservesExistingDenmarkArticles()
+    public async Task CatalogContainsVerifiedArticleWithAllSourcesAndPreservesExistingDenmarkArticles()
     {
         var catalog = await LoadProductionCatalogAsync();
         var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == ArticleId);
@@ -54,12 +54,21 @@ public sealed class DenmarkHousingArticleTests
         Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(translation => translation.LanguageCode).OrderBy(code => code));
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
             Assert.Equal(new DateOnly(2026, 10, 15), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
         });
+        var unsupportedEmphasisMarkers = new[]
+        {
+            "*boligstøtte*",
+            "*Borgerservice*",
+            "*Huslejenævn*",
+            "*Beboerklagenævn*"
+        };
+        Assert.All(translations, translation =>
+            Assert.DoesNotContain(unsupportedEmphasisMarkers, marker => translation.Content.Contains(marker, StringComparison.Ordinal)));
 
         var sources = catalog.OfficialSources.Where(source => source.InformationEntryId == ArticleId).ToArray();
         Assert.Equal(RequiredSources.OrderBy(url => url), sources.Select(source => source.Url.AbsoluteUri).OrderBy(url => url));
@@ -118,7 +127,7 @@ public sealed class DenmarkHousingArticleTests
         Assert.Contains(applicantTargetGroupCondition, visibleHtml);
         Assert.Contains(housingBenefitCondition, visibleHtml);
         Assert.Equal(RequiredSources.Length, RequiredSources.Count(url => html.Contains($"href=\"{url}\"", StringComparison.Ordinal)));
-        Assert.Equal(VerificationStatus.NeedsReview, Assert.Single(catalog.InformationEntryTranslations,
+        Assert.Equal(VerificationStatus.Verified, Assert.Single(catalog.InformationEntryTranslations,
             translation => translation.InformationEntryId == ArticleId && translation.LanguageCode == language).VerificationStatus);
     }
 
