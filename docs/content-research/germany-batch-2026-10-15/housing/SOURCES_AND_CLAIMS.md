@@ -1,6 +1,7 @@
 # Germany × Finding accommodation in Germany — sources and claim review
 
 **Research checked:** 15 October 2026
+**Final focused verification:** 16 October 2026; see `../FINAL_VERIFICATION.md` for scope and results.
 **Editorial status:** unpublished draft; all translations remain unapproved and unverified.
 **Claim labels:** `SUPPORTED`, `PARTIALLY SUPPORTED`, `CONFLICTED`, `UNVERIFIED`. A source check date is not a source publication date.
 
@@ -15,11 +16,11 @@ Pages and current statutory texts were checked directly on 15 October 2026. “N
 | S03 | Federal Registration Act (BMG), §17 | https://www.gesetze-im-internet.de/bmg/__17.html | Current text previously opened 15 Oct; generally two-week registration rule, subject to statutory exceptions. |
 | S04 | Germany4Ukraine — state housing support overview | https://www.germany4ukraine.de/EN/unterkunft-fuer-ukrainer/seite_node.html | No update date displayed; checked 15 Oct; federal-state links for housing support. |
 | S05 | Germany4Ukraine — Social benefits | https://www.germany4ukraine.de/EN/arbeit-und-soziales/ukrainer-sozialleistungen/seite.html?nn=722332 | No update date displayed; checked 15 Oct; benefit links; historical content requires caution. |
-| S06 | BMAS — Leistungsrechtsanpassungsgesetz | https://www.bmas.de/DE/Service/Gesetze-und-Gesetzesvorhaben/leistungsrechtsanpassungsgesetz.html | Checked 15 Oct; proposal in process, no completed law published. |
+| S06 | BMAS — Leistungsrechtsanpassungsgesetz | https://www.bmas.de/DE/Service/Gesetze-und-Gesetzesvorhaben/leistungsrechtsanpassungsgesetz.html | Initial check 15 Oct; rechecked 16 Oct 2026: proposal remains in process; completed law not published. |
 | S07 | SGB II §22 — accommodation and heating costs | https://www.gesetze-im-internet.de/sgb_2/__22.html | Current statute checked 15 Oct; actual costs, applicable reasonableness and statutory conditions. |
 | S08 | SGB XII §35 — accommodation and heating costs | https://www.gesetze-im-internet.de/sgb_12/__35.html | Current statute checked 15 Oct; separate SGB XII rules. |
 | S09 | AsylbLG §3 — basic and accommodation benefits | https://www.gesetze-im-internet.de/asylblg/__3.html | Current statute checked 15 Oct; accommodation/benefit structure for covered persons. |
-| S10 | German Bundestag DIP — Leistungsrechtsanpassungsgesetz | https://dip.bundestag.de/vorgang/g/329468 | Checked 15 Oct; bill status “Überwiesen”; proposed effects are not current law. |
+| S10 | German Bundestag DIP — Leistungsrechtsanpassungsgesetz | https://dip.bundestag.de/vorgang/g/329468 | Rechecked 16 Oct 2026: bill status “Überwiesen”; the published proceedings remain a proposal, not current law. |
 
 ## Claim review
 
@@ -36,7 +37,7 @@ Pages and current statutory texts were checked directly on 15 October 2026. “N
 
 - No all-Germany local accommodation or rental-application workflow is asserted. Add local contact links only after the target Länder are selected.
 - Housing-cost support remains conditional on the applicable scheme and local cost rules; some portal pages contain historical benefit guidance.
-- **Ready for final verification** only with the bill status and the reader’s local route clearly dated and qualified.
+- The Leistungsrechtsanpassungsgesetz remained unpublished as law on 16 October 2026. Its possible future effect is identified as a proposal, not current law, so it does not block integration of the present, scheme-qualified navigation guidance. Recheck before public release.
 
 ## Draft limitations
 

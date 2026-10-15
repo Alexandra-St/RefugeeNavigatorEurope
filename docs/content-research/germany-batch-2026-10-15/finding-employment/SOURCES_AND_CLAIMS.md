@@ -1,6 +1,7 @@
 # Germany × Finding employment in Germany — sources and claim review
 
 **Research checked:** 15 October 2026
+**Final focused verification:** 16 October 2026; see `../FINAL_VERIFICATION.md` for scope and results.
 **Editorial status:** unpublished draft; all translations remain unapproved and unverified.
 **Claim labels:** `SUPPORTED`, `PARTIALLY SUPPORTED`, `CONFLICTED`, `UNVERIFIED`. A source check date is not a source publication date.
 
@@ -16,11 +17,11 @@ Pages and current statutory texts were checked directly on 15 October 2026. “N
 | S04 | Federal Employment Agency — recognition of professional qualifications | https://www.arbeitsagentur.de/en/working-in-germany/professional-qualifications | No update date displayed; checked 15 Oct; responsible authority navigation. |
 | S05 | Germany4Ukraine — Integration courses | https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/integrationskurse/seite_node.html | No update date displayed; checked 15 Oct; admission and obligations. |
 | S06 | Germany4Ukraine — Learning German / vocational-language courses | https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/deutsch-lernen/seite.html?nn=734948 | No update date displayed; checked 15 Oct; BAMF vocational-language pathways. |
-| S07 | BMAS — Leistungsrechtsanpassungsgesetz | https://www.bmas.de/DE/Service/Gesetze-und-Gesetzesvorhaben/leistungsrechtsanpassungsgesetz.html | Checked 15 Oct; “Im Prozess”, completion not published; proposal, not current law. |
+| S07 | BMAS — Leistungsrechtsanpassungsgesetz | https://www.bmas.de/DE/Service/Gesetze-und-Gesetzesvorhaben/leistungsrechtsanpassungsgesetz.html | Initial check 15 Oct; rechecked 16 Oct 2026: tracker remains “Im Prozess” and completion “Noch nicht veröffentlicht”; proposal, not current law. |
 | S08 | Recognition in Germany — professional recognition / regulated professions | https://www.anerkennung-in-deutschland.de/html/en/pro/professional-recognition.php | No update date displayed; checked 15 Oct; regulated vs non-regulated occupations. |
 | S09 | SGB II §7 — beneficiaries | https://www.gesetze-im-internet.de/sgb_2/__7.html | Current statute checked 15 Oct; eligibility and exclusions for SGB II. |
 | S10 | SGB II §74 — certain §24 applicants with Fiktionsbescheinigung | https://www.gesetze-im-internet.de/sgb_2/__74.html | Current statute checked 15 Oct; identity-registration and certificate conditions. |
-| S11 | German Bundestag DIP — Leistungsrechtsanpassungsgesetz proceedings | https://dip.bundestag.de/vorgang/g/329468 | Checked 15 Oct 2026; Beratungsstand “Überwiesen”; proposal and records, not enacted law. |
+| S11 | German Bundestag DIP — Leistungsrechtsanpassungsgesetz proceedings | https://dip.bundestag.de/vorgang/g/329468 | Rechecked 16 Oct 2026: official record lists status “Überwiesen” and no enacted text; the record’s listed documents remain proposals/proceedings. |
 
 ## Claim review
 
@@ -34,8 +35,8 @@ Pages and current statutory texts were checked directly on 15 October 2026. “N
 
 ## Unresolved questions and publication gate
 
-- BA vacancy search and basic guidance are ready for final verification. Jobcenter and benefit-linked services require a fresh check if the bill advances.
-- Verify that linked services, course admission rules, language availability and recognition finders remain current before publication.
+- BA job-search and general guidance are distinct from benefit-linked Jobcenter services. The Leistungsrechtsanpassungsgesetz remains a proposal on the 16 October 2026 check; the drafts identify proposed changes separately and do not present them as current law.
+- Verify linked services, course admission rules, language availability and recognition routes again before public release.
 - Keep the distinction between finding a vacancy and holding work authorization; see the separate Work Authorization draft.
 
 ## Draft limitations

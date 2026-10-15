@@ -1,6 +1,7 @@
 # Germany × Accessing healthcare in Germany — sources and claim review
 
 **Research checked:** 15 October 2026
+**Final focused verification:** 16 October 2026; see `../FINAL_VERIFICATION.md` for scope and results.
 **Editorial status:** unpublished draft; all translations remain unapproved and unverified.
 **Claim labels:** `SUPPORTED`, `PARTIALLY SUPPORTED`, `CONFLICTED`, `UNVERIFIED`. A source check date is not a source publication date.
 
@@ -17,17 +18,17 @@ Pages and current statutory texts were checked directly on 15 October 2026. “N
 | S05 | 116117 — English medical help | https://www.116117.de/de/englisch.php | No update date displayed; checked 15 Oct; non-life-threatening out-of-hours route. |
 | S06 | Germany4Ukraine — Psychosocial support | https://www.germany4ukraine.de/EN/medizinische-versorgung/psycho-therapie-fluechtlinge/seite_node.html | No update date displayed; checked 15 Oct; regional services. |
 | S07 | SGB V §5 — statutory health insurance | https://www.gesetze-im-internet.de/sgb_5/__5.html | Current statute checked 15 Oct; employees and eligible SGB II benefit recipients among other classes. |
-| S08 | BMAS — Leistungsrechtsanpassungsgesetz | https://www.bmas.de/DE/Service/Gesetze-und-Gesetzesvorhaben/leistungsrechtsanpassungsgesetz.html | Checked 15 Oct; “Im Prozess”, completed law not published; proposed scheme and health changes. |
+| S08 | BMAS — Leistungsrechtsanpassungsgesetz | https://www.bmas.de/DE/Service/Gesetze-und-Gesetzesvorhaben/leistungsrechtsanpassungsgesetz.html | Initial check 15 Oct; rechecked 16 Oct 2026: “Im Prozess”; completion “Noch nicht veröffentlicht”; proposed scheme and health changes remain proposals. |
 | S09 | AsylbLG §4 — illness, pregnancy and birth | https://www.gesetze-im-internet.de/asylblg/__4.html | Current statute checked 15 Oct; defined treatment/health benefits. |
 | S10 | AsylbLG §6 — other benefits | https://www.gesetze-im-internet.de/asylblg/__6.html | Current statute checked 15 Oct; additional case-specific benefits. |
 | S11 | SGB II §7 — eligibility and exclusions | https://www.gesetze-im-internet.de/sgb_2/__7.html | Current statute checked 15 Oct; qualifying categories. |
-| S12 | Bundestag DIP — Leistungsrechtsanpassungsgesetz | https://dip.bundestag.de/vorgang/g/329468 | Checked 15 Oct; referred for further consideration; bill text includes health-related changes. |
+| S12 | Bundestag DIP — Leistungsrechtsanpassungsgesetz | https://dip.bundestag.de/vorgang/g/329468 | Rechecked 16 Oct 2026: official record lists “Überwiesen”; no enacted law or commencement date is listed. |
 
 ## Claim review
 
 | Claim ID | Material claim and source passage/section | Status | Conditions, exceptions and limits |
 | --- | --- | --- | --- |
-| HC01 | Health coverage varies by insurance/benefit and legal status; SGB V and AsylbLG create distinct statutory routes. S01–S03, S07, S09–S11. | PARTIALLY SUPPORTED | No single route follows from §24 alone; portal operational details and pending legislation need review. |
+| HC01 | Health coverage varies by insurance/benefit and legal status; SGB V and AsylbLG create distinct statutory routes. S01–S03, S07, S09–S11. | PARTIALLY SUPPORTED | No single route follows from §24 alone; operational practice remains Land/local and the pending bill is not current law. Do not promise universal coverage. |
 | HC02 | AsylbLG §4 covers specified acute illness, pain, pregnancy and related care; §6 permits other necessary case-specific benefits. S02, S09, S10. | SUPPORTED | Scope and approval depend on law and individual status. |
 | HC03 | 112 is for life-threatening emergencies; 116117 helps with urgent non-life-threatening care outside usual practice hours. S04–S05. | SUPPORTED | 116117 phone information is in German; support varies. |
 | HC04 | Regional psychosocial support routes exist. S06. | PARTIALLY SUPPORTED | Availability, language, costs and eligibility depend on provider and coverage. |
@@ -36,9 +37,9 @@ Pages and current statutory texts were checked directly on 15 October 2026. “N
 
 ## Unresolved questions and publication gate
 
-- **BLOCKED pending final verification:** the proposed benefits change could alter scheme-linked health routes for specified §24 groups based on qualifying document-issuance dates and exceptions; check final enactment, effective date and transition before publication.
-- Confirm local medical-card/treatment-certificate practices after selecting a Land/municipality and scheme.
-- Do not promise free care, an insurance card, interpretation, or psychotherapy for everyone.
+- As checked on 16 October 2026, the Leistungsrechtsanpassungsgesetz remained in process and had not been published as an enacted law. Current statutory routes remain the basis of these drafts; the proposal is identified separately and is not a current-law blocker.
+- Before public release, recheck enactment and transition rules. If the bill is still pending, retain proposal-only wording; if enacted, review the final text and effective dates before describing any changed pathway.
+- Confirm local medical-card/treatment-certificate practices after selecting a Land/municipality and scheme. Do not promise free care, an insurance card, interpretation, or psychotherapy for everyone.
 
 ## Draft limitations
 

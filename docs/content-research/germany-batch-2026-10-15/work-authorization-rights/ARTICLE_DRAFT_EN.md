@@ -8,7 +8,7 @@
 
 Work permission is linked to your legal status and document, not simply to Ukrainian nationality or having applied for protection. Section 4a AufenthG requires a title to show whether work is allowed and what limits apply. Read the residence card and any supplementary sheet. A Fiktionsbescheinigung can carry its own work entry; a pending application alone is not enough to assume permission.
 
-EU temporary protection is extended to 4 March 2028, but German sources conflict about the continuation date of certain §24 permits. The exact work end date must therefore be checked against the person’s document and current authoritative rule; this guide does not give a universal expiry date.
+EU temporary protection is extended to 4 March 2028, but this does not itself extend a German residence permit. As checked on 16 October 2026, the published UkraineAufenthFGV §2 provides through 4 March 2027 for specified §24 permits valid on 1 February 2026. Germany4Ukraine also publishes conflicting 2028 statements, including an announced future extension for Ukrainian permits still valid on 1 February 2027; the current consolidated ordinance does not reflect that later extension. Check the exact work entry and obtain written confirmation from the Ausländerbehörde; this guide does not give a universal expiry date.
 
 ## TASKS
 

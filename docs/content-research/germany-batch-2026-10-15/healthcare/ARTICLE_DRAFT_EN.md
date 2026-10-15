@@ -8,7 +8,7 @@
 
 There is no single health-cover route for everyone displaced from Ukraine. Coverage can depend on employment, the applicable benefit scheme, residence documents and local administration. For example, SGB V provides statutory insurance for certain employees and people receiving qualifying SGB II subsistence benefits; AsylbLG §§4 and 6 provide health-related benefits for people within that law. A §24 residence permit by itself does not tell you which card, provider or scope applies.
 
-The Leistungsrechtsanpassungsgesetz proposal would change benefit routes and related health provisions for specified §24 groups, using document-issuance criteria and exceptions rather than a blanket arrival date. On 15 October 2026 BMAS and Bundestag records still showed a bill in progress, not enacted law. Do not present its proposed transition as current law.
+The Leistungsrechtsanpassungsgesetz proposal would change benefit routes and related health provisions for specified §24 groups, using document-issuance criteria and exceptions rather than a blanket arrival date. On 16 October 2026 BMAS and Bundestag records still showed a bill in progress, not enacted law. Do not present its proposed transition as current law.
 
 ## TASKS
 

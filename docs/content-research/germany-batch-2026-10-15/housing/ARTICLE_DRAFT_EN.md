@@ -14,7 +14,7 @@ If you need an initial place, use the reception or allocation instructions for t
 
 ## PLACES
 
-Germany4Ukraine links to federal-state housing information. For a local shelter, accommodation allocation, housing-benefit or tenant-advice route, select the Land and municipality where you will live. If benefits are involved, use the authority named in your written decision—Jobcenter, Sozialamt or the AsylbLG authority—and ask which scheme covers your case. The pending Leistungsrechtsanpassungsgesetz could change some routes; as checked 15 October 2026 it was still a bill under parliamentary consideration, not current law.
+Germany4Ukraine links to federal-state housing information. For a local shelter, accommodation allocation, housing-benefit or tenant-advice route, select the Land and municipality where you will live. If benefits are involved, use the authority named in your written decision—Jobcenter, Sozialamt or the AsylbLG authority—and ask which scheme covers your case. The pending Leistungsrechtsanpassungsgesetz could change some routes; as checked 16 October 2026 it was still a bill under parliamentary consideration, not current law.
 
 ## NEXT STEPS
 

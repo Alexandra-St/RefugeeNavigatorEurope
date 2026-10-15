@@ -22,7 +22,7 @@ The BA is a national starting point for vacancies and employment advice. If you 
 
 ## NEXT STEPS
 
-Before accepting a start date, confirm the work permission printed on your own document. Save the contract, job description and qualification correspondence. If the current benefit reform proposal becomes law, routes between SGB II/SGB XII and AsylbLG for specified §24 groups may change. The proposal uses document-issuance criteria and exceptions, not only a blanket arrival date; as checked on 15 October 2026 it remained in parliamentary process. That does not prevent using the general BA job-search service, but it means Jobcenter or benefit-linked support should be rechecked before publication.
+Before accepting a start date, confirm the work permission printed on your own document. Save the contract, job description and qualification correspondence. If the current benefit reform proposal becomes law, routes between SGB II/SGB XII and AsylbLG for specified §24 groups may change. The proposal uses document-issuance criteria and exceptions, not only a blanket arrival date; as checked on 16 October 2026 it remained in parliamentary process. That does not prevent using the general BA job-search service, but it means Jobcenter or benefit-linked support should be rechecked before publication.
 
 ## SOURCES
 

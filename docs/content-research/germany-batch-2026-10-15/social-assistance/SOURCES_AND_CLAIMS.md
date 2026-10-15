@@ -1,6 +1,7 @@
 # Germany × Financial and social assistance — sources and claim review
 
 **Research checked:** 15 October 2026
+**Final focused verification:** 16 October 2026; see `../FINAL_VERIFICATION.md` for scope and results.
 **Editorial status:** unpublished draft; all translations remain unapproved and unverified.
 **Claim labels:** `SUPPORTED`, `PARTIALLY SUPPORTED`, `CONFLICTED`, `UNVERIFIED`. A source check date is not a source publication date.
 
@@ -10,19 +11,19 @@ Pages and current statutory texts were checked directly on 15 October 2026. “N
 
 | ID | Issuer and exact page/document | Exact URL | Date / relevance |
 | --- | --- | --- | --- |
-| S01 | BMAS — Leistungsrechtsanpassungsgesetz status and text | https://www.bmas.de/DE/Service/Gesetze-und-Gesetzesvorhaben/leistungsrechtsanpassungsgesetz.html | Checked 15 Oct 2026; “Im Prozess”; completion “Noch nicht veröffentlicht”; proposed document-issuance cutoff, exceptions and scope. |
+| S01 | BMAS — Leistungsrechtsanpassungsgesetz status and text | https://www.bmas.de/DE/Service/Gesetze-und-Gesetzesvorhaben/leistungsrechtsanpassungsgesetz.html | Rechecked 16 Oct 2026; “Im Prozess”; completion “Noch nicht veröffentlicht”; no enacted amendment or commencement date shown. |
 | S02 | Germany4Ukraine — Social benefits | https://www.germany4ukraine.de/EN/arbeit-und-soziales/ukrainer-sozialleistungen/seite.html?nn=722332 | No update date displayed; checked 15 Oct; routes and authority navigation; historical details require caution. |
 | S03 | SGB II §7 — beneficiaries | https://www.gesetze-im-internet.de/sgb_2/__7.html | Current statute checked 15 Oct; general conditions/exclusions. |
 | S04 | SGB II §74 — claims for certain §24 applicants with Fiktionsbescheinigung | https://www.gesetze-im-internet.de/sgb_2/__74.html | Current statute checked 15 Oct; identity-registration and §24 application/document requirements. |
 | S05 | AsylbLG §1 — eligible persons | https://www.gesetze-im-internet.de/asylblg/__1.html | Current statute checked 15 Oct; including specific §24 request/no-permit or certificate categories. |
 | S06 | SGB XII — Social Assistance Code | https://www.gesetze-im-internet.de/sgb_12/ | Current code checked 15 Oct; distinct eligibility framework. |
 | S07 | German Bundestag — public hearing on the draft | https://www.bundestag.de/presse/pressemitteilungen/2026/pm-260216-oepm-gesundheit-2-1146048 | Dated 16 Feb 2026; hearing notice on the government draft; not proof of enactment. |
-| S08 | German Bundestag DIP — Leistungsrechtsanpassungsgesetz | https://dip.bundestag.de/vorgang/g/329468 | Checked 15 Oct; status “Überwiesen”; proposed document-issuance trigger, bill documents and legislative history. |
+| S08 | German Bundestag DIP — Leistungsrechtsanpassungsgesetz | https://dip.bundestag.de/vorgang/g/329468 | Rechecked 16 Oct; official status “Überwiesen”; no enacted text or commencement date listed. |
 | S09 | SGB II §19 — benefits under SGB II | https://www.gesetze-im-internet.de/sgb_2/__19.html | Current statute checked 15 Oct; statutory benefits framework. |
 | S10 | Federal Employment Agency — Child benefit for Ukrainian refugees | https://www.arbeitsagentur.de/familie-und-kinder/ukraine-child-benefit-en | No update date displayed; checked 15 Oct; Ukraine-specific eligibility, evidence and application steps. |
 | S11 | Income Tax Act (EStG) §62 — persons entitled to child benefit | https://www.gesetze-im-internet.de/estg/__62.html | Current statute checked 15 Oct; statutory claimant categories. |
 | S12 | Federal Employment Agency — Family Fund forms and applications | https://www.arbeitsagentur.de/familie-und-kinder/downloads-familie-und-kinder | No update date displayed; checked 15 Oct; KG1 / Anlage Kind and other forms. |
-| S13 | German Bundestag — Government bill BT-Drs. 21/3539, proposed AsylbLG, SGB II, SGB XII and SGB V amendments | https://dserver.bundestag.de/btd/21/035/2103539.pdf | Checked 15 Oct 2026; draft text, including proposed work-seeking duty, health provisions and transition clauses; not enacted law. |
+| S13 | German Bundestag — Government bill BT-Drs. 21/3539, proposed AsylbLG, SGB II, SGB XII and SGB V amendments | https://dserver.bundestag.de/btd/21/035/2103539.pdf | Bill text checked 15 Oct 2026; remains a proposal as confirmed by BMAS/DIP rechecks on 16 Oct; includes proposed work-seeking, health and transition clauses. |
 | S14 | SGB II §22 — accommodation and heating costs | https://www.gesetze-im-internet.de/sgb_2/__22.html | Current statute checked 15 Oct; costs are subject to statutory rules, including appropriateness and local implementation. |
 | S15 | SGB XII §35 — accommodation and heating costs | https://www.gesetze-im-internet.de/sgb_12/__35.html | Current statute checked 15 Oct; rules for accommodation/heating under SGB XII. |
 | S16 | AsylbLG §3 — basic benefits including accommodation and heating | https://www.gesetze-im-internet.de/asylblg/__3.html | Current statute checked 15 Oct; necessary housing/heating requirements and delivery rules vary by accommodation context. |
@@ -43,9 +44,9 @@ Pages and current statutory texts were checked directly on 15 October 2026. “N
 
 ## Unresolved questions and publication gate
 
-- **BLOCKED pending final verification:** the proposed benefit-system change is still in parliamentary process. Before publication, recheck whether it is enacted, the final document-issuance trigger and exceptions, transition rules, commencement and healthcare effects.
-- Family-benefit guidance is now limited to Kindergeld and its BA-stated conditions; it does not cover every family payment.
-- Keep current law, proposal and possible future effect explicitly separated. Align the result with Healthcare, Housing and Finding Employment.
+- As checked on 16 October 2026, BMAS still showed the Leistungsrechtsanpassungsgesetz as in process and not published; DIP listed the matter as “Überwiesen”. The draft is not current law. Current schemes and conditional eligibility are presented separately, so the pending proposal alone does not block integration.
+- Before public release, recheck the final bill status, document-issuance criteria, exceptions, transition rules, commencement and healthcare effects. If enacted, align Social Assistance with Healthcare, Housing and Finding Employment.
+- Family-benefit guidance is limited to Kindergeld and BA-stated conditions; it does not cover every family payment.
 
 ## Draft limitations
 

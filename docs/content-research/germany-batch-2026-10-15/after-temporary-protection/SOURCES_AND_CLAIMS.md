@@ -1,6 +1,7 @@
 # Germany × Residence options after temporary protection — sources and claim review
 
 **Research checked:** 15 October 2026
+**Final focused verification:** 16 October 2026; see `../FINAL_VERIFICATION.md` for scope and results.
 **Editorial status:** unpublished draft; all translations remain unapproved and unverified.
 **Claim labels:** `SUPPORTED`, `PARTIALLY SUPPORTED`, `CONFLICTED`, `UNVERIFIED`. A source check date is not a source publication date.
 
@@ -36,10 +37,9 @@ Pages and current statutory texts were checked directly on 15 October 2026. “N
 
 ## Unresolved questions and publication gate
 
-- Route map is limited to supported training, study, recognition and skilled-work categories; family/humanitarian grounds are excluded.
-- §39(1) applies procedurally to a holder of a German residence permit, but does not guarantee any new permit. §5 and the route-specific provisions remain relevant.
-- For the 90-day UkraineAufenthÜV exemption, retain the category and scope limits set out in the Temporary Protection article.
-- Recheck source text and the §24 extension conflict immediately before publication.
+- The route map does not assign a §24 expiry date or promise an automatic conversion. Its cross-reference to the Temporary Protection draft preserves the distinction between EU protection and a German residence title.
+- Family and humanitarian pathways remain outside the reviewed scope.
+- Recheck legislation, source pages, dates and application procedures immediately before public release.
 
 ## Draft limitations
 

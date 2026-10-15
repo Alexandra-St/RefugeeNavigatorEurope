@@ -18,7 +18,7 @@ If you currently hold a German residence permit under §24, §39(1) AufenthV all
 
 ## NEXT STEPS
 
-Apply early enough to understand the effect on your current document. Under §81(4) AufenthG, a timely application before an existing permit expires generally continues that title while the authority decides; §81(3) has a different effect for some lawfully present people without a title. A late application does not automatically preserve the old permit. Read any Fiktionsbescheinigung and its work entry. EU protection ends on 4 March 2028, but the separate German §24 permit-continuation date remains disputed in official sources; use the Temporary Protection draft for that unresolved issue. Family, humanitarian and every other residence route are outside this reviewed route map.
+Apply early enough to understand the effect on your current document. Under §81(4) AufenthG, a timely application before an existing permit expires generally continues that title while the authority decides; §81(3) has a different effect for some lawfully present people without a title. A late application does not automatically preserve the old permit. Read any Fiktionsbescheinigung and its work entry. EU temporary protection has been extended through 4 March 2028, but this does not itself extend a German §24 permit: the current ordinance lists specified permits through 4 March 2027, while Germany4Ukraine also publishes inconsistent 2028 statements, including an announced future extension for Ukrainian permits valid on 1 February 2027. Use the Temporary Protection draft for the source distinction and seek written authority confirmation before relying on an expiry date. Family, humanitarian and every other residence route are outside this reviewed route map.
 
 ## SOURCES
 
