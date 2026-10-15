@@ -2,30 +2,34 @@
 
 > Research draft — unpublished; pending human editorial review. No content in this draft is approved or marked Verified.
 
-**Summary:** An overview of possible work, study and other residence routes; each route has separate conditions.
+**Summary:** Possible routes for training, study, recognition and qualified work have different requirements; none is an automatic conversion from §24.
 
 ## RULES
 
-Temporary protection and an ordinary residence permit are different legal routes. German law provides separate permits for vocational training, higher education and qualified employment, among others (sections 16a, 16b, 18a and 18b AufenthG). These are possible routes only: education, qualifications, a job offer, funding and other requirements depend on the relevant section.
+German law has separate residence titles for vocational training (§16a), university study (§16b), recognition measures (§16d) and qualified work (§§18a/18b AufenthG). Each requires a qualifying purpose and its own evidence. For example, §16b requires admission to full-time study at a recognized institution; §16a requires a qualifying training place and may require Federal Employment Agency approval or proof of German skills. A skilled-worker route requires a recognized or comparable qualification and a qualified job offer; a regulated profession can also require a licence. General requirements such as identity, livelihood and the applicable visa rule may matter, with statutory exceptions.
 
 ## TASKS
 
-First identify the purpose you want to pursue and check the official portal and statutory requirements for that route. Prepare documents required for that specific process, such as proof of enrolment or qualification recognition. Do not assume a section 24 permit automatically changes into another permit.
+Start with the concrete goal, not a form: obtain the training contract or university admission; or, for a profession, ask the recognition authority whether your qualification is equivalent and whether the job is regulated. Prepare your passport, current residence document, qualification certificates and translations if requested, admission or contract, proof of financing where applicable, and professional licence if needed. Under §16d, a recognition notice that specifies a compensatory measure may support a separate recognition-residence route; it is not a general work permit.
 
 ## PLACES
 
-The competent Ausländerbehörde decides questions about changing the purpose of stay. Before applying, ask whether an application can be made from your current status, which documents are needed and what happens to the current document while a decision is pending. An information page is not an individual decision.
+If you currently hold a German residence permit under §24, §39(1) AufenthV allows an application for another title in Germany while you hold a residence permit. This is a procedural route, not approval: the substantive requirements still apply. The competent Ausländerbehörde decides the application. For a qualifying person still in the UkraineAufenthÜV 90-day exemption, §3 of that ordinance and Germany4Ukraine also describe obtaining a necessary title in Germany. Do not treat those provisions as a universal exemption from every visa or eligibility rule.
 
 ## NEXT STEPS
 
-Germany4Ukraine describes the possibility of changing to another residence purpose, but this is not a guarantee. This is not a complete legal analysis. Other possible residence grounds are outside this draft and need separate review of their conditions, timing and consequences. Check the temporary-protection period and the unresolved German section 24 permit-date conflict separately.
+Apply early enough to understand the effect on your current document. Under §81(4) AufenthG, a timely application before an existing permit expires generally continues that title while the authority decides; §81(3) has a different effect for some lawfully present people without a title. A late application does not automatically preserve the old permit. Read any Fiktionsbescheinigung and its work entry. EU protection ends on 4 March 2028, but the separate German §24 permit-continuation date remains disputed in official sources; use the Temporary Protection draft for that unresolved issue. Family, humanitarian and every other residence route are outside this reviewed route map.
 
 ## SOURCES
 
-AufenthG §16a: https://www.gesetze-im-internet.de/aufenthg_2004/__16a.html
-§16b: https://www.gesetze-im-internet.de/aufenthg_2004/__16b.html
-§18a: https://www.gesetze-im-internet.de/aufenthg_2004/__18a.html
-§18b: https://www.gesetze-im-internet.de/aufenthg_2004/__18b.html
-Germany4Ukraine — change of residence purpose: https://www.germany4ukraine.de/EN/einreise-aufenthalt-und-rueckkehr/ukraine-aufenthaltserlaubnis/seite_node.html
-Make it in Germany — vocational training: https://www.make-it-in-germany.com/en/visa-residence/types/training
-Make it in Germany — qualified work: https://www.make-it-in-germany.com/en/visa-residence/types/work-qualified-professionals/print
+- [AufenthG §16a](https://www.gesetze-im-internet.de/aufenthg_2004/__16a.html)
+- [AufenthG §16b](https://www.gesetze-im-internet.de/aufenthg_2004/__16b.html)
+- [AufenthG §16d](https://www.gesetze-im-internet.de/aufenthg_2004/__16d.html)
+- [AufenthG §18 and skilled-worker definitions](https://www.gesetze-im-internet.de/aufenthg_2004/__18.html)
+- [AufenthG §§18a and 18b](https://www.gesetze-im-internet.de/aufenthg_2004/__18a.html)
+- [AufenthV §39](https://www.gesetze-im-internet.de/aufenthv/__39.html)
+- [AufenthG §5](https://www.gesetze-im-internet.de/aufenthg_2004/__5.html)
+- [AufenthG §81](https://www.gesetze-im-internet.de/aufenthg_2004/__81.html)
+- [Germany4Ukraine — registration and change of residence purpose](https://www.germany4ukraine.de/EN/einreise-aufenthalt-und-rueckkehr/ukraine-aufenthaltserlaubnis/seite_node.html)
+- [Make it in Germany — vocational training](https://www.make-it-in-germany.com/en/visa-residence/types/training)
+- [Make it in Germany — qualified professionals](https://www.make-it-in-germany.com/en/visa-residence/types/work-qualified-professionals/print)

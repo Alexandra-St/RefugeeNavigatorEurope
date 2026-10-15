@@ -2,30 +2,37 @@
 
 > Research draft — unpublished; pending human editorial review. No content in this draft is approved or marked Verified.
 
-**Summary:** Перевірте дозвіл у своєму документі, умови договору й доступні офіційні маршрути консультації або скарги.
+**Summary:** Перевірте відмітку про роботу у своєму документі, основні правила оплати й робочого часу та способи отримати консультацію.
 
 ## ПРАВИЛА
 
-Право на роботу залежить від правової підстави та конкретного документа. §4a AufenthG передбачає, що дозвіл або обмеження зазначаються у посвідці чи супровідному документі. Якщо заява ще розглядається, Fiktionsbescheinigung може містити окрему відмітку про працевлаштування. Не починайте роботу, спираючись лише на загальне пояснення сайту.
+Дозвіл на роботу пов’язаний із вашим правовим статусом і документом, а не лише з громадянством України чи поданням заяви про захист. За §4a AufenthG у дозволі має бути зазначено, чи дозволена робота та які діють обмеження. Перевірте картку й додаток до неї. Fiktionsbescheinigung може містити окрему відмітку про роботу; не вважайте сам факт подання заяви дозволом.
+
+Тимчасовий захист ЄС продовжено до 4 березня 2028 року, але німецькі джерела суперечать одне одному щодо строку дії певних дозволів §24. Тому точну дату завершення права на роботу треба перевірити за власним документом і чинним офіційним правилом; тут не наводиться універсальна дата.
 
 ## ДІЇ
 
-До початку роботи попросіть письмовий договір або підтвердження основних умов і збережіть розрахункові листи та облік часу. Перевірте оплату, години й обов’язки. Загальна мінімальна зарплата з 1 січня 2026 року становить €13,90 брутто за годину; перед використанням цифри перевірте чинне правило та винятки для конкретної роботи.
+До першої зміни перевірте, чи дозволяє ваш документ саме цю роботу, роботодавця й години. Зберігайте копію документа, письмовий договір або підтвердження основних умов, опис посади, графіки та розрахункові листи. Уточніть, як фіксуються брутто-оплата, час, відпустка й випробувальний строк. Для регульованої професії окремо перевірте ліцензію.
+
+Станом на 15 жовтня 2026 року загальна законодавча мінімальна зарплата становила €13,90 брутто за годину з 1 січня 2026 року. Для окремих груп діють винятки, а галузева угода може встановити вищу межу; перед використанням цифри перевірте чинний розмір. Загальний ліміт Закону про робочий час — вісім годин на день; продовження до десяти можливе лише за дотримання законного усереднення.
 
 ## ДЕ ЗВЕРТАТИСЯ
 
-Для дозволу звертайтеся до Ausländerbehörde. Fair Integration надає безкоштовні консультації з трудового й соціального права для людей із міграційним досвідом; мови та доступність залежать від місця. Zoll приймає повідомлення про порушення контролю, але вимогу про невиплачену зарплату зазвичай потрібно відстоювати у цивільному порядку.
+Питання щодо документа про проживання вирішує Ausländerbehörde. Fair Integration безкоштовно консультує людей з міграційним досвідом із трудового та соціального права; перевірте місцевий центр щодо мов і запису. Митна служба Німеччини FKS контролює окремі порушення щодо незареєстрованої роботи й оплати. Повідомлення митниці саме по собі не стягує невиплачену зарплату — це окреме питання консультації та вимоги до роботодавця.
 
 ## НАСТУПНІ КРОКИ
 
-Робочий час і захист працівників регулюються окремо від міграційного дозволу. Німецький закон про робочий час, як правило, встановлює 8 годин на день; подовження до 10 годин можливе лише за умов подальшого усереднення. Суперечність у джерелах щодо строку дозволів §24 залишається відкритою, а мінімальну зарплату та винятки слід повторно перевіряти перед публікацією.
+Якщо формулювання в документі незрозуміле, отримайте письмове роз’яснення до початку або зміни роботи. Якщо заяву розглядають, орієнтуйтеся на точний запис у Fiktionsbescheinigung та умови §81(5a), а не припускайте, що кожна незавершена справа дає право на роботу. Перед публікацією перевірте суперечність щодо продовження §24, актуальну мінімальну зарплату й галузеві винятки. Стаття не визначає право конкретної людини працювати.
 
-## ДЖЕРЕЛА
+## SOURCES
 
-AufenthG §4a: https://www.gesetze-im-internet.de/aufenthg_2004/__4a.html
-AufenthG §81: https://www.gesetze-im-internet.de/aufenthg_2004/__81.html
-BMAS — мінімальна зарплата: https://www.bmas.de/EN/Labour/Minimum-Wage/the-minimum-wage-questions-and-answers.html
-ArbZG §3: https://www.gesetze-im-internet.de/arbzg/__3.html
-Fair Integration: https://www.faire-integration.de/en/
-Zoll — повідомлення: https://www.zoll.de/DE/Privatpersonen/Arbeit/Fragen-Antworten/_akkordeon/frage_4.html
-BMAS — права працівників: https://www.bmas.de/DE/Arbeit/Migration-und-Arbeit/Rechtliches-zu-Einreise-Arbeitsmarktzugang-und-Absicherung/Schutzrechte-fuer-Arbeitnehmerinnen/schutzrechte-fuer-arbeitnehmerinnen-art.html
+- [AufenthG §4a — access to employment](https://www.gesetze-im-internet.de/aufenthg_2004/__4a.html)
+- [AufenthG §81 — pending applications](https://www.gesetze-im-internet.de/aufenthg_2004/__81.html)
+- [Germany4Ukraine — Labour Law](https://www.germany4ukraine.de/EN/arbeit-und-soziales/ukrainer-arbeiten-in-deutschland/seite_node.html)
+- [UkraineAufenthFGV §2](https://www.gesetze-im-internet.de/ukraineaufenthfgv/__2.html)
+- [EU Decision 2026/1912, consolidated](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02026D1912-20260804)
+- [BMAS — minimum wage FAQ](https://www.bmas.de/EN/Labour/Minimum-Wage/the-minimum-wage-questions-and-answers.html)
+- [Working Time Act §3](https://www.gesetze-im-internet.de/arbzg/__3.html)
+- [BMAS — employee protection rights](https://www.bmas.de/DE/Arbeit/Migration-und-Arbeit/Rechtliches-zu-Einreise-Arbeitsmarktzugang-und-Absicherung/Schutzrechte-fuer-Arbeitnehmerinnen/schutzrechte-fuer-arbeitnehmerinnen-art.html)
+- [Fair Integration — advice locator](https://www.faire-integration.de/en/)
+- [German Customs — report suspected violations](https://www.zoll.de/DE/Privatpersonen/Arbeit/Fragen-Antworten/_akkordeon/frage_4.html)

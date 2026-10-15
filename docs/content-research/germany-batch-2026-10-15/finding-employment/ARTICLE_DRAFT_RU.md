@@ -2,32 +2,35 @@
 
 > Research draft — unpublished; pending human editorial review. No content in this draft is approved or marked Verified.
 
-**Summary:** Где искать вакансии, получать консультации и проверять признание квалификации и языковую поддержку.
+**Summary:** Практические отправные точки для поиска вакансий, консультаций, признания квалификации и языковых курсов, а также проверки до начала работы.
 
 ## ПРАВИЛА
 
-Доступ к работе зависит от вашего разрешения и отметок в документе о проживании. Услуги Bundesagentur für Arbeit (Федерального агентства по труду) и Jobcenter зависят от обстоятельств и применимого маршрута поддержки. Не каждый человек обслуживается Jobcenter; у отдельных программ есть собственные условия.
+Вакансия или предложение работы сами по себе не дают разрешения работать. Проверьте запись «Erwerbstätigkeit» в разрешении на проживание или временном документе и ограничения по работодателю, часам или профессии. Bundesagentur für Arbeit (Федеральное агентство по труду, BA) предлагает инструменты поиска и консультации. Jobcenter — отдельное ведомство; оно ведёт дело только если такой маршрут предусмотрен применимой системой выплат и содействия занятости.
 
 ## ДЕЙСТВИЯ
 
-Начните с поиска вакансий и консультации в Федеральном агентстве по труду. Подготовьте краткое резюме и документы об опыте и квалификации; проверьте, регулируется ли ваша профессия и требуется ли официальное признание. Для языковых и профессиональных курсов могут действовать условия допуска и финансирования.
+1. Подготовьте краткое резюме на немецком или английском, контактные данные и список должностей, периодов работы и навыков. Сохраните дипломы, документы об обучении и рекомендации; переводы предоставляйте, если их запросит работодатель или орган признания.
+
+2. Ищите вакансии на портале BA и воспользуйтесь консультацией, чтобы обсудить подходящие должности, документы для отклика и обучение. Уточните доступную поддержку, не предполагая, что оплачиваемый курс или пособие гарантированы.
+
+3. Проверьте, регулируется ли ваша профессия. Если да, используйте портал Recognition in Germany или рекомендации BA, чтобы найти компетентный федеральный орган или ведомство земли. До обещания даты выхода уточните, какие сертификаты, переводы, сборы и компенсационные мероприятия нужны.
 
 ## КУДА ОБРАЩАТЬСЯ
 
-Федеральное агентство по труду предлагает поиск работы, консультации и информацию о признании квалификаций. Jobcenter может быть вашим контактным ведомством, если оно отвечает за выплаты и поддержку в вашей ситуации. Germany4Ukraine также собирает информацию для людей из Украины. Услуги не одинаковы для всех.
+BA — общенациональная отправная точка для поиска вакансий и консультаций. Если вы получаете пособие с проверкой нуждаемости, в письменном решении указано ответственное ведомство Jobcenter или Sozialamt; новоприбывшие не всегда обращаются в Jobcenter. Germany4Ukraine собрал информацию о поддержке для людей из Украины. У интеграционных и профессиональных языковых курсов BAMF есть условия допуска, доступности и иногда оплаты; свой маршрут уточняйте в BAMF или у провайдера.
 
 ## ЧТО ДАЛЬШЕ
 
-Уточните, какое ведомство ведёт ваше дело, какие услуги доступны и соответствует ли ваш документ требованиям для работы. По состоянию на 15 октября 2026 года законопроект об изменении системы выплат ещё не был завершённым законом; возможное изменение роли Jobcenter нужно проверить до публикации. Наличие вакансии само по себе не подтверждает право на работу.
+До согласования даты выхода проверьте разрешение на работу именно в своём документе. Сохраните договор, описание должности и переписку о квалификации. Если законопроект о реформе выплат вступит в силу, маршруты между SGB II/SGB XII и AsylbLG для определённых групп по §24 могут измениться. Проект использует критерии даты выдачи документов и исключения, а не только общую дату прибытия; на 15 октября 2026 года он ещё рассматривался. Это не мешает использовать общий сервис поиска BA, но маршруты Jobcenter и поддержку, связанную с пособиями, нужно перепроверить перед публикацией.
 
-## ИСТОЧНИКИ
+## SOURCES
 
-BA — поиск работы: https://www.arbeitsagentur.de/en/working-in-germany/how-to-find-a-job
-BA — признание квалификаций: https://www.arbeitsagentur.de/en/working-in-germany/professional-qualifications
-BA — консультации: https://www.arbeitsagentur.de/arbeiten-in-deutschland/beratung-unterstuetzung
-Germany4Ukraine — поиск работы: https://www.germany4ukraine.de/EN/arbeit-und-soziales/suche-nach-arbeit-fuer-ukrainer/seite_node.html
-BMAS — законопроект: https://www.bmas.de/DE/Service/Gesetze-und-Gesetzesvorhaben/leistungsrechtsanpassungsgesetz.html
-Recognition in Germany: https://www.arbeitsagentur.de/en/working-in-germany/professional-qualifications
-Germany4Ukraine — интеграционные курсы: https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/integrationskurse/seite_node.html
-Germany4Ukraine — профессиональные языковые курсы: https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/deutsch-lernen/seite.html?nn=734948
-Recognition in Germany — признание квалификации: https://www.anerkennung-in-deutschland.de/html/en/pro/professional-recognition.php
+- [BA — поиск работы](https://www.arbeitsagentur.de/en/working-in-germany/how-to-find-a-job)
+- [BA — консультации и поддержка](https://www.arbeitsagentur.de/arbeiten-in-deutschland/beratung-unterstuetzung)
+- [BA — признание профессиональной квалификации](https://www.arbeitsagentur.de/en/working-in-germany/professional-qualifications)
+- [Germany4Ukraine — поддержка при поиске работы](https://www.germany4ukraine.de/EN/arbeit-und-soziales/suche-nach-arbeit-fuer-ukrainer/seite_node.html)
+- [Recognition in Germany — регулируемые профессии](https://www.anerkennung-in-deutschland.de/html/en/pro/professional-recognition.php)
+- [Germany4Ukraine — интеграционные курсы](https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/integrationskurse/seite_node.html)
+- [BMAS — Leistungsrechtsanpassungsgesetz](https://www.bmas.de/DE/Service/Gesetze-und-Gesetzesvorhaben/leistungsrechtsanpassungsgesetz.html)
+- [DIP Бундестага — статус законопроекта и документы](https://dip.bundestag.de/vorgang/g/329468)

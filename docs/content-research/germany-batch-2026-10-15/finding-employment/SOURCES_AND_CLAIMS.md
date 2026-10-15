@@ -1,39 +1,43 @@
 # Germany × Finding employment in Germany — sources and claim review
 
 **Research checked:** 15 October 2026
-**Editorial status:** unpublished draft; NeedsReview-equivalent; not approved or integrated.
-**Claim labels:** `SUPPORTED`, `PARTIALLY SUPPORTED`, `CONFLICTED`, `UNVERIFIED`.
+**Editorial status:** unpublished draft; all translations remain unapproved and unverified.
+**Claim labels:** `SUPPORTED`, `PARTIALLY SUPPORTED`, `CONFLICTED`, `UNVERIFIED`. A source check date is not a source publication date.
 
 ## Official source register
 
-All destination pages listed below were opened or read directly on 15 October 2026. If no page date is shown, this is stated; the check date is not an update date.
+Pages and current statutory texts were checked directly on 15 October 2026. “No update date displayed” means the source did not expose one; the check date is not represented as an update.
 
-| ID | Issuing authority | Exact page title | Exact URL | Publication/update date or limitation | Claim use |
-|---|---|---|---|---|---|
-| S01 | Federal Employment Agency | Federal Employment Agency — How can I find a job in Germany? | <https://www.arbeitsagentur.de/en/working-in-germany/how-to-find-a-job> | No update date displayed; checked 15 Oct 2026 | BA job search, free advice, application documents, job/training matching and limits of special projects. |
-| S02 | Federal Employment Agency | Federal Employment Agency — Advice and support | <https://www.arbeitsagentur.de/arbeiten-in-deutschland/beratung-unterstuetzung> | No update date displayed; checked 15 Oct 2026 | BA support depends on personal prerequisites; profile/contact and advisory route. |
-| S03 | Germany4Ukraine | Germany4Ukraine — Support when looking for and starting a job | <https://www.germany4ukraine.de/EN/arbeit-und-soziales/suche-nach-arbeit-fuer-ukrainer/seite_node.html> | No page update date displayed; checked 15 Oct 2026 | Ukraine-specific BA/Jobcenter services, current §24 work-document qualifications, recognition, documents. |
-| S04 | Federal Employment Agency | Federal Employment Agency — Professional qualification recognition | <https://www.arbeitsagentur.de/en/working-in-germany/professional-qualifications> | No update date displayed; checked 15 Oct 2026 | Recognition need, responsible authority finder, documents, possible outcomes; responsibility can depend on Land/location. |
-| S05 | Germany4Ukraine | Germany4Ukraine — Integration courses | <https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/integrationskurse/seite_node.html> | No page update date displayed; checked 15 Oct 2026 | Integration course structure, participation documents/application and no general obligation for Ukraine refugees; conditions/possible obligation. |
-| S06 | Germany4Ukraine | Germany4Ukraine — Learning German | <https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/deutsch-lernen/seite.html?nn=734948> | No page update date displayed; checked 15 Oct 2026 | BAMF vocational language courses and eligibility/service navigation. |
-| S07 | Federal Ministry of Labour and Social Affairs (BMAS) | BMAS — Leistungsrechtsanpassungsgesetz | <https://www.bmas.de/DE/Service/Gesetze-und-Gesetzesvorhaben/leistungsrechtsanpassungsgesetz.html> | Checked 15 Oct 2026; tracker says “Im Prozess” and completed law “Noch nicht veröffentlicht” | Pending proposal and its potential effect on benefit and Jobcenter routes; not current enacted law. |
-| S08 | Federal Institute for Vocational Education and Training (BIBB), Recognition in Germany | Professional recognition | <https://www.anerkennung-in-deutschland.de/html/en/pro/professional-recognition.php> | No update date displayed; checked 15 Oct 2026 | Recognition is required for regulated professions; it is not generally required for non-regulated professions; federal/Land regulation applies. |
+| ID | Issuer and exact page/document | Exact URL | Date / relevance |
+| --- | --- | --- | --- |
+| S01 | Federal Employment Agency — How can I find a job in Germany? | https://www.arbeitsagentur.de/en/working-in-germany/how-to-find-a-job | No update date displayed; checked 15 Oct; job-search tools and application guidance. |
+| S02 | Federal Employment Agency — Advice and support | https://www.arbeitsagentur.de/arbeiten-in-deutschland/beratung-unterstuetzung | No update date displayed; checked 15 Oct; advisory route and prerequisites. |
+| S03 | Germany4Ukraine — Support when looking for and starting a job | https://www.germany4ukraine.de/EN/arbeit-und-soziales/suche-nach-arbeit-fuer-ukrainer/seite_node.html | No update date displayed; checked 15 Oct; Ukraine-specific service navigation. |
+| S04 | Federal Employment Agency — recognition of professional qualifications | https://www.arbeitsagentur.de/en/working-in-germany/professional-qualifications | No update date displayed; checked 15 Oct; responsible authority navigation. |
+| S05 | Germany4Ukraine — Integration courses | https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/integrationskurse/seite_node.html | No update date displayed; checked 15 Oct; admission and obligations. |
+| S06 | Germany4Ukraine — Learning German / vocational-language courses | https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/deutsch-lernen/seite.html?nn=734948 | No update date displayed; checked 15 Oct; BAMF vocational-language pathways. |
+| S07 | BMAS — Leistungsrechtsanpassungsgesetz | https://www.bmas.de/DE/Service/Gesetze-und-Gesetzesvorhaben/leistungsrechtsanpassungsgesetz.html | Checked 15 Oct; “Im Prozess”, completion not published; proposal, not current law. |
+| S08 | Recognition in Germany — professional recognition / regulated professions | https://www.anerkennung-in-deutschland.de/html/en/pro/professional-recognition.php | No update date displayed; checked 15 Oct; regulated vs non-regulated occupations. |
+| S09 | SGB II §7 — beneficiaries | https://www.gesetze-im-internet.de/sgb_2/__7.html | Current statute checked 15 Oct; eligibility and exclusions for SGB II. |
+| S10 | SGB II §74 — certain §24 applicants with Fiktionsbescheinigung | https://www.gesetze-im-internet.de/sgb_2/__74.html | Current statute checked 15 Oct; identity-registration and certificate conditions. |
+| S11 | German Bundestag DIP — Leistungsrechtsanpassungsgesetz proceedings | https://dip.bundestag.de/vorgang/g/329468 | Checked 15 Oct 2026; Beratungsstand “Überwiesen”; proposal and records, not enacted law. |
 
 ## Claim review
 
-| Claim ID | Material claim | Direct source passage / section | Status | Conditions, exceptions and limits |
-|---|---|---|---|---|
-| FE01 | The Federal Employment Agency offers job search/advice, application support and help matching qualifications to opportunities; ordinary advice is free. | S01 lines 43–53; S02. | **SUPPORTED** | Specific measures depend on prerequisites; special international projects apply only to selected occupations/countries. |
-| FE02 | A Jobcenter can offer job integration/advice to people in its applicable benefit route; it is not the same authority as Agentur für Arbeit. | S03 support FAQ; current BMAS tracker S07. | **PARTIALLY SUPPORTED** | Jobcenter responsibility for newcomers is potentially affected by pending legislation for a specified cohort. |
-| FE03 | Recognition is mandatory for regulated occupations, and the responsible authority may depend on the intended location/Land. | S08, “When is recognition necessary?”; S04 recognition navigation. | **SUPPORTED** | Recognition is not a universal prerequisite for all jobs; some non-regulated work does not require it. |
-| FE04 | BAMF/other authorized bodies offer integration and vocational language course routes, but eligibility and cost rules apply. | S05, admission; S06. | **PARTIALLY SUPPORTED** | Do not promise free participation or immediate places; confirm with BAMF/course provider. |
+| Claim ID | Material claim and source passage/section | Status | Conditions, exceptions and limits |
+| --- | --- | --- | --- |
+| FE01 | BA offers job-search tools and advice; ordinary search and advisory support can be used as a general starting point. S01–S02. | SUPPORTED | A specific measure, funding or placement is not guaranteed. |
+| FE02 | A Jobcenter is not interchangeable with the BA; its benefit-linked role depends on current eligibility and the case. S03, S09–S10. | PARTIALLY SUPPORTED | §74 is a special route for specified applicants, not every person with a pending §24 application. |
+| FE03 | Recognition is required for regulated professions; authority depends on the qualification/occupation and may be Land-based. S04, S08. | SUPPORTED | Recognition is not a universal prerequisite for every job. |
+| FE04 | BAMF integration and vocational-language course routes exist, subject to admission, availability and fee conditions. S05–S06. | SUPPORTED | No promise of free or immediate course access. |
+| FE05 | The benefits-law proposal is still a proposal: BMAS status is “Im Prozess”, and DIP lists it as referred onward. S07, S11. | SUPPORTED | The proposed document-issuance cutoff, exceptions and Jobcenter/AsylbLG change must not be described as current law. |
 
 ## Unresolved questions and publication gate
 
-- Job search support and case-management route may depend on benefit status and the pending reform; recheck current BA/Jobcenter remit after the bill’s final status is known.
-- Special projects, language classes and recognition-cost assistance have limited eligibility; no universal entitlement is claimed.
-- Verify each linked service is still available and offers the indicated language before publication.
+- BA vacancy search and basic guidance are ready for final verification. Jobcenter and benefit-linked services require a fresh check if the bill advances.
+- Verify that linked services, course admission rules, language availability and recognition finders remain current before publication.
+- Keep the distinction between finding a vacancy and holding work authorization; see the separate Work Authorization draft.
 
 ## Draft limitations
 
-Drafts deliberately avoid individual entitlement determinations, unsupported amounts and universal promises. This review is a point-in-time source check, not a legal opinion. Any law, administrative guidance, threshold or live service must be rechecked immediately before publication.
+These drafts are a navigation aid, not individualized legal advice. Recheck legislation, dates, live services, forms and local procedures immediately before publication. No translation is approved or marked Verified.

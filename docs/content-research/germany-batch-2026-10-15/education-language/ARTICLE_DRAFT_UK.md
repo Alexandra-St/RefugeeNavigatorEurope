@@ -2,30 +2,38 @@
 
 > Research draft — unpublished; pending human editorial review. No content in this draft is approved or marked Verified.
 
-**Summary:** Шкільне навчання організують федеральні землі; курси, професійна освіта й вступ до вишу мають окремі умови.
+**Summary:** Скористайтеся процедурою школи своєї федеральної землі, перевірте вікові права на догляд за дітьми та окремі умови курсів, професійного навчання й вступу до вишу.
 
 ## ПРАВИЛА
 
-Відповідальність за школи й багато освітніх процедур лежить на 16 федеральних землях. Вік обов’язкового навчання, зарахування та мовна підтримка залежать від землі й місцевої школи. Університети самостійно визначають вимоги вступу. Не припускайте, що одна процедура діє по всій Німеччині.
+Школами, обов’язковим навчанням і зарахуванням займаються 16 федеральних земель. Використовуйте актуальні інструкції школи чи органу освіти за місцем проживання дитини; єдиної загальнонаціональної заяви немає.
+
+Догляд за дітьми — не лише питання місцевого розсуду. За §6(2) SGB VIII іноземні родини загалом можуть претендувати на ці послуги, якщо мають законне звичайне місце проживання в Німеччині або Duldung; якщо неясно, який доказ потрібен, уточніть це в місцевому Jugendamt. За §24 дитина до одного року може мати право на догляд, якщо цього вимагає її розвиток або робота, пошук роботи, навчання чи професійна підготовка батьків. Від одного до трьох років дитина має встановлене законом право на ранній розвиток у закладі чи денному догляді; від трьох років до початку школи — право на місце у закладі денного догляду. Із 2026/27 навчального року дитина, яка вступає до першого класу в цьому або наступному навчальному році, має за §24(4) право на догляд у закладі денного перебування від початку навчання до початку п’ятого класу — вісім годин у робочі дні. Час уроків і програм повного дня в початковій школі, включно з відкритими програмами, зараховується до виконання цього права; під час шкільних канікул — якщо державний орган або визнана незалежна організація у сфері допомоги дітям і молоді пропонує заходи молодіжної роботи за §11. Законне право не тотожне місцевому пошуку й розподілу; воно не гарантує конкретного закладу чи негайно вільного місця.
 
 ## ДІЇ
 
-Для дитини зверніться до школи, Schulamt або місцевого органу освіти й запитайте про зарахування та мовну підтримку. Для професійної освіти перевірте вимоги до конкретної Ausbildung. Для вступу до університету зверніться до обраного закладу та перевірте визнання попередньої освіти й мовні вимоги.
+Для школи оберіть землю, де живе дитина, і дотримуйтеся інструкцій міністерства освіти, Schulamt або школи. Зберігайте документи особи, підтвердження адреси та попередні шкільні документи; місцевий орган повідомить, що ще й у якому перекладі потрібно.
+
+Щоб знайти місце в Kita або Kindertagespflege, оберіть федеральну землю на Familienportal, а потім скористайтеся її системою реєстрації. У містах і районах Jugendamt зазвичай допомагає з пошуком чи розподілом. Запитайте про строки, черги, вікові групи, години роботи й місцеві документи. Якщо місця немає, зверніться до Jugendamt щодо альтернатив і порядку реалізації законного права; федеральний закон не гарантує конкретний заклад чи негайну вакансію.
 
 ## ДЕ ЗВЕРТАТИСЯ
 
-Germany4Ukraine та KMK надають офіційні відправні точки щодо шкіл у землях. За інформацією Germany4Ukraine, для біженців з України інтеграційний курс загалом не є обов’язковим, але в окремих випадках обов’язок може існувати. BAMF визначає умови допуску; участь, оплата та доступність залежать від ситуації. Визнання професійної кваліфікації може регулюватися федеральним або земельним законодавством.
+Germany4Ukraine та Конференція міністрів освіти (KMK) дають посилання на інформацію земель про школи. Для пошуку дитячого догляду Familienportal веде до служб кожної землі. Університети самостійно вирішують питання вступу й мовних вимог; National Academic Contact Point Ukraine при DAAD надає орієнтацію, а не рішення про зарахування. Професійне визнання залежить від професії та може регулюватися федеральним або земельним правом.
 
 ## НАСТУПНІ КРОКИ
 
-Порядок запису до закладів догляду за дітьми та наявність місць залежать від місцевих правил. Зверніться до муніципалітету й уточніть процедуру для своєї адреси; цей огляд не описує земельні права чи строки зарахування. Для академічної консультації скористайтеся DAAD National Academic Contact Point Ukraine. Підтвердіть вимоги у відповідній установі: цей огляд не гарантує місця, допуску чи фінансування.
+Перед записом на інтеграційний курс перевірте допуск у BAMF: право, оплата, обов’язок і наявність місць залежать від ситуації. Для професійного навчання потрібні окремий договір, мовні умови та дозвіл на проживання; вступ до вишу — окрема процедура. Якщо ваша мета — регульована професія, почніть із компетентного органу визнання. Зберігайте рішення школи, курсу чи органу визнання й уточнюйте наступний крок у відповідної установи. Цей огляд не гарантує місце в курсі, садку, школі чи університеті.
 
-## ДЖЕРЕЛА
+## SOURCES
 
-Germany4Ukraine — школи: https://www.germany4ukraine.de/EN/bildung-und-forschung/schule/seite_node.html
-KMK — інформація по землях: https://www.kmk.org/en/downloads-dokumente/statistik/schulstatistik/gefluechtete-kinder/jugendliche-aus-der-ukraine.html
-Germany4Ukraine — інтеграційні курси: https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/integrationskurse/seite_node.html
-Germany4Ukraine — німецька мова: https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/deutsch-lernen/seite.html?nn=734948
-Germany4Ukraine — професійна освіта: https://www.germany4ukraine.de/EN/bildung-und-forschung/ausbildung/seite_node.html
-DAAD — контактний пункт: https://www.daad.de/en/the-daad/national-academic-contact-point-ukraine/
-Recognition in Germany — федеральні/земельні правила: https://www.anerkennung-in-deutschland.de/html/en/pro/federal-state-laws.php
+- [Germany4Ukraine — schools](https://www.germany4ukraine.de/EN/bildung-und-forschung/schule/seite_node.html)
+- [KMK — information and contacts for Länder](https://www.kmk.org/en/downloads-dokumente/statistik/schulstatistik/gefluechtete-kinder/jugendliche-aus-der-ukraine.html)
+- [SGB VIII §24 — childcare rights by age](https://www.gesetze-im-internet.de/sgb_8/__24.html)
+- [SGB VIII §6 — scope for non-German residents](https://www.gesetze-im-internet.de/sgb_8/__6.html)
+- [Federal Family Portal — finding a Kita place and local Jugendamt](https://familienportal.de/familienportal/lebenslagen/ausbildung-beruf/kinderbetreuung/wie-finde-ich-einen-kita-platz--155596)
+- [Germany4Ukraine — integration courses](https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/integrationskurse/seite_node.html)
+- [Germany4Ukraine — German learning and vocational language](https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/deutsch-lernen/seite.html?nn=734948)
+- [Germany4Ukraine — vocational training](https://www.germany4ukraine.de/EN/bildung-und-forschung/ausbildung/seite_node.html)
+- [Make it in Germany — vocational training](https://www.make-it-in-germany.com/en/visa-residence/types/training)
+- [DAAD — National Academic Contact Point Ukraine](https://www.daad.de/en/the-daad/national-academic-contact-point-ukraine/)
+- [Recognition in Germany — federal and Land rules](https://www.anerkennung-in-deutschland.de/html/en/pro/federal-state-laws.php)

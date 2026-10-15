@@ -2,32 +2,35 @@
 
 > Research draft — unpublished; pending human editorial review. No content in this draft is approved or marked Verified.
 
-**Summary:** Де шукати вакансії, отримати консультацію та з’ясувати питання визнання кваліфікації й мовної підтримки.
+**Summary:** Практичні відправні точки для пошуку вакансій, консультацій, визнання кваліфікації та мовних курсів — і перевірки перед початком роботи.
 
 ## ПРАВИЛА
 
-Доступ до роботи залежить від вашого дозволу та його записів. Послуги Bundesagentur für Arbeit (Федерального агентства з праці) і Jobcenter залежать від ситуації та відповідного маршруту підтримки. Не кожна людина звертається до Jobcenter, а доступ до окремих програм має свої умови.
+Вакансія чи пропозиція роботи самі по собі не дають дозволу працювати. Перевірте запис «Erwerbstätigkeit» у дозволі на проживання чи тимчасовому документі та будь-які обмеження щодо роботодавця, годин чи професії. Bundesagentur für Arbeit (Федеральне агентство з праці, BA) надає інструменти пошуку й консультації. Jobcenter — окрема установа, яка веде справу лише тоді, коли це передбачено застосовним маршрутом виплат і працевлаштування.
 
 ## ДІЇ
 
-Почніть із пошуку вакансій та консультації в Bundesagentur für Arbeit. Підготуйте коротке резюме, документи про досвід і кваліфікацію; з’ясуйте, чи регульована ваша професія та чи потрібне офіційне визнання. Мовні й професійні курси можуть мати вимоги до допуску та фінансування.
+1. Підготуйте коротке резюме німецькою або англійською, контакти та перелік посад, періодів роботи й навичок. Збережіть дипломи, свідоцтва про навчання й рекомендації; переклад надавайте, якщо його попросить роботодавець чи орган визнання.
+
+2. Шукайте вакансії на порталі BA та скористайтеся консультацією щодо реалістичних посад, документів для відгуку й навчання. Запитайте про доступну підтримку, не припускаючи, що оплачуваний курс чи виплату гарантовано.
+
+3. Перевірте, чи регулюється ваша професія. Якщо так, скористайтеся порталом Recognition in Germany або рекомендаціями BA, щоб знайти компетентний федеральний чи земельний орган. До обіцяної дати початку з’ясуйте, які сертифікати, переклади, збори та компенсаційні заходи потрібні.
 
 ## ДЕ ЗВЕРТАТИСЯ
 
-Bundesagentur für Arbeit пропонує пошук роботи, консультації та інформацію про визнання професійних кваліфікацій. Jobcenter може бути контактною установою, якщо саме він відповідає за ваші виплати й підтримку. Germany4Ukraine також збирає інформацію для людей з України. Програми не є однаковими для всіх.
+BA — загальнонаціональна відправна точка для вакансій і консультацій з працевлаштування. Якщо ви отримуєте допомогу з перевіркою нужденності, у письмовому рішенні зазначено відповідний Jobcenter чи Sozialamt; не кожен новоприбулий має реєструватися в Jobcenter. Germany4Ukraine зібрав інформацію про підтримку людей з України. Інтеграційні та професійні мовні курси BAMF мають умови допуску, доступності та іноді оплати; свій маршрут підтверджуйте в BAMF або провайдера.
 
 ## НАСТУПНІ КРОКИ
 
-Уточніть, хто саме веде вашу справу, які послуги доступні та чи відповідає ваш документ умовам роботи. Законопроєкт про зміну системи допомоги ще не був завершеним законом станом на 15 жовтня 2026 року; можливі зміни ролі Jobcenter треба перевірити перед публікацією. Не сприймайте пошук вакансії як підтвердження права працювати.
+До погодження дати виходу перевірте дозвіл на роботу саме у своєму документі. Зберігайте договір, опис посади й листування щодо кваліфікації. Якщо законопроєкт про реформу виплат набуде чинності, маршрути між SGB II/SGB XII та AsylbLG для визначених груп §24 можуть змінитися. Проєкт використовує критерії дати видавання документів і винятки, а не лише загальну дату прибуття; станом на 15 жовтня 2026 року він ще перебував на розгляді. Це не заважає загальному пошуку роботи через BA, але маршрути Jobcenter та підтримку, пов’язану з виплатами, треба перевірити перед публікацією.
 
-## ДЖЕРЕЛА
+## SOURCES
 
-BA — пошук роботи: https://www.arbeitsagentur.de/en/working-in-germany/how-to-find-a-job
-BA — професійне визнання: https://www.arbeitsagentur.de/en/working-in-germany/professional-qualifications
-BA — консультації: https://www.arbeitsagentur.de/arbeiten-in-deutschland/beratung-unterstuetzung
-Germany4Ukraine — пошук роботи: https://www.germany4ukraine.de/EN/arbeit-und-soziales/suche-nach-arbeit-fuer-ukrainer/seite_node.html
-BMAS — законопроєкт: https://www.bmas.de/DE/Service/Gesetze-und-Gesetzesvorhaben/leistungsrechtsanpassungsgesetz.html
-Recognition in Germany: https://www.arbeitsagentur.de/en/working-in-germany/professional-qualifications
-Germany4Ukraine — інтеграційні курси: https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/integrationskurse/seite_node.html
-Germany4Ukraine — професійна німецька: https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/deutsch-lernen/seite.html?nn=734948
-Recognition in Germany — професійне визнання: https://www.anerkennung-in-deutschland.de/html/en/pro/professional-recognition.php
+- [BA — пошук роботи](https://www.arbeitsagentur.de/en/working-in-germany/how-to-find-a-job)
+- [BA — консультації та підтримка](https://www.arbeitsagentur.de/arbeiten-in-deutschland/beratung-unterstuetzung)
+- [BA — визнання професійної кваліфікації](https://www.arbeitsagentur.de/en/working-in-germany/professional-qualifications)
+- [Germany4Ukraine — допомога з пошуком роботи](https://www.germany4ukraine.de/EN/arbeit-und-soziales/suche-nach-arbeit-fuer-ukrainer/seite_node.html)
+- [Recognition in Germany — регульовані професії](https://www.anerkennung-in-deutschland.de/html/en/pro/professional-recognition.php)
+- [Germany4Ukraine — інтеграційні курси](https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/integrationskurse/seite_node.html)
+- [BMAS — Leistungsrechtsanpassungsgesetz](https://www.bmas.de/DE/Service/Gesetze-und-Gesetzesvorhaben/leistungsrechtsanpassungsgesetz.html)
+- [DIP Бундестагу — статус законопроєкту та документи](https://dip.bundestag.de/vorgang/g/329468)

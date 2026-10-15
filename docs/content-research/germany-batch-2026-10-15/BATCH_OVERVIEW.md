@@ -1,59 +1,54 @@
-# Germany content batch — research overview
+# Germany content batch — editorial completion
 
 **Research checked:** 15 October 2026
-**Editorial state:** 24 unpublished drafts; no translation is Verified or approved.
-**Scope:** Practical navigation for Ukrainians and other people displaced from Ukraine. This package is research and drafting only; it is not legal advice or a production release.
+**Editorial state:** 24 unpublished drafts; all remain unapproved and unverified.
+**Scope:** Eight practical information topics for Ukrainians and other people displaced from Ukraine. Research and drafts only; no content has been integrated into production.
 
-## Article inventory
+## Article inventory and readiness
 
-| # | Topic | Folder | Coverage and current blocker |
+| # | Topic | Folder | Editorial coverage and readiness |
 |---|---|---|---|
-| 1 | Applying for temporary protection and extending residence permission | `temporary-protection-application/` | Eligibility categories, registration/application steps, Fiktionsbescheinigung, work annotation and extension sources. **Blocked:** German §24 permit extension source conflict: current ordinance text and parts of Germany4Ukraine say 4 March 2027; another current Germany4Ukraine work page says 4 March 2028; EU decision 2026/1912 extends EU protection to 2028 but does not itself settle the text on an individual German permit. |
-| 2 | Residence options after temporary protection | `after-temporary-protection/` | Potential employment, study/training and other humanitarian/family routes; no route is automatic. **Incomplete:** this is a route map only; eligibility interactions, application timing and specific transition rules need a dedicated legal review. |
-| 3 | Finding employment | `finding-employment/` | Federal Employment Agency, Jobcenter where applicable, recognition and language support. **Partially blocked:** Jobcenter responsibilities may change under the pending Leistungsrechtsanpassungsgesetz for people arriving from 1 April 2025. |
-| 4 | Work authorization and employee rights | `work-authorization-rights/` | Status/document-specific work permission, contract checks, current minimum wage, working-time rules and support/complaint routes. **Blocked for blanket §24 work-right duration** by the extension discrepancy in article 1. |
-| 5 | Accessing healthcare | `healthcare/` | Health-cover pathways, doctors, emergency numbers and psychosocial support. **Incomplete:** health access is tied to benefit/status categories and the pending benefits bill; local procedures and individual cover must be verified. |
-| 6 | Finding accommodation | `housing/` | Initial placement, rental navigation, address registration and housing-cost support. **Incomplete:** practical allocation, rent/deposit rules and assistance vary by state and municipality; older Ukraine portal passages do not resolve current post-2025 benefit changes. |
-| 7 | Education and language learning | `education-language/` | State-led school access, childcare referral, training, universities, BAMF courses and qualification recognition. **Partially complete:** school and higher-education processes vary by Land and institution; childcare availability is local. |
-| 8 | Financial and social assistance | `social-assistance/` | Current statutory schemes, Jobcenter/Sozialamt and application navigation. **Blocked:** the federal benefits-law bill is still marked “not yet published” by BMAS at the check date; do not publish a post-1 April 2025 benefit assignment until enacted text and commencement/transition rules are rechecked. |
+| 1 | Applying for temporary protection and extending residence permission | `temporary-protection-application/` | Distinguishes 90-day no-title stay, EU temporary-protection eligibility, German §24 permit, application/document effects and military-obligation rules. **BLOCKED:** German 2027/2028 permit-continuation conflict and EU continuity wording vs broader portal description. |
+| 2 | Residence options after temporary protection | `after-temporary-protection/` | Practical conditional routes for training, study, recognition measures and skilled work; §39 in-country application rule and §81 timing effects. Family/humanitarian routes expressly excluded. **READY FOR FINAL VERIFICATION.** |
+| 3 | Finding employment | `finding-employment/` | BA vacancy/advice route, CV/documents, regulated-profession recognition, BAMF courses and Jobcenter distinction. Benefit-reform status is attributed. **READY FOR FINAL VERIFICATION.** |
+| 4 | Work authorization and employee rights | `work-authorization-rights/` | Actual document/work-entry check, contract/pay/hour basics, advice and enforcement routes. **BLOCKED:** do not state a blanket §24 end date while official sources conflict. |
+| 5 | Accessing healthcare | `healthcare/` | Distinct insurance/benefit pathways, what to bring, routine/urgent/emergency care and regional psychosocial support. **BLOCKED pending final verification** of proposed health/benefit changes and transition. |
+| 6 | Finding accommodation | `housing/` | Initial placement vs private rental, documents to keep, scheme-dependent cost support and address registration. Local routes are explicitly not national entitlements. **READY FOR FINAL VERIFICATION.** |
+| 7 | Education and German-language learning | `education-language/` | Land school routes, age-specific §24 SGB VIII childcare rights, Jugendamt/Familienportal search, course and institution conditions. **READY FOR FINAL VERIFICATION.** |
+| 8 | Financial and social assistance | `social-assistance/` | Current SGB II, §74, AsylbLG and conditional Kindergeld routes are explained separately from the proposed reform. **BLOCKED pending final verification** of the bill’s enactment, effective date and transition. |
 
-## Research coverage and source counts
+“Ready for final verification” is not approval or publication readiness. It means the reviewed claims are sufficiently grounded for a final point-in-time source and editorial check.
 
-| Article | Primary official pages/documents recorded |
-|---|---:|
-| 1. Temporary protection | 8 |
-| 2. After temporary protection | 7 |
-| 3. Finding employment | 8 |
-| 4. Work authorization and employee rights | 8 |
-| 5. Healthcare | 10 |
-| 6. Housing | 6 |
-| 7. Education and language learning | 8 |
-| 8. Social assistance | 8 |
-| **Total source entries** | **63** |
+## Corrections and evidence review
 
-A source can appear in more than one topic because it supports distinct claims. Sources were opened on 15 October 2026. Where a source had no displayed publication/update date, that is stated in its source register; the check date is not represented as a source update date.
+- Added UkraineAufenthÜV §2(3), effective for covered entries from 9 October 2026, and distinguished this German 90-day title-exemption condition from the EU military condition for new grants of temporary protection. No universal proof checklist is invented.
+- Preserved the 4 March 2028 EU temporary-protection period separately from the UkraineAufenthFGV §2 continuation language through 4 March 2027 for specified German permits. The Germany4Ukraine registration page says 2027; its labour page says 2028. This remains a real, attributed publication blocker.
+- Compared the EU corrigendum’s continuity carve-out (same Member State; continuous temporary protection by/after 4 August 2026) with the 23 September Germany4Ukraine notice’s broader “already living in the EU” wording. The mismatch is recorded as conflicted; drafts do not silently adopt the broader phrasing.
+- Corrected the after-protection matrix’s AR01 statute mapping, AR02 source mismatch and AR03 reference to nonexistent S08. Rebuilt source mappings against each matrix’s source register; all claim IDs now point to listed sources.
+- Added federal childcare rights, their §6(2) lawful-residence/Duldung scope, and the federal Kita/Jugendamt locator. The school-age right now states the eight-hour weekday scope and how lessons, all-day school and holiday provision count under §24(4); statutory rights remain distinct from local allocation and actual availability.
+- Added BA Kindergeld eligibility and application steps: qualifying §24 document, parent/child location requirements, supporting evidence, forms and responsible Familienkasse. No award is promised.
+- Rechecked the Leistungsrechtsanpassungsgesetz on BMAS, Bundestag DIP and the bill text. The records checked on 15 October show a bill still in process, not enacted law. The social-assistance matrix now traces proposed work-seeking, health and transition clauses separately from current rules; housing implications are stated conditionally against current scheme-specific statutes.
+- Expanded all 24 drafts with practical, conditional steps and kept UK/EN/RU dates, legal conditions, exceptions, terminology and publication cautions aligned.
 
-## Major findings and unresolved legal issues
+## Remaining legal issues and incomplete scope
 
-1. **EU protection duration and German permit validity must be kept distinct.** Council Implementing Decision (EU) 2026/1912 extends the relevant EU temporary protection until 4 March 2028. Its corrigendum changes the date for the military-obligation provision’s application to 5 August 2026 and its continuity carve-out to 4 August 2026. The German UkraineAufenthFGV consolidated text still says qualifying permits valid on 1 February 2026 continue until 4 March 2027. Current Germany4Ukraine pages are internally inconsistent: one says 2027, while the work page and another current version say 2028. The German national rule for an individual document after 4 March 2027 must be freshly reconciled before publication.
-2. **Protection eligibility is category-specific.** Germany4Ukraine lists Ukrainian nationals resident in Ukraine before 24 February 2022, defined family members, people with international/equivalent protection in Ukraine and certain permanent residents. It separately says the extension regulation ceased to apply to some third-country nationals/stateless people from 5 March 2025. A reader’s nationality, prior residence/status and family facts matter.
-3. **Registration, residence-permit application, address registration and social-benefit application are distinct steps**, even when local authorities process some together. The arrival/proof document is not itself a residence permit.
-4. **Pending work permission is document-specific.** The official portal states that the authority may note “Erwerbstätigkeit erlaubt” on a Fiktionsbescheinigung. Avoid asserting that every pending application authorizes work without checking the issued document and statutory basis.
-5. **The benefits-law transition is unresolved for publication.** BMAS’s tracker, checked on 15 October 2026, identifies the Leistungsrechtsanpassungsgesetz as still in process and says the bill has not yet been published as a completed law. Its intended cutoff concerns people entering from 1 April 2025. Current SGB II/SGB XII/AsylbLG statutes and Ukraine-specific portal pages do not justify treating the proposed transition as enacted.
-6. **Federal/state/municipal responsibilities differ.** Residence documents are handled by the competent Ausländerbehörde; BA and Jobcenter functions depend on the applicable service/benefit route; school law and much qualification recognition are Land-level; housing allocation and services are local.
+1. **German permit extension:** EU protection through 4 March 2028 does not settle the separate text of UkraineAufenthFGV §2. The 2027/2028 official-source inconsistency must be reconciled before articles 1 and 4 can pass final verification.
+2. **Military-obligation rule:** EU text, corrigendum, the Germany4Ukraine explanation and the new German no-title exemption have distinct scopes. Clarify how the same-Member-State continuity carve-out is applied when a person moves between Member States, and which evidence the competent process accepts.
+3. **Benefits bill:** its current parliamentary status is not enactment. Final text, document-issuance criteria and exceptions, commencement, transition and health/housing effects must be checked before articles 5 and 8 are cleared.
+4. **Local variation:** school, childcare, accommodation, benefit and service procedures differ by Land/municipality. No exhaustive guide for all 16 Länder is included. Add targeted local links only when the intended Länder are selected.
+5. **Excluded claims:** family/humanitarian residence routes after protection, individual benefit eligibility/amounts, universal insurance or care, and guaranteed local placements remain outside the drafts. They must not be inferred from the current articles.
+6. **Dynamic details:** wages, forms, service availability and procedure pages need rechecking at final publication time.
 
-## Translation completeness and consistency
+## Source and translation validation
 
-All eight topics have Ukrainian, English and Russian drafts (24 total). The versions preserve the same scope, conditions, cautions and blocked issues. German administrative terms are retained with a short explanation on first use. The drafts are intentionally concise and not polished for publication. A bilingual legal editor should review the legal terminology, especially the §24 extension discrepancy, health/benefit interaction and the pending benefits bill.
+- Eight claim matrices audited; source IDs and section references were corrected and checked against each register. No claim points to an absent source ID.
+- Critical law claims were checked against the current consolidated statutes, EU Decision 2026/1912 and its corrigendum, plus the named federal guidance. BMAS and DIP were checked for the bill’s status.
+- The eight article matrices contain 93 source entries after this review, including 30 newly added official-source entries; repeated sources support different topics. Six directly checked sources were added to document the proposed bill, scheme-specific housing and healthcare rules, and the statutory scope of childcare services.
+- All 24 UK/EN/RU drafts were updated. The three versions preserve the same dates, conditions, exceptions, procedures, source conflict attribution and limitations.
+- No claim is marked `Verified` or `Published`; all content remains unpublished.
 
-## Potential blockers and recommended editorial corrections
+## Publication readiness
 
-- Hold definitive statements on the validity date of German §24 permits until BMJ/BMI and Germany4Ukraine materials agree with the operative national regulation.
-- Recheck the newly applicable EU military-obligation condition against German implementation and avoid implying it retroactively changes people who continuously held protection by the corrigendum’s date.
-- Hold the post-1 April 2025 social-assistance assignment and related health-cover statements until the benefits bill is enacted or formally abandoned, its effective date is known, and transition provisions are checked.
-- Before publication, add the current official Länder school, childcare, accommodation and local-benefit links for the intended audience. Do not generalize Berlin-specific processes.
-- Recheck dynamic figures (minimum wage and any cost thresholds) immediately before publication; this package includes only a dated 2026 minimum-wage figure in the employment-rights draft.
+**Four articles are ready for final verification; four remain blocked by identified time-sensitive legal issues. The Germany batch as a whole is not ready for production integration or publication.**
 
-## Readiness for editorial review
-
-**Ready for batch editorial review with disclosed blockers; not ready for production integration or publication.** Articles 1, 4, 5, 6 and 8 contain explicit publication blocks or incomplete scope notes. Articles 2, 3 and 7 are service-navigation drafts but still require content/editorial review and a current-source recheck. No content was added to production catalogs, no status was assigned, and no deployment was performed.
+No production catalogs, application code, tests, deployment settings or other-country content were changed. No deployment was performed.
