@@ -26,7 +26,8 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
         "b1e4aed1-bbaf-4f09-9468-74000bf96430",
         "19afdd19-e2cc-4da6-bde3-6dc3d64b7503",
         "1a19c1f9-1111-4d60-8490-da548f33083f",
-        "fee9dcf0-447d-4402-92a2-8b1bec125944"
+        "fee9dcf0-447d-4402-92a2-8b1bec125944",
+        "35da68f6-8880-40b2-9b3f-eb2b809b1caf",
     ];
     private static readonly string[] ExcludedSourceUrls =
     [
@@ -71,7 +72,7 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
 
         Assert.All(ExistingDenmarkArticleIds, id =>
             Assert.Contains(catalog.InformationEntries, entry => entry.Id == Guid.Parse(id) && entry.CountryId == DenmarkId));
-        Assert.Equal(7, catalog.InformationEntries.Count(entry => entry.CountryId == DenmarkId));
+        Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == DenmarkId));
         var previous = Assert.Single(catalog.InformationEntries, entry => entry.Id == ExistingAfterProtectionId);
         Assert.Equal(CategoryId, previous.CategoryId);
         Assert.Contains(catalog.InformationEntryTranslations, item =>

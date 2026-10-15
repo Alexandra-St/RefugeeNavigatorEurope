@@ -133,9 +133,15 @@ public sealed class DenmarkAfterProtectionArticleTests
                 [nameof(Category.CountrySlug)] = "denmark",
                 [nameof(Category.CategorySlug)] = "employment"
             });
-        Assert.Contains("Workindenmark provides job listings in English", WebUtility.HtmlDecode(html));
-        Assert.DoesNotContain("entry-section-heading", html);
-        Assert.DoesNotContain("class=\"entry-list\"", html);
+        var existingArticle = System.Text.RegularExpressions.Regex.Match(
+            html,
+            $"<article class=\"information-entry\" aria-labelledby=\"entry-heading-{ExistingEmploymentEntryId:N}\"[^>]*>(.*?)</article>",
+            System.Text.RegularExpressions.RegexOptions.Singleline);
+        Assert.True(existingArticle.Success);
+        var existingArticleHtml = existingArticle.Groups[1].Value;
+        Assert.Contains("Workindenmark provides job listings in English", WebUtility.HtmlDecode(existingArticleHtml));
+        Assert.DoesNotContain("entry-section-heading", existingArticleHtml);
+        Assert.DoesNotContain("class=\"entry-list\"", existingArticleHtml);
     }
 
     [Fact]

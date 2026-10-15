@@ -25,7 +25,8 @@ public sealed class DenmarkHousingArticleTests
         "2d106fd3-e981-4ef9-9733-568b654dfca5",
         "b1e4aed1-bbaf-4f09-9468-74000bf96430",
         "fee9dcf0-447d-4402-92a2-8b1bec125944",
-        "1a19c1f9-1111-4d60-8490-da548f33083f"
+        "1a19c1f9-1111-4d60-8490-da548f33083f",
+        "35da68f6-8880-40b2-9b3f-eb2b809b1caf",
     ];
     private static readonly string[] RequiredSources =
     [
@@ -82,7 +83,7 @@ public sealed class DenmarkHousingArticleTests
 
         Assert.All(ExistingDenmarkArticleIds, id =>
             Assert.Contains(catalog.InformationEntries, entry => entry.Id == Guid.Parse(id) && entry.CountryId == DenmarkId));
-        Assert.Equal(7, catalog.InformationEntries.Count(entry => entry.CountryId == DenmarkId));
+        Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == DenmarkId));
     }
 
     [Theory]

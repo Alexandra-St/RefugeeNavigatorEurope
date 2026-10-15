@@ -16,11 +16,13 @@ Employers must check a foreign employee’s right to work. Show your actual resi
 
 ## Employment contracts
 
-The written-information rules generally cover employees whose predetermined or actual working time exceeds an average of 3 hours per week over 4 consecutive weeks. Hours with employers in the same company, group or entity are counted together. The rules also cover work where no guaranteed amount of paid hours was set before employment began. Seafarers are covered by separate legislation. Statutory collective-agreement exceptions apply: some written-information and minimum-terms duties may be met through an agreement that provides at least equivalent protection, and specified provisions do not apply to agreements made by the most representative labour-market parties, covering all Denmark and ensuring overall protection. Whether an exception applies depends on the agreement and legal conditions.
+The written-information rules generally cover employees whose predetermined or actual working time averages more than 3 hours a week over 4 consecutive weeks. Hours worked for employers in the same company, group or entity are combined. The rules also cover employment where no guaranteed amount of paid hours was set before work began. Seafarers are covered by separate legislation. A qualifying collective agreement may replace some statutory requirements if it provides equivalent protection or meets the law’s specific conditions. Whether an exception applies depends on the agreement and the law.
 
-Essential employment terms must be provided in writing. Some specified information is due no later than 7 calendar days after employment starts; other information is due no later than one month after it starts. These are delivery deadlines, not a minimum job duration or the threshold for legal coverage.
+Where these rules apply, essential employment terms must be provided in writing. Some specified information is due within 7 calendar days after employment starts; other information is due within one month. These are information-delivery deadlines, not a minimum job duration or the threshold for legal coverage.
 
-Read the terms when you receive them and keep a copy. Check whether you are employed full-time, part-time, temporarily or in another category, and whether a collective agreement applies. There is no single probation period or notice period for every worker. Your terms depend on the law that covers your job, your contract and any collective agreement; the employer is not required by law to translate the contract.
+Depending on the job, written information can cover the employer and employee, the job and start date, pay and payment frequency, working hours and overtime arrangements, holiday arrangements, notice terms, any probation period, and applicable collective agreements. The exact terms depend on the work and the rules that apply to it.
+
+Read what you receive and keep a copy. There is no single probation or notice period for every worker. If terms are unclear, ask your employer or union.
 
 ## Salary and working hours
 
@@ -42,7 +44,7 @@ If you start a job, contact the Danish Tax Agency (SKAT) about a tax card and th
 
 Keep your expected income and relevant deductions updated in your preliminary income assessment (forskudsopgørelse) so monthly tax withholding can reflect your circumstances. Which deductions apply depends on your situation.
 
-A tax card, tax number and CPR number serve different administrative purposes. None of them replaces residence or work permission. If you are waiting for a Special Act decision, follow the Immigration Service’s instructions and confirm the tax-card route with SKAT.
+A CPR number, a personal tax number where relevant, and a tax card are used for registration or tax purposes; none is a residence permit or gives work permission by itself. If you are waiting for a Special Act decision, follow the Immigration Service’s instructions and confirm the tax-card route with SKAT.
 
 ## Workplace rights and where to raise a concern
 
