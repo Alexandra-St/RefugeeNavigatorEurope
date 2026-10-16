@@ -2,17 +2,17 @@
 
 **Verification date:** 16 October 2026
 **Baseline reviewed:** `49ba3d5a30cfcc444689b2fe2015cf6111001fe5`
-**Scope:** Eight evidence matrices and 24 unpublished drafts (UK/EN/RU). No production catalogs, application files, tests, deployment settings or other-country content were changed.
+**Scope:** Evidence review for eight Germany articles and 24 UK/EN/RU translations. The editorial decision is now reflected in the production catalogs; all 24 statuses remain `NeedsReview (0)`. No deployment settings or other-country content were changed, and nothing was deployed.
 
 ## Findings from primary sources
 
 ### Temporary protection and German residence permits
 
-Council Implementing Decision (EU) 2026/1912, Article 1, extends EU temporary protection until **4 March 2028**. That EU period does not itself amend or determine the validity of an individual German residence permit.
+Council Implementing Decision (EU) 2026/1912, Article 1, extends EU temporary protection through **4 March 2028**. This concerns EU temporary protection and does not itself determine the validity of an individual German residence permit.
 
-As checked on 16 October, the current consolidated UkraineAufenthFGV §§2–3—last amended on 22 October 2025—say that specified §24 permits valid on 1 February 2026 continue through **4 March 2027** and that the regulation expires on that date. Germany4Ukraine’s registration page contains inconsistent 2028 statements: it describes the February 2026 cohort as continuing until March 2028 and separately announces a further automatic extension for Ukrainian permits still valid on 1 February 2027. The Germany4Ukraine labour page also says §24 permits are currently valid until March 2028. The consolidated ordinance does not yet reflect that later extension. No source was used to infer a personal title expiry or work right.
+As checked on 16 October, the current consolidated UkraineAufenthFGV §§2–3—last amended on 22 October 2025—provide through **4 March 2027** for specified §24 permits valid on 1 February 2026, subject to the regulation’s conditions. The directly opened Germany4Ukraine registration-page variants also displayed the 2027 date for the specified cohort. These statements concern distinct legal scopes; they do not establish an individual permit date or work authorization.
 
-This is an unresolved inconsistency in official legal/administrative information, not a basis to guess. Articles 1, 2 and 4 now identify the current statutory text, attribute the portal statements, separate EU protection from national permit validity, and tell readers to obtain written confirmation from the competent Ausländerbehörde before relying on an individual expiry date. The Temporary Protection and Work Authorization matrices retain `CONFLICTED` evidence labels.
+The Germany4Ukraine Labour Law page could not be opened directly on 15 or 16 October. An indexed snippet was not independently verified and is not evidence of the page’s content. The related 2028 assertion and any claim of a contradiction based on that snippet are excluded from the articles and production source catalog. Do not infer an individual validity or work outcome; direct readers to check their document with the competent Ausländerbehörde.
 
 ### Military-obligation conditions
 
@@ -34,20 +34,20 @@ The current SGB VIII §24(1) includes the specified parent circumstances for sup
 
 | # | Article | Status | Basis and retained qualification |
 |---|---|---|---|
-| 1 | Temporary protection application and permit extension | **READY FOR INTEGRATION** | Eligibility, 90-day stay, §24, pending applications and military rules remain distinct. Both permit-date and military-guidance inconsistencies are explicit; no individual decision is given. |
-| 2 | Residence options after temporary protection | **READY FOR INTEGRATION** | Training, study, recognition and skilled-work routes remain conditional. §39 is a procedural route, not approval; §81 effects depend on the case. Date uncertainty is cross-referenced without an individual expiry claim. |
+| 1 | Temporary protection application and permit extension | **READY FOR INTEGRATION** | Eligibility, 90-day stay, §24, pending applications and military rules remain distinct. The EU protection period and German permit rule have different scopes; the military-guidance discrepancy is attributed. No individual decision is given. |
+| 2 | Residence options after temporary protection | **READY FOR INTEGRATION** | Training, study, recognition and skilled-work routes remain conditional. §39 is a procedural route, not approval; §81 effects depend on the case. EU and German permit scopes are distinguished without an individual expiry claim. |
 | 3 | Finding employment | **READY FOR INTEGRATION** | BA search/advice, Jobcenter and benefit eligibility remain distinct. No placement, benefit or work authorization is promised; the bill is proposal-only. |
-| 4 | Work authorization and employee rights | **READY FOR INTEGRATION** | Actual document/work entry controls the guidance. No universal §24 expiry date is given; written authority confirmation is required where unclear. |
+| 4 | Work authorization and employee rights | **READY FOR INTEGRATION** | Actual document/work entry controls the guidance. EU and German permit dates are kept distinct; no individual expiry or work permission is inferred. |
 | 5 | Healthcare | **READY FOR INTEGRATION** | Coverage and access are scheme- and status-dependent. Current statutes and the pending proposal are separated; no universal free care, insurance, interpretation or psychotherapy claim. |
 | 6 | Housing | **READY FOR INTEGRATION** | Initial placement, private rental, registration and scheme-based cost support remain distinct. Local availability and benefit eligibility are not guaranteed. |
 | 7 | Education and German-language learning | **READY FOR INTEGRATION** | Corrected age-based childcare conditions, holiday closure caveat, Land-specific school route, and separate course/institution requirements. |
 | 8 | Social assistance | **READY FOR INTEGRATION** | Current SGB II, §74, AsylbLG, SGB XII and conditional Kindergeld routes remain separate; the bill is not described as law and no award is guaranteed. |
 
-The two official-source inconsistencies do not become individual eligibility rules in the drafts. Their exact scope is stated, readers are directed to the competent authority, and the text avoids telling a reader which date or outcome applies personally. On that basis, each draft is suitable for integration as qualified navigation content; human editorial approval remains necessary.
+The verified military-guidance discrepancy is explained separately from the EU and German permit scopes. The inaccessible Labour Law page’s indexed snippet is not treated as a source contradiction. Readers are directed to the competent authority, and the text avoids individual eligibility or permit-validity conclusions. On that basis, each draft is suitable for integration as qualified navigation content; human editorial approval remains necessary.
 
 ## Corrections and synchronization
 
-- Temporary Protection (UK/EN/RU): added the 16 October date check, the current law’s 2027 rule, the conflicting and prospective Germany4Ukraine 2028 statements, and written-confirmation guidance.
+- Temporary Protection (UK/EN/RU): distinguishes EU protection through 2028 from the current German rule through 2027 for a specified permit cohort. The inaccessible Labour Law page’s indexed snippet is excluded as evidence; readers are directed to check their document.
 - Residence after protection and Work Authorization (UK/EN/RU): aligned their cross-references with that same legal distinction; no universal end date was added.
 - Education (UK/EN/RU): added the §24(1) SGB II work-integration condition and §24(4) four-week school-holiday closure qualification.
 - Finding Employment, Healthcare, Housing and Social Assistance (UK/EN/RU): updated bill-status statements from the 15 to 16 October check; proposal language remains conditional.
@@ -57,7 +57,7 @@ The two official-source inconsistencies do not become individual eligibility rul
 ## Official evidence checked
 
 - [UkraineAufenthFGV current consolidated text](https://www.gesetze-im-internet.de/ukraineaufenthfgv/UkraineAufenthFGV.pdf) — specified permit cohort and current end date.
-- [Germany4Ukraine registration guidance](https://www.germany4ukraine.de/EN/einreise-aufenthalt-und-rueckkehr/ukraine-aufenthaltserlaubnis/seite_node.html) and [labour guidance](https://www.germany4ukraine.de/EN/arbeit-und-soziales/ukrainer-arbeiten-in-deutschland/seite_node.html) — conflicting 2027/2028 statements and announced later extension.
+- [Germany4Ukraine registration guidance](https://www.germany4ukraine.de/EN/einreise-aufenthalt-und-rueckkehr/ukraine-aufenthaltserlaubnis/seite_node.html) — the directly opened page variants displayed 4 March 2027 for the specified cohort. The separate Labour Law page was inaccessible; its indexed snippet is not source evidence and is not used.
 - [EU Decision 2026/1912](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02026D1912-20260804) and [official corrigendum](https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32026D1912R%2801%29) — EU protection period, military condition, same-Member-State exception and corrected application dates.
 - [UkraineAufenthÜV §2](https://www.gesetze-im-internet.de/ukraineaufenth_v/__2.html) — German 90-day title exemption and §2(3).
 - [Germany4Ukraine military notice, 23 September 2026](https://www.germany4ukraine.de/SharedDocs/Meldungen/EN/2026/verlaengerung-schutz.html) — portal explanation compared against the corrected EU text.
@@ -66,11 +66,11 @@ The two official-source inconsistencies do not become individual eligibility rul
 
 ## Source-access limitations
 
-The Germany4Ukraine labour page could not be retrieved directly in this final check; its statement is reported only as an official indexed search result and remains conflicted. Direct HTML extraction for the consolidated UkraineAufenthÜV page and EUR-Lex pages was incomplete; the relevant official text was checked through the official indexed result and/or official PDF/corrigendum. The BMAS page and Bundestag bill PDF were accessible; DIP status was confirmed from its official indexed record. No inaccessible page is represented as directly read.
+The Germany4Ukraine Labour Law page could not be retrieved directly in this check. Its indexed snippet was not independently verified, is not treated as evidence, and does not support an article claim or a confirmed contradiction. Direct HTML extraction for the consolidated UkraineAufenthÜV page and EUR-Lex pages was incomplete; the relevant official text was checked through the official indexed result and/or official PDF/corrigendum. The BMAS page and Bundestag bill PDF were accessible; DIP status was confirmed from its official indexed record. No inaccessible page is represented as directly read.
 
 ## Remaining checks before publication
 
-- Recheck the operative ordinance and Germany4Ukraine pages; retain exact source attribution and written-confirmation guidance unless an authoritative update resolves the conflict.
+- Recheck the operative ordinance and accessible Germany4Ukraine pages before publication. If the Labour Law page remains unavailable, do not rely on indexed snippets or describe their contents as established facts.
 - Recheck implementation of the EU same-Member-State carve-out for cross-state moves and the evidence accepted by German authorities.
 - Recheck the benefits bill at release time; if enacted, verify publication, effective date, affected document categories, exceptions and transitions, then synchronize the four affected topics.
 - Refresh dynamic services, local links, Land/municipal procedures and time-sensitive amounts at publication.
@@ -78,4 +78,4 @@ The Germany4Ukraine labour page could not be retrieved directly in this final ch
 
 ## Integration decision
 
-**All eight articles: READY FOR INTEGRATION, subject to the qualifications above and human editorial approval.** The underlying official inconsistencies remain unresolved, are clearly attributed, and are not turned into personal legal conclusions. Nothing was integrated, published or deployed in Phase 6.3.
+**All eight articles: editorial evidence policy applied.** The EU/German dates are described as different legal scopes, while the directly verified military-guidance discrepancy remains attributed and qualified. No individual legal conclusion is made. This update did not deploy content.

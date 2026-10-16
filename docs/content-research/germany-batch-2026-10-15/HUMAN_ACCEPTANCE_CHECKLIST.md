@@ -3,7 +3,7 @@
 **Batch:** 15 October 2026 integration, final focused verification dated 16 October 2026.
 **Purpose:** Record human review of the eight integrated Germany articles before any publication decision. This checklist is not legal advice, source re-verification, publication approval, or deployment approval.
 
-All 24 translations currently have `VerificationStatus.NeedsReview (0)`. Keep each status unchanged unless the project owner separately approves a status change. The source links below are selected from the existing article source registers; they were not rechecked as part of this checklist preparation.
+All 24 translations currently have `VerificationStatus.NeedsReview (0)`. Keep each status unchanged unless the project owner separately approves a status change. The source links below are selected from the article source registers; they were not rechecked as part of this checklist preparation. The inaccessible Germany4Ukraine Labour Law URL is included only as a direct-access follow-up, not as evidence.
 
 ## 1. Applying for Temporary Protection and Checking Residence Dates
 
@@ -14,14 +14,14 @@ All 24 translations currently have `VerificationStatus.NeedsReview (0)`. Keep ea
 **Critical legal qualifications**
 
 - Keep EU temporary protection through 4 March 2028 distinct from the current consolidated German ordinance rule through 4 March 2027 for its specified permit cohort.
-- Attribute the conflicting Germany4Ukraine 2028 statements; do not infer an individual permit expiry or work authorization.
+- Keep the EU protection period through 4 March 2028 distinct from the German ordinance rule through 4 March 2027 for its specified permit cohort. Do not rely on the inaccessible Labour Law page’s indexed snippet or infer individual permit validity or work authorization.
 - Keep the corrected same-Member-State military-rule exception distinct from Germany’s separate UkraineAufenthÜV §2(3) condition for the 90-day title exemption.
 
 **Important sources to recheck:** [UkraineAufenthFGV §2](https://www.gesetze-im-internet.de/ukraineaufenthfgv/__2.html); [Germany4Ukraine residence guidance](https://www.germany4ukraine.de/EN/einreise-aufenthalt-und-rueckkehr/ukraine-aufenthaltserlaubnis/seite_node.html); [EU Decision 2026/1912](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02026D1912-20260804) and its [corrigendum](https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32026D1912R%2801%29); [Germany4Ukraine military notice](https://www.germany4ukraine.de/SharedDocs/Meldungen/EN/2026/verlaengerung-schutz.html).
 
-**Outstanding editorial questions:** Are the two date positions clearly attributed and the unresolved conflict prominent in all languages? Is the same-Member-State condition understandable without implying that presence anywhere in the EU qualifies? Does the text direct readers with individual uncertainty to the competent authority without deciding their case?
+**Outstanding editorial questions:** Are the different EU and German legal scopes clear in all languages, without implying a conflict or an individual outcome? Is the same-Member-State condition understandable without implying that presence anywhere in the EU qualifies? Does the text direct readers with individual uncertainty to the competent authority without deciding their case?
 
-**Acceptance criteria:** Confirm equivalent UK/EN/RU meaning for both conflicts, the separate §2(3) rule, and the authority-check instruction; no individual expiry, eligibility, or work outcome is promised.
+**Acceptance criteria:** Confirm equivalent UK/EN/RU meaning for the separate EU/German date scopes, the verified military-guidance discrepancy, the separate §2(3) rule, and the authority-check instruction; no individual expiry, eligibility, or work outcome is promised.
 
 ## 2. Residence Options After Temporary Protection
 
@@ -33,13 +33,13 @@ All 24 translations currently have `VerificationStatus.NeedsReview (0)`. Keep ea
 
 - Training, study, recognition, and skilled-work routes each have their own requirements; none is an automatic conversion from §24.
 - Section 39 is a procedural route, not approval. Application timing and pending status under §81 depend on the person’s circumstances.
-- The article does not determine family or humanitarian routes and must retain its cross-reference to the unresolved permit-date issue.
+- The article does not determine family or humanitarian routes and must retain its cross-reference distinguishing the EU protection period from the German rule for a specified permit cohort.
 
 **Important sources to recheck:** [Germany4Ukraine residence guidance](https://www.germany4ukraine.de/EN/einreise-aufenthalt-und-rueckkehr/ukraine-aufenthaltserlaubnis/seite_node.html); [AufenthG §§16a](https://www.gesetze-im-internet.de/aufenthg_2004/__16a.html), [16b](https://www.gesetze-im-internet.de/aufenthg_2004/__16b.html), [18a](https://www.gesetze-im-internet.de/aufenthg_2004/__18a.html), [18b](https://www.gesetze-im-internet.de/aufenthg_2004/__18b.html), [AufenthV §39](https://www.gesetze-im-internet.de/aufenthv/__39.html), and [AufenthG §81](https://www.gesetze-im-internet.de/aufenthg_2004/__81.html).
 
 **Outstanding editorial questions:** Is it clear that the options are conditional routes rather than a personal recommendation or guaranteed switch? Are the cross-reference and limits of scope sufficient for readers who ask about family or humanitarian options?
 
-**Acceptance criteria:** Confirm route conditions remain attached to the correct option, no approval or automatic conversion is implied, and the permit-date caveat is consistent with Article 1 in all three languages.
+**Acceptance criteria:** Confirm route conditions remain attached to the correct option, no approval or automatic conversion is implied, and the EU/German scope distinction is consistent with Article 1 in all three languages.
 
 ## 3. Finding a Job in Germany
 
@@ -69,11 +69,11 @@ All 24 translations currently have `VerificationStatus.NeedsReview (0)`. Keep ea
 
 - The actual residence document and its work entry or restrictions control the individual guidance; do not state blanket authorization or a universal §24 expiry date.
 - A pending application or provisional document does not automatically establish work permission; the document notation and case-specific rule matter.
-- Keep the Germany4Ukraine 2028 statement attributed alongside the currently consolidated ordinance’s 2027 rule. Minimum-wage amounts and exceptions are time-sensitive.
+- Do not include the inaccessible Labour Law page’s indexed-only 2028 statement as evidence. Keep the German ordinance rule limited to its specified permit cohort and distinguish it from the EU protection period. Minimum-wage amounts and exceptions are time-sensitive.
 
-**Important sources to recheck:** [AufenthG §4a](https://www.gesetze-im-internet.de/aufenthg_2004/__4a.html); [AufenthG §81](https://www.gesetze-im-internet.de/aufenthg_2004/__81.html); [UkraineAufenthFGV §2](https://www.gesetze-im-internet.de/ukraineaufenthfgv/__2.html); [Germany4Ukraine Labour Law](https://www.germany4ukraine.de/EN/arbeit-und-soziales/ukrainer-arbeiten-in-deutschland/seite_node.html); [BMAS minimum-wage FAQ](https://www.bmas.de/EN/Labour/Minimum-Wage/the-minimum-wage-questions-and-answers.html).
+**Important sources to recheck:** [AufenthG §4a](https://www.gesetze-im-internet.de/aufenthg_2004/__4a.html); [AufenthG §81](https://www.gesetze-im-internet.de/aufenthg_2004/__81.html); [UkraineAufenthFGV §2](https://www.gesetze-im-internet.de/ukraineaufenthfgv/__2.html); [Germany4Ukraine Labour Law](https://www.germany4ukraine.de/EN/arbeit-und-soziales/ukrainer-arbeiten-in-deutschland/seite_node.html) (direct access previously failed; recheck only if relying on it, and do not treat indexed snippets as evidence); [BMAS minimum-wage FAQ](https://www.bmas.de/EN/Labour/Minimum-Wage/the-minimum-wage-questions-and-answers.html).
 
-**Outstanding editorial questions:** Is the date conflict sufficiently clear without suggesting a general right through either date? Does the reader know to check the document itself and obtain authority confirmation when unclear? Are current wage amounts and statutory exceptions still accurate?
+**Outstanding editorial questions:** Are the distinct EU and German date scopes clear without suggesting that either date establishes a particular person’s permit validity? Does the reader know to check the document itself and obtain authority confirmation when unclear? Are current wage amounts and statutory exceptions still accurate?
 
 **Acceptance criteria:** Confirm all three translations preserve document-specific authorization and the distinction between a permit date and work permission; verify any amount before release.
 

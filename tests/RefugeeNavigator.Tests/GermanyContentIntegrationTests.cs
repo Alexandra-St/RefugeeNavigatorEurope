@@ -40,10 +40,10 @@ public sealed class GermanyContentIntegrationTests
     private static readonly string[] Languages = ["uk", "en", "ru"];
     private static readonly IReadOnlyDictionary<string, int> SourceCounts = new Dictionary<string, int>
     {
-        ["1a6b97c4-eb9e-5590-8715-c95f5f95677e"] = 11,
+        ["1a6b97c4-eb9e-5590-8715-c95f5f95677e"] = 10,
         ["33106e71-115f-5809-9066-7e3d3e5c57a3"] = 10,
         ["283d4519-21f5-5be2-a534-1bd2606d95fc"] = 11,
-        ["c4895b5a-eacd-53d7-a86f-f504dd615c76"] = 10,
+        ["c4895b5a-eacd-53d7-a86f-f504dd615c76"] = 9,
         ["895b79b4-ce0d-5bee-9919-42ce3d76ecdb"] = 12,
         ["fd041e53-7794-5c1f-9ae4-131930fe69ee"] = 9,
         ["f5e0f499-0f60-5465-85f8-de6345029b59"] = 10,
@@ -62,7 +62,8 @@ public sealed class GermanyContentIntegrationTests
         Assert.Equal(8, entries.Length);
         Assert.Equal(SourceCounts.Keys.Select(Guid.Parse).Order().ToArray(), entries.Select(entry => entry.Id).Order().ToArray());
         Assert.Equal(24, translations.Length);
-        Assert.Equal(88, sources.Length);
+        Assert.Equal(86, sources.Length);
+        Assert.DoesNotContain(sources, source => source.Url.ToString() == "https://www.germany4ukraine.de/EN/arbeit-und-soziales/ukrainer-arbeiten-in-deutschland/seite_node.html");
         Assert.Equal(GermanyCategoryIds.Order().ToArray(), entries.Select(entry => entry.CategoryId).Distinct().Order().ToArray());
         Assert.All(entries, entry => Assert.Equal(ExpectedCategoryIds[entry.Id.ToString()], entry.CategoryId));
         Assert.All(translations, translation =>
@@ -167,6 +168,7 @@ public sealed class GermanyContentIntegrationTests
                 language => catalog.InformationEntryTranslations.Single(item =>
                     item.InformationEntryId == entry.Id && item.LanguageCode == language).Content));
         var protection = articles["1a6b97c4-eb9e-5590-8715-c95f5f95677e"];
+        var afterProtection = articles["33106e71-115f-5809-9066-7e3d3e5c57a3"];
         var workRights = articles["c4895b5a-eacd-53d7-a86f-f504dd615c76"];
         var healthcare = articles["895b79b4-ce0d-5bee-9919-42ce3d76ecdb"];
         var education = articles["f5e0f499-0f60-5465-85f8-de6345029b59"];
@@ -198,10 +200,40 @@ public sealed class GermanyContentIntegrationTests
         Assert.DoesNotContain("С одного до трёх лет ребёнок", education["ru"]);
         Assert.Contains("см. также статьи о медицинской помощи и жилье", social["ru"]);
         Assert.DoesNotContain("см. также статьям о медицинской помощи и жилье", social["ru"]);
-        Assert.Contains("The indexed text available for Germany4Ukraine’s Labour Law page stated 4 March 2028; that page could not be opened directly during this check.", protection["en"]);
+        Assert.Contains("through 4 March 2028", protection["en"]);
+        Assert.Contains("through 4 March 2027", protection["en"]);
+        Assert.Contains("до 4 березня 2028 року", protection["uk"]);
+        Assert.Contains("до 4 березня 2027 року", protection["uk"]);
+        Assert.Contains("до 4 марта 2028 года", protection["ru"]);
+        Assert.Contains("до 4 марта 2027 года", protection["ru"]);
+        foreach (var language in Languages)
+        {
+            var dateScopeText = language switch
+            {
+                "uk" => "різних правових статусів",
+                "en" => "different legal statuses",
+                "ru" => "разным правовым статусам",
+                _ => throw new InvalidOperationException($"Unexpected language '{language}'.")
+            };
+
+            foreach (var article in new[] { protection, afterProtection, workRights })
+            {
+                Assert.Contains("2028", article[language]);
+                Assert.Contains("2027", article[language]);
+                Assert.Contains(dateScopeText, article[language], StringComparison.OrdinalIgnoreCase);
+                Assert.DoesNotContain("indexed", article[language], StringComparison.OrdinalIgnoreCase);
+                Assert.DoesNotContain("індекс", article[language], StringComparison.OrdinalIgnoreCase);
+                Assert.DoesNotContain("индекс", article[language], StringComparison.OrdinalIgnoreCase);
+            }
+        }
+
+        Assert.DoesNotContain("Labour Law", protection["en"], StringComparison.OrdinalIgnoreCase);
         Assert.Contains("ordinary visa-free travel", protection["en"]);
         Assert.Contains("Brandenburg state ministry", protection["en"]);
         Assert.Contains("same Member State", protection["en"]);
+        Assert.DoesNotContain("Germany4Ukraine’s Labour Law", protection["en"], StringComparison.OrdinalIgnoreCase);
+        Assert.DoesNotContain("Labour Law", workRights["en"], StringComparison.OrdinalIgnoreCase);
+        Assert.DoesNotContain("inconsistent", workRights["en"], StringComparison.OrdinalIgnoreCase);
         Assert.Contains("в том же государстве-члене", protection["ru"]);
         Assert.Contains("тій самій державі-члені", protection["uk"]);
         Assert.Contains("Treatment, insurance and interpretation are not universally free.", healthcare["en"]);

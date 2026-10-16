@@ -20,7 +20,9 @@ If you currently hold a German residence permit under §24, §39(1) AufenthV all
 
 Apply early enough to understand the effect on your current document. Under §81(4) AufenthG, a timely application for renewal or another title before the existing one expires generally continues that title while the authority decides; §81(3) has a different effect for some people lawfully present without a title. A late application does not automatically preserve the old permit. Read any Fiktionsbescheinigung and its work entry.
 
-The EU has extended temporary protection through 4 March 2028, but that does not itself set the validity date of an individual German permit. Current UkraineAufenthFGV §2 continues specified §24 permits valid on 1 February 2026 through 4 March 2027, subject to the regulation’s conditions. As of 16 October 2026, the open Germany4Ukraine registration page also stated 2027; the indexed text available for its Labour Law page stated 2028, but that page could not be opened directly. The discrepancy remains unresolved. Ask the Ausländerbehörde to confirm the rule for your own document in writing before relying on a date. Family, humanitarian and other routes are outside this guide.
+EU temporary protection is extended through 4 March 2028. Separately, current UkraineAufenthFGV §2 continues specified §24 permits valid on 1 February 2026 through 4 March 2027, subject to the regulation’s conditions. These dates concern different legal statuses; the EU protection period does not itself set the validity date of an individual German residence permit.
+
+Ask the competent Ausländerbehörde to confirm the rule for your own document in writing before relying on a date. Family, humanitarian and other routes are outside this guide.
 
 ## SOURCES
 

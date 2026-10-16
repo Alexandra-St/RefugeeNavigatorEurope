@@ -30,11 +30,9 @@ The competent Ausländerbehörde (immigration authority) decides the §24 applic
 
 ## NEXT STEPS
 
-The EU has extended temporary protection through 4 March 2028, but that does not by itself set the validity date of an individual German permit. The current text of UkraineAufenthFGV §2 continues specified §24 permits valid on 1 February 2026 through 4 March 2027, subject to the regulation’s conditions.
+The EU extended temporary protection through 4 March 2028. Separately, the current UkraineAufenthFGV §2 continues specified §24 residence permits valid on 1 February 2026 through 4 March 2027, subject to the regulation’s conditions.
 
-As of 16 October 2026, the open Germany4Ukraine registration page also stated 4 March 2027. The indexed text available for Germany4Ukraine’s Labour Law page stated 4 March 2028; that page could not be opened directly during this check. The official material therefore does not give one consistent answer for every document.
-
-Do not infer your document’s validity or work permission from the EU extension date or a general portal notice. Ask the competent Ausländerbehörde to confirm in writing the rule for your document. The discrepancy remains unresolved.
+These dates concern different legal statuses. The EU protection period does not itself determine the validity of an individual German residence permit or work authorization. Check your own document and ask the competent Ausländerbehörde for written clarification if the applicable date is unclear.
 
 ## SOURCES
 
@@ -46,5 +44,4 @@ Do not infer your document’s validity or work permission from the EU extension
 - [Germany4Ukraine — Entry](https://www.germany4ukraine.de/EN/einreise-aufenthalt-und-rueckkehr/einreise-aus-der-ukraine-nach-deutschland/seite.html)
 - [Germany4Ukraine — Registration and residence permit](https://www.germany4ukraine.de/EN/einreise-aufenthalt-und-rueckkehr/ukraine-aufenthaltserlaubnis/seite_node.html)
 - [Germany4Ukraine — 2026 temporary-protection notice](https://www.germany4ukraine.de/SharedDocs/Meldungen/EN/2026/verlaengerung-schutz.html)
-- [Germany4Ukraine — Labour Law](https://www.germany4ukraine.de/EN/arbeit-und-soziales/ukrainer-arbeiten-in-deutschland/seite_node.html)
 - [Residence Act §81](https://www.gesetze-im-internet.de/aufenthg_2004/__81.html)
