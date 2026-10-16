@@ -91,7 +91,16 @@ public sealed class PolandContentIntegrationTests
             Assert.DoesNotContain("**", translation.Content, StringComparison.Ordinal);
             Assert.Equal(4, Regex.Matches(translation.Content, "(?m)^## ").Count);
         });
-        Assert.Single(translations.Select(translation => translation.LastUpdatedAt).Distinct());
+        var correctedTemporaryProtectionTranslations = translations
+            .Where(translation => translation.InformationEntryId == ArticleIds["temporary-protection-application"])
+            .ToDictionary(translation => translation.LanguageCode);
+        Assert.Equal(new DateTimeOffset(2026, 10, 16, 2, 17, 2, TimeSpan.Zero),
+            correctedTemporaryProtectionTranslations["uk"].LastUpdatedAt);
+        Assert.Equal(new DateTimeOffset(2026, 10, 16, 2, 17, 2, TimeSpan.Zero),
+            correctedTemporaryProtectionTranslations["ru"].LastUpdatedAt);
+        Assert.Equal(new DateTimeOffset(2026, 10, 16, 1, 56, 53, TimeSpan.Zero),
+            correctedTemporaryProtectionTranslations["en"].LastUpdatedAt);
+        Assert.Equal(2, translations.Select(translation => translation.LastUpdatedAt).Distinct().Count());
 
         Assert.Equal(45, sources.Length);
         Assert.Equal(45, sources.Select(source => source.Id).Distinct().Count());
@@ -220,6 +229,21 @@ public sealed class PolandContentIntegrationTests
             Assert.Contains(staleKsiDates, protection);
             Assert.Contains(identityDeadline, protection);
             Assert.Contains(declarationCohort, protection);
+
+            if (language == "uk")
+            {
+                Assert.Contains("особи, на яку поширюється стаття 106", protection);
+                Assert.Contains("Офіційне виправлення до рішення (ЄС) 2026/1912", protection);
+                Assert.DoesNotContain("бенефіціар", protection, StringComparison.OrdinalIgnoreCase);
+                Assert.DoesNotContain("Corrigendum", protection, StringComparison.OrdinalIgnoreCase);
+            }
+            else if (language == "ru")
+            {
+                Assert.Contains("человека, на которого распространяется статья 106", protection);
+                Assert.Contains("Официальное исправление к решению (ЕС) 2026/1912", protection);
+                Assert.DoesNotContain("бенефициар", protection, StringComparison.OrdinalIgnoreCase);
+                Assert.DoesNotContain("Corrigendum", protection, StringComparison.OrdinalIgnoreCase);
+            }
 
             var healthcare = Content("healthcare", language);
             Assert.Contains("PESEL UKR", healthcare);
