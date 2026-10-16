@@ -8,7 +8,15 @@
 
 School administration, compulsory-school rules and enrolment procedures are set by the 16 Länder. Use the current school or education authority for the place where the child lives; there is no single national application form.
 
-Childcare is not only discretionary local policy. Under SGB VIII §6(2), foreign residents can claim these services when their habitual residence in Germany is lawful or covered by a Duldung; ask the local Jugendamt if it is unclear which proof applies. Under §24(1), a child under one may qualify if support is needed for the child’s development, or if a parent is employed, actively seeking work, in education or vocational training, or receives SGB II benefits for integration into work. From age one until three, the child has a statutory entitlement to early-childhood support; from age three until school entry, an entitlement to support in a day-care centre applies. From school year 2026/27, a child entering grade one in that or a later school year has a statutory entitlement under §24(4) to support in a day-care facility from school entry until the start of grade five, for eight hours on weekdays. Time spent in lessons and all-day primary-school programmes, including open all-day schools, counts toward that entitlement; during school holidays, it is treated as met if a public or recognised independent youth-welfare provider offers activities under §11. Land law may allow a facility to close for up to four weeks a year during school holidays. The statutory entitlement and local search/allocation are separate matters; neither guarantees a particular provider or an immediate vacancy.
+Childcare is not only discretionary local policy. Under SGB VIII §6(2), foreign residents can claim these services when their habitual residence in Germany is lawful or covered by a Duldung; ask the local Jugendamt if it is unclear which proof applies.
+
+Under §24(1), a child under one may qualify if support is needed for the child’s development, or if a parent is employed, actively seeking work, in education or vocational training, or receives SGB II benefits for integration into work.
+
+From age one until three, the child has a statutory entitlement to early-childhood support; from age three until school entry, an entitlement to support in a day-care centre applies.
+
+From school year 2026/27, a child entering grade one in that or a later school year has a statutory entitlement under §24(4) to support in a day-care facility from school entry until the start of grade five, for eight hours on weekdays.
+
+Time spent in lessons and all-day primary-school programmes, including open all-day schools, counts toward that entitlement; during school holidays, it is treated as met if a public or recognised independent youth-welfare provider offers activities under §11. Land law may allow a facility to close for up to four weeks a year during school holidays. The statutory entitlement and local search/allocation are separate matters; neither guarantees a particular provider or an immediate vacancy.
 
 ## TASKS
 

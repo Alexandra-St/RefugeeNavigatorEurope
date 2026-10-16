@@ -8,7 +8,7 @@
 
 Work permission is linked to your legal status and document, not simply to Ukrainian nationality or having applied for protection. Section 4a AufenthG requires a title to show whether work is allowed and what limits apply. Read the residence card and any supplementary sheet. A Fiktionsbescheinigung can carry its own work entry; a pending application alone is not enough to assume permission.
 
-EU temporary protection is extended to 4 March 2028, but this does not itself extend a German residence permit. As checked on 16 October 2026, the published UkraineAufenthFGV §2 provides through 4 March 2027 for specified §24 permits valid on 1 February 2026. Germany4Ukraine also publishes conflicting 2028 statements, including an announced future extension for Ukrainian permits still valid on 1 February 2027; the current consolidated ordinance does not reflect that later extension. Check the exact work entry and obtain written confirmation from the Ausländerbehörde; this guide does not give a universal expiry date.
+EU temporary protection is extended through 4 March 2028, but this does not itself extend a German residence permit. Current UkraineAufenthFGV §2 continues specified §24 permits valid on 1 February 2026 through 4 March 2027, subject to the regulation’s conditions. As of 16 October 2026, the open Germany4Ukraine registration page also stated 2027; the indexed text available for Germany4Ukraine’s Labour Law page stated 2028, but that page could not be opened directly. The sources therefore remain inconsistent. Check the exact work entry on your own document and ask the Ausländerbehörde to confirm its validity date in writing; this article gives no universal expiry date.
 
 ## TASKS
 
@@ -22,7 +22,7 @@ The Ausländerbehörde decides residence-document questions. Fair Integration of
 
 ## NEXT STEPS
 
-If the document wording is unclear, obtain a written clarification before starting or changing work. If an application is pending, use the exact work entry in the Fiktionsbescheinigung and the conditions of §81(5a), rather than assuming all pending cases permit work. Recheck the §24 extension conflict, the current minimum wage and any sector exception immediately before publication. This article does not determine an individual right to work.
+If the document wording is unclear, obtain written clarification before starting or changing work. If an application is pending, check the exact work entry in the Fiktionsbescheinigung and the conditions of §81(5a); a pending application does not always permit work. Because the §24 extension information remains inconsistent and wage rules can change, check current official guidance and any sector-specific exception before relying on it. This article does not determine an individual right to work.
 
 ## SOURCES
 

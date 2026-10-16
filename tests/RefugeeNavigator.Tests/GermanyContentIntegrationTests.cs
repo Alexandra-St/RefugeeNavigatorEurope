@@ -40,7 +40,7 @@ public sealed class GermanyContentIntegrationTests
     private static readonly string[] Languages = ["uk", "en", "ru"];
     private static readonly IReadOnlyDictionary<string, int> SourceCounts = new Dictionary<string, int>
     {
-        ["1a6b97c4-eb9e-5590-8715-c95f5f95677e"] = 10,
+        ["1a6b97c4-eb9e-5590-8715-c95f5f95677e"] = 11,
         ["33106e71-115f-5809-9066-7e3d3e5c57a3"] = 10,
         ["283d4519-21f5-5be2-a534-1bd2606d95fc"] = 11,
         ["c4895b5a-eacd-53d7-a86f-f504dd615c76"] = 10,
@@ -62,7 +62,7 @@ public sealed class GermanyContentIntegrationTests
         Assert.Equal(8, entries.Length);
         Assert.Equal(SourceCounts.Keys.Select(Guid.Parse).Order().ToArray(), entries.Select(entry => entry.Id).Order().ToArray());
         Assert.Equal(24, translations.Length);
-        Assert.Equal(87, sources.Length);
+        Assert.Equal(88, sources.Length);
         Assert.Equal(GermanyCategoryIds.Order().ToArray(), entries.Select(entry => entry.CategoryId).Distinct().Order().ToArray());
         Assert.All(entries, entry => Assert.Equal(ExpectedCategoryIds[entry.Id.ToString()], entry.CategoryId));
         Assert.All(translations, translation =>
@@ -85,7 +85,7 @@ public sealed class GermanyContentIntegrationTests
             Assert.False(string.IsNullOrWhiteSpace(source.Title));
             Assert.InRange(source.LastCheckedAt,
                 new DateTimeOffset(2026, 10, 15, 23, 22, 10, TimeSpan.Zero),
-                new DateTimeOffset(2026, 10, 15, 23, 26, 59, TimeSpan.Zero));
+                new DateTimeOffset(2026, 10, 16, 0, 21, 41, TimeSpan.Zero));
         });
 
         Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == DenmarkId));
@@ -191,7 +191,12 @@ public sealed class GermanyContentIntegrationTests
             Assert.Contains("2025", social[language]);
         }
 
-        Assert.Contains("The current consolidated ordinance does not reflect that later extension.", protection["en"]);
+        Assert.Contains("The indexed text available for Germany4Ukraine’s Labour Law page stated 4 March 2028; that page could not be opened directly during this check.", protection["en"]);
+        Assert.Contains("ordinary visa-free travel", protection["en"]);
+        Assert.Contains("Brandenburg state ministry", protection["en"]);
+        Assert.Contains("same Member State", protection["en"]);
+        Assert.Contains("в том же государстве-члене", protection["ru"]);
+        Assert.Contains("тій самій державі-члені", protection["uk"]);
         Assert.Contains("Treatment, insurance and interpretation are not universally free.", healthcare["en"]);
         Assert.Contains("Land", education["en"]);
         Assert.Contains("bill", social["en"], StringComparison.OrdinalIgnoreCase);
