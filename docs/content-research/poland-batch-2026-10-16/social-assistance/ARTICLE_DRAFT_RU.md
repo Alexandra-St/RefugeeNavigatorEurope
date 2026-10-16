@@ -11,7 +11,7 @@
 
 ## ДЕЙСТВИЯ
 
-Для 800+ министерство указывает: ребёнок должен жить в Польше с родителем, а ребёнок школьного возраста — учиться в польской системе образования. Для граждан Украины со статусом UKR с 1 февраля 2026 года действует также условие профессиональной активности с исключениями, в том числе для родителей детей с инвалидностью и некоторых родителей, получающих выплату на ребёнка — гражданина Польши. Зарегистрированный безработный без работы может иметь право на выплату ограниченный срок. Проверьте действующее индивидуальное условие в ZUS.
+Для 800+ заявитель и ребёнок должны соответствовать действующим требованиям к проживанию и статусу; ребёнок должен жить в Польше с родителем, а ребёнок школьного возраста — учиться в польской системе образования. ZUS проверяет эти условия и сведения об обучении. Для граждан Украины со статусом UKR с 1 февраля 2026 года действует также условие профессиональной активности с исключениями, в том числе для родителей детей с инвалидностью и некоторых родителей, получающих выплату на ребёнка — гражданина Польши. Зарегистрированный безработный без работы может иметь право на выплату ограниченный срок. Проверьте действующее индивидуальное условие в ZUS.
 
 ## КУДА ОБРАТИТЬСЯ
 
@@ -29,3 +29,5 @@
 - [Gov.pl — Use social assistance](https://www.gov.pl/web/gov/skorzystaj-z-pomocy-spolecznej)
 - [Gov.pl — Apply for a housing allowance](https://www.gov.pl/web/gov/uzyskaj-dodatek-mieszkaniowy)
 - [Social Insurance Institution (ZUS) — 800+ application and service information](https://www.zus.pl/swiadczenia/swiadczenia-dla-rodzin/swiadczenie-wychowawcze-800-plus/zmiany-w-swiadczeniu-wychowawczym-program-rodzina-800-)
+- [Social Insurance Institution (ZUS) — 800+: conditions for foreign nationals and possible reasons for suspending payment](https://www.zus.pl/en/-/%C5%9Awiadczenie-wychowawcze-800-warunki-dla-cudzoziemc%C3%B3w-i-mo%C5%BCliwe-przyczyny-wstrzymania-wyp%C5%82at?redirect=%2Fo-zus%2Faktualnosci)
+- [Republic of Poland — Act of 23 January 2026, Journal of Laws 2026 item 203](https://dziennikustaw.gov.pl/DU/2026/203/D2026000020301.pdf)

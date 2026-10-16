@@ -7,7 +7,7 @@
 
 ## RULES
 
-Poland has compulsory pre-school preparation for children of the relevant age, compulsory schooling and a learning obligation until age 18. Since September 2024, children from Ukraine are covered by Polish education rules. UKR status is not the only factor in every school procedure; ask the school or gmina which process applies.
+Compulsory pre-school preparation applies to children who turn six in the relevant calendar year. Compulsory schooling begins in the school year in which a child turns seven and continues until primary school is completed, but no later than age 18; the learning obligation lasts until age 18. Since September 2024, children from Ukraine have been covered by Polish education rules. Ask the school or gmina which procedure applies to the child.
 
 ## TASKS
 
@@ -15,7 +15,7 @@ Contact a public school near your home. Bring prior-school records if available;
 
 ## PLACES
 
-Ask the school about additional Polish lessons, a preparatory class, an intercultural assistant and other support. Access and form may depend on current education rules, the headteacher’s decision and local resources. For preschool or childcare, contact the gmina: places, recruitment and care arrangements can differ.
+Pupils subject to the learning obligation who do not know Polish well enough are entitled to free additional Polish lessons for up to 24 months. A school may organize a preparatory class; a person who knows the pupil’s language of origin may be employed as a teacher’s assistant for up to 12 months. An intercultural assistant may also be employed where the statutory conditions are met. Ask the school what support is available in the pupil’s circumstances. For preschool or childcare, contact the gmina: places, recruitment and care arrangements can differ.
 
 ## NEXT STEPS
 
@@ -26,4 +26,4 @@ For university admission, check the institution’s requirements and NAWA inform
 - [Ministry of National Education — Education for people arriving from abroad](https://www.gov.pl/web/edukacja/informacja-o-ksztalceniu-w-polskim-systemie-oswiaty-osob-przybywajacych-z-zagranicy)
 - [Office for Foreigners (UdSC) — Education under temporary protection](https://www.gov.pl/web/ochrona/edukacja)
 - [Polish National Agency for Academic Exchange (NAWA) — Secondary school certificates](https://www.nawa.gov.pl/uznawalnosc/wydawanie-informacji-o-zagranicznych-dyplomach/swiadectwo-szkoly-sredniej)
-- [Republic of Poland — Education Law, consolidated statutory framework](https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20170000059)
+- [Republic of Poland — Education Law, codified text prepared 16 September 2026](https://eli.gov.pl/eli/DU/2026/820/ogl)

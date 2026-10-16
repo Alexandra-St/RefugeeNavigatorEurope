@@ -1,73 +1,64 @@
-# Poland first batch — final verification
+# Poland first batch — final focused verification
 
 **Verification date:** 16 October 2026
-**Baseline:** `65cdf74f0f0869b45ad71e15081cda1e35006c7f`
-**Outcome:** `POLAND RESEARCH COMPLETE — AWAITING CONTENT INTEGRATION REVIEW`
+**Baseline:** `32b7042780721db3e11977633d6f9d5b668a7c1c`
+**Outcome:** `POLAND FOCUSED VERIFICATION COMPLETE — AWAITING INTEGRATION DECISION`
 
 ## Batch completeness
 
-- Eight topic folders are present.
-- 24 complete drafts are present: one Ukrainian, English and Russian version per topic.
-- Eight source/claim matrices are present.
-- Batch overview is present.
-- No production catalogs, application code, tests, deployment or CI files were changed.
-- All material source checks are recorded as checked on 16 October 2026; this date is not presented as the source’s own publication date. Pages without a visible update date are labelled accordingly in matrices.
+- Eight article folders, 24 language drafts (UK/EN/RU) and eight source/claim matrices are present.
+- All 24 drafts remain research-only and unpublished. No translation was marked `Verified`.
+- Source check dates record when pages were opened; they are not represented as source publication dates.
+- Only Poland research and editorial documents in this batch are in scope. Production catalogs, application code, tests, Denmark, Germany and deployment settings were not changed.
 
-## Topic-by-topic decision
+## Article-by-article decision
 
-| # | Topic | Assessment | Reason / gate before integration |
+| # | Topic | Assessment | Evidence boundary / publication-time gate |
 |---|---|---|---|
-| 1 | Applying for Temporary Protection in Poland | **NEEDS FURTHER REVIEW** | The past 31 Aug identity deadline is narrowly attributed; recheck affected individual records and EU/Polish date relationship. The EUR-Lex HTML is blocked, while the Official Journal PDF was directly read. |
-| 2 | Residence Options After Temporary Protection | **NEEDS FURTHER REVIEW** | CUKR criteria and deadline are directly supported; MOS categories and paper-filing exceptions are directly described; consequences of parallel applications remain outside the draft and need case-specific advice. |
-| 3 | Finding a Job in Poland | **READY FOR INTEGRATION** | Narrow service navigation is supported by ePraca and official 2026 guidance; confirm each PUP’s access requirements locally. |
-| 4 | Work Authorization and Employee Rights | **READY FOR INTEGRATION** | PIP directly supports work notification and written-contract guidance; dated wage amount needs refresh at integration. |
-| 5 | Accessing Healthcare in Poland | **NEEDS FURTHER REVIEW** | NFZ supports limited eligibility groups and insurance routes; source recheck and local administrative implementation needed. |
-| 6 | Finding Accommodation in Poland | **NEEDS FURTHER REVIEW** | Public accommodation evidence is regionally sourced and resource-dependent; general rental protections need clause-level review. |
-| 7 | Education and Polish-Language Learning | **NEEDS FURTHER REVIEW** | Current education-law consolidation and local implementation need confirmation; avoid guarantees about places, language support or adult courses. |
-| 8 | Financial and Social Assistance | **NEEDS FURTHER REVIEW** | 800+ work/school conditions are supported, but current ZUS workflow and individual interactions with other benefits need review. |
+| 1 | Applying for Temporary Protection in Poland | **READY FOR INTEGRATION** | Corrigendum directly confirms 5/4 Aug dates and same-Member-State continuity. A KSI page still shows superseded 31/30 Jul; the draft attributes it as stale guidance. Check the page again before release and never infer a person’s record validity. |
+| 2 | Residence Options After Temporary Protection | **READY FOR INTEGRATION** | CUKR conditions, child distinction, deadline and MOS filing scope are supported. Effects of an individual application/permit remain outside the general article. |
+| 3 | Finding a Job in Poland | **READY FOR INTEGRATION** | ePraca and qualified PUP navigation are supported; local service access is conditional. |
+| 4 | Work Authorization and Employee Rights | **READY FOR INTEGRATION** | PIP notification/contract guidance is supported. Refresh the date-sensitive 2026 wage amount before publication. |
+| 5 | Accessing Healthcare in Poland | **READY FOR INTEGRATION** | NFZ’s limited statutory groups, exclusions and insurance route are distinguished. Coverage and provider availability require individual confirmation. |
+| 6 | Finding Accommodation in Poland | **READY FOR INTEGRATION** | Act 203 art. 112 and consolidated tenant law support the narrow claims. Funding, vulnerable-group conditions and local implementation are explicit; no national placement is promised. |
+| 7 | Education and Polish-Language Learning | **READY FOR INTEGRATION** | Current 2026 education-law codification supports age rules and bounded Polish-language support. Local capacity and universal free adult courses are not promised. |
+| 8 | Financial and Social Assistance | **READY FOR INTEGRATION** | Current ZUS and statutory rules support the qualified 800+ and assistance navigation. No benefit is inferred from PESEL UKR alone. |
 
-## High-impact 2026 rules checked
+Readiness means suitable for the next integration-review step, not approved content or publication permission. Human editorial review is still required.
 
-1. **5 March 2026 transition:** Act of 23 January 2026, Journal of Laws item 203, changed the applicable protection and assistance framework. The Act’s Polish temporary-protection provisions link lawful stay to the Council decision and set out exclusions; separate national measures continue for specified document cohorts.
-2. **PESEL UKR and identity verification:** the statute provides a 30-day application deadline after crossing the Polish border for eligible beneficiaries. The separate deadline of 31 August 2026 applied to people whose records were issued only on a declaration without a valid travel document. UdSC states that failure for the affected group changed status to NUE and ended Polish temporary protection from 1 September. The deadline is past.
-3. **Old certificates:** UdSC stopped issuing certificates on 5 March 2026; existing certificates are stated to remain valid until 4 March 2027 subject to specified earlier-ending events.
-4. **CUKR:** UdSC’s procedure says applications opened on 4 May 2026, are submitted only through MOS, and close 4 March 2027. The general applicant must satisfy all four listed UKR/continuity conditions; children born in Poland have separate conditions.
-5. **Employment:** PIP states temporary-protection beneficiaries from Ukraine may work, with employer PUP notification within seven days of starting. Written contracts and an understandable written version before signature are required for foreign workers. The monthly minimum wage is PLN 4,806 from 1 January 2026.
-6. **Healthcare:** NFZ’s 2026 guidance lists defined UKR categories for limited free treatment and identifies compulsory-insurance titles as a route to full public coverage. Emergency life-saving care and routine coverage are distinct.
-7. **800+:** Ministry guidance applies a work-activity condition to UKR recipients from 1 February 2026 and a Polish-school condition for school-age children, with stated exceptions. Current individual entitlement remains a ZUS determination.
+## High-impact corrections and findings
 
-## Conflicts, limitations and excluded claims
+1. **EU corrigendum:** The official EUR-Lex Official Journal PDF for the 5 August 2026 corrigendum was directly opened and read. It changes the Article 2 application date to **5 August 2026** and changes the exception’s reference date to **4 August 2026**. The exception requires uninterrupted temporary protection in the same Member State. The corrected dates and condition are consistent in all three temporary-protection drafts.
+2. **EU / Polish stay / certificates:** Decision (EU) 2026/1912 extends EU protection through **4 March 2028**, applying from **5 March 2027**. Under Polish Act 203 Article 106, the stay of a defined beneficiary group is lawful while that Council decision remains in force, unless the Act provides otherwise and subject to Articles 109a–109b. The MRPiPS page dated 26 March 2026 stated 4 March 2027 before the later Council decision; it is dated administrative guidance, not a different current statutory expiry for that group. Older paper certificates have a separate stated validity through 4 March 2027, subject to earlier-ending events. Individual records and permits are not inferred.
+3. **Residual official-page discrepancy:** UdSC’s August page gives the corrected military dates; KSI’s directly opened gov.pl page still displays 31/30 July. The drafts name this as superseded KSI page content, not a conflict in the corrected legal text. Recheck whether KSI updates it before publication.
+4. **CUKR/MOS:** Four cumulative CUKR conditions, separate child rules, online CUKR filing and the 4 March 2027 deadline are recorded. The broader MOS guide includes specified paper-filing exceptions for ordinary permit routes. Filing, permit grant and protection status remain separate; case-specific consequences are not claimed.
+5. **Healthcare:** NFZ identifies limited groups for the statutory scope; insurance-based access is separate. Emergency treatment is not described as comprehensive routine coverage.
+6. **Housing:** Act 203 art. 112 permits short-term accommodation/meals within activated funds and statutory limits, plus a separate resource-dependent route for defined vulnerable groups unable to self-accommodate. Regional Mazowieckie information is not generalized. Housing allowances and private tenancies have separate rules.
+7. **Education:** ELI’s in-force Education Law codified text prepared 16 September 2026, incorporating the later listed 2026 amendments, was opened; relevant age duties and Article 165 language-support provisions were checked. The drafts specify up to 24 months of free additional Polish for pupils in statutory scope and up to 12 months for a possible language-of-origin teaching assistant. Classes/assistants and adult courses are not guaranteed nationwide.
+8. **Social assistance:** Act 203 Article 112a says assistance may be granted under Social Assistance Act rules and procedure. The drafts do not claim automatic entitlement. ZUS’s foreign-beneficiary guidance was opened for residence/status, schooling, work-activity and suspension checks.
+9. **Employment:** The two employment drafts were preserved. PIP’s 7-day employer notification and contract guidance remain supported; PLN 4,806 is the dated 2026 monthly minimum wage, to refresh before release. Local PUP services remain conditional.
 
-- **EU and Polish date relationship:** Council Implementing Decision (EU) 2026/1912, directly read in the Official Journal PDF, extends EU protection until 4 March 2028 and applies that extension from 5 March 2027. MRPiPS guidance states PESEL UKR lawful stay through 4 March 2027. The EUR-Lex HTML remains blocked, but the Official Journal PDF is accessible and is the source used. The drafts distinguish the EU and Polish legal levels and leave the effect on Polish individual records unresolved; do not infer individual document validity.
-- **Current official Polish guidance:** The EU decision and Polish guidance address distinct legal levels, and this research does not establish the effect on individual Polish records after 4 March 2027. The drafts state both with attribution and tell readers to check their own record.
-- **31 August deadline:** not upcoming. The deadline is only described as a past requirement for the defined declaration-only cohort.
-- **MOS:** UdSC’s CUKR procedure directly supports CUKR filing through MOS. The separate MOS information page was opened and states that temporary, permanent and EU long-term-resident applications have been electronic since 27 April 2026, with specified exceptions remaining paper-based.
-- **Social assistance:** official service eligibility for general assistance does not establish eligibility based solely on UKR. No blanket entitlement is claimed. Exact programme-specific status and document checks remain necessary.
-- **Housing:** regional Mazowieckie details do not prove uniform nationwide service capacity. No guaranteed public accommodation or rental subsidy is claimed.
-- **Education and language:** ministry pages contain older legal references and some historic temporary support descriptions. Exact current statutory ages, Ukrainian-specific support durations, adult courses, preschool places and higher-education recognition must be rechecked before integration.
-- No indexed-only statement, inaccessible source, unsupported eligibility conclusion, or unadopted proposal is presented as a verified fact. Claim matrices contain 43 assessed claim rows: 24 supported, 9 partially supported, 1 conflicted, and 9 unverified/excluded.
+## Claim and source audit
 
-## Translation and editorial audit
+- Eight matrices contain **45** claim rows: `SUPPORTED` 33, `PARTIALLY SUPPORTED` 4, `CONFLICTED` 0, and `UNVERIFIED` 8.
+- **36** unique official URLs are listed. Access limits and superseded source text are explicitly noted.
+- All eight unverified propositions remain excluded from article copy. Four partial claims are constrained by their stated local, programme or individual-condition caveats.
+- Translation review confirms equivalent legal qualifications in UK/EN/RU for the corrected protection dates, same-state continuity, Article 106 cohort, CUKR/MOS process, health coverage, education ages/language support, housing and benefit conditions.
 
-- The three language drafts preserve the same material conditions and qualifications.
-- `PESEL UKR`, `CUKR`, `MOS`, `PUP`, `POZ`, `NiŚOZ`, `NFZ`, `ZUS`, `UdSC` and `PIP` are retained or explained consistently.
-- The 31 August date is past in all three versions; the CUKR 4 March 2027 deadline appears consistently.
-- Healthcare does not promise universal free care; employment content does not infer authorization from nationality alone; housing does not promise a place; benefits do not promise awards; school admission is not described as unconditional.
-- All drafts remain unpublished and unapproved. No `Verified` status is assigned.
+## Remaining publication gates
+
+- Recheck whether the KSI page has been corrected; if not, retain the explicit attribution to its superseded wording.
+- Recheck legislation and agency pages immediately before publication, including current consolidated acts, CUKR/MOS instructions and the benefit period.
+- Confirm personal legal-status records with the competent authority; general articles cannot determine an individual file.
+- Confirm current local PUP, healthcare-provider, housing, school and OPS/MOPS availability for any location-specific instructions.
+- Refresh the 2026 minimum-wage figure and complete final human editorial/translation review of all 24 drafts.
 
 ## Validation performed
 
-- Folder/file inventory: eight topic folders, 24 language drafts, eight source matrices, two batch documents.
-- Internal source IDs were checked against each topic’s source register.
-- Exact official URLs are included in matrices; known access limits are marked.
-- `git diff --check`: to be run before commit.
-- Release build and automated tests: to be run before commit.
-
-## Before any integration or publication
-
-1. Obtain authoritative clarification on how the directly verified EU extension interacts with Polish PESEL UKR and temporary-protection records after 4 March 2027; recheck Polish implementing law and UdSC guidance.
-2. Re-open the operative consolidated statutes and check amendments effective on the publication date.
-3. Recheck PESEL UKR and CUKR procedures, MOS availability, and current forms/fees.
-4. Obtain local confirmation for PUP access, housing support, school places and language services in the intended locations.
-5. Refresh the dated 2026 minimum wage and all benefit conditions with the responsible agencies.
-6. Have a human reviewer assess each claim matrix and all 24 translations. Do not integrate until the applicable article-level status and release gates are approved.
+- Inventory: eight folders, 24 drafts, eight matrices and two batch-level documents.
+- Source IDs and exact URLs cross-checked against the article source lists; newly relied-on official materials were added to the affected drafts.
+- All material corrections aligned across UK/EN/RU; no unsupported claim was added.
+- `git diff --check`: passed.
+- `dotnet restore RefugeeNavigatorEurope.slnx`: passed.
+- `dotnet build RefugeeNavigatorEurope.slnx -c Release`: passed with 0 warnings and 0 errors.
+- `dotnet test RefugeeNavigatorEurope.slnx -c Release`: passed, 352/352 tests.

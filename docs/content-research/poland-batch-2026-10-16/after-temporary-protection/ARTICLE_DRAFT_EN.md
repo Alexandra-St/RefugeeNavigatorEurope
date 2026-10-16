@@ -15,7 +15,7 @@ UdSC lists four cumulative CUKR conditions: valid PESEL UKR when applying; valid
 
 ## PLACES
 
-A CUKR application is filed only online through MOS (Moduł Obsługi Spraw). Since 27 April 2026, MOS has accepted electronic applications for temporary residence, permanent residence and EU long-term resident permits; specified categories, including some applicants outside Poland, still file on paper. Check whether your procedure is an exception. From 5 March 2026, the special basis for certain simplified permits under the Ukraine assistance law ended; UdSC says the general Foreigners Act requirements apply again.
+A CUKR application is filed only online through MOS (Moduł Obsługi Spraw). Since 27 April 2026, applications for ordinary temporary residence, permanent residence and EU long-term-resident permits are filed electronically through MOS. UdSC lists paper-filing exceptions for specified temporary-residence cases, including certain intra-corporate transfers and family applications where the applicant is outside Poland. Check the current MOS instructions for your exact permit type. From 5 March 2026, the special basis for certain simplified permits under the Ukraine assistance law ended; UdSC says the general Foreigners Act requirements apply again.
 
 ## NEXT STEPS
 

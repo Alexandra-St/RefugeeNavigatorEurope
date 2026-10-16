@@ -27,3 +27,4 @@
 - [Gov.pl — Apply for a housing allowance](https://www.gov.pl/web/gov/uzyskaj-dodatek-mieszkaniowy)
 - [Ministry of Development and Technology — Tenant Protection Act questions and answers](https://www.gov.pl/web/rozwoj-technologia/pytania-i-odpowiedzi-w-sprawie-stosowania-przepisow-ustawy-z-dnia-21-czerwca-2001-r-o-ochronie-praw-lokatorow-mieszkaniowym-zasobie-gminy-i-o-zmianie-kodeksu-cywilnego2)
 - [Republic of Poland — Act of 23 January 2026, Journal of Laws 2026 item 203](https://dziennikustaw.gov.pl/DU/2026/203/D2026000020301.pdf)
+- [Republic of Poland — Tenant Rights Protection Act, consolidated text (Journal of Laws 2023 item 725)](https://eli.gov.pl/eli/DU/2023/725/ogl)

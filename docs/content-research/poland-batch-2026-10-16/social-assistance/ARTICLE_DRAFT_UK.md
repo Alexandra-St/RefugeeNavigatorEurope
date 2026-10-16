@@ -11,7 +11,7 @@
 
 ## ДІЇ
 
-Для 800+ Міністерство повідомляє: дитина має проживати в Польщі з батьком або матір’ю, а дитина шкільного віку — навчатися в польській системі освіти. Для громадян України зі статусом UKR з 1 лютого 2026 року діє також умова професійної активності з передбаченими винятками, зокрема для батьків дітей з інвалідністю та деяких батьків дітей — громадян Польщі. Зареєстрований безробітний без роботи може мати обмежений строк права. Перевірте актуальну персональну умову в ZUS.
+Для 800+ заявник і дитина мають відповідати чинним вимогам щодо проживання та статусу; дитина має проживати в Польщі з батьком або матір’ю, а дитина шкільного віку — навчатися в польській системі освіти. ZUS перевіряє ці умови та відомості про навчання. Для громадян України зі статусом UKR з 1 лютого 2026 року діє також умова професійної активності з передбаченими винятками, зокрема для батьків дітей з інвалідністю та деяких батьків дітей — громадян Польщі. Зареєстрований безробітний без роботи може мати обмежений строк права. Перевірте актуальну персональну умову в ZUS.
 
 ## КУДИ ЗВЕРТАТИСЯ
 
@@ -29,3 +29,5 @@
 - [Gov.pl — Use social assistance](https://www.gov.pl/web/gov/skorzystaj-z-pomocy-spolecznej)
 - [Gov.pl — Apply for a housing allowance](https://www.gov.pl/web/gov/uzyskaj-dodatek-mieszkaniowy)
 - [Social Insurance Institution (ZUS) — 800+ application and service information](https://www.zus.pl/swiadczenia/swiadczenia-dla-rodzin/swiadczenie-wychowawcze-800-plus/zmiany-w-swiadczeniu-wychowawczym-program-rodzina-800-)
+- [Social Insurance Institution (ZUS) — 800+: conditions for foreign nationals and possible reasons for suspending payment](https://www.zus.pl/en/-/%C5%9Awiadczenie-wychowawcze-800-warunki-dla-cudzoziemc%C3%B3w-i-mo%C5%BCliwe-przyczyny-wstrzymania-wyp%C5%82at?redirect=%2Fo-zus%2Faktualnosci)
+- [Republic of Poland — Act of 23 January 2026, Journal of Laws 2026 item 203](https://dziennikustaw.gov.pl/DU/2026/203/D2026000020301.pdf)

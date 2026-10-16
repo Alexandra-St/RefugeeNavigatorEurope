@@ -13,7 +13,9 @@
 | 800FAQ | Ministry of Family, Labour and Social Policy — 800+ questions and answers | https://www.gov.pl/web/rodzina/odpowiedzi-na-najczesciej-zadawane-pytania2 | Opened 16 Oct 2026. Programme amount, benefit period and application basics; general FAQ does not override foreign-national conditions. |
 | SOCIALHELP | Gov.pl — Use social assistance | https://www.gov.pl/web/gov/skorzystaj-z-pomocy-spolecznej | Opened 16 Oct 2026. Eligibility list for foreign nationals and needs assessment documents; temporary protection alone is not shown as a universal eligibility basis. |
 | HOUSINGALLOWANCE | Gov.pl — Apply for a housing allowance | https://www.gov.pl/web/gov/uzyskaj-dodatek-mieszkaniowy | Opened 16 Oct 2026. Local filing, income, area, legal-title and expense evidence. Page contains older example amounts; no amounts copied into draft. |
-| ZUS | Social Insurance Institution (ZUS) — 800+ application and service information | https://www.zus.pl/swiadczenia/swiadczenia-dla-rodzin/swiadczenie-wychowawcze-800-plus/zmiany-w-swiadczeniu-wychowawczym-program-rodzina-800- | Opened 16 Oct 2026 via the Ministry’s 800+ guidance. ZUS page explains the 2026 800+ changes; the precise online account workflow and individual documentation still require user-specific confirmation. |
+| ZUS | Social Insurance Institution (ZUS) — 800+: conditions for foreign nationals and possible reasons for suspending payment | https://www.zus.pl/en/-/%C5%9Awiadczenie-wychowawcze-800-warunki-dla-cudzoziemc%C3%B3w-i-mo%C5%BCliwe-przyczyny-wstrzymania-wyp%C5%82at?redirect=%2Fo-zus%2Faktualnosci | Opened 16 Oct 2026. ZUS directly describes residence/status checks, schooling checks and reasons payments may be suspended; individual applications and evidence remain case-specific. |
+| ZUS2026 | Social Insurance Institution (ZUS) — 800+ application and service information | https://www.zus.pl/swiadczenia/swiadczenia-dla-rodzin/swiadczenie-wychowawcze-800-plus/zmiany-w-swiadczeniu-wychowawczym-program-rodzina-800- | Opened 16 Oct 2026 via Ministry guidance; current 2026 application period and service notes. The article does not rely on this page to decide individual eligibility. |
+| LAW2026 | Republic of Poland — Act of 23 January 2026, Journal of Laws 2026 item 203 | https://dziennikustaw.gov.pl/DU/2026/203/D2026000020301.pdf | Official Journal, checked 16 Oct 2026, arts. 112a–112b. Art. 112a says social-assistance benefits may be granted to a temporary-protection beneficiary with PESEL UKR under the Social Assistance Act rules and procedure; it is not an automatic award. |
 
 ## Claim-by-claim review
 
@@ -21,14 +23,14 @@
 | --- | --- | --- | --- |
 | SA01 | From 1 Feb 2026, UKR 800+ eligibility includes work activity condition; school-aged child must attend Polish education, with stated exceptions. (800FOREIGN, MINISTRY2026) | **SUPPORTED** | Current status/residence and specific statutory exceptions must be verified by ZUS; new benefit period application required. |
 | SA02 | Some registered unemployed UKR parents may qualify for a limited 800+ period. (MINISTRY2026) | **SUPPORTED** | Duration depends on number of children and current statutory conditions. |
-| SA03 | ZUS handles 800+ claims; exact current online workflow and document checklist are available. (800FOREIGN, ZUS) | **PARTIALLY SUPPORTED** | Ministry directs to ZUS; The Ministry directs applicants to ZUS; the ZUS 2026 service page was opened 16 Oct 2026. Individual conditions remain for ZUS to assess. |
-| SA04 | PESEL UKR alone guarantees general social assistance. (SOCIALHELP) | **UNVERIFIED** | Excluded; official service lists status-specific conditions and need assessment. |
+| SA03 | ZUS administers 800+ and verifies programme-specific residence/status and school conditions; it may suspend payments when required conditions or evidence are not met. (800FOREIGN, ZUS) | **SUPPORTED** | The page does not decide an individual case or establish entitlement from PESEL UKR alone; applicant-specific residence, status, work activity, schooling and evidence must be checked with ZUS. |
+| SA04 | PESEL UKR alone guarantees a general social-assistance award. (LAW2026 art. 112a, SOCIALHELP) | **SUPPORTED** | The Act says benefits may be granted under Social Assistance Act rules and procedure; residence/status restrictions, required declarations and individual need assessment still apply. The article excludes any automatic-entitlement claim. |
 | SA05 | Other family programmes may include family allowance, birth grant, parental and care benefits. (MINISTRY2026) | **PARTIALLY SUPPORTED** | Programme names are listed in ministry guidance; eligibility and handling office vary by programme, status, income and family circumstances. |
 | SA06 | Local OPS/MOPS can assess a household’s reported social-assistance need and relevant circumstances. (SOCIALHELP) | **SUPPORTED** | Assessment is not an award; statutory residence and need criteria still apply. |
 
 ## Unresolved questions and publication gate
 
 - Re-open all current source pages immediately before integration and check publication/update dates where displayed. The check date above is not a freshness guarantee.
-- Recheck any 2026 statutory amendments, transitional provisions and current implementing guidance before publication.
+- Recheck current 800+ rules, application periods, evidence requirements and any 2026 amendments with ZUS before publication; no award is inferred from UKR status.
 - Confirm all local contact details, forms and service availability for the selected location.
 - Human editorial and translation review is required; these drafts are not individualized legal advice.
