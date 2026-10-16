@@ -96,7 +96,7 @@ public sealed class GermanyContentIntegrationTests
         Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == DenmarkId));
         Assert.Equal(101, catalog.OfficialSources.Count(source =>
             catalog.InformationEntries.Any(entry => entry.Id == source.InformationEntryId && entry.CountryId == DenmarkId)));
-        Assert.DoesNotContain(catalog.InformationEntries, entry => entry.CountryId == PolandId);
+        Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == PolandId));
     }
 
     [Theory]

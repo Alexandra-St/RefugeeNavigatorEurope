@@ -1307,5 +1307,320 @@
     "Title": "Germany4Ukraine — Apply for a residence permit now (online service)",
     "Url": "https://www.germany4ukraine.de/EN/online-services/aufenthaltserlaubnis/seite.html?nn=722642",
     "LastCheckedAt": "2026-10-16T00:21:41+00:00"
+  },
+  {
+    "Title": "Republic of Poland — Act of 23 January 2026, Journal of Laws 2026 item 203",
+    "Url": "https://dziennikustaw.gov.pl/DU/2026/203/D2026000020301.pdf",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "e4aa407d-df53-58ab-b10a-6fc2b22d91d3",
+    "InformationEntryId": "218207bd-2a85-59e1-a945-eedb0604392e"
+  },
+  {
+    "Title": "Gov.pl — Obtain a PESEL number and trusted profile (Ukraine service)",
+    "Url": "https://www.gov.pl/web/gov/uzyskaj-numer-pesel-oraz-profil-zaufany--usluga-dla-obywateli-ukrainy",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "0dfc274b-f02d-5acb-913e-51dee3c7fa24",
+    "InformationEntryId": "218207bd-2a85-59e1-a945-eedb0604392e"
+  },
+  {
+    "Title": "Office for Foreigners (UdSC) — Important information for people with PESEL UKR",
+    "Url": "https://www.gov.pl/web/udsc/wazna-informacja-dla-obywateli-ukrainy-posiadajacych-numer-pesel-ze-statusem-ukr",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "433faca8-dcb6-59a1-8d32-5e38d16049b0",
+    "InformationEntryId": "218207bd-2a85-59e1-a945-eedb0604392e"
+  },
+  {
+    "Title": "Office for Foreigners (UdSC) — Discontinuation of certificates confirming temporary protection",
+    "Url": "https://www.gov.pl/web/udsc/zaprzestanie-wydawania-zaswiadczen-potwierdzajacych-korzystanie-z-ochrony-czasowej",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "7418e8ea-bc3d-561b-ba05-2f09ed29cdc0",
+    "InformationEntryId": "218207bd-2a85-59e1-a945-eedb0604392e"
+  },
+  {
+    "Title": "Office for Foreigners (UdSC) — Changes to special rules on Ukrainian citizens’ stay",
+    "Url": "https://www.gov.pl/web/udsc/zmiany-w-szczegolnych-zasadach-dotyczacych-legalnosci-pobytu-obywateli-ukrainy-na-terytorium-rzeczypospolitej-polskiej",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "4eba2e3a-fa21-5803-929c-c39d0e19a7a2",
+    "InformationEntryId": "218207bd-2a85-59e1-a945-eedb0604392e"
+  },
+  {
+    "Title": "Council Implementing Decision (EU) 2026/1912 — Official Journal PDF (read together with the 5 August 2026 corrigendum)",
+    "Url": "https://eur-lex.europa.eu/eli/dec_impl/2026/1912/oj/eng/pdf",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "0a989122-f3d4-5afd-a7ce-e10c4566cebe",
+    "InformationEntryId": "218207bd-2a85-59e1-a945-eedb0604392e"
+  },
+  {
+    "Title": "Office for Foreigners (UdSC) — Extension of temporary protection until 4 March 2028",
+    "Url": "https://www.gov.pl/web/udsc/przedluzenie-ochrony-czasowej-do-4-marca-2028-r",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "d0fc2583-ea0d-5289-b9c7-de3e97417529",
+    "InformationEntryId": "218207bd-2a85-59e1-a945-eedb0604392e"
+  },
+  {
+    "Title": "EUR-Lex — Official Journal corrigendum to Council Implementing Decision (EU) 2026/1912, OJ L 2026/90680",
+    "Url": "https://eur-lex.europa.eu/eli/dec_impl/2026/1912/corrigendum/2026-08-05/oj/eng/pdf",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "6a544d55-b307-5747-bddd-df1c57f678a6",
+    "InformationEntryId": "218207bd-2a85-59e1-a945-eedb0604392e"
+  },
+  {
+    "Title": "National Integration Network (KSI), gov.pl — Extension of temporary protection until 4 March 2028 (page still displays superseded 31/30 July dates)",
+    "Url": "https://www.gov.pl/web/krajowa-siec-integracji/przedluzenie-ochrony-czasowej-do-4-marca-2028-r",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "5259d868-4cfb-5b58-97a5-a26975b7c283",
+    "InformationEntryId": "218207bd-2a85-59e1-a945-eedb0604392e"
+  },
+  {
+    "Title": "Ministry of Family, Labour and Social Policy — Changes in assistance for Ukrainian citizens in 2026",
+    "Url": "https://www.gov.pl/web/rodzina/co-sie-zmienia-w-pomocy-dla-obywateli-ukrainy-w-2026-r",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "66d98c8a-b567-5864-806b-120408bb3a93",
+    "InformationEntryId": "218207bd-2a85-59e1-a945-eedb0604392e"
+  },
+  {
+    "Title": "Office for Foreigners (UdSC) — CUKR residence-card procedure",
+    "Url": "https://www.gov.pl/web/udsc/CUKR-procedura",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "41dea3fa-8ffc-5d2e-a476-aaf2cf07b109",
+    "InformationEntryId": "c230d45f-9c76-5912-8c97-dc7d0689baa6"
+  },
+  {
+    "Title": "Office for Foreigners (UdSC) — Information about MOS",
+    "Url": "https://www.gov.pl/web/udsc/info-mos",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "50dddaa7-ff1f-5c77-b4f7-2cf1254adda6",
+    "InformationEntryId": "c230d45f-9c76-5912-8c97-dc7d0689baa6"
+  },
+  {
+    "Title": "Republic of Poland — Act of 23 January 2026, Journal of Laws 2026 item 203",
+    "Url": "https://dziennikustaw.gov.pl/DU/2026/203/D2026000020301.pdf",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "599f4d31-e4d8-5ebf-82ed-149d5d677dd9",
+    "InformationEntryId": "c230d45f-9c76-5912-8c97-dc7d0689baa6"
+  },
+  {
+    "Title": "Office for Foreigners (UdSC) — Changes to special rules on Ukrainian citizens’ stay",
+    "Url": "https://www.gov.pl/web/udsc/zmiany-w-szczegolnych-zasadach-dotyczacych-legalnosci-pobytu-obywateli-ukrainy-na-terytorium-rzeczypospolitej-polskiej",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "ddffc1ab-c2e0-5f7a-b89f-9fafb794e4b5",
+    "InformationEntryId": "c230d45f-9c76-5912-8c97-dc7d0689baa6"
+  },
+  {
+    "Title": "Office for Foreigners (UdSC) — Discontinuation of certificates confirming temporary protection",
+    "Url": "https://www.gov.pl/web/udsc/zaprzestanie-wydawania-zaswiadczen-potwierdzajacych-korzystanie-z-ochrony-czasowej",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "1cc08213-ec62-5f77-b688-89e3c7474a28",
+    "InformationEntryId": "c230d45f-9c76-5912-8c97-dc7d0689baa6"
+  },
+  {
+    "Title": "Ministry of Family, Labour and Social Policy — ePraca / Central Job Offers Database",
+    "Url": "https://gora.praca.gov.pl/pl/web/urzad-pracy/rynek-pracy/bazy-danych/centralna-baza-ofert-pracy-cbop",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "657597f7-ecb6-5b19-a33d-0ddb81b5eb2f",
+    "InformationEntryId": "a323701f-367e-52bb-9c33-45c4156a1350"
+  },
+  {
+    "Title": "Ministry of Family, Labour and Social Policy — Changes in assistance for Ukrainian citizens in 2026",
+    "Url": "https://www.gov.pl/web/rodzina/co-sie-zmienia-w-pomocy-dla-obywateli-ukrainy-w-2026-r",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "3736b420-8ed5-512c-bea4-db7096cbd752",
+    "InformationEntryId": "a323701f-367e-52bb-9c33-45c4156a1350"
+  },
+  {
+    "Title": "Public Employment Services — Employment intermediation information for jobseekers",
+    "Url": "https://psz.praca.gov.pl/web/8188476/dla-bezrobotnych-i-poszukujacych-pracy/abc-bezrobotnego-i-poszukujacego-pracy/pomoc-dla-osob-niezarejestrowanych/posrednictwo-pracy",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "178079f9-2746-5728-a86c-dc1877b2d3b8",
+    "InformationEntryId": "a323701f-367e-52bb-9c33-45c4156a1350"
+  },
+  {
+    "Title": "Polish National Agency for Academic Exchange — Recognition of foreign secondary-school certificates",
+    "Url": "https://www.nawa.gov.pl/uznawalnosc/wydawanie-informacji-o-zagranicznych-dyplomach/swiadectwo-szkoly-sredniej",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "13d6fe01-5dcf-5562-adb6-ae01d742db59",
+    "InformationEntryId": "a323701f-367e-52bb-9c33-45c4156a1350"
+  },
+  {
+    "Title": "Ministry of Family, Labour and Social Policy — National Integration Centres information",
+    "Url": "https://www.gov.pl/web/krajowa-siec-integracji/krajowe-biura-integracji-baza-adresowa",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "01816988-01e9-56ca-87ae-c7ada514ac97",
+    "InformationEntryId": "a323701f-367e-52bb-9c33-45c4156a1350"
+  },
+  {
+    "Title": "National Labour Inspectorate (PIP) — Lawful employment",
+    "Url": "https://cudzoziemcywpracy.pip.gov.pl/legalne-zatrudnienie",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "cb8bb4e3-f65d-5a00-8b20-a541475a3050",
+    "InformationEntryId": "7797d03c-6873-50cd-aef6-0d94a2f5fcab"
+  },
+  {
+    "Title": "Ministry of Family, Labour and Social Policy — Pay and other employment benefits",
+    "Url": "https://www.gov.pl/web/rodzina/wynagrodzenie-za-prace-i-inne-swiadczenia-zwiazane-z-praca",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "b93d9eab-8905-5847-9c80-2a3cbc5eca73",
+    "InformationEntryId": "7797d03c-6873-50cd-aef6-0d94a2f5fcab"
+  },
+  {
+    "Title": "Ministry of Family, Labour and Social Policy — Working time rules",
+    "Url": "https://www.gov.pl/web/rodzina/ustalanie-i-rozliczanie-czasu-pracy",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "f6bbb0ec-95d3-568c-9a80-c586ad5ff1b3",
+    "InformationEntryId": "7797d03c-6873-50cd-aef6-0d94a2f5fcab"
+  },
+  {
+    "Title": "National Labour Inspectorate (PIP) — How to file a complaint",
+    "Url": "https://www.pip.gov.pl/dla-pracownikow/niezbednik-pracownika/jak-zlozyc-skarge?tmpl=pdf",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "b9cb070e-e573-5ff1-9ac9-099f3208fedb",
+    "InformationEntryId": "7797d03c-6873-50cd-aef6-0d94a2f5fcab"
+  },
+  {
+    "Title": "Republic of Poland — Act of 23 January 2026, Journal of Laws 2026 item 203",
+    "Url": "https://dziennikustaw.gov.pl/DU/2026/203/D2026000020301.pdf",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "5d10ea5b-6963-54ea-b457-a8e95a5edeb7",
+    "InformationEntryId": "7797d03c-6873-50cd-aef6-0d94a2f5fcab"
+  },
+  {
+    "Title": "National Health Fund (NFZ) — Patient from Ukraine: what changed from 5 March 2026?",
+    "Url": "https://www.nfz.gov.pl/aktualnosci/aktualnosci-centrali/pacjent-z-ukrainy-co-sie-zmienilo-od-5-marca-2026-r-,8907.html",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "6dbd3c8d-ac7f-5211-8609-eea9edfecbce",
+    "InformationEntryId": "d7e0716b-154d-5db3-8790-f73684c07271"
+  },
+  {
+    "Title": "Patient.gov.pl — Emergency care and out-of-hours options",
+    "Url": "https://pacjent.gov.pl/na-ratunek",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "7813be17-01bf-5f2a-86aa-ac013ea36b81",
+    "InformationEntryId": "d7e0716b-154d-5db3-8790-f73684c07271"
+  },
+  {
+    "Title": "National Health Fund — Find a healthcare provider",
+    "Url": "https://gsl.nfz.gov.pl/",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "07c5096b-5adf-5883-ad09-a6986794cbc7",
+    "InformationEntryId": "d7e0716b-154d-5db3-8790-f73684c07271"
+  },
+  {
+    "Title": "Republic of Poland — Act of 23 January 2026, Journal of Laws 2026 item 203",
+    "Url": "https://dziennikustaw.gov.pl/DU/2026/203/D2026000020301.pdf",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "10831751-821e-5615-993d-d0b29f693361",
+    "InformationEntryId": "d7e0716b-154d-5db3-8790-f73684c07271"
+  },
+  {
+    "Title": "Mazowieckie Voivodeship Office — Assistance to Ukrainian citizens (regional information for Mazowieckie only)",
+    "Url": "https://www.gov.pl/web/uw-mazowiecki/pomoc-obywatelom-ukrainy",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "defe4b60-7464-524e-90f6-9f23a0ec5464",
+    "InformationEntryId": "1f310b3c-dceb-5e3a-90d0-d3a705ca5c53"
+  },
+  {
+    "Title": "Gov.pl — Apply for a housing allowance",
+    "Url": "https://www.gov.pl/web/gov/uzyskaj-dodatek-mieszkaniowy",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "768aa9b7-06de-5926-9235-69fb3e537b8b",
+    "InformationEntryId": "1f310b3c-dceb-5e3a-90d0-d3a705ca5c53"
+  },
+  {
+    "Title": "Ministry of Development and Technology — Tenant Protection Act questions and answers (general information; no specific remedy relied on)",
+    "Url": "https://www.gov.pl/web/rozwoj-technologia/pytania-i-odpowiedzi-w-sprawie-stosowania-przepisow-ustawy-z-dnia-21-czerwca-2001-r-o-ochronie-praw-lokatorow-mieszkaniowym-zasobie-gminy-i-o-zmianie-kodeksu-cywilnego2",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "09cc8513-104c-5ced-b017-b64cf0e3ee9c",
+    "InformationEntryId": "1f310b3c-dceb-5e3a-90d0-d3a705ca5c53"
+  },
+  {
+    "Title": "Republic of Poland — Act of 23 January 2026, Journal of Laws 2026 item 203",
+    "Url": "https://dziennikustaw.gov.pl/DU/2026/203/D2026000020301.pdf",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "80348417-6bc3-5c3b-90ec-f5a75b9092cd",
+    "InformationEntryId": "1f310b3c-dceb-5e3a-90d0-d3a705ca5c53"
+  },
+  {
+    "Title": "Republic of Poland — Tenant Rights Protection Act, consolidated text (Journal of Laws 2023 item 725)",
+    "Url": "https://eli.gov.pl/eli/DU/2023/725/ogl",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "a5ebb19b-f5d4-5e72-9107-5e4f84445286",
+    "InformationEntryId": "1f310b3c-dceb-5e3a-90d0-d3a705ca5c53"
+  },
+  {
+    "Title": "Ministry of National Education — Education for people arriving from abroad",
+    "Url": "https://www.gov.pl/web/edukacja/informacja-o-ksztalceniu-w-polskim-systemie-oswiaty-osob-przybywajacych-z-zagranicy",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "a646d0ee-81ba-5b10-b179-e09ca4ac3453",
+    "InformationEntryId": "32ca34e9-22d9-5f59-88a9-bbd7ffd7b5cd"
+  },
+  {
+    "Title": "Polish National Agency for Academic Exchange (NAWA) — Secondary school certificates",
+    "Url": "https://www.nawa.gov.pl/uznawalnosc/wydawanie-informacji-o-zagranicznych-dyplomach/swiadectwo-szkoly-sredniej",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "7b72e7d2-6359-5eae-b2c9-68f2e9da7c80",
+    "InformationEntryId": "32ca34e9-22d9-5f59-88a9-bbd7ffd7b5cd"
+  },
+  {
+    "Title": "Republic of Poland — Education Law, codified text prepared 16 September 2026 (Journal of Laws item 820, incorporating later items 904, 982, 1036 and 1123)",
+    "Url": "https://eli.gov.pl/eli/DU/2026/820/ogl",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "1cf8737c-cef9-56ac-8c57-8984169ba13d",
+    "InformationEntryId": "32ca34e9-22d9-5f59-88a9-bbd7ffd7b5cd"
+  },
+  {
+    "Title": "Ministry of Family, Labour and Social Policy — Changes in assistance for Ukrainian citizens in 2026",
+    "Url": "https://www.gov.pl/web/rodzina/co-sie-zmienia-w-pomocy-dla-obywateli-ukrainy-w-2026-r",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "06ac9777-b5e4-520f-a7de-54e060b51e20",
+    "InformationEntryId": "a5892591-d082-57ce-acf9-5c39ab4f9b84"
+  },
+  {
+    "Title": "Ministry of Family, Labour and Social Policy — New 800+ rules for foreign nationals",
+    "Url": "https://www.gov.pl/web/rodzina/nowe-zasady-przyznawania-swiadczenia-wychowawczego-cudzoziemcom",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "ac033b42-ecb0-5eb4-b08d-9af621e98693",
+    "InformationEntryId": "a5892591-d082-57ce-acf9-5c39ab4f9b84"
+  },
+  {
+    "Title": "Ministry of Family, Labour and Social Policy — 800+ questions and answers",
+    "Url": "https://www.gov.pl/web/rodzina/odpowiedzi-na-najczesciej-zadawane-pytania2",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "b47c85db-16c3-598b-b664-fc17208f81a0",
+    "InformationEntryId": "a5892591-d082-57ce-acf9-5c39ab4f9b84"
+  },
+  {
+    "Title": "Gov.pl — Use social assistance",
+    "Url": "https://www.gov.pl/web/gov/skorzystaj-z-pomocy-spolecznej",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "83e84de8-10ef-5176-b863-50a2fe6780b8",
+    "InformationEntryId": "a5892591-d082-57ce-acf9-5c39ab4f9b84"
+  },
+  {
+    "Title": "Gov.pl — Apply for a housing allowance",
+    "Url": "https://www.gov.pl/web/gov/uzyskaj-dodatek-mieszkaniowy",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "ed40a99c-9bb8-567e-83df-a4060b76050f",
+    "InformationEntryId": "a5892591-d082-57ce-acf9-5c39ab4f9b84"
+  },
+  {
+    "Title": "Social Insurance Institution (ZUS) — 800+: conditions for foreign nationals and possible reasons for suspending payment",
+    "Url": "https://www.zus.pl/en/-/%C5%9Awiadczenie-wychowawcze-800-warunki-dla-cudzoziemc%C3%B3w-i-mo%C5%BCliwe-przyczyny-wstrzymania-wyp%C5%82at?redirect=%2Fo-zus%2Faktualnosci",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "33354082-99fb-5d3a-97af-92c825f960e3",
+    "InformationEntryId": "a5892591-d082-57ce-acf9-5c39ab4f9b84"
+  },
+  {
+    "Title": "Social Insurance Institution (ZUS) — 800+ application and service information",
+    "Url": "https://www.zus.pl/swiadczenia/swiadczenia-dla-rodzin/swiadczenie-wychowawcze-800-plus/zmiany-w-swiadczeniu-wychowawczym-program-rodzina-800-",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "f3020282-2a5c-565e-a9e7-2470f3b687bf",
+    "InformationEntryId": "a5892591-d082-57ce-acf9-5c39ab4f9b84"
+  },
+  {
+    "Title": "Republic of Poland — Act of 23 January 2026, Journal of Laws 2026 item 203",
+    "Url": "https://dziennikustaw.gov.pl/DU/2026/203/D2026000020301.pdf",
+    "LastCheckedAt": "2026-10-16T00:00:00+00:00",
+    "Id": "131a629b-e3ba-54a3-932b-2cddd661ff40",
+    "InformationEntryId": "a5892591-d082-57ce-acf9-5c39ab4f9b84"
   }
 ]
