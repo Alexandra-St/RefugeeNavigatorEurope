@@ -191,6 +191,13 @@ public sealed class GermanyContentIntegrationTests
             Assert.Contains("2025", social[language]);
         }
 
+        Assert.Contains("entry by 4 December 2027", protection["en"]);
+        Assert.Contains("в’їзд не пізніше 4 грудня 2027 року", protection["uk"]);
+        Assert.Contains("въезд не позднее 4 декабря 2027 года", protection["ru"]);
+        Assert.Contains("От одного года до трёх лет ребёнок", education["ru"]);
+        Assert.DoesNotContain("С одного до трёх лет ребёнок", education["ru"]);
+        Assert.Contains("см. также статьи о медицинской помощи и жилье", social["ru"]);
+        Assert.DoesNotContain("см. также статьям о медицинской помощи и жилье", social["ru"]);
         Assert.Contains("The indexed text available for Germany4Ukraine’s Labour Law page stated 4 March 2028; that page could not be opened directly during this check.", protection["en"]);
         Assert.Contains("ordinary visa-free travel", protection["en"]);
         Assert.Contains("Brandenburg state ministry", protection["en"]);

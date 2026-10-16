@@ -23,6 +23,10 @@ The current opened Germany4Ukraine registration-page variants displayed 4 March 
 
 No new legal claim was added about benefit eligibility, work permission, or permit validity. The existing bill remains described as a proposal, and local procedures remain conditional. No source record outside the Germany batch was changed.
 
+## Final proofreading — 16 October 2026
+
+The final pass corrected the Russian cross-reference in Social Assistance, clarified the inclusive 4 December 2027 entry deadline in Ukrainian and Russian, and corrected the Russian age-range wording in Education. The three drafts match the integrated catalog. `LastUpdatedAt` was refreshed only for those four edited translations; all 24 statuses remain `NeedsReview (0)`. The 2027/2028 source discrepancy and source-access limitations remain unchanged.
+
 ## Human review still required
 
 - Directly verify the Germany4Ukraine Labour Law page and reconcile its indexed 2028 statement with the opened registration pages and current ordinance.
