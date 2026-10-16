@@ -51,7 +51,7 @@ public sealed class GermanyContentIntegrationTests
     };
 
     [Fact]
-    public async Task GermanyBatchLoadsWithCompleteNeedsReviewTranslationsAndLinkedSources()
+    public async Task GermanyBatchLoadsWithCompleteVerifiedTranslationsAndLinkedSources()
     {
         var catalog = await LoadCatalogAsync();
         var entries = catalog.InformationEntries.Where(entry => entry.CountryId == GermanyId).ToArray();
@@ -60,8 +60,12 @@ public sealed class GermanyContentIntegrationTests
         var sources = catalog.OfficialSources.Where(source => entryIds.Contains(source.InformationEntryId)).ToArray();
 
         Assert.Equal(8, entries.Length);
+        Assert.Equal(entries.Length, entries.Select(entry => entry.Id).Distinct().Count());
         Assert.Equal(SourceCounts.Keys.Select(Guid.Parse).Order().ToArray(), entries.Select(entry => entry.Id).Order().ToArray());
         Assert.Equal(24, translations.Length);
+        Assert.Equal(24, translations.Select(item => (item.InformationEntryId, item.LanguageCode)).Distinct().Count());
+        Assert.Equal(24, translations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(0, translations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(86, sources.Length);
         Assert.DoesNotContain(sources, source => source.Url.ToString() == "https://www.germany4ukraine.de/EN/arbeit-und-soziales/ukrainer-arbeiten-in-deutschland/seite_node.html");
         Assert.Equal(GermanyCategoryIds.Order().ToArray(), entries.Select(entry => entry.CategoryId).Distinct().Order().ToArray());
@@ -69,7 +73,7 @@ public sealed class GermanyContentIntegrationTests
         Assert.All(translations, translation =>
         {
             Assert.Contains(translation.LanguageCode, Languages);
-            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
@@ -150,7 +154,7 @@ public sealed class GermanyContentIntegrationTests
                     translation.Title,
                     "germany",
                     category.Slug,
-                    VerificationStatus.NeedsReview.ToString(),
+                    VerificationStatus.Verified.ToString(),
                     language);
                 var result = Assert.Single(results);
                 Assert.Equal(translation.InformationEntryId, result.Entry.Id);
@@ -243,9 +247,9 @@ public sealed class GermanyContentIntegrationTests
 
     private static string StatusLabel(string language) => language switch
     {
-        "uk" => "Потребує перевірки",
-        "en" => "Needs review",
-        "ru" => "Требует проверки",
+        "uk" => "Перевірено",
+        "en" => "Reviewed",
+        "ru" => "Проверено",
         _ => throw new ArgumentOutOfRangeException(nameof(language))
     };
 

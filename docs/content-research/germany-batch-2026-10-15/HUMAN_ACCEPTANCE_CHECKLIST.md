@@ -1,15 +1,23 @@
 # Germany batch — human editorial acceptance checklist
 
 **Batch:** 15 October 2026 integration, final focused verification dated 16 October 2026.
-**Purpose:** Record human review of the eight integrated Germany articles before any publication decision. This checklist is not legal advice, source re-verification, publication approval, or deployment approval.
+**Purpose:** Record the project owner’s human review of the eight integrated Germany articles and preserve its scope for a later release decision. This checklist is not legal advice, source re-verification, independent legal certification, or deployment approval.
 
-All 24 translations currently have `VerificationStatus.NeedsReview (0)`. Keep each status unchanged unless the project owner separately approves a status change. The source links below are selected from the article source registers; they were not rechecked as part of this checklist preparation. The inaccessible Germany4Ukraine Labour Law URL is included only as a direct-access follow-up, not as evidence.
+All 24 translations are recorded as `VerificationStatus.Verified (1)` following the project owner’s editorial approval dated 16 October 2026. This status records editorial acceptance at that point in time; it is not independent legal certification or a guarantee of continuing accuracy. The source links below are selected from the article source registers; they were not rechecked as part of this checklist preparation. The inaccessible Germany4Ukraine Labour Law URL is included only as a direct-access follow-up, not as evidence.
+
+## Recorded editorial decision — 16 October 2026
+
+- **Reviewer:** Project owner.
+- **Decision:** Approved for Private Beta preparation.
+- **Scope:** All eight Germany articles and all 24 UK/EN/RU translations listed below.
+- **Evidence policy:** Verified discrepancies between official sources may be explained transparently; claims that could not be verified are excluded from article content.
+- **Deployment:** **NOT AUTHORIZED.** This approval does not authorize or trigger a Render deployment.
 
 ## 1. Applying for Temporary Protection and Checking Residence Dates
 
 **Category:** Temporary protection
 **Article titles:** UK: Заява на тимчасовий захист і перевірка строку дозволу на проживання · EN: Applying for Temporary Protection and Checking Residence Dates · RU: Подача заявления на временную защиту и проверка срока разрешения на проживание
-**Translation review:** UK ☐ pending — NeedsReview (0) · EN ☐ pending — NeedsReview (0) · RU ☐ pending — NeedsReview (0)
+**Translation review:** UK ✓ reviewed — Verified (1) · EN ✓ reviewed — Verified (1) · RU ✓ reviewed — Verified (1)
 
 **Critical legal qualifications**
 
@@ -27,7 +35,7 @@ All 24 translations currently have `VerificationStatus.NeedsReview (0)`. Keep ea
 
 **Category:** Temporary protection
 **Article titles:** UK: Варіанти проживання після тимчасового захисту · EN: Residence Options After Temporary Protection · RU: Варианты проживания после временной защиты
-**Translation review:** UK ☐ pending — NeedsReview (0) · EN ☐ pending — NeedsReview (0) · RU ☐ pending — NeedsReview (0)
+**Translation review:** UK ✓ reviewed — Verified (1) · EN ✓ reviewed — Verified (1) · RU ✓ reviewed — Verified (1)
 
 **Critical legal qualifications**
 
@@ -45,7 +53,7 @@ All 24 translations currently have `VerificationStatus.NeedsReview (0)`. Keep ea
 
 **Category:** Employment
 **Article titles:** UK: Пошук роботи в Німеччині · EN: Finding a Job in Germany · RU: Поиск работы в Германии
-**Translation review:** UK ☐ pending — NeedsReview (0) · EN ☐ pending — NeedsReview (0) · RU ☐ pending — NeedsReview (0)
+**Translation review:** UK ✓ reviewed — Verified (1) · EN ✓ reviewed — Verified (1) · RU ✓ reviewed — Verified (1)
 
 **Critical legal qualifications**
 
@@ -63,7 +71,7 @@ All 24 translations currently have `VerificationStatus.NeedsReview (0)`. Keep ea
 
 **Category:** Employment
 **Article titles:** UK: Право на роботу та права працівників · EN: Work Authorization and Employee Rights · RU: Разрешение на работу и права работников
-**Translation review:** UK ☐ pending — NeedsReview (0) · EN ☐ pending — NeedsReview (0) · RU ☐ pending — NeedsReview (0)
+**Translation review:** UK ✓ reviewed — Verified (1) · EN ✓ reviewed — Verified (1) · RU ✓ reviewed — Verified (1)
 
 **Critical legal qualifications**
 
@@ -81,7 +89,7 @@ All 24 translations currently have `VerificationStatus.NeedsReview (0)`. Keep ea
 
 **Category:** Healthcare
 **Article titles:** UK: Медична допомога в Німеччині · EN: Accessing Healthcare in Germany · RU: Медицинская помощь в Германии
-**Translation review:** UK ☐ pending — NeedsReview (0) · EN ☐ pending — NeedsReview (0) · RU ☐ pending — NeedsReview (0)
+**Translation review:** UK ✓ reviewed — Verified (1) · EN ✓ reviewed — Verified (1) · RU ✓ reviewed — Verified (1)
 
 **Critical legal qualifications**
 
@@ -99,7 +107,7 @@ All 24 translations currently have `VerificationStatus.NeedsReview (0)`. Keep ea
 
 **Category:** Housing
 **Article titles:** UK: Пошук житла в Німеччині · EN: Finding Accommodation in Germany · RU: Поиск жилья в Германии
-**Translation review:** UK ☐ pending — NeedsReview (0) · EN ☐ pending — NeedsReview (0) · RU ☐ pending — NeedsReview (0)
+**Translation review:** UK ✓ reviewed — Verified (1) · EN ✓ reviewed — Verified (1) · RU ✓ reviewed — Verified (1)
 
 **Critical legal qualifications**
 
@@ -117,7 +125,7 @@ All 24 translations currently have `VerificationStatus.NeedsReview (0)`. Keep ea
 
 **Category:** Education
 **Article titles:** UK: Освіта та вивчення німецької мови · EN: Education and German-Language Learning · RU: Образование и изучение немецкого языка
-**Translation review:** UK ☐ pending — NeedsReview (0) · EN ☐ pending — NeedsReview (0) · RU ☐ pending — NeedsReview (0)
+**Translation review:** UK ✓ reviewed — Verified (1) · EN ✓ reviewed — Verified (1) · RU ✓ reviewed — Verified (1)
 
 **Critical legal qualifications**
 
@@ -135,7 +143,7 @@ All 24 translations currently have `VerificationStatus.NeedsReview (0)`. Keep ea
 
 **Category:** Social assistance
 **Article titles:** UK: Фінансова та соціальна допомога · EN: Financial and Social Assistance · RU: Финансовая и социальная помощь
-**Translation review:** UK ☐ pending — NeedsReview (0) · EN ☐ pending — NeedsReview (0) · RU ☐ pending — NeedsReview (0)
+**Translation review:** UK ✓ reviewed — Verified (1) · EN ✓ reviewed — Verified (1) · RU ✓ reviewed — Verified (1)
 
 **Critical legal qualifications**
 
@@ -151,4 +159,4 @@ All 24 translations currently have `VerificationStatus.NeedsReview (0)`. Keep ea
 
 ## Completion record
 
-For each language, record the reviewer, review date, decision, and notes in the project’s normal editorial process. A human acceptance decision is separate from the technical `VerificationStatus` field. Do not change any of the 24 `NeedsReview (0)` statuses in this task. Publication and deployment require their separate release approvals.
+The project owner’s approval is recorded above for 16 October 2026, and all 24 translation statuses are `Verified (1)`. This records editorial acceptance, not independent legal certification or a guarantee of ongoing accuracy. Publication/release and deployment remain separate decisions; deployment is not authorized by this approval.
