@@ -196,7 +196,7 @@
     <value>Search information</value>
   </data>
   <data name="Home.SearchDescription" xml:space="preserve">
-    <value>Find published articles by searching their text and filtering by country, category, and translation status.</value>
+    <value>Find articles available in the app by searching their text and filtering by country, category, and translation status.</value>
   </data>
   <data name="Home.OpenSearchPreview" xml:space="preserve">
     <value>Open search preview</value>
@@ -217,10 +217,10 @@
     <value>Search information</value>
   </data>
   <data name="Search.Description" xml:space="preserve">
-    <value>Find published information by searching its title, summary, or content, then narrow results by country, category, and review status.</value>
+    <value>Search available articles by title, summary, or content, then narrow results by country, category, and review status.</value>
   </data>
   <data name="Search.PreviewNotice" xml:space="preserve">
-    <value>This early search covers only articles that are currently published.</value>
+    <value>This early search covers articles currently available in the app.</value>
   </data>
   <data name="Search.BackHome" xml:space="preserve">
     <value>Back to homepage</value>
@@ -274,8 +274,8 @@
   <data name="Compare.SameCountry" xml:space="preserve"><value>Choose two different countries.</value></data>
   <data name="Compare.CountryPanelHeading" xml:space="preserve"><value>Information for {0}</value></data>
   <data name="Compare.OpenCategory" xml:space="preserve"><value>Open {0} information</value></data>
-  <data name="Compare.AvailableInformation" xml:space="preserve"><value>Available published articles</value></data>
-  <data name="Compare.EmptyPanel" xml:space="preserve"><value>No published articles are available for this country and category.</value></data>
+  <data name="Compare.AvailableInformation" xml:space="preserve"><value>Available articles</value></data>
+  <data name="Compare.EmptyPanel" xml:space="preserve"><value>No articles are currently available for this country and category.</value></data>
   <data name="Compare.PreviewLimitationsHeading" xml:space="preserve"><value>About this preview</value></data>
   <data name="Compare.PanelsHeading" xml:space="preserve"><value>Country information panels</value></data>
   <data name="Compare.ArticleStatus" xml:space="preserve"><value>Translation status: {0}</value></data>

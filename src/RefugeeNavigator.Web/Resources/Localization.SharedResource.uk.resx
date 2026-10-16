@@ -196,7 +196,7 @@
     <value>Пошук інформації</value>
   </data>
   <data name="Home.SearchDescription" xml:space="preserve">
-    <value>Шукайте в заголовках, коротких описах і текстах опублікованих статей та звужуйте результати за країною, категорією і статусом перекладу.</value>
+    <value>Шукайте в заголовках, коротких описах і текстах доступних у застосунку статей та звужуйте результати за країною, категорією і статусом перекладу.</value>
   </data>
   <data name="Home.OpenSearchPreview" xml:space="preserve">
     <value>Відкрити попередній перегляд пошуку</value>
@@ -217,10 +217,10 @@
     <value>Пошук інформації</value>
   </data>
   <data name="Search.Description" xml:space="preserve">
-    <value>Шукайте в заголовках, коротких описах і текстах опублікованих статей та звужуйте результати за країною, категорією і статусом перевірки.</value>
+    <value>Шукайте за заголовками, короткими описами або текстами доступних статей, а потім звужуйте результати за країною, категорією і статусом перевірки.</value>
   </data>
   <data name="Search.PreviewNotice" xml:space="preserve">
-    <value>Це початкова версія пошуку, яка охоплює лише опубліковані статті.</value>
+    <value>Ця початкова версія пошуку охоплює статті, доступні в застосунку.</value>
   </data>
   <data name="Search.BackHome" xml:space="preserve">
     <value>Повернутися на головну</value>
@@ -239,7 +239,7 @@
   <data name="Search.ResultsHeading" xml:space="preserve"><value>Результати пошуку</value></data>
   <data name="Search.ResultsCount" xml:space="preserve"><value>Результатів: {0}</value></data>
   <data name="Search.NoResults" xml:space="preserve"><value>За цими умовами статей не знайдено.</value></data>
-  <data name="Search.NoContent" xml:space="preserve"><value>Опублікованих статей поки немає.</value></data>
+  <data name="Search.NoContent" xml:space="preserve"><value>Наразі немає доступних статей.</value></data>
   <data name="Search.ResultCountry" xml:space="preserve"><value>Країна</value></data>
   <data name="Search.ResultCategory" xml:space="preserve"><value>Категорія</value></data>
   <data name="Search.ResultStatus" xml:space="preserve"><value>Статус перекладу</value></data>
@@ -272,8 +272,8 @@
   <data name="Compare.SameCountry" xml:space="preserve"><value>Виберіть дві різні країни.</value></data>
   <data name="Compare.CountryPanelHeading" xml:space="preserve"><value>Інформація про країну: {0}</value></data>
   <data name="Compare.OpenCategory" xml:space="preserve"><value>Переглянути інформацію: {0}</value></data>
-  <data name="Compare.AvailableInformation" xml:space="preserve"><value>Доступні опубліковані статті</value></data>
-  <data name="Compare.EmptyPanel" xml:space="preserve"><value>Опублікованих статей для цієї країни та категорії поки немає.</value></data>
+  <data name="Compare.AvailableInformation" xml:space="preserve"><value>Доступні статті</value></data>
+  <data name="Compare.EmptyPanel" xml:space="preserve"><value>Для цієї країни й категорії наразі немає доступних статей.</value></data>
   <data name="Compare.PreviewLimitationsHeading" xml:space="preserve"><value>Про цей попередній перегляд</value></data>
   <data name="Compare.PanelsHeading" xml:space="preserve"><value>Панелі інформації про країни</value></data>
   <data name="Compare.ArticleStatus" xml:space="preserve"><value>Статус перекладу: {0}</value></data>

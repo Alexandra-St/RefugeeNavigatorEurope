@@ -161,9 +161,9 @@ public sealed class AlphaPreviewPageTests
     }
 
     [Theory]
-    [InlineData("uk", "Пошук інформації", "Порівняння країн", "опубліковані статті")]
-    [InlineData("en", "Search information", "Compare countries", "currently published")]
-    [InlineData("ru", "Поиск информации", "Сравнение стран", "опубликованные статьи")]
+    [InlineData("uk", "Пошук інформації", "Порівняння країн", "статті, доступні в застосунку")]
+    [InlineData("en", "Search information", "Compare countries", "currently available in the app")]
+    [InlineData("ru", "Поиск информации", "Сравнение стран", "статьи, доступные в приложении")]
     public async Task SearchIsFunctionalAndCompareHasInteractiveSelectionPreview(
         string language,
         string searchHeading,
