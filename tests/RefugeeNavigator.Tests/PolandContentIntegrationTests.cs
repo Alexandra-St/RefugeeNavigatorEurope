@@ -51,7 +51,7 @@ public sealed class PolandContentIntegrationTests
     };
 
     [Fact]
-    public async Task PolandBatchLoadsWithCompleteNeedsReviewTranslationsAndLinkedSources()
+    public async Task PolandBatchLoadsWithCompleteVerifiedTranslationsAndLinkedSources()
     {
         var catalog = await LoadCatalogAsync();
         var entries = catalog.InformationEntries.Where(entry => entry.CountryId == PolandId).ToArray();
@@ -65,9 +65,22 @@ public sealed class PolandContentIntegrationTests
         Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == DenmarkId));
         Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == GermanyId));
         Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == PolandId));
+        Assert.Equal(72, catalog.InformationEntryTranslations.Count);
+        foreach (var countryId in new[] { DenmarkId, GermanyId, PolandId })
+        {
+            var countryEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == countryId)
+                .Select(entry => entry.Id).ToHashSet();
+            var countryTranslations = catalog.InformationEntryTranslations
+                .Where(translation => countryEntryIds.Contains(translation.InformationEntryId)).ToArray();
+            Assert.Equal(8, countryEntryIds.Count);
+            Assert.Equal(24, countryTranslations.Length);
+            Assert.All(countryTranslations, translation => Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus));
+        }
         Assert.Equal(24, translations.Length);
-        Assert.Equal(24, translations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
-        Assert.Equal(0, translations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(24, translations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(0, translations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(72, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(0, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(24, translations.Select(translation => (translation.InformationEntryId, translation.LanguageCode)).Distinct().Count());
         Assert.Equal(entries.Length, entries.Select(entry => entry.Id).Distinct().Count());
         Assert.Equal(CategoryIds.Order().ToArray(), entries.Select(entry => entry.CategoryId).Distinct().Order().ToArray());
@@ -77,7 +90,7 @@ public sealed class PolandContentIntegrationTests
             .Select(translation => translation.LanguageCode).Order().ToArray()));
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
@@ -161,7 +174,7 @@ public sealed class PolandContentIntegrationTests
                 }
 
                 var searchResults = ArticleSearch.Search(catalog, translation.Title, "poland", category.Slug,
-                    VerificationStatus.NeedsReview.ToString(), language);
+                    VerificationStatus.Verified.ToString(), language);
                 var result = Assert.Single(searchResults);
                 Assert.Equal(translation.InformationEntryId, result.Entry.Id);
                 Assert.Equal(language, result.Translation.LanguageCode);
@@ -304,9 +317,9 @@ public sealed class PolandContentIntegrationTests
 
     private static string StatusLabel(string language) => language switch
     {
-        "uk" => "Потребує перевірки",
-        "en" => "Needs review",
-        "ru" => "Требует проверки",
+        "uk" => "Перевірено",
+        "en" => "Reviewed",
+        "ru" => "Проверено",
         _ => throw new ArgumentOutOfRangeException(nameof(language))
     };
 
