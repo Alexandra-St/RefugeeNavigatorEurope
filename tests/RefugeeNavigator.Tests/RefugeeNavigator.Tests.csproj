@@ -17,6 +17,7 @@
     <ProjectReference Include="../../src/RefugeeNavigator.Web/RefugeeNavigator.Web.csproj" />
     <ProjectReference Include="../../src/RefugeeNavigator.Domain/RefugeeNavigator.Domain.csproj" />
     <ProjectReference Include="..\..\src\RefugeeNavigator.Data\RefugeeNavigator.Data.csproj" />
+    <ProjectReference Include="..\..\tools\RefugeeNavigator.ContentAudit\RefugeeNavigator.ContentAudit.csproj" />
   </ItemGroup>
 
   <ItemGroup>
