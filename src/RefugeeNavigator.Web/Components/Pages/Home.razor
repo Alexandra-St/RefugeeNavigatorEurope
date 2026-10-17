@@ -55,10 +55,11 @@
                 @foreach (var country in Catalog.Countries)
                 {
                     var countryDisplayName = Localizer[CatalogLocalizationKeyResolver.CountryName(country)].Value;
+                    var countryLocationName = Localizer[$"{CatalogLocalizationKeyResolver.CountryName(country)}.In"].Value;
 
                     <article class="country-card">
                         <h3>@countryDisplayName</h3>
-                        <p>@Localizer["Home.CountryDescription", countryDisplayName]</p>
+                        <p>@Localizer["Home.CountryDescription", countryLocationName]</p>
                         <a href="/countries/@country.Slug">
                             @Localizer["Home.ExploreCountry", countryDisplayName] <span aria-hidden="true">→</span>
                         </a>

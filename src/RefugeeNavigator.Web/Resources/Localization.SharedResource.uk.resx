@@ -61,13 +61,13 @@
     <value>Оберіть країну</value>
   </data>
   <data name="Home.CountryDescription" xml:space="preserve">
-    <value>Практична інформація про життя в країні «{0}» за тимчасового захисту.</value>
+    <value>Практична інформація для українців під тимчасовим захистом {0}.</value>
   </data>
   <data name="Home.CountryLinkLabel" xml:space="preserve">
     <value>Переглянути практичну інформацію про країну: {0}</value>
   </data>
   <data name="Home.ExploreCountry" xml:space="preserve">
-    <value>Докладніше про країну «{0}»</value>
+    <value>Докладніше про країну: {0}</value>
   </data>
   <data name="Country.PageTitle" xml:space="preserve">
     <value>{0} | Refugee Navigator Europe</value>
@@ -81,6 +81,15 @@
   <data name="Country.Poland" xml:space="preserve">
     <value>Польща</value>
   </data>
+  <data name="Country.Denmark.In" xml:space="preserve">
+    <value>у Данії</value>
+  </data>
+  <data name="Country.Germany.In" xml:space="preserve">
+    <value>у Німеччині</value>
+  </data>
+  <data name="Country.Poland.In" xml:space="preserve">
+    <value>у Польщі</value>
+  </data>
   <data name="Country.BackToCountries" xml:space="preserve">
     <value>До списку країн</value>
   </data>
@@ -88,13 +97,13 @@
     <value>Огляд країни</value>
   </data>
   <data name="Country.HeaderSubtitle" xml:space="preserve">
-    <value>Практична інформація для українців під тимчасовим захистом у країні «{0}».</value>
+    <value>Практична інформація для українців під тимчасовим захистом {0}.</value>
   </data>
   <data name="Country.LivingIn" xml:space="preserve">
-    <value>Життя в країні «{0}»</value>
+    <value>Життя {0}</value>
   </data>
   <data name="Country.LivingDescription" xml:space="preserve">
-    <value>Основні теми, пов’язані з життям у країні «{0}» під тимчасовим захистом.</value>
+    <value>Основні теми, пов’язані з життям {0} під тимчасовим захистом.</value>
   </data>
   <data name="Country.ExploreTopics" xml:space="preserve">
     <value>Основні теми</value>

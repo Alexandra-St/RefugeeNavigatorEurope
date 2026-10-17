@@ -119,9 +119,9 @@ public sealed class AlphaPreviewPageTests
     }
 
     [Theory]
-    [InlineData("uk", "Данія", "Німеччина", "Польща", "Докладніше про країну «{0}»")]
+    [InlineData("uk", "Данія", "Німеччина", "Польща", "Докладніше про країну: {0}")]
     [InlineData("en", "Denmark", "Germany", "Poland", "Explore {0}")]
-    [InlineData("ru", "Дания", "Германия", "Польша", "Информация о стране: {0}")]
+    [InlineData("ru", "Дания", "Германия", "Польша", "Подробнее о стране: {0}")]
     public async Task CountryLinksUseVisibleLocalizedNamesAndKeepTheirRoutes(
         string language,
         string denmark,
@@ -220,6 +220,48 @@ public sealed class AlphaPreviewPageTests
         {
             Assert.Contains($"href=\"/countries/denmark/categories/{slug}\"", visibleHtml);
         }
+    }
+
+    [Theory]
+    [InlineData("uk", "denmark", "Данія", "у Данії", "Життя у Данії")]
+    [InlineData("uk", "germany", "Німеччина", "у Німеччині", "Життя у Німеччині")]
+    [InlineData("uk", "poland", "Польща", "у Польщі", "Життя у Польщі")]
+    [InlineData("en", "denmark", "Denmark", "Denmark", "Living in Denmark")]
+    [InlineData("en", "germany", "Germany", "Germany", "Living in Germany")]
+    [InlineData("en", "poland", "Poland", "Poland", "Living in Poland")]
+    [InlineData("ru", "denmark", "Дания", "в Дании", "Жизнь в Дании")]
+    [InlineData("ru", "germany", "Германия", "в Германии", "Жизнь в Германии")]
+    [InlineData("ru", "poland", "Польша", "в Польше", "Жизнь в Польше")]
+    public async Task CountryCardsAndOverviewsUseNaturalLocalizedNames(
+        string language,
+        string slug,
+        string nominativeName,
+        string locationPhrase,
+        string livingHeading)
+    {
+        var homeHtml = WebUtility.HtmlDecode(await RenderAsync<Home>(language));
+        var countryParameters = new Dictionary<string, object?>
+        {
+            [nameof(CountryOverview.CountrySlug)] = slug
+        };
+        var overviewHtml = WebUtility.HtmlDecode(await RenderAsync<CountryOverview>(language, countryParameters, $"/countries/{slug}"));
+
+        var countryHeadings = Regex.Matches(homeHtml, @"<h3\b[^>]*>(?<name>.*?)</h3>", RegexOptions.Singleline)
+            .Cast<Match>()
+            .Select(match => match.Groups["name"].Value.Trim())
+            .TakeLast(3)
+            .ToArray();
+        Assert.Contains(nominativeName, countryHeadings);
+        Assert.Contains(string.Format(CultureInfo.GetCultureInfo(language), GetResource("Home.CountryDescription", language), locationPhrase), homeHtml);
+        Assert.Contains($"href=\"/countries/{slug}\"", homeHtml);
+        Assert.Matches($"<h1\\b[^>]*>{Regex.Escape(nominativeName)}</h1>", overviewHtml);
+        Assert.Contains(livingHeading, overviewHtml);
+        Assert.Contains(locationPhrase, overviewHtml);
+        Assert.DoesNotContain("«", homeHtml + overviewHtml);
+        Assert.DoesNotContain("»", homeHtml + overviewHtml);
+        Assert.DoesNotContain("в в ", homeHtml + overviewHtml);
+        Assert.DoesNotContain("у у ", homeHtml + overviewHtml);
+        Assert.Contains($"href=\"/countries/{slug}/categories/", overviewHtml);
     }
 
     [Theory]

@@ -17,12 +17,12 @@
         <header class="country-header">
             <p class="eyebrow">@Localizer["Country.Overview"]</p>
             <h1>@CountryDisplayName</h1>
-            <p class="subtitle">@Localizer["Country.HeaderSubtitle", CountryDisplayName]</p>
+            <p class="subtitle">@Localizer["Country.HeaderSubtitle", CountryLocationName]</p>
         </header>
 
         <section class="introduction" aria-labelledby="living-heading">
-            <h2 id="living-heading">@Localizer["Country.LivingIn", CountryDisplayName]</h2>
-            <p>@Localizer["Country.LivingDescription", CountryDisplayName]</p>
+            <h2 id="living-heading">@Localizer["Country.LivingIn", CountryLocationName]</h2>
+            <p>@Localizer["Country.LivingDescription", CountryLocationName]</p>
         </section>
 
         <section class="categories" aria-labelledby="categories-heading">
@@ -64,6 +64,10 @@
 
     private string CountryDisplayName => Country is { } country
         ? Localizer[CatalogLocalizationKeyResolver.CountryName(country)].Value
+        : string.Empty;
+
+    private string CountryLocationName => Country is { } country
+        ? Localizer[$"{CatalogLocalizationKeyResolver.CountryName(country)}.In"].Value
         : string.Empty;
 
     protected override void OnParametersSet()

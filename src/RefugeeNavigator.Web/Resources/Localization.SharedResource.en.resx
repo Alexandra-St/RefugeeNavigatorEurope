@@ -81,6 +81,15 @@
   <data name="Country.Poland" xml:space="preserve">
     <value>Poland</value>
   </data>
+  <data name="Country.Denmark.In" xml:space="preserve">
+    <value>Denmark</value>
+  </data>
+  <data name="Country.Germany.In" xml:space="preserve">
+    <value>Germany</value>
+  </data>
+  <data name="Country.Poland.In" xml:space="preserve">
+    <value>Poland</value>
+  </data>
   <data name="Country.BackToCountries" xml:space="preserve">
     <value>Back to countries</value>
   </data>
