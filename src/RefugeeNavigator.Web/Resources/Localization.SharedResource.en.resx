@@ -301,4 +301,20 @@
   <data name="Compare.InformationUnavailable" xml:space="preserve"><value>This translation is not currently available for comparison.</value></data>
   <data name="Compare.SourceChecked" xml:space="preserve"><value>Source checked:</value></data>
   <data name="Compare.OpenArticle" xml:space="preserve"><value>Open full article</value></data>
+  <data name="Compare.StructuredHeading" xml:space="preserve"><value>Structured comparison — draft</value></data>
+  <data name="Compare.DraftPreviewHeading" xml:space="preserve"><value>Local editorial preview</value></data>
+  <data name="Compare.DraftPreviewNotice" xml:space="preserve"><value>The structured answers below are drafts. They have not received separate editorial approval and are not shown in Production.</value></data>
+  <data name="Compare.DraftStatus" xml:space="preserve"><value>Draft</value></data>
+  <data name="Compare.FactSources" xml:space="preserve"><value>Sources for this item</value></data>
+  <data name="Compare.NotEstablishedInReviewedSources" xml:space="preserve"><value>Not established in the reviewed sources.</value></data>
+  <data name="Compare.Aspect.TemporaryProtectionScheme" xml:space="preserve"><value>Which scheme or status is described?</value></data>
+<data name="Compare.Aspect.ResidenceRoutes" xml:space="preserve"><value>Which other residence routes are described?</value></data>
+<data name="Compare.Aspect.JobSearch" xml:space="preserve"><value>Where can you search for vacancies?</value></data>
+<data name="Compare.Aspect.WorkEligibility" xml:space="preserve"><value>What does work authorization depend on?</value></data>
+<data name="Compare.Aspect.HealthcareBasis" xml:space="preserve"><value>What determines access to healthcare?</value></data>
+<data name="Compare.Aspect.HousingStart" xml:space="preserve"><value>Where should you start with housing?</value></data>
+<data name="Compare.Aspect.EducationRoute" xml:space="preserve"><value>How is the education route determined?</value></data>
+<data name="Compare.Aspect.SupportTypes" xml:space="preserve"><value>Which forms of social support are described?</value></data>
+<data name="Compare.ApprovedEditorialStatus" xml:space="preserve"><value>Editorially approved</value></data>
+  <data name="Compare.Aspect.KeyPoint" xml:space="preserve"><value>What key point is highlighted?</value></data>
 </root>

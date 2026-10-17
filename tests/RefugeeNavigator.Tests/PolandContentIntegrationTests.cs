@@ -359,6 +359,7 @@ public sealed class PolandContentIntegrationTests
             services.AddLogging();
             services.AddLocalization(options => options.ResourcesPath = "Resources");
             services.AddSingleton(catalog);
+            await ComparisonTestServices.RegisterAsync(services);
             services.AddSingleton<NavigationManager>(_ => new TestNavigationManager(navigationUri));
             using var provider = services.BuildServiceProvider();
             await using var renderer = new HtmlRenderer(provider, provider.GetRequiredService<ILoggerFactory>());

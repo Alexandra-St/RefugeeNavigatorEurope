@@ -299,4 +299,20 @@
   <data name="Compare.InformationUnavailable" xml:space="preserve"><value>Этот перевод сейчас недоступен для сравнения.</value></data>
   <data name="Compare.SourceChecked" xml:space="preserve"><value>Источник проверен:</value></data>
   <data name="Compare.OpenArticle" xml:space="preserve"><value>Открыть полную статью</value></data>
+  <data name="Compare.StructuredHeading" xml:space="preserve"><value>Структурированное сравнение — черновик</value></data>
+  <data name="Compare.DraftPreviewHeading" xml:space="preserve"><value>Локальный редакционный просмотр</value></data>
+  <data name="Compare.DraftPreviewNotice" xml:space="preserve"><value>Структурированные ответы ниже — черновики. Они не прошли отдельное редакционное одобрение и не отображаются в Production.</value></data>
+  <data name="Compare.DraftStatus" xml:space="preserve"><value>Черновик</value></data>
+  <data name="Compare.FactSources" xml:space="preserve"><value>Источники для этого пункта</value></data>
+  <data name="Compare.NotEstablishedInReviewedSources" xml:space="preserve"><value>Не установлено по проверенным источникам.</value></data>
+  <data name="Compare.Aspect.TemporaryProtectionScheme" xml:space="preserve"><value>Какая схема или статус описаны?</value></data>
+<data name="Compare.Aspect.ResidenceRoutes" xml:space="preserve"><value>Какие другие варианты пребывания описаны?</value></data>
+<data name="Compare.Aspect.JobSearch" xml:space="preserve"><value>Где искать вакансии?</value></data>
+<data name="Compare.Aspect.WorkEligibility" xml:space="preserve"><value>От чего зависит право на работу?</value></data>
+<data name="Compare.Aspect.HealthcareBasis" xml:space="preserve"><value>Что определяет доступ к медицинской помощи?</value></data>
+<data name="Compare.Aspect.HousingStart" xml:space="preserve"><value>С чего начать поиск жилья?</value></data>
+<data name="Compare.Aspect.EducationRoute" xml:space="preserve"><value>Как определяется образовательный маршрут?</value></data>
+<data name="Compare.Aspect.SupportTypes" xml:space="preserve"><value>Какие виды социальной поддержки описаны?</value></data>
+<data name="Compare.ApprovedEditorialStatus" xml:space="preserve"><value>Одобрено редактором</value></data>
+  <data name="Compare.Aspect.KeyPoint" xml:space="preserve"><value>Какой ключевой пункт выделен?</value></data>
 </root>

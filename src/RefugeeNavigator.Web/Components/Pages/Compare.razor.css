@@ -167,6 +167,132 @@ a:focus-visible {
     margin: 0.6rem 0 0;
 }
 
+.draft-preview-notice {
+    margin-top: 1rem;
+    padding: 0.9rem 1.1rem;
+    border: 1px solid #c27a10;
+    border-left-width: 4px;
+    border-radius: 0.35rem;
+    background: #fff8e8;
+    color: #513600;
+}
+
+.draft-preview-notice p {
+    margin: 0.35rem 0 0;
+    line-height: 1.5;
+}
+
+.structured-comparison {
+    margin-top: 1.5rem;
+}
+
+.structured-comparison > h2 {
+    margin-bottom: 1rem;
+}
+
+.structured-topic {
+    margin-top: 1rem;
+    padding: clamp(1rem, 2.5vw, 1.4rem);
+    border: 1px solid #d8e1ee;
+    border-radius: 0.85rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgb(16 42 86 / 4%);
+}
+
+.structured-topic > h3 {
+    margin: 0 0 0.75rem;
+    color: #102a56;
+    font-size: 1.2rem;
+}
+
+.structured-aspect + .structured-aspect {
+    margin-top: 0.9rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid #e1e8f1;
+}
+
+.structured-aspect > h4 {
+    margin: 0 0 0.65rem;
+    color: #263f66;
+    font-size: 1rem;
+}
+
+.structured-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem;
+}
+
+.structured-country {
+    min-width: 0;
+    padding: 0.85rem;
+    border: 1px solid #e1e8f1;
+    border-radius: 0.55rem;
+    background: #fbfcfe;
+}
+
+.structured-country h5 {
+    display: inline;
+    margin: 0 0.5rem 0 0;
+    color: #102a56;
+    font-size: 1rem;
+}
+
+.draft-label {
+    display: inline-block;
+    padding: 0.1rem 0.4rem;
+    border-radius: 1rem;
+    background: #fff0c2;
+    color: #513600;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.structured-country > p {
+    margin: 0.65rem 0 0;
+    color: #263f66;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+}
+
+.fact-sources {
+    margin-top: 0.65rem;
+    padding-top: 0.55rem;
+    border-top: 1px solid #e1e8f1;
+}
+
+.fact-sources summary {
+    color: #155eef;
+    cursor: pointer;
+    font-weight: 650;
+}
+
+.fact-sources summary:focus-visible {
+    outline: 3px solid #155eef;
+    outline-offset: 3px;
+}
+
+.fact-sources ul {
+    padding-left: 1.2rem;
+}
+
+.fact-sources li + li {
+    margin-top: 0.5rem;
+}
+
+.fact-sources a {
+    color: #155eef;
+    font-weight: 650;
+    overflow-wrap: anywhere;
+}
+
+.fact-sources li span {
+    display: block;
+    margin-top: 0.15rem;
+    color: #425675;
+    font-size: 0.9rem;
+}
+
 .comparison-note {
     margin-top: 1.5rem;
     padding: 1rem 1.2rem;
@@ -362,7 +488,8 @@ details[open] .when-open {
 
 @media (max-width: 800px) {
     .selection-grid,
-    .topic-columns {
+    .topic-columns,
+    .structured-columns {
         grid-template-columns: minmax(0, 1fr);
     }
 }

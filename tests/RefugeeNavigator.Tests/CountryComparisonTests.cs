@@ -5,7 +5,10 @@ using System.Resources;
 using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using RefugeeNavigator.Data;
 using RefugeeNavigator.Domain;
@@ -23,6 +26,151 @@ public sealed class CountryComparisonTests
 
     private static readonly Lazy<Task<CatalogData>> ProductionCatalog = new(
         () => new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync());
+
+    private static readonly Lazy<Task<ComparisonFactCatalog>> FactCatalog = new(async () =>
+    {
+        var catalog = await LoadCatalogAsync();
+        return await new JsonComparisonFactProvider(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json")).LoadAsync(catalog);
+    });
+
+    [Fact]
+    public async Task StructuredCatalogHasEightTopicsTwoOrderedAspectsAndLocalizedDraftFactsForEveryCountry()
+    {
+        var catalog = await LoadCatalogAsync();
+        var facts = await FactCatalog.Value;
+        JsonComparisonFactProvider.Validate(facts, catalog);
+
+        Assert.Equal(8, facts.Topics.Count);
+        Assert.Equal(16, facts.Topics.Sum(topic => topic.Aspects.Count));
+        Assert.Equal(48, facts.Topics.SelectMany(topic => topic.Aspects).Sum(aspect => aspect.Facts.Count));
+        Assert.Equal(24, catalog.InformationEntries.Count);
+        Assert.Equal(72, catalog.InformationEntryTranslations.Count);
+        Assert.All(catalog.InformationEntryTranslations, translation => Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus));
+
+        foreach (var topic in facts.Topics)
+        {
+            Assert.Equal(3, topic.Aspects.SelectMany(aspect => aspect.Facts).Select(fact => fact.CountrySlug).Distinct().Count());
+            Assert.Equal(topic.CategorySlug, Assert.Single(CountryComparisonTopicMap.All, mapped => mapped.ResourceKey == topic.TopicResourceKey).CategorySlug);
+            foreach (var aspect in topic.Aspects)
+            foreach (var fact in aspect.Facts)
+            {
+                Assert.Equal(ComparisonFactStatus.Draft, fact.Status);
+                Assert.True(fact.IsAvailable);
+                Assert.All(new[] { "uk", "en", "ru" }, language => Assert.False(string.IsNullOrWhiteSpace(fact.Values.GetValueOrDefault(language))));
+                Assert.NotEmpty(fact.OfficialSourceIds);
+                Assert.All(fact.OfficialSourceIds, sourceId => Assert.Contains(catalog.OfficialSources, source => source.Id == sourceId && source.InformationEntryId == fact.InformationEntryId));
+            }
+        }
+    }
+
+    [Fact]
+    public async Task IncorrectArticleAndSourceRelationshipsFailStructuredCatalogValidation()
+    {
+        var catalog = await LoadCatalogAsync();
+        var facts = await FactCatalog.Value;
+        var firstTopic = facts.Topics[0];
+        var firstAspect = firstTopic.Aspects[0];
+        var firstFact = firstAspect.Facts[0];
+
+        var wrongArticle = ReplaceFact(facts, firstTopic, firstAspect, firstFact with { InformationEntryId = Guid.NewGuid() });
+        Assert.Throws<InvalidDataException>(() => JsonComparisonFactProvider.Validate(wrongArticle, catalog));
+
+        var wrongSource = ReplaceFact(facts, firstTopic, firstAspect, firstFact with { OfficialSourceIds = [Guid.NewGuid()] });
+        Assert.Throws<InvalidDataException>(() => JsonComparisonFactProvider.Validate(wrongSource, catalog));
+    }
+
+    [Fact]
+    public async Task DraftFactsArePreviewableLocallyButHiddenInProductionWhileV1RemainsAvailable()
+    {
+        var catalog = await LoadCatalogAsync();
+        const string query = "?country1=germany&country2=poland&category=employment";
+        var localHtml = WebUtility.HtmlDecode(await RenderAsync(catalog, "en", query));
+        var productionHtml = WebUtility.HtmlDecode(await RenderAsync(catalog, "en", query, Environments.Production));
+
+        Assert.Contains("structured-comparison", localHtml);
+        Assert.Contains(GetResource("Compare.DraftPreviewNotice", "en"), localHtml);
+        Assert.Contains(GetResource("Compare.DraftStatus", "en"), localHtml);
+        Assert.DoesNotContain("structured-comparison", productionHtml);
+        Assert.DoesNotContain(GetResource("Compare.DraftPreviewNotice", "en"), productionHtml);
+        Assert.Contains("class=\"comparison-topic\"", productionHtml);
+        Assert.Contains(GetResource("Compare.ReadDetails", "en"), productionHtml);
+        Assert.Contains("class=\"source-details\"", productionHtml);
+        Assert.Contains("href=\"/countries/germany/categories/employment#entry-", productionHtml);
+    }
+
+    [Fact]
+    public async Task StructuredFactAndMissingInformationFallbackAreHtmlEncodedAndLocalized()
+    {
+        var catalog = await LoadCatalogAsync();
+        var facts = await FactCatalog.Value;
+        var topic = facts.Topics.Single(item => item.CategorySlug == "healthcare");
+        var aspect = topic.Aspects[0];
+        var denmarkFact = aspect.Facts.Single(fact => fact.CountrySlug == "denmark");
+        var injected = WithFact(facts, topic, aspect, denmarkFact with
+        {
+            Values = new Dictionary<string, string>(denmarkFact.Values) { ["en"] = "<script>alert(1)</script>" }
+        });
+        var html = await RenderAsync(catalog, "en", "?country1=denmark&country2=germany&category=healthcare", comparisonFacts: injected);
+        Assert.Contains("&lt;script&gt;alert(1)&lt;/script&gt;", html);
+        Assert.DoesNotContain("<script>alert(1)</script>", html);
+
+        foreach (var (language, fallback) in new[]
+        {
+            ("uk", "Не встановлено за перевіреними джерелами."),
+            ("en", "Not established in the reviewed sources."),
+            ("ru", "Не установлено по проверенным источникам.")
+        })
+        {
+            var unavailable = WithFact(facts, topic, aspect, denmarkFact with
+            {
+                IsAvailable = false,
+                OfficialSourceIds = [],
+                Values = new Dictionary<string, string>
+                {
+                    ["uk"] = "Не встановлено за перевіреними джерелами.",
+                    ["en"] = "Not established in the reviewed sources.",
+                    ["ru"] = "Не установлено по проверенным источникам."
+                }
+            });
+            var unavailableHtml = WebUtility.HtmlDecode(await RenderAsync(catalog, language,
+                "?country1=denmark&country2=germany&category=healthcare", comparisonFacts: unavailable));
+            Assert.Contains(fallback, unavailableHtml);
+            JsonComparisonFactProvider.Validate(unavailable, catalog);
+        }
+    }
+
+    [Theory]
+    [InlineData("uk")]
+    [InlineData("en")]
+    [InlineData("ru")]
+    public void EveryStructuredAspectAndPreviewLabelHasCompleteLocalization(string language)
+    {
+        foreach (var aspectKey in new[]
+        {
+            "Compare.Aspect.TemporaryProtectionScheme", "Compare.Aspect.ResidenceRoutes",
+            "Compare.Aspect.JobSearch", "Compare.Aspect.WorkEligibility",
+            "Compare.Aspect.HealthcareBasis", "Compare.Aspect.HousingStart",
+            "Compare.Aspect.EducationRoute", "Compare.Aspect.SupportTypes", "Compare.Aspect.KeyPoint",
+            "Compare.StructuredHeading", "Compare.DraftPreviewHeading", "Compare.DraftPreviewNotice", "Compare.DraftStatus", "Compare.FactSources",
+            "Compare.ApprovedEditorialStatus", "Compare.NotEstablishedInReviewedSources"
+        })
+        {
+            var value = GetResource(aspectKey, language);
+            Assert.False(string.IsNullOrWhiteSpace(value), $"Missing {language} localization for {aspectKey}.");
+            Assert.NotEqual(aspectKey, value);
+        }
+    }
+
+    [Fact]
+    public async Task MissingComparisonLocalizationFailsCoverageValidation()
+    {
+        var facts = await FactCatalog.Value;
+        Assert.Throws<InvalidDataException>(() => ComparisonFactLocalizationValidator.Validate(
+            facts,
+            (key, culture) => key == "Compare.DraftPreviewNotice" && culture.Name == "ru"
+                ? null
+                : Resources.GetString(key, culture)));
+    }
 
     [Fact]
     public async Task ComparisonMapContainsEightOrderedTopicsAndMapsRealArticlesToExpectedRelationships()
@@ -54,6 +202,7 @@ public sealed class CountryComparisonTests
     public async Task AllCountryPairsCategoriesAndLanguagesRenderAlignedReviewedCatalogContent()
     {
         var catalog = await LoadCatalogAsync();
+        var factCatalog = await FactCatalog.Value;
         var languages = new[] { "uk", "en", "ru" };
         var categories = new[]
         {
@@ -108,7 +257,21 @@ public sealed class CountryComparisonTests
                 }
             }
 
+            foreach (var topic in topics)
+            {
+                var structuredTopic = Assert.Single(factCatalog.Topics, item => item.TopicResourceKey == topic.ResourceKey);
+                foreach (var aspect in structuredTopic.Aspects)
+                foreach (var countrySlug in new[] { countryOneSlug, countryTwoSlug })
+                {
+                    var fact = Assert.Single(aspect.Facts, item => item.CountrySlug == countrySlug);
+                    Assert.Equal(ComparisonFactStatus.Draft, fact.Status);
+                    Assert.Contains(fact.Values[language], visibleHtml);
+                    Assert.Contains(GetResource(aspect.QuestionResourceKey, language), visibleHtml);
+                }
+            }
+
             Assert.Contains("<details class=\"article-details\"", html);
+            Assert.DoesNotContain("article-details\" open", html);
             Assert.Contains("<details class=\"source-details\"", html);
             Assert.Contains(GetResource("Compare.ReadDetails", language), visibleHtml);
             Assert.Contains(GetResource("Compare.OfficialSources", language), visibleHtml);
@@ -318,7 +481,12 @@ public sealed class CountryComparisonTests
             args: [countries, categories, entries, translations, sources],
             culture: CultureInfo.InvariantCulture)!;
 
-    private static async Task<string> RenderAsync(CatalogData catalog, string language, string query = "")
+    private static async Task<string> RenderAsync(
+        CatalogData catalog,
+        string language,
+        string query = "",
+        string environmentName = "Development",
+        ComparisonFactCatalog? comparisonFacts = null)
     {
         var originalCulture = CultureInfo.CurrentCulture;
         var originalUiCulture = CultureInfo.CurrentUICulture;
@@ -332,6 +500,8 @@ public sealed class CountryComparisonTests
             services.AddLogging();
             services.AddLocalization(options => options.ResourcesPath = "Resources");
             services.AddSingleton(catalog);
+            services.AddSingleton(comparisonFacts ?? await FactCatalog.Value);
+            services.AddSingleton<IWebHostEnvironment>(new TestWebHostEnvironment(environmentName));
             services.AddSingleton<NavigationManager>(new TestNavigationManager($"http://localhost/compare{query}"));
             using var provider = services.BuildServiceProvider();
             await using var renderer = new HtmlRenderer(provider, provider.GetRequiredService<ILoggerFactory>());
@@ -359,5 +529,36 @@ public sealed class CountryComparisonTests
         protected override void NavigateToCore(string uri, bool forceLoad)
         {
         }
+    }
+
+    private static ComparisonFactCatalog ReplaceFact(
+        ComparisonFactCatalog catalog,
+        ComparisonTopicFacts topic,
+        ComparisonAspect aspect,
+        CountryComparisonFact replacement) => WithFact(catalog, topic, aspect, replacement);
+
+    private static ComparisonFactCatalog WithFact(
+        ComparisonFactCatalog catalog,
+        ComparisonTopicFacts targetTopic,
+        ComparisonAspect targetAspect,
+        CountryComparisonFact replacement) => catalog with
+    {
+        Topics = catalog.Topics.Select(topic => topic != targetTopic ? topic : topic with
+        {
+            Aspects = topic.Aspects.Select(aspect => aspect != targetAspect ? aspect : aspect with
+            {
+                Facts = aspect.Facts.Select(fact => fact.CountrySlug == replacement.CountrySlug ? replacement : fact).ToArray()
+            }).ToArray()
+        }).ToArray()
+    };
+
+    private sealed class TestWebHostEnvironment(string environmentName) : IWebHostEnvironment
+    {
+        public string ApplicationName { get; set; } = "RefugeeNavigator.Tests";
+        public string EnvironmentName { get; set; } = environmentName;
+        public string WebRootPath { get; set; } = AppContext.BaseDirectory;
+        public string ContentRootPath { get; set; } = AppContext.BaseDirectory;
+        public IFileProvider WebRootFileProvider { get; set; } = new NullFileProvider();
+        public IFileProvider ContentRootFileProvider { get; set; } = new NullFileProvider();
     }
 }

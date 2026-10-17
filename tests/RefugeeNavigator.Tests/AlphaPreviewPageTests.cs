@@ -299,6 +299,7 @@ public sealed class AlphaPreviewPageTests
             services.AddLogging();
             services.AddLocalization(options => options.ResourcesPath = "Resources");
             services.AddSingleton(CreateCatalog());
+            await ComparisonTestServices.RegisterAsync(services);
             services.AddSingleton<NavigationManager>(new TestNavigationManager(currentPath));
             using var provider = services.BuildServiceProvider();
             await using var renderer = new HtmlRenderer(provider, provider.GetRequiredService<ILoggerFactory>());

@@ -23,11 +23,15 @@ builder.Services.AddRazorComponents();
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 var catalog = await new JsonCatalogProvider(builder.Environment.ContentRootPath).LoadAsync();
 CountryComparisonTopicMap.Validate(catalog);
+var comparisonFacts = await new JsonComparisonFactProvider(
+    Path.Combine(builder.Environment.ContentRootPath, "Data", "comparison-facts.json")).LoadAsync(catalog);
 var resourceManager = new ResourceManager(
     "RefugeeNavigator.Web.Resources.Localization.SharedResource",
     typeof(SharedResource).Assembly);
 CatalogLocalizationValidator.Validate(catalog, resourceManager.GetString);
+ComparisonFactLocalizationValidator.Validate(comparisonFacts, resourceManager.GetString);
 builder.Services.AddSingleton(catalog);
+builder.Services.AddSingleton(comparisonFacts);
 
 var supportedCultures = new[]
 {

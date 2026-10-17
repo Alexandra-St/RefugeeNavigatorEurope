@@ -1,5 +1,6 @@
 @page "/compare"
 @using System.Globalization
+@using Microsoft.AspNetCore.Hosting
 @using Microsoft.AspNetCore.WebUtilities
 @using RefugeeNavigator.Data
 @using RefugeeNavigator.Domain
@@ -7,6 +8,8 @@
 @using RefugeeNavigator.Web.Comparison
 @using RefugeeNavigator.Web.Localization
 @inject CatalogData Catalog
+@inject ComparisonFactCatalog ComparisonFacts
+@inject IWebHostEnvironment HostEnvironment
 @inject NavigationManager Navigation
 @inject IStringLocalizer<SharedResource> Localizer
 
@@ -77,6 +80,57 @@
                 <h2>@Localizer["Compare.AboutHeading"]</h2>
                 <p>@Localizer["Compare.ScopeNotice"]</p>
             </aside>
+
+            @if (HostEnvironment.IsDevelopment() || IsStructuredCatalogApproved)
+            {
+                @if (HostEnvironment.IsDevelopment() && !IsStructuredCatalogApproved)
+                {
+                    <aside class="draft-preview-notice" role="note">
+                        <strong>@Localizer["Compare.DraftPreviewHeading"]</strong>
+                        <p>@Localizer["Compare.DraftPreviewNotice"]</p>
+                    </aside>
+                }
+
+                <section class="structured-comparison" aria-label="@Localizer["Compare.StructuredHeading"]">
+                    <h2>@Localizer["Compare.StructuredHeading"]</h2>
+                    @foreach (var topic in ComparisonFacts.Topics.Where(item => item.CategorySlug == SelectedCategory!.Slug))
+                    {
+                        <section class="structured-topic" aria-labelledby="structured-@topic.TopicResourceKey.Replace('.', '-')">
+                            <h3 id="structured-@topic.TopicResourceKey.Replace('.', '-')">@Localizer[topic.TopicResourceKey]</h3>
+                            @foreach (var aspect in topic.Aspects)
+                            {
+                                <section class="structured-aspect" aria-labelledby="aspect-@aspect.Id">
+                                    <h4 id="aspect-@aspect.Id">@Localizer[aspect.QuestionResourceKey]</h4>
+                                    <div class="structured-columns">
+                                        @foreach (var country in new[] { SelectedCountryOne!, SelectedCountryTwo! })
+                                        {
+                                            var fact = aspect.Facts.Single(item => item.CountrySlug == country.Slug);
+                                            var countryName = Localizer[CatalogLocalizationKeyResolver.CountryName(country)];
+                                            <article class="structured-country" aria-label="@Localizer["Compare.CountryPanelHeading", countryName]">
+                                                <h5>@countryName</h5>
+                                                <span class="draft-label">@Localizer[fact.Status == ComparisonFactStatus.Draft ? "Compare.DraftStatus" : "Compare.ApprovedEditorialStatus"]</span>
+                                                <p>@FactText(fact)</p>
+                                                @if (AvailableFactSources(fact).Count > 0)
+                                                {
+                                                    <details class="fact-sources">
+                                                        <summary>@Localizer["Compare.FactSources"] (@AvailableFactSources(fact).Count)</summary>
+                                                        <ul>
+                                                            @foreach (var source in AvailableFactSources(fact))
+                                                            {
+                                                                <li><a href="@source.Url.AbsoluteUri" target="_blank" rel="noopener noreferrer">@source.Title</a><span>@Localizer["Compare.SourceChecked"] <time datetime="@source.LastCheckedAt.ToString("O", CultureInfo.InvariantCulture)">@FormatDate(source.LastCheckedAt)</time></span></li>
+                                                            }
+                                                        </ul>
+                                                    </details>
+                                                }
+                                            </article>
+                                        }
+                                    </div>
+                                </section>
+                            }
+                        </section>
+                    }
+                </section>
+            }
 
             <section class="comparison" aria-label="@Localizer["Compare.PanelsHeading"]">
                 @foreach (var topic in CountryComparisonTopicMap.ForCategory(SelectedCategory!.Slug))
@@ -193,6 +247,11 @@
     private InformationCategory? SelectedCategory => Catalog.Categories.FirstOrDefault(category =>
         string.Equals(category.Slug, CategorySlug, StringComparison.OrdinalIgnoreCase));
 
+    private bool IsStructuredCatalogApproved => ComparisonFacts.Topics
+        .SelectMany(topic => topic.Aspects)
+        .SelectMany(aspect => aspect.Facts)
+        .All(fact => fact.Status == ComparisonFactStatus.Approved);
+
     private string? SelectionMessage
     {
         get
@@ -251,6 +310,19 @@
     };
 
     private static string FormatDate(DateTimeOffset value) => value.ToString("d MMM yyyy", CultureInfo.CurrentCulture);
+
+    private string FactText(CountryComparisonFact fact) => fact.IsAvailable &&
+        Catalog.InformationEntries.Any(entry => entry.Id == fact.InformationEntryId) &&
+        Catalog.InformationEntryTranslations.Any(translation =>
+            translation.InformationEntryId == fact.InformationEntryId &&
+            translation.LanguageCode == CultureInfo.CurrentUICulture.TwoLetterISOLanguageName &&
+            translation.VerificationStatus == VerificationStatus.Verified) &&
+        AvailableFactSources(fact).Count > 0
+        ? fact.Values[CultureInfo.CurrentUICulture.TwoLetterISOLanguageName]
+        : Localizer["Compare.NotEstablishedInReviewedSources"].Value;
+
+    private IReadOnlyList<OfficialSource> AvailableFactSources(CountryComparisonFact fact) =>
+        Catalog.OfficialSources.Where(source => fact.OfficialSourceIds.Contains(source.Id) && source.InformationEntryId == fact.InformationEntryId).ToArray();
 
     private sealed record ComparisonArticle(
         InformationEntry Entry,
