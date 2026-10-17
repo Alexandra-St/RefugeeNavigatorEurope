@@ -301,7 +301,7 @@
   <data name="Compare.InformationUnavailable" xml:space="preserve"><value>This translation is not currently available for comparison.</value></data>
   <data name="Compare.SourceChecked" xml:space="preserve"><value>Source checked:</value></data>
   <data name="Compare.OpenArticle" xml:space="preserve"><value>Open full article</value></data>
-  <data name="Compare.StructuredHeading" xml:space="preserve"><value>Structured comparison — draft</value></data>
+  <data name="Compare.StructuredHeading" xml:space="preserve"><value>Structured comparison</value></data>
   <data name="Compare.DraftPreviewHeading" xml:space="preserve"><value>Local editorial preview</value></data>
   <data name="Compare.DraftPreviewNotice" xml:space="preserve"><value>The structured answers below are drafts. They have not received separate editorial approval and are not shown in Production.</value></data>
   <data name="Compare.DraftStatus" xml:space="preserve"><value>Draft</value></data>

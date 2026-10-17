@@ -299,7 +299,7 @@
   <data name="Compare.InformationUnavailable" xml:space="preserve"><value>Этот перевод сейчас недоступен для сравнения.</value></data>
   <data name="Compare.SourceChecked" xml:space="preserve"><value>Источник проверен:</value></data>
   <data name="Compare.OpenArticle" xml:space="preserve"><value>Открыть полную статью</value></data>
-  <data name="Compare.StructuredHeading" xml:space="preserve"><value>Структурированное сравнение — черновик</value></data>
+  <data name="Compare.StructuredHeading" xml:space="preserve"><value>Структурированное сравнение</value></data>
   <data name="Compare.DraftPreviewHeading" xml:space="preserve"><value>Локальный редакционный просмотр</value></data>
   <data name="Compare.DraftPreviewNotice" xml:space="preserve"><value>Структурированные ответы ниже — черновики. Они не прошли отдельное редакционное одобрение и не отображаются в Production.</value></data>
   <data name="Compare.DraftStatus" xml:space="preserve"><value>Черновик</value></data>

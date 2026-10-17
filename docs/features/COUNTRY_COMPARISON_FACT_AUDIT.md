@@ -1,6 +1,6 @@
 # Structured comparison — claim-level evidence audit
 
-All 72 country answers remain Draft. This is an internal editorial mapping of approved project evidence, not a new source-verification event or legal approval. Existing source LastCheckedAt values are preserved. No page is represented as reopened during this refinement.
+All 72 country answers were explicitly editorially approved by the project owner on 17 October 2026. This approval records editorial acceptance; it is not independent legal certification or a new source-verification event. Existing source LastCheckedAt values are preserved. No page is represented as reopened during this approval.
 
 ## Method and limits
 
@@ -15,6 +15,14 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 - Topics: 8; aspects: 24 (three per topic).
 - Populated facts: 70; unavailable facts: 2.
 - Individually selected source references: 138; distinct source IDs: 109.
+
+## Editorial approval and production readiness
+
+- Reviewer: Project owner. Approval date: 17 October 2026.
+- Approved answers: 72, all with the existing `Approved` editorial status. Coverage is 70 populated, source-linked answers and two unavailable answers.
+- The two unavailable answers remain unavailable and have no source IDs; approval means the localized statements accurately describe gaps in the reviewed evidence, not that the underlying services or requirements do not exist.
+- Production gate: the existing application logic exposes structured V2 when every fact is `Approved`. The full V1 article comparison remains available in a collapsed disclosure. Development retains its preview path for future Draft facts.
+- Publication readiness: editorial approval is recorded and the V2 catalog is eligible for Production display on a future deployment. No deployment occurred in this task. The evidence limitations below remain; this approval does not independently certify legal accuracy.
 - The previous 137 broad/candidate references were discarded and rebuilt. This count describes the old selection mechanism, not a claim that every old source was factually wrong.
 
 ## Fact register
@@ -22,7 +30,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### protection-scheme / denmark
 - Topic: Compare.Topic.TemporaryProtectionApplication.
 - Article: afc14824-4035-4ca7-9662-6d5352ba63cb — Temporary protection in Denmark: how to apply and extend your permit.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim C01](../content-research/denmark-temporary-protection-application/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.ProtectionScheme.
 - English answer: Denmark uses its national Ukraine Special Act, not the EU Temporary Protection Directive. Protection in another EU country does not by itself establish eligibility in Denmark.
@@ -40,7 +48,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### protection-scheme / germany
 - Topic: Compare.Topic.TemporaryProtectionApplication.
 - Article: 1a6b97c4-eb9e-5590-8715-c95f5f95677e — Applying for Temporary Protection and Checking Residence Dates.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim TP01–TP02](../content-research/germany-batch-2026-10-15/temporary-protection-application/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.ProtectionScheme.
 - English answer: A residence permit under §24 AufenthG is the German route for a person granted EU temporary protection who declares willingness to be received in Germany. EU category conditions and exclusions apply.
@@ -57,7 +65,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### protection-scheme / poland
 - Topic: Compare.Topic.TemporaryProtectionApplication.
 - Article: 218207bd-2a85-59e1-a945-eedb0604392e — Applying for Temporary Protection in Poland.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim TP01, TP03](../content-research/poland-batch-2026-10-16/temporary-protection-application/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.ProtectionScheme.
 - English answer: PESEL UKR records Polish temporary-protection status. It is distinct from an ordinary residence permit or a CUKR card; UdSC stopped issuing the former protection certificates on 5 March 2026.
@@ -79,7 +87,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### protection-application / denmark
 - Topic: Compare.Topic.TemporaryProtectionApplication.
 - Article: afc14824-4035-4ca7-9662-6d5352ba63cb — Temporary protection in Denmark: how to apply and extend your permit.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim C06–C08](../content-research/denmark-temporary-protection-application/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.ProtectionApplication.
 - English answer: Apply to the Danish Immigration Service: section 1 applicants must be in Denmark and use SL1 (digital or paper). Qualifying section 2 family applications use SL2 and may be submitted in Denmark or abroad.
@@ -101,7 +109,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### protection-application / germany
 - Topic: Compare.Topic.TemporaryProtectionApplication.
 - Article: 1a6b97c4-eb9e-5590-8715-c95f5f95677e — Applying for Temporary Protection and Checking Residence Dates.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim TP03](../content-research/germany-batch-2026-10-15/temporary-protection-application/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.ProtectionApplication.
 - English answer: The competent Ausländerbehörde decides the §24 application. Follow its local registration and appointment or online instructions. The linked online service names a Brandenburg ministry; nationwide availability is not established.
@@ -125,7 +133,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### protection-application / poland
 - Topic: Compare.Topic.TemporaryProtectionApplication.
 - Article: 218207bd-2a85-59e1-a945-eedb0604392e — Applying for Temporary Protection in Poland.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim TP02](../content-research/poland-batch-2026-10-16/temporary-protection-application/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.ProtectionApplication.
 - English answer: Apply in person for PESEL UKR at any gmina office within 30 days after crossing the Polish border. The service lists a form, photograph and identity document; children or missing documents require current local instructions.
@@ -143,7 +151,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### protection-dates / denmark
 - Topic: Compare.Topic.TemporaryProtectionApplication.
 - Article: afc14824-4035-4ca7-9662-6d5352ba63cb — Temporary protection in Denmark: how to apply and extend your permit.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim C15–C17; extension section](../content-research/denmark-temporary-protection-application/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.ProtectionDates.
 - English answer: BEK 828/2026 permits extension to 17 March 2028 unless §10 revocation grounds apply. The Immigration Service’s application/family pages still state 17 March 2027. This unresolved discrepancy does not determine an individual permit’s validity.
@@ -166,7 +174,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### protection-dates / germany
 - Topic: Compare.Topic.TemporaryProtectionApplication.
 - Article: 1a6b97c4-eb9e-5590-8715-c95f5f95677e — Applying for Temporary Protection and Checking Residence Dates.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim TP05](../content-research/germany-batch-2026-10-15/temporary-protection-application/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.ProtectionDates.
 - English answer: EU temporary protection runs through 4 March 2028. UkraineAufenthFGV §2 separately continues specified §24 permits valid on 1 February 2026 through 4 March 2027, subject to its conditions. Neither general date establishes an individual permit or work right.
@@ -188,7 +196,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### protection-dates / poland
 - Topic: Compare.Topic.TemporaryProtectionApplication.
 - Article: 218207bd-2a85-59e1-a945-eedb0604392e — Applying for Temporary Protection in Poland.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim TP01, TP05, TP07](../content-research/poland-batch-2026-10-16/temporary-protection-application/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.ProtectionDates.
 - English answer: EU protection extends through 4 March 2028; Article 106 links lawful stay of its defined group to that decision, subject to exclusions and ending events. Older certificates are separately stated valid through 4 March 2027 unless an earlier ending event applies. Do not infer personal document validity.
@@ -212,7 +220,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### residence-routes / denmark
 - Topic: Compare.Topic.ResidenceAfterProtection.
 - Article: 2d106fd3-e981-4ef9-9733-568b654dfca5 — Residence options after temporary protection in Denmark.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim A04–A06](../content-research/denmark-after-protection/ARTICLE_CLAIM_REVIEW.md).
 - Question resource key: Compare.Aspect.AlternativeRoutes.
 - English answer: Labour Market Attachment and Educational Attachment are separate routes for holders of a valid Special Act permit. Each has its own conditions; employment or enrolment alone does not guarantee a new permit.
@@ -234,7 +242,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### residence-routes / germany
 - Topic: Compare.Topic.ResidenceAfterProtection.
 - Article: 33106e71-115f-5809-9066-7e3d3e5c57a3 — Residence Options After Temporary Protection.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim AR01–AR03](../content-research/germany-batch-2026-10-15/after-temporary-protection/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.AlternativeRoutes.
 - English answer: Separate titles exist for vocational training (§16a), study (§16b), recognition measures (§16d) and qualified work (§§18a/18b AufenthG). Each requires its own qualifying purpose and evidence.
@@ -255,7 +263,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### residence-routes / poland
 - Topic: Compare.Topic.ResidenceAfterProtection.
 - Article: c230d45f-9c76-5912-8c97-dc7d0689baa6 — Residence Options After Temporary Protection.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim AT01](../content-research/poland-batch-2026-10-16/after-temporary-protection/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.AlternativeRoutes.
 - English answer: CUKR is a separate three-year temporary residence permit for a defined group with UKR status. It is not PESEL UKR itself and is not granted automatically.
@@ -272,7 +280,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### residence-conditions / denmark
 - Topic: Compare.Topic.ResidenceAfterProtection.
 - Article: 2d106fd3-e981-4ef9-9733-568b654dfca5 — Residence options after temporary protection in Denmark.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim A04](../content-research/denmark-after-protection/ARTICLE_CLAIM_REVIEW.md).
 - Question resource key: Compare.Aspect.AlternativeConditions.
 - English answer: For Labour Market Attachment, conditions include two years of legal continuous work with the same employer without state/municipal wage subsidies, Danish-standard pay/terms and generally full-time work (industry exceptions apply). Self-employment is excluded; further conditions apply.
@@ -289,7 +297,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### residence-conditions / germany
 - Topic: Compare.Topic.ResidenceAfterProtection.
 - Article: 33106e71-115f-5809-9066-7e3d3e5c57a3 — Residence Options After Temporary Protection.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim AR02–AR03](../content-research/germany-batch-2026-10-15/after-temporary-protection/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.AlternativeConditions.
 - English answer: The skilled-worker route requires a recognised or comparable qualification and a qualified job offer; regulated professions may require a licence. General requirements such as identity, livelihood and applicable visa rules also matter, with statutory exceptions.
@@ -309,7 +317,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### residence-conditions / poland
 - Topic: Compare.Topic.ResidenceAfterProtection.
 - Article: c230d45f-9c76-5912-8c97-dc7d0689baa6 — Residence Options After Temporary Protection.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim AT02](../content-research/poland-batch-2026-10-16/after-temporary-protection/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.AlternativeConditions.
 - English answer: CUKR requires UKR status when applying and when the card is issued, UKR status on 4 June 2025, and at least 365 uninterrupted days with UKR status. Children born in Poland have separate conditions.
@@ -326,7 +334,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### residence-filing / denmark
 - Topic: Compare.Topic.ResidenceAfterProtection.
 - Article: 2d106fd3-e981-4ef9-9733-568b654dfca5 — Residence options after temporary protection in Denmark.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim A04–A07](../content-research/denmark-after-protection/ARTICLE_CLAIM_REVIEW.md).
 - Question resource key: Compare.Aspect.AlternativeFiling.
 - English answer: Apply to SIRI under Labour Market Attachment or Educational Attachment before the valid Special Act permit expires. Educational Attachment also requires enrolment evidence and an eligible institution/programme; applying does not guarantee approval.
@@ -348,7 +356,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### residence-filing / germany
 - Topic: Compare.Topic.ResidenceAfterProtection.
 - Article: 33106e71-115f-5809-9066-7e3d3e5c57a3 — Residence Options After Temporary Protection.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim AR05–AR06](../content-research/germany-batch-2026-10-15/after-temporary-protection/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.AlternativeFiling.
 - English answer: A current §24 permit holder may apply for another title in Germany under §39(1) AufenthV; the Ausländerbehörde decides the substantive conditions. A timely filing before expiry generally continues the old title under §81(4); late filings do not automatically do so.
@@ -370,7 +378,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### residence-filing / poland
 - Topic: Compare.Topic.ResidenceAfterProtection.
 - Article: c230d45f-9c76-5912-8c97-dc7d0689baa6 — Residence Options After Temporary Protection.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim AT03](../content-research/poland-batch-2026-10-16/after-temporary-protection/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.AlternativeFiling.
 - English answer: CUKR applications are submitted only online through MOS, until 4 March 2027. This deadline and procedure concern CUKR, not every residence route.
@@ -391,7 +399,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### employment-vacancies / denmark
 - Topic: Compare.Topic.FindingEmployment.
 - Article: c2356631-3fa2-4553-8fda-50a4419262c0 — Find jobs and job-search guidance in Denmark.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: Approved article paragraphs 1–2, 4; source portal/search instructions.
 - Question resource key: Compare.Aspect.Vacancies.
 - English answer: Search Workindenmark and Jobnet. Workindenmark lists jobs in English, but English alone is not sufficient for every job. Jobnet’s Find Job search can be used without logging in.
@@ -417,7 +425,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### employment-vacancies / germany
 - Topic: Compare.Topic.FindingEmployment.
 - Article: 283d4519-21f5-5be2-a534-1bd2606d95fc — Finding a Job in Germany.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim FE01](../content-research/germany-batch-2026-10-15/finding-employment/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.Vacancies.
 - English answer: Use the Federal Employment Agency (BA) job portal to search vacancies.
@@ -436,7 +444,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### employment-vacancies / poland
 - Topic: Compare.Topic.FindingEmployment.
 - Article: a323701f-367e-52bb-9c33-45c4156a1350 — Finding a Job in Poland.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim FE01](../content-research/poland-batch-2026-10-16/finding-employment/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.Vacancies.
 - English answer: Use ePraca to search for vacancies, internships, work placements and job-related events or training.
@@ -453,7 +461,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### employment-institutions / denmark
 - Topic: Compare.Topic.FindingEmployment.
 - Article: c2356631-3fa2-4553-8fda-50a4419262c0 — Find jobs and job-search guidance in Denmark.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: Approved article paragraphs 3–4; Workindenmark services and Life in Denmark.
 - Question resource key: Compare.Aspect.EmploymentHelp.
 - English answer: Workindenmark offers guidance for international jobseekers. Your municipality may also help with finding work; ask it which services are available locally.
@@ -475,7 +483,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### employment-institutions / germany
 - Topic: Compare.Topic.FindingEmployment.
 - Article: 283d4519-21f5-5be2-a534-1bd2606d95fc — Finding a Job in Germany.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim FE01–FE02](../content-research/germany-batch-2026-10-15/finding-employment/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.EmploymentHelp.
 - English answer: The BA provides employment advice. A Jobcenter is a separate contact for cases assigned to it under the applicable benefit/integration route; a benefit decision identifies the responsible office.
@@ -493,7 +501,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### employment-institutions / poland
 - Topic: Compare.Topic.FindingEmployment.
 - Article: a323701f-367e-52bb-9c33-45c4156a1350 — Finding a Job in Poland.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim FE02](../content-research/poland-batch-2026-10-16/finding-employment/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.EmploymentHelp.
 - English answer: Contact the local powiat employment office (PUP) about counselling, training or job matching. The available service and access conditions must be confirmed with that PUP.
@@ -510,7 +518,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### employment-assistance-conditions / denmark
 - Topic: Compare.Topic.FindingEmployment.
 - Article: c2356631-3fa2-4553-8fda-50a4419262c0 — Find jobs and job-search guidance in Denmark.
-- Answer availability: Unavailable. Editorial status: Draft.
+- Answer availability: Unavailable. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: No supported assistance-eligibility claim in approved pilot.
 - Question resource key: Compare.Aspect.EmploymentHelpConditions.
 - English answer: Not established in the reviewed sources.
@@ -522,7 +530,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### employment-assistance-conditions / germany
 - Topic: Compare.Topic.FindingEmployment.
 - Article: 283d4519-21f5-5be2-a534-1bd2606d95fc — Finding a Job in Germany.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim FE02; SGB II §§7,74](../content-research/germany-batch-2026-10-15/finding-employment/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.EmploymentHelpConditions.
 - English answer: Benefit-linked Jobcenter support depends on SGB II eligibility. §74 provides a specific route for certain §24 applicants with the corresponding Fiktionsbescheinigung after identity registration; it does not cover every pending applicant. Other SGB II conditions still apply.
@@ -544,7 +552,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### employment-assistance-conditions / poland
 - Topic: Compare.Topic.FindingEmployment.
 - Article: a323701f-367e-52bb-9c33-45c4156a1350 — Finding a Job in Poland.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim FE02, FE04 excluded universal-access assertion](../content-research/poland-batch-2026-10-16/finding-employment/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.EmploymentHelpConditions.
 - English answer: PUP registration as unemployed or a jobseeker and access to each service depend on current rules and personal circumstances. The 2026 changes affected registration categories; ask the competent PUP for the applicable documents and conditions.
@@ -566,7 +574,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### work-permission / denmark
 - Topic: Compare.Topic.WorkAuthorizationRights.
 - Article: 35da68f6-8880-40b2-9b3f-eb2b809b1caf — Working in Denmark: work authorization and employee rights.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim C01–C03](../content-research/denmark-employment-rights/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.WorkPermission.
 - English answer: A valid Special Act permit allows work subject to its conditions. While waiting, work may begin after fingerprints and facial image are recorded, unless the applicant obviously cannot qualify under §1 or §2. If that exclusion is unclear, the agency says not to start before a decision.
@@ -589,7 +597,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### work-permission / germany
 - Topic: Compare.Topic.WorkAuthorizationRights.
 - Article: c4895b5a-eacd-53d7-a86f-f504dd615c76 — Work Authorization and Employee Rights.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim WR01, WR06](../content-research/germany-batch-2026-10-15/work-authorization-rights/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.WorkPermission.
 - English answer: The residence title and supplementary sheet show work permission and restrictions under §4a AufenthG. In a pending case, check the Fiktionsbescheinigung and §81 conditions; an application or Ukrainian nationality alone does not establish permission.
@@ -607,7 +615,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### work-permission / poland
 - Topic: Compare.Topic.WorkAuthorizationRights.
 - Article: 7797d03c-6873-50cd-aef6-0d94a2f5fcab — Work Authorization and Employee Rights.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim WR01–WR02](../content-research/poland-batch-2026-10-16/work-authorization-rights/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.WorkPermission.
 - English answer: PIP says Ukrainian citizens with temporary protection have labour-market access. Lawful stay and the applicable status must be checked; other Ukrainian citizens require a separate check of their labour-market route.
@@ -624,7 +632,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### work-employer-duties / denmark
 - Topic: Compare.Topic.WorkAuthorizationRights.
 - Article: 35da68f6-8880-40b2-9b3f-eb2b809b1caf — Working in Denmark: work authorization and employee rights.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim C04](../content-research/denmark-employment-rights/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.EmployerDuties.
 - English answer: Employers must check a foreign employee’s right to work against the actual permit conditions. A job offer or document from another country does not by itself authorize work in Denmark.
@@ -641,7 +649,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### work-employer-duties / germany
 - Topic: Compare.Topic.WorkAuthorizationRights.
 - Article: c4895b5a-eacd-53d7-a86f-f504dd615c76 — Work Authorization and Employee Rights.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Evidence: AufenthG §4a(5), official statutory text: https://www.gesetze-im-internet.de/aufenthg_2004/__4a.html.
 - Question resource key: Compare.Aspect.EmployerDuties.
 - English answer: Under §4a(5) AufenthG, an employer must check whether a foreign national may be employed: where the person holds a residence title, that no relevant prohibition or restriction applies; without one, that one of the limited bases in §4a(4) applies. For the duration of employment, the employer must keep a copy of the relevant document: the residence title, a Federal Employment Agency work permit, a certificate of permission to remain during asylum proceedings (Aufenthaltsgestattung), or a certificate of suspension of deportation (Duldung). The checking duty also applies to a person commissioning sustained paid services or work that the foreign national performs for profit; the copy-retention duty applies to employers. A separate notification of early termination is required within four weeks of learning of it, and only for employment under a title issued pursuant to Chapter 2, Section 4.
@@ -654,7 +662,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### work-employer-duties / poland
 - Topic: Compare.Topic.WorkAuthorizationRights.
 - Article: 7797d03c-6873-50cd-aef6-0d94a2f5fcab — Work Authorization and Employee Rights.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim WR01, WR03](../content-research/poland-batch-2026-10-16/work-authorization-rights/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.EmployerDuties.
 - English answer: For the temporary-protection route, the employer must notify PUP through praca.gov.pl within 7 days after work starts. The agreement must be written before work, with a copy for the worker and an understandable written version before signature if the worker does not know Polish.
@@ -675,7 +683,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### work-minimum-pay / denmark
 - Topic: Compare.Topic.WorkAuthorizationRights.
 - Article: 35da68f6-8880-40b2-9b3f-eb2b809b1caf — Working in Denmark: work authorization and employee rights.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim C07](../content-research/denmark-employment-rights/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.MinimumPay.
 - English answer: There is no statutory nationwide minimum wage. Pay is usually set by a collective agreement or individual negotiation; applicable rates and supplements vary by job and agreement.
@@ -693,7 +701,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### work-minimum-pay / germany
 - Topic: Compare.Topic.WorkAuthorizationRights.
 - Article: c4895b5a-eacd-53d7-a86f-f504dd615c76 — Work Authorization and Employee Rights.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim WR03](../content-research/germany-batch-2026-10-15/work-authorization-rights/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.MinimumPay.
 - English answer: The reviewed 2026 general minimum wage is €13.90 gross per hour from 1 January 2026. Statutory exceptions apply and a sector may set a higher floor; recheck the current amount before relying on it.
@@ -710,7 +718,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### work-minimum-pay / poland
 - Topic: Compare.Topic.WorkAuthorizationRights.
 - Article: 7797d03c-6873-50cd-aef6-0d94a2f5fcab — Work Authorization and Employee Rights.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim WR04](../content-research/poland-batch-2026-10-16/work-authorization-rights/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.MinimumPay.
 - English answer: The 2026 national monthly minimum wage is PLN 4,806. Part-month work and some contract types follow separate rules; compare gross pay and applicable hours, not only take-home pay.
@@ -727,7 +735,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### healthcare-access / denmark
 - Topic: Compare.Topic.Healthcare.
 - Article: b1e4aed1-bbaf-4f09-9468-74000bf96430 — How to access healthcare in Denmark.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim H-01 and H-08](../content-research/denmark-healthcare/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.HealthAccess.
 - English answer: For Special Act permit holders, the Ministry describes Health Act access once CPR registration and the yellow card are in place. This does not cover pending applicants, and not every healthcare service is free.
@@ -750,7 +758,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### healthcare-access / germany
 - Topic: Compare.Topic.Healthcare.
 - Article: 895b79b4-ce0d-5bee-9919-42ce3d76ecdb — Accessing Healthcare in Germany.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim HC01–HC02](../content-research/germany-batch-2026-10-15/healthcare/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.HealthAccess.
 - English answer: SGB V covers specified insured groups, including certain employees and qualifying SGB II recipients. AsylbLG §§4 and 6 provide a separate, conditional benefits route. A §24 permit alone does not determine coverage or its scope.
@@ -769,7 +777,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### healthcare-access / poland
 - Topic: Compare.Topic.Healthcare.
 - Article: d7e0716b-154d-5db3-8790-f73684c07271 — Accessing Healthcare in Poland.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim HC01–HC03](../content-research/poland-batch-2026-10-16/healthcare/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.HealthAccess.
 - English answer: From 5 March 2026, limited free care under the PESEL UKR protection route covers specified groups: under-18s, pregnancy/postnatal cases, torture or rape survivors, or holders of a collective-accommodation certificate. It does not cover every public service; insurance may provide another route.
@@ -787,7 +795,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### healthcare-proof / denmark
 - Topic: Compare.Topic.Healthcare.
 - Article: b1e4aed1-bbaf-4f09-9468-74000bf96430 — How to access healthcare in Denmark.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim H-02 and H-03](../content-research/denmark-healthcare/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.HealthProof.
 - English answer: The yellow health card documents coverage and lists the CPR number and GP contact details. A residence permit, CPR registration and the card are separate records; contact municipal Borgerservice if registration or coverage is unclear.
@@ -809,7 +817,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### healthcare-proof / germany
 - Topic: Compare.Topic.Healthcare.
 - Article: 895b79b4-ce0d-5bee-9919-42ce3d76ecdb — Accessing Healthcare in Germany.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim HC01–HC02; treatment/proof sections](../content-research/germany-batch-2026-10-15/healthcare/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.HealthProof.
 - English answer: Use the insurer’s card/proof of coverage or the treatment certificate/local health-card procedure issued by the responsible benefits authority. Without a card, ask that insurer or authority for proof; the procedure differs by scheme and locality.
@@ -832,7 +840,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### healthcare-proof / poland
 - Topic: Compare.Topic.Healthcare.
 - Article: d7e0716b-154d-5db3-8790-f73684c07271 — Accessing Healthcare in Poland.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim HC02](../content-research/poland-batch-2026-10-16/healthcare/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.HealthProof.
 - English answer: Full insurance coverage may follow a qualifying employment contract, registered unemployment or lawful business activity. Other bases and exceptions depend on status and law; PESEL UKR alone does not establish the same coverage for everyone.
@@ -849,7 +857,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### healthcare-urgent / denmark
 - Topic: Compare.Topic.Healthcare.
 - Article: b1e4aed1-bbaf-4f09-9468-74000bf96430 — How to access healthcare in Denmark.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim H-06](../content-research/denmark-healthcare/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.UrgentCare.
 - English answer: Call 112 for life-threatening illness or injury. For urgent problems that cannot wait outside GP hours, use your region’s out-of-hours service; numbers and call-before-arrival arrangements vary by region.
@@ -869,7 +877,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### healthcare-urgent / germany
 - Topic: Compare.Topic.Healthcare.
 - Article: 895b79b4-ce0d-5bee-9919-42ce3d76ecdb — Accessing Healthcare in Germany.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim HC03](../content-research/germany-batch-2026-10-15/healthcare/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.UrgentCare.
 - English answer: Call 112 for a life-threatening emergency. For urgent non-life-threatening problems outside practice hours, 116117 directs callers to on-call care; its telephone service is in German and language support varies.
@@ -887,7 +895,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### healthcare-urgent / poland
 - Topic: Compare.Topic.Healthcare.
 - Article: d7e0716b-154d-5db3-8790-f73684c07271 — Accessing Healthcare in Poland.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim HC04](../content-research/poland-batch-2026-10-16/healthcare/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.UrgentCare.
 - English answer: Call 112 or 999 for an immediate threat to life. For an urgent problem outside POZ hours, contact the nearest night and holiday healthcare point (NiŚOZ); emergency and routine care routes are different.
@@ -904,7 +912,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### housing-initial / denmark
 - Topic: Compare.Topic.Housing.
 - Article: 19afdd19-e2cc-4da6-bde3-6dc3d64b7503 — How to find housing in Denmark.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim H01, H03](../content-research/denmark-housing/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.InitialAccommodation.
 - English answer: Pending Special Act applicants may stay in an asylum centre, but need not. Where §12 applies, the municipality must designate temporary accommodation or may instead designate housing. Special Act §2(1) permits are excluded by Integration Act §57(5), unless the Immigration Service decides otherwise for very special personal circumstances. SIRI’s broader FAQ omits this exception; other municipal responsibilities are separate.
@@ -927,7 +935,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### housing-initial / germany
 - Topic: Compare.Topic.Housing.
 - Article: fd041e53-7794-5c1f-9ae4-131930fe69ee — Finding Accommodation in Germany.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim HO01–HO02](../content-research/germany-batch-2026-10-15/housing/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.InitialAccommodation.
 - English answer: Initial reception and temporary accommodation follow Land and municipal reception/allocation routes. The route depends on location and the person’s situation; it does not guarantee a particular dwelling.
@@ -949,7 +957,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### housing-initial / poland
 - Topic: Compare.Topic.Housing.
 - Article: 1f310b3c-dceb-5e3a-90d0-d3a705ca5c53 — Finding Accommodation in Poland.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim HO01](../content-research/poland-batch-2026-10-16/housing/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.InitialAccommodation.
 - English answer: The 2026 rules provide short-term crisis support and a separate accommodation route for defined vulnerable groups. Statutory conditions, funding and local implementation apply; PESEL UKR does not guarantee a place for everyone.
@@ -966,7 +974,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### housing-private-rental / denmark
 - Topic: Compare.Topic.Housing.
 - Article: 19afdd19-e2cc-4da6-bde3-6dc3d64b7503 — How to find housing in Denmark.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim H07](../content-research/denmark-housing/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.PrivateRental.
 - English answer: Read the lease, rent and utility terms; distinguish deposit from prepaid rent and inspect the home. Official guidance says not to pay a deposit before having a lease. Keep the signed agreement and payment records.
@@ -990,7 +998,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### housing-private-rental / germany
 - Topic: Compare.Topic.Housing.
 - Article: fd041e53-7794-5c1f-9ae4-131930fe69ee — Finding Accommodation in Germany.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim HO01, HO04](../content-research/germany-batch-2026-10-15/housing/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.PrivateRental.
 - English answer: Keep a written offer showing rent, utilities, deposit and start date. If benefits are involved, ask the responsible office before signing whether it must review or approve the costs; local limits and documents differ.
@@ -1009,7 +1017,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### housing-private-rental / poland
 - Topic: Compare.Topic.Housing.
 - Article: 1f310b3c-dceb-5e3a-90d0-d3a705ca5c53 — Finding Accommodation in Poland.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim HO04](../content-research/poland-batch-2026-10-16/housing/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.PrivateRental.
 - English answer: Ask for a written agreement in Polish or a translation you understand. Check the landlord, rent, utilities, term, termination and deposit return; do not transfer money based only on an advertisement.
@@ -1027,7 +1035,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### housing-financial-support / denmark
 - Topic: Compare.Topic.Housing.
 - Article: 19afdd19-e2cc-4da6-bde3-6dc3d64b7503 — How to find housing in Denmark.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim H08–H09](../content-research/denmark-housing/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.HousingSupport.
 - English answer: Apply to Udbetaling Danmark for boligstøtte. A Special Act permit holder may apply with fixed residence and the other conditions; the home generally needs its own kitchen and permanent residence use. Rent, household, income and assets affect the assessment; payment is not automatic.
@@ -1050,7 +1058,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### housing-financial-support / germany
 - Topic: Compare.Topic.Housing.
 - Article: fd041e53-7794-5c1f-9ae4-131930fe69ee — Finding Accommodation in Germany.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim HO04](../content-research/germany-batch-2026-10-15/housing/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.HousingSupport.
 - English answer: Housing costs are assessed under the applicable scheme: SGB II §22, SGB XII §35 or AsylbLG §3. Use the Jobcenter, Sozialamt or AsylbLG authority named in the decision. Applicable cost limits and local checks remain; a permit alone does not promise rent or deposit payment.
@@ -1073,7 +1081,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### housing-financial-support / poland
 - Topic: Compare.Topic.Housing.
 - Article: 1f310b3c-dceb-5e3a-90d0-d3a705ca5c53 — Finding Accommodation in Poland.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim HO03](../content-research/poland-batch-2026-10-16/housing/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.HousingSupport.
 - English answer: Apply for housing allowance through OPS or the local authority. The office checks eligibility, income, floor area and housing expenses; the legal title to the dwelling and other conditions matter. An award and amount are not guaranteed.
@@ -1090,7 +1098,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### education-school-enrolment / denmark
 - Topic: Compare.Topic.EducationLanguage.
 - Article: fee9dcf0-447d-4402-92a2-8b1bec125944 — Education in Denmark: schools, childcare and adult learning.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim E02, E04–E05](../content-research/denmark-education/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.SchoolEnrolment.
 - English answer: For a child arriving outside the usual registration period, contact the municipality where you live or plan to live. It explains school placement and class level; compulsory-education status is assessed individually, and asylum-centre arrangements may differ.
@@ -1112,7 +1120,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### education-school-enrolment / germany
 - Topic: Compare.Topic.EducationLanguage.
 - Article: f5e0f499-0f60-5465-85f8-de6345029b59 — Education and German-Language Learning.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim ED01, ED06](../content-research/germany-batch-2026-10-15/education-language/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.SchoolEnrolment.
 - English answer: Follow the education ministry, Schulamt or school instructions for the Land where the child lives. Enrolment rules and documents are Land/local matters; there is no single national application form.
@@ -1134,7 +1142,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### education-school-enrolment / poland
 - Topic: Compare.Topic.EducationLanguage.
 - Article: 32ca34e9-22d9-5f59-88a9-bbd7ffd7b5cd — Education and Polish-Language Learning.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim ED01, ED03](../content-research/poland-batch-2026-10-16/education-language/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.SchoolEnrolment.
 - English answer: Contact a public school near home with prior-school records if available. Ordinary admission does not require nostrification of those records; the headteacher determines the grade. Ask about missing records; some school types apply additional criteria.
@@ -1152,7 +1160,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### education-pupil-language / denmark
 - Topic: Compare.Topic.EducationLanguage.
 - Article: fee9dcf0-447d-4402-92a2-8b1bec125944 — Education in Denmark: schools, childcare and adult learning.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim E03, E05](../content-research/denmark-education/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.PupilLanguageSupport.
 - English answer: Support may include Danish as a second language, a reception class or support in a regular class. Provision depends on the child’s needs and local arrangements; a specific class or teaching language is not automatic.
@@ -1171,7 +1179,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### education-pupil-language / germany
 - Topic: Compare.Topic.EducationLanguage.
 - Article: f5e0f499-0f60-5465-85f8-de6345029b59 — Education and German-Language Learning.
-- Answer availability: Unavailable. Editorial status: Draft.
+- Answer availability: Unavailable. Editorial status: Approved by project owner (17 October 2026).
 - Research gap (not a claim ID): No pupil-specific support claim in approved ED matrix ([review file](../content-research/germany-batch-2026-10-15/education-language/SOURCES_AND_CLAIMS.md)).
 - Question resource key: Compare.Aspect.PupilLanguageSupport.
 - English answer: Not established in the reviewed sources.
@@ -1183,7 +1191,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### education-pupil-language / poland
 - Topic: Compare.Topic.EducationLanguage.
 - Article: 32ca34e9-22d9-5f59-88a9-bbd7ffd7b5cd — Education and Polish-Language Learning.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim ED06](../content-research/poland-batch-2026-10-16/education-language/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.PupilLanguageSupport.
 - English answer: Pupils subject to the learning obligation with insufficient Polish are entitled to free additional Polish lessons for up to 24 months. A preparatory class may be organised; a teacher’s assistant knowing the pupil’s language may be employed for up to 12 months. Ask the school about implementation.
@@ -1200,7 +1208,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### education-higher-admission / denmark
 - Topic: Compare.Topic.EducationLanguage.
 - Article: fee9dcf0-447d-4402-92a2-8b1bec125944 — Education in Denmark: schools, childcare and adult learning.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim E11–E12](../content-research/denmark-education/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.HigherEducation.
 - English answer: Admission and language requirements are programme/institution-specific. Many undergraduate applications use Optagelse.dk; graduate applicants contact the institution. An assessment of foreign qualifications explains their level but does not itself grant admission.
@@ -1222,7 +1230,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### education-higher-admission / germany
 - Topic: Compare.Topic.EducationLanguage.
 - Article: f5e0f499-0f60-5465-85f8-de6345029b59 — Education and German-Language Learning.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim ED05](../content-research/germany-batch-2026-10-15/education-language/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.HigherEducation.
 - English answer: Universities decide admission and language requirements. DAAD’s National Academic Contact Point Ukraine provides orientation, not an admission decision.
@@ -1239,7 +1247,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### education-higher-admission / poland
 - Topic: Compare.Topic.EducationLanguage.
 - Article: 32ca34e9-22d9-5f59-88a9-bbd7ffd7b5cd — Education and Polish-Language Learning.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim ED04](../content-research/poland-batch-2026-10-16/education-language/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.HigherEducation.
 - English answer: Check the university’s programme and language requirements and NAWA guidance on recognition of the school-leaving certificate. Recognition for admission does not guarantee acceptance; competition and other programme conditions can apply.
@@ -1256,7 +1264,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### social-subsistence / denmark
 - Topic: Compare.Topic.SocialAssistance.
 - Article: 1a19c1f9-1111-4d60-8490-da548f33083f — Social assistance in Denmark: benefits and how to apply.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim SA02–SA06](../content-research/denmark-social-assistance/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.SubsistenceSupport.
 - English answer: A valid Special Act permit holder unable to support themselves may apply for municipal kontanthjælp if other conditions are met. Income, assets, age, residence/work history and sometimes spouse resources affect the assessment. Reception-centre maintenance can affect which authority is responsible.
@@ -1279,7 +1287,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### social-subsistence / germany
 - Topic: Compare.Topic.SocialAssistance.
 - Article: 31f5802b-26a0-5cd0-bb24-0a9a4afa706a — Financial and Social Assistance.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim SA01–SA02](../content-research/germany-batch-2026-10-15/social-assistance/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.SubsistenceSupport.
 - English answer: SGB II depends on age, ability to work, need and residence conditions; §74 covers only specified §24 applicants with a qualifying provisional certificate and identity registration. Other cases may fall under AsylbLG or SGB XII. Nationality alone does not assign a scheme.
@@ -1299,7 +1307,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### social-subsistence / poland
 - Topic: Compare.Topic.SocialAssistance.
 - Article: a5892591-d082-57ce-acf9-5c39ab4f9b84 — Financial and Social Assistance.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim SA04, SA06](../content-research/poland-batch-2026-10-16/social-assistance/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.SubsistenceSupport.
 - English answer: General social assistance has statutory residence/status and need conditions. PESEL UKR alone does not establish entitlement to a payment; the local OPS/MOPS assesses the household’s circumstances under the applicable rules.
@@ -1321,7 +1329,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### social-application / denmark
 - Topic: Compare.Topic.SocialAssistance.
 - Article: 1a19c1f9-1111-4d60-8490-da548f33083f — Social assistance in Denmark: benefits and how to apply.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim How to apply section; kontanthjælp and municipal-support source application sections](../content-research/denmark-social-assistance/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.AssistanceApplication.
 - English answer: Start with the municipality where you live or the one responsible for your case. Apply through it or its digital service; it confirms required documents and any alternative application arrangements. MitID/CPR requirements are service- and case-specific.
@@ -1339,7 +1347,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### social-application / germany
 - Topic: Compare.Topic.SocialAssistance.
 - Article: 31f5802b-26a0-5cd0-bb24-0a9a4afa706a — Financial and Social Assistance.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim SA01–SA02; TASKS section](../content-research/germany-batch-2026-10-15/social-assistance/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.AssistanceApplication.
 - English answer: Apply to the Jobcenter for an applicable SGB II claim, or the Sozialamt/local AsylbLG authority for their routes. Prepare identity/residence, household, income/bank and accommodation documents; the office specifies the actual requirements. Keep the receipt and written decision.
@@ -1359,7 +1367,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### social-application / poland
 - Topic: Compare.Topic.SocialAssistance.
 - Article: a5892591-d082-57ce-acf9-5c39ab4f9b84 — Financial and Social Assistance.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim SA06](../content-research/poland-batch-2026-10-16/social-assistance/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.AssistanceApplication.
 - English answer: General social-assistance requests go to local OPS/MOPS. Prepare identity, residence, income, household and need-related documents and request an assessment; requirements depend on the case.
@@ -1376,7 +1384,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### social-child-benefits / denmark
 - Topic: Compare.Topic.SocialAssistance.
 - Article: 1a19c1f9-1111-4d60-8490-da548f33083f — Social assistance in Denmark: benefits and how to apply.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim SA08](../content-research/denmark-social-assistance/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.ChildBenefits.
 - English answer: For børne- og ungeydelse, conditions include the child’s age, residence, the custodian’s tax status and qualifying residence/work periods. Udbetaling Danmark assesses the route; Ukrainian citizenship or a Special Act permit alone does not confirm eligibility.
@@ -1393,7 +1401,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### social-child-benefits / germany
 - Topic: Compare.Topic.SocialAssistance.
 - Article: 31f5802b-26a0-5cd0-bb24-0a9a4afa706a — Financial and Social Assistance.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim SA06–SA07](../content-research/germany-batch-2026-10-15/social-assistance/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.ChildBenefits.
 - English answer: BA’s simplified Kindergeld route requires a parent from Ukraine living in Germany with a §24 permit allowing work for at least six months, and a child living in Germany, the EU, EEA or Switzerland. Actual employment is not required under that rule; apply to Familienkasse, which decides entitlement.
@@ -1410,7 +1418,7 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### social-child-benefits / poland
 - Topic: Compare.Topic.SocialAssistance.
 - Article: a5892591-d082-57ce-acf9-5c39ab4f9b84 — Financial and Social Assistance.
-- Answer availability: Populated. Editorial status: Draft.
+- Answer availability: Populated. Editorial status: Approved by project owner (17 October 2026).
 - Existing review: [claim SA01–SA03](../content-research/poland-batch-2026-10-16/social-assistance/SOURCES_AND_CLAIMS.md).
 - Question resource key: Compare.Aspect.ChildBenefits.
 - English answer: 800+ requires the applicable residence/status conditions and the child living with a parent in Poland; school-age children must attend Polish education. For Ukrainian citizens with UKR status, a work-activity condition applies from 1 February 2026, with exceptions including some disability/Polish-child cases and limited support for some registered unemployed parents. ZUS checks the individual case.
@@ -1427,8 +1435,8 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 
 ## Remaining editorial gates
 
-- Human review must accept the new question-aligned wording and all three translations separately from the already approved source articles.
+- The project owner’s editorial approval is complete. Publication-time checks of legislation, sources, translations and release readiness remain required.
 - Denmark’s attributed 2027/2028 extension discrepancy remains unresolved; no personal validity is inferred. German EU-protection and permit dates remain separate legal scopes.
 - Historical wage/benefit dates and all sources require normal publication-time freshness checks; this task does not waive existing legislative/source gates.
-- Unavailable answers: Denmark/public employment-assistance conditions; Germany/employer duties; Germany/school-pupil language support. These are gaps in reviewed articles, not claims that duties or support do not exist.
-- All facts remain Draft and Development-only; Production continues to show V1 without a closed V2 disclosure.
+- Approved unavailable answers: Denmark/public employment-assistance conditions and Germany/school-pupil language support. These describe evidence gaps in reviewed articles, not claims that services or support do not exist.
+- All 72 structured answers are editorially approved and the catalog is ready for Production display on a future deployment; the application was not deployed by this task.
