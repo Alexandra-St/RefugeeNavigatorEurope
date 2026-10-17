@@ -36,7 +36,7 @@
                 <section class="information-entries" aria-label="@category.Name">
                     @foreach (var item in _renderedEntries)
                     {
-                        <article class="information-entry" aria-labelledby="entry-heading-@item.Entry.Id.ToString("N")">
+                        <article class="information-entry" aria-labelledby="entry-heading-@item.Entry.Id.ToString("N")" id="entry-@item.Entry.Id.ToString("N")">
                             <h2 id="entry-heading-@item.Entry.Id.ToString("N")">@item.Translation.Title</h2>
                             <p class="entry-summary">@item.Translation.Summary</p>
                             @foreach (var block in ArticleContentFormatter.Parse(item.Translation.Content))

@@ -172,7 +172,7 @@ public sealed class DenmarkEducationArticleTests
         var compareHtml = await RenderAsync<Compare>(catalog, "en",
             "/compare?country1=denmark&country2=germany&category=education");
         Assert.Contains("Education in Denmark: schools, childcare and adult learning", WebUtility.HtmlDecode(compareHtml));
-        Assert.Contains("href=\"/countries/denmark/categories/education\"", compareHtml);
+        Assert.Contains($"href=\"/countries/denmark/categories/education#entry-{ArticleId:N}\"", compareHtml);
     }
 
     [Fact]

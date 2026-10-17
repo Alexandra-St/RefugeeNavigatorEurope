@@ -214,10 +214,10 @@
     <value>Compare countries</value>
   </data>
   <data name="Home.CompareDescription" xml:space="preserve">
-    <value>Select two countries and a topic to preview the future side-by-side layout. Factual comparisons are not available yet.</value>
+    <value>Compare available, reviewed information for two countries by topic. Rules and individual circumstances may differ; this tool does not determine the best country or personal eligibility.</value>
   </data>
-  <data name="Home.OpenComparePreview" xml:space="preserve">
-    <value>Open comparison preview</value>
+  <data name="Home.OpenComparison" xml:space="preserve">
+    <value>Open country comparison</value>
   </data>
   <data name="Search.PageTitle" xml:space="preserve">
     <value>Search information | Refugee Navigator Europe</value>
@@ -261,10 +261,7 @@
     <value>Compare countries</value>
   </data>
   <data name="Compare.Description" xml:space="preserve">
-    <value>Select two countries and one topic to preview the side-by-side layout. The selections do not produce a factual comparison.</value>
-  </data>
-  <data name="Compare.PreviewNotice" xml:space="preserve">
-    <value>This comparison interface is a preview. Selecting countries does not create a factual comparison. Reliable comparisons will be available when verified, structured information is prepared for the selected topic. These panels show available articles and navigation only.</value>
+    <value>Compare reviewed articles for the selected topic side by side.</value>
   </data>
   <data name="Compare.BackHome" xml:space="preserve">
     <value>Back to homepage</value>
@@ -274,10 +271,10 @@
   <data name="Compare.SelectCountry" xml:space="preserve"><value>Select a country</value></data>
   <data name="Compare.Category" xml:space="preserve"><value>Information category</value></data>
   <data name="Compare.SelectCategory" xml:space="preserve"><value>Select a category</value></data>
-  <data name="Compare.Submit" xml:space="preserve"><value>Show preview</value></data>
+  <data name="Compare.Submit" xml:space="preserve"><value>Compare countries</value></data>
   <data name="Compare.Reset" xml:space="preserve"><value>Reset selections</value></data>
   <data name="Compare.SelectionInstructionsHeading" xml:space="preserve"><value>Choose what to view</value></data>
-  <data name="Compare.SelectionInstructions" xml:space="preserve"><value>Select two different countries and one information category to see the preview layout.</value></data>
+  <data name="Compare.SelectionInstructions" xml:space="preserve"><value>Select two different countries and one information category to compare reviewed articles side by side.</value></data>
   <data name="Compare.InvalidCountry" xml:space="preserve"><value>One or both selected countries are unavailable. Choose countries from the lists.</value></data>
   <data name="Compare.InvalidCategory" xml:space="preserve"><value>The selected category is unavailable. Choose a category from the list.</value></data>
   <data name="Compare.SameCountry" xml:space="preserve"><value>Choose two different countries.</value></data>
@@ -285,7 +282,23 @@
   <data name="Compare.OpenCategory" xml:space="preserve"><value>Open {0} information</value></data>
   <data name="Compare.AvailableInformation" xml:space="preserve"><value>Available articles</value></data>
   <data name="Compare.EmptyPanel" xml:space="preserve"><value>No articles are currently available for this country and category.</value></data>
-  <data name="Compare.PreviewLimitationsHeading" xml:space="preserve"><value>About this preview</value></data>
-  <data name="Compare.PanelsHeading" xml:space="preserve"><value>Country information panels</value></data>
-  <data name="Compare.ArticleStatus" xml:space="preserve"><value>Translation status: {0}</value></data>
+  <data name="Compare.AboutHeading" xml:space="preserve"><value>About this comparison</value></data>
+  <data name="Compare.ScopeNotice" xml:space="preserve"><value>Rules and individual circumstances may differ. Articles were checked on their recorded dates. This tool does not determine the best country or personal eligibility.</value></data>
+  <data name="Compare.PanelsHeading" xml:space="preserve"><value>Country comparison by topic</value></data>
+  <data name="Compare.Topic.TemporaryProtectionApplication" xml:space="preserve"><value>Applying for temporary protection</value></data>
+  <data name="Compare.Topic.ResidenceAfterProtection" xml:space="preserve"><value>Residence options after temporary protection</value></data>
+  <data name="Compare.Topic.FindingEmployment" xml:space="preserve"><value>Finding employment</value></data>
+  <data name="Compare.Topic.WorkAuthorizationRights" xml:space="preserve"><value>Work authorization and employee rights</value></data>
+  <data name="Compare.Topic.Healthcare" xml:space="preserve"><value>Healthcare</value></data>
+  <data name="Compare.Topic.Housing" xml:space="preserve"><value>Housing</value></data>
+  <data name="Compare.Topic.EducationLanguage" xml:space="preserve"><value>Education and language learning</value></data>
+  <data name="Compare.Topic.SocialAssistance" xml:space="preserve"><value>Social assistance</value></data>
+  <data name="Compare.ReadDetails" xml:space="preserve"><value>Read details</value></data>
+  <data name="Compare.HideDetails" xml:space="preserve"><value>Hide details</value></data>
+  <data name="Compare.OfficialSources" xml:space="preserve"><value>Official sources</value></data>
+  <data name="Compare.LastUpdated" xml:space="preserve"><value>Last updated</value></data>
+  <data name="Compare.ReviewStatus" xml:space="preserve"><value>Review status</value></data>
+  <data name="Compare.InformationUnavailable" xml:space="preserve"><value>This translation is not currently available for comparison.</value></data>
+  <data name="Compare.SourceChecked" xml:space="preserve"><value>Source checked:</value></data>
+  <data name="Compare.OpenArticle" xml:space="preserve"><value>Open full article</value></data>
 </root>

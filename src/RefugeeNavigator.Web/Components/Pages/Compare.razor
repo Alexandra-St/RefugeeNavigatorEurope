@@ -3,6 +3,8 @@
 @using Microsoft.AspNetCore.WebUtilities
 @using RefugeeNavigator.Data
 @using RefugeeNavigator.Domain
+@using RefugeeNavigator.Web.Content
+@using RefugeeNavigator.Web.Comparison
 @using RefugeeNavigator.Web.Localization
 @inject CatalogData Catalog
 @inject NavigationManager Navigation
@@ -15,7 +17,6 @@
 <main id="main-content" class="compare-page">
     <div class="page-content">
         <header class="page-heading">
-            <p class="eyebrow">@Localizer["Common.Preview"]</p>
             <h1>@Localizer["Compare.Heading"]</h1>
             <p class="description">@Localizer["Compare.Description"]</p>
         </header>
@@ -72,39 +73,96 @@
         }
         else
         {
-            <aside class="preview-notice" aria-label="@Localizer["Compare.PreviewLimitationsHeading"]">
-                <h2>@Localizer["Compare.PreviewLimitationsHeading"]</h2>
-                <p>@Localizer["Compare.PreviewNotice"]</p>
+            <aside class="comparison-note" aria-label="@Localizer["Compare.AboutHeading"]">
+                <h2>@Localizer["Compare.AboutHeading"]</h2>
+                <p>@Localizer["Compare.ScopeNotice"]</p>
             </aside>
 
             <section class="comparison" aria-label="@Localizer["Compare.PanelsHeading"]">
-                @foreach (var country in new[] { SelectedCountryOne!, SelectedCountryTwo! })
+                @foreach (var topic in CountryComparisonTopicMap.ForCategory(SelectedCategory!.Slug))
                 {
-                    var countryName = Localizer[CatalogLocalizationKeyResolver.CountryName(country)];
-                    var entries = GetEntries(country);
-                    <section class="country-panel" aria-labelledby="country-heading-@country.Id.ToString("N")">
-                        <header class="panel-heading">
-                            <p class="eyebrow">@Localizer[CatalogLocalizationKeyResolver.CategoryName(SelectedCategory!)]</p>
-                            <h2 id="country-heading-@country.Id.ToString("N")">@Localizer["Compare.CountryPanelHeading", countryName]</h2>
-                        </header>
-                        <a class="category-link" href="/countries/@country.Slug/categories/@SelectedCategory!.Slug">@Localizer["Compare.OpenCategory", Localizer[CatalogLocalizationKeyResolver.CategoryName(SelectedCategory!)] ]</a>
-                        <h3>@Localizer["Compare.AvailableInformation"]</h3>
-                        @if (entries.Count == 0)
-                        {
-                            <p class="empty-state">@Localizer["Compare.EmptyPanel"]</p>
-                        }
-                        else
-                        {
-                            <ul class="article-list">
-                                @foreach (var item in entries)
-                                {
-                                    <li>
-                                        <a href="/countries/@country.Slug/categories/@SelectedCategory!.Slug">@item.Translation.Title</a>
-                                        <p class="article-status">@Localizer["Compare.ArticleStatus", Localizer[$"Category.Status.{item.Translation.VerificationStatus}"]]</p>
-                                    </li>
-                                }
-                            </ul>
-                        }
+                    <section class="comparison-topic" aria-labelledby="topic-@topic.ResourceKey.Replace('.', '-')">
+                        <h2 id="topic-@topic.ResourceKey.Replace('.', '-')">@Localizer[topic.ResourceKey]</h2>
+                        <div class="topic-columns">
+                            @foreach (var country in new[] { SelectedCountryOne!, SelectedCountryTwo! })
+                            {
+                                var countryName = Localizer[CatalogLocalizationKeyResolver.CountryName(country)];
+                                var article = GetArticle(topic, country);
+                                <article class="topic-country" aria-label="@Localizer["Compare.CountryPanelHeading", countryName]">
+                                    <h3>@Localizer["Compare.CountryPanelHeading", countryName]</h3>
+                                    @if (article?.Translation is { VerificationStatus: VerificationStatus.Verified } translation)
+                                    {
+                                        <h4 class="article-title">@translation.Title</h4>
+                                        <p class="article-summary">@translation.Summary</p>
+                                        <dl class="article-metadata">
+                                            <div>
+                                                <dt>@Localizer["Compare.ReviewStatus"]</dt>
+                                                <dd>@Localizer[VerificationStatusResourceKey(translation.VerificationStatus)]</dd>
+                                            </div>
+                                            <div>
+                                                <dt>@Localizer["Compare.LastUpdated"]</dt>
+                                                <dd><time datetime="@translation.LastUpdatedAt.ToString("O", CultureInfo.InvariantCulture)">@FormatDate(translation.LastUpdatedAt)</time></dd>
+                                            </div>
+                                        </dl>
+                                        <details class="article-details">
+                                            <summary>
+                                                <span class="when-closed">@Localizer["Compare.ReadDetails"]</span>
+                                                <span class="when-open">@Localizer["Compare.HideDetails"]</span>
+                                            </summary>
+                                            <div class="article-body">
+                                                @foreach (var block in ArticleContentFormatter.Parse(translation.Content))
+                                                {
+                                                    @switch (block.Kind)
+                                                    {
+                                                        case ArticleContentBlockKind.Heading:
+                                                            <h5>@block.Text</h5>
+                                                            break;
+                                                        case ArticleContentBlockKind.UnorderedList:
+                                                            <ul>
+                                                                @foreach (var listItem in block.Items)
+                                                                {
+                                                                    <li>@listItem</li>
+                                                                }
+                                                            </ul>
+                                                            break;
+                                                        default:
+                                                            <p>@block.Text</p>
+                                                            break;
+                                                    }
+                                                }
+                                            </div>
+                                        </details>
+                                        <a class="article-link" href="/countries/@country.Slug/categories/@SelectedCategory!.Slug#entry-@article.Entry!.Id.ToString("N")">@Localizer["Compare.OpenArticle"]</a>
+                                    }
+                                    else
+                                    {
+                                        <div class="unavailable-state">
+                                            @if (article?.Translation is { } unapprovedTranslation)
+                                            {
+                                                <p class="article-status"><strong>@Localizer["Compare.ReviewStatus"]:</strong> @Localizer[VerificationStatusResourceKey(unapprovedTranslation.VerificationStatus)]</p>
+                                            }
+                                            <p>@Localizer["Compare.InformationUnavailable"]</p>
+                                        </div>
+                                    }
+
+                                    @if (article?.Sources.Count > 0)
+                                    {
+                                        <details class="source-details">
+                                            <summary>@Localizer["Compare.OfficialSources"] (@article.Sources.Count)</summary>
+                                            <ul>
+                                                @foreach (var source in article.Sources)
+                                                {
+                                                    <li>
+                                                        <a href="@source.Url.AbsoluteUri" target="_blank" rel="noopener noreferrer">@source.Title</a>
+                                                        <span class="source-checked">@Localizer["Compare.SourceChecked"] <time datetime="@source.LastCheckedAt.ToString("O", CultureInfo.InvariantCulture)">@FormatDate(source.LastCheckedAt)</time></span>
+                                                    </li>
+                                                }
+                                            </ul>
+                                        </details>
+                                    }
+                                </article>
+                            }
+                        </div>
                     </section>
                 }
             </section>
@@ -168,17 +226,34 @@
         : Catalog.Countries.FirstOrDefault(country =>
             string.Equals(country.Slug, slug, StringComparison.OrdinalIgnoreCase));
 
-    private IReadOnlyList<(InformationEntry Entry, InformationEntryTranslation Translation)> GetEntries(Country country)
+    private ComparisonArticle? GetArticle(CountryComparisonTopic topic, Country country)
     {
+        var entryId = CountryComparisonTopicMap.EntryIdFor(topic, country.Slug);
+        var entry = Catalog.InformationEntries.SingleOrDefault(item => item.Id == entryId);
+        if (entry is null)
+        {
+            return null;
+        }
+
         var languageCode = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
-        return Catalog.InformationEntries
-            .Where(entry => entry.CountryId == country.Id && entry.CategoryId == SelectedCategory!.Id)
-            .Select(entry => (
-                entry,
-                Catalog.InformationEntryTranslations.SingleOrDefault(translation =>
-                    translation.InformationEntryId == entry.Id && translation.LanguageCode == languageCode)
-                    ?? throw new InvalidOperationException(
-                        $"Information entry '{entry.Id}' has no '{languageCode}' translation.")))
-            .ToArray();
+        var translation = Catalog.InformationEntryTranslations.SingleOrDefault(item =>
+            item.InformationEntryId == entry.Id && item.LanguageCode == languageCode);
+        var sources = Catalog.OfficialSources.Where(source => source.InformationEntryId == entry.Id).ToArray();
+        return new ComparisonArticle(entry, translation, sources);
     }
+
+    private static string VerificationStatusResourceKey(VerificationStatus status) => status switch
+    {
+        VerificationStatus.NeedsReview => "Category.Status.NeedsReview",
+        VerificationStatus.Verified => "Category.Status.Verified",
+        VerificationStatus.Outdated => "Category.Status.Outdated",
+        _ => throw new InvalidOperationException($"Unsupported verification status '{status}'.")
+    };
+
+    private static string FormatDate(DateTimeOffset value) => value.ToString("d MMM yyyy", CultureInfo.CurrentCulture);
+
+    private sealed record ComparisonArticle(
+        InformationEntry Entry,
+        InformationEntryTranslation? Translation,
+        IReadOnlyList<OfficialSource> Sources);
 }

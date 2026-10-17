@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.AspNetCore.HttpOverrides;
 using RefugeeNavigator.Web.Components;
+using RefugeeNavigator.Web.Comparison;
 using RefugeeNavigator.Web.Localization;
 using RefugeeNavigator.Web.Security;
 using RefugeeNavigator.Data;
@@ -21,6 +22,7 @@ builder.Services.AddSingleton(accessOptions);
 builder.Services.AddRazorComponents();
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 var catalog = await new JsonCatalogProvider(builder.Environment.ContentRootPath).LoadAsync();
+CountryComparisonTopicMap.Validate(catalog);
 var resourceManager = new ResourceManager(
     "RefugeeNavigator.Web.Resources.Localization.SharedResource",
     typeof(SharedResource).Assembly);

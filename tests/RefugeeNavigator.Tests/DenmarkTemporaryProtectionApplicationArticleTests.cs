@@ -251,7 +251,7 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
         var compareHtml = await RenderAsync<Compare>(catalog, "en",
             "/compare?country1=denmark&country2=germany&category=temporary-protection");
         Assert.Contains("Temporary protection in Denmark: how to apply and extend your permit", WebUtility.HtmlDecode(compareHtml));
-        Assert.Contains("/countries/denmark/categories/temporary-protection", compareHtml);
+        Assert.Contains($"/countries/denmark/categories/temporary-protection#entry-{ArticleId:N}", compareHtml);
     }
 
     [Fact]

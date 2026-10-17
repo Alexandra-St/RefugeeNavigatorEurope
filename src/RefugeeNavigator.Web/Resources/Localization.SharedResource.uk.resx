@@ -214,10 +214,10 @@
     <value>Порівняння країн</value>
   </data>
   <data name="Home.CompareDescription" xml:space="preserve">
-    <value>Виберіть дві країни та тему, щоб переглянути макет майбутнього порівняння. Фактичне порівняння ще недоступне.</value>
+    <value>Порівнюйте наявні перевірені матеріали двох країн за темами. Правила й індивідуальні обставини можуть відрізнятися; інструмент не визначає найкращу країну чи відповідність конкретної людини вимогам.</value>
   </data>
-  <data name="Home.OpenComparePreview" xml:space="preserve">
-    <value>Відкрити попередній перегляд порівняння</value>
+  <data name="Home.OpenComparison" xml:space="preserve">
+    <value>Відкрити порівняння країн</value>
   </data>
   <data name="Search.PageTitle" xml:space="preserve">
     <value>Пошук інформації | Refugee Navigator Europe</value>
@@ -259,10 +259,7 @@
     <value>Порівняння країн</value>
   </data>
   <data name="Compare.Description" xml:space="preserve">
-    <value>Виберіть дві країни та тему, щоб побачити макет поруч. Вибір не створює фактичного порівняння.</value>
-  </data>
-  <data name="Compare.PreviewNotice" xml:space="preserve">
-    <value>Це попередній перегляд інтерфейсу. Вибір країн не створює фактичного порівняння. Надійні порівняння з’являться, коли для вибраної теми буде підготовлено перевірену структуровану інформацію. Ці панелі показують лише наявні статті та навігацію.</value>
+    <value>Порівнюйте перевірені статті для вибраної теми поруч.</value>
   </data>
   <data name="Compare.BackHome" xml:space="preserve">
     <value>Повернутися на головну</value>
@@ -272,10 +269,10 @@
   <data name="Compare.SelectCountry" xml:space="preserve"><value>Виберіть країну</value></data>
   <data name="Compare.Category" xml:space="preserve"><value>Категорія інформації</value></data>
   <data name="Compare.SelectCategory" xml:space="preserve"><value>Виберіть категорію</value></data>
-  <data name="Compare.Submit" xml:space="preserve"><value>Показати попередній перегляд</value></data>
+  <data name="Compare.Submit" xml:space="preserve"><value>Порівняти країни</value></data>
   <data name="Compare.Reset" xml:space="preserve"><value>Скинути вибір</value></data>
   <data name="Compare.SelectionInstructionsHeading" xml:space="preserve"><value>Виберіть, що переглянути</value></data>
-  <data name="Compare.SelectionInstructions" xml:space="preserve"><value>Виберіть дві різні країни та одну категорію інформації, щоб побачити макет попереднього перегляду.</value></data>
+  <data name="Compare.SelectionInstructions" xml:space="preserve"><value>Виберіть дві різні країни та категорію, щоб порівняти перевірені статті поруч.</value></data>
   <data name="Compare.InvalidCountry" xml:space="preserve"><value>Одну або обидві вибрані країни не знайдено. Виберіть країни зі списків.</value></data>
   <data name="Compare.InvalidCategory" xml:space="preserve"><value>Вибрану категорію не знайдено. Виберіть категорію зі списку.</value></data>
   <data name="Compare.SameCountry" xml:space="preserve"><value>Виберіть дві різні країни.</value></data>
@@ -283,7 +280,23 @@
   <data name="Compare.OpenCategory" xml:space="preserve"><value>Переглянути інформацію: {0}</value></data>
   <data name="Compare.AvailableInformation" xml:space="preserve"><value>Доступні статті</value></data>
   <data name="Compare.EmptyPanel" xml:space="preserve"><value>Для цієї країни й категорії наразі немає доступних статей.</value></data>
-  <data name="Compare.PreviewLimitationsHeading" xml:space="preserve"><value>Про цей попередній перегляд</value></data>
-  <data name="Compare.PanelsHeading" xml:space="preserve"><value>Панелі інформації про країни</value></data>
-  <data name="Compare.ArticleStatus" xml:space="preserve"><value>Статус перекладу: {0}</value></data>
+  <data name="Compare.AboutHeading" xml:space="preserve"><value>Про це порівняння</value></data>
+  <data name="Compare.ScopeNotice" xml:space="preserve"><value>Правила й індивідуальні обставини можуть відрізнятися. Дати перевірки статей зазначено окремо. Інструмент не визначає найкращу країну та не встановлює, чи відповідає конкретна людина вимогам.</value></data>
+  <data name="Compare.PanelsHeading" xml:space="preserve"><value>Порівняння країн за темами</value></data>
+  <data name="Compare.Topic.TemporaryProtectionApplication" xml:space="preserve"><value>Оформлення тимчасового захисту</value></data>
+  <data name="Compare.Topic.ResidenceAfterProtection" xml:space="preserve"><value>Варіанти проживання після тимчасового захисту</value></data>
+  <data name="Compare.Topic.FindingEmployment" xml:space="preserve"><value>Пошук роботи</value></data>
+  <data name="Compare.Topic.WorkAuthorizationRights" xml:space="preserve"><value>Право на роботу та права працівників</value></data>
+  <data name="Compare.Topic.Healthcare" xml:space="preserve"><value>Медична допомога</value></data>
+  <data name="Compare.Topic.Housing" xml:space="preserve"><value>Житло</value></data>
+  <data name="Compare.Topic.EducationLanguage" xml:space="preserve"><value>Освіта та вивчення мов</value></data>
+  <data name="Compare.Topic.SocialAssistance" xml:space="preserve"><value>Соціальна допомога</value></data>
+  <data name="Compare.ReadDetails" xml:space="preserve"><value>Читати докладніше</value></data>
+  <data name="Compare.HideDetails" xml:space="preserve"><value>Згорнути подробиці</value></data>
+  <data name="Compare.OfficialSources" xml:space="preserve"><value>Офіційні джерела</value></data>
+  <data name="Compare.LastUpdated" xml:space="preserve"><value>Оновлено</value></data>
+  <data name="Compare.ReviewStatus" xml:space="preserve"><value>Статус перевірки</value></data>
+  <data name="Compare.InformationUnavailable" xml:space="preserve"><value>Цей переклад наразі недоступний для порівняння.</value></data>
+  <data name="Compare.SourceChecked" xml:space="preserve"><value>Джерело перевірено:</value></data>
+  <data name="Compare.OpenArticle" xml:space="preserve"><value>Відкрити повну статтю</value></data>
 </root>

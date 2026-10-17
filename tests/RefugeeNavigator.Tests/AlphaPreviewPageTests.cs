@@ -164,7 +164,7 @@ public sealed class AlphaPreviewPageTests
     [InlineData("uk", "Пошук інформації", "Порівняння країн", "статті, доступні в застосунку")]
     [InlineData("en", "Search information", "Compare countries", "currently available in the app")]
     [InlineData("ru", "Поиск информации", "Сравнение стран", "статьи, доступные в приложении")]
-    public async Task SearchIsFunctionalAndCompareHasInteractiveSelectionPreview(
+    public async Task SearchIsFunctionalAndCompareExplainsItsReviewScope(
         string language,
         string searchHeading,
         string compareHeading,
@@ -195,9 +195,12 @@ public sealed class AlphaPreviewPageTests
         Assert.Contains("name=\"country2\"", compareHtml);
         Assert.Contains("name=\"category\"", compareHtml);
         Assert.Contains(GetResource("Compare.SelectionInstructions", language), visibleCompareHtml);
-        Assert.Contains(GetResource("Common.Preview", language), visibleCompareHtml);
         Assert.Contains(GetResource("Common.Disclaimer", language), visibleCompareHtml);
         Assert.DoesNotContain("Compare.", visibleCompareHtml);
+
+        var selectedCompareHtml = WebUtility.HtmlDecode(await RenderAsync<Compare>(language,
+            currentPath: "/compare?country1=denmark&country2=germany&category=employment"));
+        Assert.Contains(GetResource("Compare.ScopeNotice", language), selectedCompareHtml);
     }
 
     [Theory]

@@ -176,7 +176,7 @@ public sealed class DenmarkEmploymentRightsArticleTests
         var compareHtml = await RenderAsync<Compare>(catalog, "en",
             "/compare?country1=denmark&country2=germany&category=employment");
         Assert.Contains("Working in Denmark: work authorization and employee rights", WebUtility.HtmlDecode(compareHtml));
-        Assert.Contains("href=\"/countries/denmark/categories/employment\"", compareHtml);
+        Assert.Contains($"href=\"/countries/denmark/categories/employment#entry-{ArticleId:N}\"", compareHtml);
     }
 
     [Fact]

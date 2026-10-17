@@ -154,7 +154,7 @@ public sealed class DenmarkSocialAssistanceArticleTests
         var compareHtml = await RenderAsync<Compare>(catalog, "en",
             "/compare?country1=denmark&country2=germany&category=social-assistance");
         Assert.Contains("Social assistance in Denmark: benefits and how to apply", WebUtility.HtmlDecode(compareHtml));
-        Assert.Contains("href=\"/countries/denmark/categories/social-assistance\"", compareHtml);
+        Assert.Contains($"href=\"/countries/denmark/categories/social-assistance#entry-{ArticleId:N}\"", compareHtml);
     }
 
     [Fact]

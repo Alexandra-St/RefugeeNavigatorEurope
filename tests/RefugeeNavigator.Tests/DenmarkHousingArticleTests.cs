@@ -162,7 +162,7 @@ public sealed class DenmarkHousingArticleTests
         var compareHtml = await RenderAsync<Compare>(catalog, "en",
             "/compare?country1=denmark&country2=germany&category=housing");
         Assert.Contains("How to find housing in Denmark", WebUtility.HtmlDecode(compareHtml));
-        Assert.Contains("href=\"/countries/denmark/categories/housing\"", compareHtml);
+        Assert.Contains($"href=\"/countries/denmark/categories/housing#entry-{ArticleId:N}\"", compareHtml);
     }
 
     [Fact]

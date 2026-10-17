@@ -156,7 +156,7 @@ public sealed class DenmarkAfterProtectionArticleTests
         var compareHtml = await RenderAsync<Compare>(catalog, "en",
             "/compare?country1=denmark&country2=germany&category=temporary-protection");
         Assert.Contains("Residence options after temporary protection in Denmark", WebUtility.HtmlDecode(compareHtml));
-        Assert.Contains("href=\"/countries/denmark/categories/temporary-protection\"", compareHtml);
+        Assert.Contains($"href=\"/countries/denmark/categories/temporary-protection#entry-{ArticleId:N}\"", compareHtml);
     }
 
     [Fact]
@@ -266,7 +266,7 @@ public sealed class DenmarkAfterProtectionArticleTests
         var compareHtml = await RenderAsync<Compare>(catalog, "en",
             "/compare?country1=denmark&country2=germany&category=healthcare");
         Assert.Contains("How to access healthcare in Denmark", WebUtility.HtmlDecode(compareHtml));
-        Assert.Contains("href=\"/countries/denmark/categories/healthcare\"", compareHtml);
+        Assert.Contains($"href=\"/countries/denmark/categories/healthcare#entry-{HealthcareArticleId:N}\"", compareHtml);
     }
 
     [Fact]
