@@ -59,9 +59,14 @@ public sealed class ContentMaintenanceAuditor
                 issues.Add($"Comparison fact '{fact.TopicResourceKey}/{fact.AspectId}/{fact.CountrySlug}' references missing article ID '{fact.InformationEntryId}'.");
             }
 
-            if (!categoriesBySlug.ContainsKey(fact.CategorySlug))
+            var hasCategory = categoriesBySlug.TryGetValue(fact.CategorySlug, out var topicCategory);
+            if (!hasCategory)
             {
                 issues.Add($"Comparison topic '{fact.TopicResourceKey}' references missing category slug '{fact.CategorySlug}'.");
+            }
+            else if (hasArticle && article is not null && article.CategoryId != topicCategory!.Id)
+            {
+                issues.Add($"Comparison fact '{fact.TopicResourceKey}/{fact.AspectId}/{fact.CountrySlug}' has a category/article mismatch.");
             }
 
             var hasCountry = countriesBySlug.TryGetValue(fact.CountrySlug, out var country);

@@ -73,6 +73,29 @@ public sealed class ContentMaintenanceAuditTests
     }
 
     [Fact]
+    public void ComparisonFactWithExistingButDifferentArticleCategoryIsReported()
+    {
+        var country = new Country(Guid.NewGuid(), "Germany", "germany");
+        var employment = new InformationCategory(Guid.NewGuid(), "Employment", "employment");
+        var housing = new InformationCategory(Guid.NewGuid(), "Housing", "housing");
+        var housingArticle = new InformationEntry(Guid.NewGuid(), country.Id, housing.Id);
+        var fact = new ComparisonFactReference(
+            "Compare.Topic.Employment",
+            employment.Slug,
+            "work-rights",
+            country.Slug,
+            housingArticle.Id,
+            []);
+        var data = new ContentAuditData([country], [employment, housing], [housingArticle], [], [], [fact]);
+
+        var report = new ContentMaintenanceAuditor().CreateReport(data, AsOf);
+
+        Assert.Contains(report.RelationshipIssues, issue => issue.Contains("category/article mismatch", StringComparison.Ordinal));
+        Assert.DoesNotContain(report.RelationshipIssues, issue => issue.Contains("missing category slug", StringComparison.Ordinal));
+        Assert.DoesNotContain(report.RelationshipIssues, issue => issue.Contains("missing article ID", StringComparison.Ordinal));
+    }
+
+    [Fact]
     public void DuplicateUrlsAreGroupedWithoutMergingSourceIdsOrDates()
     {
         var data = CreateData(sourceDates: [AsOf.AddDays(-10), AsOf.AddDays(-100)], duplicateUrl: true);
