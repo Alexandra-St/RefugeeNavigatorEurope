@@ -1,0 +1,39 @@
+name: Content maintenance audit
+
+on:
+  schedule:
+    - cron: '17 8 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  content-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+      - name: Run content audit
+        shell: bash
+        run: |
+          set -o pipefail
+          report_path="$RUNNER_TEMP/content-maintenance-audit.md"
+          console_path="$RUNNER_TEMP/content-maintenance-audit-console.txt"
+          dotnet run --project tools/RefugeeNavigator.ContentAudit --configuration Release -- --output "$report_path" | tee "$console_path"
+          {
+            echo "## Content maintenance audit"
+            echo
+            echo "> Source age is an editorial scheduling signal, not confirmation of a content problem. This audit does not verify current legal accuracy or contact official websites."
+            echo
+            sed -n '1,6p' "$console_path"
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload Markdown report
+        uses: actions/upload-artifact@v4
+        with:
+          name: content-maintenance-audit
+          path: ${{ runner.temp }}/content-maintenance-audit.md
+          if-no-files-found: error
+          retention-days: 30

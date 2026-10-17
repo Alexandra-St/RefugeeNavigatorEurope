@@ -31,6 +31,14 @@ Options:
 - `--output PATH`: write the Markdown report to the specified path. When omitted, print it after the summary. The tool does not create a report in a production content directory automatically.
 - `--help`: show usage.
 
+## Weekly GitHub Actions report
+
+The **Content maintenance audit** workflow runs automatically every Monday at **08:17 UTC** from the default `main` branch. It can also be started from GitHub Actions with **Run workflow** (`workflow_dispatch`). A manual run uses the current UTC date; it does not test the scheduled trigger.
+
+Each successful run adds a concise summary to the workflow run's **Summary** tab and uploads the detailed Markdown report as the `content-maintenance-audit` artifact. Artifacts are retained for **30 days**. Download the artifact from the workflow run page. The workflow uses only checked-in catalog files and read-only repository permissions; it makes no requests to official websites and does not change repository data or statuses.
+
+The summary's review counts mean only that recorded `LastCheckedAt` dates fall into the configured age bands: 0–30 days recently checked, 31–90 days review suggested, and over 90 days review priority. These are scheduling signals, not confirmed content problems or statements about current legal accuracy. A run succeeds when the audit tool completes, even if sources are candidates for review; malformed or unreadable catalogs fail the workflow and retain diagnostic output in its logs. No partial report is uploaded as a successful audit.
+
 Thresholds must be non-negative and the review-suggested threshold must not be lower than the recently-checked threshold.
 
 ## Report fields
