@@ -14,7 +14,8 @@ public static class ComparisonFactLocalizationValidator
     private static readonly string[] InterfaceKeys =
     [
         "Compare.StructuredHeading", "Compare.DraftPreviewHeading", "Compare.DraftPreviewNotice",
-        "Compare.DraftStatus", "Compare.ApprovedEditorialStatus", "Compare.FactSources", "Compare.NotEstablishedInReviewedSources"
+        "Compare.DraftStatus", "Compare.ApprovedEditorialStatus", "Compare.FactSources",
+        "Compare.NotEstablishedInReviewedSources", "Compare.ReadFullArticles"
     ];
 
     public static void Validate(ComparisonFactCatalog catalog, Func<string, CultureInfo, string?> getString)

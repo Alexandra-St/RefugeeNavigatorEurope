@@ -34,18 +34,35 @@ public sealed class CountryComparisonTests
     });
 
     [Fact]
-    public async Task StructuredCatalogHasEightTopicsTwoOrderedAspectsAndLocalizedDraftFactsForEveryCountry()
+    public async Task StructuredCatalogHasEightTopicsThreeOrderedAspectsAndLocalizedDraftFactsForEveryCountry()
     {
         var catalog = await LoadCatalogAsync();
         var facts = await FactCatalog.Value;
         JsonComparisonFactProvider.Validate(facts, catalog);
 
         Assert.Equal(8, facts.Topics.Count);
-        Assert.Equal(16, facts.Topics.Sum(topic => topic.Aspects.Count));
-        Assert.Equal(48, facts.Topics.SelectMany(topic => topic.Aspects).Sum(aspect => aspect.Facts.Count));
+        Assert.Equal(24, facts.Topics.Sum(topic => topic.Aspects.Count));
+        Assert.Equal(24, facts.Topics.SelectMany(topic => topic.Aspects).Select(aspect => aspect.QuestionResourceKey).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(72, facts.Topics.SelectMany(topic => topic.Aspects).Sum(aspect => aspect.Facts.Count));
+        Assert.Equal(69, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.IsAvailable));
+        Assert.Equal(3, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => !fact.IsAvailable));
         Assert.Equal(24, catalog.InformationEntries.Count);
         Assert.Equal(72, catalog.InformationEntryTranslations.Count);
         Assert.All(catalog.InformationEntryTranslations, translation => Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus));
+        var unavailableFacts = facts.Topics.SelectMany(topic => topic.Aspects)
+            .SelectMany(aspect => aspect.Facts.Where(fact => !fact.IsAvailable)
+                .Select(fact => (aspect.Id, fact.CountrySlug, fact))).ToArray();
+        Assert.Equal(new[]
+        {
+            ("education-pupil-language", "germany"),
+            ("employment-assistance-conditions", "denmark"),
+            ("work-employer-duties", "germany")
+        }, unavailableFacts.Select(item => (item.Id, item.CountrySlug)).OrderBy(item => item.Id).ToArray());
+        foreach (var (_, _, fact) in unavailableFacts)
+        foreach (var language in new[] { "uk", "en", "ru" })
+        {
+            Assert.Equal(GetResource("Compare.NotEstablishedInReviewedSources", language), fact.Values[language]);
+        }
 
         foreach (var topic in facts.Topics)
         {
@@ -55,10 +72,17 @@ public sealed class CountryComparisonTests
             foreach (var fact in aspect.Facts)
             {
                 Assert.Equal(ComparisonFactStatus.Draft, fact.Status);
-                Assert.True(fact.IsAvailable);
                 Assert.All(new[] { "uk", "en", "ru" }, language => Assert.False(string.IsNullOrWhiteSpace(fact.Values.GetValueOrDefault(language))));
-                Assert.NotEmpty(fact.OfficialSourceIds);
-                Assert.All(fact.OfficialSourceIds, sourceId => Assert.Contains(catalog.OfficialSources, source => source.Id == sourceId && source.InformationEntryId == fact.InformationEntryId));
+                if (fact.IsAvailable)
+                {
+                    Assert.NotEmpty(fact.OfficialSourceIds);
+                    Assert.All(fact.OfficialSourceIds, sourceId => Assert.Contains(catalog.OfficialSources, source => source.Id == sourceId && source.InformationEntryId == fact.InformationEntryId));
+                }
+                else
+                {
+                    Assert.Empty(fact.OfficialSourceIds);
+                    Assert.Equal(GetResource("Compare.NotEstablishedInReviewedSources", "en"), fact.Values["en"]);
+                }
             }
         }
     }
@@ -96,6 +120,11 @@ public sealed class CountryComparisonTests
         Assert.Contains(GetResource("Compare.ReadDetails", "en"), productionHtml);
         Assert.Contains("class=\"source-details\"", productionHtml);
         Assert.Contains("href=\"/countries/germany/categories/employment#entry-", productionHtml);
+        Assert.DoesNotContain("class=\"full-article-comparison\"", productionHtml);
+        Assert.Matches("<details\\b[^>]*class=\"full-article-comparison\"[^>]*>", localHtml);
+        Assert.DoesNotMatch("<details\\b[^>]*class=\"full-article-comparison\"[^>]*\\bopen(?:\\s|>)", localHtml);
+        Assert.Contains("class=\"comparison-topic\"", localHtml);
+        Assert.Contains(GetResource("Compare.ReadFullArticles", "en"), localHtml);
     }
 
     [Fact]
@@ -143,17 +172,16 @@ public sealed class CountryComparisonTests
     [InlineData("uk")]
     [InlineData("en")]
     [InlineData("ru")]
-    public void EveryStructuredAspectAndPreviewLabelHasCompleteLocalization(string language)
+    public async Task EveryStructuredAspectAndPreviewLabelHasCompleteLocalization(string language)
     {
-        foreach (var aspectKey in new[]
-        {
-            "Compare.Aspect.TemporaryProtectionScheme", "Compare.Aspect.ResidenceRoutes",
-            "Compare.Aspect.JobSearch", "Compare.Aspect.WorkEligibility",
-            "Compare.Aspect.HealthcareBasis", "Compare.Aspect.HousingStart",
-            "Compare.Aspect.EducationRoute", "Compare.Aspect.SupportTypes", "Compare.Aspect.KeyPoint",
-            "Compare.StructuredHeading", "Compare.DraftPreviewHeading", "Compare.DraftPreviewNotice", "Compare.DraftStatus", "Compare.FactSources",
-            "Compare.ApprovedEditorialStatus", "Compare.NotEstablishedInReviewedSources"
-        })
+        var facts = await FactCatalog.Value;
+        var aspectKeys = facts.Topics.SelectMany(topic => topic.Aspects).Select(aspect => aspect.QuestionResourceKey)
+            .Concat(new[]
+            {
+                "Compare.StructuredHeading", "Compare.DraftPreviewHeading", "Compare.DraftPreviewNotice", "Compare.DraftStatus", "Compare.FactSources",
+                "Compare.ApprovedEditorialStatus", "Compare.NotEstablishedInReviewedSources", "Compare.ReadFullArticles"
+            }).Distinct(StringComparer.Ordinal);
+        foreach (var aspectKey in aspectKeys)
         {
             var value = GetResource(aspectKey, language);
             Assert.False(string.IsNullOrWhiteSpace(value), $"Missing {language} localization for {aspectKey}.");
@@ -230,6 +258,9 @@ public sealed class CountryComparisonTests
             Assert.Contains("selected", html);
             Assert.Contains(GetResource("Compare.ScopeNotice", language), visibleHtml);
             Assert.Contains(GetResource("Common.Disclaimer", language), visibleHtml);
+            Assert.Contains(GetResource("Compare.ReadFullArticles", language), visibleHtml);
+            Assert.Matches("<details\\b[^>]*class=\"full-article-comparison\"[^>]*>", html);
+            Assert.DoesNotMatch("<details\\b[^>]*class=\"full-article-comparison\"[^>]*\\bopen(?:\\s|>)", html);
             Assert.DoesNotContain("Compare.", visibleHtml);
             Assert.DoesNotContain("preview layout", visibleHtml, StringComparison.OrdinalIgnoreCase);
 
@@ -265,7 +296,20 @@ public sealed class CountryComparisonTests
                 {
                     var fact = Assert.Single(aspect.Facts, item => item.CountrySlug == countrySlug);
                     Assert.Equal(ComparisonFactStatus.Draft, fact.Status);
-                    Assert.Contains(fact.Values[language], visibleHtml);
+                    if (fact.IsAvailable)
+                    {
+                        Assert.Contains(fact.Values[language], visibleHtml);
+                        foreach (var sourceId in fact.OfficialSourceIds)
+                        {
+                            var source = Assert.Single(catalog.OfficialSources, item => item.Id == sourceId);
+                            Assert.Contains(source.Title, visibleHtml);
+                            Assert.Contains($"href=\"{WebUtility.HtmlEncode(source.Url.AbsoluteUri)}\" target=\"_blank\" rel=\"noopener noreferrer\"", html);
+                        }
+                    }
+                    else
+                    {
+                        Assert.Contains(GetResource("Compare.NotEstablishedInReviewedSources", language), visibleHtml);
+                    }
                     Assert.Contains(GetResource(aspect.QuestionResourceKey, language), visibleHtml);
                 }
             }

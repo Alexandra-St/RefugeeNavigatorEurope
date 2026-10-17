@@ -302,6 +302,29 @@ a:focus-visible {
     color: #263f66;
 }
 
+.full-article-comparison {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #d8e1ee;
+    border-radius: 0.85rem;
+    background: #fff;
+}
+
+.full-article-comparison > summary {
+    color: #155eef;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.full-article-comparison > summary:focus-visible {
+    outline: 3px solid #155eef;
+    outline-offset: 3px;
+}
+
+.full-article-comparison[open] > .comparison {
+    margin-top: 1rem;
+}
+
 .comparison {
     display: grid;
     grid-template-columns: minmax(0, 1fr);

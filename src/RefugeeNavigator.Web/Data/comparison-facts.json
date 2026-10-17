@@ -5,8 +5,58 @@
       "CategorySlug": "temporary-protection",
       "Aspects": [
         {
-          "Id": "temporary-protection-application-overview",
-          "QuestionResourceKey": "Compare.Aspect.TemporaryProtectionScheme",
+          "Id": "protection-scheme",
+          "QuestionResourceKey": "Compare.Aspect.ProtectionScheme",
+          "Facts": [
+            {
+              "CountrySlug": "denmark",
+              "InformationEntryId": "afc14824-4035-4ca7-9662-6d5352ba63cb",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "441b7bd9-54cf-47a8-80a1-e89a0e410952",
+                "6677f201-1246-417c-8d8f-56dc99c93b0f"
+              ],
+              "Values": {
+                "en": "Denmark uses its national Ukraine Special Act, not the EU Temporary Protection Directive. Protection in another EU country does not by itself establish eligibility in Denmark.",
+                "uk": "У Данії діє національний Спеціальний закон щодо України, а не Директива ЄС про тимчасовий захист. Захист в іншій країні ЄС сам собою не підтверджує відповідність данським умовам.",
+                "ru": "В Дании действует национальный Специальный закон об Украине, а не Директива ЕС о временной защите. Защита в другой стране ЕС сама по себе не подтверждает соответствие датским условиям."
+              }
+            },
+            {
+              "CountrySlug": "germany",
+              "InformationEntryId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "5c1ef33d-3718-571e-b629-04d45282c9c4"
+              ],
+              "Values": {
+                "en": "A residence permit under §24 AufenthG is the German route for a person granted EU temporary protection who declares willingness to be received in Germany. EU category conditions and exclusions apply.",
+                "uk": "Дозвіл за §24 AufenthG — німецький шлях для особи, якій надано тимчасовий захист ЄС і яка заявляє про готовність бути прийнятою в Німеччині. Діють умови категорій ЄС і винятки.",
+                "ru": "Разрешение по §24 AufenthG — немецкий путь для человека, которому предоставлена временная защита ЕС и который заявляет о готовности быть принятым в Германии. Действуют условия категорий ЕС и исключения."
+              }
+            },
+            {
+              "CountrySlug": "poland",
+              "InformationEntryId": "218207bd-2a85-59e1-a945-eedb0604392e",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "e4aa407d-df53-58ab-b10a-6fc2b22d91d3",
+                "7418e8ea-bc3d-561b-ba05-2f09ed29cdc0"
+              ],
+              "Values": {
+                "en": "PESEL UKR records Polish temporary-protection status. It is distinct from an ordinary residence permit or a CUKR card; UdSC stopped issuing the former protection certificates on 5 March 2026.",
+                "uk": "PESEL UKR фіксує статус тимчасового захисту в Польщі. Це не звичайний дозвіл на проживання і не картка CUKR; з 5 березня 2026 року UdSC припинило видавати колишні посвідчення захисту.",
+                "ru": "PESEL UKR фиксирует статус временной защиты в Польше. Это не обычное разрешение на проживание и не карта CUKR; с 5 марта 2026 года UdSC прекратило выдавать прежние свидетельства защиты."
+              }
+            }
+          ]
+        },
+        {
+          "Id": "protection-application",
+          "QuestionResourceKey": "Compare.Aspect.ProtectionApplication",
           "Facts": [
             {
               "CountrySlug": "denmark",
@@ -15,25 +65,12 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "486ee6fc-fc67-4d04-891b-acb967e5477b",
-                "9d53a568-07c9-4713-a5e8-1c4db5826a98",
-                "a17d9700-bcc4-4978-b9f8-0687c42ef038",
-                "141d8418-08af-4315-b5c2-ff34900b3369",
-                "65822ddc-ad39-4a32-89ee-140dfca11496",
-                "8a754763-dabb-4aee-ae13-415f5025e6ba",
-                "814a05cf-08c2-4f0d-b516-4ff3655f5b3c",
-                "886dfd95-7713-4c69-9b3f-a2d3be8ad323",
-                "9f908ed5-7fef-4075-a1e3-a1943669e3e6",
-                "654c059c-be25-4b0a-bc47-cd995a2b91ea",
-                "abf16498-621a-447c-9d72-9ec8efe9d99c",
-                "441b7bd9-54cf-47a8-80a1-e89a0e410952",
-                "6677f201-1246-417c-8d8f-56dc99c93b0f",
-                "f360d680-d215-4fdf-b419-d75a63ad68a8",
-                "8ad828b3-b58d-4716-aa57-cd16798bb31c"
+                "a17d9700-bcc4-4978-b9f8-0687c42ef038"
               ],
               "Values": {
-                "uk": "Спеціальний закон Данії щодо України — це національна схема тимчасового проживання з окремими критеріями та процедурою. У цьому матеріалі пояснено подання заяви, умовні права під час її розгляду, наступні кроки після схвалення та невирішену суперечність щодо офіційних дат продовження",
-                "en": "Denmark’s Ukraine Special Act is a national temporary-residence scheme with specific eligibility and application rules. This guide explains the application steps, conditional rights while waiting, practical steps after approval, and an unresolved conflict between official extension dates",
-                "ru": "Специальный закон Дании об Украине — это национальная схема временного проживания с отдельными критериями и процедурой. В статье объясняются подача заявления, условные права на время рассмотрения, практические шаги после одобрения и неурегулированное расхождение в официальных датах продления"
+                "en": "Apply to the Danish Immigration Service: section 1 applicants must be in Denmark and use SL1 (digital or paper). Qualifying section 2 family applications use SL2 and may be submitted in Denmark or abroad.",
+                "uk": "Заяву подають до Danish Immigration Service: заявники за §1 мають перебувати в Данії та використовують SL1 (онлайн або на папері). Для сімейних заяв за §2 за наявності відповідних підстав використовують SL2; їх можна подати в Данії або за кордоном.",
+                "ru": "Заявление подают в Danish Immigration Service: заявители по §1 должны находиться в Дании и используют SL1 (онлайн или на бумаге). Для семейных заявлений по §2 при наличии соответствующих оснований используют SL2; их можно подать в Дании или за рубежом."
               }
             },
             {
@@ -45,18 +82,12 @@
                 "5c1ef33d-3718-571e-b629-04d45282c9c4",
                 "e4bb8ae0-6e0a-573b-8ab9-c6ea8fffb30a",
                 "1d973c40-5d66-5b6a-ae13-78f667576a0a",
-                "44ce6030-635a-5dd4-bf37-b1729e464399",
-                "995812d6-001c-53e3-9067-d294940375a4",
-                "d817d9ac-37ce-5d8e-afe3-82bbf9e06058",
-                "fd4673e5-b187-5e24-9d17-c4dae465491a",
-                "a71ea73c-f2db-5545-81c8-1a4c5016c361",
-                "76e5e3d9-9248-5a85-9b9e-f699b314d4f8",
                 "8a620e3a-0f27-4ce4-8b16-47f8c022f171"
               ],
               "Values": {
-                "uk": "Розрізняйте тимчасове звільнення від вимоги мати німецький дозвіл, тимчасовий захист ЄС і дозвіл за §24; перевірте умови та строк саме свого документа.",
-                "en": "Distinguish the temporary exemption from holding a German residence title from EU temporary protection and a §24 permit; check the conditions and date that apply to your own document.",
-                "ru": "Различайте временное освобождение от требования иметь немецкое разрешение на проживание, временную защиту ЕС и разрешение по §24; проверьте условия и срок именно своего документа."
+                "en": "The competent Ausländerbehörde decides the §24 application. Follow its local registration and appointment or online instructions. The linked online service names a Brandenburg ministry; nationwide availability is not established.",
+                "uk": "Рішення за заявою на §24 ухвалює відповідна Ausländerbehörde. Дотримуйтеся її місцевих правил реєстрації, запису або онлайн-подання. У пов’язаному онлайн-сервісі вказане міністерство Бранденбургу; загальнонімецьку доступність не встановлено.",
+                "ru": "Решение по заявлению на §24 принимает соответствующая Ausländerbehörde. Следуйте её местным правилам регистрации, записи или онлайн-подачи. В связанном онлайн-сервисе указано министерство Бранденбурга; общегерманская доступность не установлена."
               }
             },
             {
@@ -66,27 +97,19 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "e4aa407d-df53-58ab-b10a-6fc2b22d91d3",
-                "0dfc274b-f02d-5acb-913e-51dee3c7fa24",
-                "433faca8-dcb6-59a1-8d32-5e38d16049b0",
-                "7418e8ea-bc3d-561b-ba05-2f09ed29cdc0",
-                "4eba2e3a-fa21-5803-929c-c39d0e19a7a2",
-                "0a989122-f3d4-5afd-a7ce-e10c4566cebe",
-                "d0fc2583-ea0d-5289-b9c7-de3e97417529",
-                "6a544d55-b307-5747-bddd-df1c57f678a6",
-                "5259d868-4cfb-5b58-97a5-a26975b7c283",
-                "66d98c8a-b567-5864-806b-120408bb3a93"
+                "0dfc274b-f02d-5acb-913e-51dee3c7fa24"
               ],
               "Values": {
-                "uk": "Після змін 5 березня 2026 року PESEL UKR є ключовим підтвердженням польського статусу тимчасового захисту. Перевірте, чи відповідаєте умовам, і зверніться до будь-якого органу ґміни.",
-                "en": "Since the changes of 5 March 2026, PESEL UKR is the key Polish record of temporary-protection status. Check the conditions and apply through a gmina office.",
-                "ru": "После изменений от 5 марта 2026 года PESEL UKR является основным подтверждением польского статуса временной защиты. Проверьте условия и обратитесь в орган гмины."
+                "en": "Apply in person for PESEL UKR at any gmina office within 30 days after crossing the Polish border. The service lists a form, photograph and identity document; children or missing documents require current local instructions.",
+                "uk": "Для отримання PESEL UKR зверніться особисто до будь-якого офісу gmina протягом 30 днів після перетину польського кордону. Сервіс указує заяву, фото й документ особи; для дітей або за відсутності документів уточніть чинну місцеву процедуру.",
+                "ru": "Для получения PESEL UKR обратитесь лично в любой офис gmina в течение 30 дней после пересечения польской границы. Сервис указывает заявление, фото и документ личности; для детей или при отсутствии документов уточните действующую местную процедуру."
               }
             }
           ]
         },
         {
-          "Id": "temporary-protection-application-opening-point",
-          "QuestionResourceKey": "Compare.Aspect.KeyPoint",
+          "Id": "protection-dates",
+          "QuestionResourceKey": "Compare.Aspect.ProtectionDates",
           "Facts": [
             {
               "CountrySlug": "denmark",
@@ -94,14 +117,14 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
+                "886dfd95-7713-4c69-9b3f-a2d3be8ad323",
                 "486ee6fc-fc67-4d04-891b-acb967e5477b",
-                "9d53a568-07c9-4713-a5e8-1c4db5826a98",
                 "a17d9700-bcc4-4978-b9f8-0687c42ef038"
               ],
               "Values": {
-                "uk": "Спеціальний закон Данії щодо України є національною схемою.",
-                "en": "Denmark’s Ukraine Special Act is a national scheme.",
-                "ru": "Специальный закон Дании об Украине — национальная схема."
+                "en": "BEK 828/2026 permits extension to 17 March 2028 unless §10 revocation grounds apply. The Immigration Service’s application/family pages still state 17 March 2027. This unresolved discrepancy does not determine an individual permit’s validity.",
+                "uk": "BEK 828/2026 допускає продовження до 17 березня 2028 року, якщо немає підстав для відкликання за §10. Сторінки Immigration Service для основних і сімейних заяв досі вказують 17 березня 2027 року. Ця невирішена розбіжність не визначає строк особистого дозволу.",
+                "ru": "BEK 828/2026 допускает продление до 17 марта 2028 года, если нет оснований для отзыва по §10. Страницы Immigration Service для основных и семейных заявлений всё ещё указывают 17 марта 2027 года. Это неразрешённое расхождение не определяет срок личного разрешения."
               }
             },
             {
@@ -110,14 +133,13 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "5c1ef33d-3718-571e-b629-04d45282c9c4",
-                "e4bb8ae0-6e0a-573b-8ab9-c6ea8fffb30a",
-                "1d973c40-5d66-5b6a-ae13-78f667576a0a"
+                "44ce6030-635a-5dd4-bf37-b1729e464399",
+                "995812d6-001c-53e3-9067-d294940375a4"
               ],
               "Values": {
-                "uk": "§24 Закону про перебування (AufenthG) — німецька підстава для видачі дозволу на проживання особі, якій надано тимчасовий захист ЄС і яка заявила про готовність бути прийнятою в Німеччині.",
-                "en": "Section 24 of the Residence Act (AufenthG) is the German route for issuing a residence permit to a person granted EU temporary protection who declares willingness to be received in Germany.",
-                "ru": "§24 Закона о пребывании (AufenthG) — немецкое основание для выдачи разрешения на проживание человеку, которому предоставлена временная защита ЕС и который заявил о готовности быть принятым в Германии."
+                "en": "EU temporary protection runs through 4 March 2028. UkraineAufenthFGV §2 separately continues specified §24 permits valid on 1 February 2026 through 4 March 2027, subject to its conditions. Neither general date establishes an individual permit or work right.",
+                "uk": "Тимчасовий захист ЄС діє до 4 березня 2028 року. Окремо §2 UkraineAufenthFGV продовжує визначені дозволи за §24, чинні 1 лютого 2026 року, до 4 березня 2027 року за встановлених умов. Жодна загальна дата не визначає особистий дозвіл чи право на роботу.",
+                "ru": "Временная защита ЕС действует до 4 марта 2028 года. Отдельно §2 UkraineAufenthFGV продлевает определённые разрешения по §24, действовавшие 1 февраля 2026 года, до 4 марта 2027 года при установленных условиях. Ни одна общая дата не определяет личное разрешение или право на работу."
               }
             },
             {
@@ -127,13 +149,14 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "e4aa407d-df53-58ab-b10a-6fc2b22d91d3",
-                "0dfc274b-f02d-5acb-913e-51dee3c7fa24",
-                "433faca8-dcb6-59a1-8d32-5e38d16049b0"
+                "7418e8ea-bc3d-561b-ba05-2f09ed29cdc0",
+                "0a989122-f3d4-5afd-a7ce-e10c4566cebe",
+                "d0fc2583-ea0d-5289-b9c7-de3e97417529"
               ],
               "Values": {
-                "uk": "Тимчасовий захист ЄС, польський статус тимчасового захисту, PESEL зі статусом UKR, раніше видана довідка про захист і карта побиту CUKR — різні правові поняття.",
-                "en": "EU temporary protection, Polish temporary-protection status, a PESEL number marked UKR, an older protection certificate and a CUKR residence card are different legal concepts.",
-                "ru": "Временная защита ЕС, польский статус временной защиты, PESEL со статусом UKR, ранее выданная справка о защите и карта побыту CUKR — разные правовые понятия."
+                "en": "EU protection extends through 4 March 2028; Article 106 links lawful stay of its defined group to that decision, subject to exclusions and ending events. Older certificates are separately stated valid through 4 March 2027 unless an earlier ending event applies. Do not infer personal document validity.",
+                "uk": "Захист ЄС продовжено до 4 березня 2028 року; стаття 106 пов’язує законність перебування визначеної групи з цим рішенням, з урахуванням виключень і підстав припинення. Для старих посвідчень окремо вказано строк до 4 березня 2027 року, якщо дія не припиниться раніше. Не робіть висновку про строк особистого документа.",
+                "ru": "Защита ЕС продлена до 4 марта 2028 года; статья 106 связывает законность пребывания определённой группы с этим решением с учётом исключений и оснований прекращения. Для старых свидетельств отдельно указан срок до 4 марта 2027 года, если действие не прекратится раньше. Не делайте вывода о сроке личного документа."
               }
             }
           ]
@@ -145,8 +168,8 @@
       "CategorySlug": "temporary-protection",
       "Aspects": [
         {
-          "Id": "residence-after-protection-overview",
-          "QuestionResourceKey": "Compare.Aspect.ResidenceRoutes",
+          "Id": "residence-routes",
+          "QuestionResourceKey": "Compare.Aspect.AlternativeRoutes",
           "Facts": [
             {
               "CountrySlug": "denmark",
@@ -154,17 +177,13 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "f947d1e6-c475-4676-844b-dff215001a87",
-                "826eb02a-ac4a-4d10-80d7-b32c4123dff7",
                 "4b278bd5-dcc7-4a9d-96eb-ecf20719d9d3",
-                "adac4bdc-17cb-459f-b675-b6581995c1f3",
-                "6dd24d38-f2a3-4703-b864-5caf4db2baef",
-                "5a726bd6-2169-4a65-9a43-a99d3ee8660e"
+                "adac4bdc-17cb-459f-b675-b6581995c1f3"
               ],
               "Values": {
-                "uk": "Дозвіл за Спеціальним законом Данії є тимчасовим. BEK nr. 828/2026 передбачає можливе продовження до 17 березня 2028 року, але сторінка Danish Immigration Service досі вказує 17 березня 2027 року. Ці офіційні повідомлення не узгоджені. Деякі схеми роботи й навчання мають окремі умови та строки.",
-                "en": "A permit under Denmark’s Special Act is temporary. BEK no. 828/2026 provides for possible extensions until 17 March 2028, while the Danish Immigration Service page still states 17 March 2027. These official statements have not been reconciled. Some work and education schemes have separate conditions and deadlines.",
-                "ru": "Разрешение по Специальному закону Дании является временным. BEK № 828/2026 предусматривает возможность продления до 17 марта 2028 года, тогда как на странице Danish Immigration Service по-прежнему указано 17 марта 2027 года. Эти официальные сведения не согласованы. У некоторых рабочих и учебных схем есть отдельные условия и сроки."
+                "en": "Labour Market Attachment and Educational Attachment are separate routes for holders of a valid Special Act permit. Each has its own conditions; employment or enrolment alone does not guarantee a new permit.",
+                "uk": "Labour Market Attachment та Educational Attachment — окремі шляхи для власників чинного дозволу за Спеціальним законом. Кожен має свої умови; сама робота чи зарахування не гарантує нового дозволу.",
+                "ru": "Labour Market Attachment и Educational Attachment — отдельные пути для обладателей действующего разрешения по Специальному закону. У каждого свои условия; сама работа или зачисление не гарантирует нового разрешения."
               }
             },
             {
@@ -173,21 +192,16 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "39880547-ed8d-5249-be8a-e499ca5db331",
                 "d63bb76a-22f4-5844-a12a-c79a74c70ad8",
                 "28b63a52-ee56-58e7-a2a9-c0731bb88547",
                 "52ae54a2-8722-5126-be29-2f0b21317e9a",
                 "6e58a584-7b8e-5eb3-8052-8c7a1c2298f1",
-                "6e93b253-17e8-52e1-b409-856eec6c93f7",
-                "b223d9dd-b2a0-5691-b86f-f7c1f768b6ac",
-                "474e9cf8-a42d-5e1c-a460-fdd7d8ff93ba",
-                "fefac5aa-e072-5beb-b725-266b562add44",
                 "d44b936e-4beb-517c-941d-6402745f304d"
               ],
               "Values": {
-                "uk": "Професійне навчання, вища освіта, визнання кваліфікації та кваліфікована робота мають різні вимоги; автоматичного переходу з §24 немає.",
-                "en": "Possible routes for training, study, recognition and qualified work have different requirements; none is an automatic conversion from §24.",
-                "ru": "У профессионального обучения, высшего образования, признания квалификации и квалифицированной работы разные требования; автоматического перехода с §24 нет."
+                "en": "Separate titles exist for vocational training (§16a), study (§16b), recognition measures (§16d) and qualified work (§§18a/18b AufenthG). Each requires its own qualifying purpose and evidence.",
+                "uk": "Існують окремі дозволи для професійного навчання (§16a), вищої освіти (§16b), заходів визнання (§16d) і кваліфікованої роботи (§§18a/18b AufenthG). Кожен вимагає відповідної мети й доказів.",
+                "ru": "Существуют отдельные разрешения для профессионального обучения (§16a), учёбы (§16b), мер признания (§16d) и квалифицированной работы (§§18a/18b AufenthG). Каждое требует соответствующей цели и доказательств."
               }
             },
             {
@@ -196,23 +210,19 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "41dea3fa-8ffc-5d2e-a476-aaf2cf07b109",
-                "50dddaa7-ff1f-5c77-b4f7-2cf1254adda6",
-                "599f4d31-e4d8-5ebf-82ed-149d5d677dd9",
-                "ddffc1ab-c2e0-5f7a-b89f-9fafb794e4b5",
-                "1cc08213-ec62-5f77-b688-89e3c7474a28"
+                "41dea3fa-8ffc-5d2e-a476-aaf2cf07b109"
               ],
               "Values": {
-                "uk": "Карта CUKR є окремим трирічним дозволом на тимчасове перебування з конкретними умовами. Інші дозволи оформлюються за загальними правилами; жоден перехід не є автоматичним.",
-                "en": "A CUKR card is a separate three-year temporary residence permit with specific conditions. Other permits follow their own rules; no change is automatic.",
-                "ru": "Карта CUKR — отдельный трёхлетний вид на временное пребывание с конкретными условиями. Другие разрешения оформляются по собственным правилам; автоматического перехода нет."
+                "en": "CUKR is a separate three-year temporary residence permit for a defined group with UKR status. It is not PESEL UKR itself and is not granted automatically.",
+                "uk": "CUKR — окремий трирічний дозвіл на тимчасове проживання для визначеної групи зі статусом UKR. Це не сам PESEL UKR; його не надають автоматично.",
+                "ru": "CUKR — отдельное трёхлетнее разрешение на временное проживание для определённой группы со статусом UKR. Это не сам PESEL UKR; его не предоставляют автоматически."
               }
             }
           ]
         },
         {
-          "Id": "residence-after-protection-opening-point",
-          "QuestionResourceKey": "Compare.Aspect.KeyPoint",
+          "Id": "residence-conditions",
+          "QuestionResourceKey": "Compare.Aspect.AlternativeConditions",
           "Facts": [
             {
               "CountrySlug": "denmark",
@@ -220,14 +230,12 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "f947d1e6-c475-4676-844b-dff215001a87",
-                "826eb02a-ac4a-4d10-80d7-b32c4123dff7",
                 "4b278bd5-dcc7-4a9d-96eb-ecf20719d9d3"
               ],
               "Values": {
-                "uk": "Дозвіл на проживання за Спеціальним законом Данії для людей, переміщених з України, є тимчасовим.",
-                "en": "A residence permit under Denmark’s Special Act for people displaced from Ukraine is temporary.",
-                "ru": "Разрешение на проживание по Специальному закону Дании для людей, перемещённых из Украины, является временным."
+                "en": "For Labour Market Attachment, conditions include two years of legal continuous work with the same employer without state/municipal wage subsidies, Danish-standard pay/terms and generally full-time work (industry exceptions apply). Self-employment is excluded; further conditions apply.",
+                "uk": "Для Labour Market Attachment потрібні, зокрема, два роки законної безперервної роботи в одного роботодавця без державних чи муніципальних субсидій зарплати, данські стандарти оплати й умов та, як правило, повна зайнятість (є галузеві винятки). Самозайнятість не підходить; діють додаткові умови.",
+                "ru": "Для Labour Market Attachment нужны, в частности, два года законной непрерывной работы у одного работодателя без государственных или муниципальных субсидий зарплаты, датские стандарты оплаты и условий и, как правило, полная занятость (есть отраслевые исключения). Самозанятость не подходит; действуют дополнительные условия."
               }
             },
             {
@@ -236,14 +244,15 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "39880547-ed8d-5249-be8a-e499ca5db331",
-                "d63bb76a-22f4-5844-a12a-c79a74c70ad8",
-                "28b63a52-ee56-58e7-a2a9-c0731bb88547"
+                "52ae54a2-8722-5126-be29-2f0b21317e9a",
+                "6e58a584-7b8e-5eb3-8052-8c7a1c2298f1",
+                "474e9cf8-a42d-5e1c-a460-fdd7d8ff93ba",
+                "fefac5aa-e072-5beb-b725-266b562add44"
               ],
               "Values": {
-                "uk": "Німецьке право передбачає окремі дозволи для професійного навчання (§16a), навчання у виші (§16b), заходів із визнання кваліфікації (§16d) і кваліфікованої роботи (§§18a/18b AufenthG).",
-                "en": "German law has separate residence titles for vocational training (§16a), university study (§16b), recognition measures (§16d) and qualified work (§§18a/18b AufenthG).",
-                "ru": "Немецкое право предусматривает отдельные разрешения для профессионального обучения (§16a), учёбы в вузе (§16b), мер по признанию квалификации (§16d) и квалифицированной работы (§§18a/18b AufenthG)."
+                "en": "The skilled-worker route requires a recognised or comparable qualification and a qualified job offer; regulated professions may require a licence. General requirements such as identity, livelihood and applicable visa rules also matter, with statutory exceptions.",
+                "uk": "Шлях кваліфікованого працівника вимагає визнаної або порівнянної кваліфікації та пропозиції кваліфікованої роботи; для регульованих професій може бути потрібен професійний дозвіл. Важливі також загальні вимоги щодо особи, забезпечення та візових правил, із законодавчими винятками.",
+                "ru": "Путь квалифицированного работника требует признанной или сопоставимой квалификации и предложения квалифицированной работы; для регулируемых профессий может требоваться профессиональное разрешение. Важны также общие требования к личности, обеспечению и визовым правилам с законодательными исключениями."
               }
             },
             {
@@ -252,14 +261,62 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "41dea3fa-8ffc-5d2e-a476-aaf2cf07b109",
-                "50dddaa7-ff1f-5c77-b4f7-2cf1254adda6",
-                "599f4d31-e4d8-5ebf-82ed-149d5d677dd9"
+                "41dea3fa-8ffc-5d2e-a476-aaf2cf07b109"
               ],
               "Values": {
-                "uk": "PESEL UKR підтверджує запис про тимчасовий захист у Польщі, а не дозвіл на тимчасове чи постійне перебування.",
-                "en": "PESEL UKR records temporary-protection status in Poland; it is not itself a temporary or permanent residence permit.",
-                "ru": "PESEL UKR фиксирует статус временной защиты в Польше, но сам по себе не является разрешением на временное или постоянное пребывание."
+                "en": "CUKR requires UKR status when applying and when the card is issued, UKR status on 4 June 2025, and at least 365 uninterrupted days with UKR status. Children born in Poland have separate conditions.",
+                "uk": "CUKR вимагає статусу UKR під час подання й видачі картки, статусу UKR на 4 червня 2025 року та щонайменше 365 безперервних днів зі статусом UKR. Для дітей, народжених у Польщі, діють окремі умови.",
+                "ru": "CUKR требует статуса UKR при подаче и выдаче карты, статуса UKR на 4 июня 2025 года и не менее 365 непрерывных дней со статусом UKR. Для детей, родившихся в Польше, действуют отдельные условия."
+              }
+            }
+          ]
+        },
+        {
+          "Id": "residence-filing",
+          "QuestionResourceKey": "Compare.Aspect.AlternativeFiling",
+          "Facts": [
+            {
+              "CountrySlug": "denmark",
+              "InformationEntryId": "2d106fd3-e981-4ef9-9733-568b654dfca5",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "4b278bd5-dcc7-4a9d-96eb-ecf20719d9d3",
+                "adac4bdc-17cb-459f-b675-b6581995c1f3"
+              ],
+              "Values": {
+                "en": "Apply to SIRI under Labour Market Attachment or Educational Attachment before the valid Special Act permit expires. Educational Attachment also requires enrolment evidence and an eligible institution/programme; applying does not guarantee approval.",
+                "uk": "Заяву до SIRI за Labour Market Attachment або Educational Attachment подають до закінчення чинного дозволу за Спеціальним законом. Educational Attachment також вимагає підтвердження зарахування та відповідного закладу й програми; подання не гарантує схвалення.",
+                "ru": "Заявление в SIRI по Labour Market Attachment или Educational Attachment подают до окончания действующего разрешения по Специальному закону. Educational Attachment также требует подтверждения зачисления и подходящего учреждения и программы; подача не гарантирует одобрения."
+              }
+            },
+            {
+              "CountrySlug": "germany",
+              "InformationEntryId": "33106e71-115f-5809-9066-7e3d3e5c57a3",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "6e93b253-17e8-52e1-b409-856eec6c93f7",
+                "b223d9dd-b2a0-5691-b86f-f7c1f768b6ac"
+              ],
+              "Values": {
+                "en": "A current §24 permit holder may apply for another title in Germany under §39(1) AufenthV; the Ausländerbehörde decides the substantive conditions. A timely filing before expiry generally continues the old title under §81(4); late filings do not automatically do so.",
+                "uk": "Власник чинного дозволу за §24 може подати на інший дозвіл у Німеччині за §39(1) AufenthV; відповідність умовам оцінює Ausländerbehörde. Своєчасне подання до закінчення дозволу, як правило, зберігає попередній дозвіл за §81(4); запізніле — не автоматично.",
+                "ru": "Обладатель действующего разрешения по §24 может подать на другое разрешение в Германии по §39(1) AufenthV; соответствие условиям оценивает Ausländerbehörde. Своевременная подача до окончания разрешения, как правило, сохраняет прежнее разрешение по §81(4); поздняя — не автоматически."
+              }
+            },
+            {
+              "CountrySlug": "poland",
+              "InformationEntryId": "c230d45f-9c76-5912-8c97-dc7d0689baa6",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "41dea3fa-8ffc-5d2e-a476-aaf2cf07b109"
+              ],
+              "Values": {
+                "en": "CUKR applications are submitted only online through MOS, until 4 March 2027. This deadline and procedure concern CUKR, not every residence route.",
+                "uk": "Заяви на CUKR подають лише онлайн через MOS до 4 березня 2027 року. Цей строк і процедура стосуються CUKR, а не всіх підстав проживання.",
+                "ru": "Заявления на CUKR подают только онлайн через MOS до 4 марта 2027 года. Этот срок и процедура относятся к CUKR, а не ко всем основаниям проживания."
               }
             }
           ]
@@ -271,8 +328,8 @@
       "CategorySlug": "employment",
       "Aspects": [
         {
-          "Id": "finding-employment-overview",
-          "QuestionResourceKey": "Compare.Aspect.JobSearch",
+          "Id": "employment-vacancies",
+          "QuestionResourceKey": "Compare.Aspect.Vacancies",
           "Facts": [
             {
               "CountrySlug": "denmark",
@@ -281,15 +338,12 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "fffe5fdb-0c81-47fc-9539-6bcc90949435",
-                "bb31ad0e-05cb-4e57-8164-c40d22e1d27f",
-                "b9577c82-6be2-4a73-a159-fcaa85968b8e",
-                "02b2ab33-206c-4853-91c7-88e8c25b84f1",
-                "d7b01181-5f06-4210-b86c-12ef9e7858e8"
+                "b9577c82-6be2-4a73-a159-fcaa85968b8e"
               ],
               "Values": {
-                "uk": "Workindenmark і Jobnet — офіційні ресурси для пошуку вакансій. Місцева влада також може допомагати з пошуком роботи.",
-                "en": "Workindenmark and Jobnet are official starting points for searching vacancies. Your municipality may also offer help with finding a job.",
-                "ru": "Workindenmark и Jobnet — официальные ресурсы для поиска вакансий. Муниципалитет также может помогать с поиском работы."
+                "en": "Search Workindenmark and Jobnet. Workindenmark lists jobs in English, but English alone is not sufficient for every job. Jobnet’s Find Job search can be used without logging in.",
+                "uk": "Шукайте на Workindenmark і Jobnet. Workindenmark публікує вакансії англійською, але не для кожної роботи достатньо лише англійської. Пошук Find Job на Jobnet доступний без входу.",
+                "ru": "Ищите на Workindenmark и Jobnet. Workindenmark публикует вакансии на английском, но не для каждой работы достаточно только английского. Поиск Find Job на Jobnet доступен без входа."
               }
             },
             {
@@ -298,22 +352,12 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "de3e9bbb-3c43-5954-b2da-1738363d13da",
-                "95d62fd8-28c0-5c91-8cbc-5ab7701693b3",
-                "95178c6b-4f5c-5062-8e4f-a69ce4fa45e3",
-                "2b2af3b4-ed71-5642-9161-7c57f359ea9a",
-                "e77a12f7-8f60-5e76-a485-99f0fc69be9f",
-                "d99613b7-b59a-5a93-a443-2d4d2eb48d14",
-                "2bd949c9-f82e-5a93-82c1-3a70bfd5b0e1",
-                "e81a7b98-a64e-5c68-9d31-cf8c53b26b69",
-                "d5cdfb62-8c92-5a38-b457-efdd6fbc3f3b",
-                "7b1f5206-fa2d-5bb4-b9bb-b0302a13636c",
-                "4b2fa396-cc3c-523e-85cf-a7b475e5b77a"
+                "de3e9bbb-3c43-5954-b2da-1738363d13da"
               ],
               "Values": {
-                "uk": "Практичні відправні точки для пошуку вакансій, консультацій, визнання кваліфікації та мовних курсів — і перевірки перед початком роботи.",
-                "en": "Practical starting points for vacancy search, advice, recognition and language courses, with checks to make before starting work.",
-                "ru": "Практические отправные точки для поиска вакансий, консультаций, признания квалификации и языковых курсов, а также проверки до начала работы."
+                "en": "Use the Federal Employment Agency (BA) job portal to search vacancies.",
+                "uk": "Для пошуку вакансій використовуйте портал Федерального агентства зайнятості (BA).",
+                "ru": "Для поиска вакансий используйте портал Федерального агентства занятости (BA)."
               }
             },
             {
@@ -322,23 +366,19 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "657597f7-ecb6-5b19-a33d-0ddb81b5eb2f",
-                "3736b420-8ed5-512c-bea4-db7096cbd752",
-                "178079f9-2746-5728-a86c-dc1877b2d3b8",
-                "13d6fe01-5dcf-5562-adb6-ae01d742db59",
-                "01816988-01e9-56ca-87ae-c7ada514ac97"
+                "657597f7-ecb6-5b19-a33d-0ddb81b5eb2f"
               ],
               "Values": {
-                "uk": "Почніть з державної бази ePraca та місцевого повітового управління праці. Доступ до окремих послуг залежить від реєстрації, статусу й місця проживання.",
-                "en": "Start with the public ePraca listings and your local powiat employment office. Access to particular services depends on registration, status and location.",
-                "ru": "Начните с государственной базы ePraca и местного повятового управления труда. Доступ к отдельным услугам зависит от регистрации, статуса и места проживания."
+                "en": "Use ePraca to search for vacancies, internships, work placements and job-related events or training.",
+                "uk": "Використовуйте ePraca для пошуку вакансій, стажувань, практики та заходів чи навчання, пов’язаних із роботою.",
+                "ru": "Используйте ePraca для поиска вакансий, стажировок, практики и связанных с работой мероприятий или обучения."
               }
             }
           ]
         },
         {
-          "Id": "finding-employment-opening-point",
-          "QuestionResourceKey": "Compare.Aspect.KeyPoint",
+          "Id": "employment-institutions",
+          "QuestionResourceKey": "Compare.Aspect.EmploymentHelp",
           "Facts": [
             {
               "CountrySlug": "denmark",
@@ -346,14 +386,13 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "fffe5fdb-0c81-47fc-9539-6bcc90949435",
                 "bb31ad0e-05cb-4e57-8164-c40d22e1d27f",
-                "b9577c82-6be2-4a73-a159-fcaa85968b8e"
+                "d7b01181-5f06-4210-b86c-12ef9e7858e8"
               ],
               "Values": {
-                "uk": "Шукати вакансії можна на порталі Workindenmark.",
-                "en": "You can search for vacancies on Workindenmark’s job portal.",
-                "ru": "Искать вакансии можно на портале Workindenmark."
+                "en": "Workindenmark offers guidance for international jobseekers. Your municipality may also help with finding work; ask it which services are available locally.",
+                "uk": "Workindenmark надає консультаційну інформацію міжнародним шукачам роботи. Муніципалітет також може допомагати з пошуком; уточніть доступні місцеві послуги.",
+                "ru": "Workindenmark предоставляет консультационную информацию международным соискателям. Муниципалитет также может помогать с поиском; уточните доступные местные услуги."
               }
             },
             {
@@ -362,14 +401,13 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "de3e9bbb-3c43-5954-b2da-1738363d13da",
                 "95d62fd8-28c0-5c91-8cbc-5ab7701693b3",
                 "95178c6b-4f5c-5062-8e4f-a69ce4fa45e3"
               ],
               "Values": {
-                "uk": "Вакансія чи пропозиція роботи самі по собі не дають дозволу працювати.",
-                "en": "A vacancy or job offer does not itself authorize work.",
-                "ru": "Вакансия или предложение работы сами по себе не дают разрешения работать."
+                "en": "The BA provides employment advice. A Jobcenter is a separate contact for cases assigned to it under the applicable benefit/integration route; a benefit decision identifies the responsible office.",
+                "uk": "BA надає консультації з працевлаштування. Jobcenter — окрема установа для справ, віднесених до неї відповідною системою допомоги та інтеграції; відповідальний орган указано в рішенні про допомогу.",
+                "ru": "BA предоставляет консультации по трудоустройству. Jobcenter — отдельное учреждение для дел, отнесённых к нему соответствующей системой помощи и интеграции; ответственный орган указан в решении о помощи."
               }
             },
             {
@@ -378,14 +416,60 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "657597f7-ecb6-5b19-a33d-0ddb81b5eb2f",
+                "178079f9-2746-5728-a86c-dc1877b2d3b8"
+              ],
+              "Values": {
+                "en": "Contact the local powiat employment office (PUP) about counselling, training or job matching. The available service and access conditions must be confirmed with that PUP.",
+                "uk": "Зверніться до місцевого повітового управління праці (PUP) щодо консультацій, навчання чи підбору роботи. Доступну послугу та умови доступу слід уточнити в цьому PUP.",
+                "ru": "Обратитесь в местное повятовое управление труда (PUP) по вопросам консультаций, обучения или подбора работы. Доступную услугу и условия доступа нужно уточнить в этом PUP."
+              }
+            }
+          ]
+        },
+        {
+          "Id": "employment-assistance-conditions",
+          "QuestionResourceKey": "Compare.Aspect.EmploymentHelpConditions",
+          "Facts": [
+            {
+              "CountrySlug": "denmark",
+              "InformationEntryId": "c2356631-3fa2-4553-8fda-50a4419262c0",
+              "Status": "Draft",
+              "IsAvailable": false,
+              "OfficialSourceIds": [],
+              "Values": {
+                "uk": "Не встановлено за перевіреними джерелами.",
+                "en": "Not established in the reviewed sources.",
+                "ru": "Не установлено по проверенным источникам."
+              }
+            },
+            {
+              "CountrySlug": "germany",
+              "InformationEntryId": "283d4519-21f5-5be2-a534-1bd2606d95fc",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "d5cdfb62-8c92-5a38-b457-efdd6fbc3f3b",
+                "7b1f5206-fa2d-5bb4-b9bb-b0302a13636c"
+              ],
+              "Values": {
+                "en": "Benefit-linked Jobcenter support depends on SGB II eligibility. §74 provides a specific route for certain §24 applicants with the corresponding Fiktionsbescheinigung after identity registration; it does not cover every pending applicant. Other SGB II conditions still apply.",
+                "uk": "Допомога Jobcenter, пов’язана з виплатами, залежить від відповідності SGB II. §74 передбачає окремий шлях для деяких заявників за §24 із відповідною Fiktionsbescheinigung після реєстрації особи; не для всіх, хто очікує рішення. Інші умови SGB II також діють.",
+                "ru": "Помощь Jobcenter, связанная с выплатами, зависит от соответствия SGB II. §74 предусматривает отдельный путь для некоторых заявителей по §24 с соответствующей Fiktionsbescheinigung после регистрации личности; не для всех ожидающих решения. Другие условия SGB II также действуют."
+              }
+            },
+            {
+              "CountrySlug": "poland",
+              "InformationEntryId": "a323701f-367e-52bb-9c33-45c4156a1350",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
                 "3736b420-8ed5-512c-bea4-db7096cbd752",
                 "178079f9-2746-5728-a86c-dc1877b2d3b8"
               ],
               "Values": {
-                "uk": "ePraca — державна база вакансій, стажувань і практик, яку веде Міністерство сім’ї, праці та соціальної політики.",
-                "en": "ePraca is the public job database run by the Ministry of Family, Labour and Social Policy.",
-                "ru": "ePraca — государственная база вакансий, стажировок и практики, которую ведёт Министерство семьи, труда и социальной политики."
+                "en": "PUP registration as unemployed or a jobseeker and access to each service depend on current rules and personal circumstances. The 2026 changes affected registration categories; ask the competent PUP for the applicable documents and conditions.",
+                "uk": "Реєстрація в PUP як безробітного чи шукача роботи та доступ до кожної послуги залежать від чинних правил і обставин. Зміни 2026 року торкнулися категорій реєстрації; уточніть документи й умови у відповідному PUP.",
+                "ru": "Регистрация в PUP как безработного или соискателя и доступ к каждой услуге зависят от действующих правил и обстоятельств. Изменения 2026 года затронули категории регистрации; уточните документы и условия в соответствующем PUP."
               }
             }
           ]
@@ -397,91 +481,8 @@
       "CategorySlug": "employment",
       "Aspects": [
         {
-          "Id": "work-authorization-overview",
-          "QuestionResourceKey": "Compare.Aspect.WorkEligibility",
-          "Facts": [
-            {
-              "CountrySlug": "denmark",
-              "InformationEntryId": "35da68f6-8880-40b2-9b3f-eb2b809b1caf",
-              "Status": "Draft",
-              "IsAvailable": true,
-              "OfficialSourceIds": [
-                "f2e34f85-8811-4450-a1f4-45a880dbaaad",
-                "b0ceabf9-2608-4748-86f7-e5e826eb6641",
-                "85d7ed90-62a3-48b0-aee5-7976c44c5012",
-                "4cf2b44c-07dd-4351-9d3d-18602fcf970b",
-                "abafedb3-bf19-472e-ae43-d43d5c3761fa",
-                "dba86bf3-3460-4cd0-86e4-98b355e15dba",
-                "75379722-6f2d-405b-b7da-9188d60b3997",
-                "7f24dcd2-d332-4152-89bd-07bc2d039366",
-                "661ee691-3e83-4200-8360-58a197cb81a4",
-                "6a719f9d-63de-46b2-8003-2c79ac1918e2",
-                "1160528c-9e87-43dc-bd0f-18390acd29f9",
-                "b52ee329-7d6e-4e49-aed5-895b47a955d4",
-                "25cfdf97-36ca-4f82-8b61-85089d022079",
-                "e0e8e3ec-169c-42c4-84d8-d91d2289e635",
-                "dd5b7430-e9ae-4f48-9e14-3a511ae5fc96",
-                "275fba1b-efd7-420a-bec3-1113f7e6fe06",
-                "739d5f08-3f8d-4401-891a-afdd2925e07a",
-                "ed17983b-14ab-41ca-8245-6a30fca26715",
-                "576e9eb9-065c-456f-bf70-156accf46632",
-                "2acf95dd-1fea-45bc-9478-fda84be4496d",
-                "1feb7af3-0519-4df5-aa59-921dce4e9c99",
-                "af30a450-90b8-468c-b786-daf7ec2201dc",
-                "6bc4eb0b-f663-4152-a2c7-c5698f07e1ac",
-                "c3880bf8-eccd-4ac3-8630-837e8a872758"
-              ],
-              "Values": {
-                "uk": "Огляд права на роботу за Спеціальним законом Данії про Україну та практичних питань щодо трудового договору, умов праці й звернення до данських органів. Право на роботу залежить від чинної підстави перебування та особистої ситуації.",
-                "en": "An overview of work authorization under Denmark’s Ukraine Special Act and practical points to check in an employment contract, at work and with the Danish authorities. The right to work depends on your current residence basis and personal situation.",
-                "ru": "Обзор права на работу по Специальному закону Дании об Украине и практических вопросов о трудовом договоре, условиях труда и обращении в датские органы. Право на работу зависит от действующего основания пребывания и личной ситуации."
-              }
-            },
-            {
-              "CountrySlug": "germany",
-              "InformationEntryId": "c4895b5a-eacd-53d7-a86f-f504dd615c76",
-              "Status": "Draft",
-              "IsAvailable": true,
-              "OfficialSourceIds": [
-                "cac1773b-211a-5b77-9f96-8056401b5902",
-                "dabe7e22-2c34-5c78-b0a2-3d29c9677d14",
-                "a8f6a845-d29b-57dd-b873-73fd15b498c8",
-                "34c3c683-96f7-590e-9198-30525217e021",
-                "4ca2698c-a15c-519c-8c8f-eb5153cc63e2",
-                "18ea85eb-9d66-54a8-a885-6b6ca86f31ae",
-                "1d9ec59d-0aed-5574-b70a-b9cbd54d45e8",
-                "90187a40-8161-540d-a1bf-785921e2f10a",
-                "840fb674-af15-5c0e-9509-4037ad4c9951"
-              ],
-              "Values": {
-                "uk": "Перевірте відмітку про роботу у своєму документі, основні правила оплати й робочого часу та способи отримати консультацію.",
-                "en": "Check the work entry in your own residence document, understand the basic pay and hours rules, and know where to seek advice.",
-                "ru": "Проверьте отметку о работе в своём документе, основные правила оплаты и рабочего времени и способы получить консультацию."
-              }
-            },
-            {
-              "CountrySlug": "poland",
-              "InformationEntryId": "7797d03c-6873-50cd-aef6-0d94a2f5fcab",
-              "Status": "Draft",
-              "IsAvailable": true,
-              "OfficialSourceIds": [
-                "cb8bb4e3-f65d-5a00-8b20-a541475a3050",
-                "b93d9eab-8905-5847-9c80-2a3cbc5eca73",
-                "f6bbb0ec-95d3-568c-9a80-c586ad5ff1b3",
-                "b9cb070e-e573-5ff1-9ac9-099f3208fedb",
-                "5d10ea5b-6963-54ea-b457-a8e95a5edeb7"
-              ],
-              "Values": {
-                "uk": "Право на роботу залежить від вашого законного перебування та застосовного режиму. Для громадян України роботодавець зазвичай має надіслати повідомлення до PUP у встановлений строк.",
-                "en": "Work eligibility depends on lawful stay and the applicable route. For Ukrainian citizens, an employer generally must notify the PUP within the statutory period.",
-                "ru": "Право на работу зависит от законного пребывания и применимого режима. Для граждан Украины работодатель обычно должен уведомить PUP в установленный срок."
-              }
-            }
-          ]
-        },
-        {
-          "Id": "work-authorization-opening-point",
-          "QuestionResourceKey": "Compare.Aspect.KeyPoint",
+          "Id": "work-permission",
+          "QuestionResourceKey": "Compare.Aspect.WorkPermission",
           "Facts": [
             {
               "CountrySlug": "denmark",
@@ -494,9 +495,9 @@
                 "85d7ed90-62a3-48b0-aee5-7976c44c5012"
               ],
               "Values": {
-                "uk": "Якщо вам надали дозвіл на проживання за Спеціальним законом Данії про Україну, Імміграційна служба Данії повідомляє, що ви маєте право працювати, поки цей дозвіл чинний.",
-                "en": "If you have been granted a residence permit under the Ukraine Special Act, the Danish Immigration Service says you are entitled to work while that permit is valid.",
-                "ru": "Если вам выдали вид на жительство по Специальному закону Дании об Украине, Иммиграционная служба Дании сообщает, что вы вправе работать, пока это разрешение действительно."
+                "en": "A valid Special Act permit allows work subject to its conditions. While waiting, work may begin after fingerprints and facial image are recorded, unless the applicant obviously cannot qualify under §1 or §2. If that exclusion is unclear, the agency says not to start before a decision.",
+                "uk": "Чинний дозвіл за Спеціальним законом дозволяє працювати за його умовами. Під час очікування працювати можна після зняття відбитків і зображення обличчя, крім випадку очевидної невідповідності §1 або §2. Якщо цей виняток неясний, відомство радить не починати до рішення.",
+                "ru": "Действующее разрешение по Специальному закону позволяет работать на его условиях. Во время ожидания работать можно после снятия отпечатков и изображения лица, кроме случая очевидного несоответствия §1 или §2. Если это исключение неясно, ведомство советует не начинать до решения."
               }
             },
             {
@@ -506,13 +507,12 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "cac1773b-211a-5b77-9f96-8056401b5902",
-                "dabe7e22-2c34-5c78-b0a2-3d29c9677d14",
-                "a8f6a845-d29b-57dd-b873-73fd15b498c8"
+                "dabe7e22-2c34-5c78-b0a2-3d29c9677d14"
               ],
               "Values": {
-                "uk": "Дозвіл на роботу пов’язаний із вашим правовим статусом і документом, а не лише з громадянством України чи поданням заяви про захист.",
-                "en": "Work permission is linked to your legal status and document, not simply to Ukrainian nationality or having applied for protection.",
-                "ru": "Разрешение работать связано с вашим правовым статусом и документом, а не только с гражданством Украины или подачей заявления о защите."
+                "en": "The residence title and supplementary sheet show work permission and restrictions under §4a AufenthG. In a pending case, check the Fiktionsbescheinigung and §81 conditions; an application or Ukrainian nationality alone does not establish permission.",
+                "uk": "Дозвіл на проживання й додатковий аркуш указують право на роботу та обмеження за §4a AufenthG. Під час розгляду перевіряйте Fiktionsbescheinigung та умови §81; сама заява чи українське громадянство не встановлює дозволу.",
+                "ru": "Разрешение на проживание и дополнительный лист указывают право на работу и ограничения по §4a AufenthG. Во время рассмотрения проверяйте Fiktionsbescheinigung и условия §81; само заявление или украинское гражданство не устанавливает разрешения."
               }
             },
             {
@@ -521,14 +521,107 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "cb8bb4e3-f65d-5a00-8b20-a541475a3050",
-                "b93d9eab-8905-5847-9c80-2a3cbc5eca73",
-                "f6bbb0ec-95d3-568c-9a80-c586ad5ff1b3"
+                "cb8bb4e3-f65d-5a00-8b20-a541475a3050"
               ],
               "Values": {
-                "uk": "Закон від 5 березня 2026 року змінив спеціальні правила допомоги, але право на роботу все одно залежить від законного перебування та конкретного статусу.",
-                "en": "The law taking effect on 5 March 2026 changed special assistance rules, but work eligibility still depends on lawful stay and the specific status.",
-                "ru": "Закон, вступивший в силу 5 марта 2026 года, изменил специальные правила помощи, но право на работу по-прежнему зависит от законного пребывания и конкретного статуса."
+                "en": "PIP says Ukrainian citizens with temporary protection have labour-market access. Lawful stay and the applicable status must be checked; other Ukrainian citizens require a separate check of their labour-market route.",
+                "uk": "За інформацією PIP, громадяни України з тимчасовим захистом мають доступ до ринку праці. Потрібно перевірити законність перебування й відповідний статус; для інших громадян України підставу доступу до праці перевіряють окремо.",
+                "ru": "По информации PIP, граждане Украины с временной защитой имеют доступ к рынку труда. Нужно проверить законность пребывания и соответствующий статус; для других граждан Украины основание доступа к труду проверяют отдельно."
+              }
+            }
+          ]
+        },
+        {
+          "Id": "work-employer-duties",
+          "QuestionResourceKey": "Compare.Aspect.EmployerDuties",
+          "Facts": [
+            {
+              "CountrySlug": "denmark",
+              "InformationEntryId": "35da68f6-8880-40b2-9b3f-eb2b809b1caf",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "4cf2b44c-07dd-4351-9d3d-18602fcf970b"
+              ],
+              "Values": {
+                "en": "Employers must check a foreign employee’s right to work against the actual permit conditions. A job offer or document from another country does not by itself authorize work in Denmark.",
+                "uk": "Роботодавець зобов’язаний перевірити право іноземного працівника на роботу за фактичними умовами дозволу. Пропозиція роботи чи документ з іншої країни самі собою не дозволяють працювати в Данії.",
+                "ru": "Работодатель обязан проверить право иностранного работника на работу по фактическим условиям разрешения. Предложение работы или документ из другой страны сами по себе не разрешают работать в Дании."
+              }
+            },
+            {
+              "CountrySlug": "germany",
+              "InformationEntryId": "c4895b5a-eacd-53d7-a86f-f504dd615c76",
+              "Status": "Draft",
+              "IsAvailable": false,
+              "OfficialSourceIds": [],
+              "Values": {
+                "uk": "Не встановлено за перевіреними джерелами.",
+                "en": "Not established in the reviewed sources.",
+                "ru": "Не установлено по проверенным источникам."
+              }
+            },
+            {
+              "CountrySlug": "poland",
+              "InformationEntryId": "7797d03c-6873-50cd-aef6-0d94a2f5fcab",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "cb8bb4e3-f65d-5a00-8b20-a541475a3050"
+              ],
+              "Values": {
+                "en": "For the temporary-protection route, the employer must notify PUP through praca.gov.pl within 7 days after work starts. The agreement must be written before work, with a copy for the worker and an understandable written version before signature if the worker does not know Polish.",
+                "uk": "За шляхом тимчасового захисту роботодавець має повідомити PUP через praca.gov.pl протягом 7 днів після початку роботи. Договір має бути письмовим до початку роботи, з копією для працівника та зрозумілою письмовою версією до підписання, якщо працівник не знає польської.",
+                "ru": "По пути временной защиты работодатель должен уведомить PUP через praca.gov.pl в течение 7 дней после начала работы. Договор должен быть письменным до начала работы, с копией для работника и понятной письменной версией до подписания, если работник не знает польского."
+              }
+            }
+          ]
+        },
+        {
+          "Id": "work-minimum-pay",
+          "QuestionResourceKey": "Compare.Aspect.MinimumPay",
+          "Facts": [
+            {
+              "CountrySlug": "denmark",
+              "InformationEntryId": "35da68f6-8880-40b2-9b3f-eb2b809b1caf",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "abafedb3-bf19-472e-ae43-d43d5c3761fa",
+                "dba86bf3-3460-4cd0-86e4-98b355e15dba"
+              ],
+              "Values": {
+                "en": "There is no statutory nationwide minimum wage. Pay is usually set by a collective agreement or individual negotiation; applicable rates and supplements vary by job and agreement.",
+                "uk": "Загальнодержавної законодавчо встановленої мінімальної зарплати немає. Оплату зазвичай визначає колективна угода або індивідуальні домовленості; ставки й доплати залежать від роботи та угоди.",
+                "ru": "Общегосударственной законодательно установленной минимальной зарплаты нет. Оплату обычно определяет коллективное соглашение или индивидуальные договорённости; ставки и доплаты зависят от работы и соглашения."
+              }
+            },
+            {
+              "CountrySlug": "germany",
+              "InformationEntryId": "c4895b5a-eacd-53d7-a86f-f504dd615c76",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "a8f6a845-d29b-57dd-b873-73fd15b498c8"
+              ],
+              "Values": {
+                "en": "The reviewed 2026 general minimum wage is €13.90 gross per hour from 1 January 2026. Statutory exceptions apply and a sector may set a higher floor; recheck the current amount before relying on it.",
+                "uk": "Перевірена загальна мінімальна оплата на 2026 рік — 13,90 євро брутто за годину з 1 січня 2026 року. Є законодавчі винятки, а галузь може встановлювати вищий мінімум; перед використанням перевірте актуальну суму.",
+                "ru": "Проверенная общая минимальная оплата на 2026 год — 13,90 евро брутто в час с 1 января 2026 года. Есть законодательные исключения, а отрасль может устанавливать более высокий минимум; перед использованием проверьте актуальную сумму."
+              }
+            },
+            {
+              "CountrySlug": "poland",
+              "InformationEntryId": "7797d03c-6873-50cd-aef6-0d94a2f5fcab",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "b93d9eab-8905-5847-9c80-2a3cbc5eca73"
+              ],
+              "Values": {
+                "en": "The 2026 national monthly minimum wage is PLN 4,806. Part-month work and some contract types follow separate rules; compare gross pay and applicable hours, not only take-home pay.",
+                "uk": "Загальнодержавна місячна мінімальна зарплата у 2026 році — 4 806 злотих. Для неповного місяця й деяких видів договорів діють окремі правила; порівнюйте брутто та відповідні години, а не лише суму на руки.",
+                "ru": "Общегосударственная месячная минимальная зарплата в 2026 году — 4 806 злотых. Для неполного месяца и некоторых видов договоров действуют отдельные правила; сравнивайте брутто и соответствующие часы, а не только сумму на руки."
               }
             }
           ]
@@ -540,8 +633,8 @@
       "CategorySlug": "healthcare",
       "Aspects": [
         {
-          "Id": "healthcare-overview",
-          "QuestionResourceKey": "Compare.Aspect.HealthcareBasis",
+          "Id": "healthcare-access",
+          "QuestionResourceKey": "Compare.Aspect.HealthAccess",
           "Facts": [
             {
               "CountrySlug": "denmark",
@@ -551,18 +644,12 @@
               "OfficialSourceIds": [
                 "d3520d2c-2fc2-4cdf-89dc-eb192aa9b64a",
                 "0163c42d-cc40-4f65-b06e-6535d23ea740",
-                "a5a8c70c-8fff-4261-b4a5-21550677af83",
-                "0722a950-46c0-4a64-bcd9-166f2024a805",
-                "0fb3c1da-0eb0-45ea-be5b-fa11f8fc2b7d",
-                "0f49ae88-21f1-478b-8c88-36f459088a6e",
-                "1b63eb37-84ce-46c2-a6aa-51405800bc02",
-                "b59c0064-9d1e-4e6c-8e8a-a37f7007e88d",
                 "5b9eaffd-59e9-4d59-9280-8abb5af7ef02"
               ],
               "Values": {
-                "uk": "Для людей, які живуть у Данії за дозволом на проживання відповідно до Спеціального закону про Україну, цей матеріал пояснює роль реєстрації в CPR і жовтої картки, звернення до сімейного лікаря, отримання невідкладної допомоги, а також можливі витрати й умови надання усного перекладу.",
-                "en": "For people living in Denmark under a residence permit from the Ukraine Special Act, this guide explains the roles of CPR registration and the yellow health card, how to contact a GP, where to seek urgent help, and when costs or interpretation rules may apply.",
-                "ru": "Для людей, проживающих в Дании по разрешению на проживание согласно Специальному закону об Украине, этот материал объясняет роль регистрации в CPR и жёлтой медицинской карточки, обращение к семейному врачу, получение срочной помощи, а также возможные расходы и условия предоставления устного перевода."
+                "en": "For Special Act permit holders, the Ministry describes Health Act access once CPR registration and the yellow card are in place. This does not cover pending applicants, and not every healthcare service is free.",
+                "uk": "Для власників дозволу за Спеціальним законом міністерство описує доступ за Законом про охорону здоров’я після реєстрації CPR і видачі жовтої картки. Це не описує заявників, які очікують рішення; не всі медичні послуги безоплатні.",
+                "ru": "Для обладателей разрешения по Специальному закону министерство описывает доступ по Закону о здравоохранении после регистрации CPR и выдачи жёлтой карты. Это не описывает заявителей, ожидающих решения; не все медицинские услуги бесплатны."
               }
             },
             {
@@ -571,23 +658,14 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "2c177ebd-53e0-5641-8bae-6f08f1df20de",
-                "8e121eb3-d156-53b9-a76f-283f35e83d43",
-                "e273f820-0f99-5003-95ce-ff3b110a6b44",
-                "41b9dbd1-241b-5c36-9a58-728a98b5ca85",
-                "45a3c454-6c68-58bf-ae29-6016670c392b",
-                "d77b1eaf-1396-5dfe-ac10-6f148d43cbeb",
                 "c4de5dcd-311c-541f-8444-8829c5be3923",
-                "3c4d43bd-86d6-5352-9aa2-7e3fd2a57593",
                 "79f1bd04-1d45-5170-9f54-ccdf448a8a74",
-                "ec0c23f7-1858-5025-8c5d-67200f6e5d8a",
-                "2b09bea9-3062-540d-83b4-0148f8eebd39",
-                "3907f0eb-870f-51ad-9407-f5cf6bb34598"
+                "ec0c23f7-1858-5025-8c5d-67200f6e5d8a"
               ],
               "Values": {
-                "uk": "З’ясуйте, яка установа та підтвердження покриття застосовуються до вашої ситуації, і використовуйте відповідний маршрут для звичайної, невідкладної чи екстреної допомоги.",
-                "en": "Identify the institution and proof of coverage for your case, then use the right routine, urgent or emergency care route.",
-                "ru": "Уточните, какое учреждение и подтверждение покрытия применяются в вашей ситуации, и выберите маршрут для обычной, срочной или экстренной помощи."
+                "en": "SGB V covers specified insured groups, including certain employees and qualifying SGB II recipients. AsylbLG §§4 and 6 provide a separate, conditional benefits route. A §24 permit alone does not determine coverage or its scope.",
+                "uk": "SGB V охоплює визначені застраховані групи, зокрема деяких працівників та отримувачів відповідних виплат SGB II. §§4 і 6 AsylbLG передбачають окремий умовний шлях допомоги. Сам дозвіл за §24 не визначає покриття чи його обсяг.",
+                "ru": "SGB V охватывает определённые застрахованные группы, в том числе некоторых работников и получателей соответствующих выплат SGB II. §§4 и 6 AsylbLG предусматривают отдельный условный путь помощи. Само разрешение по §24 не определяет покрытие или его объём."
               }
             },
             {
@@ -597,21 +675,19 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "6dbd3c8d-ac7f-5211-8609-eea9edfecbce",
-                "7813be17-01bf-5f2a-86aa-ac013ea36b81",
-                "07c5096b-5adf-5883-ad09-a6986794cbc7",
                 "10831751-821e-5615-993d-d0b29f693361"
               ],
               "Values": {
-                "uk": "Після 5 березня 2026 року право на допомогу NFZ залежить від страхового статусу або визначеної категорії тимчасового захисту. Перевірте покриття до планового лікування.",
-                "en": "Since 5 March 2026, NFZ care depends on insurance status or a defined temporary-protection category. Check your coverage before routine treatment.",
-                "ru": "С 5 марта 2026 года доступ к помощи NFZ зависит от страхового статуса или конкретной категории временной защиты. Перед плановым лечением проверьте покрытие."
+                "en": "From 5 March 2026, limited free care under the PESEL UKR protection route covers specified groups: under-18s, pregnancy/postnatal cases, torture or rape survivors, or holders of a collective-accommodation certificate. It does not cover every public service; insurance may provide another route.",
+                "uk": "З 5 березня 2026 року обмежена безоплатна допомога за шляхом захисту з PESEL UKR охоплює визначені групи: осіб до 18 років, вагітних і в післяпологовому періоді, постраждалих від катувань чи зґвалтування або власників довідки про колективне розміщення. Це не всі публічні послуги; інший шлях може давати страхування.",
+                "ru": "С 5 марта 2026 года ограниченная бесплатная помощь по пути защиты с PESEL UKR охватывает определённые группы: лиц до 18 лет, беременных и в послеродовом периоде, пострадавших от пыток или изнасилования либо обладателей справки о коллективном размещении. Это не все публичные услуги; другой путь может давать страхование."
               }
             }
           ]
         },
         {
-          "Id": "healthcare-opening-point",
-          "QuestionResourceKey": "Compare.Aspect.KeyPoint",
+          "Id": "healthcare-proof",
+          "QuestionResourceKey": "Compare.Aspect.HealthProof",
           "Facts": [
             {
               "CountrySlug": "denmark",
@@ -619,14 +695,13 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "d3520d2c-2fc2-4cdf-89dc-eb192aa9b64a",
                 "0163c42d-cc40-4f65-b06e-6535d23ea740",
-                "a5a8c70c-8fff-4261-b4a5-21550677af83"
+                "0fb3c1da-0eb0-45ea-be5b-fa11f8fc2b7d"
               ],
               "Values": {
-                "uk": "Для людей, яким надали дозвіл на проживання відповідно до Спеціального закону Данії про Україну, Міністерство внутрішніх справ і охорони здоров’я зазначає: доступ до всіх послуг за Законом про охорону здоров’я надається, якщо людина зареєстрована в CPR і їй видали жовту медичну картку.",
-                "en": "For people granted a residence permit under Denmark’s Ukraine Special Act, the Ministry of the Interior and Health says access to all services under the Health Act applies when the person is registered in CPR and has been issued the yellow health card.",
-                "ru": "Для людей, получивших разрешение на проживание согласно Специальному закону Дании об Украине, Министерство внутренних дел и здравоохранения указывает: доступ ко всем услугам по Закону о здравоохранении предоставляется, если человек зарегистрирован в CPR и ему выдали жёлтую медицинскую карточку."
+                "en": "The yellow health card documents coverage and lists the CPR number and GP contact details. A residence permit, CPR registration and the card are separate records; contact municipal Borgerservice if registration or coverage is unclear.",
+                "uk": "Жовта медична картка підтверджує покриття та містить номер CPR і контакти сімейного лікаря. Дозвіл на проживання, реєстрація CPR і картка — різні записи; якщо реєстрація чи покриття неясні, зверніться до муніципальної Borgerservice.",
+                "ru": "Жёлтая медицинская карта подтверждает покрытие и содержит номер CPR и контакты семейного врача. Разрешение на проживание, регистрация CPR и карта — разные записи; если регистрация или покрытие неясны, обратитесь в муниципальную Borgerservice."
               }
             },
             {
@@ -640,9 +715,9 @@
                 "e273f820-0f99-5003-95ce-ff3b110a6b44"
               ],
               "Values": {
-                "uk": "Для людей, які виїхали з України, немає одного маршруту медичного покриття.",
-                "en": "There is no single health-cover route for everyone displaced from Ukraine.",
-                "ru": "Для людей, выехавших из Украины, нет единого маршрута медицинского покрытия."
+                "en": "Use the insurer’s card/proof of coverage or the treatment certificate/local health-card procedure issued by the responsible benefits authority. Without a card, ask that insurer or authority for proof; the procedure differs by scheme and locality.",
+                "uk": "Використовуйте картку чи підтвердження страховика або талон на лікування чи місцеву медичну картку від відповідального органу допомоги. Якщо картки немає, запросіть підтвердження у страховика чи органу; процедура залежить від системи й місцевості.",
+                "ru": "Используйте карту или подтверждение страховщика либо талон на лечение или местную медицинскую карту от ответственного органа помощи. Если карты нет, запросите подтверждение у страховщика или органа; процедура зависит от системы и местности."
               }
             },
             {
@@ -651,14 +726,61 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "6dbd3c8d-ac7f-5211-8609-eea9edfecbce",
-                "7813be17-01bf-5f2a-86aa-ac013ea36b81",
-                "07c5096b-5adf-5883-ad09-a6986794cbc7"
+                "6dbd3c8d-ac7f-5211-8609-eea9edfecbce"
               ],
               "Values": {
-                "uk": "З 5 березня 2026 року колишні спеціальні правила медичної допомоги змінилися.",
-                "en": "From 5 March 2026, the former special healthcare rules changed.",
-                "ru": "С 5 марта 2026 года прежние специальные правила медицинской помощи изменились."
+                "en": "Full insurance coverage may follow a qualifying employment contract, registered unemployment or lawful business activity. Other bases and exceptions depend on status and law; PESEL UKR alone does not establish the same coverage for everyone.",
+                "uk": "Повне страхове покриття може випливати з відповідного трудового договору, реєстрації безробітним чи законної підприємницької діяльності. Інші підстави й винятки залежать від статусу та закону; сам PESEL UKR не встановлює однакового покриття для всіх.",
+                "ru": "Полное страховое покрытие может следовать из соответствующего трудового договора, регистрации безработным или законной предпринимательской деятельности. Другие основания и исключения зависят от статуса и закона; сам PESEL UKR не устанавливает одинакового покрытия для всех."
+              }
+            }
+          ]
+        },
+        {
+          "Id": "healthcare-urgent",
+          "QuestionResourceKey": "Compare.Aspect.UrgentCare",
+          "Facts": [
+            {
+              "CountrySlug": "denmark",
+              "InformationEntryId": "b1e4aed1-bbaf-4f09-9468-74000bf96430",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "1b63eb37-84ce-46c2-a6aa-51405800bc02"
+              ],
+              "Values": {
+                "en": "Call 112 for life-threatening illness or injury. For urgent problems that cannot wait outside GP hours, use your region’s out-of-hours service; numbers and call-before-arrival arrangements vary by region.",
+                "uk": "За загрози життю через хворобу чи травму телефонуйте 112. Для термінових проблем поза годинами сімейного лікаря, що не можуть чекати, звертайтеся до регіональної чергової служби; номери й правила дзвінка перед приїздом різняться за регіоном.",
+                "ru": "При угрозе жизни из-за болезни или травмы звоните 112. Для срочных проблем вне часов семейного врача, которые не могут ждать, обращайтесь в региональную дежурную службу; номера и правила звонка перед приездом различаются по регионам."
+              }
+            },
+            {
+              "CountrySlug": "germany",
+              "InformationEntryId": "895b79b4-ce0d-5bee-9919-42ce3d76ecdb",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "41b9dbd1-241b-5c36-9a58-728a98b5ca85",
+                "45a3c454-6c68-58bf-ae29-6016670c392b"
+              ],
+              "Values": {
+                "en": "Call 112 for a life-threatening emergency. For urgent non-life-threatening problems outside practice hours, 116117 directs callers to on-call care; its telephone service is in German and language support varies.",
+                "uk": "За загрози життю телефонуйте 112. Для термінових, але не загрозливих для життя проблем поза годинами практики 116117 направляє до чергової допомоги; телефонна служба працює німецькою, мовна підтримка різниться.",
+                "ru": "При угрозе жизни звоните 112. При срочных, но не угрожающих жизни проблемах вне часов практики 116117 направляет к дежурной помощи; телефонная служба работает на немецком, языковая поддержка различается."
+              }
+            },
+            {
+              "CountrySlug": "poland",
+              "InformationEntryId": "d7e0716b-154d-5db3-8790-f73684c07271",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "7813be17-01bf-5f2a-86aa-ac013ea36b81"
+              ],
+              "Values": {
+                "en": "Call 112 or 999 for an immediate threat to life. For an urgent problem outside POZ hours, contact the nearest night and holiday healthcare point (NiŚOZ); emergency and routine care routes are different.",
+                "uk": "За безпосередньої загрози життю телефонуйте 112 або 999. Для термінової проблеми поза годинами POZ зверніться до найближчого пункту нічної та святкової допомоги (NiŚOZ); екстрена й планова допомога мають різні шляхи.",
+                "ru": "При непосредственной угрозе жизни звоните 112 или 999. При срочной проблеме вне часов POZ обратитесь в ближайший пункт ночной и праздничной помощи (NiŚOZ); экстренная и плановая помощь имеют разные пути."
               }
             }
           ]
@@ -670,8 +792,8 @@
       "CategorySlug": "housing",
       "Aspects": [
         {
-          "Id": "housing-overview",
-          "QuestionResourceKey": "Compare.Aspect.HousingStart",
+          "Id": "housing-initial",
+          "QuestionResourceKey": "Compare.Aspect.InitialAccommodation",
           "Facts": [
             {
               "CountrySlug": "denmark",
@@ -680,22 +802,13 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "34c74f84-af39-4c58-a0f2-2926fae5ec1f",
-                "0a955d26-d79c-4ba1-8b6b-a69928d0fd8a",
-                "9372a0e8-baad-406b-a24f-65f7071ae06c",
-                "0ec1125f-052a-4107-8325-f19fbe5a46d5",
-                "771e221f-dbe5-423b-995c-196ef247f361",
-                "ee40a28c-8be0-4471-8336-aab8ce453f0d",
-                "4d779e3b-6659-417c-91ab-6e2dcacd9c05",
-                "d01f8540-b9bc-4747-a6ea-ef2441c95691",
-                "ce1d50d7-9177-4e11-ada4-7475053a7c2f",
-                "31395a56-aa01-4b2f-95d9-4d86ed4d9724",
-                "69e80782-f977-42b7-8357-cbd310269bed",
-                "a7ca1cb5-899b-48d4-a333-e0df7a4573a6"
+                "a7ca1cb5-899b-48d4-a333-e0df7a4573a6",
+                "0ec1125f-052a-4107-8325-f19fbe5a46d5"
               ],
               "Values": {
-                "uk": "Практичний огляд варіантів житла в Данії: чим відрізняються ситуації заявників, які очікують на рішення, та людей із дозволом за Спеціальним законом про Україну, як шукати оренду й де уточнювати доступну підтримку.",
-                "en": "Practical housing navigation in Denmark, including the difference between people awaiting a decision and permit holders, ways to search for a rental, and where to check available support.",
-                "ru": "Практическая информация о жилье в Дании: чем отличаются ситуации заявителей, ожидающих решения, и людей с разрешением по Специальному закону об Украине, как искать жильё в аренду и где уточнять доступную поддержку."
+                "en": "Pending Special Act applicants may stay in an asylum centre, but need not. Where §12 applies, the municipality must designate temporary accommodation or may instead designate housing. Special Act §2(1) permits are excluded by Integration Act §57(5), unless the Immigration Service decides otherwise for very special personal circumstances. SIRI’s broader FAQ omits this exception; other municipal responsibilities are separate.",
+                "uk": "Заявники за Спеціальним законом можуть жити в центрі притулку, але не зобов’язані. Коли діє §12, муніципалітет має визначити тимчасове розміщення або може натомість визначити житло. Дозволи за §2(1) Спеціального закону виключені §57(5) Закону про інтеграцію, якщо Immigration Service не вирішить інакше через дуже особливі особисті обставини. Ширше FAQ SIRI не згадує цей виняток; інші муніципальні обов’язки є окремим питанням.",
+                "ru": "Заявители по Специальному закону могут жить в центре убежища, но не обязаны. Когда действует §12, муниципалитет обязан определить временное размещение или может вместо него определить жильё. Разрешения по §2(1) Специального закона исключены §57(5) Закона об интеграции, если Immigration Service не решит иначе из-за особо исключительных личных обстоятельств. Более широкое FAQ SIRI не упоминает это исключение; другие муниципальные обязанности — отдельный вопрос."
               }
             },
             {
@@ -705,19 +818,12 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "74aadb89-3efe-5bec-bc79-28d2a097de27",
-                "6f604127-6636-5674-b7a7-fdaa20a379dc",
-                "56f0308c-e82d-5c06-a492-ffcbbe820325",
-                "ceab5bb5-83bf-5ae8-9020-a031e67383c1",
-                "01fd1631-d7da-5154-9883-79acf42b8b01",
-                "a13af5dd-d701-56cc-bcaf-82292c6b91d7",
-                "469e84d9-6769-5fa1-8137-dea153b2f2c6",
-                "ec4a811e-06af-5ed2-9a45-20ec6f17c0bb",
-                "39e9b8cf-22f8-5a51-9bd2-b57f13cc67e7"
+                "6f604127-6636-5674-b7a7-fdaa20a379dc"
               ],
               "Values": {
-                "uk": "Як діяти щодо первинного розміщення, приватної оренди, допомоги з житловими витратами та реєстрації адреси, не припускаючи автоматичного права.",
-                "en": "How to approach initial accommodation, private renting, housing-cost support and address registration without assuming a local entitlement.",
-                "ru": "Как действовать при первичном размещении, частной аренде, помощи с расходами на жильё и регистрации адреса, не предполагая автоматическое право на поддержку."
+                "en": "Initial reception and temporary accommodation follow Land and municipal reception/allocation routes. The route depends on location and the person’s situation; it does not guarantee a particular dwelling.",
+                "uk": "Первинний прийом і тимчасове розміщення відбуваються через системи федеральної землі та муніципалітету. Шлях залежить від місця й обставин людини; конкретне житло не гарантується.",
+                "ru": "Первичный приём и временное размещение проходят через системы федеральной земли и муниципалитета. Путь зависит от места и обстоятельств человека; конкретное жильё не гарантируется."
               }
             },
             {
@@ -726,23 +832,19 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "defe4b60-7464-524e-90f6-9f23a0ec5464",
-                "768aa9b7-06de-5926-9235-69fb3e537b8b",
-                "09cc8513-104c-5ced-b017-b64cf0e3ee9c",
-                "80348417-6bc3-5c3b-90ec-f5a75b9092cd",
-                "a5ebb19b-f5d4-5e72-9107-5e4f84445286"
+                "80348417-6bc3-5c3b-90ec-f5a75b9092cd"
               ],
               "Values": {
-                "uk": "Можливості тимчасового розміщення та підтримки залежать від категорії, місця й наявного фінансування. Приватна оренда оформлюється окремо; перевіряйте договір і місцеву допомогу.",
-                "en": "Temporary accommodation and support depend on the group, location and available funding. Private renting is separate; check the agreement and local assistance.",
-                "ru": "Временное размещение и поддержка зависят от категории, места и доступного финансирования. Частная аренда оформляется отдельно; проверьте договор и местную помощь."
+                "en": "The 2026 rules provide short-term crisis support and a separate accommodation route for defined vulnerable groups. Statutory conditions, funding and local implementation apply; PESEL UKR does not guarantee a place for everyone.",
+                "uk": "Правила 2026 року передбачають короткострокову кризову підтримку й окремий шлях розміщення для визначених вразливих груп. Діють законодавчі умови, фінансування й місцева реалізація; PESEL UKR не гарантує місце кожному.",
+                "ru": "Правила 2026 года предусматривают краткосрочную кризисную поддержку и отдельный путь размещения для определённых уязвимых групп. Действуют законодательные условия, финансирование и местная реализация; PESEL UKR не гарантирует место каждому."
               }
             }
           ]
         },
         {
-          "Id": "housing-opening-point",
-          "QuestionResourceKey": "Compare.Aspect.KeyPoint",
+          "Id": "housing-private-rental",
+          "QuestionResourceKey": "Compare.Aspect.PrivateRental",
           "Facts": [
             {
               "CountrySlug": "denmark",
@@ -750,14 +852,12 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "34c74f84-af39-4c58-a0f2-2926fae5ec1f",
-                "0a955d26-d79c-4ba1-8b6b-a69928d0fd8a",
-                "9372a0e8-baad-406b-a24f-65f7071ae06c"
+                "771e221f-dbe5-423b-995c-196ef247f361"
               ],
               "Values": {
-                "uk": "Ваші можливості частково залежать від того, чи ви очікуєте на рішення щодо дозволу на проживання за Спеціальним законом Данії про Україну, чи вже маєте такий дозвіл.",
-                "en": "Your options depend partly on whether you are waiting for a decision on a residence permit under Denmark’s Ukraine Special Act or already hold a permit.",
-                "ru": "Ваши возможности отчасти зависят от того, ожидаете ли вы решения по заявлению на разрешение на проживание по Специальному закону Дании об Украине или уже получили такое разрешение."
+                "en": "Read the lease, rent and utility terms; distinguish deposit from prepaid rent and inspect the home. Official guidance says not to pay a deposit before having a lease. Keep the signed agreement and payment records.",
+                "uk": "Прочитайте договір, умови орендної плати й комунальних послуг; відрізняйте депозит від передплаченої оренди та огляньте житло. Офіційна порада — не сплачувати депозит до отримання договору. Збережіть підписаний договір і записи платежів.",
+                "ru": "Прочитайте договор, условия арендной платы и коммунальных услуг; отличайте депозит от предоплаченной аренды и осмотрите жильё. Официальный совет — не платить депозит до получения договора. Сохраните подписанный договор и записи платежей."
               }
             },
             {
@@ -766,14 +866,14 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "74aadb89-3efe-5bec-bc79-28d2a097de27",
                 "6f604127-6636-5674-b7a7-fdaa20a379dc",
-                "56f0308c-e82d-5c06-a492-ffcbbe820325"
+                "469e84d9-6769-5fa1-8137-dea153b2f2c6",
+                "ec4a811e-06af-5ed2-9a45-20ec6f17c0bb"
               ],
               "Values": {
-                "uk": "Первинний прийом і тимчасове розміщення людей, які потребують державної підтримки, організовують федеральні землі та громади.",
-                "en": "Initial reception or temporary accommodation for people seeking state support is organized through Land and municipal systems.",
-                "ru": "Первичный приём и временное размещение людей, которым нужна государственная поддержка, организуют федеральные земли и муниципалитеты."
+                "en": "Keep a written offer showing rent, utilities, deposit and start date. If benefits are involved, ask the responsible office before signing whether it must review or approve the costs; local limits and documents differ.",
+                "uk": "Збережіть письмову пропозицію з орендною платою, комунальними витратами, депозитом і датою початку. Якщо залучена допомога, до підписання запитайте відповідальний орган про перевірку чи погодження витрат; місцеві ліміти й документи різняться.",
+                "ru": "Сохраните письменное предложение с арендной платой, коммунальными расходами, депозитом и датой начала. Если задействована помощь, до подписания спросите ответственный орган о проверке или согласовании расходов; местные лимиты и документы различаются."
               }
             },
             {
@@ -782,14 +882,65 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "defe4b60-7464-524e-90f6-9f23a0ec5464",
-                "768aa9b7-06de-5926-9235-69fb3e537b8b",
-                "09cc8513-104c-5ced-b017-b64cf0e3ee9c"
+                "09cc8513-104c-5ced-b017-b64cf0e3ee9c",
+                "a5ebb19b-f5d4-5e72-9107-5e4f84445286"
               ],
               "Values": {
-                "uk": "З 5 березня 2026 року правила державної допомоги з проживанням змінилися.",
-                "en": "From 5 March 2026, public accommodation assistance rules changed.",
-                "ru": "С 5 марта 2026 года правила государственной помощи с размещением изменились."
+                "en": "Ask for a written agreement in Polish or a translation you understand. Check the landlord, rent, utilities, term, termination and deposit return; do not transfer money based only on an advertisement.",
+                "uk": "Попросіть письмовий договір польською або зрозумілий вам переклад. Перевірте орендодавця, плату, комунальні витрати, строк, розірвання й повернення депозиту; не переказуйте гроші лише на підставі оголошення.",
+                "ru": "Попросите письменный договор на польском или понятный вам перевод. Проверьте арендодателя, плату, коммунальные расходы, срок, расторжение и возврат депозита; не переводите деньги только на основании объявления."
+              }
+            }
+          ]
+        },
+        {
+          "Id": "housing-financial-support",
+          "QuestionResourceKey": "Compare.Aspect.HousingSupport",
+          "Facts": [
+            {
+              "CountrySlug": "denmark",
+              "InformationEntryId": "19afdd19-e2cc-4da6-bde3-6dc3d64b7503",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "ee40a28c-8be0-4471-8336-aab8ce453f0d",
+                "4d779e3b-6659-417c-91ab-6e2dcacd9c05",
+                "0ec1125f-052a-4107-8325-f19fbe5a46d5"
+              ],
+              "Values": {
+                "en": "Apply to Udbetaling Danmark for boligstøtte. A Special Act permit holder may apply with fixed residence and the other conditions; the home generally needs its own kitchen and permanent residence use. Rent, household, income and assets affect the assessment; payment is not automatic.",
+                "uk": "За boligstøtte звертаються до Udbetaling Danmark. Власник дозволу за Спеціальним законом може подати заяву за наявності постійного місця проживання й інших умов; житло зазвичай повинно мати власну кухню та використовуватися для постійного проживання. Враховують оренду, домогосподарство, доходи й активи; виплата не автоматична.",
+                "ru": "За boligstøtte обращаются в Udbetaling Danmark. Обладатель разрешения по Специальному закону может подать заявление при наличии постоянного места проживания и других условий; жильё обычно должно иметь собственную кухню и использоваться для постоянного проживания. Учитывают аренду, домохозяйство, доходы и активы; выплата не автоматическая."
+              }
+            },
+            {
+              "CountrySlug": "germany",
+              "InformationEntryId": "fd041e53-7794-5c1f-9ae4-131930fe69ee",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "469e84d9-6769-5fa1-8137-dea153b2f2c6",
+                "ec4a811e-06af-5ed2-9a45-20ec6f17c0bb",
+                "39e9b8cf-22f8-5a51-9bd2-b57f13cc67e7"
+              ],
+              "Values": {
+                "en": "Housing costs are assessed under the applicable scheme: SGB II §22, SGB XII §35 or AsylbLG §3. Use the Jobcenter, Sozialamt or AsylbLG authority named in the decision. Applicable cost limits and local checks remain; a permit alone does not promise rent or deposit payment.",
+                "uk": "Витрати на житло оцінюють за відповідною системою: §22 SGB II, §35 SGB XII або §3 AsylbLG. Звертайтеся до Jobcenter, Sozialamt чи органу AsylbLG, указаного в рішенні. Діють ліміти витрат і місцеві перевірки; сам дозвіл не гарантує оплату оренди чи депозиту.",
+                "ru": "Расходы на жильё оценивают по соответствующей системе: §22 SGB II, §35 SGB XII или §3 AsylbLG. Обращайтесь в Jobcenter, Sozialamt или орган AsylbLG, указанный в решении. Действуют лимиты расходов и местные проверки; само разрешение не гарантирует оплату аренды или депозита."
+              }
+            },
+            {
+              "CountrySlug": "poland",
+              "InformationEntryId": "1f310b3c-dceb-5e3a-90d0-d3a705ca5c53",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "768aa9b7-06de-5926-9235-69fb3e537b8b"
+              ],
+              "Values": {
+                "en": "Apply for housing allowance through OPS or the local authority. The office checks eligibility, income, floor area and housing expenses; the legal title to the dwelling and other conditions matter. An award and amount are not guaranteed.",
+                "uk": "За житловою допомогою звертаються через OPS або місцеву владу. Орган перевіряє відповідність умовам, доходи, площу й житлові витрати; важливі правова підстава користування житлом та інші умови. Призначення й суму не гарантовано.",
+                "ru": "За жилищной помощью обращаются через OPS или местную власть. Орган проверяет соответствие условиям, доходы, площадь и жилищные расходы; важны правовое основание пользования жильём и другие условия. Назначение и сумма не гарантированы."
               }
             }
           ]
@@ -801,8 +952,8 @@
       "CategorySlug": "education",
       "Aspects": [
         {
-          "Id": "education-language-overview",
-          "QuestionResourceKey": "Compare.Aspect.EducationRoute",
+          "Id": "education-school-enrolment",
+          "QuestionResourceKey": "Compare.Aspect.SchoolEnrolment",
           "Facts": [
             {
               "CountrySlug": "denmark",
@@ -810,31 +961,13 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "8d7fd8a1-73f3-4af8-b0f3-d877607fb97f",
                 "fcb08b16-c39a-4e68-9a7e-25ce55571450",
-                "072d16da-7d66-4125-ab27-2d28d88f2e79",
-                "29ada7b1-92c8-40be-bfd5-b284e42bb0c7",
-                "bcaa486e-ec5e-48fe-82a3-44055c026555",
-                "08d28663-4285-49dd-a395-775c16920298",
-                "d74e0f31-b921-44c1-87d9-655e593c2492",
-                "55c3e79d-1c9f-43fe-b01f-b0c0787571a4",
-                "3786dfad-7f9f-4504-a455-caef18902f32",
-                "d5946b7f-0dd7-4ab2-87eb-211aad010af9",
-                "4bd33c5c-7f71-4458-a283-1e6451b82321",
-                "fac2ebb1-6c5a-4ea2-bd20-9addd12f78c9",
-                "5ec2135c-cbf2-410b-9ba9-874bbbb7ca4c",
-                "12b2a6e7-a5c4-45e3-aa7b-31771977b602",
-                "c39945bd-73c4-4789-aa29-4558e548ac95",
-                "26d3ab08-b46b-47c6-81c9-854d643fce6a",
-                "c93a984e-f83d-4e5f-9c8f-a2074984236c",
-                "2c5248de-f006-4edd-86c2-e067a8f67016",
-                "186153a2-5805-43d8-b615-85eb0c64a256",
-                "074a3ecf-0f17-4cf2-bf6b-40f0f27b873c"
+                "08d28663-4285-49dd-a395-775c16920298"
               ],
               "Values": {
-                "uk": "Практичний огляд шкіл, дитячого догляду, навчання молоді й дорослих, курсів данської та вищої освіти в Данії. Умови й витрати залежать від обставин проживання, муніципалітету та закладу; індивідуальні вимоги слід уточнювати у відповідального органу.",
-                "en": "A practical overview of schools, childcare, youth and adult learning, Danish courses and higher education in Denmark. Conditions and costs depend on residence circumstances, municipality and institution; check individual requirements with the responsible authority.",
-                "ru": "Практический обзор школ, ухода за детьми, обучения молодёжи и взрослых, курсов датского языка и высшего образования в Дании. Условия и расходы зависят от обстоятельств проживания, муниципалитета и учебного заведения; индивидуальные требования уточняйте у ответственного органа."
+                "en": "For a child arriving outside the usual registration period, contact the municipality where you live or plan to live. It explains school placement and class level; compulsory-education status is assessed individually, and asylum-centre arrangements may differ.",
+                "uk": "Для дитини, яка прибула поза звичайним періодом запису, зверніться до муніципалітету фактичного чи запланованого проживання. Він пояснить розподіл до школи й класу; обов’язок навчатися оцінюють індивідуально, а правила центрів притулку можуть відрізнятися.",
+                "ru": "Для ребёнка, прибывшего вне обычного периода записи, обратитесь в муниципалитет фактического или планируемого проживания. Он объяснит распределение в школу и класс; обязанность учиться оценивают индивидуально, а правила центров убежища могут отличаться."
               }
             },
             {
@@ -844,20 +977,12 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "a9192f33-66b2-56fc-b24f-ade0c3d2c6f0",
-                "6ab0d347-e98f-5243-84ac-d06e9b3377bd",
-                "85164038-1935-52a7-a1cb-2e05f4066329",
-                "02f7d48e-e06b-5a7e-9fc7-7b17f2bde2be",
-                "bbb43319-2619-50d6-9e08-6f4ead298bd2",
-                "34e99df7-6990-5a44-91b8-c4cb9f7b168c",
-                "dd4a6939-66bb-51c8-b738-4df864a5d1b2",
-                "2dd16451-8c9b-5109-a2fd-5d6f5af56fc5",
-                "32d1d3b4-baf4-5868-8706-a709efec462a",
-                "a62b4178-8ad6-504e-bec7-f71774ca0765"
+                "6ab0d347-e98f-5243-84ac-d06e9b3377bd"
               ],
               "Values": {
-                "uk": "Скористайтеся процедурою школи своєї федеральної землі, перевірте вікові права на догляд за дітьми та окремі умови курсів, професійного навчання й вступу до вишу.",
-                "en": "Use your Land’s school route, check age-based childcare rights, and verify separate admission conditions for courses, vocational training and university.",
-                "ru": "Используйте школьный маршрут своей федеральной земли, проверьте возрастные права на уход за детьми и отдельные условия курсов, профессионального обучения и поступления в вуз."
+                "en": "Follow the education ministry, Schulamt or school instructions for the Land where the child lives. Enrolment rules and documents are Land/local matters; there is no single national application form.",
+                "uk": "Дотримуйтеся вказівок міністерства освіти, Schulamt або школи федеральної землі, де живе дитина. Правила й документи визначаються землею та місцевою процедурою; єдиної загальнонімецької заяви немає.",
+                "ru": "Следуйте указаниям министерства образования, Schulamt или школы федеральной земли, где живёт ребёнок. Правила и документы определяются землёй и местной процедурой; единого общегерманского заявления нет."
               }
             },
             {
@@ -867,20 +992,19 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "a646d0ee-81ba-5b10-b179-e09ca4ac3453",
-                "7b72e7d2-6359-5eae-b2c9-68f2e9da7c80",
                 "1cf8737c-cef9-56ac-8c57-8984169ba13d"
               ],
               "Values": {
-                "uk": "Діти з-за кордону можуть вступати до польських державних шкіл за документами про попереднє навчання; школа визначає клас. Обов’язковість освіти та підтримка залежать від віку й чинних правил.",
-                "en": "Children arriving from abroad can enter Polish public schools using records of prior education; the school determines the grade. Compulsory education and support depend on age and current rules.",
-                "ru": "Дети, прибывшие из-за рубежа, могут поступить в польскую государственную школу по документам о предыдущем обучении; класс определяет школа. Обязательность обучения и поддержка зависят от возраста и действующих правил."
+                "en": "Contact a public school near home with prior-school records if available. Ordinary admission does not require nostrification of those records; the headteacher determines the grade. Ask about missing records; some school types apply additional criteria.",
+                "uk": "Зверніться до державної школи поблизу дому з документами попереднього навчання, якщо вони є. Для звичайного вступу їх нострифікація не потрібна; клас визначає директор. Уточніть порядок за відсутності документів; деякі типи шкіл мають додаткові критерії.",
+                "ru": "Обратитесь в государственную школу рядом с домом с документами предыдущего обучения, если они есть. Для обычного поступления их нострификация не нужна; класс определяет директор. Уточните порядок при отсутствии документов; некоторые типы школ имеют дополнительные критерии."
               }
             }
           ]
         },
         {
-          "Id": "education-language-opening-point",
-          "QuestionResourceKey": "Compare.Aspect.KeyPoint",
+          "Id": "education-pupil-language",
+          "QuestionResourceKey": "Compare.Aspect.PupilLanguageSupport",
           "Facts": [
             {
               "CountrySlug": "denmark",
@@ -888,30 +1012,26 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "8d7fd8a1-73f3-4af8-b0f3-d877607fb97f",
-                "fcb08b16-c39a-4e68-9a7e-25ce55571450",
-                "072d16da-7d66-4125-ab27-2d28d88f2e79"
+                "072d16da-7d66-4125-ab27-2d28d88f2e79",
+                "29ada7b1-92c8-40be-bfd5-b284e42bb0c7",
+                "08d28663-4285-49dd-a395-775c16920298"
               ],
               "Values": {
-                "uk": "У Данії є муніципальні школи, заклади дошкільного догляду, програми для молоді та професійна освіта, навчання для дорослих і вища освіта.",
-                "en": "Denmark has municipal schools, childcare, youth and vocational programmes, adult learning and higher education.",
-                "ru": "В Дании есть муниципальные школы, учреждения дошкольного ухода, программы для молодёжи и профессиональное образование, обучение взрослых и высшее образование."
+                "en": "Support may include Danish as a second language, a reception class or support in a regular class. Provision depends on the child’s needs and local arrangements; a specific class or teaching language is not automatic.",
+                "uk": "Підтримка може включати данську як другу мову, підготовчий клас або допомогу у звичайному класі. Обсяг залежить від потреб дитини й місцевих умов; конкретний клас чи мова викладання не надаються автоматично.",
+                "ru": "Поддержка может включать датский как второй язык, подготовительный класс или помощь в обычном классе. Объём зависит от потребностей ребёнка и местных условий; конкретный класс или язык преподавания не предоставляются автоматически."
               }
             },
             {
               "CountrySlug": "germany",
               "InformationEntryId": "f5e0f499-0f60-5465-85f8-de6345029b59",
               "Status": "Draft",
-              "IsAvailable": true,
-              "OfficialSourceIds": [
-                "a9192f33-66b2-56fc-b24f-ade0c3d2c6f0",
-                "6ab0d347-e98f-5243-84ac-d06e9b3377bd",
-                "85164038-1935-52a7-a1cb-2e05f4066329"
-              ],
+              "IsAvailable": false,
+              "OfficialSourceIds": [],
               "Values": {
-                "uk": "Школами, обов’язковим навчанням і зарахуванням займаються 16 федеральних земель.",
-                "en": "School administration, compulsory-school rules and enrolment procedures are set by the 16 Länder.",
-                "ru": "Школы, обязательное обучение и зачисление относятся к компетенции 16 федеральных земель."
+                "uk": "Не встановлено за перевіреними джерелами.",
+                "en": "Not established in the reviewed sources.",
+                "ru": "Не установлено по проверенным источникам."
               }
             },
             {
@@ -920,14 +1040,61 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "a646d0ee-81ba-5b10-b179-e09ca4ac3453",
-                "7b72e7d2-6359-5eae-b2c9-68f2e9da7c80",
                 "1cf8737c-cef9-56ac-8c57-8984169ba13d"
               ],
               "Values": {
-                "uk": "У Польщі обов’язкова дошкільна підготовка стосується дітей, яким виповнюється шість років у відповідному календарному році.",
-                "en": "Compulsory pre-school preparation applies to children who turn six in the relevant calendar year.",
-                "ru": "Обязательная дошкольная подготовка распространяется на детей, которым в соответствующем календарном году исполняется шесть лет."
+                "en": "Pupils subject to the learning obligation with insufficient Polish are entitled to free additional Polish lessons for up to 24 months. A preparatory class may be organised; a teacher’s assistant knowing the pupil’s language may be employed for up to 12 months. Ask the school about implementation.",
+                "uk": "Учні, на яких поширюється обов’язок навчання й які недостатньо знають польську, мають право на безоплатні додаткові уроки польської до 24 місяців. Можна організувати підготовчий клас; помічника вчителя, який знає мову учня, можна залучити до 12 місяців. Уточніть реалізацію в школі.",
+                "ru": "Ученики, на которых распространяется обязанность обучения и которые недостаточно знают польский, имеют право на бесплатные дополнительные уроки польского до 24 месяцев. Можно организовать подготовительный класс; помощника учителя, знающего язык ученика, можно привлечь до 12 месяцев. Уточните реализацию в школе."
+              }
+            }
+          ]
+        },
+        {
+          "Id": "education-higher-admission",
+          "QuestionResourceKey": "Compare.Aspect.HigherEducation",
+          "Facts": [
+            {
+              "CountrySlug": "denmark",
+              "InformationEntryId": "fee9dcf0-447d-4402-92a2-8b1bec125944",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "26d3ab08-b46b-47c6-81c9-854d643fce6a",
+                "c93a984e-f83d-4e5f-9c8f-a2074984236c"
+              ],
+              "Values": {
+                "en": "Admission and language requirements are programme/institution-specific. Many undergraduate applications use Optagelse.dk; graduate applicants contact the institution. An assessment of foreign qualifications explains their level but does not itself grant admission.",
+                "uk": "Вимоги вступу й мови залежать від програми та закладу. Для багатьох бакалаврських програм використовують Optagelse.dk; для магістерських звертаються до закладу. Оцінка іноземної кваліфікації пояснює її рівень, але сама собою не дає вступу.",
+                "ru": "Требования поступления и языка зависят от программы и учреждения. Для многих бакалаврских программ используют Optagelse.dk; для магистерских обращаются в вуз. Оценка иностранной квалификации объясняет её уровень, но сама по себе не даёт поступления."
+              }
+            },
+            {
+              "CountrySlug": "germany",
+              "InformationEntryId": "f5e0f499-0f60-5465-85f8-de6345029b59",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "34e99df7-6990-5a44-91b8-c4cb9f7b168c"
+              ],
+              "Values": {
+                "en": "Universities decide admission and language requirements. DAAD’s National Academic Contact Point Ukraine provides orientation, not an admission decision.",
+                "uk": "Університети визначають вимоги вступу й мови. National Academic Contact Point Ukraine від DAAD надає орієнтаційну інформацію, а не рішення про зарахування.",
+                "ru": "Университеты определяют требования поступления и языка. National Academic Contact Point Ukraine от DAAD предоставляет ориентирующую информацию, а не решение о зачислении."
+              }
+            },
+            {
+              "CountrySlug": "poland",
+              "InformationEntryId": "32ca34e9-22d9-5f59-88a9-bbd7ffd7b5cd",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "7b72e7d2-6359-5eae-b2c9-68f2e9da7c80"
+              ],
+              "Values": {
+                "en": "Check the university’s programme and language requirements and NAWA guidance on recognition of the school-leaving certificate. Recognition for admission does not guarantee acceptance; competition and other programme conditions can apply.",
+                "uk": "Перевірте вимоги програми й мови в університеті та вказівки NAWA щодо визнання шкільного атестата. Визнання для вступу не гарантує зарахування; можливі конкурс та інші умови програми.",
+                "ru": "Проверьте требования программы и языка в университете и указания NAWA по признанию школьного аттестата. Признание для поступления не гарантирует зачисления; возможны конкурс и другие условия программы."
               }
             }
           ]
@@ -939,8 +1106,8 @@
       "CategorySlug": "social-assistance",
       "Aspects": [
         {
-          "Id": "social-assistance-overview",
-          "QuestionResourceKey": "Compare.Aspect.SupportTypes",
+          "Id": "social-subsistence",
+          "QuestionResourceKey": "Compare.Aspect.SubsistenceSupport",
           "Facts": [
             {
               "CountrySlug": "denmark",
@@ -948,21 +1115,14 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "74d68055-ee15-4b60-8173-0752127b82be",
                 "daf90a0e-392d-4a5f-831c-50d7e14f28f9",
                 "b64fed15-d770-4a60-a908-c4cfb8b4df6b",
-                "b58e04a4-fba8-4e6f-b6b8-eb17de46c3e9",
-                "c1f2c424-b1e0-4cfe-8d3a-2c5573f2f59a",
-                "bf5a5cb2-f724-4957-9af7-7a091903e365",
-                "675030ce-d243-48a2-a548-d1c2ae7ca323",
-                "8ea726b2-a273-4e47-8c79-02083553557f",
-                "998ac7ad-fc3f-4907-9a36-eff872bc9a7b",
-                "6a90bf10-f705-4f9b-b3aa-02ea2e45d4a3"
+                "b58e04a4-fba8-4e6f-b6b8-eb17de46c3e9"
               ],
               "Values": {
-                "uk": "Огляд муніципальної грошової допомоги, сімейних виплат і допомоги на окремі необхідні витрати. Право на підтримку залежить від статусу перебування, доходів, майна та індивідуальної оцінки.",
-                "en": "An overview of municipal cash assistance, family benefits and help with certain necessary expenses. Eligibility depends on residence status, income, assets and an individual assessment.",
-                "ru": "Обзор муниципальной денежной помощи, семейных выплат и помощи на отдельные необходимые расходы. Право на поддержку зависит от статуса пребывания, доходов, имущества и индивидуальной оценки."
+                "en": "A valid Special Act permit holder unable to support themselves may apply for municipal kontanthjælp if other conditions are met. Income, assets, age, residence/work history and sometimes spouse resources affect the assessment. Reception-centre maintenance can affect which authority is responsible.",
+                "uk": "Власник чинного дозволу за Спеціальним законом, який не може себе забезпечити, може подати на муніципальну kontanthjælp за виконання інших умов. Враховують доходи, активи, вік, історію проживання й роботи, іноді ресурси подружжя. Утримання в центрі прийому може впливати на відповідальний орган.",
+                "ru": "Обладатель действующего разрешения по Специальному закону, который не может себя обеспечить, может подать на муниципальную kontanthjælp при выполнении других условий. Учитывают доходы, активы, возраст, историю проживания и работы, иногда ресурсы супруга. Содержание в центре приёма может влиять на ответственный орган."
               }
             },
             {
@@ -971,26 +1131,15 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "e0182e61-104e-5740-8914-bc4f45a4b0b3",
-                "d075064c-0110-59a3-9fd7-1164ebd2faa1",
                 "346200f4-e8dc-5be8-949f-d9748e0575fe",
                 "e9187aab-591c-5a86-895c-52d89e73a436",
                 "48566923-6113-5583-bb40-2937fb8874aa",
-                "cedffb49-4e83-5e1c-aba3-b109bdf4d0e4",
-                "b79c51be-0af8-56c6-a968-bc169b94bcd7",
-                "261f2bd0-1cf1-55e2-9193-55a946d094e2",
-                "ce66a442-2c32-5a04-a00f-e5723bd853b0",
-                "e99d42b1-03be-5d28-a046-27cfe08dda7f",
-                "d818f7c7-3692-5a58-860a-8c46cdda9ef5",
-                "dffa72c6-26ff-5c31-824f-75883dd90bb2",
-                "0dc7de24-2569-5184-9b94-ed324c6dc7d0",
-                "2ca213cc-13a9-51f4-8ea7-b7313d8fae0a",
-                "56496fcb-d0c5-57ab-8e63-39da07ebd92c"
+                "cedffb49-4e83-5e1c-aba3-b109bdf4d0e4"
               ],
               "Values": {
-                "uk": "Маршрут підтримки залежить від документів, місця проживання, доходів та обставин; для кожної виплати потрібне офіційне рішення.",
-                "en": "The support route depends on your documents, residence, income and circumstances; an official decision is needed for each claim.",
-                "ru": "Маршрут поддержки зависит от документов, места проживания, доходов и обстоятельств; для каждой выплаты требуется официальное решение."
+                "en": "SGB II depends on age, ability to work, need and residence conditions; §74 covers only specified §24 applicants with a qualifying provisional certificate and identity registration. Other cases may fall under AsylbLG or SGB XII. Nationality alone does not assign a scheme.",
+                "uk": "SGB II залежить від віку, працездатності, потреби й умов проживання; §74 охоплює лише визначених заявників за §24 із відповідним тимчасовим посвідченням і реєстрацією особи. Інші випадки можуть належати до AsylbLG чи SGB XII. Саме громадянство не визначає систему.",
+                "ru": "SGB II зависит от возраста, трудоспособности, нуждаемости и условий проживания; §74 охватывает только определённых заявителей по §24 с соответствующим временным свидетельством и регистрацией личности. Другие случаи могут относиться к AsylbLG или SGB XII. Само гражданство не определяет систему."
               }
             },
             {
@@ -999,26 +1148,20 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "06ac9777-b5e4-520f-a7de-54e060b51e20",
-                "ac033b42-ecb0-5eb4-b08d-9af621e98693",
-                "b47c85db-16c3-598b-b664-fc17208f81a0",
                 "83e84de8-10ef-5176-b863-50a2fe6780b8",
-                "ed40a99c-9bb8-567e-83df-a4060b76050f",
-                "33354082-99fb-5d3a-97af-92c825f960e3",
-                "f3020282-2a5c-565e-a9e7-2470f3b687bf",
                 "131a629b-e3ba-54a3-932b-2cddd661ff40"
               ],
               "Values": {
-                "uk": "Пільги мають різні умови й установи. Для 800+ з 2026 року діють критерії професійної активності та навчання дитини з винятками; загальна соціальна допомога не надається автоматично за PESEL UKR.",
-                "en": "Benefits have different conditions and responsible institutions. From 2026, 800+ includes work-activity and schooling conditions with exceptions; PESEL UKR alone does not automatically qualify someone for general social assistance.",
-                "ru": "У выплат разные условия и ответственные учреждения. С 2026 года для 800+ действуют условия профессиональной активности и обучения ребёнка с исключениями; один PESEL UKR не даёт автоматического права на общую социальную помощь."
+                "en": "General social assistance has statutory residence/status and need conditions. PESEL UKR alone does not establish entitlement to a payment; the local OPS/MOPS assesses the household’s circumstances under the applicable rules.",
+                "uk": "Загальна соціальна допомога має законодавчі умови щодо проживання, статусу й потреби. Сам PESEL UKR не встановлює права на виплату; місцевий OPS/MOPS оцінює обставини домогосподарства за відповідними правилами.",
+                "ru": "Общая социальная помощь имеет законодательные условия проживания, статуса и нуждаемости. Сам PESEL UKR не устанавливает права на выплату; местный OPS/MOPS оценивает обстоятельства домохозяйства по соответствующим правилам."
               }
             }
           ]
         },
         {
-          "Id": "social-assistance-opening-point",
-          "QuestionResourceKey": "Compare.Aspect.KeyPoint",
+          "Id": "social-application",
+          "QuestionResourceKey": "Compare.Aspect.AssistanceApplication",
           "Facts": [
             {
               "CountrySlug": "denmark",
@@ -1026,14 +1169,13 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "74d68055-ee15-4b60-8173-0752127b82be",
-                "daf90a0e-392d-4a5f-831c-50d7e14f28f9",
-                "b64fed15-d770-4a60-a908-c4cfb8b4df6b"
+                "b64fed15-d770-4a60-a908-c4cfb8b4df6b",
+                "bf5a5cb2-f724-4957-9af7-7a091903e365"
               ],
               "Values": {
-                "uk": "Очікування рішення за Спеціальним законом Данії про переміщених з України не дорівнює отриманню дозволу на проживання і саме по собі не підтверджує право на грошову допомогу.",
-                "en": "Waiting for a decision under Denmark’s Ukraine Special Act is not the same as holding a residence permit and does not by itself establish entitlement to cash assistance.",
-                "ru": "Ожидание решения по Специальному закону Дании о перемещённых из Украины не равнозначно наличию вида на жительство и само по себе не подтверждает право на денежную помощь."
+                "en": "Start with the municipality where you live or the one responsible for your case. Apply through it or its digital service; it confirms required documents and any alternative application arrangements. MitID/CPR requirements are service- and case-specific.",
+                "uk": "Почніть із муніципалітету проживання або відповідального за вашу справу. Подайте заяву через нього чи його цифровий сервіс; він уточнить документи й альтернативні способи подання. Вимоги MitID/CPR залежать від сервісу та справи.",
+                "ru": "Начните с муниципалитета проживания или ответственного за ваше дело. Подайте заявление через него или его цифровой сервис; он уточнит документы и альтернативные способы подачи. Требования MitID/CPR зависят от сервиса и дела."
               }
             },
             {
@@ -1042,14 +1184,15 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "e0182e61-104e-5740-8914-bc4f45a4b0b3",
                 "d075064c-0110-59a3-9fd7-1164ebd2faa1",
-                "346200f4-e8dc-5be8-949f-d9748e0575fe"
+                "346200f4-e8dc-5be8-949f-d9748e0575fe",
+                "48566923-6113-5583-bb40-2937fb8874aa",
+                "cedffb49-4e83-5e1c-aba3-b109bdf4d0e4"
               ],
               "Values": {
-                "uk": "Чинне право передбачає різні маршрути.",
-                "en": "Current law has different routes.",
-                "ru": "В действующем праве предусмотрены разные маршруты."
+                "en": "Apply to the Jobcenter for an applicable SGB II claim, or the Sozialamt/local AsylbLG authority for their routes. Prepare identity/residence, household, income/bank and accommodation documents; the office specifies the actual requirements. Keep the receipt and written decision.",
+                "uk": "Подайте заяву до Jobcenter за відповідною підставою SGB II або до Sozialamt/місцевого органу AsylbLG за їхніми підставами. Підготуйте документи особи й проживання, домогосподарства, доходів/банку та житла; фактичні вимоги визначить орган. Збережіть підтвердження подання й рішення.",
+                "ru": "Подайте заявление в Jobcenter по соответствующему основанию SGB II либо в Sozialamt/местный орган AsylbLG по их основаниям. Подготовьте документы личности и проживания, домохозяйства, доходов/банка и жилья; фактические требования определит орган. Сохраните подтверждение подачи и решение."
               }
             },
             {
@@ -1058,14 +1201,61 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "06ac9777-b5e4-520f-a7de-54e060b51e20",
-                "ac033b42-ecb0-5eb4-b08d-9af621e98693",
-                "b47c85db-16c3-598b-b664-fc17208f81a0"
+                "83e84de8-10ef-5176-b863-50a2fe6780b8"
               ],
               "Values": {
-                "uk": "Не існує єдиної виплати для всіх людей з України.",
-                "en": "There is no single benefit for everyone from Ukraine. 800+, family benefits, housing allowance and general social assistance have different conditions and institutions.",
-                "ru": "Единой выплаты для всех выходцев из Украины нет."
+                "en": "General social-assistance requests go to local OPS/MOPS. Prepare identity, residence, income, household and need-related documents and request an assessment; requirements depend on the case.",
+                "uk": "За загальною соціальною допомогою звертаються до місцевого OPS/MOPS. Підготуйте документи особи, проживання, доходів, домогосподарства й потреби та попросіть оцінку; вимоги залежать від справи.",
+                "ru": "За общей социальной помощью обращаются в местный OPS/MOPS. Подготовьте документы личности, проживания, доходов, домохозяйства и нуждаемости и попросите оценку; требования зависят от дела."
+              }
+            }
+          ]
+        },
+        {
+          "Id": "social-child-benefits",
+          "QuestionResourceKey": "Compare.Aspect.ChildBenefits",
+          "Facts": [
+            {
+              "CountrySlug": "denmark",
+              "InformationEntryId": "1a19c1f9-1111-4d60-8490-da548f33083f",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "675030ce-d243-48a2-a548-d1c2ae7ca323"
+              ],
+              "Values": {
+                "en": "For børne- og ungeydelse, conditions include the child’s age, residence, the custodian’s tax status and qualifying residence/work periods. Udbetaling Danmark assesses the route; Ukrainian citizenship or a Special Act permit alone does not confirm eligibility.",
+                "uk": "Для børne- og ungeydelse враховують вік дитини, проживання, податковий статус опікуна та необхідні періоди проживання/роботи. Порядок оцінює Udbetaling Danmark; самі українське громадянство чи дозвіл за Спеціальним законом не підтверджують відповідність умовам.",
+                "ru": "Для børne- og ungeydelse учитывают возраст ребёнка, проживание, налоговый статус опекуна и необходимые периоды проживания/работы. Порядок оценивает Udbetaling Danmark; сами украинское гражданство или разрешение по Специальному закону не подтверждают соответствие условиям."
+              }
+            },
+            {
+              "CountrySlug": "germany",
+              "InformationEntryId": "31f5802b-26a0-5cd0-bb24-0a9a4afa706a",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "261f2bd0-1cf1-55e2-9193-55a946d094e2"
+              ],
+              "Values": {
+                "en": "BA’s simplified Kindergeld route requires a parent from Ukraine living in Germany with a §24 permit allowing work for at least six months, and a child living in Germany, the EU, EEA or Switzerland. Actual employment is not required under that rule; apply to Familienkasse, which decides entitlement.",
+                "uk": "Спрощений шлях Kindergeld від BA вимагає, щоб батько чи мати з України жили в Німеччині з дозволом за §24, який дозволяє працювати щонайменше шість місяців, а дитина — у Німеччині, ЄС, ЄЕЗ або Швейцарії. За цим правилом фактична робота не потрібна; заяву оцінює Familienkasse.",
+                "ru": "Упрощённый путь Kindergeld от BA требует, чтобы родитель из Украины жил в Германии с разрешением по §24, позволяющим работать не менее шести месяцев, а ребёнок — в Германии, ЕС, ЕЭЗ или Швейцарии. По этому правилу фактическая работа не требуется; заявление оценивает Familienkasse."
+              }
+            },
+            {
+              "CountrySlug": "poland",
+              "InformationEntryId": "a5892591-d082-57ce-acf9-5c39ab4f9b84",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "ac033b42-ecb0-5eb4-b08d-9af621e98693",
+                "33354082-99fb-5d3a-97af-92c825f960e3"
+              ],
+              "Values": {
+                "en": "800+ requires the applicable residence/status conditions and the child living with a parent in Poland; school-age children must attend Polish education. For Ukrainian citizens with UKR status, a work-activity condition applies from 1 February 2026, with exceptions including some disability/Polish-child cases and limited support for some registered unemployed parents. ZUS checks the individual case.",
+                "uk": "800+ вимагає відповідних умов проживання/статусу та проживання дитини з батьком чи матір’ю в Польщі; діти шкільного віку мають навчатися в польській системі. Для громадян України зі статусом UKR з 1 лютого 2026 року діє умова трудової активності з винятками, зокрема для деяких випадків інвалідності/дитини-громадянина Польщі та обмеженою допомогою деяким зареєстрованим безробітним батькам. Справу перевіряє ZUS.",
+                "ru": "800+ требует соответствующих условий проживания/статуса и проживания ребёнка с родителем в Польше; дети школьного возраста должны учиться в польской системе. Для граждан Украины со статусом UKR с 1 февраля 2026 года действует условие трудовой активности с исключениями, в том числе для некоторых случаев инвалидности/ребёнка-гражданина Польши и ограниченной помощью некоторым зарегистрированным безработным родителям. Дело проверяет ZUS."
               }
             }
           ]

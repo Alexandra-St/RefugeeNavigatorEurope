@@ -307,14 +307,30 @@
   <data name="Compare.DraftStatus" xml:space="preserve"><value>Draft</value></data>
   <data name="Compare.FactSources" xml:space="preserve"><value>Sources for this item</value></data>
   <data name="Compare.NotEstablishedInReviewedSources" xml:space="preserve"><value>Not established in the reviewed sources.</value></data>
-  <data name="Compare.Aspect.TemporaryProtectionScheme" xml:space="preserve"><value>Which scheme or status is described?</value></data>
-<data name="Compare.Aspect.ResidenceRoutes" xml:space="preserve"><value>Which other residence routes are described?</value></data>
-<data name="Compare.Aspect.JobSearch" xml:space="preserve"><value>Where can you search for vacancies?</value></data>
-<data name="Compare.Aspect.WorkEligibility" xml:space="preserve"><value>What does work authorization depend on?</value></data>
-<data name="Compare.Aspect.HealthcareBasis" xml:space="preserve"><value>What determines access to healthcare?</value></data>
-<data name="Compare.Aspect.HousingStart" xml:space="preserve"><value>Where should you start with housing?</value></data>
-<data name="Compare.Aspect.EducationRoute" xml:space="preserve"><value>How is the education route determined?</value></data>
-<data name="Compare.Aspect.SupportTypes" xml:space="preserve"><value>Which forms of social support are described?</value></data>
+  <data name="Compare.Aspect.ProtectionScheme" xml:space="preserve"><value>Which protection scheme applies?</value></data>
+  <data name="Compare.Aspect.ProtectionApplication" xml:space="preserve"><value>Where and how is an application made?</value></data>
+  <data name="Compare.Aspect.ProtectionDates" xml:space="preserve"><value>Which protection and document dates must be distinguished?</value></data>
+  <data name="Compare.Aspect.AlternativeRoutes" xml:space="preserve"><value>Which alternative residence routes are described?</value></data>
+  <data name="Compare.Aspect.AlternativeConditions" xml:space="preserve"><value>What key conditions apply to the described route?</value></data>
+  <data name="Compare.Aspect.AlternativeFiling" xml:space="preserve"><value>How and when is the alternative application filed?</value></data>
+  <data name="Compare.Aspect.Vacancies" xml:space="preserve"><value>Where can vacancies be found?</value></data>
+  <data name="Compare.Aspect.EmploymentHelp" xml:space="preserve"><value>Which public institutions provide job-search help?</value></data>
+  <data name="Compare.Aspect.EmploymentHelpConditions" xml:space="preserve"><value>What conditions apply to public employment assistance?</value></data>
+  <data name="Compare.Aspect.WorkPermission" xml:space="preserve"><value>What determines permission to work?</value></data>
+  <data name="Compare.Aspect.EmployerDuties" xml:space="preserve"><value>What employer duties are established in the reviewed materials?</value></data>
+  <data name="Compare.Aspect.MinimumPay" xml:space="preserve"><value>What determines minimum pay?</value></data>
+  <data name="Compare.Aspect.HealthAccess" xml:space="preserve"><value>Who may access publicly funded healthcare?</value></data>
+  <data name="Compare.Aspect.HealthProof" xml:space="preserve"><value>What registration or insurance is needed?</value></data>
+  <data name="Compare.Aspect.UrgentCare" xml:space="preserve"><value>How is urgent or emergency care accessed?</value></data>
+  <data name="Compare.Aspect.InitialAccommodation" xml:space="preserve"><value>What initial accommodation assistance is described?</value></data>
+  <data name="Compare.Aspect.PrivateRental" xml:space="preserve"><value>What should be checked before private renting?</value></data>
+  <data name="Compare.Aspect.HousingSupport" xml:space="preserve"><value>Where is housing-cost support assessed, and on what basis?</value></data>
+  <data name="Compare.Aspect.SchoolEnrolment" xml:space="preserve"><value>How is a child enrolled in school?</value></data>
+  <data name="Compare.Aspect.PupilLanguageSupport" xml:space="preserve"><value>What language support is described for school pupils?</value></data>
+  <data name="Compare.Aspect.HigherEducation" xml:space="preserve"><value>How is higher-education admission handled?</value></data>
+  <data name="Compare.Aspect.SubsistenceSupport" xml:space="preserve"><value>What determines access to subsistence assistance?</value></data>
+  <data name="Compare.Aspect.AssistanceApplication" xml:space="preserve"><value>Where and how is subsistence assistance requested?</value></data>
+  <data name="Compare.Aspect.ChildBenefits" xml:space="preserve"><value>Which conditions are highlighted for child/family benefits?</value></data>
+  <data name="Compare.ReadFullArticles" xml:space="preserve"><value>Read full country articles</value></data>
 <data name="Compare.ApprovedEditorialStatus" xml:space="preserve"><value>Editorially approved</value></data>
-  <data name="Compare.Aspect.KeyPoint" xml:space="preserve"><value>What key point is highlighted?</value></data>
 </root>

@@ -305,14 +305,30 @@
   <data name="Compare.DraftStatus" xml:space="preserve"><value>Чернетка</value></data>
   <data name="Compare.FactSources" xml:space="preserve"><value>Джерела цього пункту</value></data>
   <data name="Compare.NotEstablishedInReviewedSources" xml:space="preserve"><value>Не встановлено за перевіреними джерелами.</value></data>
-  <data name="Compare.Aspect.TemporaryProtectionScheme" xml:space="preserve"><value>Яку схему або статус описано?</value></data>
-<data name="Compare.Aspect.ResidenceRoutes" xml:space="preserve"><value>Які інші варіанти перебування описані?</value></data>
-<data name="Compare.Aspect.JobSearch" xml:space="preserve"><value>Де шукати вакансії?</value></data>
-<data name="Compare.Aspect.WorkEligibility" xml:space="preserve"><value>Від чого залежить право на роботу?</value></data>
-<data name="Compare.Aspect.HealthcareBasis" xml:space="preserve"><value>Що визначає доступ до медичної допомоги?</value></data>
-<data name="Compare.Aspect.HousingStart" xml:space="preserve"><value>З чого почати пошук житла?</value></data>
-<data name="Compare.Aspect.EducationRoute" xml:space="preserve"><value>Як визначається освітній маршрут?</value></data>
-<data name="Compare.Aspect.SupportTypes" xml:space="preserve"><value>Які види соціальної підтримки описані?</value></data>
+  <data name="Compare.Aspect.ProtectionScheme" xml:space="preserve"><value>Яка схема захисту застосовується?</value></data>
+  <data name="Compare.Aspect.ProtectionApplication" xml:space="preserve"><value>Куди і як подають заяву?</value></data>
+  <data name="Compare.Aspect.ProtectionDates" xml:space="preserve"><value>Які строки захисту й документів слід розрізняти?</value></data>
+  <data name="Compare.Aspect.AlternativeRoutes" xml:space="preserve"><value>Які альтернативні підстави проживання описано?</value></data>
+  <data name="Compare.Aspect.AlternativeConditions" xml:space="preserve"><value>Які основні умови має описаний шлях?</value></data>
+  <data name="Compare.Aspect.AlternativeFiling" xml:space="preserve"><value>Як і коли подають заяву за іншою підставою?</value></data>
+  <data name="Compare.Aspect.Vacancies" xml:space="preserve"><value>Де шукати вакансії?</value></data>
+  <data name="Compare.Aspect.EmploymentHelp" xml:space="preserve"><value>Які державні установи допомагають шукати роботу?</value></data>
+  <data name="Compare.Aspect.EmploymentHelpConditions" xml:space="preserve"><value>Які умови доступу до державної допомоги з працевлаштування?</value></data>
+  <data name="Compare.Aspect.WorkPermission" xml:space="preserve"><value>Що визначає дозвіл на роботу?</value></data>
+  <data name="Compare.Aspect.EmployerDuties" xml:space="preserve"><value>Які обов’язки роботодавця встановлено в розглянутих матеріалах?</value></data>
+  <data name="Compare.Aspect.MinimumPay" xml:space="preserve"><value>Що визначає мінімальну оплату?</value></data>
+  <data name="Compare.Aspect.HealthAccess" xml:space="preserve"><value>Хто може отримати медичну допомогу за публічні кошти?</value></data>
+  <data name="Compare.Aspect.HealthProof" xml:space="preserve"><value>Яка реєстрація чи страхування потрібні?</value></data>
+  <data name="Compare.Aspect.UrgentCare" xml:space="preserve"><value>Як звернутися по термінову чи екстрену допомогу?</value></data>
+  <data name="Compare.Aspect.InitialAccommodation" xml:space="preserve"><value>Яку початкову допомогу з розміщенням описано?</value></data>
+  <data name="Compare.Aspect.PrivateRental" xml:space="preserve"><value>Що перевірити перед приватною орендою?</value></data>
+  <data name="Compare.Aspect.HousingSupport" xml:space="preserve"><value>Де й на якій підставі оцінюють допомогу з оплатою житла?</value></data>
+  <data name="Compare.Aspect.SchoolEnrolment" xml:space="preserve"><value>Як записати дитину до школи?</value></data>
+  <data name="Compare.Aspect.PupilLanguageSupport" xml:space="preserve"><value>Яку мовну підтримку описано для школярів?</value></data>
+  <data name="Compare.Aspect.HigherEducation" xml:space="preserve"><value>Як відбувається вступ до закладів вищої освіти?</value></data>
+  <data name="Compare.Aspect.SubsistenceSupport" xml:space="preserve"><value>Що визначає доступ до допомоги на прожиття?</value></data>
+  <data name="Compare.Aspect.AssistanceApplication" xml:space="preserve"><value>Куди і як звертатися по допомогу на прожиття?</value></data>
+  <data name="Compare.Aspect.ChildBenefits" xml:space="preserve"><value>Які умови допомоги на дітей і сім’ю виділено?</value></data>
+  <data name="Compare.ReadFullArticles" xml:space="preserve"><value>Читати повні статті країн</value></data>
 <data name="Compare.ApprovedEditorialStatus" xml:space="preserve"><value>Редакційно погоджено</value></data>
-  <data name="Compare.Aspect.KeyPoint" xml:space="preserve"><value>Який ключовий пункт висвітлено?</value></data>
 </root>

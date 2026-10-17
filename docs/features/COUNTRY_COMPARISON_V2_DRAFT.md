@@ -1,44 +1,35 @@
-# Country Comparison V2 — Editorial Draft
+# Country Comparison V2 — editorial draft
 
-V2 adds concise, structured extracts above the existing V1 article comparison. It does not replace or rewrite the verified country articles.
+V2 presents three concise, side-by-side questions for each of the eight existing comparison topics. It retains the verified V1 article comparison and makes that full article content a keyboard-accessible disclosure in the Development preview.
 
-## Model and data
+## Structured facts
 
-`comparison-facts.json` stores the eight existing topic mappings, ordered comparison aspects and per-country answers. Each answer links to the mapped `InformationEntry` and to existing `OfficialSource` IDs. Source titles, URLs and recorded `LastCheckedAt` values continue to come from the official-source catalog; this draft catalog stores no verification timestamps. Ukrainian, English and Russian answer text is explicit data, not generated at runtime.
+`comparison-facts.json` contains 24 aspects across eight topics and three countries. It has 72 country answers: 69 populated, source-linked facts and three unavailable answers. Each populated fact is linked to the mapped article and only the existing official-source records selected for that claim. The catalog contains no source titles, URLs, or verification dates; the page resolves those from the existing official-source records, preserving their recorded `LastCheckedAt` values.
 
-The first aspect for each topic uses the approved article summary. The second uses the first full sentence of its opening factual passage, and is deliberately titled with a neutral prompt so it does not overstate what that sentence answers. The evidence audit maps each extract to the article passage and source records. These extracts are editorially new even where they reuse approved wording, so all 48 country facts remain `Draft` and require separate human approval.
+All 72 answers are `Draft`. Questions and answers are localized explicitly in Ukrainian, English, and Russian. Three unavailable answers use the localized “Not established in the reviewed sources” message and have no source IDs. Their absence is a documentation gap, not a claim that a right, duty, or service does not exist.
 
-## Topics and aspects
+The internal [claim-level evidence audit](COUNTRY_COMPARISON_FACT_AUDIT.md) maps every country answer to the exact supporting passage in the approved article, relevant claim IDs where a research matrix exists, selected source records and their historical check dates, and the applicable limits. This refinement did not reopen source pages or reset their recorded check dates. The Denmark employment pilot has no dedicated matrix; its bounded portal/service statements are mapped to the approved article passage and the matching official page, without inferring access to employment assistance.
 
-| Topic | Aspect 1 | Aspect 2 |
-| --- | --- | --- |
-| Temporary protection application | Scheme or status described | What key point is highlighted? |
-| Residence after protection | Other residence routes | What key point is highlighted? |
-| Finding employment | Job-search platforms | What key point is highlighted? |
-| Work authorization and employee rights | Work-authorization basis | What key point is highlighted? |
-| Healthcare | Basis for access | What key point is highlighted? |
-| Housing | Where to start | What key point is highlighted? |
-| Education and language learning | Education route | What key point is highlighted? |
-| Social assistance | Support types | What key point is highlighted? |
+## Display and release boundary
 
-The catalog contains 8 topics, 16 aspects and 48 populated country facts. All eight V1 topic-to-article mappings remain authoritative. No country ranking, personal eligibility determination or legal inference is computed by the application.
+Development shows the structured facts with a preview notice and Draft labels. Beneath them, the V1 comparison is available under the localized “Read full country articles” disclosure, collapsed by default. It retains the existing article summaries, status and update dates, full formatted content, source links, and links to the country/category pages.
 
-## Evidence and missing information
+Production continues to suppress the structured layer while any fact remains Draft. It renders the existing V1 comparison directly and expanded, without the new disclosure. Structured content appears in Production only after every fact is explicitly approved. Approval is an editorial action; startup validation checks structure, relationships, language coverage and valid statuses, not legal accuracy.
 
-Each fact's source links are drawn from its mapped article's existing official-source relationships. The UI resolves their titles, URLs and historical check dates from the unchanged source catalog. See [COUNTRY_COMPARISON_FACT_AUDIT.md](COUNTRY_COMPARISON_FACT_AUDIT.md) for the exact supporting article passages, references and qualifications.
+## Editorial review
 
-When a future aspect cannot be established from reviewed material, the catalog can mark it unavailable and provide a localized message: “Not established in the reviewed sources.” This is distinct from stating that a requirement does not exist. Unavailable items must not cite a source as if it proved absence.
+The 24 questions distinguish practical topics such as eligibility conditions, application steps, documents, services, and dates. Facts are not rankings and do not decide personal eligibility. The three unavailable items are:
 
-## Editorial approval and environment separation
+- Denmark: conditions for access to public employment assistance.
+- Germany: a comparable employer-duty checklist.
+- Germany: school-pupil-specific language support.
 
-Development renders the structured draft with a localized preview notice and `Draft` labels. Production suppresses the structured layer while any fact remains Draft and continues to show the existing V1 comparison, including summaries, expandable full article content, source links, status, dates and original article links. A visual label is not the publication control; the environment and catalog status gate rendering.
+Human reviewers should check that each question is useful, the short answers preserve qualifications and exceptions, the three translations have equivalent meaning, and the selected sources directly support the displayed claim.
 
-Facts need separate evidence and translation review before status changes to `Approved`. Partial approval does not expose a mixed draft in Production. Startup validation checks all eight topics, three countries, article/category relationships, source ownership, unique aspect IDs, complete language coverage and supported editorial statuses. Localization coverage is checked at startup too.
+## Existing publication gates
 
-## Known limitations
-
-- Two aspects per topic are a deliberately small first structure; they are not a complete comparison of national systems.
-- The second aspect presents one opening sentence and is intentionally generic; human editors can later replace it with a more discriminating question only when the existing evidence supports that question.
-- Source records are reused from the article relationship and retain their existing historical check dates; this work does not re-verify sources.
-- Facts are not individually marked as legally verified, and this feature does not change the 24 articles, their 72 Verified translations, source dates or publication state.
-- No structured fact is approved for deployment by this implementation.
+- Denmark’s attributed 2027/2028 extension-date discrepancy remains unresolved; no individual permit validity is inferred.
+- German EU protection and individual permit dates remain separate legal scopes.
+- Existing legislative, source-freshness, translation and release checks remain required.
+- This work does not change the 24 production articles, their 72 Verified translations, official-source records, or release state.
+- No structured fact is approved for publication by this implementation.
