@@ -133,7 +133,7 @@ public sealed class CountryComparisonTests
 
         Assert.Contains("structured-comparison", localHtml);
         Assert.Contains("structured-comparison", productionHtml);
-        Assert.Contains(GetResource("Compare.ApprovedEditorialStatus", "en"), productionHtml);
+        Assert.DoesNotContain("class=\"draft-label\"", productionHtml);
         Assert.Contains("Structured comparison", productionHtml);
         Assert.DoesNotContain(GetResource("Compare.DraftPreviewNotice", "en"), localHtml);
         Assert.DoesNotContain(GetResource("Compare.DraftPreviewNotice", "en"), productionHtml);
@@ -152,6 +152,7 @@ public sealed class CountryComparisonTests
         var productionDraftHtml = WebUtility.HtmlDecode(await RenderAsync(catalog, "en", query, Environments.Production, draftFacts));
         Assert.Contains(GetResource("Compare.DraftPreviewNotice", "en"), developmentDraftHtml);
         Assert.Contains(GetResource("Compare.DraftStatus", "en"), developmentDraftHtml);
+        Assert.Contains("class=\"draft-label\"", developmentDraftHtml);
         Assert.DoesNotContain("structured-comparison", productionDraftHtml);
         Assert.Contains("class=\"comparison-topic\"", productionDraftHtml);
         Assert.DoesNotContain("class=\"full-article-comparison\"", productionDraftHtml);
@@ -291,7 +292,7 @@ public sealed class CountryComparisonTests
             Assert.Contains(GetResource("Compare.StructuredHeading", language), visibleHtml);
             Assert.DoesNotContain(GetResource("Compare.DraftPreviewNotice", language), visibleHtml);
             Assert.DoesNotContain(GetResource("Compare.DraftStatus", language), visibleHtml);
-            Assert.Contains(GetResource("Compare.ApprovedEditorialStatus", language), visibleHtml);
+            Assert.DoesNotContain("class=\"draft-label\"", html);
             Assert.Contains(GetResource("Compare.ReadFullArticles", language), visibleHtml);
             Assert.Matches("<details\\b[^>]*class=\"full-article-comparison\"[^>]*>", html);
             Assert.DoesNotMatch("<details\\b[^>]*class=\"full-article-comparison\"[^>]*\\bopen(?:\\s|>)", html);
@@ -330,7 +331,7 @@ public sealed class CountryComparisonTests
                 {
                     var fact = Assert.Single(aspect.Facts, item => item.CountrySlug == countrySlug);
                     Assert.Equal(ComparisonFactStatus.Approved, fact.Status);
-                    Assert.Contains(GetResource("Compare.ApprovedEditorialStatus", language), visibleHtml);
+                    Assert.DoesNotContain("class=\"draft-label\"", html);
                     Assert.DoesNotContain(GetResource("Compare.DraftStatus", language), visibleHtml);
                     Assert.DoesNotContain(GetResource("Compare.DraftPreviewNotice", language), visibleHtml);
                     if (fact.IsAvailable)

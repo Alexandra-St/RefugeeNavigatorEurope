@@ -199,7 +199,10 @@
                                             var countryName = Localizer[CatalogLocalizationKeyResolver.CountryName(country)];
                                             <article class="structured-country" aria-label="@Localizer["Compare.CountryPanelHeading", countryName]">
                                                 <h5>@countryName</h5>
-                                                <span class="draft-label">@Localizer[fact.Status == ComparisonFactStatus.Draft ? "Compare.DraftStatus" : "Compare.ApprovedEditorialStatus"]</span>
+                                                @if (fact.Status == ComparisonFactStatus.Draft)
+                                                {
+                                                    <span class="draft-label">@Localizer["Compare.DraftStatus"]</span>
+                                                }
                                                 <p>@FactText(fact)</p>
                                                 @if (AvailableFactSources(fact).Count > 0)
                                                 {
