@@ -13,8 +13,8 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ## Coverage
 
 - Topics: 8; aspects: 24 (three per topic).
-- Populated facts: 69; unavailable facts: 3.
-- Individually selected source references: 137; distinct source IDs: 109.
+- Populated facts: 70; unavailable facts: 2.
+- Individually selected source references: 138; distinct source IDs: 109.
 - The previous 137 broad/candidate references were discarded and rebuilt. This count describes the old selection mechanism, not a claim that every old source was factually wrong.
 
 ## Fact register
@@ -641,14 +641,15 @@ The Denmark job-search pilot has no dedicated matrix in the current research tre
 ### work-employer-duties / germany
 - Topic: Compare.Topic.WorkAuthorizationRights.
 - Article: c4895b5a-eacd-53d7-a86f-f504dd615c76 — Work Authorization and Employee Rights.
-- Answer availability: Unavailable. Editorial status: Draft.
-- Research gap (not a claim ID): No specific employer-duty claim mapped in approved WR matrix ([review file](../content-research/germany-batch-2026-10-15/work-authorization-rights/SOURCES_AND_CLAIMS.md)).
+- Answer availability: Populated. Editorial status: Draft.
+- Evidence: AufenthG §4a(5), official statutory text: https://www.gesetze-im-internet.de/aufenthg_2004/__4a.html.
 - Question resource key: Compare.Aspect.EmployerDuties.
-- English answer: Not established in the reviewed sources.
-- Ukrainian answer: Не встановлено за перевіреними джерелами.
-- Russian answer: Не установлено по проверенным источникам.
-- Official references: none; no source is offered as proof of an absence claim.
-- Conditions / limits / reason for selection: The approved article describes the worker’s document checks and protections but does not establish a comparable employer-duty checklist. No new inference is made from the linked statute without a supported article passage.
+- English answer: Under §4a(5) AufenthG, an employer must check whether a foreign national may be employed: where the person holds a residence title, that no relevant prohibition or restriction applies; without one, that one of the limited bases in §4a(4) applies. For the duration of employment, the employer must keep a copy of the relevant document: the residence title, a Federal Employment Agency work permit, a certificate of permission to remain during asylum proceedings (Aufenthaltsgestattung), or a certificate of suspension of deportation (Duldung). The checking duty also applies to a person commissioning sustained paid services or work that the foreign national performs for profit; the copy-retention duty applies to employers. A separate notification of early termination is required within four weeks of learning of it, and only for employment under a title issued pursuant to Chapter 2, Section 4.
+- Ukrainian answer: За §4a(5) AufenthG роботодавець має перевірити, чи може іноземець бути працевлаштований: за наявності посвідки на проживання — чи немає відповідної заборони або обмеження, а без неї — чи застосовна одна з обмежених підстав §4a(4). Протягом зайнятості роботодавець зберігає копію відповідного документа: посвідки, дозволу на роботу Федерального агентства з праці, довідки про дозвіл на перебування під час процедури надання притулку (Aufenthaltsgestattung) або про відстрочення видворення (Duldung). Обов’язок перевірки також поширюється на замовника тривалих платних послуг або робіт, які іноземець виконує з метою отримання прибутку; обов’язок зберігати копію стосується роботодавця. Окреме повідомлення про дострокове припинення протягом чотирьох тижнів від моменту, коли про нього стало відомо, потрібне лише щодо зайнятості за посвідкою, виданою за главою 2, розділом 4.
+- Russian answer: Согласно §4a(5) AufenthG работодатель должен проверить, может ли иностранный гражданин быть принят на работу: при наличии вида на жительство — нет ли соответствующего запрета или ограничения, а без него — применимо ли одно из ограниченных оснований §4a(4). В течение всего периода занятости работодатель хранит копию соответствующего документа: вида на жительство, разрешения на работу Федерального агентства по труду, справки о разрешении на пребывание во время процедуры предоставления убежища (Aufenthaltsgestattung) либо об отсрочке высылки (Duldung). Обязанность проверки также распространяется на заказчика длительных платных услуг или работ, которые иностранец выполняет с целью получения прибыли; обязанность хранить копию относится к работодателям. Отдельное уведомление о досрочном прекращении подаётся в течение четырёх недель с момента, когда об этом стало известно, и только для работы по разрешению, выданному на основании главы 2, раздела 4.
+- Official reference (existing source record; historical check date preserved): cac1773b-211a-5b77-9f96-8056401b5902 — [AufenthG §4a — access to employment](https://www.gesetze-im-internet.de/aufenthg_2004/__4a.html); LastCheckedAt: 2026-10-15T23:22:15+00:00.
+- Relevant statutory scope (§4a(5), sentences 1–3 and sentence 4): Employment requires a residence title without a relevant prohibition/restriction, or, if no residence title is held, a basis under §4a(4). Employers must check those conditions and retain for the duration of employment a copy of the listed residence title, Federal Employment Agency work permit, Aufenthaltsgestattung or Duldung, in electronic or paper form. Sentence 4 extends the checking duty in sentence 3 no. 1 to specified commissioning of sustained paid services/work for profit; it does not extend the copy-retention duty. The four-week early-termination notice is limited to employment for which a title under Chapter 2, Section 4 was issued.
+- Source access note: The official page’s indexed statutory text was checked on 17 October 2026; a direct page open timed out. The existing source record’s historical LastCheckedAt (2026-10-15T23:22:15+00:00) is unchanged.
 
 ### work-employer-duties / poland
 - Topic: Compare.Topic.WorkAuthorizationRights.

@@ -44,8 +44,8 @@ public sealed class CountryComparisonTests
         Assert.Equal(24, facts.Topics.Sum(topic => topic.Aspects.Count));
         Assert.Equal(24, facts.Topics.SelectMany(topic => topic.Aspects).Select(aspect => aspect.QuestionResourceKey).Distinct(StringComparer.Ordinal).Count());
         Assert.Equal(72, facts.Topics.SelectMany(topic => topic.Aspects).Sum(aspect => aspect.Facts.Count));
-        Assert.Equal(69, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.IsAvailable));
-        Assert.Equal(3, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => !fact.IsAvailable));
+        Assert.Equal(70, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.IsAvailable));
+        Assert.Equal(2, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => !fact.IsAvailable));
         Assert.Equal(24, catalog.InformationEntries.Count);
         Assert.Equal(72, catalog.InformationEntryTranslations.Count);
         Assert.All(catalog.InformationEntryTranslations, translation => Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus));
@@ -55,14 +55,31 @@ public sealed class CountryComparisonTests
         Assert.Equal(new[]
         {
             ("education-pupil-language", "germany"),
-            ("employment-assistance-conditions", "denmark"),
-            ("work-employer-duties", "germany")
+            ("employment-assistance-conditions", "denmark")
         }, unavailableFacts.Select(item => (item.Id, item.CountrySlug)).OrderBy(item => item.Id).ToArray());
         foreach (var (_, _, fact) in unavailableFacts)
         foreach (var language in new[] { "uk", "en", "ru" })
         {
             Assert.Equal(GetResource("Compare.NotEstablishedInReviewedSources", language), fact.Values[language]);
         }
+
+        var employerDutiesAspect = Assert.Single(facts.Topics.SelectMany(topic => topic.Aspects), aspect => aspect.Id == "work-employer-duties");
+        var germanEmployerDuties = Assert.Single(employerDutiesAspect.Facts, fact => fact.CountrySlug == "germany");
+        Assert.True(germanEmployerDuties.IsAvailable);
+        Assert.Equal(ComparisonFactStatus.Draft, germanEmployerDuties.Status);
+        Assert.Equal(new Guid("cac1773b-211a-5b77-9f96-8056401b5902"), Assert.Single(germanEmployerDuties.OfficialSourceIds));
+        Assert.Contains("§4a(4)", germanEmployerDuties.Values["uk"]);
+        Assert.Contains("§4a(4)", germanEmployerDuties.Values["en"]);
+        Assert.Contains("§4a(4)", germanEmployerDuties.Values["ru"]);
+        Assert.Contains("тривалих платних послуг", germanEmployerDuties.Values["uk"]);
+        Assert.Contains("sustained paid services", germanEmployerDuties.Values["en"]);
+        Assert.Contains("длительных платных услуг", germanEmployerDuties.Values["ru"]);
+        Assert.Contains("Протягом зайнятості роботодавець зберігає копію", germanEmployerDuties.Values["uk"]);
+        Assert.Contains("For the duration of employment", germanEmployerDuties.Values["en"]);
+        Assert.Contains("В течение всего периода занятости", germanEmployerDuties.Values["ru"]);
+        Assert.Contains("главою 2, розділом 4", germanEmployerDuties.Values["uk"]);
+        Assert.Contains("Chapter 2, Section 4", germanEmployerDuties.Values["en"]);
+        Assert.Contains("главы 2, раздела 4", germanEmployerDuties.Values["ru"]);
 
         foreach (var topic in facts.Topics)
         {

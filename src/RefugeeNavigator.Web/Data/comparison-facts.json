@@ -553,12 +553,14 @@
               "CountrySlug": "germany",
               "InformationEntryId": "c4895b5a-eacd-53d7-a86f-f504dd615c76",
               "Status": "Draft",
-              "IsAvailable": false,
-              "OfficialSourceIds": [],
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "cac1773b-211a-5b77-9f96-8056401b5902"
+              ],
               "Values": {
-                "uk": "Не встановлено за перевіреними джерелами.",
-                "en": "Not established in the reviewed sources.",
-                "ru": "Не установлено по проверенным источникам."
+                "uk": "За §4a(5) AufenthG роботодавець має перевірити, чи може іноземець бути працевлаштований: за наявності посвідки на проживання — чи немає відповідної заборони або обмеження, а без неї — чи застосовна одна з обмежених підстав §4a(4). Протягом зайнятості роботодавець зберігає копію відповідного документа: посвідки, дозволу на роботу Федерального агентства з праці, довідки про дозвіл на перебування під час процедури надання притулку (Aufenthaltsgestattung) або про відстрочення видворення (Duldung). Обов’язок перевірки також поширюється на замовника тривалих платних послуг або робіт, які іноземець виконує з метою отримання прибутку; обов’язок зберігати копію стосується роботодавця. Окреме повідомлення про дострокове припинення протягом чотирьох тижнів від моменту, коли про нього стало відомо, потрібне лише щодо зайнятості за посвідкою, виданою за главою 2, розділом 4.",
+                "en": "Under §4a(5) AufenthG, an employer must check whether a foreign national may be employed: where the person holds a residence title, that no relevant prohibition or restriction applies; without one, that one of the limited bases in §4a(4) applies. For the duration of employment, the employer must keep a copy of the relevant document: the residence title, a Federal Employment Agency work permit, a certificate of permission to remain during asylum proceedings (Aufenthaltsgestattung), or a certificate of suspension of deportation (Duldung). The checking duty also applies to a person commissioning sustained paid services or work that the foreign national performs for profit; the copy-retention duty applies to employers. A separate notification of early termination is required within four weeks of learning of it, and only for employment under a title issued pursuant to Chapter 2, Section 4.",
+                "ru": "Согласно §4a(5) AufenthG работодатель должен проверить, может ли иностранный гражданин быть принят на работу: при наличии вида на жительство — нет ли соответствующего запрета или ограничения, а без него — применимо ли одно из ограниченных оснований §4a(4). В течение всего периода занятости работодатель хранит копию соответствующего документа: вида на жительство, разрешения на работу Федерального агентства по труду, справки о разрешении на пребывание во время процедуры предоставления убежища (Aufenthaltsgestattung) либо об отсрочке высылки (Duldung). Обязанность проверки также распространяется на заказчика длительных платных услуг или работ, которые иностранец выполняет с целью получения прибыли; обязанность хранить копию относится к работодателям. Отдельное уведомление о досрочном прекращении подаётся в течение четырёх недель с момента, когда об этом стало известно, и только для работы по разрешению, выданному на основании главы 2, раздела 4."
               }
             },
             {

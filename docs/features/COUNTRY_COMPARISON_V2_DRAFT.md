@@ -4,11 +4,11 @@ V2 presents three concise, side-by-side questions for each of the eight existing
 
 ## Structured facts
 
-`comparison-facts.json` contains 24 aspects across eight topics and three countries. It has 72 country answers: 69 populated, source-linked facts and three unavailable answers. Each populated fact is linked to the mapped article and only the existing official-source records selected for that claim. The catalog contains no source titles, URLs, or verification dates; the page resolves those from the existing official-source records, preserving their recorded `LastCheckedAt` values.
+`comparison-facts.json` contains 24 aspects across eight topics and three countries. It has 72 country answers: 70 populated, source-linked facts and two unavailable answers. Each populated fact is linked to the mapped article and only the existing official-source records selected for that claim. The catalog contains no source titles, URLs, or verification dates; the page resolves those from the existing official-source records, preserving their recorded `LastCheckedAt` values.
 
-All 72 answers are `Draft`. Questions and answers are localized explicitly in Ukrainian, English, and Russian. Three unavailable answers use the localized “Not established in the reviewed sources” message and have no source IDs. Their absence is a documentation gap, not a claim that a right, duty, or service does not exist.
+All 72 answers are `Draft`. Questions and answers are localized explicitly in Ukrainian, English, and Russian. Two unavailable answers use the localized “Not established in the reviewed sources” message and have no source IDs. Their absence is a documentation gap, not a claim that a right, duty, or service does not exist.
 
-The internal [claim-level evidence audit](COUNTRY_COMPARISON_FACT_AUDIT.md) maps every country answer to the exact supporting passage in the approved article, relevant claim IDs where a research matrix exists, selected source records and their historical check dates, and the applicable limits. This refinement did not reopen source pages or reset their recorded check dates. The Denmark employment pilot has no dedicated matrix; its bounded portal/service statements are mapped to the approved article passage and the matching official page, without inferring access to employment assistance.
+The internal [claim-level evidence audit](COUNTRY_COMPARISON_FACT_AUDIT.md) maps every country answer to the exact supporting passage in the approved article, relevant claim IDs where a research matrix exists, selected source records and their historical check dates, and the applicable limits. Source records’ historical check dates were not reset. The §4a(5) text was checked through the official page’s indexed content after a direct page open timed out; see the audit’s source-access note. The Denmark employment pilot has no dedicated matrix; its bounded portal/service statements are mapped to the approved article passage and the matching official page, without inferring access to employment assistance.
 
 ## Display and release boundary
 
@@ -18,10 +18,9 @@ Production continues to suppress the structured layer while any fact remains Dra
 
 ## Editorial review
 
-The 24 questions distinguish practical topics such as eligibility conditions, application steps, documents, services, and dates. Facts are not rankings and do not decide personal eligibility. The three unavailable items are:
+The 24 questions distinguish practical topics such as eligibility conditions, application steps, documents, services, and dates. Facts are not rankings and do not decide personal eligibility. The two unavailable items are:
 
 - Denmark: conditions for access to public employment assistance.
-- Germany: a comparable employer-duty checklist.
 - Germany: school-pupil-specific language support.
 
 Human reviewers should check that each question is useful, the short answers preserve qualifications and exceptions, the three translations have equivalent meaning, and the selected sources directly support the displayed claim.
