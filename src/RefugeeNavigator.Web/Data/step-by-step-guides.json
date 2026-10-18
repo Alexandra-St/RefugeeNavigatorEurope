@@ -1104,7 +1104,7 @@
                   "Warning": "Не робіть висновок про статус або право на захист лише з номера PESEL."
                 },
                 "en": {
-                  "Title": "Проверьте различие между PESEL и PESEL UKR",
+                  "Title": "Distinguish PESEL from PESEL UKR",
                   "Action": "Read the PESEL UKR procedure and distinguish a PESEL number from the UKR status marker.",
                   "Explanation": "A PESEL number alone does not mean the record is marked UKR or that statutory conditions for Polish temporary protection are met.",
                   "Documents": [
@@ -1114,7 +1114,7 @@
                   "Warning": "Do not infer status or eligibility from a PESEL number alone."
                 },
                 "ru": {
-                  "Title": "Distinguish PESEL from PESEL UKR",
+                  "Title": "Различайте PESEL и PESEL UKR",
                   "Action": "Изучите порядок PESEL UKR и отличайте номер PESEL от отметки UKR.",
                   "Explanation": "Один номер PESEL не означает, что в записи стоит отметка UKR или что выполнены законодательные условия польской временной защиты.",
                   "Documents": [
@@ -1838,7 +1838,7 @@
                   "Action": "До подання або відкликання заяви запитайте UdSC чи компетентного воєводу, як конкретна процедура та її етап пов’язані з вашим записом.",
                   "Explanation": "Звичайні дозволи мають окремі умови. Польський тимчасовий захист припиняється за визначених законом обставин, зокрема після надання деяких дозволів чи міжнародного захисту; саме подання заяви — інша подія.",
                   "Documents": [
-                    "Індивідуальні рішення, подтверждение подачи или переписка органа — если запрошены."
+                    "Індивідуальні рішення, підтвердження подання або листування з органом — якщо їх запитано."
                   ],
                   "Authority": "UdSC, MOS або компетентний воєвода — залежно від процедури.",
                   "Warning": "Не робіть висновок, що сама подача припиняє захист, що дозвіл буде надано або що певна подія має наперед визначений наслідок у конкретній справі."

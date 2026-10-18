@@ -271,6 +271,40 @@ public sealed class StepByStepGuideTests
     }
 
     [Fact]
+    public async Task PolandGuideTranslationsUseExpectedScriptsAndA1RussianTitle()
+    {
+        var guides = await GuideCatalog.Value;
+        var guide = Assert.Single(guides.Guides, item => item.Id == "poland-temporary-protection-v1");
+
+        static IEnumerable<string> AllText(LocalizedGuideStepText translation) =>
+            new[] { translation.Title, translation.Action, translation.Explanation, translation.Authority, translation.Warning }
+                .Concat(translation.Documents);
+
+        var englishText = guide.Translations["en"].Title + " " + guide.Translations["en"].Description;
+        englishText += " " + string.Join(" ", guide.Scenarios.SelectMany(scenario =>
+            new[] { scenario.Translations["en"].Title, scenario.Translations["en"].Description }
+                .Concat(scenario.Steps.SelectMany(step => AllText(step.Translations["en"])))));
+        Assert.DoesNotContain(englishText, character => character is >= '\u0400' and <= '\u04FF');
+
+        var ukrainianText = guide.Translations["uk"].Title + " " + guide.Translations["uk"].Description;
+        ukrainianText += " " + string.Join(" ", guide.Scenarios.SelectMany(scenario =>
+            new[] { scenario.Translations["uk"].Title, scenario.Translations["uk"].Description }
+                .Concat(scenario.Steps.SelectMany(step => AllText(step.Translations["uk"])))));
+        Assert.DoesNotContain(ukrainianText, character => "ыэёъЫЭЁЪ".Contains(character, StringComparison.Ordinal));
+
+        var firstScenario = Assert.Single(guide.Scenarios, scenario => scenario.Id == "new-arrival-pesel-ukr");
+        var a1 = Assert.Single(firstScenario.Steps, step => step.Id == "new-arrival-distinguish-pesel-ukr");
+        Assert.Equal("Различайте PESEL и PESEL UKR", a1.Translations["ru"].Title);
+        Assert.Contains(a1.Translations["ru"].Title, character => character is >= '\u0400' and <= '\u04FF');
+        Assert.NotEqual("Distinguish PESEL from PESEL UKR", a1.Translations["ru"].Title);
+
+        var d4 = Assert.Single(guide.Scenarios.SelectMany(scenario => scenario.Steps),
+            step => step.Id == "residence-clarify-other-permit-effects");
+        Assert.Equal("Індивідуальні рішення, підтвердження подання або листування з органом — якщо їх запитано.",
+            Assert.Single(d4.Translations["uk"].Documents));
+    }
+
+    [Fact]
     public async Task DenmarkGuideHasSixteenStableApprovedStepsWithExactClaimsSourcesAndCompleteTranslations()
     {
         var guides = await GuideCatalog.Value;
