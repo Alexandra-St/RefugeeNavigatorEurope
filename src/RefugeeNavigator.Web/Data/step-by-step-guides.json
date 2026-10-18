@@ -1045,7 +1045,7 @@
       "Id": "poland-temporary-protection-v1",
       "Slug": "temporary-protection",
       "CountryId": "10000000-0000-0000-0000-000000000003",
-      "EditorialStatus": "Draft",
+      "EditorialStatus": "Approved",
       "Translations": {
         "uk": {
           "Title": "Тимчасовий захист у Польщі",

@@ -27,6 +27,23 @@ public sealed class PolandContentIntegrationTests
         Guid.Parse("20000000-0000-0000-0000-000000000006")
     ];
     private static readonly string[] Languages = ["uk", "en", "ru"];
+    private static readonly HashSet<Guid> RecheckedSourceIds =
+    [
+        Guid.Parse("e4aa407d-df53-58ab-b10a-6fc2b22d91d3"),
+        Guid.Parse("0dfc274b-f02d-5acb-913e-51dee3c7fa24"),
+        Guid.Parse("433faca8-dcb6-59a1-8d32-5e38d16049b0"),
+        Guid.Parse("4eba2e3a-fa21-5803-929c-c39d0e19a7a2"),
+        Guid.Parse("0a989122-f3d4-5afd-a7ce-e10c4566cebe"),
+        Guid.Parse("d0fc2583-ea0d-5289-b9c7-de3e97417529"),
+        Guid.Parse("6a544d55-b307-5747-bddd-df1c57f678a6"),
+        Guid.Parse("5259d868-4cfb-5b58-97a5-a26975b7c283"),
+        Guid.Parse("66d98c8a-b567-5864-806b-120408bb3a93"),
+        Guid.Parse("41dea3fa-8ffc-5d2e-a476-aaf2cf07b109"),
+        Guid.Parse("50dddaa7-ff1f-5c77-b4f7-2cf1254adda6"),
+        Guid.Parse("599f4d31-e4d8-5ebf-82ed-149d5d677dd9"),
+        Guid.Parse("ddffc1ab-c2e0-5f7a-b89f-9fafb794e4b5")
+    ];
+    private static readonly DateTimeOffset SourceRecheckAt = new(2026, 10, 18, 22, 13, 56, TimeSpan.Zero);
     private static readonly IReadOnlyDictionary<string, int> ExpectedSourceCounts = new Dictionary<string, int>
     {
         ["218207bd-2a85-59e1-a945-eedb0604392e"] = 10,
@@ -123,7 +140,10 @@ public sealed class PolandContentIntegrationTests
             Assert.Contains(source.InformationEntryId, entryIds);
             Assert.Equal("https", source.Url.Scheme);
             Assert.False(string.IsNullOrWhiteSpace(source.Title));
-            Assert.Equal(new DateTimeOffset(2026, 10, 16, 0, 0, 0, TimeSpan.Zero), source.LastCheckedAt);
+            var expectedCheckedAt = RecheckedSourceIds.Contains(source.Id)
+                ? SourceRecheckAt
+                : new DateTimeOffset(2026, 10, 16, 0, 0, 0, TimeSpan.Zero);
+            Assert.Equal(expectedCheckedAt, source.LastCheckedAt);
         });
         Assert.Equal(34, sources.Select(source => source.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
         Assert.Equal(2, entries.Count(entry => entry.CategoryId == CategoryIds[0]));

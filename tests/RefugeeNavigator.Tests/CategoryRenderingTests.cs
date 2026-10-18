@@ -84,46 +84,53 @@ public sealed class CategoryRenderingTests
     {
         var catalog = await ProductionCatalog.Value;
         var guides = await ProductionGuides.Value;
-        var draftGuides = guides with
+        var polandGuide = guides.Guides.Single(guide => guide.Id == "poland-temporary-protection-v1");
+        var draftPolandGuides = guides with
         {
-            Guides = guides.Guides.Select(guide => guide with { EditorialStatus = GuideEditorialStatus.Draft }).ToArray()
+            Guides = guides.Guides.Select(guide => guide.Id == polandGuide.Id
+                ? guide with { EditorialStatus = GuideEditorialStatus.Draft }
+                : guide).ToArray()
         };
 
         var denmark = await RenderAsync(catalog, "en", "denmark", "temporary-protection", guides, "Production");
         var denmarkDevelopment = WebUtility.HtmlDecode(await RenderAsync(catalog, "en", "denmark", "temporary-protection", guides, "Development"));
-        var poland = await RenderAsync(catalog, "en", "poland", "temporary-protection", guides, "Production");
+        var poland = WebUtility.HtmlDecode(await RenderAsync(catalog, "en", "poland", "temporary-protection", guides, "Production"));
         var polandDevelopment = WebUtility.HtmlDecode(await RenderAsync(catalog, "en", "poland", "temporary-protection", guides, "Development"));
+        var polandDraftProduction = await RenderAsync(catalog, "en", "poland", "temporary-protection", draftPolandGuides, "Production");
+        var polandDraftDevelopment = WebUtility.HtmlDecode(await RenderAsync(catalog, "en", "poland", "temporary-protection", draftPolandGuides, "Development"));
         var germanyHealthcare = await RenderAsync(catalog, "en", "germany", "healthcare", guides, "Production");
-        var draftProduction = await RenderAsync(catalog, "en", "germany", "temporary-protection", draftGuides, "Production");
-        var draftDevelopment = await RenderAsync(catalog, "en", "germany", "temporary-protection", draftGuides, "Development");
 
         Assert.Contains("class=\"guide-callout\"", denmark);
         Assert.Contains("href=\"/guides/denmark/temporary-protection\"", denmark);
         Assert.Contains("class=\"guide-callout\"", denmarkDevelopment);
         Assert.Contains("href=\"/guides/denmark/temporary-protection\"", denmarkDevelopment);
-        Assert.DoesNotContain("class=\"guide-callout\"", poland);
+        Assert.Contains("class=\"guide-callout\"", poland);
+        Assert.Contains("href=\"/guides/poland/temporary-protection\"", poland);
         Assert.Contains("class=\"guide-callout\"", polandDevelopment);
-        Assert.Contains("href=\"/guides/poland/temporary-protection\"", polandDevelopment);
         Assert.DoesNotContain("class=\"guide-callout\"", germanyHealthcare);
-        Assert.DoesNotContain("class=\"guide-callout\"", draftProduction);
-        Assert.Contains("class=\"guide-callout\"", draftDevelopment);
+        Assert.DoesNotContain("class=\"guide-callout\"", polandDraftProduction);
+        Assert.Contains("class=\"guide-callout\"", polandDraftDevelopment);
     }
 
     [Theory]
     [InlineData("uk")]
     [InlineData("en")]
     [InlineData("ru")]
-    public async Task PolandDraftGuideCalloutIsLocalizedInDevelopmentOnly(string language)
+    public async Task PolandApprovedGuideCalloutIsLocalizedInProductionAndDevelopment(string language)
     {
         var catalog = await ProductionCatalog.Value;
         var guides = await ProductionGuides.Value;
-        var production = await RenderAsync(catalog, language, "poland", "temporary-protection", guides, "Production");
+        var production = WebUtility.HtmlDecode(await RenderAsync(catalog, language, "poland", "temporary-protection", guides, "Production"));
         var development = WebUtility.HtmlDecode(await RenderAsync(catalog, language, "poland", "temporary-protection", guides, "Development"));
         var culture = CultureInfo.GetCultureInfo(language);
 
-        Assert.DoesNotContain("class=\"guide-callout\"", production);
+        Assert.Contains("class=\"guide-callout\"", production);
         Assert.Contains("class=\"guide-callout\"", development);
+        Assert.Contains("href=\"/guides/poland/temporary-protection\"", production);
         Assert.Contains("href=\"/guides/poland/temporary-protection\"", development);
+        Assert.Contains(Resources.GetString("Category.GuideCalloutTitle", culture)!, production);
+        Assert.Contains(Resources.GetString("Category.GuideCalloutDescription", culture)!, production);
+        Assert.Contains(Resources.GetString("Category.GuideCalloutLink", culture)!, production);
         Assert.Contains(Resources.GetString("Category.GuideCalloutTitle", culture)!, development);
         Assert.Contains(Resources.GetString("Category.GuideCalloutDescription", culture)!, development);
         Assert.Contains(Resources.GetString("Category.GuideCalloutLink", culture)!, development);

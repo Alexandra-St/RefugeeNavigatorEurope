@@ -187,7 +187,7 @@ public sealed class StepByStepGuideTests
     }
 
     [Fact]
-    public async Task PolandGuideHasFourOrderedDraftScenariosAndSixteenTraceableSteps()
+    public async Task PolandGuideHasFourOrderedApprovedScenariosAndSixteenTraceableSteps()
     {
         var guideCatalog = await GuideCatalog.Value;
         var catalog = await Catalog.Value;
@@ -195,7 +195,7 @@ public sealed class StepByStepGuideTests
 
         Assert.Equal("poland-temporary-protection-v1", guide.Id);
         Assert.Equal("temporary-protection", guide.Slug);
-        Assert.Equal(GuideEditorialStatus.Draft, guide.EditorialStatus);
+        Assert.Equal(GuideEditorialStatus.Approved, guide.EditorialStatus);
         Assert.Equal(4, guide.Scenarios.Count);
         Assert.Equal(16, guide.Scenarios.Sum(scenario => scenario.Steps.Count));
         Assert.Equal(["new-arrival-pesel-ukr", "check-existing-pesel-ukr", "older-protection-certificate", "explore-cukr-and-residence"],
@@ -226,17 +226,21 @@ public sealed class StepByStepGuideTests
         }
 
         Assert.True(StepByStepGuideVisibility.CanRender(guide.EditorialStatus, isDevelopment: true));
-        Assert.False(StepByStepGuideVisibility.CanRender(guide.EditorialStatus, isDevelopment: false));
+        Assert.True(StepByStepGuideVisibility.CanRender(guide.EditorialStatus, isDevelopment: false));
         foreach (var language in new[] { "uk", "en", "ru" })
         {
-            var html = System.Net.WebUtility.HtmlDecode(await RenderAsync(language, Environments.Development, guideOverride: guide));
-            Assert.Contains(guide.Translations[language].Title, html);
-            Assert.Contains(Resources.GetString("Guide.DraftPreviewNotice", CultureInfo.GetCultureInfo(language))!, html);
+            var notice = Resources.GetString("Guide.DraftPreviewNotice", CultureInfo.GetCultureInfo(language))!;
+            foreach (var environment in new[] { Environments.Development, Environments.Production })
+            {
+                var html = System.Net.WebUtility.HtmlDecode(await RenderAsync(language, environment, guideOverride: guide));
+                Assert.Contains(guide.Translations[language].Title, html);
+                Assert.DoesNotContain(notice, html);
+            }
         }
     }
 
     [Fact]
-    public async Task PolandGuideRendersLocalizedStepsAndArticleLinksInDevelopmentOnly()
+    public async Task PolandGuideRendersLocalizedStepsAndArticleLinksInProductionAndDevelopment()
     {
         var guides = await GuideCatalog.Value;
         var catalog = await Catalog.Value;
@@ -247,9 +251,10 @@ public sealed class StepByStepGuideTests
             var developmentHtml = System.Net.WebUtility.HtmlDecode(await RenderAsync(language, Environments.Development, guideOverride: guide));
             var productionHtml = System.Net.WebUtility.HtmlDecode(await RenderAsync(language, Environments.Production, guideOverride: guide));
             Assert.Contains(guide.Translations[language].Title, developmentHtml);
-            Assert.Contains(Resources.GetString("Guide.DraftPreviewNotice", CultureInfo.GetCultureInfo(language))!, developmentHtml);
-            Assert.DoesNotContain(guide.Translations[language].Title, productionHtml);
-            Assert.Contains(Resources.GetString("Guide.Unavailable", CultureInfo.GetCultureInfo(language))!, productionHtml);
+            Assert.Contains(guide.Translations[language].Title, productionHtml);
+            Assert.DoesNotContain(Resources.GetString("Guide.DraftPreviewNotice", CultureInfo.GetCultureInfo(language))!, developmentHtml);
+            Assert.DoesNotContain(Resources.GetString("Guide.DraftPreviewNotice", CultureInfo.GetCultureInfo(language))!, productionHtml);
+            Assert.DoesNotContain(Resources.GetString("Guide.Unavailable", CultureInfo.GetCultureInfo(language))!, productionHtml);
 
             foreach (var scenario in guide.Scenarios)
             {
