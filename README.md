@@ -15,6 +15,7 @@ The restricted Private Beta is live. The current content covers Denmark, Germany
 - Supported interface and content languages: Ukrainian (`uk`), English (`en`), and Russian (`ru`).
 - Search supports article content and country/category filtering.
 - Country Comparison V2 presents structured, source-linked facts first and keeps the full article comparison available in a collapsed section.
+- Approved interactive Temporary Protection guides are available for Germany, Denmark, and Poland.
 - Articles, translations, official sources, and comparison facts are stored in local JSON catalogs and validated at startup.
 
 ## Technology
