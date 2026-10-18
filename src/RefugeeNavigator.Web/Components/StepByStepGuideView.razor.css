@@ -134,9 +134,16 @@ h4 {
 }
 
 .progress {
-    margin: 1rem 0 0.5rem;
+    margin: 1rem 0 0.2rem;
     color: #263f66;
     font-weight: 650;
+}
+
+.progress-notice {
+    margin: 0 0 0.5rem;
+    color: #536782;
+    font-size: 0.9rem;
+    line-height: 1.45;
 }
 
 progress {
@@ -269,8 +276,26 @@ a:focus-visible {
         grid-template-columns: 1fr;
     }
 
+    .guide-heading {
+        margin-bottom: 1.25rem;
+    }
+
+    .draft-notice {
+        margin-bottom: 1rem;
+        padding: 0.85rem 0.9rem;
+    }
+
+    .scenario-selection {
+        padding: 0.9rem;
+    }
+
+    .scenario-selection h2 {
+        margin-bottom: 0.75rem;
+    }
+
     .scenario-choice {
-        min-height: 0;
+        min-height: 2.75rem;
+        padding: 0.85rem;
     }
 
     .guide-flow-heading {
@@ -280,5 +305,10 @@ a:focus-visible {
 
     .step-navigation > button {
         flex: 1 1 auto;
+    }
+
+    .guide-disclaimer {
+        margin-top: 1rem;
+        padding: 0.85rem;
     }
 }

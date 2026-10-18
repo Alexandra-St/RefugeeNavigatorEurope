@@ -204,6 +204,8 @@ public sealed class StepByStepGuideTests
         Assert.Contains(title, visibleHtml);
         Assert.Contains(firstScenario, visibleHtml);
         Assert.Contains(Resources.GetString("Guide.DraftPreviewNotice", CultureInfo.GetCultureInfo(language))!, visibleHtml);
+        Assert.Equal(1, CountOccurrences(visibleHtml, Resources.GetString("Guide.SelectSituation", CultureInfo.GetCultureInfo(language))!));
+        Assert.DoesNotContain("class=\"eyebrow\"", html);
         Assert.Contains("role=\"note\"", html);
         Assert.Equal(4, System.Text.RegularExpressions.Regex.Matches(html, "class=\"scenario-choice\"").Count);
         Assert.DoesNotContain("Guide.", visibleHtml);
@@ -233,6 +235,11 @@ public sealed class StepByStepGuideTests
         Assert.Contains(Resources.GetString("Guide.ChangeSituation", CultureInfo.GetCultureInfo(language))!, html);
         Assert.Contains(Resources.GetString("Guide.Next", CultureInfo.GetCultureInfo(language))!, html);
         Assert.Contains("<progress", html);
+        var culture = CultureInfo.GetCultureInfo(language);
+        var progressLabel = string.Format(culture, Resources.GetString("Guide.Progress", culture)!, 1, scenario.Steps.Count);
+        Assert.Contains(progressLabel, html);
+        Assert.Contains(Resources.GetString("Guide.ProgressNotice", culture)!, html);
+        Assert.Contains("class=\"progress-notice\"", html);
     }
 
     [Theory]
@@ -262,7 +269,7 @@ public sealed class StepByStepGuideTests
         foreach (var key in new[]
         {
             "Guide.DraftPreviewNotice", "Guide.SelectSituation", "Guide.Back", "Guide.Next", "Guide.Previous",
-            "Guide.ChangeSituation", "Guide.ReadArticle", "Guide.Progress", "Guide.Documents", "Guide.Authority",
+            "Guide.ChangeSituation", "Guide.ReadArticle", "Guide.Progress", "Guide.ProgressNotice", "Guide.Documents", "Guide.Authority",
             "Guide.Warning", "Guide.Required", "Guide.Recommendation", "Guide.Optional", "Guide.Unavailable", "Guide.Step"
         })
         {
@@ -280,6 +287,9 @@ public sealed class StepByStepGuideTests
             }).ToArray()
         }).ToArray()
     };
+
+    private static int CountOccurrences(string value, string search) =>
+        System.Text.RegularExpressions.Regex.Matches(value, System.Text.RegularExpressions.Regex.Escape(search)).Count;
 
     private static async Task<string> RenderAsync(string language, string environmentName, GuideScenario? selectedScenario = null, int stepIndex = 0)
     {

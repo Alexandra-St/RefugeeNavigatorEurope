@@ -338,7 +338,8 @@
   <data name="Guide.Previous" xml:space="preserve"><value>Предыдущий шаг</value></data>
   <data name="Guide.ChangeSituation" xml:space="preserve"><value>Изменить ситуацию</value></data>
   <data name="Guide.ReadArticle" xml:space="preserve"><value>Читать полную статью</value></data>
-  <data name="Guide.Progress" xml:space="preserve"><value>Шаг {0} из {1}. Это только навигационный прогресс; он не означает наличие права на защиту или выполнение юридических требований.</value></data>
+  <data name="Guide.Progress" xml:space="preserve"><value>Шаг {0} из {1}</value></data>
+  <data name="Guide.ProgressNotice" xml:space="preserve"><value>Прогресс навигации не означает наличие права на защиту или выполнение юридических требований.</value></data>
   <data name="Guide.Documents" xml:space="preserve"><value>Документы, которые могут пригодиться</value></data>
   <data name="Guide.Authority" xml:space="preserve"><value>Куда обратиться</value></data>
   <data name="Guide.Warning" xml:space="preserve"><value>Важно</value></data>

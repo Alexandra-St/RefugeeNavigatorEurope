@@ -14,7 +14,7 @@ public static class StepByStepGuideLocalizationValidator
     private static readonly string[] InterfaceKeys =
     [
         "Guide.DraftPreviewNotice", "Guide.SelectSituation", "Guide.Back", "Guide.Next",
-        "Guide.Previous", "Guide.ChangeSituation", "Guide.ReadArticle", "Guide.Progress",
+        "Guide.Previous", "Guide.ChangeSituation", "Guide.ReadArticle", "Guide.Progress", "Guide.ProgressNotice",
         "Guide.Documents", "Guide.Authority", "Guide.Warning", "Guide.Required",
         "Guide.Recommendation", "Guide.Optional", "Guide.Unavailable", "Guide.Step"
     ];

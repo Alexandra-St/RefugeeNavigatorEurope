@@ -27,7 +27,6 @@ else
             }
 
             <header class="guide-heading">
-                <p class="eyebrow">@Localizer["Guide.SelectSituation"]</p>
                 <h1>@guideText.Title</h1>
                 <p class="guide-intro">@guideText.Description</p>
             </header>
@@ -66,6 +65,7 @@ else
                     <p class="progress" role="status" aria-live="polite">
                         @Localizer["Guide.Progress", StepIndex + 1, orderedSteps.Length]
                     </p>
+                    <p class="progress-notice">@Localizer["Guide.ProgressNotice"]</p>
                     <progress value="@(StepIndex + 1)" max="@orderedSteps.Length" aria-label="@Localizer["Guide.Progress", StepIndex + 1, orderedSteps.Length]"></progress>
 
                     <article class="guide-step" aria-labelledby="step-heading">

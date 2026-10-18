@@ -340,7 +340,8 @@
   <data name="Guide.Previous" xml:space="preserve"><value>Previous</value></data>
   <data name="Guide.ChangeSituation" xml:space="preserve"><value>Change situation</value></data>
   <data name="Guide.ReadArticle" xml:space="preserve"><value>Read the full article</value></data>
-  <data name="Guide.Progress" xml:space="preserve"><value>Step {0} of {1}. Navigation progress only; this does not indicate legal eligibility or completion of legal requirements.</value></data>
+  <data name="Guide.Progress" xml:space="preserve"><value>Step {0} of {1}</value></data>
+  <data name="Guide.ProgressNotice" xml:space="preserve"><value>Navigation progress does not indicate eligibility for protection or completion of legal requirements.</value></data>
   <data name="Guide.Documents" xml:space="preserve"><value>Potentially relevant documents</value></data>
   <data name="Guide.Authority" xml:space="preserve"><value>Where to ask</value></data>
   <data name="Guide.Warning" xml:space="preserve"><value>Important</value></data>
