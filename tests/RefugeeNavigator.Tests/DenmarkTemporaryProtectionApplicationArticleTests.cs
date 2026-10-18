@@ -68,7 +68,7 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
         Assert.All(sources, source =>
         {
             Assert.Equal(ArticleId, source.InformationEntryId);
-            Assert.Equal(new DateOnly(2026, 10, 15), DateOnly.FromDateTime(source.LastCheckedAt.UtcDateTime));
+            Assert.Equal(new DateOnly(2026, 10, 18), DateOnly.FromDateTime(source.LastCheckedAt.UtcDateTime));
             Assert.DoesNotContain(source.Url.AbsoluteUri, ExcludedSourceUrls);
         });
 

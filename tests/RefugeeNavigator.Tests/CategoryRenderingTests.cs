@@ -96,7 +96,8 @@ public sealed class CategoryRenderingTests
         var draftProduction = await RenderAsync(catalog, "en", "germany", "temporary-protection", draftGuides, "Production");
         var draftDevelopment = await RenderAsync(catalog, "en", "germany", "temporary-protection", draftGuides, "Development");
 
-        Assert.DoesNotContain("class=\"guide-callout\"", denmark);
+        Assert.Contains("class=\"guide-callout\"", denmark);
+        Assert.Contains("href=\"/guides/denmark/temporary-protection\"", denmark);
         Assert.Contains("class=\"guide-callout\"", denmarkDevelopment);
         Assert.Contains("href=\"/guides/denmark/temporary-protection\"", denmarkDevelopment);
         Assert.DoesNotContain("class=\"guide-callout\"", poland);

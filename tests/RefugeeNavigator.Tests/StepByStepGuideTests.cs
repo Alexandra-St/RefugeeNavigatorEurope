@@ -147,14 +147,14 @@ public sealed class StepByStepGuideTests
     }
 
     [Fact]
-    public async Task DenmarkGuideHasSixteenStableDraftStepsWithExactClaimsSourcesAndCompleteTranslations()
+    public async Task DenmarkGuideHasSixteenStableApprovedStepsWithExactClaimsSourcesAndCompleteTranslations()
     {
         var guides = await GuideCatalog.Value;
         var catalog = await Catalog.Value;
         var guide = Assert.Single(guides.Guides, item => item.CountryId == new Guid("10000000-0000-0000-0000-000000000001"));
         Assert.Equal("denmark-temporary-protection-v1", guide.Id);
         Assert.Equal("temporary-protection", guide.Slug);
-        Assert.Equal(GuideEditorialStatus.Draft, guide.EditorialStatus);
+        Assert.Equal(GuideEditorialStatus.Approved, guide.EditorialStatus);
         Assert.Equal(4, guide.Scenarios.Count);
         Assert.Equal(16, guide.Scenarios.Sum(item => item.Steps.Count));
         Assert.Equal(["first-section-one-application", "family-section-two-application", "application-pending", "existing-special-act-permit"],
@@ -189,19 +189,27 @@ public sealed class StepByStepGuideTests
             }
         });
         Assert.True(StepByStepGuideVisibility.CanRender(guide.EditorialStatus, isDevelopment: true));
-        Assert.False(StepByStepGuideVisibility.CanRender(guide.EditorialStatus, isDevelopment: false));
+        Assert.True(StepByStepGuideVisibility.CanRender(guide.EditorialStatus, isDevelopment: false));
         Assert.Equal(GuideEditorialStatus.Approved,
             guides.Guides.Single(item => item.CountryId == new Guid("10000000-0000-0000-0000-000000000002")).EditorialStatus);
         Assert.True(StepByStepGuideVisibility.CanRender(GuideEditorialStatus.Approved, isDevelopment: false));
 
         foreach (var language in new[] { "uk", "en", "ru" })
         {
-            var html = System.Net.WebUtility.HtmlDecode(await RenderAsync(language, Environments.Development, guideOverride: guide));
-            Assert.Contains(guide.Translations[language].Title, html);
+            var productionHtml = System.Net.WebUtility.HtmlDecode(await RenderAsync(language, Environments.Production, guideOverride: guide));
+            var developmentHtml = System.Net.WebUtility.HtmlDecode(await RenderAsync(language, Environments.Development, guideOverride: guide));
+            var draftNotice = Resources.GetString("Guide.DraftPreviewNotice", CultureInfo.GetCultureInfo(language))!;
+            Assert.Contains(guide.Translations[language].Title, productionHtml);
+            Assert.Contains(guide.Translations[language].Title, developmentHtml);
             foreach (var scenario in guide.Scenarios)
-                Assert.Contains(scenario.Translations[language].Title, html);
-            Assert.Contains(Resources.GetString("Guide.DraftPreviewNotice", CultureInfo.GetCultureInfo(language))!, html);
-            Assert.DoesNotContain("Guide.", html);
+            {
+                Assert.Contains(scenario.Translations[language].Title, productionHtml);
+                Assert.Contains(scenario.Translations[language].Title, developmentHtml);
+            }
+            Assert.DoesNotContain(draftNotice, productionHtml);
+            Assert.DoesNotContain(draftNotice, developmentHtml);
+            Assert.DoesNotContain("Guide.", productionHtml);
+            Assert.DoesNotContain("Guide.", developmentHtml);
         }
     }
 
@@ -442,7 +450,7 @@ public sealed class StepByStepGuideTests
         var html = await RenderAsync(language, Environments.Development, scenario, 0, guide);
         Assert.Contains($"/countries/denmark/categories/temporary-protection#entry-{step.ArticleId:N}", html);
         Assert.DoesNotContain("/countries/germany/categories", html);
-        Assert.Contains(Resources.GetString("Guide.DraftPreviewNotice", CultureInfo.GetCultureInfo(language))!, System.Net.WebUtility.HtmlDecode(html));
+        Assert.DoesNotContain(Resources.GetString("Guide.DraftPreviewNotice", CultureInfo.GetCultureInfo(language))!, System.Net.WebUtility.HtmlDecode(html));
     }
 
     [Theory]
