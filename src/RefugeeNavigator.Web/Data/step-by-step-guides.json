@@ -36,7 +36,7 @@
               }
             },
             {
-              "Id": "arrival-follow-application-process", "Order": 3, "Kind": "Recommendation", "ArticleId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e", "OfficialSourceIds": ["e4bb8ae0-6e0a-573b-8ab9-c6ea8fffb30a", "1d973c40-5d66-5b6a-ae13-78f667576a0a"], "ClaimIds": ["TP01", "TP03"],
+              "Id": "arrival-follow-application-process", "Order": 3, "Kind": "Recommendation", "ArticleId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e", "OfficialSourceIds": ["e4bb8ae0-6e0a-573b-8ab9-c6ea8fffb30a", "1d973c40-5d66-5b6a-ae13-78f667576a0a"], "ClaimIds": ["TP02", "TP03"],
               "Translations": {
                 "uk": { "Title": "Дотримуйтеся місцевого порядку звернення", "Action": "Уточніть, які етапи потрібні та в якій послідовності.", "Explanation": "§24 AufenthG — німецька підстава для дозволу особі, якій надано тимчасовий захист ЄС і яка заявила про готовність бути прийнятою в Німеччині. Це різні поняття: захист ЄС і німецький дозвіл.", "Documents": ["Паспорт або інший документ особи", "Документи про громадянство, проживання чи статус захисту в Україні; сімейні документи за потреби"], "Authority": "Місцева влада та Ausländerbehörde.", "Warning": "Саме громадянство чи виїзд з України не визначає право; орган може запросити інші докази." },
                 "en": { "Title": "Follow the local application process", "Action": "Ask which steps apply and in what order.", "Explanation": "Section 24 AufenthG is the German basis for a permit for a person granted EU temporary protection who declares willingness to be received in Germany. EU protection and the German permit are distinct.", "Documents": ["Passport or other identity papers", "Evidence of nationality, residence or protection in Ukraine; family records where relevant"], "Authority": "Local authorities and the Ausländerbehörde.", "Warning": "Nationality or departure from Ukraine alone does not decide eligibility; the authority may request other evidence." },
@@ -86,7 +86,7 @@
               }
             },
             {
-              "Id": "pending-ask-about-work-entry", "Order": 3, "Kind": "Recommendation", "ArticleId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e", "OfficialSourceIds": ["fd4673e5-b187-5e24-9d17-c4dae465491a", "1d973c40-5d66-5b6a-ae13-78f667576a0a"], "ClaimIds": ["TP04"],
+              "Id": "pending-ask-about-work-entry", "Order": 3, "Kind": "Recommendation", "ArticleId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e", "OfficialSourceIds": ["fd4673e5-b187-5e24-9d17-c4dae465491a", "1d973c40-5d66-5b6a-ae13-78f667576a0a"], "ClaimIds": ["TP04", "TP05"],
               "Translations": {
                 "uk": { "Title": "Уточніть незрозумілі відмітки", "Action": "Якщо документ або його запис про роботу незрозумілий, зверніться до органу, який його видав.", "Explanation": "Подання заяви не дає всім однакових прав; правова підстава та текст документа мають значення.", "Documents": ["Виданий документ і номер справи"], "Authority": "Ausländerbehörde, що видало документ.", "Warning": "Посібник не визначає право на роботу." },
                 "en": { "Title": "Ask about unclear entries", "Action": "If the document or its work entry is unclear, contact the issuing authority.", "Explanation": "Filing an application does not give everyone identical rights; the legal basis and wording of the document matter.", "Documents": ["Issued document and case reference"], "Authority": "The Ausländerbehörde that issued it.", "Warning": "This guide does not determine work authorization." },

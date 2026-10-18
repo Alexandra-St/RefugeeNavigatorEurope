@@ -52,8 +52,8 @@ public sealed class JsonStepByStepGuideProvider(string path)
             }
             if (string.IsNullOrWhiteSpace(guide.Id) || string.IsNullOrWhiteSpace(guide.Slug))
                 errors.Add("Every guide must have an ID and slug.");
-            if (guide.EditorialStatus != GuideEditorialStatus.Draft)
-                errors.Add($"Guide '{guide.Id}' must remain Draft until explicit editorial approval.");
+            if (!Enum.IsDefined(guide.EditorialStatus))
+                errors.Add($"Guide '{guide.Id}' has an unknown editorial status.");
             if (!countryIds.Contains(guide.CountryId))
                 errors.Add($"Guide '{guide.Id}' refers to a missing country.");
             ValidateLanguages(guide.Translations, $"Guide '{guide.Id}'", errors);

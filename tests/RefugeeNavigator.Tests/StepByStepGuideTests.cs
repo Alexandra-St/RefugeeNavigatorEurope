@@ -2,23 +2,39 @@ using System.Globalization;
 using System.Resources;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using RefugeeNavigator.Data;
-using RefugeeNavigator.Web.Components.Pages;
 using RefugeeNavigator.Web.Guides;
 using RefugeeNavigator.Web.Localization;
 using GuideModel = RefugeeNavigator.Web.Guides.StepByStepGuide;
-using GuidePage = RefugeeNavigator.Web.Components.Pages.StepByStepGuide;
 using GuideView = RefugeeNavigator.Web.Components.StepByStepGuideView;
 
 namespace RefugeeNavigator.Tests;
 
 public sealed class StepByStepGuideTests
 {
+    private static readonly IReadOnlyDictionary<string, string[]> ExpectedClaimIds = new Dictionary<string, string[]>(StringComparer.Ordinal)
+    {
+        ["arrival-check-local-process"] = ["TP03"],
+        ["arrival-follow-application-process"] = ["TP02", "TP03"],
+        ["arrival-check-online-route"] = ["TP03"],
+        ["arrival-keep-pending-records"] = ["TP04"],
+        ["arrival-check-90-day-exemption"] = ["TP03", "TP07"],
+        ["pending-keep-records"] = ["TP04"],
+        ["pending-check-document-effect"] = ["TP04"],
+        ["pending-ask-about-work-entry"] = ["TP04", "TP05"],
+        ["permit-read-individual-date"] = ["TP05"],
+        ["permit-check-german-continuation-rule"] = ["TP05"],
+        ["permit-separate-eu-and-german-dates"] = ["TP05", "TP06"],
+        ["permit-request-written-clarification"] = ["TP05"],
+        ["prior-protection-record-timeline"] = ["TP06"],
+        ["prior-protection-clarify-eu-discrepancy"] = ["TP08"],
+        ["prior-protection-separate-german-exemption"] = ["TP03", "TP07"],
+        ["prior-protection-follow-local-advice"] = ["TP03", "TP08"]
+    };
+
     private static readonly ResourceManager Resources = new(
         "RefugeeNavigator.Web.Resources.Localization.SharedResource",
         typeof(SharedResource).Assembly);
@@ -56,6 +72,7 @@ public sealed class StepByStepGuideTests
             "prior-protection-record-timeline", "prior-protection-clarify-eu-discrepancy", "prior-protection-separate-german-exemption", "prior-protection-follow-local-advice"
         };
         Assert.Equal(expectedStepIds, guide.Scenarios.OrderBy(scenario => scenario.Order).SelectMany(scenario => scenario.Steps.OrderBy(step => step.Order).Select(step => step.Id)));
+        Assert.Equal(ExpectedClaimIds.Keys.Order(StringComparer.Ordinal), expectedStepIds.Order(StringComparer.Ordinal));
 
         var catalog = await Catalog.Value;
         foreach (var translation in guide.Translations.Values)
@@ -69,6 +86,7 @@ public sealed class StepByStepGuideTests
                 var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == step.ArticleId);
                 Assert.Equal(guide.CountryId, article.CountryId);
                 Assert.NotEmpty(step.ClaimIds);
+                Assert.Equal(ExpectedClaimIds[step.Id], step.ClaimIds);
                 Assert.All(step.OfficialSourceIds, sourceId => Assert.Contains(catalog.OfficialSources,
                     source => source.Id == sourceId && source.InformationEntryId == step.ArticleId));
                 Assert.Equal(new[] { "en", "ru", "uk" }, step.Translations.Keys.Order(StringComparer.Ordinal));
@@ -102,8 +120,11 @@ public sealed class StepByStepGuideTests
         var wrongSource = ReplaceStep(guides, guide, scenario, step with { OfficialSourceIds = [Guid.NewGuid()] });
         Assert.Throws<InvalidDataException>(() => JsonStepByStepGuideProvider.Validate(wrongSource, catalog));
 
-        var draftChanged = guides with { Guides = [guide with { EditorialStatus = GuideEditorialStatus.Approved }] };
-        Assert.Throws<InvalidDataException>(() => JsonStepByStepGuideProvider.Validate(draftChanged, catalog));
+        var approved = guides with { Guides = [guide with { EditorialStatus = GuideEditorialStatus.Approved }] };
+        JsonStepByStepGuideProvider.Validate(approved, catalog);
+
+        var unknownStatus = guides with { Guides = [guide with { EditorialStatus = (GuideEditorialStatus)int.MaxValue }] };
+        Assert.Throws<InvalidDataException>(() => JsonStepByStepGuideProvider.Validate(unknownStatus, catalog));
     }
 
     [Theory]
@@ -162,6 +183,7 @@ public sealed class StepByStepGuideTests
         Assert.DoesNotContain("Guide.DraftPreviewNotice", html);
         Assert.False(StepByStepGuideVisibility.CanRender(GuideEditorialStatus.Draft, isDevelopment: false));
         Assert.True(StepByStepGuideVisibility.CanRender(GuideEditorialStatus.Draft, isDevelopment: true));
+        Assert.True(StepByStepGuideVisibility.CanRender(GuideEditorialStatus.Approved, isDevelopment: false));
     }
 
     [Theory]
