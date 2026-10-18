@@ -227,6 +227,34 @@ public sealed class StepByStepGuideTests
     }
 
     [Theory]
+    [InlineData("uk", "виїзду з України")]
+    [InlineData("en", "left Ukraine")]
+    [InlineData("ru", "выезда из Украины")]
+    public async Task DenmarkA2RecordPreparationDoesNotAskForDepartureDate(string language, string departureDateWording)
+    {
+        var guide = (await GuideCatalog.Value).Guides.Single(item => item.CountryId == new Guid("10000000-0000-0000-0000-000000000001"));
+        var step = guide.Scenarios.SelectMany(scenario => scenario.Steps).Single(item => item.Id == "section-one-prepare-case-records");
+        var translation = step.Translations[language];
+        var nonMilitaryContent = string.Join(" ", translation.Title, translation.Action, translation.Explanation,
+            translation.Documents, translation.Authority);
+
+        Assert.Equal(["C05", "C07"], step.ClaimIds);
+        Assert.DoesNotContain(departureDateWording, nonMilitaryContent, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains(language switch
+        {
+            "uk" => "25 червня 2026 року",
+            "en" => "25 June 2026",
+            _ => "25 июня 2026 года"
+        }, translation.Warning);
+        Assert.Contains(language switch
+        {
+            "uk" => "3 вересня 2026 року",
+            "en" => "3 September 2026",
+            _ => "3 сентября 2026 года"
+        }, translation.Warning);
+    }
+
+    [Theory]
     [InlineData("uk", "17 березня 2027", "17 березня 2028", "25 червня 2026 року", "3 вересня 2026 року")]
     [InlineData("en", "17 March 2027", "17 March 2028", "25 June 2026", "3 September 2026")]
     [InlineData("ru", "17 марта 2027", "17 марта 2028", "25 июня 2026 года", "3 сентября 2026 года")]

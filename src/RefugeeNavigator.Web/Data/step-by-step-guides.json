@@ -287,7 +287,7 @@
               "Translations": {
                 "uk": {
                   "Title": "Підготуйте документи, які можуть знадобитися",
-                  "Action": "Збережіть документи про особу й статус, дату першого виїзду з України та попередні рішення, якщо вони є.",
+              "Action": "Збережіть документи про особу й статус, відповідні докази статусу біженця та документи дітей або родини, якщо це доречно, а також попередні рішення, якщо вони стосуються справи.",
                   "Explanation": "Орган може попросити інші докази. Наведені приклади потенційно доречні, а не обов’язковий універсальний перелік. Особливе правило щодо військового статусу стосується лише визначеної групи та дат; уточніть його застосування в служби.",
                   "Documents": [
                     "Паспорт або інший документ особи; докази статусу/проживання в Україні; сімейні документи, якщо доречно; попередні рішення. Документи про військовий статус — лише якщо правило може стосуватися вас і орган їх запитує."
@@ -297,7 +297,7 @@
                 },
                 "en": {
                   "Title": "Prepare potentially relevant records",
-                  "Action": "Keep identity and status documents, the date you first left Ukraine and any earlier decisions that may be relevant.",
+              "Action": "Keep identity and status records, relevant refugee-status evidence and children’s or family records where appropriate, and any earlier decisions relevant to your case.",
                   "Explanation": "The authority may ask for other evidence. These are potentially relevant examples, not a mandatory universal list. The special military-status rule concerns only a defined group and dates; ask the service how it applies.",
                   "Documents": [
                     "Passport or other identity record; evidence of status/residence in Ukraine; family records where relevant; earlier decisions. Military-status documents only if the rule may concern you and the authority asks for them."
@@ -307,7 +307,7 @@
                 },
                 "ru": {
                   "Title": "Подготовьте документы, которые могут понадобиться",
-                  "Action": "Сохраните документы о личности и статусе, дате первого выезда из Украины и прежние решения, если они относятся к делу.",
+              "Action": "Сохраните документы, удостоверяющие личность и статус, относящиеся к делу подтверждения статуса беженца, документы детей или семьи, если это уместно, а также прежние решения, если они относятся к делу.",
                   "Explanation": "Орган может запросить другие доказательства. Это потенциально полезные примеры, а не обязательный универсальный перечень. Особое правило о военном статусе относится только к определённой группе и датам; уточните его применение в службе.",
                   "Documents": [
                     "Паспорт или другой документ личности; подтверждения статуса/проживания в Украине; семейные документы, если уместно; прежние решения. Документы о военном статусе — только если правило может относиться к вам и орган их запросит."
