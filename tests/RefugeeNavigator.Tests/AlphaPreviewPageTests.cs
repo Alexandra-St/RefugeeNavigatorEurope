@@ -67,6 +67,24 @@ public sealed class AlphaPreviewPageTests
     }
 
     [Theory]
+    [InlineData("uk")]
+    [InlineData("en")]
+    [InlineData("ru")]
+    public async Task LanguageSwitchLinksDisableEnhancedNavigationAndPreserveReturnUrl(string language)
+    {
+        var rendered = await RenderAsync<SiteHeader>(language, currentPath: "/guides/germany/temporary-protection?step=3");
+        var html = WebUtility.HtmlDecode(rendered);
+        var languageLinks = Regex.Matches(html, "<a\\b(?<attributes>[^>]*)>(?<content>.*?)</a>", RegexOptions.Singleline)
+            .Cast<Match>()
+            .Where(match => match.Groups["attributes"].Value.Contains("/set-language?culture=", StringComparison.Ordinal))
+            .ToArray();
+
+        Assert.Equal(3, languageLinks.Length);
+        Assert.All(languageLinks, link => Assert.Contains("data-enhance-nav=\"false\"", link.Groups["attributes"].Value));
+        Assert.All(languageLinks, link => Assert.Contains("returnUrl=%2Fguides%2Fgermany%2Ftemporary-protection%3Fstep%3D3", link.Groups["attributes"].Value));
+    }
+
+    [Theory]
     [InlineData("/", "/")]
     [InlineData("/search?q=jobs", "/search")]
     [InlineData("/compare?country1=denmark", "/compare")]
