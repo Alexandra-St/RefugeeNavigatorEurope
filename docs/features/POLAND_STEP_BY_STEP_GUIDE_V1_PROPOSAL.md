@@ -333,7 +333,7 @@ The progress indicator is navigation only and does not indicate eligibility, com
 
 The current model already supports country-aware guide identity, slug, editorial status, UK/EN/RU translations, scenarios, ordered steps, `ArticleId` per step, `ClaimIds`, and `OfficialSourceIds`. Scenario D can point its steps to R while A–C point to P; the existing per-step `ArticleId` is sufficient. The guide view resolves sources and article links from each step's IDs. No schema change or new routing framework is indicated by this proposal.
 
-The current page/route integration may still need country-aware extension before Poland can render. That is implementation work for a later authorized phase, not a reason to add a model field here. Phase 12.2 must verify route resolution, source/article ownership validation, and full-article links for both article IDs while retaining existing Germany and Denmark behavior.
+Phase 12.2 implementation verified that the existing country-aware route resolves Poland without an extension. Route resolution, source/article ownership validation, and full-article links for both article IDs are covered by implementation regression tests; Germany and Denmark behavior remains covered as well.
 
 ## M. Localization approach
 

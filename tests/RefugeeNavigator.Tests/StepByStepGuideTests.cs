@@ -55,6 +55,46 @@ public sealed class StepByStepGuideTests
         ["permit-check-family-and-further-questions"] = ["C04", "C19"]
     };
 
+    private static readonly IReadOnlyDictionary<string, string[]> ExpectedPolandClaimIds = new Dictionary<string, string[]>(StringComparer.Ordinal)
+    {
+        ["new-arrival-distinguish-pesel-ukr"] = ["TP01", "TP02"],
+        ["new-arrival-check-current-conditions"] = ["TP01", "TP02"],
+        ["new-arrival-check-deadline-and-gmina"] = ["TP02"],
+        ["new-arrival-confirm-local-instructions"] = ["TP02"],
+        ["existing-record-check-affected-cohort"] = ["TP04"],
+        ["existing-record-understand-passed-deadline"] = ["TP04"],
+        ["existing-record-request-gmina-check"] = ["TP04"],
+        ["existing-record-separate-eu-and-record"] = ["TP01", "TP05"],
+        ["old-certificate-identify-document"] = ["TP03", "TP07"],
+        ["old-certificate-check-transition"] = ["TP03", "TP07"],
+        ["old-certificate-verify-current-record"] = ["TP03", "TP07"],
+        ["old-certificate-separate-eu-duration"] = ["TP07", "TP05", "TP01"],
+        ["residence-distinguish-ukr-and-cukr"] = ["AT01"],
+        ["residence-check-cukr-conditions"] = ["AT02"],
+        ["residence-check-mos-and-cukr-deadline"] = ["AT03"],
+        ["residence-clarify-other-permit-effects"] = ["AT04", "AT06"]
+    };
+
+    private static readonly IReadOnlyDictionary<string, string[]> ExpectedPolandSources = new Dictionary<string, string[]>(StringComparer.Ordinal)
+    {
+        ["new-arrival-distinguish-pesel-ukr"] = ["e4aa407d-df53-58ab-b10a-6fc2b22d91d3", "0dfc274b-f02d-5acb-913e-51dee3c7fa24"],
+        ["new-arrival-check-current-conditions"] = ["e4aa407d-df53-58ab-b10a-6fc2b22d91d3"],
+        ["new-arrival-check-deadline-and-gmina"] = ["e4aa407d-df53-58ab-b10a-6fc2b22d91d3", "0dfc274b-f02d-5acb-913e-51dee3c7fa24"],
+        ["new-arrival-confirm-local-instructions"] = ["0dfc274b-f02d-5acb-913e-51dee3c7fa24", "e4aa407d-df53-58ab-b10a-6fc2b22d91d3"],
+        ["existing-record-check-affected-cohort"] = ["433faca8-dcb6-59a1-8d32-5e38d16049b0"],
+        ["existing-record-understand-passed-deadline"] = ["433faca8-dcb6-59a1-8d32-5e38d16049b0", "e4aa407d-df53-58ab-b10a-6fc2b22d91d3"],
+        ["existing-record-request-gmina-check"] = ["433faca8-dcb6-59a1-8d32-5e38d16049b0"],
+        ["existing-record-separate-eu-and-record"] = ["e4aa407d-df53-58ab-b10a-6fc2b22d91d3", "0a989122-f3d4-5afd-a7ce-e10c4566cebe", "d0fc2583-ea0d-5289-b9c7-de3e97417529"],
+        ["old-certificate-identify-document"] = ["7418e8ea-bc3d-561b-ba05-2f09ed29cdc0", "e4aa407d-df53-58ab-b10a-6fc2b22d91d3"],
+        ["old-certificate-check-transition"] = ["7418e8ea-bc3d-561b-ba05-2f09ed29cdc0", "e4aa407d-df53-58ab-b10a-6fc2b22d91d3"],
+        ["old-certificate-verify-current-record"] = ["7418e8ea-bc3d-561b-ba05-2f09ed29cdc0", "e4aa407d-df53-58ab-b10a-6fc2b22d91d3"],
+        ["old-certificate-separate-eu-duration"] = ["7418e8ea-bc3d-561b-ba05-2f09ed29cdc0", "0a989122-f3d4-5afd-a7ce-e10c4566cebe", "e4aa407d-df53-58ab-b10a-6fc2b22d91d3"],
+        ["residence-distinguish-ukr-and-cukr"] = ["41dea3fa-8ffc-5d2e-a476-aaf2cf07b109"],
+        ["residence-check-cukr-conditions"] = ["41dea3fa-8ffc-5d2e-a476-aaf2cf07b109"],
+        ["residence-check-mos-and-cukr-deadline"] = ["41dea3fa-8ffc-5d2e-a476-aaf2cf07b109", "50dddaa7-ff1f-5c77-b4f7-2cf1254adda6"],
+        ["residence-clarify-other-permit-effects"] = ["ddffc1ab-c2e0-5f7a-b89f-9fafb794e4b5", "599f4d31-e4d8-5ebf-82ed-149d5d677dd9"]
+    };
+
     private static readonly IReadOnlyDictionary<string, string[]> ExpectedDenmarkSources = new Dictionary<string, string[]>(StringComparer.Ordinal)
     {
         ["section-one-check-framework"] = ["486ee6fc-fc67-4d04-891b-acb967e5477b", "a17d9700-bcc4-4978-b9f8-0687c42ef038", "441b7bd9-54cf-47a8-80a1-e89a0e410952", "6677f201-1246-417c-8d8f-56dc99c93b0f"],
@@ -92,7 +132,7 @@ public sealed class StepByStepGuideTests
     public async Task GuideHasFourOrderedScenariosAndSixteenStableDraftStepsWithCompleteTranslations()
     {
         var guideCatalog = await GuideCatalog.Value;
-        Assert.Equal(2, guideCatalog.Guides.Count);
+        Assert.Equal(3, guideCatalog.Guides.Count);
         var guide = guideCatalog.Guides.Single(item => item.CountryId == new Guid("10000000-0000-0000-0000-000000000002"));
 
         Assert.Equal("germany-temporary-protection-v1", guide.Id);
@@ -144,6 +184,90 @@ public sealed class StepByStepGuideTests
         }
 
         Assert.All(guide.Scenarios.SelectMany(scenario => scenario.Steps), step => Assert.Equal(GuideActionKind.Recommendation, step.Kind));
+    }
+
+    [Fact]
+    public async Task PolandGuideHasFourOrderedDraftScenariosAndSixteenTraceableSteps()
+    {
+        var guideCatalog = await GuideCatalog.Value;
+        var catalog = await Catalog.Value;
+        var guide = Assert.Single(guideCatalog.Guides, item => item.CountryId == new Guid("10000000-0000-0000-0000-000000000003"));
+
+        Assert.Equal("poland-temporary-protection-v1", guide.Id);
+        Assert.Equal("temporary-protection", guide.Slug);
+        Assert.Equal(GuideEditorialStatus.Draft, guide.EditorialStatus);
+        Assert.Equal(4, guide.Scenarios.Count);
+        Assert.Equal(16, guide.Scenarios.Sum(scenario => scenario.Steps.Count));
+        Assert.Equal(["new-arrival-pesel-ukr", "check-existing-pesel-ukr", "older-protection-certificate", "explore-cukr-and-residence"],
+            guide.Scenarios.OrderBy(scenario => scenario.Order).Select(scenario => scenario.Id));
+        Assert.Equal(new[] { "en", "ru", "uk" }, guide.Translations.Keys.Order(StringComparer.Ordinal));
+
+        var steps = guide.Scenarios.OrderBy(scenario => scenario.Order).SelectMany(scenario => scenario.Steps.OrderBy(step => step.Order)).ToArray();
+        Assert.Equal(ExpectedPolandClaimIds.Keys.Order(StringComparer.Ordinal), steps.Select(step => step.Id).Order(StringComparer.Ordinal));
+        foreach (var step in steps)
+        {
+            var expectedArticleId = step.Id.StartsWith("residence-", StringComparison.Ordinal)
+                ? new Guid("c230d45f-9c76-5912-8c97-dc7d0689baa6")
+                : new Guid("218207bd-2a85-59e1-a945-eedb0604392e");
+            Assert.Equal(expectedArticleId, step.ArticleId);
+            Assert.Equal(GuideActionKind.Recommendation, step.Kind);
+            Assert.Equal(ExpectedPolandClaimIds[step.Id], step.ClaimIds);
+            Assert.Equal(ExpectedPolandSources[step.Id], step.OfficialSourceIds.Select(id => id.ToString()));
+            Assert.All(step.OfficialSourceIds, sourceId => Assert.Contains(catalog.OfficialSources,
+                source => source.Id == sourceId && source.InformationEntryId == step.ArticleId));
+            Assert.Equal(new[] { "en", "ru", "uk" }, step.Translations.Keys.Order(StringComparer.Ordinal));
+            foreach (var language in new[] { "uk", "en", "ru" })
+            {
+                var translation = step.Translations[language];
+                Assert.All(new[] { translation.Title, translation.Action, translation.Explanation, translation.Authority, translation.Warning },
+                    value => Assert.False(string.IsNullOrWhiteSpace(value)));
+                Assert.All(translation.Documents, value => Assert.False(string.IsNullOrWhiteSpace(value)));
+            }
+        }
+
+        Assert.True(StepByStepGuideVisibility.CanRender(guide.EditorialStatus, isDevelopment: true));
+        Assert.False(StepByStepGuideVisibility.CanRender(guide.EditorialStatus, isDevelopment: false));
+        foreach (var language in new[] { "uk", "en", "ru" })
+        {
+            var html = System.Net.WebUtility.HtmlDecode(await RenderAsync(language, Environments.Development, guideOverride: guide));
+            Assert.Contains(guide.Translations[language].Title, html);
+            Assert.Contains(Resources.GetString("Guide.DraftPreviewNotice", CultureInfo.GetCultureInfo(language))!, html);
+        }
+    }
+
+    [Fact]
+    public async Task PolandGuideRendersLocalizedStepsAndArticleLinksInDevelopmentOnly()
+    {
+        var guides = await GuideCatalog.Value;
+        var catalog = await Catalog.Value;
+        var guide = Assert.Single(guides.Guides, item => item.Id == "poland-temporary-protection-v1");
+
+        foreach (var language in new[] { "uk", "en", "ru" })
+        {
+            var developmentHtml = System.Net.WebUtility.HtmlDecode(await RenderAsync(language, Environments.Development, guideOverride: guide));
+            var productionHtml = System.Net.WebUtility.HtmlDecode(await RenderAsync(language, Environments.Production, guideOverride: guide));
+            Assert.Contains(guide.Translations[language].Title, developmentHtml);
+            Assert.Contains(Resources.GetString("Guide.DraftPreviewNotice", CultureInfo.GetCultureInfo(language))!, developmentHtml);
+            Assert.DoesNotContain(guide.Translations[language].Title, productionHtml);
+            Assert.Contains(Resources.GetString("Guide.Unavailable", CultureInfo.GetCultureInfo(language))!, productionHtml);
+
+            foreach (var scenario in guide.Scenarios)
+            {
+                var step = scenario.Steps[0];
+                var html = System.Net.WebUtility.HtmlDecode(await RenderAsync(language, Environments.Development, scenario, 0, guide));
+                var translation = step.Translations[language];
+                var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == step.ArticleId);
+                var country = Assert.Single(catalog.Countries, item => item.Id == article.CountryId);
+                var category = Assert.Single(catalog.Categories, item => item.Id == article.CategoryId);
+                Assert.Contains(translation.Title, html);
+                Assert.Contains(translation.Action, html);
+                Assert.Contains(translation.Explanation, html);
+                Assert.Contains(translation.Authority, html);
+                Assert.Contains(translation.Warning, html);
+                Assert.Contains($"/countries/{country.Slug}/categories/{category.Slug}#entry-{step.ArticleId:N}", html);
+                Assert.All(step.OfficialSourceIds, id => Assert.Contains(catalog.OfficialSources.Single(source => source.Id == id).Url.AbsoluteUri, html));
+            }
+        }
     }
 
     [Fact]
@@ -225,10 +349,11 @@ public sealed class StepByStepGuideTests
             {
                 CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo(culture);
                 Assert.Equal("denmark-temporary-protection-v1", StepByStepGuideResolver.Resolve(guides, catalog, "denmark", "temporary-protection")?.Id);
+                Assert.Equal("poland-temporary-protection-v1", StepByStepGuideResolver.Resolve(guides, catalog, "poland", "temporary-protection")?.Id);
                 Assert.Equal("germany-temporary-protection-v1", StepByStepGuideResolver.Resolve(guides, catalog, "GERMANY", "TEMPORARY-PROTECTION")?.Id);
             }
+            Assert.Null(StepByStepGuideResolver.Resolve(guides, catalog, "poland", "unknown"));
             Assert.Null(StepByStepGuideResolver.Resolve(guides, catalog, "unknown", "temporary-protection"));
-            Assert.Null(StepByStepGuideResolver.Resolve(guides, catalog, "poland", "temporary-protection"));
             Assert.Null(StepByStepGuideResolver.Resolve(guides, catalog, "denmark", "unknown"));
         }
         finally { CultureInfo.CurrentUICulture = previous; }

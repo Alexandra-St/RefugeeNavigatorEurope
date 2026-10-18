@@ -1040,6 +1040,834 @@
           ]
         }
       ]
+    },
+    {
+      "Id": "poland-temporary-protection-v1",
+      "Slug": "temporary-protection",
+      "CountryId": "10000000-0000-0000-0000-000000000003",
+      "EditorialStatus": "Draft",
+      "Translations": {
+        "uk": {
+          "Title": "Тимчасовий захист у Польщі",
+          "Description": "Оберіть ситуацію, щоб переглянути навігаційні кроки. Це керівництво не визначає право на захист або індивідуальний статус."
+        },
+        "en": {
+          "Title": "Temporary protection in Poland",
+          "Description": "Choose a situation to see navigation steps. This guide does not determine eligibility for protection or individual status."
+        },
+        "ru": {
+          "Title": "Временная защита в Польше",
+          "Description": "Выберите ситуацию, чтобы увидеть навигационные шаги. Это руководство не определяет право на защиту или индивидуальный статус."
+        }
+      },
+      "Scenarios": [
+        {
+          "Id": "new-arrival-pesel-ukr",
+          "Order": 1,
+          "Translations": {
+            "uk": {
+              "Title": "Нещодавно прибув/прибула й шукаю PESEL UKR",
+              "Description": "Перевірте процедуру подання на PESEL UKR і уточніть місцеві кроки."
+            },
+            "en": {
+              "Title": "New arrival seeking PESEL UKR",
+              "Description": "Navigate the current PESEL UKR application route without deciding whether you qualify."
+            },
+            "ru": {
+              "Title": "Недавно приехал/приехала и ищу PESEL UKR",
+              "Description": "Разберитесь в действующей процедуре PESEL UKR, не пытаясь определить, подходите ли вы под условия."
+            }
+          },
+          "Steps": [
+            {
+              "Id": "new-arrival-distinguish-pesel-ukr",
+              "Order": 1,
+              "Kind": "Recommendation",
+              "ArticleId": "218207bd-2a85-59e1-a945-eedb0604392e",
+              "OfficialSourceIds": [
+                "e4aa407d-df53-58ab-b10a-6fc2b22d91d3",
+                "0dfc274b-f02d-5acb-913e-51dee3c7fa24"
+              ],
+              "ClaimIds": [
+                "TP01",
+                "TP02"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Розрізняйте PESEL і PESEL UKR",
+                  "Action": "Ознайомтеся з процедурою PESEL UKR і відрізняйте номер PESEL від позначки UKR.",
+                  "Explanation": "Номер PESEL сам по собі не означає, що запис має позначку UKR або що виконані законодавчі умови польського тимчасового захисту.",
+                  "Documents": [
+                    "Підтвердження PESEL або запису UKR, документ, що посвідчує особу, чи листування з органом — якщо є."
+                  ],
+                  "Authority": "Гміна — щодо запису чи заяви; Управління у справах іноземців (UdSC) — щодо оприлюдненої інформації.",
+                  "Warning": "Не робіть висновок про статус або право на захист лише з номера PESEL."
+                },
+                "en": {
+                  "Title": "Проверьте различие между PESEL и PESEL UKR",
+                  "Action": "Read the PESEL UKR procedure and distinguish a PESEL number from the UKR status marker.",
+                  "Explanation": "A PESEL number alone does not mean the record is marked UKR or that statutory conditions for Polish temporary protection are met.",
+                  "Documents": [
+                    "Any existing PESEL or UKR record, identity document, or authority correspondence, if available."
+                  ],
+                  "Authority": "The gmina (municipal office) for record/application questions; the Office for Foreigners (UdSC) for published protection information.",
+                  "Warning": "Do not infer status or eligibility from a PESEL number alone."
+                },
+                "ru": {
+                  "Title": "Distinguish PESEL from PESEL UKR",
+                  "Action": "Изучите порядок PESEL UKR и отличайте номер PESEL от отметки UKR.",
+                  "Explanation": "Один номер PESEL не означает, что в записи стоит отметка UKR или что выполнены законодательные условия польской временной защиты.",
+                  "Documents": [
+                    "Имеющееся подтверждение PESEL или записи UKR, документ, удостоверяющий личность, или переписка с органом, если они есть."
+                  ],
+                  "Authority": "Гмина — по вопросам записи или заявления; Управление по делам иностранцев (UdSC) — по опубликованной информации о защите.",
+                  "Warning": "Не делайте вывод о статусе или праве на защиту только по номеру PESEL."
+                }
+              }
+            },
+            {
+              "Id": "new-arrival-check-current-conditions",
+              "Order": 2,
+              "Kind": "Recommendation",
+              "ArticleId": "218207bd-2a85-59e1-a945-eedb0604392e",
+              "OfficialSourceIds": [
+                "e4aa407d-df53-58ab-b10a-6fc2b22d91d3"
+              ],
+              "ClaimIds": [
+                "TP01",
+                "TP02"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Перевірте чинні умови",
+                  "Action": "Перед зверненням перевірте законодавчі умови та актуальні офіційні інструкції.",
+                  "Explanation": "Стаття 106 стосується визначеної законом групи та передбачає винятки й обставини припинення. Цей посібник не визначає, чи належить до неї конкретна людина.",
+                  "Documents": [
+                    "Документи про особу, в’їзд, статус чи інші записи — лише якщо вони можуть стосуватися обставин і їх запитав орган."
+                  ],
+                  "Authority": "Гміна — щодо заяви й запису; актуальні загальні роз’яснення перевіряйте в UdSC.",
+                  "Warning": "Не визначайте самостійно, чи охоплює вас стаття 106 або виняток."
+                },
+                "en": {
+                  "Title": "Check the current conditions",
+                  "Action": "Before applying, check the statutory conditions and current official instructions.",
+                  "Explanation": "Article 106 concerns a defined statutory group and is subject to exclusions and ending events. This guide cannot decide whether a particular person falls within it.",
+                  "Documents": [
+                    "Identity, entry, status, or other records only if potentially relevant to the circumstances and requested by the authority."
+                  ],
+                  "Authority": "The gmina for the application and record; consult UdSC current guidance for general information.",
+                  "Warning": "Do not decide for yourself whether Article 106 or an exception covers you."
+                },
+                "ru": {
+                  "Title": "Проверьте действующие условия",
+                  "Action": "Перед обращением проверьте законодательные условия и актуальные официальные инструкции.",
+                  "Explanation": "Статья 106 касается определённой законом группы и предусматривает исключения и обстоятельства прекращения. Это руководство не определяет, относится ли к ней конкретный человек.",
+                  "Documents": [
+                    "Документы о личности, въезде, статусе или иные записи — только если они могут иметь отношение к обстоятельствам и их запросил орган."
+                  ],
+                  "Authority": "Гмина — по заявлению и записи; актуальные общие разъяснения проверяйте у UdSC.",
+                  "Warning": "Не определяйте самостоятельно, распространяется ли на вас статья 106 или исключение."
+                }
+              }
+            },
+            {
+              "Id": "new-arrival-check-deadline-and-gmina",
+              "Order": 3,
+              "Kind": "Recommendation",
+              "ArticleId": "218207bd-2a85-59e1-a945-eedb0604392e",
+              "OfficialSourceIds": [
+                "e4aa407d-df53-58ab-b10a-6fc2b22d91d3",
+                "0dfc274b-f02d-5acb-913e-51dee3c7fa24"
+              ],
+              "ClaimIds": [
+                "TP02"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Уточніть строк і зверніться до гміни",
+                  "Action": "Якщо ви оформлюєте PESEL UKR, перевірте чинний строк і подайте заяву за процедурою гміни.",
+                  "Explanation": "Затверджена стаття вказує на звернення до будь-якої гміни протягом 30 днів після перетину польського кордону. Перевірте законодавчі умови й актуальні інструкції.",
+                  "Documents": [
+                    "Формуляр, фотографія, документ, що посвідчує особу, та інші записи, які може запросити орган."
+                  ],
+                  "Authority": "Будь-яка гміна — відповідно до чинної офіційної процедури.",
+                  "Warning": "Строк не підтверджує право на захист і сам по собі не визначає наслідків пізнішого звернення."
+                },
+                "en": {
+                  "Title": "Check the deadline and contact a gmina",
+                  "Action": "If seeking PESEL UKR, check the current deadline and apply through the instructed gmina procedure.",
+                  "Explanation": "The approved article states that an application may be made at any gmina within 30 days after crossing the Polish border. Check the statutory conditions and current instructions.",
+                  "Documents": [
+                    "Application form, photograph, identity document, and any other records the authority may request."
+                  ],
+                  "Authority": "Any gmina, subject to the current official procedure.",
+                  "Warning": "The deadline does not establish eligibility, and this guide does not determine the outcome of a later application."
+                },
+                "ru": {
+                  "Title": "Уточните срок и обратитесь в гмину",
+                  "Action": "Если вы оформляете PESEL UKR, проверьте действующий срок и подайте заявление по процедуре гмины.",
+                  "Explanation": "В утверждённой статье указано обращение в любую гмину в течение 30 дней после пересечения польской границы. Проверьте законодательные условия и актуальные инструкции.",
+                  "Documents": [
+                    "Формуляр, фотография, документ, удостоверяющий личность, и иные записи, которые может запросить орган."
+                  ],
+                  "Authority": "Любая гмина — согласно действующей официальной процедуре.",
+                  "Warning": "Срок не подтверждает право на защиту, а руководство не определяет результат более позднего обращения."
+                }
+              }
+            },
+            {
+              "Id": "new-arrival-confirm-local-instructions",
+              "Order": 4,
+              "Kind": "Recommendation",
+              "ArticleId": "218207bd-2a85-59e1-a945-eedb0604392e",
+              "OfficialSourceIds": [
+                "0dfc274b-f02d-5acb-913e-51dee3c7fa24",
+                "e4aa407d-df53-58ab-b10a-6fc2b22d91d3"
+              ],
+              "ClaimIds": [
+                "TP02"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Підтвердіть місцеві інструкції",
+                  "Action": "Уточніть особисту процедуру та документи для заяви, зокрема у випадку дитини чи відсутності документа.",
+                  "Explanation": "Офіційна послуга описує особисте звернення. Стаття наводить формуляр, фотографію та документ, що посвідчує особу, як приклади підготовки; для дітей та особливих випадків перевірте інструкції гміни.",
+                  "Documents": [
+                    "Формуляр, фотографія та документ, що посвідчує особу; інше — якщо цього вимагають актуальні інструкції."
+                  ],
+                  "Authority": "Гміна, що приймає заяву.",
+                  "Warning": "Це не універсальний перелік документів; не припускайте окремої процедури для дитини чи відсутнього документа без підтвердження органу."
+                },
+                "en": {
+                  "Title": "Confirm local instructions",
+                  "Action": "Confirm the in-person process and documents for the specific application, especially for a child or missing-document situation.",
+                  "Explanation": "The official service describes an in-person application. The article gives a form, photograph, and identity document as preparation examples; check gmina instructions for children and special circumstances.",
+                  "Documents": [
+                    "Form, photograph, and identity document; other items only if current instructions require them."
+                  ],
+                  "Authority": "The gmina accepting the application.",
+                  "Warning": "These examples are not a universal checklist; do not assume a special procedure for a child or missing document without authority guidance."
+                },
+                "ru": {
+                  "Title": "Уточните местные инструкции",
+                  "Action": "Уточните личную процедуру и документы для заявления, особенно если речь о ребёнке или отсутствующем документе.",
+                  "Explanation": "Официальная услуга предусматривает личное обращение. В статье формуляр, фотография и документ, удостоверяющий личность, приведены как примеры подготовки; для детей и особых обстоятельств уточните инструкции гмины.",
+                  "Documents": [
+                    "Формуляр, фотография и документ, удостоверяющий личность; остальное — если этого требуют актуальные инструкции."
+                  ],
+                  "Authority": "Гмина, принимающая заявление.",
+                  "Warning": "Это не универсальный перечень документов; не предполагайте особую процедуру для ребёнка или отсутствующего документа без разъяснений органа."
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Id": "check-existing-pesel-ukr",
+          "Order": 2,
+          "Translations": {
+            "uk": {
+              "Title": "У мене вже є запис PESEL UKR",
+              "Description": "Зрозумійте, чи могло минуле правило підтвердження особи стосуватися запису, і попросіть гміну його перевірити."
+            },
+            "en": {
+              "Title": "I already have a PESEL UKR record",
+              "Description": "Understand whether the historical identity-confirmation rule may concern the record and ask the gmina to check it."
+            },
+            "ru": {
+              "Title": "У меня уже есть запись PESEL UKR",
+              "Description": "Уточните, могло ли историческое требование подтвердить личность касаться записи, и попросите гмину её проверить."
+            }
+          },
+          "Steps": [
+            {
+              "Id": "existing-record-check-affected-cohort",
+              "Order": 1,
+              "Kind": "Recommendation",
+              "ArticleId": "218207bd-2a85-59e1-a945-eedb0604392e",
+              "OfficialSourceIds": [
+                "433faca8-dcb6-59a1-8d32-5e38d16049b0"
+              ],
+              "ClaimIds": [
+                "TP04"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "З’ясуйте, чи стосується вас визначена група",
+                  "Action": "Перевірте, чи було PESEL UKR оформлено лише на підставі заяви без пред’явлення чинного паспорта.",
+                  "Explanation": "Вимога підтвердження особи стосувалася саме цієї визначеної групи, а не всіх людей із PESEL UKR.",
+                  "Documents": [
+                    "Відомості про первинну заяву чи запис і документи, якщо вони є; не завантажуйте їх у цей посібник."
+                  ],
+                  "Authority": "Гміна може перевірити фактичний запис.",
+                  "Warning": "Не поширюйте це правило на всіх власників PESEL UKR і не вводьте паспортні дані в посібник."
+                },
+                "en": {
+                  "Title": "Check whether the defined group may concern the record",
+                  "Action": "Check whether PESEL UKR was issued only on the basis of a declaration without presentation of a valid passport.",
+                  "Explanation": "The identity-confirmation requirement applied to that defined group, not everyone with PESEL UKR.",
+                  "Documents": [
+                    "Original application or record information and identity documents, if available; do not upload them to this guide."
+                  ],
+                  "Authority": "The gmina can check the actual record.",
+                  "Warning": "Do not extend this rule to all PESEL UKR holders or enter passport details in the guide."
+                },
+                "ru": {
+                  "Title": "Уточните, может ли правило касаться вашей записи",
+                  "Action": "Проверьте, была ли запись PESEL UKR оформлена только на основании заявления без предъявления действующего паспорта.",
+                  "Explanation": "Требование подтвердить личность касалось именно этой определённой группы, а не всех людей с PESEL UKR.",
+                  "Documents": [
+                    "Сведения о первоначальном заявлении или записи и документы, если они есть; не загружайте их в это руководство."
+                  ],
+                  "Authority": "Гмина может проверить фактическую запись.",
+                  "Warning": "Не распространяйте это правило на всех владельцев PESEL UKR и не вводите паспортные данные в руководство."
+                }
+              }
+            },
+            {
+              "Id": "existing-record-understand-passed-deadline",
+              "Order": 2,
+              "Kind": "Recommendation",
+              "ArticleId": "218207bd-2a85-59e1-a945-eedb0604392e",
+              "OfficialSourceIds": [
+                "433faca8-dcb6-59a1-8d32-5e38d16049b0",
+                "e4aa407d-df53-58ab-b10a-6fc2b22d91d3"
+              ],
+              "ClaimIds": [
+                "TP04"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Уточніть наслідки минулого строку",
+                  "Action": "Ознайомтеся з минулим строком і попросіть гміну перевірити актуальний запис, якщо правило може вас стосуватися.",
+                  "Explanation": "За статтею, строк сплив; UdSC повідомляє, що для охоплених вимогою осіб непідтвердження призвело до втрати статусу UKR і польського тимчасового захисту з 1 вересня 2026 року.",
+                  "Documents": [
+                    "Листування або підтвердження запису від гміни, якщо вже маєте."
+                  ],
+                  "Authority": "Гміна — для перевірки фактичного запису.",
+                  "Warning": "Це історичне правило для визначеної групи. Посібник не встановлює, чи було зачеплено конкретний запис."
+                },
+                "en": {
+                  "Title": "Understand the stated effect of the passed deadline",
+                  "Action": "Read about the past deadline and ask the gmina to verify the current record if the rule may concern you.",
+                  "Explanation": "The article says the deadline passed; UdSC reports that for people covered by the requirement, failure to confirm led to loss of UKR status and Polish temporary protection from 1 September 2026.",
+                  "Documents": [
+                    "Gmina correspondence or record confirmation, if already held."
+                  ],
+                  "Authority": "The gmina for verification of the actual record.",
+                  "Warning": "This is a historical rule for a defined group. The guide does not determine whether an individual record was affected."
+                },
+                "ru": {
+                  "Title": "Уточните указанные последствия прошедшего срока",
+                  "Action": "Ознакомьтесь с прошедшим сроком и попросите гмину проверить актуальную запись, если правило может вас касаться.",
+                  "Explanation": "Согласно статье, срок прошёл; UdSC сообщает, что для лиц, подпадавших под требование, неподтверждение привело к утрате статуса UKR и польской временной защиты с 1 сентября 2026 года.",
+                  "Documents": [
+                    "Переписка или подтверждение записи от гмины, если они уже есть."
+                  ],
+                  "Authority": "Гмина — для проверки фактической записи.",
+                  "Warning": "Это историческое правило для определённой группы. Руководство не устанавливает, затронута ли конкретная запись."
+                }
+              }
+            },
+            {
+              "Id": "existing-record-request-gmina-check",
+              "Order": 3,
+              "Kind": "Recommendation",
+              "ArticleId": "218207bd-2a85-59e1-a945-eedb0604392e",
+              "OfficialSourceIds": [
+                "433faca8-dcb6-59a1-8d32-5e38d16049b0"
+              ],
+              "ClaimIds": [
+                "TP04"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Попросіть гміну перевірити запис",
+                  "Action": "Попросіть гміну перевірити актуальний запис PESEL UKR і пояснити доступний наступний крок.",
+                  "Explanation": "Стаття радить перевірити запис, якщо історична вимога може стосуватися людини. Посібник не має доступу до державних систем і не встановлює статус.",
+                  "Documents": [
+                    "Номер справи чи листування — якщо є і гміна просить; не публікуйте ці дані тут."
+                  ],
+                  "Authority": "Гміна.",
+                  "Warning": "Перевірка не гарантує виправлення запису. Посібник не збирає паспортні дані й не перевіряє статус автоматично."
+                },
+                "en": {
+                  "Title": "Ask the gmina to check the record",
+                  "Action": "Ask the gmina to check the current PESEL UKR record and explain any available next step.",
+                  "Explanation": "The article recommends a record check if the historical requirement may apply. The guide cannot query government systems or establish status.",
+                  "Documents": [
+                    "Case reference or correspondence, if available and requested by the gmina; do not disclose it here."
+                  ],
+                  "Authority": "The gmina.",
+                  "Warning": "A record check does not guarantee correction. The guide does not collect passport data or check status automatically."
+                },
+                "ru": {
+                  "Title": "Попросите гмину проверить запись",
+                  "Action": "Попросите гмину проверить актуальную запись PESEL UKR и объяснить возможный следующий шаг.",
+                  "Explanation": "Статья рекомендует проверить запись, если историческое требование может касаться человека. Руководство не имеет доступа к государственным системам и не устанавливает статус.",
+                  "Documents": [
+                    "Номер дела или переписка — если есть и гмина просит; не сообщайте эти данные здесь."
+                  ],
+                  "Authority": "Гмина.",
+                  "Warning": "Проверка не гарантирует исправление записи. Руководство не собирает паспортные данные и не проверяет статус автоматически."
+                }
+              }
+            },
+            {
+              "Id": "existing-record-separate-eu-and-record",
+              "Order": 4,
+              "Kind": "Recommendation",
+              "ArticleId": "218207bd-2a85-59e1-a945-eedb0604392e",
+              "OfficialSourceIds": [
+                "e4aa407d-df53-58ab-b10a-6fc2b22d91d3",
+                "0a989122-f3d4-5afd-a7ce-e10c4566cebe",
+                "d0fc2583-ea0d-5289-b9c7-de3e97417529"
+              ],
+              "ClaimIds": [
+                "TP01",
+                "TP05"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Відокремлюйте строк ЄС від особистого запису",
+                  "Action": "Попросіть гміну перевірити польський запис, а не вважайте дату продовження ЄС доказом його чинності.",
+                  "Explanation": "Рішення ЄС передбачає тимчасовий захист до 4 березня 2028 року та застосовується з 5 березня 2027 року. Стаття 106 стосується визначеної законом групи й має винятки та обставини припинення.",
+                  "Documents": [
+                    "Підтвердження запису від гміни та індивідуальні рішення чи повідомлення, якщо є."
+                  ],
+                  "Authority": "Гміна — щодо запису; UdSC — щодо оприлюднених роз’яснень.",
+                  "Warning": "Дата ЄС не визначає індивідуальну відповідність умовам, статус або чинність документа."
+                },
+                "en": {
+                  "Title": "Keep the EU duration separate from a personal record",
+                  "Action": "Ask the gmina to check the Polish record; do not treat the EU extension date as proof that it is valid.",
+                  "Explanation": "The EU decision provides for temporary protection through 4 March 2028 and applies from 5 March 2027. Article 106 concerns a defined statutory group and has exclusions and ending events.",
+                  "Documents": [
+                    "Current gmina record confirmation and any individual decision or notice, if available."
+                  ],
+                  "Authority": "The gmina for the record; UdSC for published guidance.",
+                  "Warning": "The EU date does not determine individual eligibility, status, or document validity."
+                },
+                "ru": {
+                  "Title": "Отделяйте срок ЕС от личной записи",
+                  "Action": "Попросите гмину проверить польскую запись; не считайте дату продления ЕС доказательством её действительности.",
+                  "Explanation": "Решение ЕС предусматривает временную защиту до 4 марта 2028 года и применяется с 5 марта 2027 года. Статья 106 касается определённой законом группы и предусматривает исключения и обстоятельства прекращения.",
+                  "Documents": [
+                    "Подтверждение записи от гмины и индивидуальные решения или уведомления, если они есть."
+                  ],
+                  "Authority": "Гмина — по записи; UdSC — по опубликованным разъяснениям.",
+                  "Warning": "Дата ЕС не определяет индивидуальное соответствие условиям, статус или действительность документа."
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Id": "older-protection-certificate",
+          "Order": 3,
+          "Translations": {
+            "uk": {
+              "Title": "У мене старе паперове посвідчення",
+              "Description": "Перевірте перехідне правило для посвідчення окремо від статусу PESEL UKR і строку захисту ЄС."
+            },
+            "en": {
+              "Title": "I have an older paper protection certificate",
+              "Description": "Check the certificate-specific transition separately from PESEL UKR status and the EU protection duration."
+            },
+            "ru": {
+              "Title": "У меня старое бумажное удостоверение о защите",
+              "Description": "Проверьте переходное правило для удостоверения отдельно от статуса PESEL UKR и срока защиты ЕС."
+            }
+          },
+          "Steps": [
+            {
+              "Id": "old-certificate-identify-document",
+              "Order": 1,
+              "Kind": "Recommendation",
+              "ArticleId": "218207bd-2a85-59e1-a945-eedb0604392e",
+              "OfficialSourceIds": [
+                "7418e8ea-bc3d-561b-ba05-2f09ed29cdc0",
+                "e4aa407d-df53-58ab-b10a-6fc2b22d91d3"
+              ],
+              "ClaimIds": [
+                "TP03",
+                "TP07"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Визначте старе посвідчення",
+                  "Action": "Перевірте, чи є документ старим паперовим посвідченням UdSC про тимчасовий захист.",
+                  "Explanation": "UdSC припинило видавати попередній тип посвідчень із 5 березня 2026 року. Це окремий документ, не запис PESEL UKR і не дозвіл CUKR.",
+                  "Documents": [
+                    "Саме посвідчення та пізніший запис PESEL UKR чи повідомлення органу, якщо є."
+                  ],
+                  "Authority": "UdSC — щодо посвідчення; гміна — щодо запису PESEL UKR.",
+                  "Warning": "Дата припинення видачі цього документа не означає припинення захисту ЄС."
+                },
+                "en": {
+                  "Title": "Identify the older certificate",
+                  "Action": "Check whether the document is an older UdSC paper certificate confirming temporary protection.",
+                  "Explanation": "UdSC stopped issuing the former type of certificates from 5 March 2026. This is a separate document, not a PESEL UKR record or CUKR permit.",
+                  "Documents": [
+                    "The certificate and any later PESEL UKR record or authority notice, if available."
+                  ],
+                  "Authority": "UdSC for certificate guidance; the gmina for a PESEL UKR record.",
+                  "Warning": "The date issuance stopped does not mean EU temporary protection ended."
+                },
+                "ru": {
+                  "Title": "Определите, является ли документ старым удостоверением",
+                  "Action": "Проверьте, является ли документ старым бумажным удостоверением UdSC о временной защите.",
+                  "Explanation": "UdSC прекратило выдавать прежний тип удостоверений с 5 марта 2026 года. Это отдельный документ, а не запись PESEL UKR и не разрешение CUKR.",
+                  "Documents": [
+                    "Само удостоверение и более поздняя запись PESEL UKR или уведомление органа, если есть."
+                  ],
+                  "Authority": "UdSC — по удостоверению; гмина — по записи PESEL UKR.",
+                  "Warning": "Дата прекращения выдачи этого документа не означает прекращение временной защиты ЕС."
+                }
+              }
+            },
+            {
+              "Id": "old-certificate-check-transition",
+              "Order": 2,
+              "Kind": "Recommendation",
+              "ArticleId": "218207bd-2a85-59e1-a945-eedb0604392e",
+              "OfficialSourceIds": [
+                "7418e8ea-bc3d-561b-ba05-2f09ed29cdc0",
+                "e4aa407d-df53-58ab-b10a-6fc2b22d91d3"
+              ],
+              "ClaimIds": [
+                "TP03",
+                "TP07"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Перевірте перехідне правило для посвідчення",
+                  "Action": "Ознайомтеся з актуальним роз’ясненням UdSC про раніше видане посвідчення та винятки.",
+                  "Explanation": "UdSC вказує, що старі посвідчення залишаються чинними до 4 березня 2027 року, якщо раніше не настане обставина припинення чи зміни статусу.",
+                  "Documents": [
+                    "Посвідчення та пізніше рішення чи запис, які можуть мати значення."
+                  ],
+                  "Authority": "UdSC; зверніться до компетентного органу для перевірки конкретної справи.",
+                  "Warning": "Це перехідне правило для документа, а не індивідуальне підтвердження його чинності."
+                },
+                "en": {
+                  "Title": "Check the certificate-specific transition",
+                  "Action": "Read UdSC’s current explanation about already-issued certificates and exceptions.",
+                  "Explanation": "UdSC says older certificates remain valid until 4 March 2027, subject to earlier ending events or status changes.",
+                  "Documents": [
+                    "The certificate and any later decision or record that may be relevant."
+                  ],
+                  "Authority": "UdSC; contact the competent authority to check an individual case.",
+                  "Warning": "This is a document-specific transition, not an individual validity determination."
+                },
+                "ru": {
+                  "Title": "Проверьте переходное правило для удостоверения",
+                  "Action": "Ознакомьтесь с актуальным разъяснением UdSC о ранее выданном удостоверении и исключениях.",
+                  "Explanation": "UdSC указывает, что старые удостоверения остаются действительными до 4 марта 2027 года, если раньше не наступит обстоятельство прекращения или изменения статуса.",
+                  "Documents": [
+                    "Удостоверение и более позднее решение или запись, которые могут иметь значение."
+                  ],
+                  "Authority": "UdSC; обратитесь в компетентный орган для проверки конкретного дела.",
+                  "Warning": "Это переходное правило для документа, а не индивидуальное подтверждение его действительности."
+                }
+              }
+            },
+            {
+              "Id": "old-certificate-verify-current-record",
+              "Order": 3,
+              "Kind": "Recommendation",
+              "ArticleId": "218207bd-2a85-59e1-a945-eedb0604392e",
+              "OfficialSourceIds": [
+                "7418e8ea-bc3d-561b-ba05-2f09ed29cdc0",
+                "e4aa407d-df53-58ab-b10a-6fc2b22d91d3"
+              ],
+              "ClaimIds": [
+                "TP03",
+                "TP07"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Попросіть орган перевірити актуальний запис",
+                  "Action": "Попросіть UdSC або компетентний орган пояснити, як посвідчення співвідноситься з пізнішим записом у вашій справі.",
+                  "Explanation": "Попередня подія припинення або присвоєння PESEL UKR може мати значення для старого посвідчення; не робіть висновок лише за документом.",
+                  "Documents": [
+                    "Посвідчення, підтвердження PESEL UKR і листування органу, якщо вони є та запитані."
+                  ],
+                  "Authority": "UdSC — щодо посвідчення; гміна — щодо PESEL UKR.",
+                  "Warning": "Не стверджуйте, що будь-яке присвоєння PESEL UKR автоматично припинило кожне старе посвідчення; уточніть контекст у органу."
+                },
+                "en": {
+                  "Title": "Ask the authority to verify the current record",
+                  "Action": "Ask UdSC or the competent office to clarify how the certificate relates to a later record in your case.",
+                  "Explanation": "An earlier ending event or PESEL UKR assignment may matter for the old certificate; do not decide from the document alone.",
+                  "Documents": [
+                    "The certificate, PESEL UKR confirmation, and authority correspondence, if available and requested."
+                  ],
+                  "Authority": "UdSC for the certificate; the gmina for PESEL UKR.",
+                  "Warning": "Do not assume every PESEL UKR assignment automatically ended every old certificate; ask the authority about the exact context."
+                },
+                "ru": {
+                  "Title": "Попросите орган проверить актуальную запись",
+                  "Action": "Попросите UdSC или компетентный орган разъяснить, как удостоверение соотносится с более поздней записью в вашем деле.",
+                  "Explanation": "Предыдущее обстоятельство прекращения или присвоение PESEL UKR может иметь значение для старого удостоверения; не делайте вывод только по документу.",
+                  "Documents": [
+                    "Удостоверение, подтверждение PESEL UKR и переписка с органом, если они есть и запрошены."
+                  ],
+                  "Authority": "UdSC — по удостоверению; гмина — по PESEL UKR.",
+                  "Warning": "Не считайте, что любое присвоение PESEL UKR автоматически прекратило каждое старое удостоверение; уточните обстоятельства у органа."
+                }
+              }
+            },
+            {
+              "Id": "old-certificate-separate-eu-duration",
+              "Order": 4,
+              "Kind": "Recommendation",
+              "ArticleId": "218207bd-2a85-59e1-a945-eedb0604392e",
+              "OfficialSourceIds": [
+                "7418e8ea-bc3d-561b-ba05-2f09ed29cdc0",
+                "0a989122-f3d4-5afd-a7ce-e10c4566cebe",
+                "e4aa407d-df53-58ab-b10a-6fc2b22d91d3"
+              ],
+              "ClaimIds": [
+                "TP07",
+                "TP05",
+                "TP01"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Розрізняйте дату посвідчення і захист ЄС",
+                  "Action": "Уточнюючи дати, визначте, чи йдеться про паперове посвідчення, польський запис/статус чи рішення ЄС про тимчасовий захист.",
+                  "Explanation": "Перехідне правило для старого посвідчення — до 4 березня 2027 року. Рішення ЄС продовжує тимчасовий захист до 4 березня 2028 року із застосуванням з 5 березня 2027 року; стаття 106 має визначене коло осіб, винятки та обставини припинення.",
+                  "Documents": [
+                    "Посвідчення, підтвердження поточного запису та індивідуальне рішення органу, якщо є."
+                  ],
+                  "Authority": "UdSC або гміна — залежно від документа чи запису.",
+                  "Warning": "4 березня 2027 року не є датою завершення захисту ЄС; 4 березня 2028 року не гарантує чинності конкретного посвідчення, запису чи дозволу."
+                },
+                "en": {
+                  "Title": "Separate the certificate date from EU protection",
+                  "Action": "When checking dates, identify whether the issue concerns the paper certificate, Polish record/status, or the EU temporary-protection decision.",
+                  "Explanation": "The old-certificate transition runs through 4 March 2027. The EU decision extends temporary protection through 4 March 2028, applying from 5 March 2027; Article 106 has a defined scope, exclusions, and ending events.",
+                  "Documents": [
+                    "The certificate, current record confirmation, and any individual authority decision, if available."
+                  ],
+                  "Authority": "UdSC or the gmina, depending on the document or record.",
+                  "Warning": "4 March 2027 is not the end date of EU protection; 4 March 2028 does not guarantee the validity of an individual certificate, record, or permit."
+                },
+                "ru": {
+                  "Title": "Различайте срок удостоверения и защиту ЕС",
+                  "Action": "При уточнении дат определите, идёт ли речь о бумажном удостоверении, польской записи/статусе или решении ЕС о временной защите.",
+                  "Explanation": "Переходное правило для старого удостоверения действует до 4 марта 2027 года. Решение ЕС продлевает временную защиту до 4 марта 2028 года с применением с 5 марта 2027 года; статья 106 имеет определённую сферу действия, исключения и обстоятельства прекращения.",
+                  "Documents": [
+                    "Удостоверение, подтверждение текущей записи и индивидуальное решение органа, если они есть."
+                  ],
+                  "Authority": "UdSC или гмина — в зависимости от документа или записи.",
+                  "Warning": "4 марта 2027 года — не дата окончания защиты ЕС; 4 марта 2028 года не гарантирует действительность конкретного удостоверения, записи или разрешения."
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Id": "explore-cukr-and-residence",
+          "Order": 4,
+          "Translations": {
+            "uk": {
+              "Title": "Я розглядаю CUKR або інший дозвіл на проживання",
+              "Description": "Ознайомтеся з CUKR та іншими маршрутами, не визначаючи індивідуальну відповідність умовам."
+            },
+            "en": {
+              "Title": "I am exploring CUKR or another residence permit",
+              "Description": "Explore CUKR and other residence routes without deciding individual eligibility."
+            },
+            "ru": {
+              "Title": "Я рассматриваю CUKR или другое разрешение на проживание",
+              "Description": "Изучите CUKR и другие варианты проживания, не определяя индивидуальное соответствие условиям."
+            }
+          },
+          "Steps": [
+            {
+              "Id": "residence-distinguish-ukr-and-cukr",
+              "Order": 1,
+              "Kind": "Recommendation",
+              "ArticleId": "c230d45f-9c76-5912-8c97-dc7d0689baa6",
+              "OfficialSourceIds": [
+                "41dea3fa-8ffc-5d2e-a476-aaf2cf07b109"
+              ],
+              "ClaimIds": [
+                "AT01"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Відрізняйте PESEL UKR від CUKR",
+                  "Action": "Читайте про CUKR як про окремий дозвіл на проживання, а не як про зміну номера PESEL UKR.",
+                  "Explanation": "CUKR — окремий трирічний дозвіл на тимчасове проживання для визначеної групи людей зі статусом UKR. PESEL UKR фіксує польський статус тимчасового захисту.",
+                  "Documents": [
+                    "Наявний запис PESEL UKR і документи про проживання чи рішення — якщо вони є та потрібні процедурі."
+                  ],
+                  "Authority": "UdSC — щодо процедури CUKR; MOS — щодо подання.",
+                  "Warning": "Не вважайте CUKR тотожним PESEL UKR або автоматично доступним кожному власнику UKR."
+                },
+                "en": {
+                  "Title": "Distinguish PESEL UKR from CUKR",
+                  "Action": "Read about CUKR as a separate residence permit, not as a change to a PESEL UKR number.",
+                  "Explanation": "CUKR is a separate three-year temporary residence permit for a defined group with UKR status. PESEL UKR records Polish temporary-protection status.",
+                  "Documents": [
+                    "Existing PESEL UKR record and residence or decision documents, if available and required by the procedure."
+                  ],
+                  "Authority": "UdSC for the CUKR procedure; MOS for filing.",
+                  "Warning": "Do not treat CUKR as equivalent to PESEL UKR or automatically available to every UKR holder."
+                },
+                "ru": {
+                  "Title": "Отличайте PESEL UKR от CUKR",
+                  "Action": "Рассматривайте CUKR как отдельное разрешение на проживание, а не как изменение номера PESEL UKR.",
+                  "Explanation": "CUKR — отдельное трёхлетнее разрешение на временное проживание для определённой группы со статусом UKR. PESEL UKR фиксирует польский статус временной защиты.",
+                  "Documents": [
+                    "Имеющаяся запись PESEL UKR и документы о проживании или решении, если они есть и нужны для процедуры."
+                  ],
+                  "Authority": "UdSC — по процедуре CUKR; MOS — по подаче.",
+                  "Warning": "Не считайте CUKR тем же, что PESEL UKR, или автоматически доступным каждому обладателю UKR."
+                }
+              }
+            },
+            {
+              "Id": "residence-check-cukr-conditions",
+              "Order": 2,
+              "Kind": "Recommendation",
+              "ArticleId": "c230d45f-9c76-5912-8c97-dc7d0689baa6",
+              "OfficialSourceIds": [
+                "41dea3fa-8ffc-5d2e-a476-aaf2cf07b109"
+              ],
+              "ClaimIds": [
+                "AT02"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Перевірте сукупні умови та правила для дітей",
+                  "Action": "Зіставте актуальні вимоги CUKR із відповідними записами; незрозумілі або дитячі умови уточніть в UdSC.",
+                  "Explanation": "У статті наведено чотири сукупні умови: чинний PESEL UKR під час подання, статус UKR на 4 червня 2025 року і під час видачі картки, а також щонайменше 365 днів безперервного статусу UKR. Для дітей, народжених у Польщі, діють окремі умови.",
+                  "Documents": [
+                    "Записи щодо кожної зазначеної умови та документи для дитини — лише згідно з актуальними вимогами UdSC."
+                  ],
+                  "Authority": "UdSC.",
+                  "Warning": "Посібник не оцінює документи й не визначає, чи відповідає конкретна людина умовам. Перевірте чинні вимоги та винятки в UdSC."
+                },
+                "en": {
+                  "Title": "Check cumulative and child-specific conditions",
+                  "Action": "Compare current CUKR requirements with the relevant records; ask UdSC about unclear or child-specific conditions.",
+                  "Explanation": "The article lists four cumulative conditions: valid PESEL UKR when applying; UKR status on 4 June 2025 and when the card is issued; and at least 365 uninterrupted days with UKR status. Children born in Poland have separate conditions.",
+                  "Documents": [
+                    "Records relevant to each stated condition and child-specific documents only as required by current UdSC instructions."
+                  ],
+                  "Authority": "UdSC.",
+                  "Warning": "The guide does not assess records or determine whether a person qualifies. Confirm current requirements and exceptions with UdSC."
+                },
+                "ru": {
+                  "Title": "Проверьте совокупные условия и правила для детей",
+                  "Action": "Сопоставьте действующие требования CUKR с соответствующими записями; неясные условия или правила для детей уточните в UdSC.",
+                  "Explanation": "В статье перечислены четыре совокупных условия: действующий PESEL UKR при подаче; статус UKR на 4 июня 2025 года и при выдаче карты; а также не менее 365 непрерывных дней со статусом UKR. Для детей, родившихся в Польше, действуют отдельные условия.",
+                  "Documents": [
+                    "Записи по каждому указанному условию и документы ребёнка — только согласно актуальным требованиям UdSC."
+                  ],
+                  "Authority": "UdSC.",
+                  "Warning": "Руководство не оценивает документы и не определяет, соответствует ли человек условиям. Проверьте действующие требования и исключения в UdSC."
+                }
+              }
+            },
+            {
+              "Id": "residence-check-mos-and-cukr-deadline",
+              "Order": 3,
+              "Kind": "Recommendation",
+              "ArticleId": "c230d45f-9c76-5912-8c97-dc7d0689baa6",
+              "OfficialSourceIds": [
+                "41dea3fa-8ffc-5d2e-a476-aaf2cf07b109",
+                "50dddaa7-ff1f-5c77-b4f7-2cf1254adda6"
+              ],
+              "ClaimIds": [
+                "AT03"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Перевірте процедуру MOS і строк CUKR",
+                  "Action": "Перед рішенням про подання перевірте актуальну процедуру UdSC та інструкції MOS.",
+                  "Explanation": "У статті зазначено подання заяви на CUKR онлайн через MOS до 4 березня 2027 року. Процедура і строк чутливі до змін — перед використанням їх треба перевірити.",
+                  "Documents": [
+                    "Матеріали для облікового запису чи заяви MOS — лише за чинною процедурою; посібник їх не збирає."
+                  ],
+                  "Authority": "UdSC і MOS.",
+                  "Warning": "Строк подання не гарантує видачу дозволу. Перевірте, чи актуальна ця інформація."
+                },
+                "en": {
+                  "Title": "Check the MOS procedure and CUKR deadline",
+                  "Action": "Before deciding whether to file, check the current UdSC procedure and MOS instructions.",
+                  "Explanation": "The article records online CUKR filing through MOS until 4 March 2027. The procedure and deadline are time-sensitive and must be rechecked before use.",
+                  "Documents": [
+                    "MOS account or application materials only as required by the current process; this guide does not collect them."
+                  ],
+                  "Authority": "UdSC and MOS.",
+                  "Warning": "A filing deadline does not guarantee that a permit will be granted. Check whether this information is current."
+                },
+                "ru": {
+                  "Title": "Проверьте процедуру MOS и срок CUKR",
+                  "Action": "Прежде чем решать вопрос о подаче, проверьте актуальную процедуру UdSC и инструкции MOS.",
+                  "Explanation": "В статье указана онлайн-подача заявления на CUKR через MOS до 4 марта 2027 года. Процедура и срок могут измениться, поэтому их нужно перепроверить перед использованием.",
+                  "Documents": [
+                    "Материалы для учётной записи или заявления MOS — только согласно действующей процедуре; руководство их не собирает."
+                  ],
+                  "Authority": "UdSC и MOS.",
+                  "Warning": "Срок подачи не гарантирует выдачу разрешения. Проверьте актуальность этой информации."
+                }
+              }
+            },
+            {
+              "Id": "residence-clarify-other-permit-effects",
+              "Order": 4,
+              "Kind": "Recommendation",
+              "ArticleId": "c230d45f-9c76-5912-8c97-dc7d0689baa6",
+              "OfficialSourceIds": [
+                "ddffc1ab-c2e0-5f7a-b89f-9fafb794e4b5",
+                "599f4d31-e4d8-5ebf-82ed-149d5d677dd9"
+              ],
+              "ClaimIds": [
+                "AT04",
+                "AT06"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Уточніть вплив інших дозволів",
+                  "Action": "До подання або відкликання заяви запитайте UdSC чи компетентного воєводу, як конкретна процедура та її етап пов’язані з вашим записом.",
+                  "Explanation": "Звичайні дозволи мають окремі умови. Польський тимчасовий захист припиняється за визначених законом обставин, зокрема після надання деяких дозволів чи міжнародного захисту; саме подання заяви — інша подія.",
+                  "Documents": [
+                    "Індивідуальні рішення, подтверждение подачи или переписка органа — если запрошены."
+                  ],
+                  "Authority": "UdSC, MOS або компетентний воєвода — залежно від процедури.",
+                  "Warning": "Не робіть висновок, що сама подача припиняє захист, що дозвіл буде надано або що певна подія має наперед визначений наслідок у конкретній справі."
+                },
+                "en": {
+                  "Title": "Clarify the effect of other permits",
+                  "Action": "Before filing or withdrawing a residence application, ask UdSC or the competent voivode how that procedure and case stage relate to your record.",
+                  "Explanation": "Ordinary residence routes have separate criteria. Polish temporary protection ends on specified legal events, including grant of certain permits or international protection; filing alone is a different event.",
+                  "Documents": [
+                    "Individual decisions, application receipts, or authority correspondence if requested."
+                  ],
+                  "Authority": "UdSC, MOS, or the competent voivode, depending on the procedure.",
+                  "Warning": "Do not assume filing itself ends protection, that a permit will be granted, or that an event has a predetermined effect in an individual case."
+                },
+                "ru": {
+                  "Title": "Уточните влияние других разрешений",
+                  "Action": "Прежде чем подавать или отзывать заявление на проживание, спросите UdSC или компетентного воеводу, как конкретная процедура и её этап связаны с вашей записью.",
+                  "Explanation": "Для обычных разрешений действуют отдельные условия. Польская временная защита прекращается при предусмотренных законом обстоятельствах, включая предоставление некоторых разрешений или международной защиты; сама подача заявления — другое событие.",
+                  "Documents": [
+                    "Индивидуальные решения, подтверждение подачи или переписка органа — если запрошены."
+                  ],
+                  "Authority": "UdSC, MOS или компетентный воевода — в зависимости от процедуры.",
+                  "Warning": "Не считайте, что сама подача прекращает защиту, разрешение обязательно будет выдано или событие заранее имеет определённые последствия в конкретном деле."
+                }
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }
