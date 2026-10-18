@@ -127,6 +127,71 @@ public sealed class StepByStepGuideTests
         Assert.Throws<InvalidDataException>(() => JsonStepByStepGuideProvider.Validate(unknownStatus, catalog));
     }
 
+    [Fact]
+    public async Task NewArrivalRecordPreparationStepMatchesApprovedProposalInAllLanguages()
+    {
+        var step = (await GuideCatalog.Value).Guides.SelectMany(guide => guide.Scenarios).SelectMany(scenario => scenario.Steps).Single(step => step.Id == "arrival-follow-application-process");
+        Assert.Equal(["TP02", "TP03"], step.ClaimIds);
+        Assert.Equal(
+            ["e4bb8ae0-6e0a-573b-8ab9-c6ea8fffb30a", "1d973c40-5d66-5b6a-ae13-78f667576a0a", "a71ea73c-f2db-5545-81c8-1a4c5016c361"],
+            step.OfficialSourceIds.Select(id => id.ToString()));
+
+        var expectedTitles = new Dictionary<string, string>
+        {
+            ["uk"] = "Підготуйте документи, які можуть знадобитися",
+            ["en"] = "Gather potentially relevant records",
+            ["ru"] = "Подготовьте документы, которые могут понадобиться"
+        };
+        var expectedTerms = new Dictionary<string, string[]>
+        {
+            ["uk"] = ["першого в’їзду", "документи про родинні зв’язки", "інші докази", "універсального списку", "не обов’язковий"],
+            ["en"] = ["first date of entry", "Family-link records", "may request other evidence", "universal checklist", "not a mandatory"],
+            ["ru"] = ["первого въезда", "родственных связях", "может запросить другие доказательства", "универсальный список", "не обязательный"]
+        };
+
+        foreach (var language in new[] { "uk", "en", "ru" })
+        {
+            var translation = step.Translations[language];
+            Assert.Equal(expectedTitles[language], translation.Title);
+            var allText = string.Join(" ", new[] { translation.Action, translation.Explanation, translation.Authority, translation.Warning }.Concat(translation.Documents));
+            foreach (var term in expectedTerms[language])
+                Assert.Contains(term, allText, StringComparison.OrdinalIgnoreCase);
+        }
+    }
+
+    [Fact]
+    public async Task PendingCaseNextStepMatchesApprovedProposalWithoutGivingWorkAdvice()
+    {
+        var step = (await GuideCatalog.Value).Guides.SelectMany(guide => guide.Scenarios).SelectMany(scenario => scenario.Steps).Single(step => step.Id == "pending-ask-about-work-entry");
+        Assert.Equal(["TP04", "TP05"], step.ClaimIds);
+        Assert.Equal(
+            ["1d973c40-5d66-5b6a-ae13-78f667576a0a", "fd4673e5-b187-5e24-9d17-c4dae465491a"],
+            step.OfficialSourceIds.Select(id => id.ToString()));
+        var expectedTitles = new Dictionary<string, string>
+        {
+            ["uk"] = "Попросіть уточнити наступний крок у вашій справі",
+            ["en"] = "Ask the competent authority to clarify your next step",
+            ["ru"] = "Попросите разъяснить следующий шаг по вашему делу"
+        };
+        var expectedTerms = new Dictionary<string, string[]>
+        {
+            ["uk"] = ["компетентного Ausländerbehörde", "номер справи", "документ", "дат", "право на роботу", "результат розгляду"],
+            ["en"] = ["competent Ausländerbehörde", "case reference", "document", "date", "work authorization", "outcome of the pending application"],
+            ["ru"] = ["компетентное Ausländerbehörde", "номер дела", "документ", "дат", "право на работу", "исход рассмотрения заявления"]
+        };
+
+        foreach (var language in new[] { "uk", "en", "ru" })
+        {
+            var translation = step.Translations[language];
+            Assert.Equal(expectedTitles[language], translation.Title);
+            var allText = string.Join(" ", new[] { translation.Action, translation.Explanation, translation.Authority, translation.Warning }.Concat(translation.Documents));
+            foreach (var term in expectedTerms[language])
+                Assert.Contains(term, allText, StringComparison.OrdinalIgnoreCase);
+        }
+
+        Assert.DoesNotContain("work entry", string.Join(" ", step.Translations["en"].Title, step.Translations["en"].Action, step.Translations["en"].Explanation), StringComparison.OrdinalIgnoreCase);
+    }
+
     [Theory]
     [InlineData("uk", "Тимчасовий захист у Німеччині", "Я щойно приїхав/приїхала й шукаю тимчасовий захист")]
     [InlineData("en", "Temporary protection in Germany", "I have just arrived and am seeking temporary protection")]
