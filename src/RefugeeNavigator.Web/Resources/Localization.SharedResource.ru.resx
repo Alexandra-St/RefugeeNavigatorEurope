@@ -331,4 +331,20 @@
   <data name="Compare.Aspect.ChildBenefits" xml:space="preserve"><value>Какие условия помощи на детей и семью выделены?</value></data>
   <data name="Compare.ReadFullArticles" xml:space="preserve"><value>Читать полные статьи стран</value></data>
 <data name="Compare.ApprovedEditorialStatus" xml:space="preserve"><value>Одобрено редактором</value></data>
+  <data name="Guide.DraftPreviewNotice" xml:space="preserve"><value>Предварительный просмотр в Development: это черновик, который ещё не прошёл редакционное согласование. В Production он не отображается.</value></data>
+  <data name="Guide.SelectSituation" xml:space="preserve"><value>С чем вам нужна помощь?</value></data>
+  <data name="Guide.Back" xml:space="preserve"><value>Назад</value></data>
+  <data name="Guide.Next" xml:space="preserve"><value>Далее</value></data>
+  <data name="Guide.Previous" xml:space="preserve"><value>Предыдущий шаг</value></data>
+  <data name="Guide.ChangeSituation" xml:space="preserve"><value>Изменить ситуацию</value></data>
+  <data name="Guide.ReadArticle" xml:space="preserve"><value>Читать полную статью</value></data>
+  <data name="Guide.Progress" xml:space="preserve"><value>Шаг {0} из {1}. Это только навигационный прогресс; он не означает наличие права на защиту или выполнение юридических требований.</value></data>
+  <data name="Guide.Documents" xml:space="preserve"><value>Документы, которые могут пригодиться</value></data>
+  <data name="Guide.Authority" xml:space="preserve"><value>Куда обратиться</value></data>
+  <data name="Guide.Warning" xml:space="preserve"><value>Важно</value></data>
+  <data name="Guide.Required" xml:space="preserve"><value>Требуется согласно указанному источнику</value></data>
+  <data name="Guide.Recommendation" xml:space="preserve"><value>Рекомендуемый следующий шаг</value></data>
+  <data name="Guide.Optional" xml:space="preserve"><value>Необязательная подготовка</value></data>
+  <data name="Guide.Unavailable" xml:space="preserve"><value>Это руководство недоступно.</value></data>
+  <data name="Guide.Step" xml:space="preserve"><value>Шаг</value></data>
 </root>

@@ -1,0 +1,284 @@
+.guide-page {
+    min-height: 100vh;
+    padding: 2rem 1rem 3rem;
+    background: #f5f8fc;
+    color: #172b4d;
+}
+
+.guide-shell {
+    width: min(100%, 58rem);
+    margin: 0 auto;
+}
+
+.draft-notice,
+.scenario-selection,
+.guide-step,
+.guide-disclaimer {
+    border: 1px solid #d8e1ee;
+    border-radius: 0.85rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgb(16 42 86 / 4%);
+}
+
+.draft-notice {
+    margin-bottom: 1.5rem;
+    padding: 1rem 1.1rem;
+    border-left: 4px solid #b7791f;
+    color: #593d10;
+    font-weight: 650;
+}
+
+.guide-heading {
+    margin-bottom: 1.75rem;
+}
+
+.eyebrow,
+.step-number {
+    margin: 0 0 0.5rem;
+    color: #155eef;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #102a56;
+    font-weight: 700;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.12;
+}
+
+h2 {
+    margin: 0;
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+}
+
+h3 {
+    margin: 0.55rem 0 1rem;
+    font-size: clamp(1.25rem, 3vw, 1.6rem);
+}
+
+h4 {
+    margin: 0 0 0.45rem;
+    font-size: 1rem;
+}
+
+.guide-intro,
+.guide-flow-heading p,
+.scenario-description {
+    color: #425675;
+    line-height: 1.6;
+}
+
+.scenario-selection {
+    padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+.scenario-selection h2 {
+    margin-bottom: 1rem;
+}
+
+.scenario-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+}
+
+.scenario-choice {
+    display: flex;
+    min-width: 0;
+    min-height: 8rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.55rem;
+    padding: 1rem;
+    border: 1px solid #b8c7da;
+    border-radius: 0.65rem;
+    background: #fff;
+    color: #172b4d;
+    cursor: pointer;
+    font: inherit;
+    text-align: left;
+}
+
+.scenario-choice:hover {
+    border-color: #155eef;
+    background: #f8faff;
+}
+
+.scenario-title {
+    color: #102a56;
+    font-weight: 700;
+}
+
+.scenario-description {
+    font-size: 0.95rem;
+}
+
+.guide-flow-heading,
+.step-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.guide-flow-heading {
+    margin-bottom: 1rem;
+}
+
+.progress {
+    margin: 1rem 0 0.5rem;
+    color: #263f66;
+    font-weight: 650;
+}
+
+progress {
+    width: 100%;
+    height: 0.65rem;
+    margin-bottom: 1rem;
+    accent-color: #155eef;
+}
+
+.guide-step {
+    padding: clamp(1rem, 3vw, 1.75rem);
+}
+
+.step-number {
+    display: inline-block;
+    margin-right: 0.75rem;
+}
+
+.action-kind {
+    display: inline-block;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    background: #eaf1ff;
+    color: #194185;
+    font-size: 0.85rem;
+    font-weight: 650;
+}
+
+.step-action {
+    color: #263f66;
+    font-size: 1.08rem;
+    font-weight: 650;
+}
+
+.step-detail {
+    margin-top: 1.25rem;
+}
+
+.step-detail p,
+.step-detail ul,
+.guide-step > p:not(.step-number) {
+    line-height: 1.6;
+}
+
+.step-detail ul {
+    margin: 0.4rem 0 0;
+    padding-left: 1.4rem;
+}
+
+.step-warning {
+    margin-top: 1.25rem;
+    padding: 0.9rem 1rem;
+    border-left: 4px solid #b7791f;
+    background: #fff8e8;
+    color: #593d10;
+}
+
+.step-warning h4 {
+    color: #593d10;
+}
+
+.step-warning p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.source-list a,
+.article-link {
+    color: #155eef;
+    font-weight: 650;
+    overflow-wrap: anywhere;
+}
+
+.article-link {
+    display: inline-block;
+    margin-top: 1.4rem;
+}
+
+.step-navigation {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.primary-button,
+.secondary-button {
+    min-height: 2.75rem;
+    padding: 0.55rem 1rem;
+    border: 1px solid #155eef;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 650;
+}
+
+.primary-button {
+    margin-left: auto;
+    background: #155eef;
+    color: #fff;
+}
+
+.secondary-button {
+    background: #fff;
+    color: #155eef;
+}
+
+.guide-disclaimer {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    color: #425675;
+}
+
+.guide-disclaimer p {
+    margin: 0;
+    line-height: 1.55;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #155eef;
+    outline-offset: 3px;
+}
+
+@media (max-width: 42rem) {
+    .guide-page {
+        padding: 1.25rem 0.8rem 2rem;
+    }
+
+    .scenario-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .scenario-choice {
+        min-height: 0;
+    }
+
+    .guide-flow-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .step-navigation > button {
+        flex: 1 1 auto;
+    }
+}

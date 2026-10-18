@@ -333,4 +333,20 @@
   <data name="Compare.Aspect.ChildBenefits" xml:space="preserve"><value>Which conditions are highlighted for child/family benefits?</value></data>
   <data name="Compare.ReadFullArticles" xml:space="preserve"><value>Read full country articles</value></data>
 <data name="Compare.ApprovedEditorialStatus" xml:space="preserve"><value>Editorially approved</value></data>
+  <data name="Guide.DraftPreviewNotice" xml:space="preserve"><value>Development preview: this guide is a draft and has not received editorial approval. It is not shown in Production.</value></data>
+  <data name="Guide.SelectSituation" xml:space="preserve"><value>What do you need help with?</value></data>
+  <data name="Guide.Back" xml:space="preserve"><value>Back</value></data>
+  <data name="Guide.Next" xml:space="preserve"><value>Next</value></data>
+  <data name="Guide.Previous" xml:space="preserve"><value>Previous</value></data>
+  <data name="Guide.ChangeSituation" xml:space="preserve"><value>Change situation</value></data>
+  <data name="Guide.ReadArticle" xml:space="preserve"><value>Read the full article</value></data>
+  <data name="Guide.Progress" xml:space="preserve"><value>Step {0} of {1}. Navigation progress only; this does not indicate legal eligibility or completion of legal requirements.</value></data>
+  <data name="Guide.Documents" xml:space="preserve"><value>Potentially relevant documents</value></data>
+  <data name="Guide.Authority" xml:space="preserve"><value>Where to ask</value></data>
+  <data name="Guide.Warning" xml:space="preserve"><value>Important</value></data>
+  <data name="Guide.Required" xml:space="preserve"><value>Required by the cited source</value></data>
+  <data name="Guide.Recommendation" xml:space="preserve"><value>Suggested next step</value></data>
+  <data name="Guide.Optional" xml:space="preserve"><value>Optional preparation</value></data>
+  <data name="Guide.Unavailable" xml:space="preserve"><value>This guide is unavailable.</value></data>
+  <data name="Guide.Step" xml:space="preserve"><value>Step</value></data>
 </root>

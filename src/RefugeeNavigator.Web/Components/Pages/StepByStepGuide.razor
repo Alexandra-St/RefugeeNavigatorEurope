@@ -1,0 +1,65 @@
+@page "/guides/germany/temporary-protection"
+@rendermode InteractiveServer
+@using RefugeeNavigator.Data
+@using RefugeeNavigator.Web.Guides
+@using GuideDefinition = RefugeeNavigator.Web.Guides.StepByStepGuide
+@inject StepByStepGuideCatalog Guides
+@inject CatalogData Catalog
+@inject IWebHostEnvironment HostEnvironment
+@inject NavigationManager Navigation
+
+<StepByStepGuideView Guide="_guide"
+                     Catalog="Catalog"
+                     IsAvailable="(_guide is not null)"
+                     SelectedScenario="_selectedScenario"
+                     StepIndex="_stepIndex"
+                     OnSelectScenario="SelectScenario"
+                     OnBack="Back"
+                     OnPrevious="Previous"
+                     OnNext="Next"
+                     OnChangeSituation="ChangeSituation" />
+
+@code {
+    private static readonly Guid GermanyId = new("10000000-0000-0000-0000-000000000002");
+    private GuideDefinition? _guide;
+    private GuideScenario? _selectedScenario;
+    private int _stepIndex;
+
+    protected override void OnInitialized()
+    {
+        _guide = Guides.Guides.SingleOrDefault(guide => guide.CountryId == GermanyId && guide.Slug == "temporary-protection");
+        if (_guide is null || !StepByStepGuideVisibility.CanRender(_guide.EditorialStatus, HostEnvironment.IsDevelopment()))
+        {
+            _guide = null;
+            Navigation.NotFound();
+        }
+    }
+
+    private void SelectScenario(GuideScenario scenario)
+    {
+        _selectedScenario = scenario;
+        _stepIndex = 0;
+    }
+
+    private void ChangeSituation()
+    {
+        _selectedScenario = null;
+        _stepIndex = 0;
+    }
+
+    private void Back()
+    {
+        if (_stepIndex > 0)
+            Previous();
+        else
+            ChangeSituation();
+    }
+
+    private void Previous() => _stepIndex = Math.Max(0, _stepIndex - 1);
+
+    private void Next()
+    {
+        if (_selectedScenario is not null)
+            _stepIndex = Math.Min(_selectedScenario.Steps.Count - 1, _stepIndex + 1);
+    }
+}

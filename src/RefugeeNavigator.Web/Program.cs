@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpOverrides;
 using RefugeeNavigator.Web.Components;
 using RefugeeNavigator.Web.Comparison;
 using RefugeeNavigator.Web.Localization;
+using RefugeeNavigator.Web.Guides;
 using RefugeeNavigator.Web.Security;
 using RefugeeNavigator.Data;
 
@@ -19,7 +20,7 @@ var accessOptions = PrivateAlphaAccessOptions.FromConfiguration(
 var trustedProxyAddresses = PrivateAlphaAccessOptions.ParseTrustedProxyAddresses(
     builder.Configuration["PRIVATE_ALPHA_TRUSTED_PROXY_IPS"]);
 builder.Services.AddSingleton(accessOptions);
-builder.Services.AddRazorComponents();
+builder.Services.AddRazorComponents().AddInteractiveServerComponents();
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 var catalog = await new JsonCatalogProvider(builder.Environment.ContentRootPath).LoadAsync();
 CountryComparisonTopicMap.Validate(catalog);
@@ -32,6 +33,10 @@ CatalogLocalizationValidator.Validate(catalog, resourceManager.GetString);
 ComparisonFactLocalizationValidator.Validate(comparisonFacts, resourceManager.GetString);
 builder.Services.AddSingleton(catalog);
 builder.Services.AddSingleton(comparisonFacts);
+var guideCatalog = await new JsonStepByStepGuideProvider(
+    Path.Combine(builder.Environment.ContentRootPath, "Data", "step-by-step-guides.json")).LoadAsync(catalog);
+StepByStepGuideLocalizationValidator.Validate(guideCatalog, resourceManager.GetString);
+builder.Services.AddSingleton(guideCatalog);
 
 var supportedCultures = new[]
 {
@@ -113,5 +118,5 @@ app.MapGet("/set-language", (HttpContext context, string? culture, string? retur
     return Results.LocalRedirect(redirectUrl);
 });
 app.MapStaticAssets();
-app.MapRazorComponents<App>();
+app.MapRazorComponents<App>().AddInteractiveServerRenderMode();
 app.Run();

@@ -331,4 +331,20 @@
   <data name="Compare.Aspect.ChildBenefits" xml:space="preserve"><value>Які умови допомоги на дітей і сім’ю виділено?</value></data>
   <data name="Compare.ReadFullArticles" xml:space="preserve"><value>Читати повні статті країн</value></data>
 <data name="Compare.ApprovedEditorialStatus" xml:space="preserve"><value>Редакційно погоджено</value></data>
+  <data name="Guide.DraftPreviewNotice" xml:space="preserve"><value>Попередній перегляд у Development: це чернетка, яка ще не отримала редакційного погодження. У Production вона не відображається.</value></data>
+  <data name="Guide.SelectSituation" xml:space="preserve"><value>З чим вам потрібна допомога?</value></data>
+  <data name="Guide.Back" xml:space="preserve"><value>Назад</value></data>
+  <data name="Guide.Next" xml:space="preserve"><value>Далі</value></data>
+  <data name="Guide.Previous" xml:space="preserve"><value>Попередній крок</value></data>
+  <data name="Guide.ChangeSituation" xml:space="preserve"><value>Змінити ситуацію</value></data>
+  <data name="Guide.ReadArticle" xml:space="preserve"><value>Читати повну статтю</value></data>
+  <data name="Guide.Progress" xml:space="preserve"><value>Крок {0} з {1}. Це лише поступ навігацією; він не означає наявність права на захист чи виконання юридичних вимог.</value></data>
+  <data name="Guide.Documents" xml:space="preserve"><value>Документи, які можуть бути доречними</value></data>
+  <data name="Guide.Authority" xml:space="preserve"><value>Куди звернутися</value></data>
+  <data name="Guide.Warning" xml:space="preserve"><value>Важливо</value></data>
+  <data name="Guide.Required" xml:space="preserve"><value>Вимагається зазначеним джерелом</value></data>
+  <data name="Guide.Recommendation" xml:space="preserve"><value>Рекомендований наступний крок</value></data>
+  <data name="Guide.Optional" xml:space="preserve"><value>Необов’язкова підготовка</value></data>
+  <data name="Guide.Unavailable" xml:space="preserve"><value>Цей посібник недоступний.</value></data>
+  <data name="Guide.Step" xml:space="preserve"><value>Крок</value></data>
 </root>

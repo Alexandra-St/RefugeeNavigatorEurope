@@ -1,0 +1,152 @@
+@using System.Globalization
+@using Microsoft.AspNetCore.Components
+@using Microsoft.Extensions.Localization
+@using RefugeeNavigator.Data
+@using RefugeeNavigator.Web.Guides
+@using RefugeeNavigator.Web.Localization
+@inject IStringLocalizer<SharedResource> Localizer
+
+@if (!IsAvailable || Guide is null)
+{
+    <PageTitle>@Localizer["Guide.Unavailable"]</PageTitle>
+    <main id="main-content" class="guide-page">
+        <div class="guide-shell"><h1>@Localizer["Guide.Unavailable"]</h1></div>
+    </main>
+}
+else
+{
+    var language = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+    var guideText = Guide.Translations[language];
+    <PageTitle>@guideText.Title</PageTitle>
+    <HomeLink Placement="top" />
+    <main id="main-content" class="guide-page">
+        <div class="guide-shell">
+            @if (Guide.EditorialStatus == GuideEditorialStatus.Draft)
+            {
+                <aside class="draft-notice" role="note">@Localizer["Guide.DraftPreviewNotice"]</aside>
+            }
+
+            <header class="guide-heading">
+                <p class="eyebrow">@Localizer["Guide.SelectSituation"]</p>
+                <h1>@guideText.Title</h1>
+                <p class="guide-intro">@guideText.Description</p>
+            </header>
+
+            @if (SelectedScenario is null)
+            {
+                <section class="scenario-selection" aria-labelledby="scenario-heading">
+                    <h2 id="scenario-heading">@Localizer["Guide.SelectSituation"]</h2>
+                    <div class="scenario-grid">
+                        @foreach (var scenario in Guide.Scenarios.OrderBy(item => item.Order))
+                        {
+                            var scenarioText = scenario.Translations[language];
+                            <button class="scenario-choice" type="button" @onclick="() => OnSelectScenario.InvokeAsync(scenario)">
+                                <span class="scenario-title">@scenarioText.Title</span>
+                                <span class="scenario-description">@scenarioText.Description</span>
+                            </button>
+                        }
+                    </div>
+                </section>
+            }
+            else
+            {
+                var scenarioText = SelectedScenario.Translations[language];
+                var orderedSteps = SelectedScenario.Steps.OrderBy(item => item.Order).ToArray();
+                var step = orderedSteps[StepIndex];
+                var stepText = step.Translations[language];
+                <section class="guide-flow" aria-labelledby="scenario-title">
+                    <div class="guide-flow-heading">
+                        <div>
+                            <h2 id="scenario-title">@scenarioText.Title</h2>
+                            <p>@scenarioText.Description</p>
+                        </div>
+                        <button class="secondary-button" type="button" @onclick="() => OnChangeSituation.InvokeAsync()">@Localizer["Guide.ChangeSituation"]</button>
+                    </div>
+
+                    <p class="progress" role="status" aria-live="polite">
+                        @Localizer["Guide.Progress", StepIndex + 1, orderedSteps.Length]
+                    </p>
+                    <progress value="@(StepIndex + 1)" max="@orderedSteps.Length" aria-label="@Localizer["Guide.Progress", StepIndex + 1, orderedSteps.Length]"></progress>
+
+                    <article class="guide-step" aria-labelledby="step-heading">
+                        <p class="step-number">@Localizer["Guide.Step"] @(StepIndex + 1)</p>
+                        <span class="action-kind">@ActionKindLabel(step.Kind)</span>
+                        <h3 id="step-heading">@stepText.Title</h3>
+                        <p class="step-action">@stepText.Action</p>
+                        <p>@stepText.Explanation</p>
+
+                        @if (stepText.Documents.Count > 0)
+                        {
+                            <section class="step-detail" aria-labelledby="documents-heading">
+                                <h4 id="documents-heading">@Localizer["Guide.Documents"]</h4>
+                                <ul>
+                                    @foreach (var document in stepText.Documents)
+                                    {
+                                        <li>@document</li>
+                                    }
+                                </ul>
+                            </section>
+                        }
+
+                        <section class="step-detail" aria-labelledby="authority-heading">
+                            <h4 id="authority-heading">@Localizer["Guide.Authority"]</h4>
+                            <p>@stepText.Authority</p>
+                        </section>
+
+                        <aside class="step-warning" aria-labelledby="warning-heading">
+                            <h4 id="warning-heading">@Localizer["Guide.Warning"]</h4>
+                            <p>@stepText.Warning</p>
+                        </aside>
+
+                        <section class="step-detail" aria-labelledby="sources-heading">
+                            <h4 id="sources-heading">@Localizer["Compare.OfficialSources"]</h4>
+                            <ul class="source-list">
+                                @foreach (var sourceId in step.OfficialSourceIds)
+                                {
+                                    var source = Catalog.OfficialSources.Single(item => item.Id == sourceId);
+                                    <li><a href="@source.Url.AbsoluteUri" target="_blank" rel="noopener noreferrer">@source.Title</a></li>
+                                }
+                            </ul>
+                        </section>
+
+                        <a class="article-link" href="/countries/germany/categories/temporary-protection#entry-@step.ArticleId.ToString("N")">@Localizer["Guide.ReadArticle"]</a>
+                    </article>
+
+                    <nav class="step-navigation" aria-label="@Localizer["Guide.Progress", StepIndex + 1, orderedSteps.Length]">
+                        <button class="secondary-button" type="button" @onclick="() => OnBack.InvokeAsync()">@Localizer["Guide.Back"]</button>
+                        @if (StepIndex > 0)
+                        {
+                            <button class="secondary-button" type="button" @onclick="() => OnPrevious.InvokeAsync()">@Localizer["Guide.Previous"]</button>
+                        }
+                        @if (StepIndex < orderedSteps.Length - 1)
+                        {
+                            <button class="primary-button" type="button" @onclick="() => OnNext.InvokeAsync()">@Localizer["Guide.Next"]</button>
+                        }
+                    </nav>
+                </section>
+            }
+
+            <footer class="guide-disclaimer"><p>@Localizer["Common.Disclaimer"]</p></footer>
+        </div>
+    </main>
+}
+
+@code {
+    [Parameter] public StepByStepGuide? Guide { get; set; }
+    [Parameter, EditorRequired] public CatalogData Catalog { get; set; } = default!;
+    [Parameter] public bool IsAvailable { get; set; }
+    [Parameter] public GuideScenario? SelectedScenario { get; set; }
+    [Parameter] public int StepIndex { get; set; }
+    [Parameter] public EventCallback<GuideScenario> OnSelectScenario { get; set; }
+    [Parameter] public EventCallback OnBack { get; set; }
+    [Parameter] public EventCallback OnPrevious { get; set; }
+    [Parameter] public EventCallback OnNext { get; set; }
+    [Parameter] public EventCallback OnChangeSituation { get; set; }
+
+    private string ActionKindLabel(GuideActionKind kind) => Localizer[kind switch
+    {
+        GuideActionKind.Required => "Guide.Required",
+        GuideActionKind.Optional => "Guide.Optional",
+        _ => "Guide.Recommendation"
+    }];
+}

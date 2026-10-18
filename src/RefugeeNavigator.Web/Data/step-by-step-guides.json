@@ -1,0 +1,185 @@
+{
+  "Guides": [
+    {
+      "Id": "germany-temporary-protection-v1",
+      "Slug": "temporary-protection",
+      "CountryId": "10000000-0000-0000-0000-000000000002",
+      "EditorialStatus": "Draft",
+      "Translations": {
+        "uk": { "Title": "Тимчасовий захист у Німеччині", "Description": "Оберіть ситуацію, щоб переглянути навігаційні кроки. Це не визначення права на захист." },
+        "en": { "Title": "Temporary protection in Germany", "Description": "Choose a situation to see navigation steps. This does not determine eligibility for protection." },
+        "ru": { "Title": "Временная защита в Германии", "Description": "Выберите ситуацию, чтобы увидеть навигационные шаги. Это не определение права на защиту." }
+      },
+      "Scenarios": [
+        {
+          "Id": "new-arrival", "Order": 1,
+          "Translations": {
+            "uk": { "Title": "Я щойно приїхав/приїхала й шукаю тимчасовий захист", "Description": "З’ясуйте місцевий порядок і підготуйтеся звернутися до компетентного органу." },
+            "en": { "Title": "I have just arrived and am seeking temporary protection", "Description": "Find the local process and prepare to contact the competent authority." },
+            "ru": { "Title": "Я недавно приехал/приехала и ищу временную защиту", "Description": "Уточните местный порядок и подготовьтесь обратиться в компетентный орган." }
+          },
+          "Steps": [
+            {
+              "Id": "arrival-check-local-process", "Order": 1, "Kind": "Recommendation", "ArticleId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e", "OfficialSourceIds": ["e4bb8ae0-6e0a-573b-8ab9-c6ea8fffb30a", "1d973c40-5d66-5b6a-ae13-78f667576a0a"], "ClaimIds": ["TP03"],
+              "Translations": {
+                "uk": { "Title": "Перевірте місцеві інструкції", "Action": "Знайдіть порядок для місця, де ви перебуваєте.", "Explanation": "Первинна реєстрація, розподіл за потреби, реєстрація адреси та заява на дозвіл — окремі етапи, хоча громада може поєднати прийоми.", "Documents": [], "Authority": "Місцева влада та компетентне Ausländerbehörde.", "Warning": "Порядок і запис на прийом залежать від місцевого органу." },
+                "en": { "Title": "Check the local instructions", "Action": "Find the process for the place where you are staying.", "Explanation": "Initial registration, allocation where applicable, address registration, and the residence-title application are separate steps, though a municipality may combine appointments.", "Documents": [], "Authority": "Local authorities and the competent Ausländerbehörde.", "Warning": "Procedures and appointments vary by local authority." },
+                "ru": { "Title": "Проверьте местные инструкции", "Action": "Уточните порядок для места, где вы находитесь.", "Explanation": "Первичная регистрация, распределение при необходимости, регистрация адреса и заявление на разрешение — разные этапы, хотя муниципалитет может объединить приёмы.", "Documents": [], "Authority": "Местные органы власти и компетентное Ausländerbehörde.", "Warning": "Порядок и запись на приём зависят от местного органа." }
+              }
+            },
+            {
+              "Id": "arrival-check-90-day-exemption", "Order": 2, "Kind": "Recommendation", "ArticleId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e", "OfficialSourceIds": ["a71ea73c-f2db-5545-81c8-1a4c5016c361"], "ClaimIds": ["TP03", "TP07"],
+              "Translations": {
+                "uk": { "Title": "Окремо уточніть 90-денне звільнення від вимоги мати дозвіл", "Action": "Запитайте Ausländerbehörde, чи може це умовне правило стосуватися вашої ситуації.", "Explanation": "Воно охоплює лише визначені категорії та рахується від першого в’їзду; серед умов — в’їзд до 4 грудня 2027 року й відсутність уже наданого захисту в іншій державі ЄС. Для громадян третіх країн є додаткові умови.", "Documents": ["Дата першого в’їзду", "Документ про попередній захист, якщо є"], "Authority": "Компетентне Ausländerbehörde.", "Warning": "Це не безвізове перебування, не дозвіл за §24 і не надання захисту. З 9 жовтня 2026 року §2(3) окремо виключає охоплених військовими обов’язками осіб, якщо вони не доведуть їх виконання." },
+                "en": { "Title": "Separately check the 90-day residence-title exemption", "Action": "Ask the Ausländerbehörde whether this conditional rule may apply to your circumstances.", "Explanation": "It covers only specified categories and runs from first entry; conditions include entry by 4 December 2027 and not already having received protection in another EU Member State. Additional conditions apply to third-country nationals.", "Documents": ["Date of first entry", "Earlier protection decision, if any"], "Authority": "The competent Ausländerbehörde.", "Warning": "This is not visa-free stay, a §24 permit, or a grant of protection. From 9 October 2026, §2(3) separately excludes covered people subject to military duties unless they prove compliance." },
+                "ru": { "Title": "Отдельно уточните 90-дневное освобождение от требования иметь разрешение", "Action": "Спросите в Ausländerbehörde, может ли это условное правило относиться к вашей ситуации.", "Explanation": "Оно действует только для определённых категорий и отсчитывается с первого въезда; среди условий — въезд до 4 декабря 2027 года и отсутствие уже предоставленной защиты в другом государстве ЕС. Для граждан третьих стран есть дополнительные условия.", "Documents": ["Дата первого въезда", "Решение о прежней защите, если есть"], "Authority": "Компетентное Ausländerbehörde.", "Warning": "Это не безвизовое пребывание, не разрешение по §24 и не предоставление защиты. С 9 октября 2026 года §2(3) отдельно исключает лиц, подпадающих под воинские обязанности, если они не докажут их выполнение." }
+              }
+            },
+            {
+              "Id": "arrival-follow-application-process", "Order": 3, "Kind": "Recommendation", "ArticleId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e", "OfficialSourceIds": ["e4bb8ae0-6e0a-573b-8ab9-c6ea8fffb30a", "1d973c40-5d66-5b6a-ae13-78f667576a0a"], "ClaimIds": ["TP01", "TP03"],
+              "Translations": {
+                "uk": { "Title": "Дотримуйтеся місцевого порядку звернення", "Action": "Уточніть, які етапи потрібні та в якій послідовності.", "Explanation": "§24 AufenthG — німецька підстава для дозволу особі, якій надано тимчасовий захист ЄС і яка заявила про готовність бути прийнятою в Німеччині. Це різні поняття: захист ЄС і німецький дозвіл.", "Documents": ["Паспорт або інший документ особи", "Документи про громадянство, проживання чи статус захисту в Україні; сімейні документи за потреби"], "Authority": "Місцева влада та Ausländerbehörde.", "Warning": "Саме громадянство чи виїзд з України не визначає право; орган може запросити інші докази." },
+                "en": { "Title": "Follow the local application process", "Action": "Ask which steps apply and in what order.", "Explanation": "Section 24 AufenthG is the German basis for a permit for a person granted EU temporary protection who declares willingness to be received in Germany. EU protection and the German permit are distinct.", "Documents": ["Passport or other identity papers", "Evidence of nationality, residence or protection in Ukraine; family records where relevant"], "Authority": "Local authorities and the Ausländerbehörde.", "Warning": "Nationality or departure from Ukraine alone does not decide eligibility; the authority may request other evidence." },
+                "ru": { "Title": "Следуйте местному порядку подачи заявления", "Action": "Уточните, какие этапы нужны и в какой последовательности.", "Explanation": "§24 AufenthG — немецкое основание для разрешения человеку, которому предоставлена временная защита ЕС и который заявил о готовности быть принятым в Германии. Защита ЕС и немецкое разрешение — разные понятия.", "Documents": ["Паспорт или другой документ личности", "Подтверждение гражданства, проживания или защиты в Украине; семейные документы при необходимости"], "Authority": "Местные органы власти и Ausländerbehörde.", "Warning": "Одного гражданства или выезда из Украины недостаточно для вывода о праве; орган может запросить другие доказательства." }
+              }
+            },
+            {
+              "Id": "arrival-check-online-route", "Order": 4, "Kind": "Recommendation", "ArticleId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e", "OfficialSourceIds": ["e4bb8ae0-6e0a-573b-8ab9-c6ea8fffb30a", "1d973c40-5d66-5b6a-ae13-78f667576a0a", "8a620e3a-0f27-4ce4-8b16-47f8c022f171"], "ClaimIds": ["TP03"],
+              "Translations": {
+                "uk": { "Title": "Перевірте, чи доступне онлайн-подання саме вам", "Action": "Користуйтеся онлайн-сервісом лише якщо його вказує відповідальний орган.", "Explanation": "Germany4Ukraine радить уточнити в місцевому відомстві, чи потрібен запис і чи можна подати заяву онлайн. Сторінка сервісу називає постачальником міністерство землі Бранденбург.", "Documents": [], "Authority": "Компетентне Ausländerbehörde.", "Warning": "Сторінка сервісу не підтверджує його доступність у всіх громадах Німеччини." },
+                "en": { "Title": "Check whether online filing is available to you", "Action": "Use an online service only if the responsible authority directs you to it.", "Explanation": "Germany4Ukraine advises checking locally whether an appointment is needed or an online application is possible. The service page identifies a Brandenburg state ministry as its provider.", "Documents": [], "Authority": "The competent Ausländerbehörde.", "Warning": "The service page does not establish nationwide availability." },
+                "ru": { "Title": "Уточните, доступна ли вам онлайн-подача", "Action": "Используйте онлайн-сервис, только если на него указывает ответственный орган.", "Explanation": "Germany4Ukraine советует уточнить на месте, нужна ли запись и можно ли подать заявление онлайн. На странице сервиса поставщиком указано министерство земли Бранденбург.", "Documents": [], "Authority": "Компетентное Ausländerbehörde.", "Warning": "Страница сервиса не подтверждает его доступность во всех регионах Германии." }
+              }
+            },
+            {
+              "Id": "arrival-keep-pending-records", "Order": 5, "Kind": "Recommendation", "ArticleId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e", "OfficialSourceIds": ["fd4673e5-b187-5e24-9d17-c4dae465491a", "1d973c40-5d66-5b6a-ae13-78f667576a0a"], "ClaimIds": ["TP04"],
+              "Translations": {
+                "uk": { "Title": "Збережіть підтвердження подання", "Action": "Зберігайте квитанцію та письмові рішення; прочитайте правову підставу будь-якої Fiktionsbescheinigung.", "Explanation": "Наслідки розгляду за §81 AufenthG залежать від законності перебування та того, чи заяву про продовження або зміну подано до завершення дозволу.", "Documents": ["Квитанція про подання", "Видане посвідчення та рішення"], "Authority": "Орган, який розглядає заяву.", "Warning": "Fiktionsbescheinigung сама по собі не підтверджує право на роботу; перевірте відмітку й уточніть незрозуміле в органі." },
+                "en": { "Title": "Keep proof of submission", "Action": "Keep the receipt and written decisions; read the legal basis of any Fiktionsbescheinigung.", "Explanation": "The effect under §81 AufenthG depends on lawful presence and whether an extension or change application was filed before the existing permit expired.", "Documents": ["Application receipt", "Any certificate and written decision"], "Authority": "The authority handling the application.", "Warning": "A Fiktionsbescheinigung alone does not establish work rights; check its work entry and ask the authority if unclear." },
+                "ru": { "Title": "Сохраните подтверждение подачи", "Action": "Храните квитанцию и письменные решения; проверьте правовое основание любой Fiktionsbescheinigung.", "Explanation": "Последствия по §81 AufenthG зависят от законности пребывания и от того, подано ли заявление о продлении или изменении до окончания действующего разрешения.", "Documents": ["Квитанция о подаче", "Выданное удостоверение и письменные решения"], "Authority": "Орган, рассматривающий заявление.", "Warning": "Одна Fiktionsbescheinigung не подтверждает право на работу; проверьте отметку и уточните неясное в ведомстве." }
+              }
+            }
+          ]
+        },
+        {
+          "Id": "application-pending", "Order": 2,
+          "Translations": {
+            "uk": { "Title": "Я подав/подала заяву й очікую рішення", "Description": "Зберігайте документи справи та уточнюйте наслідки виданого посвідчення у відповідального органу." },
+            "en": { "Title": "I submitted an application and am waiting for a decision", "Description": "Keep your case records and ask the responsible authority about the effect of any document issued." },
+            "ru": { "Title": "Я подал/подала заявление и жду решения", "Description": "Храните документы по делу и уточняйте последствия выданного удостоверения у ответственного органа." }
+          },
+          "Steps": [
+            {
+              "Id": "pending-keep-records", "Order": 1, "Kind": "Recommendation", "ArticleId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e", "OfficialSourceIds": ["fd4673e5-b187-5e24-9d17-c4dae465491a", "1d973c40-5d66-5b6a-ae13-78f667576a0a"], "ClaimIds": ["TP04"],
+              "Translations": {
+                "uk": { "Title": "Зберігайте документи справи", "Action": "Тримайте разом підтвердження подання, листування та письмові рішення.", "Explanation": "Користуйтеся контактами й інструкціями, які надав орган у вашій справі.", "Documents": ["Квитанція про подання", "Листування й рішення"], "Authority": "Компетентне Ausländerbehörde.", "Warning": "Це порада щодо зберігання документів, а не гарантія строку розгляду." },
+                "en": { "Title": "Keep your case records", "Action": "Keep the filing receipt, correspondence, and written decisions together.", "Explanation": "Use the contact details and instructions provided by the authority handling your case.", "Documents": ["Filing receipt", "Correspondence and decisions"], "Authority": "The competent Ausländerbehörde.", "Warning": "This is record-keeping advice, not a promise about processing time." },
+                "ru": { "Title": "Храните документы по делу", "Action": "Держите вместе подтверждение подачи, переписку и письменные решения.", "Explanation": "Используйте контакты и инструкции органа, который рассматривает ваше дело.", "Documents": ["Квитанция о подаче", "Переписка и решения"], "Authority": "Компетентное Ausländerbehörde.", "Warning": "Это рекомендация по хранению документов, а не обещание срока рассмотрения." }
+              }
+            },
+            {
+              "Id": "pending-check-document-effect", "Order": 2, "Kind": "Recommendation", "ArticleId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e", "OfficialSourceIds": ["fd4673e5-b187-5e24-9d17-c4dae465491a"], "ClaimIds": ["TP04"],
+              "Translations": {
+                "uk": { "Title": "Перевірте виданий документ", "Action": "Прочитайте його правову підставу та відмітки.", "Explanation": "Наслідки за §81 залежать, зокрема, від законності перебування й часу подання заяви щодо чинного дозволу.", "Documents": ["Fiktionsbescheinigung або інший виданий документ"], "Authority": "Орган, який видав документ.", "Warning": "Не припускайте, що всі заяви в очікуванні мають однакові правові наслідки." },
+                "en": { "Title": "Check the document you received", "Action": "Read its legal basis and any entries.", "Explanation": "Effects under §81 depend, among other things, on lawful presence and when the application was filed in relation to the existing permit.", "Documents": ["Fiktionsbescheinigung or other issued document"], "Authority": "The issuing authority.", "Warning": "Do not assume every pending application has the same legal effect." },
+                "ru": { "Title": "Проверьте выданный документ", "Action": "Прочитайте его правовое основание и отметки.", "Explanation": "Последствия по §81 зависят, в частности, от законности пребывания и времени подачи заявления относительно действующего разрешения.", "Documents": ["Fiktionsbescheinigung или другой выданный документ"], "Authority": "Орган, выдавший документ.", "Warning": "Не предполагайте, что все заявления на рассмотрении имеют одинаковые правовые последствия." }
+              }
+            },
+            {
+              "Id": "pending-ask-about-work-entry", "Order": 3, "Kind": "Recommendation", "ArticleId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e", "OfficialSourceIds": ["fd4673e5-b187-5e24-9d17-c4dae465491a", "1d973c40-5d66-5b6a-ae13-78f667576a0a"], "ClaimIds": ["TP04"],
+              "Translations": {
+                "uk": { "Title": "Уточніть незрозумілі відмітки", "Action": "Якщо документ або його запис про роботу незрозумілий, зверніться до органу, який його видав.", "Explanation": "Подання заяви не дає всім однакових прав; правова підстава та текст документа мають значення.", "Documents": ["Виданий документ і номер справи"], "Authority": "Ausländerbehörde, що видало документ.", "Warning": "Посібник не визначає право на роботу." },
+                "en": { "Title": "Ask about unclear entries", "Action": "If the document or its work entry is unclear, contact the issuing authority.", "Explanation": "Filing an application does not give everyone identical rights; the legal basis and wording of the document matter.", "Documents": ["Issued document and case reference"], "Authority": "The Ausländerbehörde that issued it.", "Warning": "This guide does not determine work authorization." },
+                "ru": { "Title": "Уточните непонятные отметки", "Action": "Если документ или отметка о работе непонятны, обратитесь в выдавший его орган.", "Explanation": "Подача заявления не предоставляет всем одинаковых прав; важны правовое основание и текст документа.", "Documents": ["Выданный документ и номер дела"], "Authority": "Ausländerbehörde, выдавшее документ.", "Warning": "Это руководство не определяет право на работу." }
+              }
+            }
+          ]
+        },
+        {
+          "Id": "existing-section-24-permit", "Order": 3,
+          "Translations": {
+            "uk": { "Title": "У мене є дозвіл за §24 і я перевіряю його строк", "Description": "Окремо перевірте свій документ і зрозумійте різницю між строками ЄС та Німеччини." },
+            "en": { "Title": "I have a §24 permit and am checking its validity", "Description": "Check your own document and distinguish the EU and German dates." },
+            "ru": { "Title": "У меня есть разрешение по §24, и я проверяю срок его действия", "Description": "Проверьте свой документ и различайте сроки ЕС и Германии." }
+          },
+          "Steps": [
+            {
+              "Id": "permit-read-individual-date", "Order": 1, "Kind": "Recommendation", "ArticleId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e", "OfficialSourceIds": ["44ce6030-635a-5dd4-bf37-b1729e464399"], "ClaimIds": ["TP05"],
+              "Translations": {
+                "uk": { "Title": "Перевірте дату у своєму дозволі", "Action": "Прочитайте строк дії саме на вашому документі.", "Explanation": "Європейський строк тимчасового захисту сам по собі не визначає строк індивідуального німецького дозволу.", "Documents": ["Чинна картка або інший документ про проживання"], "Authority": "Ausländerbehörde — для роз’яснення документа.", "Warning": "Не замінюйте дату у своєму документі загальною датою захисту ЄС." },
+                "en": { "Title": "Check the date on your permit", "Action": "Read the validity date on your own document.", "Explanation": "The EU temporary-protection period does not itself determine the validity of an individual German permit.", "Documents": ["Current residence card or other permit document"], "Authority": "The Ausländerbehörde for clarification.", "Warning": "Do not substitute the general EU protection date for the date on your document." },
+                "ru": { "Title": "Проверьте дату в своём разрешении", "Action": "Прочитайте срок действия именно в вашем документе.", "Explanation": "Срок временной защиты ЕС сам по себе не определяет срок действия индивидуального немецкого разрешения.", "Documents": ["Действующая карта или другой документ о проживании"], "Authority": "Ausländerbehörde — для разъяснения документа.", "Warning": "Не заменяйте дату в документе общей датой защиты ЕС." }
+              }
+            },
+            {
+              "Id": "permit-check-german-continuation-rule", "Order": 2, "Kind": "Recommendation", "ArticleId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e", "OfficialSourceIds": ["44ce6030-635a-5dd4-bf37-b1729e464399"], "ClaimIds": ["TP05"],
+              "Translations": {
+                "uk": { "Title": "Уточніть, чи охоплює вас німецьке правило продовження", "Action": "Порівняйте свій документ з умовами §2 UkraineAufenthFGV.", "Explanation": "Постанова продовжує до 4 березня 2027 року визначені дозволи §24, чинні 1 лютого 2026 року, за умовами постанови.", "Documents": ["Дозвіл і наявні письмові роз’яснення органу"], "Authority": "Компетентне Ausländerbehörde.", "Warning": "Це стосується визначеної групи дозволів, а не автоматично кожного документа за §24." },
+                "en": { "Title": "Check whether the German continuation rule covers your permit", "Action": "Compare your document with UkraineAufenthFGV §2 conditions.", "Explanation": "The regulation continues specified §24 permits valid on 1 February 2026 through 4 March 2027, subject to its conditions.", "Documents": ["Permit and any written authority clarification"], "Authority": "The competent Ausländerbehörde.", "Warning": "This concerns a specified permit cohort, not automatically every §24 document." },
+                "ru": { "Title": "Уточните, распространяется ли на вас немецкое правило продления", "Action": "Сопоставьте свой документ с условиями §2 UkraineAufenthFGV.", "Explanation": "Постановление продлевает до 4 марта 2027 года определённые разрешения §24, действовавшие 1 февраля 2026 года, при соблюдении его условий.", "Documents": ["Разрешение и письменные разъяснения органа, если есть"], "Authority": "Компетентное Ausländerbehörde.", "Warning": "Это касается определённой группы разрешений, а не автоматически каждого документа по §24." }
+              }
+            },
+            {
+              "Id": "permit-separate-eu-and-german-dates", "Order": 3, "Kind": "Recommendation", "ArticleId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e", "OfficialSourceIds": ["44ce6030-635a-5dd4-bf37-b1729e464399", "995812d6-001c-53e3-9067-d294940375a4"], "ClaimIds": ["TP05", "TP06"],
+              "Translations": {
+                "uk": { "Title": "Розрізняйте строк ЄС і строк німецького дозволу", "Action": "Розглядайте ці дати як такі, що стосуються різних правових статусів.", "Explanation": "Тимчасовий захист ЄС продовжено до 4 березня 2028 року; окреме німецьке правило стосується визначених дозволів до 4 березня 2027 року.", "Documents": ["Рішення ЄС і власний німецький дозвіл"], "Authority": "Ausländerbehörde — щодо індивідуального документа.", "Warning": "Дата ЄС сама по собі не встановлює строк вашого дозволу чи право на роботу." },
+                "en": { "Title": "Keep the EU and German permit dates distinct", "Action": "Treat them as dates for different legal statuses.", "Explanation": "EU temporary protection runs through 4 March 2028; a separate German rule concerns specified permits through 4 March 2027.", "Documents": ["EU Decision and your German permit"], "Authority": "The Ausländerbehörde for an individual document.", "Warning": "The EU date alone does not establish your permit validity or work authorization." },
+                "ru": { "Title": "Различайте срок ЕС и срок немецкого разрешения", "Action": "Рассматривайте эти даты как относящиеся к разным правовым статусам.", "Explanation": "Временная защита ЕС действует до 4 марта 2028 года; отдельное немецкое правило касается определённых разрешений до 4 марта 2027 года.", "Documents": ["Решение ЕС и ваше немецкое разрешение"], "Authority": "Ausländerbehörde — по индивидуальному документу.", "Warning": "Дата ЕС сама по себе не устанавливает срок вашего разрешения или право на работу." }
+              }
+            },
+            {
+              "Id": "permit-request-written-clarification", "Order": 4, "Kind": "Recommendation", "ArticleId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e", "OfficialSourceIds": ["1d973c40-5d66-5b6a-ae13-78f667576a0a", "44ce6030-635a-5dd4-bf37-b1729e464399"], "ClaimIds": ["TP05"],
+              "Translations": {
+                "uk": { "Title": "Попросіть письмове роз’яснення, якщо дата незрозуміла", "Action": "Зверніться до компетентного Ausländerbehörde щодо вашого документа.", "Explanation": "Збережіть відповідь разом із документами про проживання.", "Documents": ["Документ про проживання", "Попередні письмові рішення"], "Authority": "Компетентне Ausländerbehörde.", "Warning": "Посібник не визначає строк дії індивідуального дозволу." },
+                "en": { "Title": "Request written clarification if the date is unclear", "Action": "Ask the competent Ausländerbehörde about your document.", "Explanation": "Keep the response with your residence records.", "Documents": ["Residence document", "Earlier written decisions"], "Authority": "The competent Ausländerbehörde.", "Warning": "This guide does not determine an individual permit's validity." },
+                "ru": { "Title": "Запросите письменное разъяснение, если дата непонятна", "Action": "Обратитесь в компетентное Ausländerbehörde по поводу вашего документа.", "Explanation": "Храните ответ вместе с документами о проживании.", "Documents": ["Документ о проживании", "Предыдущие письменные решения"], "Authority": "Компетентное Ausländerbehörde.", "Warning": "Руководство не определяет срок действия индивидуального разрешения." }
+              }
+            }
+          ]
+        },
+        {
+          "Id": "previous-protection-other-member-state", "Order": 4,
+          "Translations": {
+            "uk": { "Title": "Я мав/мала тимчасовий захист в іншій державі ЄС", "Description": "Уточніть, як правила застосовуються до попереднього захисту та можливого переїзду між державами." },
+            "en": { "Title": "I had temporary protection in another EU Member State", "Description": "Ask how the rules apply to prior protection and any move between Member States." },
+            "ru": { "Title": "У меня была временная защита в другом государстве ЕС", "Description": "Уточните, как правила применяются к прежней защите и возможному переезду между государствами." }
+          },
+          "Steps": [
+            {
+              "Id": "prior-protection-record-timeline", "Order": 1, "Kind": "Recommendation", "ArticleId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e", "OfficialSourceIds": ["995812d6-001c-53e3-9067-d294940375a4", "d817d9ac-37ce-5d8e-afe3-82bbf9e06058"], "ClaimIds": ["TP06"],
+              "Translations": {
+                "uk": { "Title": "Збережіть відомості про попередній захист", "Action": "Зафіксуйте, у якій державі та коли його було надано і чи зберігався він безперервно.", "Explanation": "Для нових надань із 5 серпня 2026 року Рішення ЄС окремо вимагає виконання військових обов’язків, із підтвердженням за потреби. Виняток стосується осіб, які мали захист у тій самій державі-члені не пізніше 4 серпня 2026 року та безперервно зберігають його там.", "Documents": ["Попереднє рішення про захист і відповідні дати"], "Authority": "Компетентне німецьке Ausländerbehörde.", "Warning": "Самої фізичної присутності в ЄС недостатньо, щоб підтвердити безперервний захист в одній державі." },
+                "en": { "Title": "Keep the history of prior protection", "Action": "Note where and when it was granted and whether it continued without interruption there.", "Explanation": "For new grants from 5 August 2026, the EU Decision separately requires compliance with military obligations, with proof where applicable. Its exception concerns people who held protection in the same Member State by 4 August 2026 and continuously retain it there.", "Documents": ["Earlier protection decision and relevant dates"], "Authority": "The competent German Ausländerbehörde.", "Warning": "Physical presence in the EU alone does not establish continuous protection in one state." },
+                "ru": { "Title": "Сохраните сведения о прежней защите", "Action": "Отметьте, в каком государстве и когда она была предоставлена и сохранялась ли там непрерывно.", "Explanation": "Для новых предоставлений с 5 августа 2026 года Решение ЕС отдельно требует выполнения воинских обязанностей, с подтверждением при необходимости. Исключение касается лиц, имевших защиту в том же государстве-члене не позднее 4 августа 2026 года и непрерывно сохраняющих её там.", "Documents": ["Прежнее решение о защите и соответствующие даты"], "Authority": "Компетентное немецкое Ausländerbehörde.", "Warning": "Одного физического присутствия в ЕС недостаточно, чтобы подтвердить непрерывную защиту в одном государстве." }
+              }
+            },
+            {
+              "Id": "prior-protection-clarify-eu-discrepancy", "Order": 2, "Kind": "Recommendation", "ArticleId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e", "OfficialSourceIds": ["995812d6-001c-53e3-9067-d294940375a4", "d817d9ac-37ce-5d8e-afe3-82bbf9e06058", "76e5e3d9-9248-5a85-9b9e-f699b314d4f8"], "ClaimIds": ["TP08"],
+              "Translations": {
+                "uk": { "Title": "Уточніть розбіжність у формулюваннях", "Action": "Попросіть орган пояснити, як правило застосовується до вашої історії захисту.", "Explanation": "Повідомлення Germany4Ukraine описує виняток ширше, ніж виправлений текст Рішення ЄС; у матеріалах розбіжність наведено окремо.", "Documents": ["Попереднє рішення та хронологія, якщо орган їх попросить"], "Authority": "Компетентне Ausländerbehörde.", "Warning": "Не робіть індивідуального висновку лише з факту перебування в ЄС або загального повідомлення." },
+                "en": { "Title": "Ask about the differing wording", "Action": "Ask the authority how the rule applies to your protection history.", "Explanation": "A Germany4Ukraine notice describes the exception more broadly than the corrected EU Decision; the sources are presented separately.", "Documents": ["Earlier decision and timeline if requested"], "Authority": "The competent Ausländerbehörde.", "Warning": "Do not infer an individual result from presence in the EU or the general notice alone." },
+                "ru": { "Title": "Уточните расхождение в формулировках", "Action": "Спросите орган, как правило применяется к вашей истории защиты.", "Explanation": "В сообщении Germany4Ukraine исключение описано шире, чем в исправленном Решении ЕС; источники приведены отдельно.", "Documents": ["Прежнее решение и хронология, если орган запросит"], "Authority": "Компетентное Ausländerbehörde.", "Warning": "Не делайте вывод о конкретном случае только по факту пребывания в ЕС или общему сообщению." }
+              }
+            },
+            {
+              "Id": "prior-protection-separate-german-exemption", "Order": 3, "Kind": "Recommendation", "ArticleId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e", "OfficialSourceIds": ["a71ea73c-f2db-5545-81c8-1a4c5016c361"], "ClaimIds": ["TP03", "TP07"],
+              "Translations": {
+                "uk": { "Title": "Окремо запитайте про німецьке 90-денне правило", "Action": "Не змішуйте його з правилом ЄС про нове надання захисту.", "Explanation": "Попереднє надання захисту в іншій державі ЄС є однією з умов, зазначених для німецького звільнення від вимоги мати дозвіл.", "Documents": ["Рішення про попередній захист", "Дата в’їзду до Німеччини"], "Authority": "Компетентне Ausländerbehörde.", "Warning": "Правило окреме й умовне; §2(3) також містить окреме положення про військові обов’язки." },
+                "en": { "Title": "Ask separately about Germany's 90-day rule", "Action": "Do not combine it with the EU rule for new grants of protection.", "Explanation": "Prior protection granted by another EU Member State is one of the conditions listed for Germany's residence-title exemption.", "Documents": ["Earlier protection decision", "Date of entry into Germany"], "Authority": "The competent Ausländerbehörde.", "Warning": "This is a separate conditional rule; §2(3) also contains a distinct military-duty provision." },
+                "ru": { "Title": "Отдельно спросите о немецком 90-дневном правиле", "Action": "Не смешивайте его с правилом ЕС о новом предоставлении защиты.", "Explanation": "Прежнее предоставление защиты другим государством ЕС — одно из условий, указанных для немецкого освобождения от требования иметь разрешение.", "Documents": ["Решение о прежней защите", "Дата въезда в Германию"], "Authority": "Компетентное Ausländerbehörde.", "Warning": "Это отдельное условное правило; §2(3) также содержит самостоятельное положение о воинских обязанностях." }
+              }
+            },
+            {
+              "Id": "prior-protection-follow-local-advice", "Order": 4, "Kind": "Recommendation", "ArticleId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e", "OfficialSourceIds": ["e4bb8ae0-6e0a-573b-8ab9-c6ea8fffb30a", "1d973c40-5d66-5b6a-ae13-78f667576a0a"], "ClaimIds": ["TP03", "TP08"],
+              "Translations": {
+                "uk": { "Title": "Дотримуйтеся місцевих інструкцій і попросіть роз’яснення", "Action": "Уточніть у компетентного органу наступний крок у вашій справі.", "Explanation": "Місцеві процедури відрізняються; за потреби попросіть пояснити, як співвідносяться різні процедури та дати.", "Documents": ["Попередні рішення й листування з органами"], "Authority": "Компетентне Ausländerbehörde.", "Warning": "Посібник не вирішує питання права на захист для конкретної особи." },
+                "en": { "Title": "Follow local instructions and ask for clarification", "Action": "Ask the competent authority about the next step in your case.", "Explanation": "Local procedures vary; if needed, ask how the different procedures and dates relate to your circumstances.", "Documents": ["Earlier decisions and authority correspondence"], "Authority": "The competent Ausländerbehörde.", "Warning": "This guide does not decide an individual's entitlement to protection." },
+                "ru": { "Title": "Следуйте местным инструкциям и запросите разъяснение", "Action": "Уточните у компетентного органа следующий шаг по вашему делу.", "Explanation": "Местные процедуры различаются; при необходимости спросите, как разные процедуры и даты соотносятся с вашей ситуацией.", "Documents": ["Прежние решения и переписка с органами"], "Authority": "Компетентное Ausländerbehörde.", "Warning": "Руководство не решает вопрос о праве конкретного лица на защиту." }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

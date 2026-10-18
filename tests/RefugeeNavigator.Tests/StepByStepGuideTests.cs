@@ -1,0 +1,236 @@
+using System.Globalization;
+using System.Resources;
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using RefugeeNavigator.Data;
+using RefugeeNavigator.Web.Components.Pages;
+using RefugeeNavigator.Web.Guides;
+using RefugeeNavigator.Web.Localization;
+using GuideModel = RefugeeNavigator.Web.Guides.StepByStepGuide;
+using GuidePage = RefugeeNavigator.Web.Components.Pages.StepByStepGuide;
+using GuideView = RefugeeNavigator.Web.Components.StepByStepGuideView;
+
+namespace RefugeeNavigator.Tests;
+
+public sealed class StepByStepGuideTests
+{
+    private static readonly ResourceManager Resources = new(
+        "RefugeeNavigator.Web.Resources.Localization.SharedResource",
+        typeof(SharedResource).Assembly);
+
+    private static readonly Lazy<Task<CatalogData>> Catalog = new(
+        () => new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync());
+
+    private static readonly Lazy<Task<StepByStepGuideCatalog>> GuideCatalog = new(async () =>
+    {
+        var catalog = await Catalog.Value;
+        return await new JsonStepByStepGuideProvider(Path.Combine(AppContext.BaseDirectory, "Data", "step-by-step-guides.json")).LoadAsync(catalog);
+    });
+
+    [Fact]
+    public async Task GuideHasFourOrderedScenariosAndSixteenStableDraftStepsWithCompleteTranslations()
+    {
+        var guideCatalog = await GuideCatalog.Value;
+        var guide = Assert.Single(guideCatalog.Guides);
+
+        Assert.Equal("germany-temporary-protection-v1", guide.Id);
+        Assert.Equal("temporary-protection", guide.Slug);
+        Assert.Equal(new Guid("10000000-0000-0000-0000-000000000002"), guide.CountryId);
+        Assert.Equal(GuideEditorialStatus.Draft, guide.EditorialStatus);
+        Assert.Equal(4, guide.Scenarios.Count);
+        Assert.Equal(16, guide.Scenarios.Sum(scenario => scenario.Steps.Count));
+        Assert.Equal(["new-arrival", "application-pending", "existing-section-24-permit", "previous-protection-other-member-state"],
+            guide.Scenarios.OrderBy(scenario => scenario.Order).Select(scenario => scenario.Id));
+        Assert.Equal(Enumerable.Range(1, 4), guide.Scenarios.OrderBy(scenario => scenario.Order).Select(scenario => scenario.Order));
+
+        var expectedStepIds = new[]
+        {
+            "arrival-check-local-process", "arrival-check-90-day-exemption", "arrival-follow-application-process", "arrival-check-online-route", "arrival-keep-pending-records",
+            "pending-keep-records", "pending-check-document-effect", "pending-ask-about-work-entry",
+            "permit-read-individual-date", "permit-check-german-continuation-rule", "permit-separate-eu-and-german-dates", "permit-request-written-clarification",
+            "prior-protection-record-timeline", "prior-protection-clarify-eu-discrepancy", "prior-protection-separate-german-exemption", "prior-protection-follow-local-advice"
+        };
+        Assert.Equal(expectedStepIds, guide.Scenarios.OrderBy(scenario => scenario.Order).SelectMany(scenario => scenario.Steps.OrderBy(step => step.Order).Select(step => step.Id)));
+
+        var catalog = await Catalog.Value;
+        foreach (var translation in guide.Translations.Values)
+            Assert.False(string.IsNullOrWhiteSpace(translation.Title + translation.Description));
+        foreach (var scenario in guide.Scenarios)
+        {
+            Assert.Equal(new[] { "en", "ru", "uk" }, scenario.Translations.Keys.Order(StringComparer.Ordinal));
+            Assert.Equal(Enumerable.Range(1, scenario.Steps.Count), scenario.Steps.OrderBy(step => step.Order).Select(step => step.Order));
+            foreach (var step in scenario.Steps)
+            {
+                var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == step.ArticleId);
+                Assert.Equal(guide.CountryId, article.CountryId);
+                Assert.NotEmpty(step.ClaimIds);
+                Assert.All(step.OfficialSourceIds, sourceId => Assert.Contains(catalog.OfficialSources,
+                    source => source.Id == sourceId && source.InformationEntryId == step.ArticleId));
+                Assert.Equal(new[] { "en", "ru", "uk" }, step.Translations.Keys.Order(StringComparer.Ordinal));
+                foreach (var language in new[] { "uk", "en", "ru" })
+                {
+                    var text = step.Translations[language];
+                    Assert.False(string.IsNullOrWhiteSpace(text.Title));
+                    Assert.False(string.IsNullOrWhiteSpace(text.Action));
+                    Assert.False(string.IsNullOrWhiteSpace(text.Explanation));
+                    Assert.False(string.IsNullOrWhiteSpace(text.Authority));
+                    Assert.False(string.IsNullOrWhiteSpace(text.Warning));
+                }
+            }
+        }
+
+        Assert.All(guide.Scenarios.SelectMany(scenario => scenario.Steps), step => Assert.Equal(GuideActionKind.Recommendation, step.Kind));
+    }
+
+    [Fact]
+    public async Task IncorrectArticleOrSourceRelationshipFailsGuideValidation()
+    {
+        var catalog = await Catalog.Value;
+        var guides = await GuideCatalog.Value;
+        var guide = guides.Guides[0];
+        var scenario = guide.Scenarios[0];
+        var step = scenario.Steps[0];
+
+        var wrongArticle = ReplaceStep(guides, guide, scenario, step with { ArticleId = Guid.NewGuid() });
+        Assert.Throws<InvalidDataException>(() => JsonStepByStepGuideProvider.Validate(wrongArticle, catalog));
+
+        var wrongSource = ReplaceStep(guides, guide, scenario, step with { OfficialSourceIds = [Guid.NewGuid()] });
+        Assert.Throws<InvalidDataException>(() => JsonStepByStepGuideProvider.Validate(wrongSource, catalog));
+
+        var draftChanged = guides with { Guides = [guide with { EditorialStatus = GuideEditorialStatus.Approved }] };
+        Assert.Throws<InvalidDataException>(() => JsonStepByStepGuideProvider.Validate(draftChanged, catalog));
+    }
+
+    [Theory]
+    [InlineData("uk", "Тимчасовий захист у Німеччині", "Я щойно приїхав/приїхала й шукаю тимчасовий захист")]
+    [InlineData("en", "Temporary protection in Germany", "I have just arrived and am seeking temporary protection")]
+    [InlineData("ru", "Временная защита в Германии", "Я недавно приехал/приехала и ищу временную защиту")]
+    public async Task DevelopmentPreviewShowsLocalizedDraftNoticeAndAllFourScenarioChoices(string language, string title, string firstScenario)
+    {
+        var html = await RenderAsync(language, Environments.Development);
+        var visibleHtml = System.Net.WebUtility.HtmlDecode(html);
+
+        Assert.Contains(title, visibleHtml);
+        Assert.Contains(firstScenario, visibleHtml);
+        Assert.Contains(Resources.GetString("Guide.DraftPreviewNotice", CultureInfo.GetCultureInfo(language))!, visibleHtml);
+        Assert.Contains("role=\"note\"", html);
+        Assert.Equal(4, System.Text.RegularExpressions.Regex.Matches(html, "class=\"scenario-choice\"").Count);
+        Assert.DoesNotContain("Guide.", visibleHtml);
+    }
+
+    [Theory]
+    [InlineData("uk")]
+    [InlineData("en")]
+    [InlineData("ru")]
+    public async Task SelectedStepShowsLocalizedContentArticleAndOfficialSources(string language)
+    {
+        var catalog = await Catalog.Value;
+        var guide = (await GuideCatalog.Value).Guides[0];
+        var scenario = guide.Scenarios.OrderBy(item => item.Order).First();
+        var step = scenario.Steps.OrderBy(item => item.Order).First();
+        var html = System.Net.WebUtility.HtmlDecode(await RenderAsync(language, Environments.Development, scenario, 0));
+        var text = step.Translations[language];
+        var source = Assert.Single(catalog.OfficialSources, item => item.Id == step.OfficialSourceIds[0]);
+
+        Assert.Contains(text.Title, html);
+        Assert.Contains(text.Action, html);
+        Assert.Contains(text.Explanation, html);
+        Assert.Contains(text.Authority, html);
+        Assert.Contains(text.Warning, html);
+        Assert.Contains(source.Url.AbsoluteUri, html);
+        Assert.Contains($"/countries/germany/categories/temporary-protection#entry-{step.ArticleId:N}", html);
+        Assert.Contains(Resources.GetString("Guide.ChangeSituation", CultureInfo.GetCultureInfo(language))!, html);
+        Assert.Contains(Resources.GetString("Guide.Next", CultureInfo.GetCultureInfo(language))!, html);
+        Assert.Contains("<progress", html);
+    }
+
+    [Theory]
+    [InlineData("uk")]
+    [InlineData("en")]
+    [InlineData("ru")]
+    public async Task ProductionDoesNotRenderDraftGuideContent(string language)
+    {
+        var html = System.Net.WebUtility.HtmlDecode(await RenderAsync(language, Environments.Production));
+        Assert.Contains(Resources.GetString("Guide.Unavailable", CultureInfo.GetCultureInfo(language))!, html);
+        Assert.DoesNotContain("Temporary protection in Germany", html);
+        Assert.DoesNotContain("Applying for Temporary Protection", html);
+        Assert.DoesNotContain("Guide.DraftPreviewNotice", html);
+        Assert.False(StepByStepGuideVisibility.CanRender(GuideEditorialStatus.Draft, isDevelopment: false));
+        Assert.True(StepByStepGuideVisibility.CanRender(GuideEditorialStatus.Draft, isDevelopment: true));
+    }
+
+    [Theory]
+    [InlineData("uk")]
+    [InlineData("en")]
+    [InlineData("ru")]
+    public async Task GuideInterfaceLocalizationIsComplete(string language)
+    {
+        var catalog = await GuideCatalog.Value;
+        StepByStepGuideLocalizationValidator.Validate(catalog, Resources.GetString);
+        foreach (var key in new[]
+        {
+            "Guide.DraftPreviewNotice", "Guide.SelectSituation", "Guide.Back", "Guide.Next", "Guide.Previous",
+            "Guide.ChangeSituation", "Guide.ReadArticle", "Guide.Progress", "Guide.Documents", "Guide.Authority",
+            "Guide.Warning", "Guide.Required", "Guide.Recommendation", "Guide.Optional", "Guide.Unavailable", "Guide.Step"
+        })
+        {
+            Assert.False(string.IsNullOrWhiteSpace(Resources.GetString(key, CultureInfo.GetCultureInfo(language))), $"Missing {language}: {key}");
+        }
+    }
+
+    private static StepByStepGuideCatalog ReplaceStep(StepByStepGuideCatalog catalog, GuideModel guide, GuideScenario scenario, GuideStep replacement) => catalog with
+    {
+        Guides = catalog.Guides.Select(item => item != guide ? item : item with
+        {
+            Scenarios = item.Scenarios.Select(candidate => candidate != scenario ? candidate : candidate with
+            {
+                Steps = candidate.Steps.Select(step => step.Id == replacement.Id ? replacement : step).ToArray()
+            }).ToArray()
+        }).ToArray()
+    };
+
+    private static async Task<string> RenderAsync(string language, string environmentName, GuideScenario? selectedScenario = null, int stepIndex = 0)
+    {
+        var originalCulture = CultureInfo.CurrentCulture;
+        var originalUiCulture = CultureInfo.CurrentUICulture;
+        CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo(language);
+        CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo(language);
+        try
+        {
+            var catalog = await Catalog.Value;
+            var services = new ServiceCollection();
+            services.AddLogging();
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
+            services.AddSingleton(catalog);
+            services.AddSingleton(await GuideCatalog.Value);
+            using var provider = services.BuildServiceProvider();
+            await using var renderer = new HtmlRenderer(provider, provider.GetRequiredService<ILoggerFactory>());
+            var guide = (await GuideCatalog.Value).Guides[0];
+            var isAvailable = environmentName == Environments.Development;
+            var parameters = new Dictionary<string, object?>
+            {
+                [nameof(GuideView.Guide)] = isAvailable ? guide : null,
+                [nameof(GuideView.Catalog)] = catalog,
+                [nameof(GuideView.IsAvailable)] = isAvailable,
+                [nameof(GuideView.SelectedScenario)] = selectedScenario,
+                [nameof(GuideView.StepIndex)] = stepIndex
+            };
+            return await renderer.Dispatcher.InvokeAsync(async () =>
+            {
+                var output = await renderer.RenderComponentAsync<GuideView>(ParameterView.FromDictionary(parameters));
+                return output.ToHtmlString();
+            });
+        }
+        finally
+        {
+            CultureInfo.CurrentCulture = originalCulture;
+            CultureInfo.CurrentUICulture = originalUiCulture;
+        }
+    }
+
+}
