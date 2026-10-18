@@ -130,7 +130,7 @@
     <value>Нужна помощь со следующим шагом?</value>
   </data>
   <data name="Category.GuideCalloutDescription" xml:space="preserve">
-    <value>Воспользуйтесь пошаговым руководством по временной защите в Германии.</value>
+    <value>Для этой темы доступно пошаговое руководство.</value>
   </data>
   <data name="Category.GuideCalloutLink" xml:space="preserve">
     <value>Открыть руководство</value>

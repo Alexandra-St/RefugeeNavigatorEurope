@@ -1,4 +1,4 @@
-@page "/guides/germany/temporary-protection"
+@page "/guides/{CountrySlug}/{GuideSlug}"
 @rendermode InteractiveServer
 @using RefugeeNavigator.Data
 @using RefugeeNavigator.Web.Guides
@@ -20,14 +20,25 @@
                      OnChangeSituation="ChangeSituation" />
 
 @code {
-    private static readonly Guid GermanyId = new("10000000-0000-0000-0000-000000000002");
+    [Parameter] public string CountrySlug { get; set; } = string.Empty;
+    [Parameter] public string GuideSlug { get; set; } = string.Empty;
+
     private GuideDefinition? _guide;
     private GuideScenario? _selectedScenario;
     private int _stepIndex;
+    private string? _currentRoute;
 
-    protected override void OnInitialized()
+    protected override void OnParametersSet()
     {
-        _guide = Guides.Guides.SingleOrDefault(guide => guide.CountryId == GermanyId && guide.Slug == "temporary-protection");
+        var route = $"{CountrySlug}/{GuideSlug}";
+        if (!string.Equals(route, _currentRoute, StringComparison.OrdinalIgnoreCase))
+        {
+            _currentRoute = route;
+            _selectedScenario = null;
+            _stepIndex = 0;
+        }
+
+        _guide = StepByStepGuideResolver.Resolve(Guides, Catalog, CountrySlug, GuideSlug);
         if (_guide is null || !StepByStepGuideVisibility.CanRender(_guide.EditorialStatus, HostEnvironment.IsDevelopment()))
         {
             _guide = null;

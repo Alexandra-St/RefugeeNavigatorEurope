@@ -180,6 +180,866 @@
           ]
         }
       ]
+    },
+    {
+      "Id": "denmark-temporary-protection-v1",
+      "Slug": "temporary-protection",
+      "CountryId": "10000000-0000-0000-0000-000000000001",
+      "EditorialStatus": "Draft",
+      "Translations": {
+        "uk": {
+          "Title": "Тимчасовий захист у Данії: заява, очікування та дозвіл",
+          "Description": "Оберіть ситуацію, щоб переглянути навігаційні кроки. Посібник не визначає право на захист або особистий строк дії дозволу."
+        },
+        "en": {
+          "Title": "Temporary protection in Denmark: applying, waiting and checking a permit",
+          "Description": "Choose a situation to see navigation steps. This guide does not determine eligibility or your personal permit validity."
+        },
+        "ru": {
+          "Title": "Временная защита в Дании: заявление, ожидание и разрешение",
+          "Description": "Выберите ситуацию, чтобы увидеть навигационные шаги. Руководство не определяет право на защиту или личный срок действия разрешения."
+        }
+      },
+      "Scenarios": [
+        {
+          "Id": "first-section-one-application",
+          "Order": 1,
+          "Translations": {
+            "uk": {
+              "Title": "Первинна заява за §1",
+              "Description": "Перевірте національні критерії та актуальний порядок, не визначаючи право на захист самостійно."
+            },
+            "en": {
+              "Title": "First application under section 1",
+              "Description": "Check the national criteria and current process without deciding eligibility yourself."
+            },
+            "ru": {
+              "Title": "Первичное заявление по §1",
+              "Description": "Проверьте национальные критерии и действующий порядок, не определяя право на защиту самостоятельно."
+            }
+          },
+          "Steps": [
+            {
+              "Id": "section-one-check-framework",
+              "Order": 1,
+              "Kind": "Recommendation",
+              "ArticleId": "afc14824-4035-4ca7-9662-6d5352ba63cb",
+              "OfficialSourceIds": [
+                "486ee6fc-fc67-4d04-891b-acb967e5477b",
+                "a17d9700-bcc4-4978-b9f8-0687c42ef038",
+                "441b7bd9-54cf-47a8-80a1-e89a0e410952",
+                "6677f201-1246-417c-8d8f-56dc99c93b0f"
+              ],
+              "ClaimIds": [
+                "C01",
+                "C02",
+                "C03",
+                "C19"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Перевірте національний маршрут",
+                  "Action": "Ознайомтеся з чинними критеріями §1 на New to Denmark і зверніться до Імміграційної служби Данії, якщо факти незрозумілі.",
+                  "Explanation": "Данія застосовує національний Спеціальний закон. Статус або дозвіл на тимчасовий захист іншої держави ЄС сам по собі не встановлює право на дозвіл у Данії. Дати, громадянство, проживання та інші дозволи можуть мати значення.",
+                  "Documents": [
+                    "Документи, що посвідчують особу, громадянство, проживання або переміщення; попередні дозволи — якщо стосуються справи. Це приклади, а не універсальний перелік."
+                  ],
+                  "Authority": "Імміграційна служба Данії (New to Denmark).",
+                  "Warning": "Посібник не визначає право на подання або результат заяви. §1 і §2 — окремі маршрути; зверніться до служби для оцінки конкретних обставин."
+                },
+                "en": {
+                  "Title": "Check the national route",
+                  "Action": "Read the current section 1 criteria on New to Denmark and ask the Danish Immigration Service if your facts are unclear.",
+                  "Explanation": "Denmark uses a national Special Act. Temporary protection status or a permit from another EU country does not by itself establish eligibility in Denmark. Dates, nationality, residence and other permits may matter.",
+                  "Documents": [
+                    "Identity, nationality, residence or displacement records; earlier permits if relevant. Examples only, not a universal checklist."
+                  ],
+                  "Authority": "Danish Immigration Service (New to Denmark).",
+                  "Warning": "This guide does not decide whether you may apply or predict the outcome. Sections 1 and 2 are separate routes; ask the service to assess individual facts."
+                },
+                "ru": {
+                  "Title": "Проверьте национальный маршрут",
+                  "Action": "Изучите действующие критерии §1 на New to Denmark и обратитесь в Иммиграционную службу Дании, если обстоятельства неясны.",
+                  "Explanation": "В Дании действует национальный Специальный закон. Статус или разрешение на временную защиту другой страны ЕС сами по себе не устанавливают право на разрешение в Дании. Могут иметь значение даты, гражданство, проживание и другие разрешения.",
+                  "Documents": [
+                    "Документы, удостоверяющие личность, гражданство, проживание или перемещение; прежние разрешения, если относятся к делу. Это примеры, а не универсальный список."
+                  ],
+                  "Authority": "Иммиграционная служба Дании (New to Denmark).",
+                  "Warning": "Руководство не определяет право на подачу заявления и не предсказывает результат. §1 и §2 — отдельные маршруты; попросите службу оценить обстоятельства конкретного дела."
+                }
+              }
+            },
+            {
+              "Id": "section-one-prepare-case-records",
+              "Order": 2,
+              "Kind": "Recommendation",
+              "ArticleId": "afc14824-4035-4ca7-9662-6d5352ba63cb",
+              "OfficialSourceIds": [
+                "486ee6fc-fc67-4d04-891b-acb967e5477b",
+                "9d53a568-07c9-4713-a5e8-1c4db5826a98",
+                "814a05cf-08c2-4f0d-b516-4ff3655f5b3c",
+                "abf16498-621a-447c-9d72-9ec8efe9d99c"
+              ],
+              "ClaimIds": [
+                "C05",
+                "C07"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Підготуйте документи, які можуть знадобитися",
+                  "Action": "Збережіть документи про особу й статус, дату першого виїзду з України та попередні рішення, якщо вони є.",
+                  "Explanation": "Орган може попросити інші докази. Наведені приклади потенційно доречні, а не обов’язковий універсальний перелік. Особливе правило щодо військового статусу стосується лише визначеної групи та дат; уточніть його застосування в служби.",
+                  "Documents": [
+                    "Паспорт або інший документ особи; докази статусу/проживання в Україні; сімейні документи, якщо доречно; попередні рішення. Документи про військовий статус — лише якщо правило може стосуватися вас і орган їх запитує."
+                  ],
+                  "Authority": "Імміграційна служба Данії.",
+                  "Warning": "Правило обмежене українськими чоловіками віком 23–59 років, на яких поширюються правила мобілізації України, для заяв, поданих 25 червня 2026 року або пізніше. Для дозволів, виданих до 3 вересня 2026 року за такими заявами, відкликання є умовним: міжнародні зобов’язання можуть цьому перешкоджати, а людину мають спочатку повідомити й надати можливість висловитися та подати відомості. Зміна не стосується дозволів, уже виданих за заявами, поданими до 25 червня 2026 року, зокрема подальших заяв про продовження. Деякі дозволи осіб молодше 23 років можуть мати строк до застосування правил мобілізації. Перевірте чинні офіційні критерії; посібник не оцінює особисту справу."
+                },
+                "en": {
+                  "Title": "Prepare potentially relevant records",
+                  "Action": "Keep identity and status documents, the date you first left Ukraine and any earlier decisions that may be relevant.",
+                  "Explanation": "The authority may ask for other evidence. These are potentially relevant examples, not a mandatory universal list. The special military-status rule concerns only a defined group and dates; ask the service how it applies.",
+                  "Documents": [
+                    "Passport or other identity record; evidence of status/residence in Ukraine; family records where relevant; earlier decisions. Military-status documents only if the rule may concern you and the authority asks for them."
+                  ],
+                  "Authority": "Danish Immigration Service.",
+                  "Warning": "The rule is limited to Ukrainian men aged 23–59 subject to Ukraine’s mobilisation rules, for applications submitted on or after 25 June 2026. For permits granted before 3 September 2026 on such an application, revocation is conditional: international obligations may prevent it, and the person must first be contacted and allowed to comment and provide information. The change does not affect permits already granted on applications submitted before 25 June 2026, including later extension applications. Some permits for people under 23 may be time-limited until mobilisation rules apply. Check current official criteria; this guide makes no individual assessment."
+                },
+                "ru": {
+                  "Title": "Подготовьте документы, которые могут понадобиться",
+                  "Action": "Сохраните документы о личности и статусе, дате первого выезда из Украины и прежние решения, если они относятся к делу.",
+                  "Explanation": "Орган может запросить другие доказательства. Это потенциально полезные примеры, а не обязательный универсальный перечень. Особое правило о военном статусе относится только к определённой группе и датам; уточните его применение в службе.",
+                  "Documents": [
+                    "Паспорт или другой документ личности; подтверждения статуса/проживания в Украине; семейные документы, если уместно; прежние решения. Документы о военном статусе — только если правило может относиться к вам и орган их запросит."
+                  ],
+                  "Authority": "Иммиграционная служба Дании.",
+                  "Warning": "Правило ограничено украинскими мужчинами в возрасте 23–59 лет, подпадающими под правила мобилизации Украины, для заявлений, поданных 25 июня 2026 года или позднее. Для разрешений, выданных до 3 сентября 2026 года по таким заявлениям, отзыв является условным: международные обязательства могут препятствовать ему, а человека должны сначала уведомить и дать возможность высказаться и представить сведения. Изменение не затрагивает разрешения, уже выданные по заявлениям, поданным до 25 июня 2026 года, включая последующие заявления о продлении. Некоторые разрешения лиц младше 23 лет могут быть ограничены сроком до применения правил мобилизации. Проверьте действующие официальные критерии; руководство не оценивает личное дело."
+                }
+              }
+            },
+            {
+              "Id": "section-one-follow-sl1-route",
+              "Order": 3,
+              "Kind": "Recommendation",
+              "ArticleId": "afc14824-4035-4ca7-9662-6d5352ba63cb",
+              "OfficialSourceIds": [
+                "486ee6fc-fc67-4d04-891b-acb967e5477b",
+                "9d53a568-07c9-4713-a5e8-1c4db5826a98"
+              ],
+              "ClaimIds": [
+                "C06",
+                "C07"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Дотримуйтеся поточних інструкцій SL1",
+                  "Action": "Для маршруту §1 перевірте вимогу перебувати в Данії та скористайтеся чинними інструкціями до форми SL1.",
+                  "Explanation": "Головний заявник використовує SL1; на офіційній сторінці доступні цифровий і паперовий варіанти. Форми та процедура можуть змінюватися. Для членів сім’ї за §2 передбачена окрема форма SL2.",
+                  "Documents": [
+                    "Чинна форма SL1 та документи, які вимагає служба; збережіть підтвердження подання."
+                  ],
+                  "Authority": "Імміграційна служба Данії.",
+                  "Warning": "Вимога перебування в Данії стосується заявника за §1. Кваліфіковану заяву за §2 можна подати в Данії або з-за кордону. Цей посібник не обирає маршрут за вас."
+                },
+                "en": {
+                  "Title": "Follow the current SL1 instructions",
+                  "Action": "For the section 1 route, check the requirement to be in Denmark and use the current SL1 instructions.",
+                  "Explanation": "The main applicant uses SL1; the official page offers digital and paper options. Forms and procedures can change. Family members applying under section 2 use a separate SL2 form.",
+                  "Documents": [
+                    "Current SL1 form and documents requested by the service; keep proof of submission."
+                  ],
+                  "Authority": "Danish Immigration Service.",
+                  "Warning": "The Denmark-presence requirement is for a section 1 applicant. A qualifying section 2 application may be submitted in Denmark or abroad. This guide does not choose a route for you."
+                },
+                "ru": {
+                  "Title": "Следуйте действующим инструкциям SL1",
+                  "Action": "Для маршрута §1 проверьте требование находиться в Дании и используйте действующие инструкции к форме SL1.",
+                  "Explanation": "Основной заявитель использует SL1; на официальной странице доступны цифровой и бумажный варианты. Формы и процедура могут измениться. Для членов семьи по §2 предусмотрена отдельная форма SL2.",
+                  "Documents": [
+                    "Действующая форма SL1 и документы, которые запросит служба; сохраните подтверждение подачи."
+                  ],
+                  "Authority": "Иммиграционная служба Дании.",
+                  "Warning": "Требование находиться в Дании относится к заявителю по §1. Квалифицируемое заявление по §2 можно подать в Дании или из-за границы. Руководство не выбирает маршрут за вас."
+                }
+              }
+            },
+            {
+              "Id": "section-one-follow-identity-instructions",
+              "Order": 4,
+              "Kind": "Recommendation",
+              "ArticleId": "afc14824-4035-4ca7-9662-6d5352ba63cb",
+              "OfficialSourceIds": [
+                "486ee6fc-fc67-4d04-891b-acb967e5477b",
+                "a17d9700-bcc4-4978-b9f8-0687c42ef038"
+              ],
+              "ClaimIds": [
+                "C08"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Виконайте інструкції щодо ідентифікації",
+                  "Action": "Після подання дотримуйтеся актуальних інструкцій щодо запису, перевірки особи та біометрії.",
+                  "Explanation": "На перевіреній сторінці вказано чотири тижні для призначення зустрічі. Для деяких людей із карткою шукача притулку або розміщення повторна біометрія не потрібна. Дітям слід приходити, якщо служба вимагає перевірки особи.",
+                  "Documents": [
+                    "Підтвердження заяви, інструкції щодо зустрічі та документи особи; наявну картку — якщо маєте."
+                  ],
+                  "Authority": "Імміграційна служба Данії.",
+                  "Warning": "Перевірте актуальний строк, винятки та інструкції для дітей на офіційній сторінці й у повідомленні про прийом."
+                },
+                "en": {
+                  "Title": "Follow identity-check instructions",
+                  "Action": "After filing, follow current instructions for appointments, identity checks and biometrics.",
+                  "Explanation": "The reviewed page gives four weeks to book an appointment. Some holders of an asylum or accommodation card do not need biometrics repeated. Children should attend when the service requires an identity check.",
+                  "Documents": [
+                    "Application proof, appointment instructions and identity documents; an existing card if you have one."
+                  ],
+                  "Authority": "Danish Immigration Service.",
+                  "Warning": "Check the current deadline, exceptions and child instructions on the official page and in your appointment notice."
+                },
+                "ru": {
+                  "Title": "Выполните инструкции по проверке личности",
+                  "Action": "После подачи следуйте актуальным инструкциям о записи, проверке личности и биометрии.",
+                  "Explanation": "На проверенной странице указан срок четыре недели для записи. Некоторым обладателям карточки просителя убежища или проживания в центре не нужно сдавать биометрию повторно. Детям следует прийти, если служба требует проверить личность.",
+                  "Documents": [
+                    "Подтверждение заявления, инструкции о приёме и документы личности; имеющуюся карточку — если она есть."
+                  ],
+                  "Authority": "Иммиграционная служба Дании.",
+                  "Warning": "Проверьте действующий срок, исключения и инструкции для детей на официальной странице и в уведомлении о приёме."
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Id": "family-section-two-application",
+          "Order": 2,
+          "Translations": {
+            "uk": {
+              "Title": "Заява члена сім’ї за §2",
+              "Description": "Це окремий маршрут із визначеними категоріями спорідненості."
+            },
+            "en": {
+              "Title": "Family-member application under section 2",
+              "Description": "This is a separate route with defined family categories."
+            },
+            "ru": {
+              "Title": "Заявление члена семьи по §2",
+              "Description": "Это отдельный маршрут с определёнными категориями родства."
+            }
+          },
+          "Steps": [
+            {
+              "Id": "family-check-section-two-route",
+              "Order": 1,
+              "Kind": "Recommendation",
+              "ArticleId": "afc14824-4035-4ca7-9662-6d5352ba63cb",
+              "OfficialSourceIds": [
+                "486ee6fc-fc67-4d04-891b-acb967e5477b",
+                "a17d9700-bcc4-4978-b9f8-0687c42ef038",
+                "441b7bd9-54cf-47a8-80a1-e89a0e410952"
+              ],
+              "ClaimIds": [
+                "C03",
+                "C04",
+                "C19"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Перевірте окремі критерії для сім’ї",
+                  "Action": "Ознайомтеся з переліком членів сім’ї за §2 та попросіть службу оцінити незрозумілі умови спорідненості.",
+                  "Explanation": "§2 охоплює визначені близькі сімейні категорії, а не всіх родичів. Враховується сімейне життя станом на 24 лютого 2022 року. Позицію кожного члена сім’ї перевіряють окремо.",
+                  "Documents": [
+                    "Документи про особу, спорідненість і сімейне життя; документи дитини та рішення основного заявника, якщо доречно. Це приклади."
+                  ],
+                  "Authority": "Імміграційна служба Данії.",
+                  "Warning": "Належність до категорії залежить від фактів і доказів. Не вважайте, що дозвіл одного члена сім’ї автоматично поширюється на інших."
+                },
+                "en": {
+                  "Title": "Check the separate family criteria",
+                  "Action": "Read the section 2 family categories and ask the service to assess unclear relationship conditions.",
+                  "Explanation": "Section 2 covers specified close-family categories, not every relative. The relevant family life must have existed on 24 February 2022. Each family member’s position is checked separately.",
+                  "Documents": [
+                    "Identity and relationship/family-life records; child documents and the principal applicant’s decision where relevant. Examples only."
+                  ],
+                  "Authority": "Danish Immigration Service.",
+                  "Warning": "Whether a category applies depends on facts and evidence. Do not assume one family member’s permit automatically extends to others."
+                },
+                "ru": {
+                  "Title": "Проверьте отдельные семейные критерии",
+                  "Action": "Изучите категории членов семьи по §2 и попросите службу оценить неясные условия родства.",
+                  "Explanation": "§2 охватывает определённые категории близких родственников, а не всех родных. Учитывается семейная жизнь на 24 февраля 2022 года. Положение каждого члена семьи проверяется отдельно.",
+                  "Documents": [
+                    "Документы личности, родства и семейной жизни; документы ребёнка и решение основного заявителя, если уместно. Это примеры."
+                  ],
+                  "Authority": "Иммиграционная служба Дании.",
+                  "Warning": "Применимость категории зависит от фактов и доказательств. Не считайте, что разрешение одного члена семьи автоматически распространяется на других."
+                }
+              }
+            },
+            {
+              "Id": "family-follow-sl2-instructions",
+              "Order": 2,
+              "Kind": "Recommendation",
+              "ArticleId": "afc14824-4035-4ca7-9662-6d5352ba63cb",
+              "OfficialSourceIds": [
+                "486ee6fc-fc67-4d04-891b-acb967e5477b",
+                "a17d9700-bcc4-4978-b9f8-0687c42ef038"
+              ],
+              "ClaimIds": [
+                "C04",
+                "C06",
+                "C07"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Перевірте маршрут SL2 і місце подання",
+                  "Action": "Скористайтеся актуальними інструкціями до SL2 та перевірте правила подання саме для сімейної заяви.",
+                  "Explanation": "Кваліфіковану заяву за §2 можна подати в Данії або з-за кордону. Для деяких дітей можлива спільна подача з батьком чи матір’ю; іншим родичам може знадобитися окрема SL2.",
+                  "Documents": [
+                    "Чинна форма SL2 та докази, які запросить орган; збережіть підтвердження подання."
+                  ],
+                  "Authority": "Імміграційна служба Данії.",
+                  "Warning": "Не переносіть вимогу перебування в Данії для §1 на всі сімейні заяви. Процедура залежить від категорії та ситуації."
+                },
+                "en": {
+                  "Title": "Check the SL2 route and where to apply",
+                  "Action": "Use current SL2 instructions and check the location rules for the family application.",
+                  "Explanation": "A qualifying section 2 application may be submitted in Denmark or abroad. Some children may apply with a parent; other relatives may need a separate SL2 application.",
+                  "Documents": [
+                    "Current SL2 form and evidence requested by the authority; keep proof of filing."
+                  ],
+                  "Authority": "Danish Immigration Service.",
+                  "Warning": "Do not apply the section 1 presence requirement to every family application. The procedure depends on the category and circumstances."
+                },
+                "ru": {
+                  "Title": "Проверьте маршрут SL2 и место подачи",
+                  "Action": "Используйте действующие инструкции SL2 и уточните правила подачи именно семейного заявления.",
+                  "Explanation": "Квалифицируемое заявление по §2 можно подать в Дании или из-за границы. Некоторые дети могут подать заявление с родителем; другим родственникам может потребоваться отдельная SL2.",
+                  "Documents": [
+                    "Действующая форма SL2 и доказательства, запрошенные органом; сохраните подтверждение подачи."
+                  ],
+                  "Authority": "Иммиграционная служба Дании.",
+                  "Warning": "Не переносите требование находиться в Дании для §1 на все семейные заявления. Процедура зависит от категории и обстоятельств."
+                }
+              }
+            },
+            {
+              "Id": "family-check-case-specific-evidence",
+              "Order": 3,
+              "Kind": "Recommendation",
+              "ArticleId": "afc14824-4035-4ca7-9662-6d5352ba63cb",
+              "OfficialSourceIds": [
+                "486ee6fc-fc67-4d04-891b-acb967e5477b",
+                "a17d9700-bcc4-4978-b9f8-0687c42ef038",
+                "814a05cf-08c2-4f0d-b516-4ff3655f5b3c",
+                "abf16498-621a-447c-9d72-9ec8efe9d99c"
+              ],
+              "ClaimIds": [
+                "C03",
+                "C05",
+                "C07",
+                "C19"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Уточніть докази та особливі умови",
+                  "Action": "Запитайте службу, які докази потрібні саме у вашій сімейній справі.",
+                  "Explanation": "Інше громадянство або дозвіл на проживання в іншій країні може вплинути на оцінку. Вузьке правило щодо військового статусу стосується лише визначеної групи; перевірте його умови та перехідні положення в службі.",
+                  "Documents": [
+                    "Документи про особу, інші дозволи, спорідненість і відповідні дати; матеріали про військовий статус лише якщо орган вважає це доречним."
+                  ],
+                  "Authority": "Імміграційна служба Данії.",
+                  "Warning": "Не робіть висновку щодо права на заяву. Не вважайте, що військове правило однаково стосується кожного сімейного заявника."
+                },
+                "en": {
+                  "Title": "Clarify case-specific evidence",
+                  "Action": "Ask the service what evidence is needed for your family case.",
+                  "Explanation": "Other citizenship or a residence permit in another country may affect the assessment. The narrow military-status rule concerns only a defined group; ask the service about its conditions and transition rules.",
+                  "Documents": [
+                    "Identity, other permits, relationship and relevant-date records; military-status records only if the authority considers them relevant."
+                  ],
+                  "Authority": "Danish Immigration Service.",
+                  "Warning": "Do not decide eligibility. Do not assume the military rule applies in the same way to every family applicant."
+                },
+                "ru": {
+                  "Title": "Уточните доказательства и особые условия",
+                  "Action": "Спросите службу, какие доказательства нужны именно для вашего семейного дела.",
+                  "Explanation": "Другое гражданство или разрешение на проживание в другой стране может повлиять на оценку. Узкое военное правило касается только определённой группы; уточните в службе его условия и переходные положения.",
+                  "Documents": [
+                    "Документы личности, другие разрешения, родство и соответствующие даты; сведения о военном статусе — только если орган сочтёт их относящимися к делу."
+                  ],
+                  "Authority": "Иммиграционная служба Дании.",
+                  "Warning": "Не определяйте право на заявление. Не считайте, что военное правило одинаково применяется к каждому члену семьи."
+                }
+              }
+            },
+            {
+              "Id": "family-follow-identity-instructions",
+              "Order": 4,
+              "Kind": "Recommendation",
+              "ArticleId": "afc14824-4035-4ca7-9662-6d5352ba63cb",
+              "OfficialSourceIds": [
+                "486ee6fc-fc67-4d04-891b-acb967e5477b",
+                "a17d9700-bcc4-4978-b9f8-0687c42ef038"
+              ],
+              "ClaimIds": [
+                "C08"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Дотримуйтеся інструкцій щодо особи й біометрії",
+                  "Action": "Перевірте актуальні інструкції для запису та кожного члена сім’ї.",
+                  "Explanation": "На сторінці служби вказано строк чотири тижні та винятки для повторної біометрії в деяких випадках. Діти мають прийти, якщо служба вимагає перевірки особи.",
+                  "Documents": [
+                    "Повідомлення про прийом, підтвердження заяви та документи особи кожного заявника."
+                  ],
+                  "Authority": "Імміграційна служба Данії.",
+                  "Warning": "Строки та винятки можуть змінитися; дотримуйтеся поточних індивідуальних інструкцій."
+                },
+                "en": {
+                  "Title": "Follow identity and biometric instructions",
+                  "Action": "Check current appointment instructions for each family member.",
+                  "Explanation": "The service page gives a four-week period and exceptions to repeating biometrics in some cases. Children should attend when an identity check is required.",
+                  "Documents": [
+                    "Appointment notice, application proof and each applicant’s identity documents."
+                  ],
+                  "Authority": "Danish Immigration Service.",
+                  "Warning": "Time limits and exceptions can change; follow current instructions for each case."
+                },
+                "ru": {
+                  "Title": "Следуйте инструкциям по личности и биометрии",
+                  "Action": "Проверьте действующие инструкции о записи для каждого члена семьи.",
+                  "Explanation": "На странице службы указан срок четыре недели и исключения для повторной биометрии в некоторых случаях. Дети должны прийти, если требуется проверка личности.",
+                  "Documents": [
+                    "Уведомление о приёме, подтверждение заявления и документы личности каждого заявителя."
+                  ],
+                  "Authority": "Иммиграционная служба Дании.",
+                  "Warning": "Сроки и исключения могут меняться; следуйте актуальным индивидуальным инструкциям."
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Id": "application-pending",
+          "Order": 3,
+          "Translations": {
+            "uk": {
+              "Title": "Заяву подано, рішення очікується",
+              "Description": "Зберігайте підтвердження й перевіряйте умовні правила на час розгляду."
+            },
+            "en": {
+              "Title": "Application submitted; decision pending",
+              "Description": "Keep records and check the conditional rules while the case is processed."
+            },
+            "ru": {
+              "Title": "Заявление подано, решение ожидается",
+              "Description": "Сохраняйте подтверждения и проверяйте условные правила на время рассмотрения."
+            }
+          },
+          "Steps": [
+            {
+              "Id": "pending-keep-submission-records",
+              "Order": 1,
+              "Kind": "Recommendation",
+              "ArticleId": "afc14824-4035-4ca7-9662-6d5352ba63cb",
+              "OfficialSourceIds": [
+                "486ee6fc-fc67-4d04-891b-acb967e5477b",
+                "a17d9700-bcc4-4978-b9f8-0687c42ef038",
+                "141d8418-08af-4315-b5c2-ff34900b3369"
+              ],
+              "ClaimIds": [
+                "C08",
+                "C09"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Збережіть підтвердження подання",
+                  "Action": "Збережіть квитанцію та листування і виконайте інструкції щодо ідентифікації або біометрії.",
+                  "Explanation": "Служба вважає заяву отриманою, коли вона надходить до Імміграційної служби. Орієнтир 35 днів — цільовий строк, а не гарантія; окремі справи тривають довше.",
+                  "Documents": [
+                    "Квитанція, номер справи, повідомлення про біометрію та листи служби. Це практичні приклади для зберігання."
+                  ],
+                  "Authority": "Імміграційна служба Данії.",
+                  "Warning": "Не сприймайте 35 днів як обіцяну дату рішення."
+                },
+                "en": {
+                  "Title": "Keep proof of submission",
+                  "Action": "Keep the receipt and correspondence, and complete identity or biometric instructions.",
+                  "Explanation": "The service considers an application received when it reaches the Immigration Service. The 35-day figure is a target, not a guarantee; some cases take longer.",
+                  "Documents": [
+                    "Receipt, case reference, biometric notice and authority letters. Practical record-keeping examples."
+                  ],
+                  "Authority": "Danish Immigration Service.",
+                  "Warning": "Do not treat 35 days as a promised decision date."
+                },
+                "ru": {
+                  "Title": "Сохраните подтверждение подачи",
+                  "Action": "Сохраните квитанцию и переписку, выполните инструкции по проверке личности и биометрии.",
+                  "Explanation": "Служба считает заявление полученным, когда оно поступило в Иммиграционную службу. Ориентир в 35 дней — цель, а не гарантия; некоторые дела рассматриваются дольше.",
+                  "Documents": [
+                    "Квитанция, номер дела, уведомление о биометрии и письма органа. Это практические примеры для хранения."
+                  ],
+                  "Authority": "Иммиграционная служба Дании.",
+                  "Warning": "Не считайте 35 дней обещанной датой решения."
+                }
+              }
+            },
+            {
+              "Id": "pending-clarify-work-conditions",
+              "Order": 2,
+              "Kind": "Recommendation",
+              "ArticleId": "afc14824-4035-4ca7-9662-6d5352ba63cb",
+              "OfficialSourceIds": [
+                "141d8418-08af-4315-b5c2-ff34900b3369"
+              ],
+              "ClaimIds": [
+                "C11"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Перевірте умови роботи під час очікування",
+                  "Action": "Перш ніж починати роботу, перевірте виконання умов і зверніться до служби, якщо їх застосування неясне.",
+                  "Explanation": "За роз’ясненням служби, право працювати під час очікування є умовним: біометричні дані мають бути записані, а заявник не повинен очевидно не відповідати §1 або §2.",
+                  "Documents": [
+                    "Підтвердження подання та запису біометрії; письмові інструкції у справі, якщо надані."
+                  ],
+                  "Authority": "Імміграційна служба Данії.",
+                  "Warning": "Саме подання заяви не дає безумовного права працювати. Якщо ви або роботодавець не впевнені, служба радить не починати роботу до рішення."
+                },
+                "en": {
+                  "Title": "Check the conditions for work while waiting",
+                  "Action": "Before starting work, check the conditions and ask the service if their application is unclear.",
+                  "Explanation": "According to the service, work while a case is pending is conditional: biometrics must be recorded and the applicant must not be obviously unable to qualify under section 1 or 2.",
+                  "Documents": [
+                    "Application proof and biometric record; written case instructions if provided."
+                  ],
+                  "Authority": "Danish Immigration Service.",
+                  "Warning": "Submitting an application alone does not grant unconditional work rights. If you or an employer is unsure, the service advises not starting work before a decision."
+                },
+                "ru": {
+                  "Title": "Проверьте условия работы во время ожидания",
+                  "Action": "Прежде чем начинать работу, проверьте условия и обратитесь в службу, если их применение неясно.",
+                  "Explanation": "По разъяснению службы, работа во время рассмотрения заявления условна: биометрические данные должны быть зарегистрированы, а заявитель не должен очевидно не соответствовать §1 или §2.",
+                  "Documents": [
+                    "Подтверждение заявления и регистрации биометрии; письменные инструкции по делу, если они есть."
+                  ],
+                  "Authority": "Иммиграционная служба Дании.",
+                  "Warning": "Одна подача заявления не даёт безусловного права работать. Если вы или работодатель не уверены, служба советует не начинать работу до решения."
+                }
+              }
+            },
+            {
+              "Id": "pending-check-stay-travel-health",
+              "Order": 3,
+              "Kind": "Recommendation",
+              "ArticleId": "afc14824-4035-4ca7-9662-6d5352ba63cb",
+              "OfficialSourceIds": [
+                "486ee6fc-fc67-4d04-891b-acb967e5477b",
+                "141d8418-08af-4315-b5c2-ff34900b3369"
+              ],
+              "ClaimIds": [
+                "C10",
+                "C12"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Уточніть наслідки поїздки та медичну допомогу",
+                  "Action": "Перед виїздом перевірте правила повторного в’їзду; медичні питання звірте з окремою інформацією про охорону здоров’я.",
+                  "Explanation": "Заява, що розглядається, не є дозволом на проживання і не створює загального права повторного в’їзду. Під час розгляду описано лише доступ до певних медичних послуг за наявності підтвердження заяви.",
+                  "Documents": [
+                    "Підтвердження подання та письмові інструкції щодо поїздки або медичних питань, якщо надані. Не надсилайте їх до цього посібника."
+                  ],
+                  "Authority": "Імміграційна служба Данії; окрема стаття про охорону здоров’я.",
+                  "Warning": "Не вважайте, що після виїзду можна повернутися або що медичний доступ під час розгляду тотожний покриттю після дозволу."
+                },
+                "en": {
+                  "Title": "Check travel and healthcare limits",
+                  "Action": "Before travelling, check re-entry rules; consult the separate healthcare information for health questions.",
+                  "Explanation": "A pending application is not a residence permit and creates no general right to re-enter. During processing, the guidance describes access only to certain healthcare services if you can prove the application.",
+                  "Documents": [
+                    "Application proof and written travel or healthcare instructions, if provided. Do not upload them to this guide."
+                  ],
+                  "Authority": "Danish Immigration Service; separate Denmark Healthcare article.",
+                  "Warning": "Do not assume you can return after travel or that healthcare during processing equals coverage after a permit."
+                },
+                "ru": {
+                  "Title": "Уточните ограничения на поездки и медицинскую помощь",
+                  "Action": "Перед поездкой проверьте правила повторного въезда; медицинские вопросы сверяйте с отдельной информацией о здравоохранении.",
+                  "Explanation": "Заявление на рассмотрении не является разрешением на проживание и не создаёт общего права на повторный въезд. На время рассмотрения описан доступ лишь к некоторым медицинским услугам при подтверждении заявления.",
+                  "Documents": [
+                    "Подтверждение заявления и письменные инструкции о поездке или медицинской помощи, если предоставлены. Не загружайте их в это руководство."
+                  ],
+                  "Authority": "Иммиграционная служба Дании; отдельная статья о здравоохранении в Дании.",
+                  "Warning": "Не считайте, что после выезда можно вернуться или что медицинский доступ во время рассмотрения равен покрытию после выдачи разрешения."
+                }
+              }
+            },
+            {
+              "Id": "pending-respond-to-case-messages",
+              "Order": 4,
+              "Kind": "Recommendation",
+              "ArticleId": "afc14824-4035-4ca7-9662-6d5352ba63cb",
+              "OfficialSourceIds": [
+                "486ee6fc-fc67-4d04-891b-acb967e5477b",
+                "141d8418-08af-4315-b5c2-ff34900b3369",
+                "8a754763-dabb-4aee-ae13-415f5025e6ba",
+                "f360d680-d215-4fdf-b419-d75a63ad68a8"
+              ],
+              "ClaimIds": [
+                "C09",
+                "C15",
+                "C19"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Відповідайте на запити у справі",
+                  "Action": "Читайте повідомлення служби та надсилайте запитані відомості встановленим каналом.",
+                  "Explanation": "Якщо надійшла відмова, негайно прочитайте рішення, дотримуйтеся саме його інструкцій щодо оскарження й оперативно зверніться по актуальну допомогу.",
+                  "Documents": [
+                    "Запит органу, номер справи, рішення та докази, які прямо запитані."
+                  ],
+                  "Authority": "Імміграційна служба Данії; у разі рішення — орган і порядок, зазначені в ньому.",
+                  "Warning": "Порядок оскарження залежить від виду рішення та винятків. Тут немає універсального числового строку чи обіцянки права залишатися під час оскарження."
+                },
+                "en": {
+                  "Title": "Respond to case requests",
+                  "Action": "Read messages from the service and send requested information through its instructed channel.",
+                  "Explanation": "If a refusal arrives, read the decision immediately, follow its specific appeal instructions and seek current help promptly.",
+                  "Documents": [
+                    "Authority request, case reference, decision and evidence specifically requested."
+                  ],
+                  "Authority": "Danish Immigration Service; for a decision, the authority and process identified in it.",
+                  "Warning": "Appeal procedures depend on decision type and exceptions. This guide gives no universal numerical deadline or promise of a right to remain during appeal."
+                },
+                "ru": {
+                  "Title": "Отвечайте на запросы по делу",
+                  "Action": "Читайте сообщения службы и направляйте запрошенные сведения указанным способом.",
+                  "Explanation": "Если получен отказ, немедленно прочитайте решение, следуйте его конкретным инструкциям об обжаловании и оперативно обратитесь за актуальной помощью.",
+                  "Documents": [
+                    "Запрос органа, номер дела, решение и документы, прямо запрошенные органом."
+                  ],
+                  "Authority": "Иммиграционная служба Дании; при получении решения — орган и порядок, указанные в нём.",
+                  "Warning": "Порядок обжалования зависит от вида решения и исключений. Здесь нет универсального числового срока или обещания права оставаться во время обжалования."
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Id": "existing-special-act-permit",
+          "Order": 4,
+          "Translations": {
+            "uk": {
+              "Title": "У мене є дозвіл за Спеціальним законом",
+              "Description": "Перевірте умови власного рішення та окремі подальші питання."
+            },
+            "en": {
+              "Title": "I have a Special Act permit",
+              "Description": "Check your own decision and handle related next steps separately."
+            },
+            "ru": {
+              "Title": "У меня есть разрешение по Специальному закону",
+              "Description": "Проверьте условия собственного решения и отдельно разберите дальнейшие вопросы."
+            }
+          },
+          "Steps": [
+            {
+              "Id": "permit-read-individual-decision",
+              "Order": 1,
+              "Kind": "Recommendation",
+              "ArticleId": "afc14824-4035-4ca7-9662-6d5352ba63cb",
+              "OfficialSourceIds": [
+                "486ee6fc-fc67-4d04-891b-acb967e5477b",
+                "65822ddc-ad39-4a32-89ee-140dfca11496"
+              ],
+              "ClaimIds": [
+                "C13",
+                "C19"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Прочитайте власне рішення та умови дозволу",
+                  "Action": "Перевірте рішення і документи, зокрема умови роботи та строк, зазначений у вашій справі.",
+                  "Explanation": "Дозвіл за Спеціальним законом може надавати право працювати з урахуванням його умов. Загальна сторінка не визначає особисту чинність дозволу або можливість поїздки.",
+                  "Documents": [
+                    "Власне рішення, документ/картка дозволу та останні письмові повідомлення у справі."
+                  ],
+                  "Authority": "Імміграційна служба Данії.",
+                  "Warning": "Не визначайте індивідуальний строк дії чи право на поїздку за загальною інформацією."
+                },
+                "en": {
+                  "Title": "Read your own decision and permit conditions",
+                  "Action": "Check the decision and documents, including work conditions and the date recorded for your case.",
+                  "Explanation": "A Special Act permit may allow work subject to its conditions. A general webpage does not determine your personal permit validity or travel position.",
+                  "Documents": [
+                    "Your decision, permit document/card and latest written case messages."
+                  ],
+                  "Authority": "Danish Immigration Service.",
+                  "Warning": "Do not determine your personal expiry date or travel rights from general information."
+                },
+                "ru": {
+                  "Title": "Прочитайте своё решение и условия разрешения",
+                  "Action": "Проверьте решение и документы, включая условия работы и дату, указанную в вашем деле.",
+                  "Explanation": "Разрешение по Специальному закону может давать право работать с учётом его условий. Общая страница не определяет личный срок действия разрешения или возможность поездки.",
+                  "Documents": [
+                    "Собственное решение, документ/карточка разрешения и последние письменные сообщения по делу."
+                  ],
+                  "Authority": "Иммиграционная служба Дании.",
+                  "Warning": "Не определяйте индивидуальный срок действия или право на поездку по общей информации."
+                }
+              }
+            },
+            {
+              "Id": "permit-separate-municipality-cpr-housing",
+              "Order": 2,
+              "Kind": "Recommendation",
+              "ArticleId": "afc14824-4035-4ca7-9662-6d5352ba63cb",
+              "OfficialSourceIds": [
+                "486ee6fc-fc67-4d04-891b-acb967e5477b",
+                "65822ddc-ad39-4a32-89ee-140dfca11496",
+                "654c059c-be25-4b0a-bc47-cd995a2b91ea",
+                "8ad828b3-b58d-4716-aa57-cd16798bb31c"
+              ],
+              "ClaimIds": [
+                "C13",
+                "C14",
+                "C20"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Окремо уточніть муніципальне призначення, житло й CPR",
+                  "Action": "Зверніться до призначеного муніципалітету щодо адреси та CPR і окремо з’ясуйте питання розміщення.",
+                  "Explanation": "Призначення муніципалітету не означає права на житло. §57(5) Закону про інтеграцію стосується саме дозволу за §2(1) українського Спеціального закону: звичайне розміщення за §12 не застосовується, але служба може вирішити інакше за дуже особливих особистих обставин.",
+                  "Documents": [
+                    "Рішення, лист про призначення муніципалітету, адреса й документи особи, які запитає місцева служба."
+                  ],
+                  "Authority": "Призначений муніципалітет / Borgerservice — щодо адреси та CPR; Імміграційна служба — щодо підстави дозволу й §57(5).",
+                  "Warning": "Не гарантовано бажаний муніципалітет або конкретне житло. Виняток §2(1) не слід поширювати на всі сімейні випадки; CPR, картка й дозвіл — різні записи."
+                },
+                "en": {
+                  "Title": "Ask separately about municipality, housing and CPR",
+                  "Action": "Ask the assigned municipality about address and CPR registration, and clarify accommodation separately.",
+                  "Explanation": "Municipality assignment does not mean an entitlement to housing. Integration Act §57(5) concerns specifically a permit under Ukraine Special Act §2(1): ordinary §12 placement does not apply, though the service may decide otherwise in very special personal circumstances.",
+                  "Documents": [
+                    "Decision, municipality assignment letter, address and identity records requested by the local service."
+                  ],
+                  "Authority": "Assigned municipality/Citizen Service for address and CPR; Immigration Service for permit basis and §57(5).",
+                  "Warning": "A preferred municipality or particular dwelling is not guaranteed. Do not extend the §2(1) exception to every family case; CPR, a card and a permit are separate records."
+                },
+                "ru": {
+                  "Title": "Отдельно уточните муниципальное назначение, жильё и CPR",
+                  "Action": "Обратитесь в назначенный муниципалитет по вопросам адреса и CPR, а размещение уточните отдельно.",
+                  "Explanation": "Назначение муниципалитета не означает права на жильё. §57(5) Закона об интеграции относится именно к разрешению по §2(1) Специального закона Дании об Украине: обычное размещение по §12 не применяется, но служба может решить иначе при очень особых личных обстоятельствах.",
+                  "Documents": [
+                    "Решение, письмо о назначении муниципалитета, адрес и документы личности, запрошенные местной службой."
+                  ],
+                  "Authority": "Назначенный муниципалитет/Borgerservice — по адресу и CPR; Иммиграционная служба — по основанию разрешения и §57(5).",
+                  "Warning": "Желаемый муниципалитет или конкретное жильё не гарантируются. Не распространяйте исключение §2(1) на все семейные случаи; CPR, карточка и разрешение — разные записи."
+                }
+              }
+            },
+            {
+              "Id": "permit-check-extension-communication",
+              "Order": 3,
+              "Kind": "Recommendation",
+              "ArticleId": "afc14824-4035-4ca7-9662-6d5352ba63cb",
+              "OfficialSourceIds": [
+                "486ee6fc-fc67-4d04-891b-acb967e5477b",
+                "a17d9700-bcc4-4978-b9f8-0687c42ef038",
+                "814a05cf-08c2-4f0d-b516-4ff3655f5b3c",
+                "886dfd95-7713-4c69-9b3f-a2d3be8ad323",
+                "9f908ed5-7fef-4075-a1e3-a1943669e3e6",
+                "abf16498-621a-447c-9d72-9ec8efe9d99c"
+              ],
+              "ClaimIds": [
+                "C05",
+                "C16",
+                "C17"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Зіставте загальні дати зі своїми письмовими документами",
+                  "Action": "Перевірте власне рішення й останнє письмове повідомлення та запитайте службу, яка дата стосується вашої справи.",
+                  "Explanation": "BEK № 828/2026 передбачає можливе продовження до 17 березня 2028 року за умовами регламенту. Водночас сторінки Імміграційної служби про заяву та сім’ю досі вказують 17 березня 2027 року. У переглянутих джерелах розбіжність не узгоджена.",
+                  "Documents": [
+                    "Власне рішення, чинний дозвіл і останнє письмове повідомлення служби. Не вводьте особисті дані в посібник."
+                  ],
+                  "Authority": "Імміграційна служба Данії.",
+                  "Warning": "Жодна загальна дата не є вашою гарантованою датою завершення дозволу. Продовження не слід вважати автоматичним; враховуйте умови, §10 та індивідуальні обставини."
+                },
+                "en": {
+                  "Title": "Compare general dates with your written records",
+                  "Action": "Check your decision and latest written message, and ask the service which date applies to your case.",
+                  "Explanation": "BEK no. 828/2026 provides a possible extension to 17 March 2028 subject to its conditions. The Immigration Service application and family pages still state 17 March 2027. The reviewed sources have not reconciled the conflict.",
+                  "Documents": [
+                    "Your decision, current permit and latest written message from the service. Do not enter personal details in this guide."
+                  ],
+                  "Authority": "Danish Immigration Service.",
+                  "Warning": "Neither general date is your guaranteed expiry date. Do not assume an automatic extension; conditions, section 10 and individual circumstances matter."
+                },
+                "ru": {
+                  "Title": "Сверьте общие даты со своими письменными документами",
+                  "Action": "Проверьте своё решение и последнее письменное сообщение и спросите службу, какая дата относится к вашему делу.",
+                  "Explanation": "BEK № 828/2026 предусматривает возможное продление до 17 марта 2028 года при соблюдении условий. При этом страницы Иммиграционной службы о заявлении и членах семьи по-прежнему указывают 17 марта 2027 года. В рассмотренных источниках расхождение не согласовано.",
+                  "Documents": [
+                    "Собственное решение, действующее разрешение и последнее письменное сообщение службы. Не вводите личные данные в руководство."
+                  ],
+                  "Authority": "Иммиграционная служба Дании.",
+                  "Warning": "Ни одна общая дата не является гарантированной датой окончания вашего разрешения. Не считайте продление автоматическим; важны условия, §10 и личные обстоятельства."
+                }
+              }
+            },
+            {
+              "Id": "permit-check-family-and-further-questions",
+              "Order": 4,
+              "Kind": "Recommendation",
+              "ArticleId": "afc14824-4035-4ca7-9662-6d5352ba63cb",
+              "OfficialSourceIds": [
+                "486ee6fc-fc67-4d04-891b-acb967e5477b",
+                "a17d9700-bcc4-4978-b9f8-0687c42ef038",
+                "65822ddc-ad39-4a32-89ee-140dfca11496"
+              ],
+              "ClaimIds": [
+                "C04",
+                "C19"
+              ],
+              "Translations": {
+                "uk": {
+                  "Title": "Перевірте рішення членів сім’ї та наступні запитання окремо",
+                  "Action": "Звірте документи кожного члена сім’ї та зверніться до служби щодо незрозумілих наступних кроків.",
+                  "Explanation": "Дозвіл однієї особи не надає автоматично дозволу чи однакових прав родичам. Для довгострокових питань про інші підстави проживання див. окрему статтю про варіанти після тимчасового захисту.",
+                  "Documents": [
+                    "Окремі рішення й повідомлення щодо кожного члена сім’ї; документи, які прямо запитав орган. Не завантажуйте їх."
+                  ],
+                  "Authority": "Імміграційна служба Данії.",
+                  "Warning": "Посібник не гарантує перехід на інший тип дозволу й не визначає право конкретної сім’ї."
+                },
+                "en": {
+                  "Title": "Check family decisions and further questions separately",
+                  "Action": "Check each family member’s records and ask the service about unclear next steps.",
+                  "Explanation": "One person’s permit does not automatically give relatives a permit or identical rights. For longer-term questions about other residence bases, see the separate residence-options article.",
+                  "Documents": [
+                    "Each family member’s decisions and messages; records specifically requested by the authority. Do not upload them."
+                  ],
+                  "Authority": "Danish Immigration Service.",
+                  "Warning": "This guide does not guarantee a switch to another permit or determine a family’s eligibility."
+                },
+                "ru": {
+                  "Title": "Отдельно проверьте решения членов семьи и дальнейшие вопросы",
+                  "Action": "Сверьте документы каждого члена семьи и обратитесь в службу, если следующий шаг неясен.",
+                  "Explanation": "Разрешение одного человека автоматически не даёт родственникам разрешение или такие же права. По долгосрочным вопросам о других основаниях проживания см. отдельную статью о вариантах после временной защиты.",
+                  "Documents": [
+                    "Отдельные решения и сообщения каждого члена семьи; документы, прямо запрошенные органом. Не загружайте их."
+                  ],
+                  "Authority": "Иммиграционная служба Дании.",
+                  "Warning": "Руководство не гарантирует переход на другой вид разрешения и не определяет право конкретной семьи."
+                }
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }

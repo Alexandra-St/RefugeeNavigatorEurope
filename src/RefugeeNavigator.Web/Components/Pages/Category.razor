@@ -35,7 +35,7 @@
                         <h2 id="guide-callout-heading">@Localizer["Category.GuideCalloutTitle"]</h2>
                         <p>@Localizer["Category.GuideCalloutDescription"]</p>
                     </div>
-                    <a href="/guides/germany/temporary-protection">@Localizer["Category.GuideCalloutLink"]</a>
+                    <a href="@GuideHref">@Localizer["Category.GuideCalloutLink"]</a>
                 </aside>
             }
 
@@ -128,8 +128,7 @@
     {
         get
         {
-            if (Country is not { Slug: "germany" } country ||
-                !string.Equals(SelectedCategory?.Slug, "temporary-protection", StringComparison.OrdinalIgnoreCase))
+            if (Country is not { } country || SelectedCategory is not { } category)
                 return null;
 
             var guideCatalog = Services.GetService<StepByStepGuideCatalog>();
@@ -137,13 +136,17 @@
             if (guideCatalog is null || hostEnvironment is null)
                 return null;
 
-            var guide = guideCatalog.Guides.SingleOrDefault(item =>
-                item.CountryId == country.Id && item.Slug == "temporary-protection");
-            return guide is not null && StepByStepGuideVisibility.CanRender(guide.EditorialStatus, hostEnvironment.IsDevelopment())
-                ? guide
-                : null;
+            return guideCatalog.Guides.FirstOrDefault(guide =>
+                guide.CountryId == country.Id &&
+                StepByStepGuideVisibility.CanRender(guide.EditorialStatus, hostEnvironment.IsDevelopment()) &&
+                guide.Scenarios.SelectMany(scenario => scenario.Steps).Any(step =>
+                    Catalog.InformationEntries.Any(entry => entry.Id == step.ArticleId && entry.CategoryId == category.Id)));
         }
     }
+
+    private string? GuideHref => GuideForCurrentCategory is { } guide && Country is { } country
+        ? $"/guides/{country.Slug}/{guide.Slug}"
+        : null;
 
     private Country? Country => Catalog.Countries.FirstOrDefault(country =>
         string.Equals(country.Slug, CountrySlug, StringComparison.OrdinalIgnoreCase));

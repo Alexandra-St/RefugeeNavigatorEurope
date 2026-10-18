@@ -90,12 +90,15 @@ public sealed class CategoryRenderingTests
         };
 
         var denmark = await RenderAsync(catalog, "en", "denmark", "temporary-protection", guides, "Production");
+        var denmarkDevelopment = WebUtility.HtmlDecode(await RenderAsync(catalog, "en", "denmark", "temporary-protection", guides, "Development"));
         var poland = await RenderAsync(catalog, "en", "poland", "temporary-protection", guides, "Production");
         var germanyHealthcare = await RenderAsync(catalog, "en", "germany", "healthcare", guides, "Production");
         var draftProduction = await RenderAsync(catalog, "en", "germany", "temporary-protection", draftGuides, "Production");
         var draftDevelopment = await RenderAsync(catalog, "en", "germany", "temporary-protection", draftGuides, "Development");
 
         Assert.DoesNotContain("class=\"guide-callout\"", denmark);
+        Assert.Contains("class=\"guide-callout\"", denmarkDevelopment);
+        Assert.Contains("href=\"/guides/denmark/temporary-protection\"", denmarkDevelopment);
         Assert.DoesNotContain("class=\"guide-callout\"", poland);
         Assert.DoesNotContain("class=\"guide-callout\"", germanyHealthcare);
         Assert.DoesNotContain("class=\"guide-callout\"", draftProduction);

@@ -109,7 +109,7 @@ else
                             </ul>
                         </section>
 
-                        <a class="article-link" href="/countries/germany/categories/temporary-protection#entry-@step.ArticleId.ToString("N")">@Localizer["Guide.ReadArticle"]</a>
+                        <a class="article-link" href="@BuildArticleUrl(step.ArticleId)">@Localizer["Guide.ReadArticle"]</a>
                     </article>
 
                     <nav class="step-navigation" aria-label="@Localizer["Guide.Progress", StepIndex + 1, orderedSteps.Length]">
@@ -142,6 +142,14 @@ else
     [Parameter] public EventCallback OnPrevious { get; set; }
     [Parameter] public EventCallback OnNext { get; set; }
     [Parameter] public EventCallback OnChangeSituation { get; set; }
+
+    private string BuildArticleUrl(Guid articleId)
+    {
+        var article = Catalog.InformationEntries.Single(entry => entry.Id == articleId);
+        var country = Catalog.Countries.Single(item => item.Id == article.CountryId);
+        var category = Catalog.Categories.Single(item => item.Id == article.CategoryId);
+        return $"/countries/{country.Slug}/categories/{category.Slug}#entry-{articleId:N}";
+    }
 
     private string ActionKindLabel(GuideActionKind kind) => Localizer[kind switch
     {
