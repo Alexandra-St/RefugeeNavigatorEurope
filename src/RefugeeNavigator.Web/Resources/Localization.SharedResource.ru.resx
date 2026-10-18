@@ -126,6 +126,15 @@
   <data name="Category.PlaceholderDescription" xml:space="preserve">
     <value>Подробная информация об этой категории будет добавлена после проверки по официальным источникам.</value>
   </data>
+  <data name="Category.GuideCalloutTitle" xml:space="preserve">
+    <value>Нужна помощь со следующим шагом?</value>
+  </data>
+  <data name="Category.GuideCalloutDescription" xml:space="preserve">
+    <value>Воспользуйтесь пошаговым руководством по временной защите в Германии.</value>
+  </data>
+  <data name="Category.GuideCalloutLink" xml:space="preserve">
+    <value>Открыть руководство</value>
+  </data>
   <data name="Category.VerificationStatus" xml:space="preserve">
     <value>Статус проверки</value>
   </data>

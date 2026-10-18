@@ -1,12 +1,16 @@
 @page "/countries/{CountrySlug}/categories/{CategorySlug}"
 @using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Hosting
 @using System.Globalization
 @using RefugeeNavigator.Web.Content
+@using RefugeeNavigator.Web.Guides
+@using GuideDefinition = RefugeeNavigator.Web.Guides.StepByStepGuide
 @using RefugeeNavigator.Data
 @using RefugeeNavigator.Domain
 @inject CatalogData Catalog
 @inject NavigationManager Navigation
 @inject IStringLocalizer<SharedResource> Localizer
+@inject IServiceProvider Services
 
 @if (CountryName is { } countryName && CategoryDetails is { } category)
 {
@@ -23,6 +27,17 @@
                 <h1>@category.Name</h1>
                 <p class="subtitle">@category.Description</p>
             </header>
+
+            @if (GuideForCurrentCategory is not null)
+            {
+                <aside class="guide-callout" aria-labelledby="guide-callout-heading">
+                    <div>
+                        <h2 id="guide-callout-heading">@Localizer["Category.GuideCalloutTitle"]</h2>
+                        <p>@Localizer["Category.GuideCalloutDescription"]</p>
+                    </div>
+                    <a href="/guides/germany/temporary-protection">@Localizer["Category.GuideCalloutLink"]</a>
+                </aside>
+            }
 
             @if (_renderedEntries.Count == 0)
             {
@@ -108,6 +123,27 @@
     public string CategorySlug { get; set; } = string.Empty;
 
     private IReadOnlyList<RenderedInformationEntry> _renderedEntries = Array.Empty<RenderedInformationEntry>();
+
+    private GuideDefinition? GuideForCurrentCategory
+    {
+        get
+        {
+            if (Country is not { Slug: "germany" } country ||
+                !string.Equals(SelectedCategory?.Slug, "temporary-protection", StringComparison.OrdinalIgnoreCase))
+                return null;
+
+            var guideCatalog = Services.GetService<StepByStepGuideCatalog>();
+            var hostEnvironment = Services.GetService<IWebHostEnvironment>();
+            if (guideCatalog is null || hostEnvironment is null)
+                return null;
+
+            var guide = guideCatalog.Guides.SingleOrDefault(item =>
+                item.CountryId == country.Id && item.Slug == "temporary-protection");
+            return guide is not null && StepByStepGuideVisibility.CanRender(guide.EditorialStatus, hostEnvironment.IsDevelopment())
+                ? guide
+                : null;
+        }
+    }
 
     private Country? Country => Catalog.Countries.FirstOrDefault(country =>
         string.Equals(country.Slug, CountrySlug, StringComparison.OrdinalIgnoreCase));

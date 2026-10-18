@@ -126,6 +126,15 @@
   <data name="Category.PlaceholderDescription" xml:space="preserve">
     <value>Detailed information for this category will be added after verification against official sources.</value>
   </data>
+  <data name="Category.GuideCalloutTitle" xml:space="preserve">
+    <value>Need help with the next step?</value>
+  </data>
+  <data name="Category.GuideCalloutDescription" xml:space="preserve">
+    <value>Use the step-by-step guide for temporary protection in Germany.</value>
+  </data>
+  <data name="Category.GuideCalloutLink" xml:space="preserve">
+    <value>Open the guide</value>
+  </data>
   <data name="Category.VerificationStatus" xml:space="preserve">
     <value>Review status</value>
   </data>

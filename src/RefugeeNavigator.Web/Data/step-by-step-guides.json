@@ -4,7 +4,7 @@
       "Id": "germany-temporary-protection-v1",
       "Slug": "temporary-protection",
       "CountryId": "10000000-0000-0000-0000-000000000002",
-      "EditorialStatus": "Draft",
+      "EditorialStatus": "Approved",
       "Translations": {
         "uk": { "Title": "Тимчасовий захист у Німеччині", "Description": "Оберіть ситуацію, щоб переглянути навігаційні кроки. Це не визначення права на захист." },
         "en": { "Title": "Temporary protection in Germany", "Description": "Choose a situation to see navigation steps. This does not determine eligibility for protection." },

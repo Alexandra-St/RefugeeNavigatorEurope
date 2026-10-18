@@ -62,6 +62,46 @@
     font-size: clamp(1.1rem, 2vw, 1.35rem);
 }
 
+.guide-callout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 54rem;
+    margin: -0.75rem auto 2rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid #c8d8f1;
+    border-left: 4px solid #155eef;
+    border-radius: 0.75rem;
+    background: #fff;
+}
+
+.guide-callout h2 {
+    margin: 0;
+    color: #102a56;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.guide-callout p {
+    margin: 0.35rem 0 0;
+    color: #425675;
+    line-height: 1.5;
+}
+
+.guide-callout a {
+    flex: 0 0 auto;
+    color: #155eef;
+    font-weight: 650;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+.guide-callout a:focus-visible {
+    outline: 3px solid #155eef;
+    outline-offset: 3px;
+}
+
 .content-placeholder {
     max-width: 54rem;
     margin: 0 auto;
@@ -249,6 +289,13 @@
 }
 
 @media (max-width: 540px) {
+    .guide-callout {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-top: -1rem;
+        padding: 1rem;
+    }
+
     .category-page {
         padding: 1.75rem 1rem 1.5rem;
     }

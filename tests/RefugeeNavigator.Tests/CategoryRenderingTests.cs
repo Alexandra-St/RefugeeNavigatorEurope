@@ -1,26 +1,40 @@
 using System.Globalization;
 using System.Net;
 using System.Reflection;
+using System.Resources;
 using System.Text.Json;
 using System.Text.RegularExpressions;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.FileProviders;
 using RefugeeNavigator.Data;
 using RefugeeNavigator.Domain;
 using RefugeeNavigator.Web.Components.Pages;
+using RefugeeNavigator.Web.Guides;
 
 namespace RefugeeNavigator.Tests;
 
 public sealed class CategoryRenderingTests
 {
+    private static readonly ResourceManager Resources = new(
+        "RefugeeNavigator.Web.Resources.Localization.SharedResource",
+        typeof(RefugeeNavigator.Web.Localization.SharedResource).Assembly);
     private static readonly Guid CountryId = Guid.Parse("10000000-0000-0000-0000-000000000001");
     private static readonly Guid OtherCountryId = Guid.Parse("10000000-0000-0000-0000-000000000002");
     private static readonly Guid CategoryId = Guid.Parse("20000000-0000-0000-0000-000000000001");
     private static readonly Guid OtherCategoryId = Guid.Parse("20000000-0000-0000-0000-000000000002");
     private static readonly DateTimeOffset UpdatedAt = new(2024, 2, 3, 4, 5, 0, TimeSpan.Zero);
     private static readonly DateTimeOffset CheckedAt = new(2024, 4, 5, 6, 7, 0, TimeSpan.Zero);
+    private static readonly Lazy<Task<CatalogData>> ProductionCatalog = new(
+        () => new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync());
+    private static readonly Lazy<Task<StepByStepGuideCatalog>> ProductionGuides = new(async () =>
+    {
+        var catalog = await ProductionCatalog.Value;
+        return await new JsonStepByStepGuideProvider(Path.Combine(AppContext.BaseDirectory, "Data", "step-by-step-guides.json")).LoadAsync(catalog);
+    });
 
     public static IEnumerable<object[]> ContentParagraphCases() =>
     [
@@ -44,6 +58,48 @@ public sealed class CategoryRenderingTests
         Assert.Contains("Information coming soon", visibleHtml);
         Assert.Contains("Detailed information for this category will be added after verification against official sources.", visibleHtml);
         Assert.DoesNotContain("class=\"information-entries\"", html);
+        Assert.DoesNotContain("class=\"guide-callout\"", html);
+    }
+
+    [Theory]
+    [InlineData("uk")]
+    [InlineData("en")]
+    [InlineData("ru")]
+    public async Task ApprovedGermanyGuideCalloutIsLocalizedOnTemporaryProtectionCategory(string language)
+    {
+        var catalog = await ProductionCatalog.Value;
+        var guides = await ProductionGuides.Value;
+        var html = WebUtility.HtmlDecode(await RenderAsync(catalog, language, "germany", "temporary-protection", guides, "Production"));
+        var culture = CultureInfo.GetCultureInfo(language);
+
+        Assert.Contains(Resources.GetString("Category.GuideCalloutTitle", culture)!, html);
+        Assert.Contains(Resources.GetString("Category.GuideCalloutDescription", culture)!, html);
+        Assert.Contains(Resources.GetString("Category.GuideCalloutLink", culture)!, html);
+        Assert.Contains("href=\"/guides/germany/temporary-protection\"", html);
+        Assert.Contains("class=\"guide-callout\"", html);
+    }
+
+    [Fact]
+    public async Task GuideCalloutOnlyAppearsForMatchingPublishableGuide()
+    {
+        var catalog = await ProductionCatalog.Value;
+        var guides = await ProductionGuides.Value;
+        var draftGuides = guides with
+        {
+            Guides = guides.Guides.Select(guide => guide with { EditorialStatus = GuideEditorialStatus.Draft }).ToArray()
+        };
+
+        var denmark = await RenderAsync(catalog, "en", "denmark", "temporary-protection", guides, "Production");
+        var poland = await RenderAsync(catalog, "en", "poland", "temporary-protection", guides, "Production");
+        var germanyHealthcare = await RenderAsync(catalog, "en", "germany", "healthcare", guides, "Production");
+        var draftProduction = await RenderAsync(catalog, "en", "germany", "temporary-protection", draftGuides, "Production");
+        var draftDevelopment = await RenderAsync(catalog, "en", "germany", "temporary-protection", draftGuides, "Development");
+
+        Assert.DoesNotContain("class=\"guide-callout\"", denmark);
+        Assert.DoesNotContain("class=\"guide-callout\"", poland);
+        Assert.DoesNotContain("class=\"guide-callout\"", germanyHealthcare);
+        Assert.DoesNotContain("class=\"guide-callout\"", draftProduction);
+        Assert.Contains("class=\"guide-callout\"", draftDevelopment);
     }
 
     [Theory]
@@ -339,7 +395,13 @@ public sealed class CategoryRenderingTests
             culture: CultureInfo.InvariantCulture)!;
     }
 
-    private static async Task<string> RenderAsync(CatalogData catalog, string language)
+    private static async Task<string> RenderAsync(
+        CatalogData catalog,
+        string language,
+        string countrySlug = "denmark",
+        string categorySlug = "employment",
+        StepByStepGuideCatalog? guides = null,
+        string environmentName = "Development")
     {
         var priorCulture = CultureInfo.CurrentCulture;
         var priorUiCulture = CultureInfo.CurrentUICulture;
@@ -353,6 +415,8 @@ public sealed class CategoryRenderingTests
             services.AddLogging();
             services.AddLocalization(options => options.ResourcesPath = "Resources");
             services.AddSingleton(catalog);
+            services.AddSingleton(guides ?? new StepByStepGuideCatalog([]));
+            services.AddSingleton<IWebHostEnvironment>(new TestWebHostEnvironment(environmentName));
             services.AddSingleton<NavigationManager, TestNavigationManager>();
             using var serviceProvider = services.BuildServiceProvider();
             await using var renderer = new HtmlRenderer(serviceProvider, serviceProvider.GetRequiredService<ILoggerFactory>());
@@ -361,8 +425,8 @@ public sealed class CategoryRenderingTests
             {
                 var parameters = ParameterView.FromDictionary(new Dictionary<string, object?>
                 {
-                    [nameof(Category.CountrySlug)] = "denmark",
-                    [nameof(Category.CategorySlug)] = "employment"
+                    [nameof(Category.CountrySlug)] = countrySlug,
+                    [nameof(Category.CategorySlug)] = categorySlug
                 });
                 var component = await renderer.RenderComponentAsync<Category>(parameters);
                 return component.ToHtmlString();
@@ -391,5 +455,15 @@ public sealed class CategoryRenderingTests
         protected override void NavigateToCore(string uri, bool forceLoad)
         {
         }
+    }
+
+    private sealed class TestWebHostEnvironment(string environmentName) : IWebHostEnvironment
+    {
+        public string ApplicationName { get; set; } = "RefugeeNavigator.Tests";
+        public string EnvironmentName { get; set; } = environmentName;
+        public string WebRootPath { get; set; } = AppContext.BaseDirectory;
+        public string ContentRootPath { get; set; } = AppContext.BaseDirectory;
+        public IFileProvider WebRootFileProvider { get; set; } = new NullFileProvider();
+        public IFileProvider ContentRootFileProvider { get; set; } = new NullFileProvider();
     }
 }
