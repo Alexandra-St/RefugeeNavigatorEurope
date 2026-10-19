@@ -114,6 +114,15 @@
   <data name="Country.ExploreCategory" xml:space="preserve">
     <value>Explore {0}</value>
   </data>
+  <data name="Country.GuideCalloutTitle" xml:space="preserve">
+    <value>Not sure where to start?</value>
+  </data>
+  <data name="Country.GuideCalloutDescription" xml:space="preserve">
+    <value>Choose the situation closest to yours and follow the information step by step.</value>
+  </data>
+  <data name="Country.GuideCalloutLink" xml:space="preserve">
+    <value>Open step-by-step guide</value>
+  </data>
   <data name="Category.PageTitle" xml:space="preserve">
     <value>{0} | {1} | Refugee Navigator Europe</value>
   </data>

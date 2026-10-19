@@ -1,10 +1,14 @@
 @using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Hosting
 @using RefugeeNavigator.Data
 @using RefugeeNavigator.Domain
+@using RefugeeNavigator.Web.Guides
 @page "/countries/{CountrySlug}"
 @inject CatalogData Catalog
 @inject NavigationManager Navigation
 @inject IStringLocalizer<SharedResource> Localizer
+@inject StepByStepGuideCatalog GuideCatalog
+@inject IWebHostEnvironment HostEnvironment
 
 @if (Country is not null)
 {
@@ -24,6 +28,17 @@
             <h2 id="living-heading">@Localizer["Country.LivingIn", CountryLocationName]</h2>
             <p>@Localizer["Country.LivingDescription", CountryLocationName]</p>
         </section>
+
+        @if (Country is { } country && GuideForCountry is { } guide)
+        {
+            <aside class="country-guide-callout" aria-labelledby="country-guide-heading">
+                <div>
+                    <h2 id="country-guide-heading">@Localizer["Country.GuideCalloutTitle"]</h2>
+                    <p>@Localizer["Country.GuideCalloutDescription"]</p>
+                </div>
+                <a href="@($"/guides/{country.Slug}/{guide.Slug}")">@Localizer["Country.GuideCalloutLink"]</a>
+            </aside>
+        }
 
         <section class="categories" aria-labelledby="categories-heading">
             <div class="section-heading">
@@ -69,6 +84,12 @@
     private string CountryLocationName => Country is { } country
         ? Localizer[$"{CatalogLocalizationKeyResolver.CountryName(country)}.In"].Value
         : string.Empty;
+
+    private StepByStepGuide? GuideForCountry => Country is { } country
+        ? GuideCatalog.Guides.FirstOrDefault(guide =>
+            guide.CountryId == country.Id &&
+            StepByStepGuideVisibility.CanRender(guide.EditorialStatus, HostEnvironment.IsDevelopment()))
+        : null;
 
     protected override void OnParametersSet()
     {

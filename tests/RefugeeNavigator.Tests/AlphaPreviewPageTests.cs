@@ -4,14 +4,17 @@ using System.Reflection;
 using System.Resources;
 using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Components.Rendering;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
 using RefugeeNavigator.Data;
 using RefugeeNavigator.Domain;
 using RefugeeNavigator.Web.Components;
 using RefugeeNavigator.Web.Components.Pages;
+using RefugeeNavigator.Web.Guides;
 using RefugeeNavigator.Web.Localization;
 
 namespace RefugeeNavigator.Tests;
@@ -244,6 +247,101 @@ public sealed class AlphaPreviewPageTests
     }
 
     [Theory]
+    [InlineData("denmark", "10000000-0000-0000-0000-000000000001")]
+    [InlineData("germany", "10000000-0000-0000-0000-000000000002")]
+    [InlineData("poland", "10000000-0000-0000-0000-000000000003")]
+    public async Task ApprovedCountryGuideCalloutAppearsBeforeCategoriesInProduction(string slug, string countryId)
+    {
+        var parameters = new Dictionary<string, object?>
+        {
+            [nameof(CountryOverview.CountrySlug)] = slug
+        };
+        var html = WebUtility.HtmlDecode(await RenderAsync<CountryOverview>(
+            "en",
+            parameters,
+            $"/countries/{slug}",
+            CreateGuideCatalog(Guid.Parse(countryId), GuideEditorialStatus.Approved),
+            "Production"));
+
+        Assert.Contains("class=\"country-guide-callout\"", html);
+        Assert.Contains($"href=\"/guides/{slug}/temporary-protection\"", html);
+        Assert.Single(Regex.Matches(html, "class=\"country-guide-callout\""));
+        Assert.True(html.IndexOf("class=\"country-guide-callout\"", StringComparison.Ordinal) <
+                    html.IndexOf("class=\"categories\"", StringComparison.Ordinal));
+        Assert.Contains("class=\"categories\"", html);
+    }
+
+    [Fact]
+    public async Task GuideForDifferentCountryDoesNotAppearOnCountryOverview()
+    {
+        var parameters = new Dictionary<string, object?>
+        {
+            [nameof(CountryOverview.CountrySlug)] = "poland"
+        };
+        var denmarkGuide = CreateGuideCatalog(Guid.Parse("10000000-0000-0000-0000-000000000001"), GuideEditorialStatus.Approved);
+        var html = await RenderAsync<CountryOverview>("en", parameters, "/countries/poland", denmarkGuide, "Production");
+
+        Assert.DoesNotContain("country-guide-callout", html);
+    }
+
+    [Theory]
+    [InlineData("uk", "Не знаєте, з чого почати?", "Оберіть ситуацію, яка найбільше схожа на вашу, і перегляньте інформацію крок за кроком.", "Відкрити покроковий помічник")]
+    [InlineData("en", "Not sure where to start?", "Choose the situation closest to yours and follow the information step by step.", "Open step-by-step guide")]
+    [InlineData("ru", "Не знаете, с чего начать?", "Выберите ситуацию, которая ближе всего к вашей, и пройдите информацию шаг за шагом.", "Открыть пошаговый помощник")]
+    public async Task CountryGuideCalloutUsesDedicatedLocalizedText(string language, string title, string description, string linkText)
+    {
+        var parameters = new Dictionary<string, object?>
+        {
+            [nameof(CountryOverview.CountrySlug)] = "germany"
+        };
+        var html = WebUtility.HtmlDecode(await RenderAsync<CountryOverview>(
+            language,
+            parameters,
+            "/countries/germany",
+            CreateGuideCatalog(Guid.Parse("10000000-0000-0000-0000-000000000002"), GuideEditorialStatus.Approved),
+            "Production"));
+
+        Assert.Contains(title, html);
+        Assert.Contains(description, html);
+        Assert.Contains(linkText, html);
+        Assert.DoesNotContain("A step-by-step guide is available for this topic.", html);
+    }
+
+    [Theory]
+    [InlineData("Development")]
+    [InlineData("Production")]
+    public async Task ApprovedCountryGuideIsVisibleInBothEnvironments(string environmentName)
+    {
+        var parameters = new Dictionary<string, object?>
+        {
+            [nameof(CountryOverview.CountrySlug)] = "germany"
+        };
+        var html = await RenderAsync<CountryOverview>(
+            "en",
+            parameters,
+            "/countries/germany",
+            CreateGuideCatalog(Guid.Parse("10000000-0000-0000-0000-000000000002"), GuideEditorialStatus.Approved),
+            environmentName);
+
+        Assert.Contains("class=\"country-guide-callout\"", html);
+    }
+
+    [Fact]
+    public async Task DraftCountryGuideIsVisibleOnlyInDevelopment()
+    {
+        var parameters = new Dictionary<string, object?>
+        {
+            [nameof(CountryOverview.CountrySlug)] = "germany"
+        };
+        var draft = CreateGuideCatalog(Guid.Parse("10000000-0000-0000-0000-000000000002"), GuideEditorialStatus.Draft);
+        var production = await RenderAsync<CountryOverview>("en", parameters, "/countries/germany", draft, "Production");
+        var development = await RenderAsync<CountryOverview>("en", parameters, "/countries/germany", draft, "Development");
+
+        Assert.DoesNotContain("country-guide-callout", production);
+        Assert.Contains("class=\"country-guide-callout\"", development);
+    }
+
+    [Theory]
     [InlineData("uk", "denmark", "Данія", "у Данії", "Життя у Данії")]
     [InlineData("uk", "germany", "Німеччина", "у Німеччині", "Життя у Німеччині")]
     [InlineData("uk", "poland", "Польща", "у Польщі", "Життя у Польщі")]
@@ -302,7 +400,9 @@ public sealed class AlphaPreviewPageTests
     private static async Task<string> RenderAsync<TComponent>(
         string language,
         IDictionary<string, object?>? parameters = null,
-        string currentPath = "/")
+        string currentPath = "/",
+        StepByStepGuideCatalog? guides = null,
+        string environmentName = "Development")
         where TComponent : IComponent
     {
         var originalCulture = CultureInfo.CurrentCulture;
@@ -318,6 +418,8 @@ public sealed class AlphaPreviewPageTests
             services.AddLocalization(options => options.ResourcesPath = "Resources");
             services.AddSingleton(CreateCatalog());
             await ComparisonTestServices.RegisterAsync(services);
+            services.AddSingleton(guides ?? new StepByStepGuideCatalog([]));
+            services.AddSingleton<IWebHostEnvironment>(new TestWebHostEnvironment(environmentName));
             services.AddSingleton<NavigationManager>(new TestNavigationManager(currentPath));
             using var provider = services.BuildServiceProvider();
             await using var renderer = new HtmlRenderer(provider, provider.GetRequiredService<ILoggerFactory>());
@@ -359,6 +461,28 @@ public sealed class AlphaPreviewPageTests
             binder: null,
             args: [countries, categories, Array.Empty<InformationEntry>(), Array.Empty<InformationEntryTranslation>(), Array.Empty<OfficialSource>()],
             culture: CultureInfo.InvariantCulture)!;
+    }
+
+    private static StepByStepGuideCatalog CreateGuideCatalog(Guid countryId, GuideEditorialStatus status)
+    {
+        var guide = new RefugeeNavigator.Web.Guides.StepByStepGuide(
+            $"{countryId}-guide",
+            "temporary-protection",
+            countryId,
+            status,
+            new Dictionary<string, LocalizedGuideText>(),
+            []);
+        return new StepByStepGuideCatalog([guide]);
+    }
+
+    private sealed class TestWebHostEnvironment(string environmentName) : IWebHostEnvironment
+    {
+        public string ApplicationName { get; set; } = "RefugeeNavigator.Tests";
+        public string EnvironmentName { get; set; } = environmentName;
+        public string WebRootPath { get; set; } = AppContext.BaseDirectory;
+        public string ContentRootPath { get; set; } = AppContext.BaseDirectory;
+        public IFileProvider WebRootFileProvider { get; set; } = new NullFileProvider();
+        public IFileProvider ContentRootFileProvider { get; set; } = new NullFileProvider();
     }
 
     private sealed class TestNavigationManager : NavigationManager
