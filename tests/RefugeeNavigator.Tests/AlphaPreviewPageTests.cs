@@ -92,6 +92,19 @@ public sealed class AlphaPreviewPageTests
     }
 
     [Theory]
+    [InlineData("uk")]
+    [InlineData("en")]
+    [InlineData("ru")]
+    public async Task AllCategoryComparisonQueryIsPreservedInLanguageSwitchReturnUrl(string language)
+    {
+        const string currentPath = "/compare?country1=germany&country2=poland&category=all";
+        var html = await RenderAsync<SiteHeader>(language, currentPath: currentPath);
+
+        Assert.Contains("returnUrl=%2Fcompare%3Fcountry1%3Dgermany%26country2%3Dpoland%26category%3Dall", html);
+        Assert.Equal(3, Regex.Matches(html, "data-enhance-nav=\"false\"").Count);
+    }
+
+    [Theory]
     [InlineData("/", "/")]
     [InlineData("/search?q=jobs", "/search")]
     [InlineData("/compare?country1=denmark", "/compare")]

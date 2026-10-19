@@ -277,7 +277,7 @@
     <value>Порівняння країн</value>
   </data>
   <data name="Compare.Description" xml:space="preserve">
-    <value>Порівнюйте перевірені статті для вибраної теми поруч.</value>
+    <value>Порівнюйте перевірену інформацію про дві країни поруч.</value>
   </data>
   <data name="Compare.BackHome" xml:space="preserve">
     <value>Повернутися на головну</value>
@@ -287,10 +287,11 @@
   <data name="Compare.SelectCountry" xml:space="preserve"><value>Виберіть країну</value></data>
   <data name="Compare.Category" xml:space="preserve"><value>Категорія інформації</value></data>
   <data name="Compare.SelectCategory" xml:space="preserve"><value>Виберіть категорію</value></data>
+  <data name="Compare.AllCategories" xml:space="preserve"><value>Усі категорії</value></data>
   <data name="Compare.Submit" xml:space="preserve"><value>Порівняти країни</value></data>
   <data name="Compare.Reset" xml:space="preserve"><value>Скинути вибір</value></data>
   <data name="Compare.SelectionInstructionsHeading" xml:space="preserve"><value>Виберіть, що переглянути</value></data>
-  <data name="Compare.SelectionInstructions" xml:space="preserve"><value>Виберіть дві різні країни та категорію, щоб порівняти перевірені статті поруч.</value></data>
+  <data name="Compare.SelectionInstructions" xml:space="preserve"><value>Виберіть дві різні країни та одну категорію або всі категорії.</value></data>
   <data name="Compare.InvalidCountry" xml:space="preserve"><value>Одну або обидві вибрані країни не знайдено. Виберіть країни зі списків.</value></data>
   <data name="Compare.InvalidCategory" xml:space="preserve"><value>Вибрану категорію не знайдено. Виберіть категорію зі списку.</value></data>
   <data name="Compare.SameCountry" xml:space="preserve"><value>Виберіть дві різні країни.</value></data>

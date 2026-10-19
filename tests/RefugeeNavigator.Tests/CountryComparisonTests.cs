@@ -210,13 +210,122 @@ public sealed class CountryComparisonTests
             .Concat(new[]
             {
                 "Compare.StructuredHeading", "Compare.DraftPreviewHeading", "Compare.DraftPreviewNotice", "Compare.DraftStatus", "Compare.FactSources",
-                "Compare.ApprovedEditorialStatus", "Compare.NotEstablishedInReviewedSources", "Compare.ReadFullArticles"
+                "Compare.ApprovedEditorialStatus", "Compare.NotEstablishedInReviewedSources", "Compare.ReadFullArticles", "Compare.AllCategories"
             }).Distinct(StringComparer.Ordinal);
         foreach (var aspectKey in aspectKeys)
         {
             var value = GetResource(aspectKey, language);
             Assert.False(string.IsNullOrWhiteSpace(value), $"Missing {language} localization for {aspectKey}.");
             Assert.NotEqual(aspectKey, value);
+        }
+    }
+
+    [Theory]
+    [InlineData("uk", "Усі категорії")]
+    [InlineData("en", "All categories")]
+    [InlineData("ru", "Все категории")]
+    public async Task AllCategoriesSelectorOptionIsLocalizedAndUsesStableQueryValue(string language, string label)
+    {
+        var html = WebUtility.HtmlDecode(await RenderAsync(await LoadCatalogAsync(), language));
+        var option = Regex.Match(html, "<option\\b(?=[^>]*value=\"all\")(?<attributes>[^>]*)>(?<label>.*?)</option>", RegexOptions.Singleline);
+
+        Assert.True(option.Success);
+        Assert.Equal(label, option.Groups["label"].Value.Trim());
+        Assert.Contains("name=\"category\" required", html);
+    }
+
+    [Theory]
+    [InlineData("uk")]
+    [InlineData("en")]
+    [InlineData("ru")]
+    public async Task AllCategoriesRendersStructuredFactsAndGroupedCollapsedArticlesInCatalogOrder(string language)
+    {
+        var catalog = await LoadCatalogAsync();
+        var factCatalog = await FactCatalog.Value;
+        var html = await RenderAsync(catalog, language,
+            "?country1=germany&country2=poland&category=all");
+        var visibleHtml = WebUtility.HtmlDecode(html);
+        var renderedCategoryHeadings = Regex.Matches(
+                visibleHtml,
+                "<section\\b[^>]*class=\"structured-category\"[^>]*>\\s*<h3\\b[^>]*>(?<heading>.*?)</h3>",
+                RegexOptions.Singleline)
+            .Cast<Match>()
+            .Select(match => match.Groups["heading"].Value.Trim())
+            .ToArray();
+
+        Assert.Equal(catalog.Categories.Select(category => GetResource(
+            $"Category.{string.Concat(category.Slug.Split('-').Select(part => char.ToUpperInvariant(part[0]) + part[1..]))}", language)),
+            renderedCategoryHeadings);
+        Assert.Equal(factCatalog.Topics.Count, Regex.Matches(html, "class=\"structured-topic\"").Count);
+        Assert.Equal(factCatalog.Topics.Sum(topic => topic.Aspects.Count), Regex.Matches(html, "class=\"structured-aspect\"").Count);
+        Assert.Equal(factCatalog.Topics.Sum(topic => topic.Aspects.Count) * 2, Regex.Matches(html, "class=\"structured-country\"").Count);
+        Assert.Contains(GetResource("Country.Germany", language), visibleHtml);
+        Assert.Contains(GetResource("Country.Poland", language), visibleHtml);
+        Assert.Contains("class=\"fact-sources\"", html);
+        Assert.Contains("target=\"_blank\" rel=\"noopener noreferrer\"", html);
+        Assert.DoesNotContain(GetResource("Compare.InvalidCategory", language), visibleHtml);
+        Assert.Contains("name=\"category\" required", html);
+        Assert.Matches("<option\\b[^>]*value=\"all\"[^>]*selected", html);
+        var elementIds = Regex.Matches(html, "\\bid=\"([^\"]+)\"")
+            .Cast<Match>()
+            .Select(match => match.Groups[1].Value)
+            .ToArray();
+        Assert.Equal(elementIds.Length, elementIds.Distinct(StringComparer.Ordinal).Count());
+
+        var categoryDetails = Regex.Matches(html, "<details\\b[^>]*class=\"full-article-category\"[^>]*>", RegexOptions.Singleline);
+        Assert.Equal(catalog.Categories.Count, categoryDetails.Count);
+        var fullArticleCategoryHeadings = Regex.Matches(
+                visibleHtml,
+                "<details\\b[^>]*class=\"full-article-category\"[^>]*>\\s*<summary\\b[^>]*>(?<heading>.*?)</summary>",
+                RegexOptions.Singleline)
+            .Cast<Match>()
+            .Select(match => match.Groups["heading"].Value.Trim())
+            .ToArray();
+        Assert.Equal(renderedCategoryHeadings, fullArticleCategoryHeadings);
+        Assert.Equal(CountryComparisonTopicMap.All.Count, Regex.Matches(html, "class=\"comparison-topic\"").Count);
+        Assert.Matches("<details\\b[^>]*class=\"full-article-comparison\"[^>]*>", html);
+        Assert.DoesNotMatch("<details\\b[^>]*class=\"full-article-comparison\"[^>]*\\bopen(?:\\s|>)", html);
+        Assert.DoesNotContain("class=\"full-article-category\" open", html);
+        Assert.DoesNotMatch("<details\\b[^>]*class=\"article-details\"[^>]*\\bopen(?:\\s|>)", html);
+
+        foreach (var category in catalog.Categories)
+        {
+            foreach (var topic in CountryComparisonTopicMap.ForCategory(category.Slug))
+            {
+                foreach (var countrySlug in new[] { "germany", "poland" })
+                {
+                    var articleId = CountryComparisonTopicMap.EntryIdFor(topic, countrySlug);
+                    var translation = Assert.Single(catalog.InformationEntryTranslations, item =>
+                        item.InformationEntryId == articleId && item.LanguageCode == language);
+                    Assert.Contains(translation.Title, visibleHtml);
+                    Assert.Contains($"href=\"/countries/{countrySlug}/categories/{category.Slug}#entry-{articleId:N}\"", html);
+                }
+
+                var structuredTopic = Assert.Single(factCatalog.Topics, item => item.TopicResourceKey == topic.ResourceKey);
+                foreach (var aspect in structuredTopic.Aspects)
+                foreach (var countrySlug in new[] { "germany", "poland" })
+                {
+                    var fact = Assert.Single(aspect.Facts, item => item.CountrySlug == countrySlug);
+                    Assert.Equal(ComparisonFactStatus.Approved, fact.Status);
+                    Assert.Contains(GetResource(aspect.QuestionResourceKey, language), visibleHtml);
+                    if (fact.IsAvailable)
+                    {
+                        Assert.Contains(fact.Values[language], visibleHtml);
+                        Assert.NotEmpty(fact.OfficialSourceIds);
+                        foreach (var sourceId in fact.OfficialSourceIds)
+                        {
+                            var source = Assert.Single(catalog.OfficialSources, item => item.Id == sourceId);
+                            Assert.Equal(fact.InformationEntryId, source.InformationEntryId);
+                            Assert.Contains(source.Title, visibleHtml);
+                            Assert.Contains($"href=\"{WebUtility.HtmlEncode(source.Url.AbsoluteUri)}\" target=\"_blank\" rel=\"noopener noreferrer\"", html);
+                        }
+                    }
+                    else
+                    {
+                        Assert.Contains(GetResource("Compare.NotEstablishedInReviewedSources", language), visibleHtml);
+                    }
+                }
+            }
         }
     }
 
@@ -464,6 +573,16 @@ public sealed class CountryComparisonTests
         var partial = await RenderAsync(await LoadCatalogAsync(), language, "?country1=denmark");
         Assert.Contains("selected", partial);
         Assert.DoesNotContain("class=\"comparison-topic\"", partial);
+    }
+
+    [Fact]
+    public async Task AllCategoriesSelectionDoesNotChangeSameCountryValidation()
+    {
+        var html = WebUtility.HtmlDecode(await RenderAsync(await LoadCatalogAsync(), "en",
+            "?country1=germany&country2=germany&category=all"));
+
+        Assert.Contains(GetResource("Compare.SameCountry", "en"), html);
+        Assert.DoesNotContain("class=\"structured-comparison\"", html);
     }
 
     [Theory]

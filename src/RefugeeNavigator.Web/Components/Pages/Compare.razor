@@ -50,6 +50,7 @@
                     <label for="category">@Localizer["Compare.Category"]</label>
                     <select id="category" name="category" required>
                         <option value="">@Localizer["Compare.SelectCategory"]</option>
+                        <option value="all" selected="@IsSelected("all", CategorySlug)">@Localizer["Compare.AllCategories"]</option>
                         @foreach (var category in Catalog.Categories)
                         {
                             <option value="@category.Slug" selected="@IsSelected(category.Slug, CategorySlug)">@Localizer[CatalogLocalizationKeyResolver.CategoryName(category)]</option>
@@ -64,8 +65,8 @@
         </form>
 
 @{
-                Microsoft.AspNetCore.Components.RenderFragment fullArticleComparison = @<section class="comparison" aria-label="@Localizer["Compare.PanelsHeading"]">
-                @foreach (var topic in CountryComparisonTopicMap.ForCategory(SelectedCategory!.Slug))
+    Microsoft.AspNetCore.Components.RenderFragment RenderArticleTopics(string categorySlug) => @<text>
+                @foreach (var topic in CountryComparisonTopicMap.ForCategory(categorySlug))
                 {
                     <section class="comparison-topic" aria-labelledby="topic-@topic.ResourceKey.Replace('.', '-')">
                         <h2 id="topic-@topic.ResourceKey.Replace('.', '-')">@Localizer[topic.ResourceKey]</h2>
@@ -118,7 +119,7 @@
                                                 }
                                             </div>
                                         </details>
-                                        <a class="article-link" href="/countries/@country.Slug/categories/@SelectedCategory!.Slug#entry-@article.Entry!.Id.ToString("N")">@Localizer["Compare.OpenArticle"]</a>
+                                        <a class="article-link" href="/countries/@country.Slug/categories/@topic.CategorySlug#entry-@article.Entry!.Id.ToString("N")">@Localizer["Compare.OpenArticle"]</a>
                                     }
                                     else
                                     {
@@ -151,14 +152,96 @@
                         </div>
                     </section>
                 }
-                </section>;
+    </text>;
+
+    Microsoft.AspNetCore.Components.RenderFragment fullArticleComparison = @<section class="comparison" aria-label="@Localizer["Compare.PanelsHeading"]">
+        @if (IsAllCategories)
+        {
+            @foreach (var category in Catalog.Categories)
+            {
+                <details class="full-article-category">
+                    <summary>@Localizer[CatalogLocalizationKeyResolver.CategoryName(category)]</summary>
+                    @RenderArticleTopics(category.Slug)
+                </details>
+            }
+        }
+        else
+        {
+            @RenderArticleTopics(SelectedCategory!.Slug)
+        }
+    </section>;
+
+    Microsoft.AspNetCore.Components.RenderFragment RenderStructuredTopics(string categorySlug, bool allCategoriesMode) => @<text>
+        @foreach (var topic in ComparisonFacts.Topics.Where(item => item.CategorySlug == categorySlug))
+        {
+            var topicHeadingId = StructuredTopicHeadingId(topic);
+            <section class="structured-topic" aria-labelledby="@topicHeadingId">
+                @if (allCategoriesMode)
+                {
+                    <h4 id="@topicHeadingId">@Localizer[topic.TopicResourceKey]</h4>
+                }
+                else
+                {
+                    <h3 id="@topicHeadingId">@Localizer[topic.TopicResourceKey]</h3>
+                }
+                @foreach (var aspect in topic.Aspects)
+                {
+                    var aspectHeadingId = StructuredAspectHeadingId(topic, aspect);
+                    <section class="structured-aspect" aria-labelledby="@aspectHeadingId">
+                        @if (allCategoriesMode)
+                        {
+                            <h5 id="@aspectHeadingId">@Localizer[aspect.QuestionResourceKey]</h5>
+                        }
+                        else
+                        {
+                            <h4 id="@aspectHeadingId">@Localizer[aspect.QuestionResourceKey]</h4>
+                        }
+                        <div class="structured-columns">
+                            @foreach (var country in new[] { SelectedCountryOne!, SelectedCountryTwo! })
+                            {
+                                var fact = aspect.Facts.Single(item => item.CountrySlug == country.Slug);
+                                var countryName = Localizer[CatalogLocalizationKeyResolver.CountryName(country)];
+                                <article class="structured-country" aria-label="@Localizer["Compare.CountryPanelHeading", countryName]">
+                                    @if (allCategoriesMode)
+                                    {
+                                        <h6>@countryName</h6>
+                                    }
+                                    else
+                                    {
+                                        <h5>@countryName</h5>
+                                    }
+                                    @if (fact.Status == ComparisonFactStatus.Draft)
+                                    {
+                                        <span class="draft-label">@Localizer["Compare.DraftStatus"]</span>
+                                    }
+                                    <p>@FactText(fact)</p>
+                                    @if (AvailableFactSources(fact).Count > 0)
+                                    {
+                                        <details class="fact-sources">
+                                            <summary>@Localizer["Compare.FactSources"] (@AvailableFactSources(fact).Count)</summary>
+                                            <ul>
+                                                @foreach (var source in AvailableFactSources(fact))
+                                                {
+                                                    <li><a href="@source.Url.AbsoluteUri" target="_blank" rel="noopener noreferrer">@source.Title</a><span>@Localizer["Compare.SourceChecked"] <time datetime="@source.LastCheckedAt.ToString("O", CultureInfo.InvariantCulture)">@FormatDate(source.LastCheckedAt)</time></span></li>
+                                                }
+                                            </ul>
+                                        </details>
+                                    }
+                                </article>
+                            }
+                        </div>
+                    </section>
+                }
+            </section>
+        }
+    </text>;
 }
 
         @if (SelectionMessage is { } message)
         {
             <p class="selection-message" role="status">@Localizer[message]</p>
         }
-        else if (SelectedCountryOne is null || SelectedCountryTwo is null || SelectedCategory is null)
+        else if (SelectedCountryOne is null || SelectedCountryTwo is null || !HasValidCategorySelection)
         {
             <section class="selection-state" aria-live="polite">
                 <h2>@Localizer["Compare.SelectionInstructionsHeading"]</h2>
@@ -184,51 +267,33 @@
 
                 <section class="structured-comparison" aria-label="@Localizer["Compare.StructuredHeading"]">
                     <h2>@Localizer["Compare.StructuredHeading"]</h2>
-                    @foreach (var topic in ComparisonFacts.Topics.Where(item => item.CategorySlug == SelectedCategory!.Slug))
+                    @if (IsAllCategories)
                     {
-                        <section class="structured-topic" aria-labelledby="structured-@topic.TopicResourceKey.Replace('.', '-')">
-                            <h3 id="structured-@topic.TopicResourceKey.Replace('.', '-')">@Localizer[topic.TopicResourceKey]</h3>
-                            @foreach (var aspect in topic.Aspects)
-                            {
-                                <section class="structured-aspect" aria-labelledby="aspect-@aspect.Id">
-                                    <h4 id="aspect-@aspect.Id">@Localizer[aspect.QuestionResourceKey]</h4>
-                                    <div class="structured-columns">
-                                        @foreach (var country in new[] { SelectedCountryOne!, SelectedCountryTwo! })
-                                        {
-                                            var fact = aspect.Facts.Single(item => item.CountrySlug == country.Slug);
-                                            var countryName = Localizer[CatalogLocalizationKeyResolver.CountryName(country)];
-                                            <article class="structured-country" aria-label="@Localizer["Compare.CountryPanelHeading", countryName]">
-                                                <h5>@countryName</h5>
-                                                @if (fact.Status == ComparisonFactStatus.Draft)
-                                                {
-                                                    <span class="draft-label">@Localizer["Compare.DraftStatus"]</span>
-                                                }
-                                                <p>@FactText(fact)</p>
-                                                @if (AvailableFactSources(fact).Count > 0)
-                                                {
-                                                    <details class="fact-sources">
-                                                        <summary>@Localizer["Compare.FactSources"] (@AvailableFactSources(fact).Count)</summary>
-                                                        <ul>
-                                                            @foreach (var source in AvailableFactSources(fact))
-                                                            {
-                                                                <li><a href="@source.Url.AbsoluteUri" target="_blank" rel="noopener noreferrer">@source.Title</a><span>@Localizer["Compare.SourceChecked"] <time datetime="@source.LastCheckedAt.ToString("O", CultureInfo.InvariantCulture)">@FormatDate(source.LastCheckedAt)</time></span></li>
-                                                            }
-                                                        </ul>
-                                                    </details>
-                                                }
-                                            </article>
-                                        }
-                                    </div>
-                                </section>
-                            }
-                        </section>
+                        @foreach (var category in Catalog.Categories)
+                        {
+                            <section class="structured-category" aria-labelledby="@StructuredCategoryHeadingId(category)">
+                                <h3 id="@StructuredCategoryHeadingId(category)">@Localizer[CatalogLocalizationKeyResolver.CategoryName(category)]</h3>
+                                @RenderStructuredTopics(category.Slug, allCategoriesMode: true)
+                            </section>
+                        }
+                    }
+                    else
+                    {
+                        @RenderStructuredTopics(SelectedCategory!.Slug, allCategoriesMode: false)
                     }
                 </section>
             }
 
 
 
-            @if (HostEnvironment.IsDevelopment() || IsStructuredCatalogApproved)
+            @if (IsAllCategories)
+            {
+                <details class="full-article-comparison">
+                    <summary>@Localizer["Compare.ReadFullArticles"]</summary>
+                    @fullArticleComparison
+                </details>
+            }
+            else if (HostEnvironment.IsDevelopment() || IsStructuredCatalogApproved)
             {
                 <details class="full-article-comparison">
                     <summary>@Localizer["Compare.ReadFullArticles"]</summary>
@@ -266,6 +331,10 @@
     private InformationCategory? SelectedCategory => Catalog.Categories.FirstOrDefault(category =>
         string.Equals(category.Slug, CategorySlug, StringComparison.OrdinalIgnoreCase));
 
+    private bool IsAllCategories => string.Equals(CategorySlug, "all", StringComparison.OrdinalIgnoreCase);
+
+    private bool HasValidCategorySelection => SelectedCategory is not null || IsAllCategories;
+
     private bool IsStructuredCatalogApproved => ComparisonFacts.Topics
         .SelectMany(topic => topic.Aspects)
         .SelectMany(aspect => aspect.Facts)
@@ -281,7 +350,7 @@
                 return "Compare.InvalidCountry";
             }
 
-            if (!string.IsNullOrWhiteSpace(CategorySlug) && SelectedCategory is null)
+            if (!string.IsNullOrWhiteSpace(CategorySlug) && !HasValidCategorySelection)
             {
                 return "Compare.InvalidCategory";
             }
@@ -298,6 +367,15 @@
 
     private static bool IsSelected(string slug, string? selectedSlug) =>
         string.Equals(slug, selectedSlug, StringComparison.OrdinalIgnoreCase);
+
+    private static string StructuredCategoryHeadingId(InformationCategory category) =>
+        $"structured-category-{category.Slug}";
+
+    private static string StructuredTopicHeadingId(ComparisonTopicFacts topic) =>
+        $"structured-topic-{topic.CategorySlug}-{topic.TopicResourceKey.Replace('.', '-')}";
+
+    private static string StructuredAspectHeadingId(ComparisonTopicFacts topic, ComparisonAspect aspect) =>
+        $"structured-aspect-{topic.CategorySlug}-{topic.TopicResourceKey.Replace('.', '-')}-{aspect.Id}";
 
     private Country? FindCountry(string? slug) => string.IsNullOrWhiteSpace(slug)
         ? null

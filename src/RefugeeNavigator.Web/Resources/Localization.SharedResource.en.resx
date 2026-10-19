@@ -279,7 +279,7 @@
     <value>Compare countries</value>
   </data>
   <data name="Compare.Description" xml:space="preserve">
-    <value>Compare reviewed articles for the selected topic side by side.</value>
+    <value>Compare reviewed information from two countries side by side.</value>
   </data>
   <data name="Compare.BackHome" xml:space="preserve">
     <value>Back to homepage</value>
@@ -289,10 +289,11 @@
   <data name="Compare.SelectCountry" xml:space="preserve"><value>Select a country</value></data>
   <data name="Compare.Category" xml:space="preserve"><value>Information category</value></data>
   <data name="Compare.SelectCategory" xml:space="preserve"><value>Select a category</value></data>
+  <data name="Compare.AllCategories" xml:space="preserve"><value>All categories</value></data>
   <data name="Compare.Submit" xml:space="preserve"><value>Compare countries</value></data>
   <data name="Compare.Reset" xml:space="preserve"><value>Reset selections</value></data>
   <data name="Compare.SelectionInstructionsHeading" xml:space="preserve"><value>Choose what to view</value></data>
-  <data name="Compare.SelectionInstructions" xml:space="preserve"><value>Select two different countries and one information category to compare reviewed articles side by side.</value></data>
+  <data name="Compare.SelectionInstructions" xml:space="preserve"><value>Select two different countries and choose one category or all categories.</value></data>
   <data name="Compare.InvalidCountry" xml:space="preserve"><value>One or both selected countries are unavailable. Choose countries from the lists.</value></data>
   <data name="Compare.InvalidCategory" xml:space="preserve"><value>The selected category is unavailable. Choose a category from the list.</value></data>
   <data name="Compare.SameCountry" xml:space="preserve"><value>Choose two different countries.</value></data>
