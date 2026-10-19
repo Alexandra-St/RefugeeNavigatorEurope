@@ -34,8 +34,8 @@ CzechUp is a project for eligible participants combining language, qualification
 
 ### Claim coverage
 
-- Start with the Labour Office → CZ-EMP01-01, CZ-EMP01-02, CZ-EMP01-03, CZ-EMP01-08
-- Search official vacancies and ask for counselling → CZ-EMP01-04
+- Start with the Labour Office → CZ-EMP01-01, CZ-EMP01-02, CZ-EMP01-03
+- Search official vacancies and ask for counselling → CZ-EMP01-04, CZ-EMP01-08
 - Language learning, retraining and qualifications → CZ-EMP01-05, CZ-EMP01-06, CZ-EMP01-07
 
 ## UK
@@ -66,8 +66,8 @@ Content:
 
 ### Claim coverage
 
-- Start with the Labour Office → CZ-EMP01-01, CZ-EMP01-02, CZ-EMP01-03, CZ-EMP01-08
-- Search official vacancies and ask for counselling → CZ-EMP01-04
+- Start with the Labour Office → CZ-EMP01-01, CZ-EMP01-02, CZ-EMP01-03
+- Search official vacancies and ask for counselling → CZ-EMP01-04, CZ-EMP01-08
 - Language learning, retraining and qualifications → CZ-EMP01-05, CZ-EMP01-06, CZ-EMP01-07
 
 ## RU
@@ -98,8 +98,8 @@ Content:
 
 ### Claim coverage
 
-- Start with the Labour Office → CZ-EMP01-01, CZ-EMP01-02, CZ-EMP01-03, CZ-EMP01-08
-- Search official vacancies and ask for counselling → CZ-EMP01-04
+- Start with the Labour Office → CZ-EMP01-01, CZ-EMP01-02, CZ-EMP01-03
+- Search official vacancies and ask for counselling → CZ-EMP01-04, CZ-EMP01-08
 - Language learning, retraining and qualifications → CZ-EMP01-05, CZ-EMP01-06, CZ-EMP01-07
 
 ## Editorial source set

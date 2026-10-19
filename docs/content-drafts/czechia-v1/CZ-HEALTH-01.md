@@ -42,8 +42,8 @@ Insured care covered by the applicable rules cannot simply be charged again, but
 
 ### Claim coverage
 
-- Health insurance and who pays → CZ-HEALTH01-01, CZ-HEALTH01-02, CZ-HEALTH01-03, CZ-HEALTH01-04, CZ-HEALTH01-05, CZ-HEALTH01-06
-- After the initial state-paid period → CZ-HEALTH01-03, CZ-HEALTH01-04, CZ-HEALTH01-05
+- Health insurance and who pays → CZ-HEALTH01-01, CZ-HEALTH01-02, CZ-HEALTH01-06
+- After the initial state-paid period → CZ-HEALTH01-03, CZ-HEALTH01-04, CZ-HEALTH01-05, CZ-HEALTH01-06
 - If you acquire ZDP → CZ-HEALTH01-10, CZ-HEALTH01-11
 - Finding care and emergency help → CZ-HEALTH01-07, CZ-HEALTH01-08, CZ-HEALTH01-09
 
@@ -83,8 +83,8 @@ Content:
 
 ### Claim coverage
 
-- Health insurance and who pays → CZ-HEALTH01-01, CZ-HEALTH01-02, CZ-HEALTH01-03, CZ-HEALTH01-04, CZ-HEALTH01-05, CZ-HEALTH01-06
-- After the initial state-paid period → CZ-HEALTH01-03, CZ-HEALTH01-04, CZ-HEALTH01-05
+- Health insurance and who pays → CZ-HEALTH01-01, CZ-HEALTH01-02, CZ-HEALTH01-06
+- After the initial state-paid period → CZ-HEALTH01-03, CZ-HEALTH01-04, CZ-HEALTH01-05, CZ-HEALTH01-06
 - If you acquire ZDP → CZ-HEALTH01-10, CZ-HEALTH01-11
 - Finding care and emergency help → CZ-HEALTH01-07, CZ-HEALTH01-08, CZ-HEALTH01-09
 
@@ -124,8 +124,8 @@ Content:
 
 ### Claim coverage
 
-- Health insurance and who pays → CZ-HEALTH01-01, CZ-HEALTH01-02, CZ-HEALTH01-03, CZ-HEALTH01-04, CZ-HEALTH01-05, CZ-HEALTH01-06
-- After the initial state-paid period → CZ-HEALTH01-03, CZ-HEALTH01-04, CZ-HEALTH01-05
+- Health insurance and who pays → CZ-HEALTH01-01, CZ-HEALTH01-02, CZ-HEALTH01-06
+- After the initial state-paid period → CZ-HEALTH01-03, CZ-HEALTH01-04, CZ-HEALTH01-05, CZ-HEALTH01-06
 - If you acquire ZDP → CZ-HEALTH01-10, CZ-HEALTH01-11
 - Finding care and emergency help → CZ-HEALTH01-07, CZ-HEALTH01-08, CZ-HEALTH01-09
 

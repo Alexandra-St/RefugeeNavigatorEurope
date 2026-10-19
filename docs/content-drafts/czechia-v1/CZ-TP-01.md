@@ -49,8 +49,8 @@ If you plan to stay at a new address for more than 15 days, report the change wi
 
 ### Claim coverage
 
-- What temporary protection means → CZ-TP01-01, CZ-TP01-02, CZ-TP01-03
-- Who may apply and where → CZ-TP01-04, CZ-TP01-05, CZ-TP01-06
+- What temporary protection means → CZ-TP01-01
+- Who may apply and where → CZ-TP01-02, CZ-TP01-03, CZ-TP01-04, CZ-TP01-05, CZ-TP01-06
 - Evidence for applications from 5 August 2026 → CZ-TP01-07, CZ-TP01-08, CZ-TP01-09, CZ-TP01-10
 - The extension process and important dates → CZ-TP01-11, CZ-TP01-12, CZ-TP01-13, CZ-TP01-14
 - Changes to your address or protection → CZ-TP01-15, CZ-TP01-16
@@ -98,8 +98,8 @@ Content:
 
 ### Claim coverage
 
-- What temporary protection means → CZ-TP01-01, CZ-TP01-02, CZ-TP01-03
-- Who may apply and where → CZ-TP01-04, CZ-TP01-05, CZ-TP01-06
+- What temporary protection means → CZ-TP01-01
+- Who may apply and where → CZ-TP01-02, CZ-TP01-03, CZ-TP01-04, CZ-TP01-05, CZ-TP01-06
 - Evidence for applications from 5 August 2026 → CZ-TP01-07, CZ-TP01-08, CZ-TP01-09, CZ-TP01-10
 - The extension process and important dates → CZ-TP01-11, CZ-TP01-12, CZ-TP01-13, CZ-TP01-14
 - Changes to your address or protection → CZ-TP01-15, CZ-TP01-16
@@ -147,8 +147,8 @@ Content:
 
 ### Claim coverage
 
-- What temporary protection means → CZ-TP01-01, CZ-TP01-02, CZ-TP01-03
-- Who may apply and where → CZ-TP01-04, CZ-TP01-05, CZ-TP01-06
+- What temporary protection means → CZ-TP01-01
+- Who may apply and where → CZ-TP01-02, CZ-TP01-03, CZ-TP01-04, CZ-TP01-05, CZ-TP01-06
 - Evidence for applications from 5 August 2026 → CZ-TP01-07, CZ-TP01-08, CZ-TP01-09, CZ-TP01-10
 - The extension process and important dates → CZ-TP01-11, CZ-TP01-12, CZ-TP01-13, CZ-TP01-14
 - Changes to your address or protection → CZ-TP01-15, CZ-TP01-16

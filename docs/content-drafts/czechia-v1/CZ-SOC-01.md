@@ -46,9 +46,9 @@ Special long-term residence (ZDP) changes access to non-insurance benefits. The 
 
 ### Claim coverage
 
-- Humanitarian benefit is means-tested → CZ-SOC01-01, CZ-SOC01-02
-- How the monthly assessment works → CZ-SOC01-03, CZ-SOC01-05, CZ-SOC01-06
-- Adult reduction and exceptions → CZ-SOC01-04, CZ-SOC01-09
+- Humanitarian benefit is means-tested → CZ-SOC01-01, CZ-SOC01-02, CZ-SOC01-03
+- How the monthly assessment works → CZ-SOC01-05, CZ-SOC01-06, CZ-SOC01-09
+- Adult reduction and exceptions → CZ-SOC01-04
 - Applying and urgent assistance → CZ-SOC01-07, CZ-SOC01-08, CZ-SOC01-10
 - If you acquire ZDP → CZ-SOC01-11
 
@@ -65,7 +65,7 @@ Content:
 
 Humanitární dávka (HuD) — це допомога, що залежить від оцінки доходів і ресурсів, для людей із тимчасовим захистом (TP), які перебувають у Чехії та не мають достатніх засобів для основних потреб. Сам TP не гарантує виплату. Людей, які живуть разом і спільно забезпечують потреби, можуть оцінювати разом, тому доходи й ресурси домогосподарства та зміни в роботі можуть вплинути на щомісячний результат.
 
-Законодавчі базові суми є орієнтирами для оцінки, а не гарантованими виплатами: 4 860 CZK для дорослого та 3 490 CZK для дитини; для дітей від 6 до 10 років без урахування десяти років дитячу складову множать на 1,2 — це 4 188 CZK. Орган оцінює справу за чинними правилами.
+Законодавчі базові суми є орієнтирами для оцінки, а не гарантованими виплатами: 4 860 CZK для дорослого та 3 490 CZK для дитини; для дітей віком від 6 років, але ще не 10, дитячу складову множать на 1,2 — це 4 188 CZK. Орган оцінює справу за чинними правилами.
 
 ## Як відбувається щомісячна оцінка
 
@@ -92,9 +92,9 @@ Mimořádná okamžitá pomoc (MOP) — це термінова допомога
 
 ### Claim coverage
 
-- Humanitarian benefit is means-tested → CZ-SOC01-01, CZ-SOC01-02
-- How the monthly assessment works → CZ-SOC01-03, CZ-SOC01-05, CZ-SOC01-06
-- Adult reduction and exceptions → CZ-SOC01-04, CZ-SOC01-09
+- Humanitarian benefit is means-tested → CZ-SOC01-01, CZ-SOC01-02, CZ-SOC01-03
+- How the monthly assessment works → CZ-SOC01-05, CZ-SOC01-06, CZ-SOC01-09
+- Adult reduction and exceptions → CZ-SOC01-04
 - Applying and urgent assistance → CZ-SOC01-07, CZ-SOC01-08, CZ-SOC01-10
 - If you acquire ZDP → CZ-SOC01-11
 
@@ -138,9 +138,9 @@ Mimořádná okamžitá pomoc (MOP) — это срочная помощь, оц
 
 ### Claim coverage
 
-- Humanitarian benefit is means-tested → CZ-SOC01-01, CZ-SOC01-02
-- How the monthly assessment works → CZ-SOC01-03, CZ-SOC01-05, CZ-SOC01-06
-- Adult reduction and exceptions → CZ-SOC01-04, CZ-SOC01-09
+- Humanitarian benefit is means-tested → CZ-SOC01-01, CZ-SOC01-02, CZ-SOC01-03
+- How the monthly assessment works → CZ-SOC01-05, CZ-SOC01-06, CZ-SOC01-09
+- Adult reduction and exceptions → CZ-SOC01-04
 - Applying and urgent assistance → CZ-SOC01-07, CZ-SOC01-08, CZ-SOC01-10
 - If you acquire ZDP → CZ-SOC01-11
 
