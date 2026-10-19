@@ -63,24 +63,28 @@
 }
 
 .guide-callout {
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+    width: 100%;
     max-width: 54rem;
-    margin: -0.75rem auto 2rem;
-    padding: 1rem 1.25rem;
-    border: 1px solid #c8d8f1;
-    border-left: 4px solid #155eef;
-    border-radius: 0.75rem;
-    background: #fff;
+    margin: -0.5rem auto 2rem;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid #b8cdef;
+    border-left: 5px solid #155eef;
+    border-radius: 0.85rem;
+    background: #e9f1ff;
+    box-shadow: 0 4px 14px rgb(16 42 86 / 8%);
 }
 
 .guide-callout h2 {
     margin: 0;
     color: #102a56;
-    font-size: 1.1rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.35rem);
     font-weight: 700;
+    line-height: 1.3;
 }
 
 .guide-callout p {
@@ -90,15 +94,31 @@
 }
 
 .guide-callout a {
+    box-sizing: border-box;
     flex: 0 0 auto;
-    color: #155eef;
-    font-weight: 650;
-    text-decoration: underline;
-    text-underline-offset: 0.15em;
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+    border: 1px solid #155eef;
+    border-radius: 0.45rem;
+    background: #155eef;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+.guide-callout a:hover {
+    border-color: #0b45b5;
+    background: #0b45b5;
 }
 
 .guide-callout a:focus-visible {
-    outline: 3px solid #155eef;
+    outline: 3px solid #102a56;
     outline-offset: 3px;
 }
 
@@ -292,8 +312,13 @@
     .guide-callout {
         align-items: flex-start;
         flex-direction: column;
-        margin-top: -1rem;
-        padding: 1rem;
+        gap: 0.9rem;
+        margin: -0.5rem auto 1.5rem;
+        padding: 1.1rem;
+    }
+
+    .guide-callout a {
+        width: 100%;
     }
 
     .category-page {

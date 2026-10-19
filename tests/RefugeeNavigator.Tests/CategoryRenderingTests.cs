@@ -99,6 +99,9 @@ public sealed class CategoryRenderingTests
         var polandDraftProduction = await RenderAsync(catalog, "en", "poland", "temporary-protection", draftPolandGuides, "Production");
         var polandDraftDevelopment = WebUtility.HtmlDecode(await RenderAsync(catalog, "en", "poland", "temporary-protection", draftPolandGuides, "Development"));
         var germanyHealthcare = await RenderAsync(catalog, "en", "germany", "healthcare", guides, "Production");
+        var denmarkHealthcare = await RenderAsync(catalog, "en", "denmark", "healthcare", guides, "Production");
+        var polandHealthcare = await RenderAsync(catalog, "en", "poland", "healthcare", guides, "Production");
+        var germanyEmployment = await RenderAsync(catalog, "en", "germany", "employment", guides, "Production");
 
         Assert.Contains("class=\"guide-callout\"", denmark);
         Assert.Contains("href=\"/guides/denmark/temporary-protection\"", denmark);
@@ -108,6 +111,9 @@ public sealed class CategoryRenderingTests
         Assert.Contains("href=\"/guides/poland/temporary-protection\"", poland);
         Assert.Contains("class=\"guide-callout\"", polandDevelopment);
         Assert.DoesNotContain("class=\"guide-callout\"", germanyHealthcare);
+        Assert.DoesNotContain("class=\"guide-callout\"", denmarkHealthcare);
+        Assert.DoesNotContain("class=\"guide-callout\"", polandHealthcare);
+        Assert.DoesNotContain("class=\"guide-callout\"", germanyEmployment);
         Assert.DoesNotContain("class=\"guide-callout\"", polandDraftProduction);
         Assert.Contains("class=\"guide-callout\"", polandDraftDevelopment);
     }
