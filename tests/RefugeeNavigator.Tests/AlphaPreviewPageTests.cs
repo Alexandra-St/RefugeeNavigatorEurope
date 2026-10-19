@@ -291,6 +291,8 @@ public sealed class AlphaPreviewPageTests
         var html = await RenderAsync<CountryOverview>(language, parameters);
         var visibleHtml = WebUtility.HtmlDecode(html);
 
+        AssertCountryCategoryIcons(visibleHtml, "denmark");
+
         foreach (var slug in new[]
         {
             "temporary-protection", "employment", "healthcare", "housing", "education", "social-assistance"
@@ -298,6 +300,21 @@ public sealed class AlphaPreviewPageTests
         {
             Assert.Contains($"href=\"/countries/denmark/categories/{slug}\"", visibleHtml);
         }
+    }
+
+    [Theory]
+    [InlineData("denmark")]
+    [InlineData("germany")]
+    [InlineData("poland")]
+    public async Task EveryCountryOverviewRendersOneDecorativeIconForEachCategory(string countrySlug)
+    {
+        var parameters = new Dictionary<string, object?>
+        {
+            [nameof(CountryOverview.CountrySlug)] = countrySlug
+        };
+        var html = WebUtility.HtmlDecode(await RenderAsync<CountryOverview>("en", parameters, $"/countries/{countrySlug}"));
+
+        AssertCountryCategoryIcons(html, countrySlug);
     }
 
     [Theory]
@@ -468,6 +485,42 @@ public sealed class AlphaPreviewPageTests
         "poland" => "🇵🇱",
         _ => throw new InvalidOperationException("Unexpected country slug.")
     };
+
+    private static void AssertCountryCategoryIcons(string html, string countrySlug)
+    {
+        var categorySlugs = new[]
+        {
+            "temporary-protection", "employment", "healthcare", "housing", "education", "social-assistance"
+        };
+        var cards = Regex.Matches(html, @"<article class=""category-card""[^>]*>(?<content>.*?)</article>", RegexOptions.Singleline)
+            .Cast<Match>()
+            .Select(match => match.Groups["content"].Value)
+            .ToArray();
+
+        Assert.Equal(categorySlugs.Length, cards.Length);
+        Assert.Equal(categorySlugs.Length, Regex.Matches(html, @"<svg\b[^>]*class=""category-icon\b").Count);
+
+        for (var index = 0; index < categorySlugs.Length; index++)
+        {
+            var slug = categorySlugs[index];
+            var icons = Regex.Matches(
+                cards[index],
+                @"<svg\b[^>]*class=""category-icon category-icon--(?<slug>[^\s""]+)""[^>]*>(?<content>.*?)</svg>",
+                RegexOptions.Singleline);
+
+            Assert.Single(icons);
+            Assert.Equal(slug, icons[0].Groups["slug"].Value);
+            Assert.Contains("aria-hidden=\"true\"", icons[0].Value);
+            Assert.Contains("focusable=\"false\"", icons[0].Value);
+            Assert.DoesNotContain("tabindex=", icons[0].Value, StringComparison.OrdinalIgnoreCase);
+            Assert.DoesNotContain("<a", icons[0].Value, StringComparison.OrdinalIgnoreCase);
+            Assert.DoesNotContain("<button", icons[0].Value, StringComparison.OrdinalIgnoreCase);
+            Assert.True(
+                Regex.IsMatch(cards[index], "<div class=\"category-card-heading\"[^>]*>.*?<h3[^>]*>.+?</h3>", RegexOptions.Singleline),
+                "The category title should remain in the icon heading row.");
+            Assert.Contains($"href=\"/countries/{countrySlug}/categories/{slug}\"", cards[index]);
+        }
+    }
 
     private static string NormalizeHtmlText(string value) =>
         Regex.Replace(WebUtility.HtmlDecode(Regex.Replace(value, "<[^>]+>", string.Empty)), @"\s+", " ").Trim();

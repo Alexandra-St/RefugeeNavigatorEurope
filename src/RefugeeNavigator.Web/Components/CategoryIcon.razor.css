@@ -1,0 +1,14 @@
+.category-icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+}
+
+@media (max-width: 540px) {
+    .category-icon {
+        width: 28px;
+        height: 28px;
+        flex-basis: 28px;
+    }
+}

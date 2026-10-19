@@ -53,7 +53,10 @@
                     var categoryDescription = Localizer[CatalogLocalizationKeyResolver.CategoryDescription(category)].Value;
 
                     <article class="category-card">
-                        <h3>@categoryName</h3>
+                        <div class="category-card-heading">
+                            <CategoryIcon Slug="@category.Slug" />
+                            <h3>@categoryName</h3>
+                        </div>
                         <p>@categoryDescription</p>
                         <a class="category-link" href="/countries/@CountrySlug/categories/@category.Slug">@Localizer["Country.ExploreCategory", categoryName] <span aria-hidden="true">→</span></a>
                     </article>
