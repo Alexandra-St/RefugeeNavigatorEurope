@@ -15,7 +15,7 @@ Use this sequence for every information item:
 7. **Review:** re-open the source pages when rules change, a link fails or redirects, a discrepancy is reported, or a translation is questioned. Also schedule manual review according to the subject's risk and how often its rules change.
 8. **Update or withdraw:** update affected language versions and timestamps, or mark them `Outdated` while they are being corrected. If content must no longer be served, remove the entry and its source records from the production catalogs; the current application has no withdrawal field or editorial archive.
 
-The rendered page shows all entries in the catalogs, including `NeedsReview` and `Outdated` entries, with their status labels. It does not suppress unreviewed or outdated content. Include only claims supported by the cited sources, and never describe a `NeedsReview` or `Outdated` item as confirmed or current guidance. Do not deploy a candidate until a human has accepted its claims, translations, sources, and disclosed limitations.
+The application renders all entries in the catalogs, including `NeedsReview` and `Outdated` entries, but does not visibly show their status labels or suppress unreviewed or outdated content. Include only claims supported by the cited sources, and never describe a `NeedsReview` or `Outdated` item as confirmed or current guidance. Do not deploy a candidate until a human has accepted its claims, translations, sources, and disclosed limitations.
 
 ## Current JSON shape
 
@@ -52,7 +52,7 @@ If official pages contradict one another or are unclear, do not choose one state
 
 Set a translation to `Verified` only after a human has reviewed that language version against the supporting pages. Change it to `NeedsReview` when the translation or a relevant source changes and review is incomplete, or when a discrepancy is reported. Set it to `Outdated` when a material change or reliable evidence means the content may no longer be current. Return it to `Verified` only after the corrected translation has itself been checked.
 
-Having no source records does not make an entry verified. The current UI displays the status text but does not enforce publication policy; reviewers must ensure that production content is appropriate to serve.
+Having no source records does not make an entry verified. The current UI does not visibly display status text or enforce publication policy; reviewers must ensure that production content is appropriate to serve.
 
 ## Translation and dates
 

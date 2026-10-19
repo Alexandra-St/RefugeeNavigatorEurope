@@ -1,0 +1,45 @@
+# Czechia V1 draft review
+
+Status: DRAFT — NOT APPROVED FOR PUBLICATION. These are editorial candidates based only on the approved proposal and claim matrices dated 19 October 2026. They are not legal advice or publication approval.
+
+| Key | Category | Working English title | Sections | Claim IDs covered | Source labels used | Time-sensitive claims | Translation-equivalence status | Remaining editorial concerns |
+| --- | --- | --- | ---: | --- | --- | --- | --- | --- |
+| CZ-TP-01 | temporary-protection | Temporary Protection in Czechia: Applying and Extending Your Status | 5 | CZ-TP01-01, CZ-TP01-02, CZ-TP01-03, CZ-TP01-04, CZ-TP01-05, CZ-TP01-06, CZ-TP01-07, CZ-TP01-08, CZ-TP01-09, CZ-TP01-10, CZ-TP01-11, CZ-TP01-12, CZ-TP01-13, CZ-TP01-14, CZ-TP01-15, CZ-TP01-16 | TP-S01, TP-S02, TP-S03, TP-S04, TP-S05 | EU/Czech endpoints: 4 Mar 2028; 31 Mar 2027; next process 2027 → 31 Mar 2028. Military evidence rule from 5 Aug 2026. | EN/UK/RU reviewed for equivalent scope; human review pending | Main-page military-summary inconsistency remains; verify the next portal/booking announcement before integration. |
+| CZ-TP-02 | temporary-protection | Residence Options Beyond Temporary Protection in Czechia | 5 | CZ-TP02-01, CZ-TP02-02, CZ-TP02-19, CZ-TP02-03, CZ-TP02-04, CZ-TP02-05, CZ-TP02-06, CZ-TP02-07, CZ-TP02-08, CZ-TP02-09, CZ-TP02-17, CZ-TP02-18, CZ-TP02-10, CZ-TP02-11, CZ-TP02-12, CZ-TP02-13, CZ-TP02-14, CZ-TP02-15, CZ-TP02-16 | RES-S01, RES-S02, RES-S03, RES-S04, RES-S05, RES-S06, RES-S07, TP-S01, TP-S05, SOC-S01 | Closed expression stage 1–30 Apr 2026; registration 1 Oct–31 Dec 2026; 2025 income and other fixed reference dates. | EN/UK/RU reviewed for equivalent scope; human review pending | Only the assessed expression-of-interest cohort can register; no article-level eligibility determination. |
+| CZ-EMP-01 | employment | Finding a Job in Czechia | 3 | CZ-EMP01-01, CZ-EMP01-02, CZ-EMP01-03, CZ-EMP01-08, CZ-EMP01-04, CZ-EMP01-05, CZ-EMP01-06, CZ-EMP01-07 | EMP-S01, EMP-S02, EMP-S03, EMP-S04, EMP-S05, EMP-S06, EDU-S02 | 2026 course rules; CzechUp scheduled through 30 Nov 2028; live vacancies change. | EN/UK/RU reviewed for equivalent scope; human review pending | Course funding, approval and individual service access require Labour Office assessment. |
+| CZ-EMP-02 | employment | Work Authorization and Employee Rights in Czechia | 4 | CZ-EMP02-01, CZ-EMP02-02, CZ-EMP02-03, CZ-EMP02-04, CZ-EMP02-05, CZ-EMP02-06, CZ-EMP02-08, CZ-EMP02-07, CZ-EMP02-09, CZ-EMP02-10, CZ-EMP02-11 | WORK-S01, WORK-S02, WORK-S03, WORK-S04, WORK-S05, WORK-S06, EMP-S01, SOC-S01, RES-S03 | REGZEC from 1 Apr 2026; gross minimum-wage figures for 2026; notice rules from 1 Jun 2025. | EN/UK/RU reviewed for equivalent scope; human review pending | Recheck 2026 wage before later publication; statutory and contract exceptions remain. |
+| CZ-HEALTH-01 | healthcare | Accessing Healthcare in Czechia | 4 | CZ-HEALTH01-01, CZ-HEALTH01-02, CZ-HEALTH01-03, CZ-HEALTH01-04, CZ-HEALTH01-05, CZ-HEALTH01-06, CZ-HEALTH01-10, CZ-HEALTH01-11, CZ-HEALTH01-07, CZ-HEALTH01-08, CZ-HEALTH01-09 | HEALTH-S01, HEALTH-S02, HEALTH-S03, HEALTH-S04, HEALTH-S05, HEALTH-S06, HEALTH-S07, HEALTH-S08, TP-S05, RES-S03 | 150/90-day first-grant cohorts; eight-day payer-change reporting; ZDP insurance transition. | EN/UK/RU reviewed for equivalent scope; human review pending | The applicable payer depends on the person’s category; confirm with the insurer. |
+| CZ-HOUSING-01 | housing | Finding Accommodation in Czechia | 3 | CZ-HOUSING01-01, CZ-HOUSING01-02, CZ-HOUSING01-03, CZ-HOUSING01-04, CZ-HOUSING01-05, CZ-HOUSING01-06, CZ-HOUSING01-07, CZ-HOUSING01-08 | HOUSE-S01, HOUSE-S02, HOUSE-S03, TP-S01, SOC-S01, EMP-S01 | 90-day limit from 1 Sep 2024; address reporting for stays over 15 days; current KACPU routing. | EN/UK/RU reviewed for equivalent scope; human review pending | Confirm current accommodation routing before travel; no particular facility is guaranteed. |
+| CZ-EDU-01 | education | Education and Czech-Language Learning in Czechia | 4 | CZ-EDU01-01, CZ-EDU01-02, CZ-EDU01-03, CZ-EDU01-04, CZ-EDU01-08, CZ-EDU01-05, CZ-EDU01-06, CZ-EDU01-07, CZ-EDU01-09 | EDU-S01, EDU-S02, EDU-S03, EMP-S03 | 2026/2027 child cohorts; admission request within 90 days of TP; 2026 adult-course rules. | EN/UK/RU reviewed for equivalent scope; human review pending | Individual age, completion, capacity and programme rules apply; excluded exam concessions need separate evidence. |
+| CZ-SOC-01 | social-assistance | Financial and Social Assistance in Czechia | 5 | CZ-SOC01-01, CZ-SOC01-02, CZ-SOC01-03, CZ-SOC01-05, CZ-SOC01-06, CZ-SOC01-04, CZ-SOC01-09, CZ-SOC01-07, CZ-SOC01-08, CZ-SOC01-10, CZ-SOC01-11 | SOC-S01, SOC-S02, SOC-S03, SOC-S04, EMP-S01, RES-S03 | Current HuD base figures; adult reduction after the 150-day threshold; monthly application timing. | EN/UK/RU reviewed for equivalent scope; human review pending | Award, housing component and MOP are individually assessed under current conditions. |
+
+## Cross-article consistency checks
+
+- TP dates are distinguished consistently: the EU measure runs through 4 March 2028; the completed Czech 2026 extension cycle reaches 31 March 2027; the next Czech process can reach 31 March 2028 only after its stages are completed. No draft implies that the EU date is printed automatically on an individual Czech document.
+- ZDP is consistently described as optional, separate from TP and acquired at card collection. References to work, insurance and non-insurance benefits do not imply automatic eligibility.
+- The 90-day humanitarian-accommodation limit, the 90-day initial insurance cohort and the 150-day HuD assessment are presented as separate clocks.
+- Czech terms do not change meaning across translations: dočasná ochrana / тимчасовий захист / временная защита; zvláštní dlouhodobý pobyt (ZDP); Úřad práce ČR; humanitární dávka (HuD); mimořádná okamžitá pomoc (MOP); Reserv+; eVOD.
+- No article determines individual eligibility, recommends a personal application, or promises a job, payment, insurance category, housing placement or school place.
+
+## High-risk editorial notes
+
+- CZ-TP-01 follows the specific dated Czech Ministry age split for covered military-obligation applicants from 5 August 2026. The broad eligibility summary on the main Ministry page contains contradictory overbroad wording. The reader-facing draft does not present competing instructions; the contradiction remains disclosed in the claim mapping and research matrix. The EU Decision is not attributed with the Czech evidentiary split.
+- CZ-TP-01 preserves the distinction between EU and Czech dates and says the next portal/booking opening must be checked on the official portal.
+- CZ-TP-02 distinguishes the closed 1–30 April expression-of-interest stage from current 1 October–31 December 2026 registration, later in-person checks and acquisition on card collection. All cumulative reference-date conditions remain qualified; this is not an eligibility calculator.
+- CZ-EMP-02 labels CZK 22,400/month and CZK 134.40/hour as gross 2026 figures only.
+- CZ-HEALTH-01 keeps first-grant cohorts (150 days through 10 February 2025; 90 days from 11 February 2025), repeat-grant treatment, payer categories and ZDP rules separate. It does not describe all healthcare as free.
+- CZ-HOUSING-01 states the 90-day limit from the day after first TP, including vulnerable people, and avoids promises of municipal housing or reimbursement.
+- CZ-EDU-01 labels the school cohort as 2026/2027, preserves the 90-day request deadline, and excludes unverified examination concessions and guaranteed language hours.
+- CZ-SOC-01 describes statutory base figures as assessment inputs, not awards, and distinguishes the 150-day HuD rule from other time limits. MOP remains individually assessed.
+
+## Wording intentionally narrowed
+
+The article prose uses concise, reader-facing navigation rather than reproducing every evidentiary detail from the matrices. It intentionally avoids an exhaustive document checklist, an eligibility calculator, case-specific outcomes, fixed office addresses, individual benefit calculations, universal access promises and unsupported education concessions. Where matrix claims are conditional, the prose keeps the relevant cohort or assessment caveat close to the statement. The matrices remain the canonical claim/source record.
+
+## Remaining editorial concerns
+
+- Human reviewers should compare all three language versions against each claim matrix, with particular attention to Czech legal terminology and numerical/date equivalence.
+- Before any later production integration, recheck the next Czech extension portal and booking instructions; this draft does not assert that registration is open.
+- Recheck time-sensitive ZDP registration, labour-market, wage, insurance, school-year and benefit details at publication time.
+- The Ministry’s broad military-summary inconsistency remains a documented limitation; this draft follows the owner-approved source hierarchy.
+- No production translation status, source-check timestamp or publication approval is assigned here.
