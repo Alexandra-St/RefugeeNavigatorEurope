@@ -57,11 +57,11 @@ This plan is based on [AUDIT_3_6B.md](AUDIT_3_6B.md). Items are independent and 
 
 ## P2 — Can improve later
 
-### P2-1 — Make external-link context predictable
+### P2-1 — Make external-link context predictable — IMPLEMENTED (manual verification pending)
 
 - **Problem addressed:** POT-02; official source links open a new tab without telling users.
-- **Affected component:** `Pages/Category.razor` source list.
-- **Proposed change:** Decide whether new tabs are needed. If retained, include a concise localized indication that a new tab opens; otherwise remove the new-tab behavior.
+- **Affected components:** `Pages/Category.razor`, `Pages/Compare.razor`, and `StepByStepGuideView.razor` official-source links.
+- **Implementation and test evidence:** Added a localized visually hidden new-tab indication and a visible decorative external-link marker. Existing `target="_blank"` and `rel="noopener noreferrer"` behavior is preserved. Rendered-output regression tests cover all three languages and each source-link surface.
 - **Acceptance criteria:** The navigation context is predictable for sighted, keyboard, and screen-reader users in all three languages.
-- **Suggested automated tests:** Assert that each external source link either stays in the current context or has the localized new-tab indication in its accessible name.
-- **Manual verification:** Activate a source link by keyboard and screen reader and confirm the context change is announced or otherwise clear.
+- **Automated regression tests:** Category source list, comparison full-article sources, comparison structured-fact sources, and interactive guide source links preserve their title, new-tab attributes, decorative icon, and localized accessible indication in Ukrainian, English, and Russian.
+- **Manual verification:** Pending. Activate a source link by keyboard and screen reader and confirm the context change is announced or otherwise clear.

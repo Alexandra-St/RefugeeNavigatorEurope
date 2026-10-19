@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using RefugeeNavigator.Data;
+using RefugeeNavigator.Domain;
 using RefugeeNavigator.Web.Guides;
 using RefugeeNavigator.Web.Localization;
 using GuideModel = RefugeeNavigator.Web.Guides.StepByStepGuide;
@@ -581,7 +582,8 @@ public sealed class StepByStepGuideTests
         var guide = (await GuideCatalog.Value).Guides[0];
         var scenario = guide.Scenarios.OrderBy(item => item.Order).First();
         var step = scenario.Steps.OrderBy(item => item.Order).First();
-        var html = System.Net.WebUtility.HtmlDecode(await RenderAsync(language, Environments.Development, scenario, 0));
+        var renderedHtml = await RenderAsync(language, Environments.Development, scenario, 0);
+        var html = System.Net.WebUtility.HtmlDecode(renderedHtml);
         var text = step.Translations[language];
         var source = Assert.Single(catalog.OfficialSources, item => item.Id == step.OfficialSourceIds[0]);
 
@@ -591,6 +593,7 @@ public sealed class StepByStepGuideTests
         Assert.Contains(text.Authority, html);
         Assert.Contains(text.Warning, html);
         Assert.Contains(source.Url.AbsoluteUri, html);
+        AssertExternalSourceLink(renderedHtml, source, language);
         Assert.Contains($"/countries/germany/categories/temporary-protection#entry-{step.ArticleId:N}", html);
         Assert.Contains(Resources.GetString("Guide.ChangeSituation", CultureInfo.GetCultureInfo(language))!, html);
         Assert.Contains(Resources.GetString("Guide.Next", CultureInfo.GetCultureInfo(language))!, html);
@@ -685,6 +688,22 @@ public sealed class StepByStepGuideTests
 
     private static int CountOccurrences(string value, string search) =>
         System.Text.RegularExpressions.Regex.Matches(value, System.Text.RegularExpressions.Regex.Escape(search)).Count;
+
+    private static void AssertExternalSourceLink(string html, OfficialSource source, string language)
+    {
+        var encodedUrl = System.Net.WebUtility.HtmlEncode(source.Url.AbsoluteUri);
+        var anchor = System.Text.RegularExpressions.Regex.Match(html,
+            $"<a\\b(?=[^>]*href=\\\"{System.Text.RegularExpressions.Regex.Escape(encodedUrl)}\\\")(?=[^>]*target=\\\"_blank\\\")(?=[^>]*rel=\\\"noopener noreferrer\\\")[^>]*>(?<content>.*?)</a>",
+            System.Text.RegularExpressions.RegexOptions.Singleline);
+
+        Assert.True(anchor.Success, $"No preserved new-tab link found for {source.Title}.");
+        var content = System.Text.RegularExpressions.Regex.Replace(anchor.Groups["content"].Value, "<!--.*?-->", string.Empty, System.Text.RegularExpressions.RegexOptions.Singleline);
+        var visibleContent = System.Net.WebUtility.HtmlDecode(System.Text.RegularExpressions.Regex.Replace(content, "<[^>]+>", string.Empty));
+        Assert.Contains(source.Title, visibleContent);
+        Assert.Matches("<span\\b(?=[^>]*aria-hidden=\\\"true\\\")(?=[^>]*class=\\\"external-link-icon\\\")[^>]*>↗</span>", content);
+        Assert.Contains($"({Resources.GetString("Common.OpensInNewTab", CultureInfo.GetCultureInfo(language))})", visibleContent);
+        Assert.DoesNotContain("Common.OpensInNewTab", html);
+    }
 
     private static async Task<string> RenderAsync(string language, string environmentName, GuideScenario? selectedScenario = null, int stepIndex = 0, GuideModel? guideOverride = null)
     {

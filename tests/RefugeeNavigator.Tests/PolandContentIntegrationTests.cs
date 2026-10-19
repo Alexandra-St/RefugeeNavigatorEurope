@@ -190,7 +190,7 @@ public sealed class PolandContentIntegrationTests
                 foreach (var source in catalog.OfficialSources.Where(source => source.InformationEntryId == translation.InformationEntryId))
                 {
                     Assert.Contains($"href=\"{source.Url.AbsoluteUri}\"", html);
-                    Assert.Contains(source.Title, visibleHtml);
+                    Assert.Contains(source.Title, ReadRenderedText(html));
                 }
 
                 var searchResults = ArticleSearch.Search(catalog, translation.Title, "poland", category.Slug,
@@ -364,6 +364,9 @@ public sealed class PolandContentIntegrationTests
             var component = await renderer.RenderComponentAsync<Compare>(ParameterView.Empty);
             return component.ToHtmlString();
         }, $"http://localhost/compare?country1=poland&country2=denmark&category={categorySlug}");
+
+    private static string ReadRenderedText(string html) => WebUtility.HtmlDecode(
+        Regex.Replace(Regex.Replace(html, "<!--.*?-->", string.Empty, RegexOptions.Singleline), "<[^>]+>", string.Empty));
 
     private static async Task<string> RenderAsync(CatalogData catalog, string language,
         Func<HtmlRenderer, Task<string>> render, string navigationUri = "http://localhost/")

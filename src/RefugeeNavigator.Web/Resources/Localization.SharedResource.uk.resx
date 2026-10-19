@@ -21,6 +21,9 @@
   <data name="Common.Disclaimer" xml:space="preserve">
     <value>Інформація може змінюватися. Завжди уточнюйте важливі вимоги в офіційних органах.</value>
   </data>
+  <data name="Common.OpensInNewTab" xml:space="preserve">
+    <value>відкриється в новій вкладці</value>
+  </data>
   <data name="Common.LanguageSelection" xml:space="preserve">
     <value>Вибір мови</value>
   </data>

@@ -217,10 +217,24 @@ public sealed class CategoryRenderingTests
         Assert.Contains("Source last checked", visibleHtml);
         Assert.Contains("datetime=\"2024-02-03T04:05:00", visibleHtml);
         Assert.Contains("datetime=\"2024-04-05T06:07:00", visibleHtml);
-        Assert.Contains("First official page", visibleHtml);
-        Assert.Contains("Second official page", visibleHtml);
+        Assert.Contains("First official page", ReadRenderedText(html));
+        Assert.Contains("Second official page", ReadRenderedText(html));
         Assert.Contains("target=\"_blank\" rel=\"noopener noreferrer\"", visibleHtml);
         Assert.Equal(new[] { "First paragraph.", "Second paragraph." }, ReadContentParagraphs(html));
+    }
+
+    [Theory]
+    [InlineData("uk")]
+    [InlineData("en")]
+    [InlineData("ru")]
+    public async Task OfficialSourceLinksIncludeLocalizedNewTabContext(string language)
+    {
+        var entry = FixtureEntry(Guid.NewGuid());
+        var source = FixtureSource(Guid.NewGuid(), entry.Entry.Id, "Trusted official source", "https://example.gov/source");
+        var catalog = await CreateCatalogAsync([entry], [source]);
+        var html = await RenderAsync(catalog, language);
+
+        AssertExternalSourceLink(html, source, language);
     }
 
     [Fact]
@@ -478,6 +492,25 @@ public sealed class CategoryRenderingTests
             CultureInfo.CurrentUICulture = priorUiCulture;
         }
     }
+
+    private static void AssertExternalSourceLink(string html, OfficialSource source, string language)
+    {
+        var encodedUrl = WebUtility.HtmlEncode(source.Url.AbsoluteUri);
+        var anchor = Regex.Match(html,
+            $"<a\\b(?=[^>]*href=\\\"{Regex.Escape(encodedUrl)}\\\")(?=[^>]*target=\\\"_blank\\\")(?=[^>]*rel=\\\"noopener noreferrer\\\")[^>]*>(?<content>.*?)</a>",
+            RegexOptions.Singleline);
+
+        Assert.True(anchor.Success, $"No preserved new-tab link found for {source.Title}.");
+        var content = Regex.Replace(anchor.Groups["content"].Value, "<!--.*?-->", string.Empty, RegexOptions.Singleline);
+        var visibleContent = WebUtility.HtmlDecode(Regex.Replace(content, "<[^>]+>", string.Empty));
+        Assert.Contains(source.Title, visibleContent);
+        Assert.Matches("<span\\b(?=[^>]*aria-hidden=\\\"true\\\")(?=[^>]*class=\\\"external-link-icon\\\")[^>]*>↗</span>", content);
+        Assert.Contains($"({Resources.GetString("Common.OpensInNewTab", CultureInfo.GetCultureInfo(language))})", visibleContent);
+        Assert.DoesNotContain("Common.OpensInNewTab", html);
+    }
+
+    private static string ReadRenderedText(string html) => WebUtility.HtmlDecode(
+        Regex.Replace(Regex.Replace(html, "<!--.*?-->", string.Empty, RegexOptions.Singleline), "<[^>]+>", string.Empty));
 
     private sealed record EntryFixture(
         InformationEntry Entry,

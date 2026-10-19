@@ -316,7 +316,7 @@ public sealed class CountryComparisonTests
                         {
                             var source = Assert.Single(catalog.OfficialSources, item => item.Id == sourceId);
                             Assert.Equal(fact.InformationEntryId, source.InformationEntryId);
-                            Assert.Contains(source.Title, visibleHtml);
+                            Assert.Contains(source.Title, ReadRenderedText(html));
                             Assert.Contains($"href=\"{WebUtility.HtmlEncode(source.Url.AbsoluteUri)}\" target=\"_blank\" rel=\"noopener noreferrer\"", html);
                         }
                     }
@@ -426,8 +426,9 @@ public sealed class CountryComparisonTests
                 Assert.NotEmpty(sources);
                 foreach (var source in sources)
                 {
-                    Assert.Contains(source.Title, visibleHtml);
+                    Assert.Contains(source.Title, ReadRenderedText(html));
                     Assert.Contains($"href=\"{WebUtility.HtmlEncode(source.Url.AbsoluteUri)}\" target=\"_blank\" rel=\"noopener noreferrer\"", html);
+                    AssertExternalSourceLink(html, source, language);
                     Assert.Contains(source.LastCheckedAt.ToString("d MMM yyyy", CultureInfo.GetCultureInfo(language)), visibleHtml);
                 }
             }
@@ -449,8 +450,9 @@ public sealed class CountryComparisonTests
                         foreach (var sourceId in fact.OfficialSourceIds)
                         {
                             var source = Assert.Single(catalog.OfficialSources, item => item.Id == sourceId);
-                            Assert.Contains(source.Title, visibleHtml);
+                            Assert.Contains(source.Title, ReadRenderedText(html));
                             Assert.Contains($"href=\"{WebUtility.HtmlEncode(source.Url.AbsoluteUri)}\" target=\"_blank\" rel=\"noopener noreferrer\"", html);
+                            AssertExternalSourceLink(html, source, language);
                         }
                     }
                     else
@@ -512,7 +514,7 @@ public sealed class CountryComparisonTests
             Assert.DoesNotContain(WebUtility.HtmlEncode(original.Title), html);
             Assert.DoesNotContain(WebUtility.HtmlEncode(original.Summary), html);
             Assert.DoesNotContain(WebUtility.HtmlEncode(original.Content), html);
-            Assert.Contains(catalog.OfficialSources.First(source => source.InformationEntryId == entryId).Title, WebUtility.HtmlDecode(html));
+            Assert.Contains(catalog.OfficialSources.First(source => source.InformationEntryId == entryId).Title, ReadRenderedText(html));
         }
     }
 
@@ -634,6 +636,32 @@ public sealed class CountryComparisonTests
 
     private static string GetResource(string key, string language) =>
         Resources.GetString(key, CultureInfo.GetCultureInfo(language)) ?? string.Empty;
+
+    private static void AssertExternalSourceLink(string html, OfficialSource source, string language)
+    {
+        var encodedUrl = WebUtility.HtmlEncode(source.Url.AbsoluteUri);
+        var anchor = Regex.Matches(html, "<a\\b(?<attributes>[^>]*)>(?<content>.*?)</a>", RegexOptions.Singleline)
+            .Cast<Match>()
+            .FirstOrDefault(match =>
+            {
+                var attributes = match.Groups["attributes"].Value;
+                var content = Regex.Replace(match.Groups["content"].Value, "<!--.*?-->", string.Empty, RegexOptions.Singleline);
+                return attributes.Contains($"href=\"{encodedUrl}\"", StringComparison.Ordinal) &&
+                    attributes.Contains("target=\"_blank\"", StringComparison.Ordinal) &&
+                    attributes.Contains("rel=\"noopener noreferrer\"", StringComparison.Ordinal) &&
+                    ReadRenderedText(content).Contains(source.Title, StringComparison.Ordinal);
+            });
+
+        Assert.NotNull(anchor);
+        var content = Regex.Replace(anchor.Groups["content"].Value, "<!--.*?-->", string.Empty, RegexOptions.Singleline);
+        var visibleContent = WebUtility.HtmlDecode(Regex.Replace(content, "<[^>]+>", string.Empty));
+        Assert.Matches("<span\\b(?=[^>]*aria-hidden=\\\"true\\\")(?=[^>]*class=\\\"external-link-icon\\\")[^>]*>↗</span>", content);
+        Assert.Contains($"({GetResource("Common.OpensInNewTab", language)})", visibleContent);
+        Assert.DoesNotContain("Common.OpensInNewTab", html);
+    }
+
+    private static string ReadRenderedText(string html) => WebUtility.HtmlDecode(
+        Regex.Replace(Regex.Replace(html, "<!--.*?-->", string.Empty, RegexOptions.Singleline), "<[^>]+>", string.Empty));
 
     private static Task<CatalogData> LoadCatalogAsync() => ProductionCatalog.Value;
 

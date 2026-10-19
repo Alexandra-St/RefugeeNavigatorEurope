@@ -104,7 +104,8 @@ else
                                 @foreach (var sourceId in step.OfficialSourceIds)
                                 {
                                     var source = Catalog.OfficialSources.Single(item => item.Id == sourceId);
-                                    <li><a href="@source.Url.AbsoluteUri" target="_blank" rel="noopener noreferrer">@source.Title</a></li>
+                                    var (sourceTitlePrefix, sourceTitleSuffix) = SplitFinalTitleWord(source.Title);
+                                    <li><a href="@source.Url.AbsoluteUri" target="_blank" rel="noopener noreferrer">@sourceTitlePrefix<span class="external-link-final-word">@sourceTitleSuffix<span aria-hidden="true" class="external-link-icon">↗</span></span><span class="visually-hidden"> (@Localizer["Common.OpensInNewTab"])</span></a></li>
                                 }
                             </ul>
                         </section>
@@ -157,4 +158,10 @@ else
         GuideActionKind.Optional => "Guide.Optional",
         _ => "Guide.Recommendation"
     }];
+
+    private static (string Prefix, string Suffix) SplitFinalTitleWord(string title)
+    {
+        var separator = title.LastIndexOf(' ');
+        return separator < 0 ? (string.Empty, title) : (title[..(separator + 1)], title[(separator + 1)..]);
+    }
 }
