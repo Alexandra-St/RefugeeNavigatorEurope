@@ -216,17 +216,14 @@
   <data name="Common.Preview" xml:space="preserve">
     <value>Предварительный просмотр</value>
   </data>
-  <data name="Home.FeaturePreviewsHeading" xml:space="preserve">
-    <value>Функции в разработке</value>
-  </data>
   <data name="Home.SearchTitle" xml:space="preserve">
     <value>Поиск информации</value>
   </data>
   <data name="Home.SearchDescription" xml:space="preserve">
     <value>Ищите по заголовкам, кратким описаниям и текстам статей, доступных в приложении, и фильтруйте результаты по стране, категории и статусу перевода.</value>
   </data>
-  <data name="Home.OpenSearchPreview" xml:space="preserve">
-    <value>Открыть предварительный просмотр поиска</value>
+  <data name="Home.OpenSearch" xml:space="preserve">
+    <value>Открыть поиск</value>
   </data>
   <data name="Home.CompareTitle" xml:space="preserve">
     <value>Сравнение стран</value>

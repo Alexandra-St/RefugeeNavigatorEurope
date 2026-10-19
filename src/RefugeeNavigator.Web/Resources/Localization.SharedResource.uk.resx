@@ -216,17 +216,14 @@
   <data name="Common.Preview" xml:space="preserve">
     <value>Попередній перегляд</value>
   </data>
-  <data name="Home.FeaturePreviewsHeading" xml:space="preserve">
-    <value>Можливості в розробці</value>
-  </data>
   <data name="Home.SearchTitle" xml:space="preserve">
     <value>Пошук інформації</value>
   </data>
   <data name="Home.SearchDescription" xml:space="preserve">
     <value>Шукайте в заголовках, коротких описах і текстах доступних у застосунку статей та звужуйте результати за країною, категорією і статусом перекладу.</value>
   </data>
-  <data name="Home.OpenSearchPreview" xml:space="preserve">
-    <value>Відкрити попередній перегляд пошуку</value>
+  <data name="Home.OpenSearch" xml:space="preserve">
+    <value>Відкрити пошук</value>
   </data>
   <data name="Home.CompareTitle" xml:space="preserve">
     <value>Порівняння країн</value>

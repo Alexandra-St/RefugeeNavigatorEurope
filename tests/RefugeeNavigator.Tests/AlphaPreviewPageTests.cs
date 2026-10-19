@@ -26,10 +26,11 @@ public sealed class AlphaPreviewPageTests
         typeof(SharedResource).Assembly);
 
     [Theory]
-    [InlineData("uk", "Пошук інформації", "Порівняння країн", "Попередній перегляд")]
-    [InlineData("en", "Search information", "Compare countries", "Preview")]
-    [InlineData("ru", "Поиск информации", "Сравнение стран", "Предварительный просмотр")]
-    public async Task HomepageLinksToBothPreviewsAndKeepsCountryLinks(string language, string searchTitle, string compareTitle, string previewLabel)
+    [InlineData("uk", "Пошук інформації", "Порівняння країн", "Відкрити пошук", "Попередній перегляд")]
+    [InlineData("en", "Search information", "Compare countries", "Open search", "Preview")]
+    [InlineData("ru", "Поиск информации", "Сравнение стран", "Открыть поиск", "Предварительный просмотр")]
+    public async Task HomepageShowsFunctionalFeatureCardsAndKeepsCountryLinks(
+        string language, string searchTitle, string compareTitle, string searchCta, string oldPreviewLabel)
     {
         var html = await RenderAsync<Home>(language);
         var visibleHtml = WebUtility.HtmlDecode(html);
@@ -43,7 +44,14 @@ public sealed class AlphaPreviewPageTests
         var routePositions = expectedCountryRoutes.Select(route => visibleHtml.IndexOf($"href=\"{route}\"", StringComparison.Ordinal)).ToArray();
         Assert.All(routePositions, position => Assert.True(position >= 0));
         Assert.True(routePositions[0] < routePositions[1] && routePositions[1] < routePositions[2]);
-        Assert.Contains(previewLabel, visibleHtml);
+        var searchLink = Regex.Match(visibleHtml, "<a\\b[^>]*href=\"/search\"[^>]*>(?<content>.*?)</a>", RegexOptions.Singleline);
+        Assert.True(searchLink.Success);
+        Assert.Contains(searchCta, searchLink.Groups["content"].Value);
+        Assert.DoesNotContain(oldPreviewLabel, visibleHtml);
+        Assert.DoesNotContain("Features in development", visibleHtml);
+        Assert.DoesNotContain("Функции в разработке", visibleHtml);
+        Assert.DoesNotContain("Можливості в розробці", visibleHtml);
+        Assert.DoesNotContain("preview-badge", visibleHtml);
     }
 
     [Theory]
@@ -195,12 +203,18 @@ public sealed class AlphaPreviewPageTests
         };
 
         var renderedHeadings = Regex.Matches(visibleHtml, @"<h3\b[^>]*>(?<name>.*?)</h3>", RegexOptions.Singleline)
-            .Select(match => match.Groups["name"].Value.Trim())
+            .Select(match => NormalizeHtmlText(match.Groups["name"].Value))
             .TakeLast(3)
             .ToArray();
-        Assert.True(countries.Select(country => country.Name).SequenceEqual(renderedHeadings), visibleHtml);
+        var expectedHeadings = countries.Select(country => $"{country.Name} {CountryFlagFor(country.Slug)}");
+        Assert.True(expectedHeadings.SequenceEqual(renderedHeadings), visibleHtml);
 
-        foreach (var country in countries)
+        var countryCards = Regex.Matches(visibleHtml, @"<article class=""country-card""[^>]*>(?<content>.*?)</article>", RegexOptions.Singleline)
+            .Cast<Match>()
+            .Select(match => match.Groups["content"].Value)
+            .ToArray();
+
+        foreach (var (country, index) in countries.Select((country, index) => (country, index)))
         {
             var link = Regex.Match(
                 html,
@@ -210,6 +224,11 @@ public sealed class AlphaPreviewPageTests
             Assert.True(link.Success, $"Expected a link to {country.Slug}.");
             Assert.DoesNotContain("aria-label=", link.Groups["attributes"].Value, StringComparison.OrdinalIgnoreCase);
             Assert.Contains("aria-hidden=\"true\"", link.Groups["content"].Value);
+
+            var flag = CountryFlagFor(country.Slug);
+            Assert.Matches(
+                $"<span[^>]*>{Regex.Escape(country.Name)}</span>\\s*<span[^>]*aria-hidden=\"true\"[^>]*>{Regex.Escape(flag)}</span>",
+                countryCards[index]);
 
             var linkText = Regex.Replace(link.Groups["content"].Value, "<span[^>]*>.*?</span>", string.Empty, RegexOptions.Singleline);
             Assert.Equal(string.Format(CultureInfo.GetCultureInfo(language), linkLabelTemplate, country.Name), WebUtility.HtmlDecode(linkText).Trim());
@@ -402,10 +421,20 @@ public sealed class AlphaPreviewPageTests
 
         var countryHeadings = Regex.Matches(homeHtml, @"<h3\b[^>]*>(?<name>.*?)</h3>", RegexOptions.Singleline)
             .Cast<Match>()
-            .Select(match => match.Groups["name"].Value.Trim())
+            .Select(match => NormalizeHtmlText(match.Groups["name"].Value))
             .TakeLast(3)
             .ToArray();
-        Assert.Contains(nominativeName, countryHeadings);
+        Assert.Contains(countryHeadings, heading => heading.StartsWith(nominativeName, StringComparison.Ordinal));
+        var expectedFlag = slug switch
+        {
+            "denmark" => "🇩🇰",
+            "germany" => "🇩🇪",
+            "poland" => "🇵🇱",
+            _ => throw new InvalidOperationException("Unexpected country slug.")
+        };
+        Assert.Matches(
+            $"<h3[^>]*class=\"country-name\"[^>]*>\\s*<span[^>]*>{Regex.Escape(nominativeName)}</span>\\s*<span[^>]*aria-hidden=\"true\"[^>]*>{Regex.Escape(expectedFlag)}</span>",
+            homeHtml);
         Assert.Contains(string.Format(CultureInfo.GetCultureInfo(language), GetResource("Home.CountryDescription", language), locationPhrase), homeHtml);
         Assert.Contains($"href=\"/countries/{slug}\"", homeHtml);
         Assert.Matches($"<h1\\b[^>]*>{Regex.Escape(nominativeName)}</h1>", overviewHtml);
@@ -431,6 +460,17 @@ public sealed class AlphaPreviewPageTests
 
     private static string GetResource(string key, string language) =>
         Resources.GetString(key, CultureInfo.GetCultureInfo(language)) ?? string.Empty;
+
+    private static string CountryFlagFor(string slug) => slug switch
+    {
+        "denmark" => "🇩🇰",
+        "germany" => "🇩🇪",
+        "poland" => "🇵🇱",
+        _ => throw new InvalidOperationException("Unexpected country slug.")
+    };
+
+    private static string NormalizeHtmlText(string value) =>
+        Regex.Replace(WebUtility.HtmlDecode(Regex.Replace(value, "<[^>]+>", string.Empty)), @"\s+", " ").Trim();
 
     private static async Task<string> RenderAsync<TComponent>(
         string language,

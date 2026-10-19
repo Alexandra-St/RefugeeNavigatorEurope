@@ -18,30 +18,21 @@
             <p>@Localizer["Home.OfficialSources"]</p>
         </section>
 
-        <section class="feature-previews" aria-labelledby="feature-previews-heading">
-            <div class="section-heading">
-                <h2 id="feature-previews-heading">@Localizer["Home.FeaturePreviewsHeading"]</h2>
-            </div>
-
+        <div class="feature-cards">
             <div class="feature-grid">
                 <article class="feature-card">
-                    <div class="feature-card-heading">
-                        <h3>@Localizer["Home.SearchTitle"]</h3>
-                        <span class="preview-badge">@Localizer["Common.Preview"]</span>
-                    </div>
+                    <h3>@Localizer["Home.SearchTitle"]</h3>
                     <p>@Localizer["Home.SearchDescription"]</p>
-                    <a href="/search">@Localizer["Home.OpenSearchPreview"] <span aria-hidden="true">→</span></a>
+                    <a href="/search">@Localizer["Home.OpenSearch"] <span aria-hidden="true">→</span></a>
                 </article>
 
                 <article class="feature-card">
-                    <div class="feature-card-heading">
-                        <h3>@Localizer["Home.CompareTitle"]</h3>
-                    </div>
+                    <h3>@Localizer["Home.CompareTitle"]</h3>
                     <p>@Localizer["Home.CompareDescription"]</p>
                     <a href="/compare">@Localizer["Home.OpenComparison"] <span aria-hidden="true">→</span></a>
                 </article>
             </div>
-        </section>
+        </div>
 
         <section class="country-selection" aria-labelledby="country-heading">
             <div class="section-heading">
@@ -56,7 +47,10 @@
                     var countryLocationName = Localizer[$"{CatalogLocalizationKeyResolver.CountryName(country)}.In"].Value;
 
                     <article class="country-card">
-                        <h3>@countryDisplayName</h3>
+                        <h3 class="country-name">
+                            <span>@countryDisplayName</span>
+                            <span class="country-flag" aria-hidden="true">@CountryFlag(country.Slug)</span>
+                        </h3>
                         <p>@Localizer["Home.CountryDescription", countryLocationName]</p>
                         <a href="/countries/@country.Slug">
                             @Localizer["Home.ExploreCountry", countryDisplayName] <span aria-hidden="true">→</span>
@@ -71,3 +65,13 @@
         </footer>
     </div>
 </main>
+
+@code {
+    private static string CountryFlag(string slug) => slug switch
+    {
+        "denmark" => "🇩🇰",
+        "germany" => "🇩🇪",
+        "poland" => "🇵🇱",
+        _ => string.Empty
+    };
+}

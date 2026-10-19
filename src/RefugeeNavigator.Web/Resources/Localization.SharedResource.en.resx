@@ -216,17 +216,14 @@
   <data name="Common.Preview" xml:space="preserve">
     <value>Preview</value>
   </data>
-  <data name="Home.FeaturePreviewsHeading" xml:space="preserve">
-    <value>Features in development</value>
-  </data>
   <data name="Home.SearchTitle" xml:space="preserve">
     <value>Search information</value>
   </data>
   <data name="Home.SearchDescription" xml:space="preserve">
     <value>Find articles available in the app by searching their text and filtering by country, category, and translation status.</value>
   </data>
-  <data name="Home.OpenSearchPreview" xml:space="preserve">
-    <value>Open search preview</value>
+  <data name="Home.OpenSearch" xml:space="preserve">
+    <value>Open search</value>
   </data>
   <data name="Home.CompareTitle" xml:space="preserve">
     <value>Compare countries</value>
