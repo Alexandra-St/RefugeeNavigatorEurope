@@ -183,7 +183,6 @@ public sealed class PolandContentIntegrationTests
             {
                 Assert.Contains(translation.Title, visibleHtml);
                 Assert.Contains(translation.Summary, visibleHtml);
-                Assert.Contains(StatusLabel(language), visibleHtml);
                 Assert.Contains("datetime=\"2026-10-16T", html);
                 Assert.DoesNotContain("<script", html, StringComparison.OrdinalIgnoreCase);
                 Assert.DoesNotContain("**", visibleHtml, StringComparison.Ordinal);
@@ -334,14 +333,6 @@ public sealed class PolandContentIntegrationTests
         Assert.Contains("профессиональной активности", Content("social-assistance", "ru"));
         Assert.Contains("школьного возраста — учиться", Content("social-assistance", "ru"));
     }
-
-    private static string StatusLabel(string language) => language switch
-    {
-        "uk" => "Перевірено",
-        "en" => "Reviewed",
-        "ru" => "Проверено",
-        _ => throw new ArgumentOutOfRangeException(nameof(language))
-    };
 
     private static async Task<CatalogData> LoadCatalogAsync() =>
         await new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync();

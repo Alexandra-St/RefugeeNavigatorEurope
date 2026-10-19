@@ -236,9 +236,9 @@ public sealed class AlphaPreviewPageTests
     }
 
     [Theory]
-    [InlineData("uk", "Пошук інформації", "Порівняння країн", "статті, доступні в застосунку")]
-    [InlineData("en", "Search information", "Compare countries", "currently available in the app")]
-    [InlineData("ru", "Поиск информации", "Сравнение стран", "статьи, доступные в приложении")]
+    [InlineData("uk", "Пошук інформації", "Порівняння країн", "Результати показано лише вибраною мовою.")]
+    [InlineData("en", "Search information", "Compare countries", "Search results are shown only in your selected language.")]
+    [InlineData("ru", "Поиск информации", "Сравнение стран", "Результаты показываются только на выбранном языке.")]
     public async Task SearchIsFunctionalAndCompareExplainsItsReviewScope(
         string language,
         string searchHeading,

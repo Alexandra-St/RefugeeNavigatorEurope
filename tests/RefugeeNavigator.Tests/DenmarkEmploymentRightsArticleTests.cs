@@ -108,10 +108,10 @@ public sealed class DenmarkEmploymentRightsArticleTests
     }
 
     [Theory]
-    [InlineData("uk", "Робота в Данії: дозвіл на працю та права працівників", "Хто може працювати в Данії|Трудовий договір|Зарплата та робочий час|Відпустка, хвороба та умови праці|Податки та реєстрація|Права на роботі та куди звертатися|Якщо робота завершується або ви змінюєте роботодавця|Де отримати допомогу", "Перевірено")]
-    [InlineData("en", "Working in Denmark: work authorization and employee rights", "Who can work in Denmark|Employment contracts|Salary and working hours|Holidays, sickness and working conditions|Taxes and registration|Workplace rights and where to raise a concern|If a job ends or you change employers|Where to get help", "Reviewed")]
-    [InlineData("ru", "Работа в Дании: разрешение на работу и права работников", "Кто может работать в Дании|Трудовой договор|Зарплата и рабочее время|Отпуск, болезнь и условия труда|Налоги и регистрация|Права на работе и куда обратиться|Если работа заканчивается или вы меняете работодателя|Где получить помощь", "Проверено")]
-    public async Task LocalizedArticleRendersEightSectionsAndSources(string language, string title, string expectedHeadings, string status)
+    [InlineData("uk", "Робота в Данії: дозвіл на працю та права працівників", "Хто може працювати в Данії|Трудовий договір|Зарплата та робочий час|Відпустка, хвороба та умови праці|Податки та реєстрація|Права на роботі та куди звертатися|Якщо робота завершується або ви змінюєте роботодавця|Де отримати допомогу")]
+    [InlineData("en", "Working in Denmark: work authorization and employee rights", "Who can work in Denmark|Employment contracts|Salary and working hours|Holidays, sickness and working conditions|Taxes and registration|Workplace rights and where to raise a concern|If a job ends or you change employers|Where to get help")]
+    [InlineData("ru", "Работа в Дании: разрешение на работу и права работников", "Кто может работать в Дании|Трудовой договор|Зарплата и рабочее время|Отпуск, болезнь и условия труда|Налоги и регистрация|Права на работе и куда обратиться|Если работа заканчивается или вы меняете работодателя|Где получить помощь")]
+    public async Task LocalizedArticleRendersEightSectionsAndSources(string language, string title, string expectedHeadings)
     {
         var catalog = await LoadProductionCatalogAsync();
         var html = await RenderAsync<Category>(catalog, language,
@@ -125,7 +125,6 @@ public sealed class DenmarkEmploymentRightsArticleTests
         var visibleHtml = WebUtility.HtmlDecode(articleHtml);
 
         Assert.Contains(title, visibleHtml);
-        Assert.Contains(status, visibleHtml);
         var headings = Regex.Matches(articleHtml, "<h3\\b[^>]*class=\"entry-section-heading\"[^>]*>(.*?)</h3>", RegexOptions.Singleline)
             .Cast<Match>()
             .Select(match => WebUtility.HtmlDecode(match.Groups[1].Value))

@@ -72,16 +72,15 @@ public sealed class DenmarkAfterProtectionArticleTests
     }
 
     [Theory]
-    [InlineData("uk", "Які є варіанти проживання після тимчасового захисту в Данії?", "BEK nr. 828/2026", "17 березня 2028 року", "17 березня 2027 року", "Перевірено", "Джерело востаннє перевірено", "Тимчасове проживання та строки продовження|Варіанти проживання, пов’язані з роботою|Варіанти проживання, пов’язані з навчанням|Інші дозволи на проживання|Постійне проживання|Де знайти офіційну інформацію")]
-    [InlineData("en", "Residence options after temporary protection in Denmark", "BEK no. 828/2026", "17 March 2028", "17 March 2027", "Reviewed", "Source last checked", "Temporary residence and extension dates|Employment-related residence options|Education-related residence options|Other residence permits|Permanent residence|Where to find official information")]
-    [InlineData("ru", "Какие есть варианты проживания после временной защиты в Дании?", "BEK № 828/2026", "17 марта 2028 года", "17 марта 2027 года", "Проверено", "Источник проверен", "Временное проживание и сроки продления|Варианты проживания, связанные с работой|Варианты проживания, связанные с обучением|Другие разрешения на проживание|Постоянное проживание|Где найти официальную информацию")]
+    [InlineData("uk", "Які є варіанти проживання після тимчасового захисту в Данії?", "BEK nr. 828/2026", "17 березня 2028 року", "17 березня 2027 року", "Джерело востаннє перевірено", "Тимчасове проживання та строки продовження|Варіанти проживання, пов’язані з роботою|Варіанти проживання, пов’язані з навчанням|Інші дозволи на проживання|Постійне проживання|Де знайти офіційну інформацію")]
+    [InlineData("en", "Residence options after temporary protection in Denmark", "BEK no. 828/2026", "17 March 2028", "17 March 2027", "Source last checked", "Temporary residence and extension dates|Employment-related residence options|Education-related residence options|Other residence permits|Permanent residence|Where to find official information")]
+    [InlineData("ru", "Какие есть варианты проживания после временной защиты в Дании?", "BEK № 828/2026", "17 марта 2028 года", "17 марта 2027 года", "Источник проверен", "Временное проживание и сроки продления|Варианты проживания, связанные с работой|Варианты проживания, связанные с обучением|Другие разрешения на проживание|Постоянное проживание|Где найти официальную информацию")]
     public async Task LocalizedCategoryRendersArticleStatusDatesAndOfficialSources(
         string language,
         string expectedTitle,
         string expectedRegulation,
         string expectedExtensionDate,
         string expectedAgencyDate,
-        string expectedStatus,
         string expectedSourceLabel,
         string expectedHeadings)
     {
@@ -99,7 +98,9 @@ public sealed class DenmarkAfterProtectionArticleTests
         Assert.Contains(expectedRegulation, visibleHtml);
         Assert.Contains(expectedExtensionDate, visibleHtml);
         Assert.Contains(expectedAgencyDate, visibleHtml);
-        Assert.Contains(expectedStatus, visibleHtml);
+        Assert.DoesNotContain("Review status", visibleHtml);
+        Assert.DoesNotContain("Проверено", visibleHtml);
+        Assert.DoesNotContain("Перевірено", visibleHtml);
         Assert.Equal(RequiredSources.Length, RequiredSources.Count(url => html.Contains($"href=\"{url}\"", StringComparison.Ordinal)));
         Assert.Contains(expectedSourceLabel, visibleHtml);
         Assert.DoesNotContain("2d106fd3-e981-4ef9-9733-568b654dfca5", visibleHtml);
@@ -236,7 +237,7 @@ public sealed class DenmarkAfterProtectionArticleTests
         var visibleHtml = WebUtility.HtmlDecode(html);
 
         Assert.Contains(expectedTitle, visibleHtml);
-        Assert.Contains(expectedStatus, visibleHtml);
+        Assert.DoesNotContain(expectedStatus, visibleHtml);
         Assert.Contains(expected112, visibleHtml);
         Assert.Contains(expectedRegionalGuidance, visibleHtml);
         var headings = System.Text.RegularExpressions.Regex.Matches(html, "<h3\\b[^>]*class=\"entry-section-heading\"[^>]*>(.*?)</h3>")

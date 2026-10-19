@@ -143,10 +143,10 @@ public sealed class CategoryRenderingTests
     }
 
     [Theory]
-    [InlineData("uk", "Title uk", "Потребує перевірки")]
-    [InlineData("en", "Title en", "Needs review")]
-    [InlineData("ru", "Title ru", "Требует проверки")]
-    public async Task RendersTranslationAndStatusForCurrentUiCulture(string language, string title, string status)
+    [InlineData("uk", "Title uk")]
+    [InlineData("en", "Title en")]
+    [InlineData("ru", "Title ru")]
+    public async Task RendersTranslationAndOnlyUsefulDateMetadataForCurrentUiCulture(string language, string title)
     {
         var entry = FixtureEntry(Guid.NewGuid());
         var catalog = await CreateCatalogAsync(new[] { entry });
@@ -155,9 +155,10 @@ public sealed class CategoryRenderingTests
         var visibleHtml = WebUtility.HtmlDecode(html);
 
         Assert.Contains(title, visibleHtml);
-        Assert.Contains(status, visibleHtml);
         Assert.Contains($"Summary {language}", visibleHtml);
         Assert.Contains($"Body {language}", visibleHtml);
+        Assert.Contains(Resources.GetString("Category.LastUpdated", CultureInfo.GetCultureInfo(language))!, visibleHtml);
+        Assert.Contains("datetime=\"2024-02-03T04:05:00", html);
     }
 
     [Fact]
@@ -178,25 +179,26 @@ public sealed class CategoryRenderingTests
     }
 
     [Theory]
-    [InlineData(VerificationStatus.NeedsReview, "en", "Needs review")]
-    [InlineData(VerificationStatus.NeedsReview, "uk", "Потребує перевірки")]
-    [InlineData(VerificationStatus.NeedsReview, "ru", "Требует проверки")]
-    [InlineData(VerificationStatus.Verified, "en", "Reviewed")]
-    [InlineData(VerificationStatus.Verified, "uk", "Перевірено")]
-    [InlineData(VerificationStatus.Verified, "ru", "Проверено")]
-    [InlineData(VerificationStatus.Outdated, "en", "May be outdated")]
-    [InlineData(VerificationStatus.Outdated, "uk", "Може бути застарілою")]
-    [InlineData(VerificationStatus.Outdated, "ru", "Возможно, устарело")]
-    public async Task RendersEveryVerificationStatusInEveryLanguage(
-        VerificationStatus status,
-        string language,
-        string expected)
+    [InlineData(VerificationStatus.NeedsReview, "en")]
+    [InlineData(VerificationStatus.NeedsReview, "uk")]
+    [InlineData(VerificationStatus.NeedsReview, "ru")]
+    [InlineData(VerificationStatus.Verified, "en")]
+    [InlineData(VerificationStatus.Verified, "uk")]
+    [InlineData(VerificationStatus.Verified, "ru")]
+    [InlineData(VerificationStatus.Outdated, "en")]
+    [InlineData(VerificationStatus.Outdated, "uk")]
+    [InlineData(VerificationStatus.Outdated, "ru")]
+    public async Task DoesNotRenderVerificationStatusForAnyStatusOrLanguage(VerificationStatus status, string language)
     {
         var catalog = await CreateCatalogAsync(new[] { FixtureEntry(Guid.NewGuid(), status: status) });
 
         var html = await RenderAsync(catalog, language);
 
-        Assert.Contains(expected, WebUtility.HtmlDecode(html));
+        var visibleHtml = WebUtility.HtmlDecode(html);
+        foreach (var statusName in Enum.GetNames<VerificationStatus>())
+        {
+            Assert.DoesNotContain(Resources.GetString($"Category.Status.{statusName}", CultureInfo.GetCultureInfo(language))!, visibleHtml);
+        }
     }
 
     [Fact]

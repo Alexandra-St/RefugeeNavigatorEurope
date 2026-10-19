@@ -419,7 +419,6 @@ public sealed class CountryComparisonTests
                 Assert.Contains(translation.Title, visibleHtml);
                 Assert.Contains(translation.Summary, visibleHtml);
                 AssertFullContentIsRendered(translation.Content, visibleHtml);
-                Assert.Contains(GetResource("Category.Status.Verified", language), visibleHtml);
                 Assert.Contains($"href=\"/countries/{countrySlug}/categories/{categorySlug}#entry-{entryId:N}\"", html);
 
                 var sources = catalog.OfficialSources.Where(source => source.InformationEntryId == entryId).ToArray();
@@ -472,6 +471,7 @@ public sealed class CountryComparisonTests
             Assert.Matches("<ul\\b", html);
             Assert.DoesNotContain("<p>## ", html);
             Assert.DoesNotContain("<p>- ", html);
+            AssertAllArticleMetadataShowsOnlyLastUpdated(html, language);
         }
     }
 
@@ -495,7 +495,7 @@ public sealed class CountryComparisonTests
     [InlineData("uk")]
     [InlineData("en")]
     [InlineData("ru")]
-    public async Task NeedsReviewAndOutdatedTranslationsAreNotRenderedAsConfirmedContent(string language)
+    public async Task NeedsReviewAndOutdatedTranslationsUseGenericUnavailableState(string language)
     {
         var catalog = await LoadCatalogAsync();
         var topic = CountryComparisonTopicMap.ForCategory("employment")[0];
@@ -510,7 +510,9 @@ public sealed class CountryComparisonTests
                 "?country1=denmark&country2=germany&category=employment");
 
             Assert.Contains(GetResource("Compare.InformationUnavailable", language), WebUtility.HtmlDecode(html));
-            Assert.Contains(GetResource(StatusResourceKey(status), language), WebUtility.HtmlDecode(html));
+            Assert.DoesNotContain("class=\"article-status\"", html);
+            Assert.DoesNotContain(GetResource(StatusResourceKey(status), language), WebUtility.HtmlDecode(html));
+            Assert.DoesNotContain(GetResource("Category.Status.Verified", language), WebUtility.HtmlDecode(html));
             Assert.DoesNotContain(WebUtility.HtmlEncode(original.Title), html);
             Assert.DoesNotContain(WebUtility.HtmlEncode(original.Summary), html);
             Assert.DoesNotContain(WebUtility.HtmlEncode(original.Content), html);
@@ -607,6 +609,22 @@ public sealed class CountryComparisonTests
         VerificationStatus.Outdated => "Category.Status.Outdated",
         _ => throw new ArgumentOutOfRangeException(nameof(status))
     };
+
+    private static void AssertAllArticleMetadataShowsOnlyLastUpdated(string html, string language)
+    {
+        var blocks = Regex.Matches(html, "<dl\\b[^>]*class=\"article-metadata\"[^>]*>(?<body>.*?)</dl>", RegexOptions.Singleline);
+        Assert.NotEmpty(blocks.Cast<Match>());
+        foreach (Match block in blocks)
+        {
+            var content = ReadRenderedText(block.Groups["body"].Value);
+            Assert.Contains(GetResource("Compare.LastUpdated", language), content);
+            foreach (var status in Enum.GetValues<VerificationStatus>())
+            {
+                var label = GetResource($"Category.Status.{status}", language);
+                Assert.DoesNotContain(label, content);
+            }
+        }
+    }
 
     private static void AssertFullContentIsRendered(string content, string renderedHtml)
     {

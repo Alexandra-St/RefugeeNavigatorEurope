@@ -136,7 +136,7 @@ public sealed class DenmarkHousingArticleTests
         Assert.Contains(noAutomaticExemption, visibleHtml);
         Assert.Contains(responsibilityPeriod, visibleHtml);
         Assert.Contains(transferDisclaimer, visibleHtml);
-        Assert.Contains(localizedReviewStatus, visibleHtml);
+        Assert.DoesNotContain(localizedReviewStatus, visibleHtml);
         Assert.Contains(depositLoanCondition, visibleHtml);
         Assert.Contains(addressAdvanceNotice, visibleHtml);
         Assert.Contains(addressDeadline, visibleHtml);

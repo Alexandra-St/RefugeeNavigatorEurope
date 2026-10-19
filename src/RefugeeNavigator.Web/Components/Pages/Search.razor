@@ -16,10 +16,9 @@
 <main id="main-content" class="search-page">
     <div class="page-content">
         <header class="page-heading">
-            <p class="eyebrow">@Localizer["Common.Preview"]</p>
             <h1>@Localizer["Search.Heading"]</h1>
             <p class="description">@Localizer["Search.Description"]</p>
-            <p class="scope-note">@Localizer["Search.PreviewNotice"] @Localizer["Search.Scope"]</p>
+            <p class="scope-note">@Localizer["Search.Scope"]</p>
         </header>
 
         <form class="search-form" method="get" action="/search">
@@ -51,16 +50,6 @@
                     </select>
                 </div>
 
-                <div class="filter-field">
-                    <label for="status-filter">@Localizer["Search.StatusFilter"]</label>
-                    <select id="status-filter" name="status">
-                        <option value="">@Localizer["Search.AllStatuses"]</option>
-                        @foreach (var status in Enum.GetValues<VerificationStatus>())
-                        {
-                            <option value="@status" selected="@string.Equals(StatusValue, status.ToString(), StringComparison.OrdinalIgnoreCase)">@Localizer[$"Category.Status.{status}"]</option>
-                        }
-                    </select>
-                </div>
             </div>
 
             <div class="form-actions">
@@ -99,7 +88,6 @@
                             <dl class="result-metadata">
                                 <div><dt>@Localizer["Search.ResultCountry"]</dt><dd>@countryName</dd></div>
                                 <div><dt>@Localizer["Search.ResultCategory"]</dt><dd>@categoryName</dd></div>
-                                <div><dt>@Localizer["Search.ResultStatus"]</dt><dd>@Localizer[$"Category.Status.{result.Translation.VerificationStatus}"]</dd></div>
                             </dl>
                         </article>
                     }
@@ -125,13 +113,11 @@
 
     private string? CategorySlug => QueryParameters.GetValueOrDefault("category").FirstOrDefault();
 
-    private string? StatusValue => QueryParameters.GetValueOrDefault("status").FirstOrDefault();
-
     private IReadOnlyList<ArticleSearchResult> Results => ArticleSearch.Search(
         Catalog,
         Query,
         CountrySlug,
         CategorySlug,
-        StatusValue,
+        VerificationStatus.Verified.ToString(),
         CultureInfo.CurrentUICulture.TwoLetterISOLanguageName);
 }

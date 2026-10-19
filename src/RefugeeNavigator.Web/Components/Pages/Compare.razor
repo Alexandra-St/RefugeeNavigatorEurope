@@ -83,10 +83,6 @@
                                         <p class="article-summary">@translation.Summary</p>
                                         <dl class="article-metadata">
                                             <div>
-                                                <dt>@Localizer["Compare.ReviewStatus"]</dt>
-                                                <dd>@Localizer[VerificationStatusResourceKey(translation.VerificationStatus)]</dd>
-                                            </div>
-                                            <div>
                                                 <dt>@Localizer["Compare.LastUpdated"]</dt>
                                                 <dd><time datetime="@translation.LastUpdatedAt.ToString("O", CultureInfo.InvariantCulture)">@FormatDate(translation.LastUpdatedAt)</time></dd>
                                             </div>
@@ -124,10 +120,6 @@
                                     else
                                     {
                                         <div class="unavailable-state">
-                                            @if (article?.Translation is { } unapprovedTranslation)
-                                            {
-                                                <p class="article-status"><strong>@Localizer["Compare.ReviewStatus"]:</strong> @Localizer[VerificationStatusResourceKey(unapprovedTranslation.VerificationStatus)]</p>
-                                            }
                                             <p>@Localizer["Compare.InformationUnavailable"]</p>
                                         </div>
                                     }
@@ -399,14 +391,6 @@
         var sources = Catalog.OfficialSources.Where(source => source.InformationEntryId == entry.Id).ToArray();
         return new ComparisonArticle(entry, translation, sources);
     }
-
-    private static string VerificationStatusResourceKey(VerificationStatus status) => status switch
-    {
-        VerificationStatus.NeedsReview => "Category.Status.NeedsReview",
-        VerificationStatus.Verified => "Category.Status.Verified",
-        VerificationStatus.Outdated => "Category.Status.Outdated",
-        _ => throw new InvalidOperationException($"Unsupported verification status '{status}'.")
-    };
 
     private static string FormatDate(DateTimeOffset value) => value.ToString("d MMM yyyy", CultureInfo.CurrentCulture);
 

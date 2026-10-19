@@ -130,7 +130,6 @@ public sealed class GermanyContentIntegrationTests
             {
                 Assert.Contains(translation.Title, visibleCategoryHtml);
                 Assert.Contains(translation.Summary, visibleCategoryHtml);
-                Assert.Contains(StatusLabel(language), visibleCategoryHtml);
                 Assert.DoesNotContain("<script", categoryHtml, StringComparison.OrdinalIgnoreCase);
                 Assert.DoesNotContain("https://", translation.Content, StringComparison.OrdinalIgnoreCase);
                 Assert.DoesNotContain("**", translation.Content, StringComparison.Ordinal);
@@ -244,14 +243,6 @@ public sealed class GermanyContentIntegrationTests
         Assert.Contains("Land", education["en"]);
         Assert.Contains("bill", social["en"], StringComparison.OrdinalIgnoreCase);
     }
-
-    private static string StatusLabel(string language) => language switch
-    {
-        "uk" => "Перевірено",
-        "en" => "Reviewed",
-        "ru" => "Проверено",
-        _ => throw new ArgumentOutOfRangeException(nameof(language))
-    };
 
     private static async Task<CatalogData> LoadCatalogAsync() =>
         await new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync();

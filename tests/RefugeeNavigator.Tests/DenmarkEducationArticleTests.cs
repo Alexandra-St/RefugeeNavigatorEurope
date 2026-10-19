@@ -150,14 +150,6 @@ public sealed class DenmarkEducationArticleTests
         Assert.Equal(expectedHeadings.Split('|'), headings);
         Assert.Equal(RequiredSources.Length, RequiredSources.Count(url => html.Contains($"href=\"{url}\"", StringComparison.Ordinal)));
         Assert.Contains("<ul class=\"entry-list\"", html);
-        var localizedVerified = language switch
-        {
-            "uk" => "Перевірено",
-            "en" => "Reviewed",
-            "ru" => "Проверено",
-            _ => throw new ArgumentOutOfRangeException(nameof(language))
-        };
-        Assert.Contains(localizedVerified, visibleHtml);
     }
 
     [Fact]

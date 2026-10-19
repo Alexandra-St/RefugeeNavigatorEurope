@@ -147,9 +147,6 @@
   <data name="Category.GuideCalloutLink" xml:space="preserve">
     <value>Відкрити посібник</value>
   </data>
-  <data name="Category.VerificationStatus" xml:space="preserve">
-    <value>Статус перевірки</value>
-  </data>
   <data name="Category.Status.NeedsReview" xml:space="preserve">
     <value>Потребує перевірки</value>
   </data>
@@ -216,14 +213,11 @@
   <data name="NotFound.BackHome" xml:space="preserve">
     <value>Повернутися на головну</value>
   </data>
-  <data name="Common.Preview" xml:space="preserve">
-    <value>Попередній перегляд</value>
-  </data>
   <data name="Home.SearchTitle" xml:space="preserve">
     <value>Пошук інформації</value>
   </data>
   <data name="Home.SearchDescription" xml:space="preserve">
-    <value>Шукайте в заголовках, коротких описах і текстах доступних у застосунку статей та звужуйте результати за країною, категорією і статусом перекладу.</value>
+    <value>Знаходьте доступні статті за їхнім текстом і звужуйте результати за країною та категорією.</value>
   </data>
   <data name="Home.OpenSearch" xml:space="preserve">
     <value>Відкрити пошук</value>
@@ -244,10 +238,7 @@
     <value>Пошук інформації</value>
   </data>
   <data name="Search.Description" xml:space="preserve">
-    <value>Шукайте за заголовками, короткими описами або текстами доступних статей, а потім звужуйте результати за країною, категорією і статусом перевірки.</value>
-  </data>
-  <data name="Search.PreviewNotice" xml:space="preserve">
-    <value>Ця початкова версія пошуку охоплює статті, доступні в застосунку.</value>
+    <value>Шукайте доступні статті за заголовками, короткими описами або текстом, а потім звужуйте результати за країною та категорією.</value>
   </data>
   <data name="Search.BackHome" xml:space="preserve">
     <value>Повернутися на головну</value>
@@ -258,10 +249,8 @@
   <data name="Search.Submit" xml:space="preserve"><value>Шукати</value></data>
   <data name="Search.CountryFilter" xml:space="preserve"><value>Країна</value></data>
   <data name="Search.CategoryFilter" xml:space="preserve"><value>Категорія інформації</value></data>
-  <data name="Search.StatusFilter" xml:space="preserve"><value>Статус перекладу</value></data>
   <data name="Search.AllCountries" xml:space="preserve"><value>Усі країни</value></data>
   <data name="Search.AllCategories" xml:space="preserve"><value>Усі категорії</value></data>
-  <data name="Search.AllStatuses" xml:space="preserve"><value>Усі статуси</value></data>
   <data name="Search.Reset" xml:space="preserve"><value>Скинути фільтри</value></data>
   <data name="Search.ResultsHeading" xml:space="preserve"><value>Результати пошуку</value></data>
   <data name="Search.ResultsCount" xml:space="preserve"><value>Результатів: {0}</value></data>
@@ -269,7 +258,6 @@
   <data name="Search.NoContent" xml:space="preserve"><value>Наразі немає доступних статей.</value></data>
   <data name="Search.ResultCountry" xml:space="preserve"><value>Країна</value></data>
   <data name="Search.ResultCategory" xml:space="preserve"><value>Категорія</value></data>
-  <data name="Search.ResultStatus" xml:space="preserve"><value>Статус перекладу</value></data>
   <data name="Compare.PageTitle" xml:space="preserve">
     <value>Порівняння країн | Refugee Navigator Europe</value>
   </data>
@@ -314,7 +302,6 @@
   <data name="Compare.HideDetails" xml:space="preserve"><value>Згорнути подробиці</value></data>
   <data name="Compare.OfficialSources" xml:space="preserve"><value>Офіційні джерела</value></data>
   <data name="Compare.LastUpdated" xml:space="preserve"><value>Оновлено</value></data>
-  <data name="Compare.ReviewStatus" xml:space="preserve"><value>Статус перевірки</value></data>
   <data name="Compare.InformationUnavailable" xml:space="preserve"><value>Цей переклад наразі недоступний для порівняння.</value></data>
   <data name="Compare.SourceChecked" xml:space="preserve"><value>Джерело перевірено:</value></data>
   <data name="Compare.OpenArticle" xml:space="preserve"><value>Відкрити повну статтю</value></data>

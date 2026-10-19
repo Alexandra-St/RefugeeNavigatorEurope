@@ -77,10 +77,6 @@
 
                             <dl class="entry-metadata">
                                 <div>
-                                    <dt>@Localizer["Category.VerificationStatus"]</dt>
-                                    <dd>@Localizer[VerificationStatusResourceKey(item.Translation.VerificationStatus)]</dd>
-                                </div>
-                                <div>
                                     <dt>@Localizer["Category.LastUpdated"]</dt>
                                     <dd><time datetime="@item.Translation.LastUpdatedAt.ToString("O", CultureInfo.InvariantCulture)">@FormatDate(item.Translation.LastUpdatedAt)</time></dd>
                                 </div>
@@ -195,14 +191,6 @@
             })
             .ToArray();
     }
-
-    private static string VerificationStatusResourceKey(VerificationStatus status) => status switch
-    {
-        VerificationStatus.NeedsReview => "Category.Status.NeedsReview",
-        VerificationStatus.Verified => "Category.Status.Verified",
-        VerificationStatus.Outdated => "Category.Status.Outdated",
-        _ => throw new InvalidOperationException($"Unsupported verification status '{status}'.")
-    };
 
     private static string FormatDate(DateTimeOffset value) => value.ToString("d MMM yyyy", CultureInfo.CurrentCulture);
 

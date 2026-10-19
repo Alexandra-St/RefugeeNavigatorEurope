@@ -1,6 +1,7 @@
 using System.Globalization;
 using System.Net;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.Extensions.DependencyInjection;
@@ -82,7 +83,58 @@ public sealed class ArticleSearchTests
         Assert.Contains("&amp; practical", html);
         Assert.DoesNotContain("<guide>", html);
         Assert.DoesNotContain("Another article", WebUtility.HtmlDecode(html));
-        Assert.Contains("Verified", WebUtility.HtmlDecode(html));
+        var visibleHtml = WebUtility.HtmlDecode(html);
+        Assert.Contains("Country", visibleHtml);
+        Assert.Contains("Category", visibleHtml);
+        Assert.DoesNotContain("Search.ResultStatus", html);
+        Assert.DoesNotContain("name=\"status\"", html);
+        Assert.DoesNotContain("Review status", WebUtility.HtmlDecode(html));
+    }
+
+    [Theory]
+    [InlineData("en", "Needs review", "May be outdated", "Translation status", "Preview", "early search")]
+    [InlineData("uk", "Потребує перевірки", "Може бути застарілою", "Статус перекладу", "Попередній перегляд", "початкова версія пошуку")]
+    [InlineData("ru", "Требует проверки", "Возможно, устарело", "Статус перевода", "Предварительный просмотр", "ранняя версия поиска")]
+    public async Task PublicSearchIgnoresStatusQueryAndOnlyReturnsVerifiedTranslations(
+        string language,
+        string needsReview,
+        string outdated,
+        string statusFilter,
+        string previewLabel,
+        string previewNotice)
+    {
+        var html = await RenderAsync(CreateCatalog(), language, "?status=NeedsReview");
+        var visibleHtml = WebUtility.HtmlDecode(html);
+
+        var expectedTitle = language switch
+        {
+            "en" => "Employment guide",
+            "uk" => "Працевлаштування",
+            "ru" => "Трудоустройство",
+            _ => throw new ArgumentOutOfRangeException(nameof(language))
+        };
+        var expectedCountryFilter = language switch { "en" => "Country", "uk" => "Країна", _ => "Страна" };
+        var expectedCategoryFilter = language switch { "en" => "Information category", "uk" => "Категорія інформації", _ => "Категория информации" };
+        var expectedScope = language switch
+        {
+            "en" => "Search results are shown only in your selected language.",
+            "uk" => "Результати показано лише вибраною мовою.",
+            "ru" => "Результаты показываются только на выбранном языке.",
+            _ => throw new ArgumentOutOfRangeException(nameof(language))
+        };
+        Assert.Contains(expectedTitle, visibleHtml);
+        Assert.DoesNotContain("Another article", visibleHtml);
+        Assert.DoesNotContain(needsReview, visibleHtml);
+        Assert.DoesNotContain(outdated, visibleHtml);
+        Assert.DoesNotContain(statusFilter, visibleHtml);
+        Assert.DoesNotContain(previewLabel, visibleHtml);
+        Assert.DoesNotContain(previewNotice, visibleHtml, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains(expectedCountryFilter, visibleHtml);
+        Assert.Contains(expectedCategoryFilter, visibleHtml);
+        Assert.Contains(expectedScope, visibleHtml);
+        var metadata = Assert.Single(Regex.Matches(html, "<dl\\b[^>]*class=\"result-metadata\"[^>]*>(?<body>.*?)</dl>", RegexOptions.Singleline).Cast<Match>());
+        Assert.Equal(2, Regex.Matches(metadata.Groups["body"].Value, "<dt\\b[^>]*>").Count);
+        Assert.DoesNotContain("Search.", visibleHtml);
     }
 
     [Fact]

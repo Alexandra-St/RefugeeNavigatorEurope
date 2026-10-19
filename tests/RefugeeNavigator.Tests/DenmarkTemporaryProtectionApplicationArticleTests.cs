@@ -84,11 +84,11 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
     }
 
     [Theory]
-    [InlineData("uk", "Хто може подати заяву|Як подати заяву|Поки триває розгляд|Що відбувається після схвалення|Продовження та строк дії дозволу|Члени сім’ї та особливі обставини|Де отримати допомогу", "Перевірено")]
-    [InlineData("en", "Who can apply|How to submit an application|While waiting for a decision|What happens after approval|Extension and permit validity|Family members and special circumstances|Where to get help", "Reviewed")]
-    [InlineData("ru", "Кто может подать заявление|Как подать заявление|Пока заявление рассматривается|Что происходит после одобрения|Продление и срок действия разрешения|Члены семьи и особые обстоятельства|Где получить помощь", "Проверено")]
+    [InlineData("uk", "Хто може подати заяву|Як подати заяву|Поки триває розгляд|Що відбувається після схвалення|Продовження та строк дії дозволу|Члени сім’ї та особливі обставини|Де отримати допомогу")]
+    [InlineData("en", "Who can apply|How to submit an application|While waiting for a decision|What happens after approval|Extension and permit validity|Family members and special circumstances|Where to get help")]
+    [InlineData("ru", "Кто может подать заявление|Как подать заявление|Пока заявление рассматривается|Что происходит после одобрения|Продление и срок действия разрешения|Члены семьи и особые обстоятельства|Где получить помощь")]
     public async Task LocalizedArticleRendersSevenSectionsAndBothAttributedExtensionDates(
-        string language, string expectedHeadings, string expectedStatus)
+        string language, string expectedHeadings)
     {
         var catalog = await LoadProductionCatalogAsync();
         var translation = Assert.Single(catalog.InformationEntryTranslations,
@@ -109,7 +109,9 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
         var visibleHtml = WebUtility.HtmlDecode(articleHtml);
 
         Assert.Contains(translation.Title, visibleHtml);
-        Assert.Contains(expectedStatus, visibleHtml);
+        Assert.DoesNotContain("Reviewed", visibleHtml);
+        Assert.DoesNotContain("Перевірено", visibleHtml);
+        Assert.DoesNotContain("Проверено", visibleHtml);
         Assert.Contains("2028", translation.Content);
         Assert.Contains("2027", translation.Content);
         var extensionParagraphs = translation.Content.Split("\n\n", StringSplitOptions.RemoveEmptyEntries);

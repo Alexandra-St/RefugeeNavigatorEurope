@@ -147,9 +147,6 @@
   <data name="Category.GuideCalloutLink" xml:space="preserve">
     <value>Open the guide</value>
   </data>
-  <data name="Category.VerificationStatus" xml:space="preserve">
-    <value>Review status</value>
-  </data>
   <data name="Category.Status.NeedsReview" xml:space="preserve">
     <value>Needs review</value>
   </data>
@@ -216,14 +213,11 @@
   <data name="NotFound.BackHome" xml:space="preserve">
     <value>Back to homepage</value>
   </data>
-  <data name="Common.Preview" xml:space="preserve">
-    <value>Preview</value>
-  </data>
   <data name="Home.SearchTitle" xml:space="preserve">
     <value>Search information</value>
   </data>
   <data name="Home.SearchDescription" xml:space="preserve">
-    <value>Find articles available in the app by searching their text and filtering by country, category, and translation status.</value>
+    <value>Find available articles by searching their text and filtering by country and category.</value>
   </data>
   <data name="Home.OpenSearch" xml:space="preserve">
     <value>Open search</value>
@@ -244,10 +238,7 @@
     <value>Search information</value>
   </data>
   <data name="Search.Description" xml:space="preserve">
-    <value>Search available articles by title, summary, or content, then narrow results by country, category, and review status.</value>
-  </data>
-  <data name="Search.PreviewNotice" xml:space="preserve">
-    <value>This early search covers articles currently available in the app.</value>
+    <value>Search available articles by title, summary, or content, then narrow results by country and category.</value>
   </data>
   <data name="Search.BackHome" xml:space="preserve">
     <value>Back to homepage</value>
@@ -260,10 +251,8 @@
   <data name="Search.Submit" xml:space="preserve"><value>Search</value></data>
   <data name="Search.CountryFilter" xml:space="preserve"><value>Country</value></data>
   <data name="Search.CategoryFilter" xml:space="preserve"><value>Information category</value></data>
-  <data name="Search.StatusFilter" xml:space="preserve"><value>Translation status</value></data>
   <data name="Search.AllCountries" xml:space="preserve"><value>All countries</value></data>
   <data name="Search.AllCategories" xml:space="preserve"><value>All categories</value></data>
-  <data name="Search.AllStatuses" xml:space="preserve"><value>All statuses</value></data>
   <data name="Search.Reset" xml:space="preserve"><value>Reset filters</value></data>
   <data name="Search.ResultsHeading" xml:space="preserve"><value>Search results</value></data>
   <data name="Search.ResultsCount" xml:space="preserve"><value>Results: {0}</value></data>
@@ -271,7 +260,6 @@
   <data name="Search.NoContent" xml:space="preserve"><value>No articles are currently available.</value></data>
   <data name="Search.ResultCountry" xml:space="preserve"><value>Country</value></data>
   <data name="Search.ResultCategory" xml:space="preserve"><value>Category</value></data>
-  <data name="Search.ResultStatus" xml:space="preserve"><value>Translation status</value></data>
   <data name="Compare.PageTitle" xml:space="preserve">
     <value>Compare countries | Refugee Navigator Europe</value>
   </data>
@@ -316,7 +304,6 @@
   <data name="Compare.HideDetails" xml:space="preserve"><value>Hide details</value></data>
   <data name="Compare.OfficialSources" xml:space="preserve"><value>Official sources</value></data>
   <data name="Compare.LastUpdated" xml:space="preserve"><value>Last updated</value></data>
-  <data name="Compare.ReviewStatus" xml:space="preserve"><value>Review status</value></data>
   <data name="Compare.InformationUnavailable" xml:space="preserve"><value>This translation is not currently available for comparison.</value></data>
   <data name="Compare.SourceChecked" xml:space="preserve"><value>Source checked:</value></data>
   <data name="Compare.OpenArticle" xml:space="preserve"><value>Open full article</value></data>

@@ -147,9 +147,6 @@
   <data name="Category.GuideCalloutLink" xml:space="preserve">
     <value>Открыть руководство</value>
   </data>
-  <data name="Category.VerificationStatus" xml:space="preserve">
-    <value>Статус проверки</value>
-  </data>
   <data name="Category.Status.NeedsReview" xml:space="preserve">
     <value>Требует проверки</value>
   </data>
@@ -216,14 +213,11 @@
   <data name="NotFound.BackHome" xml:space="preserve">
     <value>Вернуться на главную</value>
   </data>
-  <data name="Common.Preview" xml:space="preserve">
-    <value>Предварительный просмотр</value>
-  </data>
   <data name="Home.SearchTitle" xml:space="preserve">
     <value>Поиск информации</value>
   </data>
   <data name="Home.SearchDescription" xml:space="preserve">
-    <value>Ищите по заголовкам, кратким описаниям и текстам статей, доступных в приложении, и фильтруйте результаты по стране, категории и статусу перевода.</value>
+    <value>Находите доступные статьи по их тексту и фильтруйте результаты по стране и категории.</value>
   </data>
   <data name="Home.OpenSearch" xml:space="preserve">
     <value>Открыть поиск</value>
@@ -244,10 +238,7 @@
     <value>Поиск информации</value>
   </data>
   <data name="Search.Description" xml:space="preserve">
-    <value>Ищите по заголовкам, кратким описаниям и текстам доступных статей, а затем фильтруйте результаты по стране, категории и статусу проверки.</value>
-  </data>
-  <data name="Search.PreviewNotice" xml:space="preserve">
-    <value>Эта ранняя версия поиска охватывает статьи, доступные в приложении.</value>
+    <value>Ищите доступные статьи по заголовкам, кратким описаниям или тексту, затем фильтруйте результаты по стране и категории.</value>
   </data>
   <data name="Search.BackHome" xml:space="preserve">
     <value>Вернуться на главную</value>
@@ -258,10 +249,8 @@
   <data name="Search.Submit" xml:space="preserve"><value>Найти</value></data>
   <data name="Search.CountryFilter" xml:space="preserve"><value>Страна</value></data>
   <data name="Search.CategoryFilter" xml:space="preserve"><value>Категория информации</value></data>
-  <data name="Search.StatusFilter" xml:space="preserve"><value>Статус перевода</value></data>
   <data name="Search.AllCountries" xml:space="preserve"><value>Все страны</value></data>
   <data name="Search.AllCategories" xml:space="preserve"><value>Все категории</value></data>
-  <data name="Search.AllStatuses" xml:space="preserve"><value>Все статусы</value></data>
   <data name="Search.Reset" xml:space="preserve"><value>Сбросить фильтры</value></data>
   <data name="Search.ResultsHeading" xml:space="preserve"><value>Результаты поиска</value></data>
   <data name="Search.ResultsCount" xml:space="preserve"><value>Результатов: {0}</value></data>
@@ -269,7 +258,6 @@
   <data name="Search.NoContent" xml:space="preserve"><value>Сейчас нет доступных статей.</value></data>
   <data name="Search.ResultCountry" xml:space="preserve"><value>Страна</value></data>
   <data name="Search.ResultCategory" xml:space="preserve"><value>Категория</value></data>
-  <data name="Search.ResultStatus" xml:space="preserve"><value>Статус перевода</value></data>
   <data name="Compare.PageTitle" xml:space="preserve">
     <value>Сравнение стран | Refugee Navigator Europe</value>
   </data>
@@ -314,7 +302,6 @@
   <data name="Compare.HideDetails" xml:space="preserve"><value>Скрыть подробности</value></data>
   <data name="Compare.OfficialSources" xml:space="preserve"><value>Официальные источники</value></data>
   <data name="Compare.LastUpdated" xml:space="preserve"><value>Обновлено</value></data>
-  <data name="Compare.ReviewStatus" xml:space="preserve"><value>Статус проверки</value></data>
   <data name="Compare.InformationUnavailable" xml:space="preserve"><value>Этот перевод сейчас недоступен для сравнения.</value></data>
   <data name="Compare.SourceChecked" xml:space="preserve"><value>Источник проверен:</value></data>
   <data name="Compare.OpenArticle" xml:space="preserve"><value>Открыть полную статью</value></data>
