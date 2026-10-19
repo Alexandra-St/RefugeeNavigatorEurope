@@ -29,6 +29,13 @@
     text-decoration: none;
 }
 
+.primary-navigation .brand-link {
+    font-size: 1.05rem;
+    font-weight: 750;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+}
+
 .primary-navigation a:hover,
 .primary-navigation a[aria-current="page"] {
     background: #eff6ff;

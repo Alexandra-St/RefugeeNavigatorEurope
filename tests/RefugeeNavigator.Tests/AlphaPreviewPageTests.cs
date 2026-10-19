@@ -47,13 +47,12 @@ public sealed class AlphaPreviewPageTests
     }
 
     [Theory]
-    [InlineData("uk", "Основна навігація", "На головну", "Пошук", "Порівняння країн")]
-    [InlineData("en", "Primary navigation", "Home", "Search", "Compare countries")]
-    [InlineData("ru", "Основная навигация", "На главную", "Поиск", "Сравнение стран")]
+    [InlineData("uk", "Основна навігація", "Пошук", "Порівняння країн")]
+    [InlineData("en", "Primary navigation", "Search", "Compare countries")]
+    [InlineData("ru", "Основная навигация", "Поиск", "Сравнение стран")]
     public async Task GlobalNavigationHasLocalizedNamedLinksAndPreservesLanguageReturnUrl(
         string language,
         string navigationName,
-        string homeLabel,
         string searchLabel,
         string compareLabel)
     {
@@ -62,10 +61,15 @@ public sealed class AlphaPreviewPageTests
         Assert.Contains($"aria-label=\"{navigationName}\"", html);
         Assert.Collection(Regex.Matches(html, "<nav\\b").Cast<Match>(), _ => { }, _ => { });
         Assert.Contains($"aria-label=\"{GetResource("Common.LanguageSelection", language)}\"", html);
-        AssertNavigationLink(html, "/", homeLabel, isCurrent: false);
+        AssertNavigationLink(html, "/", "Refugee Navigator", isCurrent: false);
         AssertNavigationLink(html, "/search", searchLabel, isCurrent: true);
         AssertNavigationLink(html, "/compare", compareLabel, isCurrent: false);
-        Assert.Contains("href=\"/set-language?culture=uk&amp;returnUrl=%2Fsearch%3Fq%3Djobs\"", await RenderAsync<SiteHeader>(language, currentPath: "/search?q=jobs"));
+        var rendered = await RenderAsync<SiteHeader>(language, currentPath: "/search?q=jobs");
+        Assert.Contains("href=\"/set-language?culture=uk&amp;returnUrl=%2Fsearch%3Fq%3Djobs\"", rendered);
+        AssertLanguageSwitchLabel(html, "uk", "УКР");
+        AssertLanguageSwitchLabel(html, "en", "ENG");
+        AssertLanguageSwitchLabel(html, "ru", "РУ");
+        Assert.DoesNotContain($">{GetResource("Common.Home", language)}</a>", html);
         Assert.DoesNotContain("Navigation.", html);
     }
 
@@ -101,6 +105,24 @@ public sealed class AlphaPreviewPageTests
             .ToArray();
 
         Assert.Equal([activeRoute], activeLinks);
+    }
+
+    [Theory]
+    [InlineData("uk", "Путівник для облаштування життя", "Практична інформація для українців, які перебувають під тимчасовим захистом у Європі.")]
+    [InlineData("en", "A guide to getting settled", "Practical information for Ukrainians under temporary protection in Europe.")]
+    [InlineData("ru", "Путеводитель для обустройства", "Практическая информация для украинцев, находящихся под временной защитой в Европе.")]
+    public async Task HomepageHeroUsesLocalizedPurposeHeadingAndKeepsSubtitle(
+        string language,
+        string expectedHeading,
+        string expectedSubtitle)
+    {
+        var html = WebUtility.HtmlDecode(await RenderAsync<Home>(language));
+
+        Assert.Matches($"<h1\\b[^>]*>{Regex.Escape(expectedHeading)}</h1>", html);
+        Assert.Contains("hero-subtitle", html);
+        Assert.Contains(expectedSubtitle, html);
+        Assert.DoesNotContain("<h1>Refugee Navigator Europe</h1>", html);
+        Assert.Equal("Refugee Navigator Europe", GetResource("Home.PageTitle", language));
     }
 
     [Theory]
@@ -526,5 +548,17 @@ public sealed class AlphaPreviewPageTests
         Assert.NotNull(link);
         Assert.Equal(label, WebUtility.HtmlDecode(Regex.Replace(link!.Groups["content"].Value, "<[^>]+>", string.Empty)).Trim());
         Assert.Equal(isCurrent, Regex.IsMatch(link.Groups["attributes"].Value, "aria-current=\"page\""));
+    }
+
+    private static void AssertLanguageSwitchLabel(string html, string culture, string label)
+    {
+        var link = Regex.Match(
+            html,
+            $"<a\\b(?<attributes>[^>]*lang=\\\"{Regex.Escape(culture)}\\\"[^>]*)>(?<content>.*?)</a>",
+            RegexOptions.Singleline);
+
+        Assert.True(link.Success, $"Expected a language link for {culture}.");
+        Assert.Equal(label, WebUtility.HtmlDecode(link.Groups["content"].Value).Trim());
+        Assert.Contains("data-enhance-nav=\"false\"", link.Groups["attributes"].Value);
     }
 }
