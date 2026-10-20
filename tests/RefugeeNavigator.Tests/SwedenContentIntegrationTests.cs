@@ -261,15 +261,34 @@ public sealed class SwedenContentIntegrationTests
     }
 
     [Fact]
-    public async Task CountryComparisonDoesNotOfferSwedenBeforeComparisonIntegration()
+    public async Task CountryComparisonMapsSwedenToAllEightNeedsReviewArticles()
     {
         var catalog = await Catalog.Value;
         var facts = await new JsonComparisonFactProvider(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json"))
             .LoadAsync(catalog);
-        Assert.Equal(5, facts.Topics.SelectMany(topic => topic.Aspects)
+        CountryComparisonTopicMap.Validate(catalog);
+        Assert.Contains("sweden", CountryComparisonTopicMap.SupportedCountrySlugs);
+        Assert.Equal(6, facts.Topics.SelectMany(topic => topic.Aspects)
             .SelectMany(aspect => aspect.Facts).Select(fact => fact.CountrySlug).Distinct(StringComparer.Ordinal).Count());
-        var html = WebUtility.HtmlDecode(await RenderAsync<Compare>("en", uri: "http://localhost/compare"));
-        Assert.DoesNotContain("value=\"sweden\"", html, StringComparison.Ordinal);
+
+        foreach (var topic in CountryComparisonTopicMap.All)
+        {
+            var entryId = CountryComparisonTopicMap.EntryIdFor(topic, "sweden");
+            Assert.Contains(StableArticleIds.Values, expected => expected == entryId);
+            var entry = Assert.Single(catalog.InformationEntries, item => item.Id == entryId);
+            Assert.Equal(SwedenId, entry.CountryId);
+            var translations = catalog.InformationEntryTranslations.Where(item => item.InformationEntryId == entryId).ToArray();
+            Assert.Equal(3, translations.Length);
+            Assert.All(translations, translation => Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus));
+        }
+
+        foreach (var (language, name) in new[] { ("en", "Sweden"), ("uk", "Швеція"), ("ru", "Швеция") })
+        {
+            var html = WebUtility.HtmlDecode(await RenderAsync<Compare>(language, uri: "http://localhost/compare"));
+            Assert.Contains("value=\"sweden\"", html);
+            Assert.Contains(name, html);
+            Assert.DoesNotContain("Country.Sweden", html, StringComparison.Ordinal);
+        }
     }
 
     private static string ToCategoryKey(string slug) => slug switch
