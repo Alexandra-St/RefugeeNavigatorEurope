@@ -1,6 +1,6 @@
 # Spain content V1 proposal — research foundation
 
-**Status: RESEARCH IN PROGRESS.** This remains a partial research proposal, not final country content approval, translation approval, or implementation authorization. Six of the eight proposed articles now have source/claim matrices; Education and Social Assistance remain unresearched. Research date: **20 October 2026 (UTC)**.
+**Status: RESEARCH FOUNDATION COMPLETE.** All eight proposed articles have source/claim matrices and 24 comparison-aspect candidates. This remains a research proposal, not final country content approval, translation approval, or implementation authorization. Research date: **20 October 2026 (UTC)**.
 
 ## Country identity
 
@@ -21,7 +21,7 @@ These are proposed documentation values only. Do not add them to runtime/catalog
 
 ## Eight-article architecture
 
-Research status and matrix links for all eight proposed articles are listed below; only Education and Social Assistance remain unresearched.
+Research status and matrix links for all eight proposed articles are listed below.
 
 | ID | Category | Working English title | Research status |
 | --- | --- | --- | --- |
@@ -31,8 +31,8 @@ Research status and matrix links for all eight proposed articles are listed belo
 | ES-EMP-02 | `employment` | Work Authorization and Employee Rights in Spain | Researched; individual document effects and time-sensitive wage rules require recheck. See [source and claim matrix](../content-research/spain-batch-2026-10-20/employment-rights/SOURCES_AND_CLAIMS.md). |
 | ES-HEALTH-01 | `healthcare` | Accessing Healthcare in Spain | Researched; the Ministry Q&A publication status and regional procedures remain publication gates. See [source and claim matrix](../content-research/spain-batch-2026-10-20/healthcare/SOURCES_AND_CLAIMS.md). |
 | ES-HOUSING-01 | `housing` | Finding Accommodation in Spain | Researched; reception access and recent rental-law amendments require case-specific/current checks. See [source and claim matrix](../content-research/spain-batch-2026-10-20/housing/SOURCES_AND_CLAIMS.md). |
-| ES-EDU-01 | `education` | Education and Language Learning in Spain | **NOT YET RESEARCHED** |
-| ES-SOC-01 | `social-assistance` | Financial and Social Assistance in Spain | **NOT YET RESEARCHED** |
+| ES-EDU-01 | `education` | Education and Language Learning in Spain | Researched; regional admission/course procedures and individual recognition require current checks. See [source and claim matrix](../content-research/spain-batch-2026-10-20/education/SOURCES_AND_CLAIMS.md). |
+| ES-SOC-01 | `social-assistance` | Financial and Social Assistance in Spain | Researched; reception/IMV access is conditional, regional support varies, and TP-specific IMV/child-supplement application remains unresolved. See [source and claim matrix](../content-research/spain-batch-2026-10-20/social-assistance/SOURCES_AND_CLAIMS.md). |
 
 ## Research inventory
 
@@ -44,7 +44,9 @@ Research status and matrix links for all eight proposed articles are listed belo
 | ES-EMP-02 | 15 | 8 | TP grant decisions include residence/work authorization; selected employer duties and 2026 employment baselines are supported. Pending-document effects remain case-specific. |
 | ES-HEALTH-01 | 6 | 5 | National entitlement framework, health-card role, regional process boundary and 112 emergency navigation are mapped. Practical receipt/card steps depend on a Ministry PDF whose final publication status is unclear. |
 | ES-HOUSING-01 | 13 | 5 | State reception is conditional and distinct from private rentals. LAU deposit/guarantee, fees and Padrón boundaries are covered with current-text and local-procedure gates. CREADE is a conditional navigation signpost requiring an operational recheck. |
-| **All six researched matrices** | **77** | **37 source entries / 33 unique URLs** | Source entries across matrices are counted per article; shared URLs are deduplicated in the total. The four new matrices add 25 source entries, 21 of which are new URLs beyond the 12 URLs in the TP/residence foundation. |
+| ES-EDU-01 | 10 | 6 | National school rights, late incorporation, language/adult-learning frameworks, vocational/higher-education navigation and qualification-recognition distinctions are documented. Admission, offers, and individual recognition remain regional/institution-specific. |
+| ES-SOC-01 | 9 | 10 | Conditional state reception, basic social services, IMV application/criteria, child supplement and local-service boundaries are mapped. No universal payment or individual TP-holder eligibility is asserted; current cash-aid absence is not proven. |
+| **All eight researched matrices** | **96** | **53 source entries / 47 unique URLs** | Source entries are counted per article, including article-owned records for shared URLs. The 16 new source records add 14 new URLs beyond the existing 33-URL foundation. |
 
 Claims marked Conditional preserve the relevant cohort, procedure, region, or exception; they are not individual eligibility findings. No production source IDs, `LastCheckedAt`, article timestamps, or verification statuses are assigned.
 
@@ -102,6 +104,32 @@ No comparison facts are drafted or added.
 - Padrón registration records actual residence rather than private title or immigration status. Municipalities administer evidence and verification; one national instruction describes a particular authorization route when other persons are already registered at the address. Do not convert it into a universal landlord-consent requirement.
 - No nationwide entitlement to rent reimbursement, municipal housing, or indefinite state accommodation is established. Local and regional aid criteria remain unresearched.
 
+## Education and language-learning research findings
+
+- Foreign minors under 16 have the right and duty to basic education; minors under 18 have a right to post-compulsory education. Basic education is compulsory and free for ten years, ordinarily ages 6–16.
+- Children arriving from abroad at compulsory-school age are to be incorporated into the system. Placement considers circumstances, knowledge, age and academic history. Education authorities develop support programs for serious language/basic-competency gaps alongside ordinary group schooling.
+- Admission criteria, dates, available places and practical enrollment are implemented regionally and locally. Do not promise a chosen school or a particular place.
+- Adult education and official language-school routes exist, but the region determines actual offers, age/admission conditions, fees, schedules and capacity. No free course or place is guaranteed.
+- Vocational training has a regulated national framework and entry requirements with regional implementation. Foreign non-university studies distinguish homologation from convalidation; the reviewed rule contains a limited temporary-protection document declaration exception at procedure initiation.
+- UNEDasiss describes university-entry routes for specified prior education systems. The target university's own criteria and applicable route must be checked. University qualification recognition separately distinguishes homologation for regulated professions, academic equivalence and convalidation of studies.
+
+## Financial and social-assistance research findings
+
+- Foreigners' access to basic social services is legally distinct from access to any named cash benefit.
+- Temporary-protection applicants/beneficiaries may be within the national reception system if they lack sufficient resources and satisfy access/permanence rules. Reception is individualized; material conditions may take different forms and no fixed cash amount, placement or duration is promised.
+- IMV is a separate means-tested benefit. The law requires legal/effective residence for a continuous year, subject to listed exceptions, and evaluates household, income and assets. The reviewed sources do not establish that temporary-protection status alone satisfies the requirement or guarantees an award.
+- The IMV child supplement has its own household, income and asset tests. TP-specific access was not established and is not claimed.
+- Local services and regional minimum-income programs require place-specific checking; the Local Regime Law defines municipal roles and population thresholds.
+- A 2022 Ukraine-specific direct-aid measure under RD 673/2022 had a funded action period ending 31 December 2023. A dated Ministry summary and the decree disagree on the historical amount calculation. This historical discrepancy is recorded internally; all amount details are excluded from current article claims. The focused review does not prove that no later/narrower aid exists.
+
+## Time-sensitive education and social-assistance reference points
+
+- Basic education is ordinarily ten compulsory years from ages 6 through 16; education rights for foreign minors are separately described in the Education matrix.
+- The IMV statute requires one continuous year of legal and effective residence, subject to specified exceptions, and assesses household/income/assets. Do not infer how a particular temporary-protection document or period is treated.
+- The child-assistance supplement has household and minor-child conditions, income below 300% of the relevant guaranteed thresholds, net worth below 150% of applicable limits, and an asset test. Monetary limits and annual amounts must be checked for the application year.
+- The 2022 Ukraine-specific direct-aid measure reviewed had an execution period ending **31 December 2023**. Its amounts are excluded from current article claims.
+- School calendars, course offers, enrollment procedures, current benefit amounts and any later Ukraine-specific assistance must be checked for the relevant place/year before publication.
+
 ## Conflicts and publication boundaries
 
 - **Stale Ukraine guidance:** the Ministry temporary-protection page used in TP and employment research still shows an earlier 4 March 2027 date; that text is not used as current scheme duration or permit validity. EU scheme dates and Spanish TIE/document validity remain distinct and need a publication-time check.
@@ -129,17 +157,24 @@ This mapping supplements the temporary-protection candidates above. It is a rese
 | `housing-initial` | ES-HOUSING01-01–03, 13 | Conditional | Reception is assessed and program-based; CREADE details are undated and need an operational recheck; no placement, duration or location guarantee. |
 | `housing-private-rental` | ES-HOUSING01-04–11 | Conditional | LAU scope and recent amendments matter; Padrón procedure is municipal and fact-specific. |
 | `housing-financial-support` | ES-HOUSING01-12 | Unresolved | No national rent-aid entitlement established; local housing aid and criteria were not researched. |
+| `education-school-enrolment` | ES-EDU01-01–05 | Conditional | Rights and national framework are supported; admission implementation, capacity, dates and placement require regional/current checks. |
+| `education-pupil-language` | ES-EDU01-03–04, ES-EDU01-06 | Conditional | Support and language-learning routes exist in law; individual program, regional languages, ages, fees and places vary. |
+| `education-higher-admission` | ES-EDU01-07–10 | Conditional | Training/admission and recognition routes are supported at framework level; actual route and institution criteria depend on prior studies and region. |
+| `social-subsistence` | ES-SOC01-01–05 | Conditional | Basic services and the conditional reception system are supported; no universal cash benefit or current Ukraine-specific grant is established. |
+| `social-application` | ES-SOC01-02, ES-SOC01-06–07, ES-SOC01-09 | Conditional | IMV criteria and official application navigation are supported; individual TP/residence assessment and regional/local assistance routes remain case-specific. |
+| `social-child-benefits` | ES-SOC01-08 | Unresolved | General IMV child-supplement rules are documented, but TP-specific access cannot be established from this review. |
 
-No comparison facts are drafted or added.
+Across all 24 candidate aspects, readiness is **1 Supported, 20 Conditional, and 3 Unresolved**. These are evidence-readiness labels, not approval or individual eligibility findings. No comparison facts are drafted or added.
 
 ## Future guide note
 
 ES-TP-01 may provide a foundation for a future `/guides/spain/temporary-protection` navigation guide after operational procedures and the military-evidence/document-validity publication gates are resolved. No scenarios, steps, branches, or guide data are designed here.
 
-## Remaining research before a complete Spain proposal
+## Remaining publication research and editorial gates
 
-- Research ES-EDU-01 Education and Language Learning and ES-SOC-01 Financial and Social Assistance. These are the only two articles in the eight-article architecture not yet researched.
-- Before article drafting/publication, resolve or clearly gate Spanish TIE/document handling after 4 March 2027, obtain authoritative Spain-specific military-evidence instructions for applicable applications, and clarify whether TP time counts for EU long-term residence. Recheck Spanish pages still showing the earlier 4 March 2027 date.
+- The eight article matrices and 24 candidate comparison aspects are complete at research-foundation level; this is not final article approval.
+- Before drafting/publication, resolve or clearly gate Spanish TIE/document handling after 4 March 2027, obtain authoritative Spain-specific military-evidence instructions for applicable applications, and clarify whether TP time counts for EU long-term residence. Recheck Spanish pages still showing the earlier 4 March 2027 date.
 - Confirm the final/operative status of the Ministry healthcare Q&A PDF and replace it with current authoritative guidance if possible.
 - Recheck the 2026 SMI and October 2026 LAU text immediately before publication, along with region-specific operational procedures for the intended audience.
+- Education publication requires region-specific enrollment/course steps and qualification-route checks. Social-assistance publication requires current program availability checks, and authoritative case-specific clarification of TP-based IMV residence evidence and child-supplement access. The historical 2022 grant amounts remain excluded.
 - No runtime, translation, production-catalog, guide, or comparison-fact readiness is claimed.
