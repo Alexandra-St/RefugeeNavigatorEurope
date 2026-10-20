@@ -144,6 +144,22 @@ These are freshness checks, not findings that the underlying rules have changed.
 
 ## Publication-gate recommendation
 
-**READY FOR CORRECTION PASS**
+**Historical recommendation before correction pass: READY FOR CORRECTION PASS**
 
 There are two factual-scope corrections, and mobile visual review is incomplete. No blocker was found in the reviewed production visibility gate, but this report does not approve or publish Sweden content.
+
+## Correction pass
+
+Baseline: `31916df9026f2891960ff3aeeb84c766baa7c8ab`
+
+- **CORRECTION-01 — RESOLVED:** Updated `healthcare-proof` in EN / UK / RU to preserve the 12-month restriction, further-six-month expected-stay condition and individual Skatteverket assessment, while adding the 5 September 2026 first-permit cohort qualification under the current 4 March 2028 endpoint and its stated exceptions. The text does not make registration automatic or generalize across permit cohorts.
+- **CORRECTION-02 — RESOLVED:** Updated `social-subsistence` in EN / UK / RU to distinguish the current Chapter 12 §1 exclusion while Reception Act coverage applies, the possible application under ordinary needs-based rules after coverage ends, and the statutory change taking effect on 2 January 2027. The text preserves individual assessment and does not imply guaranteed payment.
+- Both corrections use the existing linked official source records; no source records or source timestamps changed.
+- Outstanding BLOCKER: 0.
+- Outstanding CORRECTION: 0.
+- POLISH: 3 optional findings remain.
+- Mobile visual: INCOMPLETE — 390px check still required.
+
+**Current recommendation: READY FOR VISUAL VERIFICATION**
+
+Do not advance to publication-gate review until the required mobile visual review is complete. No Sweden fact or translation was promoted to an approved status.
