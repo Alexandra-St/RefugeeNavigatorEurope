@@ -7,7 +7,7 @@ This report summarizes the eight article-specific evidence matrices and the 24-a
 
 ## Overall result
 
-The research establishes useful official navigation information, but **none of the eight article scopes is ready for publication drafting without further research or a clearly limited editorial scope**. Time-sensitive rules, unresolved legal questions, and source conflicts must remain visible. No individual eligibility conclusion is supported by this research.
+The research establishes bounded navigation information for several articles. **NL-HEALTH-01 remains gated for a complete draft** because the formal Zvw obligation/non-enforcement distinction and individual work/status triggers are not fully resolved. **NL-EDU-01 is ready for a bounded draft** that explains the municipal adult-course route without promising availability, price, funding or placement. Time-sensitive rules and remaining limits must stay visible. No individual eligibility conclusion is supported by this research.
 
 | Article | Claims | Supported | Conditional | Conflicting | Unresolved | Readiness and principal gate |
 | --- | ---: | ---: | ---: | ---: | ---: | --- |
@@ -15,11 +15,11 @@ The research establishes useful official navigation information, but **none of t
 | NL-TP-02 — After temporary protection | 4 | 0 | 2 | 0 | 2 | Hold. A future transition measure is supported as government planning, but no enacted instrument, effective procedure or operational filing route is established. Permanent-residence counting and in-country filing are also unresolved. |
 | NL-EMP-01 — Finding a job | 4 | 2 | 2 | 0 | 0 | READY FOR BOUNDED DRAFT. Use official vacancy channels, conditional UWV registration, and Werkcentrum only as a local question/referral point; do not promise training, language courses, benefits or placement. |
 | NL-EMP-02 — Work authorization and employee rights | 6 | 2 | 4 | 0 | 0 | READY FOR BOUNDED DRAFT. Keep employee-work exemption/proof, employer notice and self-employment boundary separate; state minimum-wage figures only as effective 1 July 2026 and recheck. |
-| NL-HEALTH-01 — Healthcare | 4 | 0 | 3 | 1 | 0 | REQUIRES TARGETED RESEARCH. RMO and urgent routes are bounded, but UWV says working TPD holders must take Dutch insurance while current CAK/Dienst Toeslagen say they need not; current law was not read to resolve this material conflict. |
+| NL-HEALTH-01 — Healthcare | 4 | 0 | 3 | 1 | 0 | REQUIRES TARGETED RESEARCH. Statutory Zvw liability for employed displaced people is distinguished from the policy not to enforce individual policy-taking while they remain under RMO. Current general UWV and TPD-specific government guidance still differ; self-employment and exact work/status triggers remain unresolved. A narrower healthcare draft can omit any advice about taking out, keeping, cancelling or changing ordinary insurance. |
 | NL-HOUSING-01 — Accommodation | 4 | 1 | 3 | 0 | 0 | READY FOR BOUNDED DRAFT. Conditional municipal intake, private-rental navigation, current TPD-specific huurtoeslag signposting and separate 2026 reception contribution may be described; no placement or benefit guarantee. Recheck the 1 January 2027 host-household change. |
-| NL-EDU-01 — Education and Dutch-language learning | 5 | 0 | 5 | 0 | 0 | REQUIRES TARGETED RESEARCH. Current Ukraine-specific school-age guidance and 2026/27 DUO MBO remission are bounded; current adult Dutch-course availability/eligibility remains unverified. |
+| NL-EDU-01 — Education and Dutch-language learning | 5 | 0 | 5 | 0 | 0 | READY FOR BOUNDED DRAFT. Current school-age guidance, conditional 2026/27 MBO course-fee remission, and a municipal adult-education/Dutch-course route for the described BRP-registered 18+ Ukraine TPD cohort are documented. Municipalities decide what they offer; no course, free place, current funding amount or online option is guaranteed. |
 | NL-SOC-01 — Financial and social assistance | 5 | 0 | 4 | 0 | 1 | READY FOR BOUNDED DRAFT. Limit to conditional leefgeld, reporting, personal contribution and scheme-specific child-benefit navigation; ordinary bijstand/MOP eligibility remains unresolved and must be excluded. Recheck amounts and legislation before publication. |
-| **Total** | **38** | **5** | **29** | **1** | **3** | **Six target articles have bounded drafting decisions below; none is approved for publication. The two TP articles retain their existing research gates.** |
+| **Total** | **38** | **5** | **29** | **1** | **3** | **Five article scopes are ready for bounded drafting; NL-HEALTH-01 remains gated, as do the two TP articles. None is approved for publication.** |
 
 “Conditional” means the source supports only a bounded statement for a specified route/cohort, with conditions and exceptions kept adjacent. It does not mean an individual qualifies.
 
@@ -41,14 +41,14 @@ The identifiers below are the existing 24-aspect contract. Verdicts are from the
 | NL-EMP-02 | `work-permission` | CONDITIONAL | Employee-work exemption is status/proof-specific; self-employment and other work forms differ. |
 | NL-EMP-02 | `work-employer-duties` | CONDITIONAL | TPD-specific proof and notification requirements apply to the described cohort; avoid generalizing. |
 | NL-EMP-02 | `work-minimum-pay` | SUPPORTED | Current source states age-based rates from 1 July 2026; recheck at publication. |
-| NL-HEALTH-01 | `healthcare-access` | CONFLICTING | RMO scope is bounded, but official sources conflict about ordinary Dutch insurance for TPD-covered workers; current law was not reviewed to resolve it. |
+| NL-HEALTH-01 | `healthcare-access` | CONFLICTING | RMO is bounded; official explanations distinguish employees' formal Zvw liability from non-enforcement while they remain under RMO, but general and TPD-specific public guidance differ and individual triggers remain unresolved. |
 | NL-HEALTH-01 | `healthcare-proof` | CONDITIONAL | Provider billing categories do not prove an individual patient’s coverage. |
 | NL-HEALTH-01 | `healthcare-urgent` | CONDITIONAL | 112/GP/HAP/central doctors routes are confirmed nationally; local contact and individual coverage remain conditional. |
 | NL-HOUSING-01 | `housing-initial` | CONDITIONAL | Municipal reception depends on eligibility, referral route and capacity. |
 | NL-HOUSING-01 | `housing-private-rental` | SUPPORTED | General rental navigation is supported within the stated tenancy scope. |
 | NL-HOUSING-01 | `housing-financial-support` | CONDITIONAL | Current TPD-specific benefit signposting and general criteria are verified; individual household eligibility is conditional and distinct from reception contribution. |
 | NL-EDU-01 | `education-school-enrolment` | CONDITIONAL | General access is described; current compulsory-attendance details and placement are incomplete. |
-| NL-EDU-01 | `education-pupil-language` | CONDITIONAL | Dutch-language support is described without a guaranteed placement or number of hours. |
+| NL-EDU-01 | `education-pupil-language` | CONDITIONAL | Child/pupil language support is described without a guaranteed placement or hours. Adult municipal course navigation is separate and is not a pupil-comparison answer. |
 | NL-EDU-01 | `education-higher-admission` | CONDITIONAL | Current MBO/higher-education navigation and 2026/27 course-fee remission route are documented; admission and remission depend on individual conditions. |
 | NL-SOC-01 | `social-subsistence` | CONDITIONAL | Leefgeld and reception contributions depend on household, income and date-specific rules. |
 | NL-SOC-01 | `social-application` | CONDITIONAL | Municipality is a navigation contact for leefgeld; ordinary assistance scope remains unresolved. |
@@ -72,15 +72,15 @@ The current IND and Dutch-language Rijksoverheid pages describe a possible/futur
 ### Other boundaries
 
 - TPD cohorts, Ukrainian nationals, third-country nationals and family members must remain distinct; do not collapse them into “all Ukrainians.”
-- RMO’s March 2026 terms and patient-facing GP guidance now support a bounded RMO route and national urgent navigation. Do not say all care is free or infer individual coverage. A separate work/ordinary-insurance obligation conflict remains unresolved; RMA was not reviewed.
+- RMO’s March 2026 terms and patient-facing GP guidance support a bounded RMO route and national urgent navigation. Do not say all care is free or infer individual coverage. Parliamentary/ministerial sources describe an underlying Zvw obligation for employed displaced people but a policy not to enforce individual policy-taking while they remain under RMO; current Rijksoverheid TPD guidance says a Dutch policy is unnecessary, while UWV's generic page says it is required. The healthcare claim remains CONFLICTING: the consolidated Zvw text was not directly retrieved, self-employment is not resolved, and exact start/stop triggers across employment/status changes are not established. No individual insurance advice is supported. RMA was not researched.
 - Municipal reception, private rent, huurtoeslag and personal contribution are separate concepts. Current Dienst Toeslagen pages support only conditional rent-benefit signposting; do not infer eligibility or amounts. The hosted-TPD co-resident rule changes from 1 January 2027 and needs a fresh check.
-- Current Ukraine-specific Rijksoverheid guidance supplies a bounded school-age summary, and DUO lists a 2026/27 MBO remission form/deadline. The generic exemption page remains dated 2022; adult Dutch-language course availability and eligibility remain unverified.
+- Current Ukraine-specific Rijksoverheid guidance supplies a bounded school-age summary; DUO lists a conditional 2026/27 MBO course-fee remission; and the January 2026 municipal handbook documents adult Dutch-course routes for BRP-registered adults 18+ in the described Ukraine TPD cohort. Municipal offers and WEB funding choices vary; no free or guaranteed course, current funding amount, or online option was verified. Do not conflate adult Dutch courses with DUO MBO fee remission or mandatory civic integration. The generic compulsory-attendance exemption page remains dated 2022.
 - Leefgeld is not ordinary bijstand. MOP and child benefits have separate eligibility rules; no universal entitlement is established.
 - The Werk.nl registration page was not opened and was removed from the finding-a-job evidence matrix; no search-result snippet is treated as evidence.
 
 ## Source-access accounting
 
-The official source inventory contains **47 distinct URLs**. Phase 18.1D added nine new official URLs; all nine were directly opened and substantively reviewed on 20 October 2026. Previously documented access limitations for the TP source set remain unchanged: EUR-Lex direct access is robot-blocked although its official indexed full text was reviewed, and the 25 September parent record, IB 2026/34 PUC page and separate advice attachment remain metadata-only or inaccessible. “Opened” does not mean a source is complete, current, or sufficient for every claim; source-specific limits are recorded in the inventory.
+The official source inventory contains **52 distinct URLs**. Phase 18.1E added five new distinct official URLs; all five were directly opened and substantively reviewed on 20 October 2026. Previously documented access limitations for the TP source set remain unchanged: EUR-Lex direct access is robot-blocked although its official indexed full text was reviewed, and the 25 September parent record, IB 2026/34 PUC page and separate advice attachment remain metadata-only or inaccessible. “Opened” does not mean a source is complete, current, or sufficient for every claim; source-specific limits are recorded in the inventory.
 
 The inventory is at [OFFICIAL_SOURCE_INVENTORY.md](OFFICIAL_SOURCE_INVENTORY.md). Each article’s atomic evidence and drafting limits are recorded in its `SOURCES_AND_CLAIMS.md` matrix:
 
@@ -101,9 +101,9 @@ Before article drafting or any production decision:
 2. Obtain the text of `IB 2026/34` or an authoritative public equivalent for military scope, age boundaries, exceptions and evidence; confirm the negative-triage review route.
 3. Obtain the unreadable 25 September letter/advice attachment; verify whether approval followed, legislation was enacted and commenced, and an individual operational route exists before describing transition-document terms or process.
 4. Recheck current consolidated reception/support legislation and time-sensitive 2026 amounts, including leefgeld and municipal contributions.
-5. Resolve the UWV-versus-CAK/Dienst Toeslagen insurance conflict for employed TPD holders against current applicable law; do not advise on switching coverage meanwhile. RMA was not researched.
+5. Before any insurance advice, obtain the directly accessible current consolidated Zvw rules and authoritative start/stop guidance for employed and self-employed people, including transition when RMO/TPD status ends. The present matrix remains CONFLICTING; do not advise on taking out, retaining, cancelling or switching a policy meanwhile. RMA was not researched.
 6. Recheck the hosted-TPD household-count change effective 1 January 2027 and all housing/assistance amounts at publication.
-7. Research current adult Dutch-language course availability, eligibility and funding before including adult course routes.
+7. At drafting/publication, check the reader's municipality or local adult-education provider for current course availability, eligibility, cost and registration. No nationwide offer, current 2026 funding amount, online programme or placement is established.
 8. Confirm local UWV/municipality/Werkcentrum service access before presenting any training, counselling or referral as available to a particular reader.
 
 Any later draft must preserve all cohort limits, conditions, exceptions, effective dates and source conflicts close to the claims they qualify. No content in this research set is approved for publication.
