@@ -55,7 +55,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "49d3c355-af96-54f7-92d5-68062647d464",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "e47bb7a3-b6e2-5bd2-a968-c3c82ea35b8a",
@@ -123,7 +123,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "49d3c355-af96-54f7-92d5-68062647d464",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "867c5784-1021-5dee-ac1d-f986a22d80d1",
@@ -192,7 +192,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "49d3c355-af96-54f7-92d5-68062647d464",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "e47bb7a3-b6e2-5bd2-a968-c3c82ea35b8a",
@@ -268,7 +268,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "2d35d95d-3524-5f3c-b7bd-ff61bd67ccd5",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "7a5b4d7c-7492-50d4-bedf-c7ef0ff5b8e3",
@@ -335,7 +335,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "2d35d95d-3524-5f3c-b7bd-ff61bd67ccd5",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "d577b271-db4d-5866-9ee8-f27514323112",
@@ -400,7 +400,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "2d35d95d-3524-5f3c-b7bd-ff61bd67ccd5",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "0e4e4dee-260a-5f0a-a7dd-cabc6bc35f25",
@@ -472,7 +472,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "e8a5e6d5-a989-51de-ae14-b58e724604b8",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "19dfdd6c-765e-5a8e-a2a8-d090b1320105"
@@ -536,7 +536,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "e8a5e6d5-a989-51de-ae14-b58e724604b8",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "78900b2b-5ce7-5257-b447-c27f8313d70d",
@@ -599,7 +599,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "e8a5e6d5-a989-51de-ae14-b58e724604b8",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "78900b2b-5ce7-5257-b447-c27f8313d70d",
@@ -672,7 +672,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "829b9986-d949-5dd8-80c4-b9b4b7cf4d44",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "31a84b7a-09aa-5104-8bcd-2ca0401e15f1",
@@ -735,7 +735,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "829b9986-d949-5dd8-80c4-b9b4b7cf4d44",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "a3068749-e0d6-5ffb-aef9-8b261fe051fb",
@@ -799,7 +799,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "829b9986-d949-5dd8-80c4-b9b4b7cf4d44",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "33a7783a-d12f-5e4e-a80a-a53dd847088e"
@@ -872,7 +872,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "d252adbc-48c0-5546-bbe1-2b08e2293f27",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "93923489-d91d-5243-8901-d7f55c383577",
@@ -940,7 +940,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "d252adbc-48c0-5546-bbe1-2b08e2293f27",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "5dfc1ea5-3379-5fcc-afc4-fa8c9be3f9ef",
@@ -1004,7 +1004,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "d252adbc-48c0-5546-bbe1-2b08e2293f27",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "d94a8789-9178-5f34-b701-6a1c707c93ad",
@@ -1076,7 +1076,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "957ae315-47a4-5a73-806e-ca1d6cf258d1",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "28ae9265-1d80-5843-99f7-1eae992595f3"
@@ -1141,7 +1141,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "957ae315-47a4-5a73-806e-ca1d6cf258d1",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "c22981bd-1abc-5801-9bb8-8e70c47f0b8c",
@@ -1208,7 +1208,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "957ae315-47a4-5a73-806e-ca1d6cf258d1",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "e0d20dd8-5340-59d2-b091-eb919fc244c7",
@@ -1280,7 +1280,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "954761f7-bc2b-5725-aeba-c8f1d2192588",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "dde4ab3a-9d00-5bff-995f-0d473d6d7d2c"
@@ -1342,7 +1342,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "954761f7-bc2b-5725-aeba-c8f1d2192588",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "dde4ab3a-9d00-5bff-995f-0d473d6d7d2c"
@@ -1405,7 +1405,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "954761f7-bc2b-5725-aeba-c8f1d2192588",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "7d29f882-0750-58a4-a8e5-e4ce7d4f9615",
@@ -1480,7 +1480,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "f408e721-31a3-572a-a702-69ab600023a3",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "0a0103b7-751d-5d19-909a-f7696bc6cf0b",
@@ -1547,7 +1547,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "f408e721-31a3-572a-a702-69ab600023a3",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "35422666-3296-5760-89cb-b4069aa3d98e",
@@ -1612,7 +1612,7 @@
             {
               "CountrySlug": "czechia",
               "InformationEntryId": "f408e721-31a3-572a-a702-69ab600023a3",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "0a0103b7-751d-5d19-909a-f7696bc6cf0b",

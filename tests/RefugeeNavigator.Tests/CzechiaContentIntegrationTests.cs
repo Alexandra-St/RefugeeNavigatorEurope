@@ -61,7 +61,7 @@ public sealed class CzechiaContentIntegrationTests
         "RefugeeNavigator.Web.Resources.Localization.SharedResource", typeof(SharedResource).Assembly);
 
     [Fact]
-    public async Task CzechiaCatalogHasExpectedCountryEntriesAndNeedsReviewTranslations()
+    public async Task CzechiaCatalogHasExpectedCountryEntriesAndVerifiedTranslations()
     {
         var catalog = await Catalog.Value;
         var country = Assert.Single(catalog.Countries, country => country.Slug == "czechia");
@@ -71,6 +71,9 @@ public sealed class CzechiaContentIntegrationTests
         Assert.Equal(4, catalog.Countries.Count);
         Assert.Equal(32, catalog.InformationEntries.Count);
         Assert.Equal(96, catalog.InformationEntryTranslations.Count);
+        Assert.Equal(96, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(entry => entry.CountryId == CzechiaId).ToArray();
         Assert.Equal(8, entries.Length);
@@ -91,7 +94,7 @@ public sealed class CzechiaContentIntegrationTests
         });
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
@@ -199,7 +202,7 @@ public sealed class CzechiaContentIntegrationTests
     [InlineData("en")]
     [InlineData("uk")]
     [InlineData("ru")]
-    public async Task AllSixCzechiaCategoryPagesRenderTheirNeedsReviewArticles(string language)
+    public async Task AllSixCzechiaCategoryPagesRenderTheirVerifiedArticles(string language)
     {
         var catalog = await Catalog.Value;
         var entries = catalog.InformationEntries.Where(entry => entry.CountryId == CzechiaId).ToArray();
@@ -229,17 +232,47 @@ public sealed class CzechiaContentIntegrationTests
     [InlineData("en")]
     [InlineData("uk")]
     [InlineData("ru")]
-    public async Task SearchOffersCzechiaFilterButDoesNotExposeNeedsReviewArticles(string language)
+    public async Task PublicSearchReturnsVerifiedCzechiaArticlesAndHonorsCategoryFilter(string language)
     {
-        var html = WebUtility.HtmlDecode(await RenderAsync<Search>(language, uri: "http://localhost/search?country=czechia"));
-        Assert.Contains("value=\"czechia\"", html);
-        Assert.DoesNotContain("CZ-", html, StringComparison.Ordinal);
-        Assert.DoesNotContain("Finding a Job in Czechia", html, StringComparison.Ordinal);
-        Assert.Contains(Resources.GetString("Search.NoResults", CultureInfo.GetCultureInfo(language))!, html);
+        var catalog = await Catalog.Value;
+        var entries = catalog.InformationEntries.Where(entry => entry.CountryId == CzechiaId).ToArray();
+        var noResults = Resources.GetString("Search.NoResults", CultureInfo.GetCultureInfo(language))!;
+        var allHtml = WebUtility.HtmlDecode(await RenderAsync<Search>(language, uri: "http://localhost/search?country=czechia"));
+
+        Assert.Contains("value=\"czechia\"", allHtml);
+        Assert.DoesNotContain(noResults, allHtml);
+        foreach (var entry in entries)
+        {
+            var translation = Assert.Single(catalog.InformationEntryTranslations, item =>
+                item.InformationEntryId == entry.Id && item.LanguageCode == language);
+            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
+            Assert.Contains(translation.Title, allHtml);
+        }
+
+        foreach (var category in Categories)
+        {
+            var filteredHtml = WebUtility.HtmlDecode(await RenderAsync<Search>(language,
+                uri: $"http://localhost/search?country=czechia&category={category}"));
+            var matchingEntries = entries.Where(entry => entry.CategoryId == CategoryIds[category]).ToArray();
+            Assert.NotEmpty(matchingEntries);
+            Assert.DoesNotContain(noResults, filteredHtml);
+            foreach (var entry in matchingEntries)
+            {
+                var translation = Assert.Single(catalog.InformationEntryTranslations, item =>
+                    item.InformationEntryId == entry.Id && item.LanguageCode == language);
+                Assert.Contains(translation.Title, filteredHtml);
+            }
+            foreach (var entry in entries.Except(matchingEntries))
+            {
+                var translation = Assert.Single(catalog.InformationEntryTranslations, item =>
+                    item.InformationEntryId == entry.Id && item.LanguageCode == language);
+                Assert.DoesNotContain(translation.Title, filteredHtml);
+            }
+        }
     }
 
     [Fact]
-    public async Task CountryComparisonOffersCzechiaForLocalReview()
+    public async Task CountryComparisonOffersCzechia()
     {
         var html = WebUtility.HtmlDecode(await RenderAsync<Compare>("en", uri: "http://localhost/compare"));
         Assert.Contains("value=\"czechia\"", html, StringComparison.Ordinal);
