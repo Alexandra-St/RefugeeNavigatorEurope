@@ -99,6 +99,12 @@
   <data name="Country.Czechia.In" xml:space="preserve">
     <value>у Чехії</value>
   </data>
+  <data name="Country.Spain" xml:space="preserve">
+    <value>Іспанія</value>
+  </data>
+  <data name="Country.Spain.In" xml:space="preserve">
+    <value>в Іспанії</value>
+  </data>
   <data name="Country.BackToCountries" xml:space="preserve">
     <value>До списку країн</value>
   </data>

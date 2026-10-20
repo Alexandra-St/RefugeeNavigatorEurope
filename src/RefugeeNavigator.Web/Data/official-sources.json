@@ -2021,5 +2021,355 @@
     "Title": "Obecné informace ke zvláštnímu dlouhodobému pobytu",
     "Url": "https://ipc.gov.cz/zvlastni-dlouhodoby-pobyt/obecne-informace-ke-zvlastnimu-dlouhodobemu-pobytu/",
     "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "dc25b286-1aa2-4f42-a018-fc5d2571868c",
+    "InformationEntryId": "b278c1d6-1add-4e65-8af1-e16431eaffb3",
+    "Title": "Protección temporal",
+    "Url": "https://www.inclusion.gob.es/web/ucrania-urgente/proteccion-temporal1",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "2f62d758-79c1-4c7c-a4e1-f676162db2be",
+    "InformationEntryId": "b278c1d6-1add-4e65-8af1-e16431eaffb3",
+    "Title": "Listado de Preguntas y Respuestas Frecuentes: Protección Temporal y Derechos derivados",
+    "Url": "https://www.inclusion.gob.es/documents/d/ucrania-urgente/preguntas-y-respuestas-proteccion-temporal-esp",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "753615fa-6bf0-454d-b103-be0739600632",
+    "InformationEntryId": "b278c1d6-1add-4e65-8af1-e16431eaffb3",
+    "Title": "Orden PCM/169/2022, de 9 de marzo, por la que se desarrolla el procedimiento para el reconocimiento de la protección temporal a personas afectadas por el conflicto en Ucrania",
+    "Url": "https://www.boe.es/eli/es/o/2022/03/09/pcm169",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "66088021-839a-4112-adb8-e986052fc897",
+    "InformationEntryId": "b278c1d6-1add-4e65-8af1-e16431eaffb3",
+    "Title": "Orden PCM/170/2022, de 9 de marzo, por la que se publica el Acuerdo del Consejo de Ministros de 8 de marzo de 2022, por el que se amplía la protección temporal otorgada en virtud de la Decisión de Ejecución (UE) 2022/382 del Consejo de 4 de marzo de 2022 a personas afectadas por el conflicto de Ucrania que puedan encontrar refugio en España",
+    "Url": "https://www.boe.es/eli/es/o/2022/03/09/pcm170",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "95ed393e-e278-4318-9eb7-8d22c6166ed4",
+    "InformationEntryId": "b278c1d6-1add-4e65-8af1-e16431eaffb3",
+    "Title": "Orden INT/96/2026, de 12 de febrero, por la que se prorroga la validez de las tarjetas de identidad de extranjero expedidas a las personas afectadas por el conflicto en Ucrania beneficiarias de protección temporal",
+    "Url": "https://www.boe.es/eli/es/o/2026/02/12/int96",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "14177822-e5a0-4964-a887-449afb1c497f",
+    "InformationEntryId": "b278c1d6-1add-4e65-8af1-e16431eaffb3",
+    "Title": "Decisión de Ejecución (UE) 2026/1912 del Consejo, de 30 de julio de 2026, por la que se prorroga la protección temporal introducida por la Decisión de Ejecución (UE) 2022/382",
+    "Url": "https://www.boe.es/buscar/doc.php?id=DOUE-L-2026-81261&lang=es",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "17889d1f-ec25-4a67-a64e-ca80ffdc7191",
+    "InformationEntryId": "b278c1d6-1add-4e65-8af1-e16431eaffb3",
+    "Title": "Corrección de errores de la Decisión de Ejecución (UE) 2026/1912 del Consejo, de 30 de julio de 2026",
+    "Url": "https://www.boe.es/buscar/doc.php?id=DOUE-L-2026-81267&lang=es",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "205eb680-d70e-422d-8709-5757bc7fd16b",
+    "InformationEntryId": "06ce2f10-d309-45b2-aced-e9dd8367ffed",
+    "Title": "Real Decreto 316/2026, de 14 de abril, por el que se modifica el Real Decreto 1155/2024, de 19 de noviembre, por el que se aprueba el Reglamento de la Ley Orgánica 4/2000, de 11 de enero, sobre derechos y libertades de los extranjeros en España y su integración social",
+    "Url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-8284",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "12423382-1710-4b16-a782-06e294c547d1",
+    "InformationEntryId": "06ce2f10-d309-45b2-aced-e9dd8367ffed",
+    "Title": "Instrucciones SEM 2/2026 sobre la transición desde el estatus de persona beneficiaria de protección temporal al amparo de la Decisión de Ejecución (UE) 2022/382 del Consejo, de 4 de marzo de 2022, hacia otras autorizaciones",
+    "Url": "https://ucraniaurgente.inclusion.gob.es/documents/d/migraciones/instrucciones_transicion_desde_la_proteccion_temporal.pdf",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "4f573dd7-a483-453e-8b40-b980ee2c4d37",
+    "InformationEntryId": "06ce2f10-d309-45b2-aced-e9dd8367ffed",
+    "Title": "Real Decreto 1155/2024, de 19 de noviembre, por el que se aprueba el Reglamento de la Ley Orgánica 4/2000, de 11 de enero, sobre derechos y libertades de los extranjeros en España y su integración social",
+    "Url": "https://boe.es/buscar/act.php?id=BOE-A-2024-24099",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "44794df0-9b44-41e6-ad62-ec274df3c9d7",
+    "InformationEntryId": "06ce2f10-d309-45b2-aced-e9dd8367ffed",
+    "Title": "Council Directive 2003/109/EC concerning the status of third-country nationals who are long-term residents, consolidated text in force as of 12 June 2026",
+    "Url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02003L0109-20260612",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "55d7be6b-9c33-4ecc-a335-02be0f931080",
+    "InformationEntryId": "a5107970-958a-4be6-9c98-ae484fc24a15",
+    "Title": "Servicio Público de Empleo Estatal (SEPE), “Ofertas de empleo”",
+    "Url": "https://www.sepe.es/HomeSepe/encontrar-trabajo/ofertas-empleo.html",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "c75470b4-0e6d-4339-b5ac-d5e155c47656",
+    "InformationEntryId": "a5107970-958a-4be6-9c98-ae484fc24a15",
+    "Title": "SEPE, “Preguntas frecuentes sobre prestaciones por desempleo”",
+    "Url": "https://www.sepe.es/HomeSepe/es/preguntas-frecuentes/preguntas-frecuentes-prestaciones-desempleo.html",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "7e24c5d0-42d1-4227-8b71-9a98e1fbf451",
+    "InformationEntryId": "a5107970-958a-4be6-9c98-ae484fc24a15",
+    "Title": "Spain, Ley 3/2023, de 28 de febrero, de Empleo, BOE-A-2023-5365",
+    "Url": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-5365",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "9520eeb0-684c-4ba6-9ca6-9bfd3bcb5c6a",
+    "InformationEntryId": "a5107970-958a-4be6-9c98-ae484fc24a15",
+    "Title": "SEPE, “¿Qué es el Sistema de Formación en el trabajo?”",
+    "Url": "https://www.sepe.es/HomeSepe/es/formacion-trabajo/sistema-formacion-trabajo.html",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "7127f16e-0059-4ca1-992d-608b876546fc",
+    "InformationEntryId": "a5107970-958a-4be6-9c98-ae484fc24a15",
+    "Title": "European Labour Authority / EURES, “Living and working conditions: Spain”",
+    "Url": "https://eures.europa.eu/living-and-working/living-and-working-conditions-europe/living-and-working-conditions-spain_en?prefLang=no",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "ba96278e-9e7b-40cd-a678-f917e392e861",
+    "InformationEntryId": "a5107970-958a-4be6-9c98-ae484fc24a15",
+    "Title": "European Labour Authority / EURES, “EURES” (Spain-language portal)",
+    "Url": "https://eures.europa.eu/index_es?lang=es",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "f24694c9-99bc-446e-b050-c5687f5d88f7",
+    "InformationEntryId": "a5107970-958a-4be6-9c98-ae484fc24a15",
+    "Title": "Punto de Acceso General, “Reconocimiento de cualificaciones de profesiones reguladas”",
+    "Url": "https://administracion.gob.es/tu-espacio-europeo/derechos-obligaciones/ciudadanos/trabajo-jubilacion/reconocimiento-cualificaciones",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "8af0cba6-f3a1-4e5b-a6f9-35c62bd4471c",
+    "InformationEntryId": "b76b631c-92de-4379-8136-c9e4e08e2fd2",
+    "Title": "Spain, Orden PCM/169/2022, de 9 de marzo, BOE-A-2022-3715",
+    "Url": "https://www.boe.es/eli/es/o/2022/03/09/pcm169",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "69f94f0c-14dc-4081-a111-590ab9cf9e4e",
+    "InformationEntryId": "b76b631c-92de-4379-8136-c9e4e08e2fd2",
+    "Title": "Ministerio de Inclusión, “Protección temporal - Ucrania Urgente”",
+    "Url": "https://www.inclusion.gob.es/web/ucrania-urgente/proteccion-temporal1",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "2b15b8cb-2568-4b24-b5eb-4afd6b3682a7",
+    "InformationEntryId": "b76b631c-92de-4379-8136-c9e4e08e2fd2",
+    "Title": "Spain, Real Decreto 126/2026, de 18 de febrero, salario mínimo interprofesional 2026, BOE-A-2026-3815",
+    "Url": "https://www.boe.es/eli/es/rd/2026/02/18/126",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "a2df5e9b-727b-4846-bb8a-d486fcbcf0dd",
+    "InformationEntryId": "b76b631c-92de-4379-8136-c9e4e08e2fd2",
+    "Title": "Spain, Estatuto de los Trabajadores, Real Decreto Legislativo 2/2015, BOE-A-2015-11430",
+    "Url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "b0f3ca39-14f2-429b-8f10-ad5a8685801e",
+    "InformationEntryId": "b76b631c-92de-4379-8136-c9e4e08e2fd2",
+    "Title": "SEPE, “Características de un contrato”",
+    "Url": "https://www.sepe.es/HomeSepe/es/empresas/Contratos-de-trabajo/caracteristicas-contrato.html",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "e60d0247-f0b5-4c7b-89dc-f4642bbef3ed",
+    "InformationEntryId": "b76b631c-92de-4379-8136-c9e4e08e2fd2",
+    "Title": "Tesorería General de la Seguridad Social, “Employer Obligations” / “Inscripción de empresarios”",
+    "Url": "https://www.seg-social.es/wps/portal/wss/internet/Empresarios/Inscripcion/30608/32843",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "a53b8e8d-b8f7-4f6a-9a2a-f435ce3aed4d",
+    "InformationEntryId": "b76b631c-92de-4379-8136-c9e4e08e2fd2",
+    "Title": "Spain, Ley Orgánica 4/2000, de 11 de enero, sobre derechos y libertades de los extranjeros en España y su integración social, BOE-A-2000-544",
+    "Url": "https://www.boe.es/buscar/act.php?id=BOE-A-2000-544&p=20250319&tn=0",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "68f87f87-a8aa-4a48-a3a7-92290d1b89d9",
+    "InformationEntryId": "b76b631c-92de-4379-8136-c9e4e08e2fd2",
+    "Title": "Punto de Acceso General, “Inspección de la Seguridad Social” (information supplied by the Ministry of Labour and Social Economy / OEITSS)",
+    "Url": "https://administracion.gob.es/tu-espacio-europeo/derechos-obligaciones/empresas/empleados/seguridad-social/inspeccion",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "e375e58f-972b-438b-9439-45dc9c51f22c",
+    "InformationEntryId": "50829c0b-7ee0-4ee4-be7b-47dfd0dc408d",
+    "Title": "Spain, Real Decreto 180/2026, de 11 de marzo, BOE-A-2026-5714",
+    "Url": "https://www.boe.es/eli/es/rd/2026/03/11/180",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "d083bc50-623f-4817-8439-a3c31f16f30d",
+    "InformationEntryId": "50829c0b-7ee0-4ee4-be7b-47dfd0dc408d",
+    "Title": "Spain, Ley 16/2003, de cohesión y calidad del Sistema Nacional de Salud, BOE-A-2003-10715",
+    "Url": "https://www.boe.es/buscar/act.php?id=BOE-A-2003-10715",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "dd5b037a-1832-4aa5-ad6f-97d8d4616b12",
+    "InformationEntryId": "50829c0b-7ee0-4ee4-be7b-47dfd0dc408d",
+    "Title": "Punto de Acceso General, “Servicios prestados a través de números de urgencia nacionales (112)”",
+    "Url": "https://administracion.gob.es/tu-espacio-europeo/derechos-obligaciones/ciudadanos/asistencia-sanitaria/numeros-urgencia",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "5f2dd96a-c523-4aba-b604-d74d4ab98a0b",
+    "InformationEntryId": "bd08644f-dd27-412c-9bfd-888de1fe304d",
+    "Title": "Ministerio de Inclusión, “Cómo funciona y datos - Migraciones” (Sistema de Acogida de Protección Internacional y Temporal)",
+    "Url": "https://www.inclusion.gob.es/web/migraciones/como-funciona",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "7412b33e-0f00-446b-bd56-b892ddedf73c",
+    "InformationEntryId": "bd08644f-dd27-412c-9bfd-888de1fe304d",
+    "Title": "Ministerio de Inclusión, “Personas destinatarias - Migraciones”",
+    "Url": "https://www.inclusion.gob.es/web/migraciones/personas-destinatarias",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "f221b723-ca1c-4e62-bf91-2a816df58094",
+    "InformationEntryId": "bd08644f-dd27-412c-9bfd-888de1fe304d",
+    "Title": "Spain, Ley 29/1994, de Arrendamientos Urbanos (current consolidated text), BOE-A-1994-26003",
+    "Url": "https://www.boe.es/buscar/act.php?id=BOE-A-1994-26003&p=20261002&tn=1",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "bda3164a-7e37-4265-befd-63b67c78b2da",
+    "InformationEntryId": "bd08644f-dd27-412c-9bfd-888de1fe304d",
+    "Title": "INE / Secretaría de Estado de Administraciones Públicas, “Instrucciones técnicas a los Ayuntamientos sobre la gestión del Padrón municipal” (BOE-A-2020-4784 consolidated PDF)",
+    "Url": "https://www.boe.es/buscar/pdf/2020/BOE-A-2020-4784-consolidado.pdf",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "949e5961-869d-47d1-be9e-2588b3c28aaa",
+    "InformationEntryId": "bd08644f-dd27-412c-9bfd-888de1fe304d",
+    "Title": "Ministerio de Inclusión, “Protección temporal - Ucrania Urgente” (shared source; see ES-TP-01 matrix)",
+    "Url": "https://www.inclusion.gob.es/web/ucrania-urgente/proteccion-temporal1",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "a87ca523-b232-40c5-91e9-de0d5d7c553a",
+    "InformationEntryId": "084c06c7-592b-4eed-bb20-6cd1913f14a2",
+    "Title": "Spain, Ley Orgánica 4/2000, de 11 de enero, sobre derechos y libertades de los extranjeros en España y su integración social, BOE-A-2000-544",
+    "Url": "https://www.boe.es/buscar/act.php?id=BOE-A-2000-544",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "27b60775-fb27-40a6-90e9-2107acb5e48f",
+    "InformationEntryId": "084c06c7-592b-4eed-bb20-6cd1913f14a2",
+    "Title": "Spain, Ley Orgánica 2/2006, de 3 de mayo, de Educación, BOE-A-2006-7899",
+    "Url": "https://www.boe.es/buscar/act.php?id=BOE-A-2006-7899",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "9329bc29-76f1-4ce5-b15e-61a439aeb723",
+    "InformationEntryId": "084c06c7-592b-4eed-bb20-6cd1913f14a2",
+    "Title": "Spain, Real Decreto 104/1988, de 29 de enero, sobre homologación y convalidación de títulos y estudios extranjeros de educación no universitaria, BOE-A-1988-3987",
+    "Url": "https://www.boe.es/buscar/act.php?id=BOE-A-1988-3987",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "7a22e05d-e139-4a9a-987d-6dec421acd97",
+    "InformationEntryId": "084c06c7-592b-4eed-bb20-6cd1913f14a2",
+    "Title": "Spain, Ley Orgánica 3/2022, de 31 de marzo, de ordenación e integración de la Formación Profesional, BOE-A-2022-5139",
+    "Url": "https://www.boe.es/buscar/act.php?id=BOE-A-2022-5139",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "57e71206-6cb9-46c6-801e-ff826ec5d651",
+    "InformationEntryId": "084c06c7-592b-4eed-bb20-6cd1913f14a2",
+    "Title": "UNEDasiss, “Tipos de estudiantes internacionales”",
+    "Url": "https://unedasiss.uned.es/publico_destino",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "52355ce5-1ac0-4dea-8b82-09fe003d7cff",
+    "InformationEntryId": "084c06c7-592b-4eed-bb20-6cd1913f14a2",
+    "Title": "Spain, Real Decreto 889/2022, de 18 de octubre, BOE-A-2022-17045",
+    "Url": "https://boe.es/buscar/doc.php?id=BOE-A-2022-17045",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "4d8fabcf-05ce-41a5-96bb-1a02e5f2866a",
+    "InformationEntryId": "d33628da-cb49-44b5-a7aa-ae6c6ac8f389",
+    "Title": "Ministerio de Inclusión, Seguridad Social y Migraciones, “Cómo funciona y datos — Sistema de Acogida de Protección Internacional y Temporal”",
+    "Url": "https://www.inclusion.gob.es/es/web/migraciones/como-funciona",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "711001ed-ad26-4ed0-962e-6b52ba707093",
+    "InformationEntryId": "d33628da-cb49-44b5-a7aa-ae6c6ac8f389",
+    "Title": "Ministerio de Inclusión, “Personas destinatarias”",
+    "Url": "https://www.inclusion.gob.es/web/migraciones/personas-destinatarias",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "f24a4d95-1fb1-4255-9c70-b406dc6de5d7",
+    "InformationEntryId": "d33628da-cb49-44b5-a7aa-ae6c6ac8f389",
+    "Title": "Spain, Real Decreto 220/2022, de 29 de marzo, Reglamento del sistema de acogida en materia de protección internacional, BOE-A-2022-4978",
+    "Url": "https://www.boe.es/buscar/act.php?id=BOE-A-2022-4978",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "9fa26d01-9176-486a-943a-1eba178fb69f",
+    "InformationEntryId": "d33628da-cb49-44b5-a7aa-ae6c6ac8f389",
+    "Title": "Spain, Ley Orgánica 4/2000, de 11 de enero, BOE-A-2000-544",
+    "Url": "https://www.boe.es/buscar/act.php?id=BOE-A-2000-544",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "f87e7ade-a2cc-42fc-a8f9-764476219a67",
+    "InformationEntryId": "d33628da-cb49-44b5-a7aa-ae6c6ac8f389",
+    "Title": "Spain, Ley 19/2021, de 20 de diciembre, por la que se establece el ingreso mínimo vital, BOE-A-2021-21007",
+    "Url": "https://www.boe.es/buscar/act.php?id=BOE-A-2021-21007&lang=es&p=20261003&tn=0",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "4a218312-4e7d-4dd0-9242-f51cfde06cac",
+    "InformationEntryId": "d33628da-cb49-44b5-a7aa-ae6c6ac8f389",
+    "Title": "Seguridad Social, “Ingreso Mínimo Vital”",
+    "Url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/65850d68-8d06-4645-bde7-05374ee42ac7/",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "eaa069f9-9bec-407f-86d8-7d7966b082fc",
+    "InformationEntryId": "d33628da-cb49-44b5-a7aa-ae6c6ac8f389",
+    "Title": "Seguridad Social, IMV FAQ",
+    "Url": "https://www.seg-social.es/wps/portal/wss/internet/FAQ/044f87eb-644b-41e1-a888-9c2cfafa78b8/42b9f3e8-8eea-4106-864e-2b5bdad27269/imv12nuevo",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "3224c2bd-e198-4838-b013-b4c61c8bdb85",
+    "InformationEntryId": "d33628da-cb49-44b5-a7aa-ae6c6ac8f389",
+    "Title": "Spain, Ley 7/1985, de 2 de abril, Reguladora de las Bases del Régimen Local, BOE-A-1985-5392",
+    "Url": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-5392",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "c49238d4-e467-4c3f-a6c7-6afbf36122c1",
+    "InformationEntryId": "d33628da-cb49-44b5-a7aa-ae6c6ac8f389",
+    "Title": "Spain, Real Decreto 673/2022, de 1 de agosto, BOE-A-2022-12938",
+    "Url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-12938",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "a9c17657-a28e-41e7-94df-ca92024014dd",
+    "InformationEntryId": "d33628da-cb49-44b5-a7aa-ae6c6ac8f389",
+    "Title": "Ministerio de Inclusión, “Ayudas del Gobierno para familias vulnerables desplazadas de Ucrania”",
+    "Url": "https://www.inclusion.gob.es/web/ucrania-urgente/w/ayudas-familias-vulnerables-ucrania",
+    "LastCheckedAt": "2026-10-20T05:06:53+00:00"
   }
 ]
