@@ -233,6 +233,52 @@ public sealed class CountryComparisonTests
         Assert.All(swedenFacts, fact => Assert.DoesNotContain(fact.Values[language], productionHtml));
     }
 
+    [Theory]
+    [InlineData("en")]
+    [InlineData("uk")]
+    [InlineData("ru")]
+    public async Task SwedenComparisonDescriptionIsNeutralWhileDraftPreviewRemainsClear(string language)
+    {
+        var html = WebUtility.HtmlDecode(await RenderAsync(
+            await LoadCatalogAsync(),
+            language,
+            "?country1=sweden&country2=denmark&category=all"));
+
+        Assert.Contains(GetResource("Compare.Description", language), html);
+        Assert.Contains(GetResource("Compare.DraftPreviewNotice", language), html);
+        Assert.Contains(GetResource("Compare.DraftStatus", language), html);
+        Assert.DoesNotContain("reviewed information", GetResource("Compare.Description", language), StringComparison.OrdinalIgnoreCase);
+        Assert.DoesNotContain("перевірену", GetResource("Compare.Description", language), StringComparison.OrdinalIgnoreCase);
+        Assert.DoesNotContain("проверенную", GetResource("Compare.Description", language), StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Fact]
+    public async Task SwedenComparisonPolishUsesNaturalTermsAndPreservesConditions()
+    {
+        var facts = await FactCatalog.Value;
+        var aspects = facts.Topics.SelectMany(topic => topic.Aspects).ToDictionary(aspect => aspect.Id, StringComparer.Ordinal);
+        var education = Assert.Single(aspects["education-school-enrolment"].Facts, fact => fact.CountrySlug == "sweden");
+        var healthcare = Assert.Single(aspects["healthcare-access"].Facts, fact => fact.CountrySlug == "sweden");
+
+        Assert.Equal(ComparisonFactStatus.Draft, education.Status);
+        Assert.True(education.IsAvailable);
+        Assert.Contains("Муніципалітет, відповідальний за місце проживання дитини", education.Values["uk"]);
+        Assert.Contains("Муниципалитет, отвечающий за место жительства ребёнка", education.Values["ru"]);
+        Assert.DoesNotContain("Домашній муніципалітет", education.Values["uk"]);
+        Assert.DoesNotContain("Домашний муниципалитет", education.Values["ru"]);
+        Assert.Contains("does not guarantee a place", education.Values["en"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("не гарантує місця", education.Values["uk"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("не гарантирует место", education.Values["ru"], StringComparison.OrdinalIgnoreCase);
+
+        Assert.Equal(ComparisonFactStatus.Draft, healthcare.Status);
+        Assert.True(healthcare.IsAvailable);
+        Assert.Contains("Человек с разрешением на временное проживание, на которое распространяется это правило", healthcare.Values["ru"]);
+        Assert.Contains("если он зарегистрирован в реестре населения", healthcare.Values["ru"]);
+        Assert.Contains("медицинскую и стоматологическую помощь", healthcare.Values["ru"]);
+        Assert.Contains("незарегистрированного ребёнка младше 18 лет", healthcare.Values["ru"]);
+        Assert.Contains("пациентские сборы и региональные правила", healthcare.Values["ru"]);
+    }
+
     [Fact]
     public async Task SpainHasTwentyFourApprovedFactsMappedToItsEightArticlesAndOwnedSources()
     {

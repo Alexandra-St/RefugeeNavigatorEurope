@@ -163,3 +163,24 @@ Baseline: `31916df9026f2891960ff3aeeb84c766baa7c8ab`
 **Current recommendation: READY FOR VISUAL VERIFICATION**
 
 Do not advance to publication-gate review until the required mobile visual review is complete. No Sweden fact or translation was promoted to an approved status.
+
+## Mobile verification and polish pass
+
+Baseline: `664cd57d5ac680da5e0d382efa998071e2f318ba`
+
+- **Desktop smoke:** Complete in the local Development application at an actual 1280 × 720 CSS-pixel viewport. EN / UK / RU each rendered all 8 topics and 24 aspects; the page had no horizontal overflow at this viewport. The updated neutral comparison description, 24 Sweden Draft labels and Development preview notice were visible in every language. The `social-child-benefits` answer remained unavailable and had no Sweden source disclosure; “Read full country articles” remained collapsed by default.
+- **Source disclosure:** A source list opened using the Enter key. Its links had visible source names and dates, opened in a new tab, and used `rel="noopener noreferrer"`. External official pages were not opened in this visual pass.
+- **POLISH-01 — RESOLVED:** The comparison description is now neutral in EN / UK / RU and does not imply Draft facts have been reviewed. The Draft notice, Draft labels and existing Production gate remain in place.
+- **POLISH-02 — RESOLVED:** The UK/RU education answer now refers naturally to the municipality responsible for the child’s place of residence. Eligibility and the no-guaranteed-school-place qualification are preserved.
+- **POLISH-03 — RESOLVED:** The RU healthcare answer now refers to a person with a residence permit covered by the rule. Covered-permit scope, population-registration condition, healthcare/dental distinction, patient-fee and regional caveats remain.
+- **Regression checks:** 4 targeted polish/localization tests passed; 3 existing Sweden Development/Production Draft-gating tests passed.
+- **Production gating:** Unchanged. Existing tests confirm Sweden Draft facts and preview labels remain hidden in Production.
+- **Content/status invariants:** 120 Approved facts and 24 Sweden Draft facts remain; Sweden has 23 available and 1 unavailable fact. Its 24 article translations remain `NeedsReview`. No source references or source records changed.
+- **Mobile:** INCOMPLETE. The available browser control cannot set the viewport, so actual 390px and 320px layouts were not inspected. No CSS-only substitute was used.
+- Outstanding BLOCKER: 0.
+- Outstanding CORRECTION: 0.
+- Outstanding POLISH: 0.
+
+**Current recommendation: READY FOR MOBILE VERIFICATION**
+
+Do not advance to publication-gate review until the actual 390px mobile visual check is complete. This pass does not provide editorial approval and does not publish Sweden content.

@@ -285,7 +285,7 @@
     <value>Compare countries</value>
   </data>
   <data name="Compare.Description" xml:space="preserve">
-    <value>Compare reviewed information from two countries side by side.</value>
+    <value>Compare information from two countries side by side.</value>
   </data>
   <data name="Compare.BackHome" xml:space="preserve">
     <value>Back to homepage</value>
