@@ -54,7 +54,7 @@ Research status and matrix links for all eight proposed articles are listed belo
 | ES-HOUSING-01 | 13 | 5 | State reception is conditional and distinct from private rentals. LAU deposit/guarantee, fees and Padrón boundaries are covered with current-text and local-procedure gates. CREADE is a conditional navigation signpost requiring an operational recheck. |
 | ES-EDU-01 | 10 | 6 | National school rights, late incorporation, language/adult-learning frameworks, vocational/higher-education navigation and qualification-recognition distinctions are documented. Admission, offers, and individual recognition remain regional/institution-specific. |
 | ES-SOC-01 | 9 | 10 | Conditional state reception, basic social services, IMV application/criteria, child supplement and local-service boundaries are mapped. No universal payment or individual TP-holder eligibility is asserted; current cash-aid absence is not proven. |
-| **All eight researched matrices** | **96** | **53 source entries / 47 unique URLs** | Source entries are counted per article, including article-owned records for shared URLs. The 16 new source records add 14 new URLs beyond the existing 33-URL foundation. |
+| **All eight researched matrices** | **96** | **56 source entries / 50 unique URLs** | Source entries are counted per article, including article-owned records for shared URLs. The original Spain research added 16 records and 14 URLs beyond the 33-URL foundation; this blocker pass adds three records and three unique official URLs. |
 
 Claims marked Conditional preserve the relevant cohort, procedure, region, or exception; they are not individual eligibility findings. No production source IDs, `LastCheckedAt`, article timestamps, or verification statuses are assigned.
 
@@ -181,11 +181,22 @@ ES-TP-01 may provide a foundation for a future `/guides/spain/temporary-protecti
 ## Remaining publication research and editorial gates
 
 - The eight article matrices and 24 candidate comparison aspects are complete at research-foundation level; this is not final article approval.
-- Before drafting/publication, resolve or clearly gate Spanish TIE/document handling after 4 March 2027, obtain authoritative Spain-specific military-evidence instructions for applicable applications, and clarify whether TP time counts for EU long-term residence. Recheck Spanish pages still showing the earlier 4 March 2027 date.
-- Confirm the final/operative status of the Ministry healthcare Q&A PDF and replace it with current authoritative guidance if possible.
+- Before publication, recheck Spanish TIE/document handling after 4 March 2027, current Spain-specific military-evidence instructions, and whether prior TP time counts for EU long-term residence. Recheck Spanish pages still showing the earlier 4 March 2027 date. The safe drafting boundaries are recorded below; these unresolved details must remain bounded or omitted in drafts.
+- Before publication, confirm whether the Ministry healthcare Q&A PDF has a final/current revision and replace it with current TP-specific authoritative guidance if available. Until then, omit its detailed receipt/card route from article drafts.
 - Recheck the 2026 SMI and October 2026 LAU text immediately before publication, along with region-specific operational procedures for the intended audience.
 - Education publication requires region-specific enrollment/course steps and qualification-route checks. Social-assistance publication requires current program availability checks, and authoritative case-specific clarification of TP-based IMV residence evidence and child-supplement access. The historical 2022 grant amounts remain excluded.
 - No runtime, translation, production-catalog, guide, or comparison-fact readiness is claimed.
+
+## Drafting blocker resolution
+
+| Blocker | Result | Safe drafting boundary |
+| --- | --- | --- |
+| TIE after 4 March 2027 | UNRESOLVED BUT SAFE TO DRAFT | State EU temporary protection through 4 March 2028 separately from Orden INT/96/2026, which covers Spanish TIE validity through 4 March 2027. The targeted BOE search did not locate a later TIE measure; do not claim none exists, promise automatic extension, or infer an individual's document validity. Refer readers to current official instructions. |
+| Military evidence | UNRESOLVED BUT SAFE TO DRAFT | State the EU condition effective 5 August 2026 and the continuous same-Member-State existing-holder exception; attribute only the high-level proof-of-compliance-or-exemption requirement to the Ministry. Do not state Spain-specific ages, document formats, or procedure-specific scope absent official instructions. |
+| EU long-term residence counting | UNRESOLVED BUT SAFE TO DRAFT | State only that SEM 2/2026 expressly credits TP time toward national long-term residence. Do not claim whether prior TP time counts for the separate EU long-term residence route after a later change to another authorisation. |
+| Healthcare practical guidance | UNRESOLVED BUT SAFE TO DRAFT | Limit drafts to the national entitlement framework, regional administration, 112, and referral to the current Autonomous Community health authority. Do not present the PDF's receipt/resolution-to-health-card steps as settled pending current TP-specific guidance. |
+
+No item currently blocks safe article drafting, provided unresolved details remain excluded or bounded as documented. Spain V1 article drafting may proceed, provided unresolved details remain excluded/bounded as documented. This does not change the proposal's status: it is not implemented and is not approved for publication.
 
 ## Proposed source ownership and deliberate reuse
 

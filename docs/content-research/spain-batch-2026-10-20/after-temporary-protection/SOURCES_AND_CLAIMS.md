@@ -62,6 +62,19 @@ The sources below were opened and relevant passages read on **2026-10-20 UTC**. 
 - Claims: ES-TP02-01.
 - Limitations: Index confirms the ministry currently lists the instrument; substantive claims rely on RES-S02, not the index itself.
 
+### RES-S05 — EU Long-Term Residents Directive, current consolidated text
+
+- Authority: European Union / EUR-Lex.
+- Exact title: *Council Directive 2003/109/EC concerning the status of third-country nationals who are long-term residents*, consolidated text in force as of 12 June 2026.
+- URL: [Directive 2003/109/EC, consolidated text](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02003L0109-20260612).
+- Type / language read: Current consolidated EU legislation / English.
+- Publication/update: Consolidated version dated 12 June 2026.
+- Last checked: **2026-10-20 UTC**.
+- Primary article owner: ES-TP-02.
+- Claims: ES-TP02-11–12.
+- Relevant provisions: Article 3(2)(b) excludes persons authorised to reside on the basis of temporary protection, and applicants awaiting a decision on that status, from the Directive's scope. Article 4 sets the five-year residence period and specified counting rules.
+- Limitations: These provisions do not expressly settle whether time previously spent under temporary protection counts after a person later obtains another qualifying residence authorisation. Do not infer full, partial, or zero credit for that post-transition situation.
+
 ## Atomic claims
 
 | Claim ID | Atomic proposition | Official source and passage | Temporal qualifier / cohort | Confidence | Drafting suitability and caveat |
@@ -76,8 +89,8 @@ The sources below were opened and relevant passages read on **2026-10-20 UTC**. 
 | ES-TP02-08 | TP holders may apply for the residence authorization for family members of Spanish nationals under the relevant chapter, subject to that chapter’s ordinary rules. | RES-S02, Fifth Instruction(2); RES-S03, Title IV, Chapter VII. | Family and sponsor facts must meet the chapter’s scope. | Conditional | Signpost only; do not imply every family relationship qualifies. |
 | ES-TP02-09 | The transition instructions state that after a new residence authorization is obtained, the holder must expressly renounce TP and evidence the renunciation when applying for the TIE. | RES-S02, Seventh Instruction. | After grant of a new residence authorization. | Confirmed | Explain sequence carefully; this is not an instruction to abandon TP before a qualifying alternative is granted. Recheck procedure at publication. |
 | ES-TP02-10 | National long-term residence requires five years of legal and continuous residence under the regulation; SEM 2/2026 explicitly counts time holding Spanish TP fully toward that five-year national period, accumulated with later residence. | RES-S02, Sixth Instruction; RES-S03, Article 183. | Future application under rules checked 20 October 2026; all other conditions apply. | Confirmed | Suitable with the national-route distinction and no implication of automatic entitlement. |
-| ES-TP02-11 | EU long-term residence requires five years of legal, continuous residence under Article 176; the reviewed text expressly addresses study-period counting and international-protection beneficiaries but does not state that TP time counts. | RES-S03, Article 176. | EU long-term route under the inspected regulation. | Conditional | Do not claim TP time counts for EU long-term residence. Flag this as unresolved on the inspected official evidence, rather than extrapolating the national rule. |
-| ES-TP02-12 | The national and EU long-term residence routes must not be merged: the SEM instruction’s full TP-time credit is expressly for national long-term residence, while Article 176 is the separate EU route. | RES-S02, Sixth Instruction; RES-S03, Articles 176 and 183. | Framework read 20 October 2026. | Confirmed | Strong editorial distinction. Do not treat silence in Article 176 as a definitive negative rule; current authoritative clarification may be needed. |
+| ES-TP02-11 | EU long-term residence requires five years of legal, continuous residence under Article 176. The current Directive excludes persons while they hold or await temporary protection, but neither the Spanish regulation nor the Directive expressly settles whether earlier TP time counts after a later transition to another qualifying authorisation. | RES-S03, Article 176; RES-S05, Articles 3(2)(b) and 4. | EU long-term route under texts checked 20 October 2026; post-transition treatment remains unclear. | Conditional | Do not claim TP time counts for EU long-term residence. The result remains unresolved; do not infer full, partial, or zero credit for prior TP time after transition. |
+| ES-TP02-12 | The national and EU long-term residence routes must not be merged: the SEM instruction’s full TP-time credit is expressly for national long-term residence, while Article 176 and Directive 2003/109 govern the separate EU route. | RES-S02, Sixth Instruction; RES-S03, Articles 176 and 183; RES-S05, Articles 3(2)(b) and 4. | Framework read 20 October 2026. | Confirmed | State only the express national-route credit. Do not treat the Directive's exclusion of current TP holders as a definitive answer about prior TP periods after a later transition. |
 | ES-TP02-13 | A route-specific application from within Spain does not itself decide eligibility; the relevant authority applies the requirements of that route. | RES-S01, Additional Provision 19 (“following the procedures”); RES-S02, route instructions; RES-S03, relevant route articles. | Every route and individual file. | Conditional | Use as a scope statement, not a legal conclusion about a particular person. |
 | ES-TP02-14 | Ordinary route access is not contingent on TP first expiring; the Spanish framework addresses applications by people who currently hold TP authorizations. | RES-S01, Additional Provision 19; RES-S02, instructions directed to current TP authorization holders. | Current TP-holder cohort; route conditions still apply. | Confirmed | Supports the title “Beyond”; do not frame these options as available only after TP ends. |
 
@@ -89,7 +102,7 @@ A February 2026 Spanish order states that no transition “passerelle” had yet
 
 ### National versus EU long-term residence
 
-SEM 2/2026 expressly says TP time counts in full toward the five-year national long-term-residence period. The regulation sets a separate EU long-term route with its own five-year legal-continuous-residence test and enumerated counting rules; the sources reviewed do not say TP time counts there. Keep the national credit out of any EU long-term-residence statement. Clarification of TP-time counting for the EU route remains a publication question; do not infer either full or partial credit.
+SEM 2/2026 expressly says TP time counts in full toward the five-year national long-term-residence period. The regulation sets a separate EU long-term route. Directive 2003/109 excludes people while they hold or await temporary protection, but the checked texts do not expressly state how a prior TP period is treated after a later transition to another qualifying authorisation. Keep the national credit out of any EU long-term-residence statement; do not infer full, partial, or zero credit for the EU route.
 
 ### Dated historical statement
 
@@ -98,3 +111,7 @@ SEM 2/2026’s opening background says the scheme remains in force through 4 Mar
 ### Publication boundary
 
 This research does not recommend which route an individual should apply for. Before drafting/publishing, recheck current application channels, route eligibility requirements, individual procedure/fees, and authoritative treatment of TP time under EU long-term residence. Keep asylum and temporary protection distinct; this phase does not research or compare individual asylum eligibility, and does not present asylum as an automatic successor or preferred option.
+
+## Targeted blocker recheck — 20 October 2026
+
+- **EU long-term residence:** The current consolidated Directive expressly excludes people while authorised to reside on temporary protection and applicants awaiting a decision on that status. The Spanish Regulation's Article 176 separately enumerates certain periods, including a rule for beneficiaries of international protection, but does not expressly resolve prior TP-period counting after a later transition. **UNRESOLVED BUT SAFE TO DRAFT:** state only the express Spanish national long-term-residence credit and omit any assertion that TP time counts toward the EU route.
