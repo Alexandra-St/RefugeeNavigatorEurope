@@ -1,6 +1,14 @@
 # Spain content V1 proposal — research foundation
 
-**Status: RESEARCH FOUNDATION COMPLETE.** All eight proposed articles have source/claim matrices and 24 comparison-aspect candidates. This remains a research proposal, not final country content approval, translation approval, or implementation authorization. Research date: **20 October 2026 (UTC)**.
+**RESEARCH FOUNDATION COMPLETE**
+
+**READY FOR HUMAN EDITORIAL REVIEW**
+
+**NOT IMPLEMENTED**
+
+**NOT APPROVED FOR PUBLICATION**
+
+All eight proposed articles have source/claim matrices and 24 comparison-aspect candidates. This remains a research proposal, not final country content approval, translation approval, or implementation authorization. Research date: **20 October 2026 (UTC)**.
 
 ## Country identity
 
@@ -178,3 +186,54 @@ ES-TP-01 may provide a foundation for a future `/guides/spain/temporary-protecti
 - Recheck the 2026 SMI and October 2026 LAU text immediately before publication, along with region-specific operational procedures for the intended audience.
 - Education publication requires region-specific enrollment/course steps and qualification-route checks. Social-assistance publication requires current program availability checks, and authoritative case-specific clarification of TP-based IMV residence evidence and child-supplement access. The historical 2022 grant amounts remain excluded.
 - No runtime, translation, production-catalog, guide, or comparison-fact readiness is claimed.
+
+## Proposed source ownership and deliberate reuse
+
+When research is integrated into production:
+
+- Each future `OfficialSource` record must belong to one `InformationEntryId`.
+- If the same official URL supports multiple articles, create a separate article-owned source record for each article. A shared URL does not authorize reuse of another article's `OfficialSource` GUID.
+- Future comparison facts may reference only source records owned by their linked article.
+- Do not create production GUIDs during this research phase.
+- A research check date does not automatically become a production `LastCheckedAt`. Reopen the source during production integration when an exact verification timestamp is required.
+
+The proposal's existing research summaries identify these deliberate shared-source families; this is not an exhaustive URL inventory:
+
+| Official source family | Articles that may reuse the source URL | Production handling |
+| --- | --- | --- |
+| Ministry temporary-protection information | Temporary protection, employment, housing | Create an article-owned source record for each article that cites the URL. |
+| Foreigners Law | Employment, education, social assistance | Keep separate article-owned records even when the URL is identical. |
+| Ministry reception-system information | Housing, social assistance | Keep separate article-owned records for each article relationship. |
+
+## Terminology glossary
+
+| Spain-specific term | Reader-facing meaning and distinction |
+| --- | --- |
+| `protección temporal` | Temporary protection; do not confuse it with the Spanish TIE document. |
+| `TIE` | `Tarjeta de Identidad de Extranjero`; an identity card/document, not the legal status itself. |
+| `NIE` | `Número de Identidad de Extranjero`; an identifier, not residence or work authorization. |
+| `CREADE` | `Centro de Recepción, Atención y Derivación`; a reception/navigation role, not a guarantee of accommodation. |
+| `SEPE` | `Servicio Público de Empleo Estatal`; distinguish it from the regional authority responsible for jobseeker registration. |
+| `demanda de empleo` | Jobseeker registration; it does not automatically establish entitlement to unemployment benefit. |
+| `SMI` | `Salario Mínimo Interprofesional`; state the year and make clear that the figure is a gross/statutory reference. |
+| `tarjeta sanitaria individual` | A regional health-system credential; not the TIE, NIE, or temporary-protection decision. |
+| `Sistema de Acogida` | A conditional reception system; not a universal cash benefit or guaranteed housing. |
+| `Padrón` | Municipal population/address register; not a residence permit or proof of property ownership. |
+| `fianza` | Statutory rental deposit; distinguish it from any additional guarantee. |
+| `homologación` | An official recognition route; distinguish it from `convalidación`, admission, and professional recognition. |
+| `convalidación` | Recognition of studies or course periods for continuation; not the same as `homologación`. |
+| `Ingreso Mínimo Vital (IMV)` | Means-tested Social Security benefit; not a universal payment for temporary-protection holders. |
+
+## Implementation sequence
+
+1. Human editorial review.
+2. Resolve only targeted blockers that reviewers determine are necessary.
+3. Draft the eight Spain articles.
+4. Prepare Ukrainian, English, and Russian translations.
+5. Integrate Spain core content with `NeedsReview` status.
+6. Add Spain Comparison V2 facts with `Draft` status.
+7. Complete human editorial, localization, and visual review.
+8. Apply the publication gate: `NeedsReview` → `Verified` and `Draft` → `Approved`.
+9. Obtain separate, explicit deployment approval.
+
+The step-by-step guide is outside this sequence. Deployment must never occur automatically. Unresolved claims must not silently become published assertions.
