@@ -43,7 +43,7 @@ Ask the competent service what support is currently available and what condition
 
 For a profession regulated in Spain, the official REGPROF database and National Assistance Centre for professional qualifications can help identify the applicable professional-recognition route. Requirements depend on the profession and qualification.
 
-Professional recognition is distinct from academic homologación or equivalence. An employment service does not decide academic recognition, and recognition does not automatically authorize practice in a regulated profession or guarantee a job.
+Professional recognition is distinct from academic homologación or equivalence. An employment service does not decide academic recognition. Requirements depend on the profession and qualification; recognition is not automatic and does not guarantee employment.
 
 
 ### Claim coverage
@@ -91,7 +91,7 @@ EURES — ще один офіційний канал для пошуку вак
 
 Для професії, яка регулюється в Іспанії, офіційна база REGPROF і Національний центр допомоги з професійних кваліфікацій можуть допомогти визначити відповідний маршрут професійного визнання. Вимоги залежать від професії та кваліфікації.
 
-Професійне визнання відрізняється від академічної homologación або еквівалентності. Служба зайнятості не вирішує питання академічного визнання, а визнання саме по собі не дає автоматичного дозволу працювати в регульованій професії та не гарантує працевлаштування.
+Професійне визнання відрізняється від академічної homologación або еквівалентності. Служби зайнятості не вирішують питання академічного визнання. Вимоги залежать від професії та кваліфікації; визнання не є автоматичним і не гарантує працевлаштування.
 
 
 ### Claim coverage
@@ -139,7 +139,7 @@ EURES — ещё один официальный канал для поиска 
 
 Для профессии, регулируемой в Испании, официальная база REGPROF и Национальный центр помощи по профессиональным квалификациям помогут определить применимый маршрут профессионального признания. Требования зависят от профессии и квалификации.
 
-Профессиональное признание отличается от академической homologación или подтверждения эквивалентности. Служба занятости не принимает решения об академическом признании, а признание само по себе не даёт автоматического разрешения работать в регулируемой профессии и не гарантирует трудоустройство.
+Профессиональное признание отличается от академической homologación или подтверждения эквивалентности. Службы занятости не принимают решения об академическом признании. Требования зависят от профессии и квалификации; признание не происходит автоматически и не гарантирует трудоустройство.
 
 
 ### Claim coverage

@@ -65,10 +65,6 @@ Filing channels and route requirements can change and differ by procedure. Confi
 - When temporary protection is renounced → ES-TP02-09
 - Check the exact route before applying → ES-TP02-07, ES-TP02-13
 
-## Editorial source set
-
-RES-S01, RES-S02, RES-S03, RES-S05
-
 ## UK
 
 Title:
@@ -189,4 +185,4 @@ Content:
 
 ## Editorial source set
 
-RES-S01, RES-S02, RES-S03, RES-S04, RES-S05
+RES-S01, RES-S02, RES-S03, RES-S05

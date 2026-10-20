@@ -6,15 +6,16 @@ Scope: editorial review of the eight EN/UK/RU drafts against the approved Spain 
 ## Summary
 
 - BLOCKER findings: 0
-- CORRECTION findings: 4
+- CORRECTION findings: 0 unresolved
 - POLISH findings: 0
-- Integration recommendation: **READY FOR CORRECTION PASS**
+- Four editorial corrections from the previous review were resolved.
+- Integration recommendation: **READY FOR CORE INTEGRATION**
 
-The review found no unresolved material legal contradiction that prevents a correction pass. Dates, amounts, cohorts, exceptions, authority attribution, and uncertainty were materially equivalent across EN/UK/RU in the reviewed drafts. This is an editorial review, not independent legal certification or publication approval.
+No unresolved material legal contradiction was identified in the reviewed drafts. Dates, amounts, cohorts, exceptions, authority attribution, and uncertainty were materially equivalent across EN/UK/RU. This is an editorial review, not independent legal certification or publication approval.
 
 ## Article-by-article review
 
-### ES-TP-01 — Temporary Protection in Spain: Applying and Extending Your Status
+### ES-TP-01 — Temporary Protection in Spain: Applying and Maintaining Your Status
 
 - Verdict: **OK**
 - Claim coverage: 19 of 20 matrix claims appear in Content in EN/UK/RU. ES-TP01-02 is explicitly excluded because its 4 March 2027 EU endpoint is stale; it is not presented as current.
@@ -25,29 +26,21 @@ The review found no unresolved material legal contradiction that prevents a corr
 
 ### ES-TP-02 — Residence Options Beyond Temporary Protection in Spain
 
-- Verdict: **CHANGES REQUIRED**
+- Verdict: **OK**
 - Claim coverage: 14 of 14 matrix claims appear in Content in EN/UK/RU; all three mappings cover ES-TP02-01 through ES-TP02-14.
 - Referenced claims: EN / UK / RU mappings are equivalent and correspond to the sections where expressed.
 - Source set: RES-S01, RES-S02, RES-S03, RES-S05 are the sources used for substantive claims. RES-S04 is an instruction index that lists SEM 2/2026; the draft does not rely on it as substantive support.
 - Cross-language review: the titles and article explain options alongside/while moving beyond temporary protection, rather than implying that a route starts only after protection ends. National long-term residence is distinguished from EU long-term residence; no unsupported full, partial, or zero credit conclusion is made for the EU route. The renunciation sequence is conditional on a new authorisation being granted.
-- Findings:
-
-| Severity | Finding | Recommended correction |
-|---|---|---|
-| CORRECTION | The file contains two `Editorial source set` blocks, one between the EN and UK sections and another after RU. The lists differ, and RES-S04 appears only in the earlier block despite not supporting a substantive draft claim. | Keep one source set at the end of the file, after all language sections, listing RES-S01, RES-S02, RES-S03, and RES-S05. |
+- Findings: RESOLVED — removed the duplicate source-set block; the single source set now follows RU and lists RES-S01, RES-S02, RES-S03, and RES-S05.
 
 ### ES-EMP-01 — Finding a Job in Spain
 
-- Verdict: **CHANGES REQUIRED**
+- Verdict: **OK**
 - Claim coverage: 9 of 9 matrix claims appear in Content in EN/UK/RU; each language maps ES-EMP01-01 through ES-EMP01-09.
 - Referenced claims: EN / UK / RU mappings are equivalent and section-aligned.
 - Source set: EMP-S01–EMP-S07; all are present in the matrix and relevant.
-- Cross-language review: Labour Office, vacancy search, jobseeker/interested-person distinction, counselling, language/retraining, and recognition of qualifications retain the matrix's conditions. The draft does not promise job placement, benefits, free courses, or automatic qualification recognition.
-- Findings:
-
-| Severity | Finding | Recommended correction |
-|---|---|---|
-| CORRECTION | The regulated-profession passage says recognition “does not automatically authorize practice” (and equivalent wording). The matrix supports that recognition requirements vary and recognition is not automatic, but does not establish that recognition itself is insufficient to practise. | Narrow the statement in EN/UK/RU to say that recognition requirements vary and are not automatic; avoid implying an additional authorization step unless supported by the matrix. |
+- Cross-language review: public employment services, Empléate/EURES, regional jobseeker registration, separation from unemployment-benefit eligibility, counselling/training, and professional-recognition navigation retain the matrix's conditions. The draft does not promise job placement, benefits, free courses, or automatic qualification recognition.
+- Findings: RESOLVED — EN/UK/RU now state that recognition requirements depend on profession and qualification, professional recognition is distinct from academic homologación/equivalence, recognition is not automatic, and it does not guarantee employment. The unsupported implication of an additional authorization step was removed.
 
 ### ES-EMP-02 — Work Authorization and Employee Rights in Spain
 
@@ -78,29 +71,21 @@ The review found no unresolved material legal contradiction that prevents a corr
 
 ### ES-EDU-01 — Education and Spanish-Language Learning in Spain
 
-- Verdict: **CHANGES REQUIRED**
+- Verdict: **OK**
 - Claim coverage: 10 of 10 matrix claims appear in Content in EN/UK/RU; each language maps ES-EDU01-01 through ES-EDU01-10.
 - Referenced claims: EN / UK / RU mappings are equivalent and section-aligned.
 - Source set: EDU-S01–EDU-S06; all are present in the matrix and relevant.
 - Cross-language review: education ages, admission/navigation conditions, regional capacity, language support, higher education, credential recognition, and adult courses remain qualified. Excluded exam concessions and guaranteed language-hour claims are not introduced.
-- Findings:
-
-| Severity | Finding | Recommended correction |
-|---|---|---|
-| CORRECTION | The Russian draft uses “послешкольное образование” for post-compulsory education. This can mean education after school and may suggest higher education, unlike the EN/UK meaning. | Use a clear equivalent of “education after the compulsory stage” in Russian, preserving the distinction from higher education. |
+- Findings: RESOLVED — the Russian wording now means education after completion of the compulsory stage and no longer suggests higher education.
 
 ### ES-SOC-01 — Financial and Social Assistance in Spain
 
-- Verdict: **CHANGES REQUIRED**
+- Verdict: **OK**
 - Claim coverage: 9 of 9 matrix claims appear in Content in EN/UK/RU; each language maps ES-SOC01-01 through ES-SOC01-09.
 - Referenced claims: EN / UK / RU mappings are equivalent and section-aligned.
 - Source set: SOC-S01–SOC-S10; all are present in the matrix and relevant, including SOC-S10 for the exclusion of historical amounts.
-- Cross-language review: HuD is means-tested and is not presented as a universal refugee payment or guaranteed rent benefit. Household, income/resources, housing-cost, age-reduction, and exception qualifications remain. MOP is not overgeneralized. Historical aid is not presented as current, and no claim is made that no later programme exists.
-- Findings:
-
-| Severity | Finding | Recommended correction |
-|---|---|---|
-| CORRECTION | The Russian IMV paragraph/application guidance leaves “Social Security” in English, which is awkward and may obscure the Spanish institutional context. | Render it naturally as the Spanish social-security system/authority in Russian while retaining the official Spanish IMV name where useful. |
+- Cross-language review: Sistema de Acogida remains conditional and assessed; IMV is separate and means-tested, with its one-year residence rule qualified. Temporary protection is not treated as automatic IMV eligibility, the child supplement remains conditional, and historical Ukraine-specific aid is not presented as current. The draft does not claim that no later or regional aid exists.
+- Findings: RESOLVED — Russian content now introduces the Spanish social-security system as “Seguridad Social” and uses that name consistently in application guidance.
 
 ## Cross-article consistency
 
@@ -112,4 +97,4 @@ The review found no unresolved material legal contradiction that prevents a corr
 
 ## Integration recommendation
 
-**READY FOR CORRECTION PASS** — correct the four findings above, then recheck the affected language sections and source-set placement before considering core integration. No finding here grants publication approval.
+**READY FOR CORE INTEGRATION** — all eight drafts have completed editorial review, and the four corrections identified in the previous review are resolved. This recommendation permits integration only as NeedsReview content; it is not publication approval.
