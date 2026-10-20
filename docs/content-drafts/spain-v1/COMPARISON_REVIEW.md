@@ -7,10 +7,10 @@ Baseline:
 
 - facts reviewed: 24
 - BLOCKER: 0
-- CORRECTION: 1 (visual clipping at the available 900 px viewport; mobile reflow remains unverified)
+- CORRECTION: 0 open (the earlier clipping report was not reproduced with exact viewport control)
 - POLISH: 0
-- visual checkpoints completed at requested/nearest usable viewport: 1/4; EN, UK and RU were also inspected at the available 900 × 720 viewport.
-- recommendation: READY FOR COMPARISON CORRECTION PASS
+- visual checkpoints completed: all six EN / UK / RU checks at 1440 × 900 and 390 × 844; 900 × 720 was also retested in all three languages.
+- recommendation: SPAIN COMPARISON V2 READY FOR PUBLICATION GATE
 
 ## Fact review
 
@@ -68,4 +68,18 @@ None.
 
 ## Publication recommendation
 
-READY FOR COMPARISON CORRECTION PASS
+SPAIN COMPARISON V2 READY FOR PUBLICATION GATE
+
+## Correction pass — 20 October 2026
+
+The prior clipping finding was retested in the local Development application using Brave 155.1.97.57 with exact CSS viewport dimensions. It did not reproduce, so no CSS or test change was justified.
+
+- At 900 × 720, the page and document widths were 900 px in EN, UK and RU. The three selectors fit their grid cells, and the right comparison panels ended at approximately 853 px.
+- At 1440 × 900, the page and document widths were 1440 px in all three languages. All six category groups and both country columns were visible without elements crossing the viewport edge.
+- At 390 × 844, the page and document widths were 390 px in all three languages. The comparison columns used one column, all six category groups remained readable, and no horizontal overflow or clipped element was found.
+- On the 390 px EN view, the full-article comparison, a category, an article detail and a source disclosure were expanded. Their content remained within the viewport; the article detail and source links rendered successfully.
+- Language, selected countries (Spain / Germany), selected category (All), localized headings, Draft notice, unavailable answers and HTTPS source links were verified in the rendered page. The full-article comparison remains collapsed by default.
+
+Full-page screenshots from the controlled browser checks were saved outside the repository under `/private/tmp/SpainCompareReview/` (`en-1440.png`, `uk-1440.png`, `ru-1440.png`, `en-390.png`, `uk-390.png`, `ru-390.png`). They are review artifacts only and are not committed.
+
+The earlier screenshot-based clipping report is retained above as historical evidence. The present exact-viewport checks show no reproducible clipping defect. No facts, article content, statuses or source data were changed.
