@@ -35,15 +35,15 @@ Documentation-only proposal; do not add Sweden to runtime catalogs.
 
 ## Phase 17.1A research inventory
 
-Counts are mechanically derived; source records are labeled inventory entries and unique URLs are per matrix. Article-owned source labels remain separate if the same URL is later reused by another article.
+Counts are mechanically derived. Source records are article-owned inventory entries; per-article URL counts are local to each matrix.
 
-| Article | Atomic claims | Source records | Unique official URLs |
+| Article | Atomic claims | Source records | Unique official URLs in matrix |
 | --- | ---: | ---: | ---: |
 | SE-TP-01 | 14 | 13 | 13 |
 | SE-TP-02 | 12 | 10 | 10 |
-| **Phase 17.1A total** | **26** | **23** | **23** |
+| **Phase 17.1A total** | **26** | **23** | **21 corpus-wide unique official URLs** |
 
-Only the first two articles are counted; no eight-article Sweden totals are estimated.
+The two matrices deliberately reuse two official URLs: the Aliens Ordinance (2006:97) and the Aliens Act (2005:716). Therefore the article-local unique URL counts sum to 23, while the phase-wide unique URL set contains 21 URLs. Only these first two articles are counted; no eight-article Sweden totals are estimated.
 
 ## Temporary-protection research findings
 
