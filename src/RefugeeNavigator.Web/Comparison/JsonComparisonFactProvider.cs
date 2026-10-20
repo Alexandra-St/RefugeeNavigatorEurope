@@ -7,7 +7,7 @@ namespace RefugeeNavigator.Web.Comparison;
 public sealed class JsonComparisonFactProvider(string path)
 {
     private static readonly string[] Languages = ["uk", "en", "ru"];
-    private static readonly string[] Countries = ["denmark", "germany", "poland"];
+    private static readonly string[] Countries = CountryComparisonTopicMap.SupportedCountrySlugs.Order(StringComparer.OrdinalIgnoreCase).ToArray();
     private static readonly IReadOnlyDictionary<string, string> MissingText = new Dictionary<string, string>(StringComparer.Ordinal)
     {
         ["uk"] = "Не встановлено за перевіреними джерелами.",
@@ -80,7 +80,7 @@ public sealed class JsonComparisonFactProvider(string path)
                 if (aspect.Facts.Select(fact => fact.CountrySlug).Distinct(StringComparer.OrdinalIgnoreCase).Count() != Countries.Length ||
                     !Countries.All(country => aspect.Facts.Any(fact => string.Equals(fact.CountrySlug, country, StringComparison.OrdinalIgnoreCase))))
                 {
-                    errors.Add($"Aspect '{aspect.Id}' must contain one answer for Denmark, Germany, and Poland.");
+                    errors.Add($"Aspect '{aspect.Id}' must contain one answer for every supported country.");
                 }
 
                 foreach (var fact in aspect.Facts)

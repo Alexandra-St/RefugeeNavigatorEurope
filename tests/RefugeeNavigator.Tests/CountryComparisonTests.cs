@@ -34,7 +34,7 @@ public sealed class CountryComparisonTests
     });
 
     [Fact]
-    public async Task StructuredCatalogHasEightTopicsThreeOrderedAspectsAndLocalizedApprovedFactsForEveryCountry()
+    public async Task StructuredCatalogHasEightTopicsTwentyFourAspectsAndFourCountryFacts()
     {
         var catalog = await LoadCatalogAsync();
         var facts = await FactCatalog.Value;
@@ -43,12 +43,13 @@ public sealed class CountryComparisonTests
         Assert.Equal(8, facts.Topics.Count);
         Assert.Equal(24, facts.Topics.Sum(topic => topic.Aspects.Count));
         Assert.Equal(24, facts.Topics.SelectMany(topic => topic.Aspects).Select(aspect => aspect.QuestionResourceKey).Distinct(StringComparer.Ordinal).Count());
-        Assert.Equal(72, facts.Topics.SelectMany(topic => topic.Aspects).Sum(aspect => aspect.Facts.Count));
-        Assert.Equal(70, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.IsAvailable));
+        Assert.Equal(96, facts.Topics.SelectMany(topic => topic.Aspects).Sum(aspect => aspect.Facts.Count));
+        Assert.Equal(94, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.IsAvailable));
         Assert.Equal(2, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => !fact.IsAvailable));
         Assert.Equal(72, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Approved));
-        Assert.DoesNotContain(facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts), fact => fact.Status == ComparisonFactStatus.Draft);
-        Assert.Equal(138, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Sum(fact => fact.OfficialSourceIds.Count));
+        Assert.Equal(24, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Draft));
+        Assert.All(facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Where(fact => fact.CountrySlug != "czechia"), fact => Assert.Equal(ComparisonFactStatus.Approved, fact.Status));
+        Assert.Equal(190, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Sum(fact => fact.OfficialSourceIds.Count));
         Assert.Equal(32, catalog.InformationEntries.Count);
         Assert.Equal(96, catalog.InformationEntryTranslations.Count);
         Assert.Equal(72, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
@@ -93,12 +94,12 @@ public sealed class CountryComparisonTests
 
         foreach (var topic in facts.Topics)
         {
-            Assert.Equal(3, topic.Aspects.SelectMany(aspect => aspect.Facts).Select(fact => fact.CountrySlug).Distinct().Count());
+            Assert.Equal(4, topic.Aspects.SelectMany(aspect => aspect.Facts).Select(fact => fact.CountrySlug).Distinct().Count());
             Assert.Equal(topic.CategorySlug, Assert.Single(CountryComparisonTopicMap.All, mapped => mapped.ResourceKey == topic.TopicResourceKey).CategorySlug);
             foreach (var aspect in topic.Aspects)
             foreach (var fact in aspect.Facts)
             {
-                Assert.Equal(ComparisonFactStatus.Approved, fact.Status);
+                Assert.Equal(fact.CountrySlug == "czechia" ? ComparisonFactStatus.Draft : ComparisonFactStatus.Approved, fact.Status);
                 Assert.All(new[] { "uk", "en", "ru" }, language => Assert.False(string.IsNullOrWhiteSpace(fact.Values.GetValueOrDefault(language))));
                 if (fact.IsAvailable)
                 {
@@ -109,6 +110,144 @@ public sealed class CountryComparisonTests
                 {
                     Assert.Empty(fact.OfficialSourceIds);
                     Assert.Equal(GetResource("Compare.NotEstablishedInReviewedSources", "en"), fact.Values["en"]);
+                }
+            }
+        }
+    }
+
+    [Fact]
+    public async Task CzechiaHasTwentyFourDraftFactsMappedToItsEightArticlesAndOwnedSources()
+    {
+        var catalog = await LoadCatalogAsync();
+        var facts = await FactCatalog.Value;
+        var expectedArticleIds = new Dictionary<string, Guid>(StringComparer.Ordinal)
+        {
+            ["protection-scheme"] = Guid.Parse("49d3c355-af96-54f7-92d5-68062647d464"),
+            ["protection-application"] = Guid.Parse("49d3c355-af96-54f7-92d5-68062647d464"),
+            ["protection-dates"] = Guid.Parse("49d3c355-af96-54f7-92d5-68062647d464"),
+            ["residence-routes"] = Guid.Parse("2d35d95d-3524-5f3c-b7bd-ff61bd67ccd5"),
+            ["residence-conditions"] = Guid.Parse("2d35d95d-3524-5f3c-b7bd-ff61bd67ccd5"),
+            ["residence-filing"] = Guid.Parse("2d35d95d-3524-5f3c-b7bd-ff61bd67ccd5"),
+            ["employment-vacancies"] = Guid.Parse("e8a5e6d5-a989-51de-ae14-b58e724604b8"),
+            ["employment-institutions"] = Guid.Parse("e8a5e6d5-a989-51de-ae14-b58e724604b8"),
+            ["employment-assistance-conditions"] = Guid.Parse("e8a5e6d5-a989-51de-ae14-b58e724604b8"),
+            ["work-permission"] = Guid.Parse("829b9986-d949-5dd8-80c4-b9b4b7cf4d44"),
+            ["work-employer-duties"] = Guid.Parse("829b9986-d949-5dd8-80c4-b9b4b7cf4d44"),
+            ["work-minimum-pay"] = Guid.Parse("829b9986-d949-5dd8-80c4-b9b4b7cf4d44"),
+            ["healthcare-access"] = Guid.Parse("d252adbc-48c0-5546-bbe1-2b08e2293f27"),
+            ["healthcare-proof"] = Guid.Parse("d252adbc-48c0-5546-bbe1-2b08e2293f27"),
+            ["healthcare-urgent"] = Guid.Parse("d252adbc-48c0-5546-bbe1-2b08e2293f27"),
+            ["housing-initial"] = Guid.Parse("957ae315-47a4-5a73-806e-ca1d6cf258d1"),
+            ["housing-private-rental"] = Guid.Parse("957ae315-47a4-5a73-806e-ca1d6cf258d1"),
+            ["housing-financial-support"] = Guid.Parse("957ae315-47a4-5a73-806e-ca1d6cf258d1"),
+            ["education-school-enrolment"] = Guid.Parse("954761f7-bc2b-5725-aeba-c8f1d2192588"),
+            ["education-pupil-language"] = Guid.Parse("954761f7-bc2b-5725-aeba-c8f1d2192588"),
+            ["education-higher-admission"] = Guid.Parse("954761f7-bc2b-5725-aeba-c8f1d2192588"),
+            ["social-subsistence"] = Guid.Parse("f408e721-31a3-572a-a702-69ab600023a3"),
+            ["social-application"] = Guid.Parse("f408e721-31a3-572a-a702-69ab600023a3"),
+            ["social-child-benefits"] = Guid.Parse("f408e721-31a3-572a-a702-69ab600023a3")
+        };
+        var czechFacts = facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect =>
+            aspect.Facts.Where(fact => fact.CountrySlug == "czechia").Select(fact => (aspect.Id, fact))).ToArray();
+
+        Assert.Equal(24, czechFacts.Length);
+        foreach (var (aspectId, fact) in czechFacts)
+        {
+            Assert.Equal(ComparisonFactStatus.Draft, fact.Status);
+            Assert.True(fact.IsAvailable);
+            Assert.Equal(expectedArticleIds[aspectId], fact.InformationEntryId);
+            Assert.Equal(new[] { "en", "ru", "uk" }, fact.Values.Keys.Order(StringComparer.Ordinal).ToArray());
+            Assert.NotEmpty(fact.OfficialSourceIds);
+            Assert.All(fact.OfficialSourceIds, sourceId => Assert.Contains(catalog.OfficialSources,
+                source => source.Id == sourceId && source.InformationEntryId == fact.InformationEntryId));
+        }
+    }
+
+    [Fact]
+    public async Task CzechiaHighRiskComparisonAnswersPreserveDatesCohortsAndConditionsAcrossLanguages()
+    {
+        var facts = await FactCatalog.Value;
+        var expectedPhrases = new Dictionary<(string Aspect, string Language), string[]>
+        {
+            [("protection-application", "en")] = ["5 August 2026", "18–22", "Reserv+", "paper eVOD", "23–60", "family-reunification", "not ordinary extensions"],
+            [("protection-application", "uk")] = ["5 серпня 2026", "18–22", "Reserv+", "паперовий eVOD", "23–60", "возз’єднання сім’ї", "не звичайного продовження"],
+            [("protection-application", "ru")] = ["5 августа 2026", "18–22", "Reserv+", "бумажный eVOD", "23–60", "воссоединения семьи", "не обычного продления"],
+            [("protection-dates", "en")] = ["31 March 2027", "31 March 2028", "4 March 2028", "has not been announced"],
+            [("protection-dates", "uk")] = ["31 березня 2027", "31 березня 2028", "4 березня 2028", "ще не оголошено"],
+            [("protection-dates", "ru")] = ["31 марта 2027", "31 марта 2028", "4 марта 2028", "ещё не объявили"],
+            [("residence-conditions", "en")] = ["1 April 2026", "2025", "CZK 440,000", "CZK 110,000", "not an individual eligibility decision"],
+            [("residence-conditions", "uk")] = ["1 квітня 2026", "2025", "440 000 CZK", "110 000 CZK", "не індивідуальне рішення"],
+            [("residence-conditions", "ru")] = ["1 апреля 2026", "2025", "440 000 CZK", "110 000 CZK", "не индивидуальное решение"],
+            [("work-minimum-pay", "en")] = ["2026 only", "CZK 22,400", "CZK 134.40", "not a 2027 rate"],
+            [("work-minimum-pay", "uk")] = ["Лише на 2026 рік", "22 400 CZK", "134,40 CZK", "не ставка на 2027 рік"],
+            [("work-minimum-pay", "ru")] = ["Только на 2026 год", "22 400 CZK", "134,40 CZK", "не ставка на 2027 год"],
+            [("healthcare-access", "en")] = ["10 February 2025", "150 days", "11 February 2025", "90 days", "repeat TP does not restart", "not everyone must self-pay"],
+            [("healthcare-access", "uk")] = ["10 лютого 2025", "150 днів", "11 лютого 2025", "90 днів", "повторне надання захисту його не поновлює", "самостійна сплата потрібна не всім"],
+            [("healthcare-access", "ru")] = ["10 февраля 2025", "150 дней", "11 февраля 2025", "90 дней", "повторное предоставление защиты его не возобновляет", "самостоятельно платить должны не все"],
+            [("housing-initial", "en")] = ["90 days", "repeat grant does not restart", "vulnerable people", "cannot choose the region or facility"],
+            [("housing-initial", "uk")] = ["90 днів", "повторне надання не запускає строк заново", "вразливих осіб", "обрати регіон чи заклад не можна"],
+            [("housing-initial", "ru")] = ["90 дней", "повторное предоставление не запускает срок заново", "уязвимых лиц", "выбрать регион или учреждение нельзя"],
+            [("social-subsistence", "en")] = ["CZK 4,860", "CZK 3,490", "CZK 4,188", "not guaranteed payments", "150-day", "CZK 3,130"],
+            [("social-subsistence", "uk")] = ["4 860 CZK", "3 490 CZK", "4 188 CZK", "не гарантовані виплати", "150-денного", "3 130 CZK"],
+            [("social-subsistence", "ru")] = ["4 860 CZK", "3 490 CZK", "4 188 CZK", "не гарантированные выплаты", "150-дневного", "3 130 CZK"]
+        };
+
+        foreach (var ((aspectId, language), phrases) in expectedPhrases)
+        {
+            var fact = Assert.Single(facts.Topics.SelectMany(topic => topic.Aspects)
+                .Where(aspect => aspect.Id == aspectId)
+                .SelectMany(aspect => aspect.Facts), item => item.CountrySlug == "czechia");
+            Assert.Equal(ComparisonFactStatus.Draft, fact.Status);
+            foreach (var phrase in phrases)
+            {
+                Assert.Contains(phrase, fact.Values[language]);
+            }
+        }
+    }
+
+    [Theory]
+    [InlineData("uk")]
+    [InlineData("en")]
+    [InlineData("ru")]
+    public async Task CzechiaDraftFactsArePreviewableInDevelopmentAndNotPublishedInProduction(string language)
+    {
+        var catalog = await LoadCatalogAsync();
+        var facts = await FactCatalog.Value;
+        var categories = new[] { "temporary-protection", "employment", "healthcare", "housing", "education", "social-assistance" };
+        foreach (var category in categories)
+        foreach (var secondCountry in new[] { "germany", "poland" })
+        {
+            var query = $"?country1=czechia&country2={secondCountry}&category={category}";
+            var devHtml = WebUtility.HtmlDecode(await RenderAsync(catalog, language, query));
+            var productionHtml = WebUtility.HtmlDecode(await RenderAsync(catalog, language, query, Environments.Production));
+            var categoryTopics = facts.Topics.Where(topic => topic.CategorySlug == category);
+            var czechFacts = categoryTopics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts)
+                .Where(fact => fact.CountrySlug == "czechia").ToArray();
+
+            Assert.Contains("class=\"structured-comparison\"", devHtml);
+            Assert.Contains(GetResource("Compare.DraftPreviewNotice", language), devHtml);
+            Assert.Contains("class=\"draft-label\"", devHtml);
+            foreach (var fact in czechFacts)
+            {
+                Assert.Contains(fact.Values[language], devHtml);
+            }
+
+            Assert.DoesNotContain("class=\"structured-comparison\"", productionHtml);
+            Assert.DoesNotContain("class=\"draft-label\"", productionHtml);
+            Assert.DoesNotContain(GetResource("Compare.DraftPreviewNotice", language), productionHtml);
+            foreach (var fact in czechFacts)
+            {
+                Assert.DoesNotContain(fact.Values[language], productionHtml);
+            }
+
+            foreach (var entry in catalog.InformationEntries.Where(entry => entry.CountryId == Guid.Parse("10000000-0000-0000-0000-000000000004")))
+            {
+                var translation = Assert.Single(catalog.InformationEntryTranslations, item => item.InformationEntryId == entry.Id && item.LanguageCode == language);
+                if (CountryComparisonTopicMap.ForCategory(category).Any(topic => topic.EntryIds.Values.Contains(entry.Id)))
+                {
+                    Assert.DoesNotContain(translation.Title, productionHtml);
+                    Assert.DoesNotContain(translation.Summary, productionHtml);
+                    Assert.DoesNotContain(translation.Content, productionHtml);
                 }
             }
         }
@@ -357,11 +496,14 @@ public sealed class CountryComparisonTests
         Assert.Equal(
             ["temporary-protection", "temporary-protection", "employment", "employment", "healthcare", "housing", "education", "social-assistance"],
             CountryComparisonTopicMap.All.Select(topic => topic.CategorySlug));
-        Assert.Equal(24, CountryComparisonTopicMap.All.SelectMany(topic => topic.EntryIds.Values).Distinct().Count());
+        var expectedCountrySlugs = new[] { "czechia", "denmark", "germany", "poland" };
+        Assert.Equal(expectedCountrySlugs, CountryComparisonTopicMap.SupportedCountrySlugs.Order(StringComparer.Ordinal).ToArray());
+        Assert.Equal(32, CountryComparisonTopicMap.All.SelectMany(topic => topic.EntryIds.Values).Distinct().Count());
 
         foreach (var topic in CountryComparisonTopicMap.All)
         {
-            Assert.Equal(3, topic.EntryIds.Count);
+            Assert.Equal(4, topic.EntryIds.Count);
+            Assert.Equal(expectedCountrySlugs, topic.EntryIds.Keys.Order(StringComparer.Ordinal).ToArray());
             var category = Assert.Single(catalog.Categories, item => item.Slug == topic.CategorySlug);
             foreach (var (countrySlug, entryId) in topic.EntryIds)
             {

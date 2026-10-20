@@ -239,10 +239,10 @@ public sealed class CzechiaContentIntegrationTests
     }
 
     [Fact]
-    public async Task CountryComparisonStillOffersOnlyCountriesWithCompleteV2Mappings()
+    public async Task CountryComparisonOffersCzechiaForLocalReview()
     {
         var html = WebUtility.HtmlDecode(await RenderAsync<Compare>("en", uri: "http://localhost/compare"));
-        Assert.DoesNotContain("value=\"czechia\"", html, StringComparison.Ordinal);
+        Assert.Contains("value=\"czechia\"", html, StringComparison.Ordinal);
         Assert.Contains("value=\"denmark\"", html, StringComparison.Ordinal);
         Assert.Contains("value=\"germany\"", html, StringComparison.Ordinal);
         Assert.Contains("value=\"poland\"", html, StringComparison.Ordinal);
