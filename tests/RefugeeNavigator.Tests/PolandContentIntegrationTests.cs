@@ -77,12 +77,12 @@ public sealed class PolandContentIntegrationTests
             .Where(translation => entryIds.Contains(translation.InformationEntryId)).ToArray();
         var sources = catalog.OfficialSources.Where(source => entryIds.Contains(source.InformationEntryId)).ToArray();
 
-        Assert.Equal(24, catalog.InformationEntries.Count);
+        Assert.Equal(32, catalog.InformationEntries.Count);
         Assert.Equal(8, entries.Length);
         Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == DenmarkId));
         Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == GermanyId));
         Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == PolandId));
-        Assert.Equal(72, catalog.InformationEntryTranslations.Count);
+        Assert.Equal(96, catalog.InformationEntryTranslations.Count);
         foreach (var countryId in new[] { DenmarkId, GermanyId, PolandId })
         {
             var countryEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == countryId)
@@ -97,7 +97,7 @@ public sealed class PolandContentIntegrationTests
         Assert.Equal(24, translations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
         Assert.Equal(0, translations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(72, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(0, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(24, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(24, translations.Select(translation => (translation.InformationEntryId, translation.LanguageCode)).Distinct().Count());
         Assert.Equal(entries.Length, entries.Select(entry => entry.Id).Distinct().Count());
         Assert.Equal(CategoryIds.Order().ToArray(), entries.Select(entry => entry.CategoryId).Distinct().Order().ToArray());

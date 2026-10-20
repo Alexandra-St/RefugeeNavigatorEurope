@@ -30,7 +30,7 @@
                     <label for="country-one">@Localizer["Compare.CountryOne"]</label>
                     <select id="country-one" name="country1" required>
                         <option value="">@Localizer["Compare.SelectCountry"]</option>
-                        @foreach (var country in Catalog.Countries)
+                        @foreach (var country in Catalog.Countries.Where(country => CountryComparisonTopicMap.SupportedCountrySlugs.Contains(country.Slug)))
                         {
                             <option value="@country.Slug" selected="@IsSelected(country.Slug, CountryOneSlug)">@Localizer[CatalogLocalizationKeyResolver.CountryName(country)]</option>
                         }
@@ -40,7 +40,7 @@
                     <label for="country-two">@Localizer["Compare.CountryTwo"]</label>
                     <select id="country-two" name="country2" required>
                         <option value="">@Localizer["Compare.SelectCountry"]</option>
-                        @foreach (var country in Catalog.Countries)
+                        @foreach (var country in Catalog.Countries.Where(country => CountryComparisonTopicMap.SupportedCountrySlugs.Contains(country.Slug)))
                         {
                             <option value="@country.Slug" selected="@IsSelected(country.Slug, CountryTwoSlug)">@Localizer[CatalogLocalizationKeyResolver.CountryName(country)]</option>
                         }

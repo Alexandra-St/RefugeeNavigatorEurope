@@ -30,7 +30,12 @@ public static class CountryComparisonTopicMap
             "1a19c1f9-1111-4d60-8490-da548f33083f", "31f5802b-26a0-5cd0-bb24-0a9a4afa706a", "a5892591-d082-57ce-acf9-5c39ab4f9b84")
     ];
 
+    private static readonly IReadOnlySet<string> MappedCountrySlugs =
+        new HashSet<string>(Topics[0].EntryIds.Keys, StringComparer.OrdinalIgnoreCase);
+
     public static IReadOnlyList<CountryComparisonTopic> All => Topics;
+
+    public static IReadOnlySet<string> SupportedCountrySlugs => MappedCountrySlugs;
 
     public static IReadOnlyList<CountryComparisonTopic> ForCategory(string categorySlug) =>
         Topics.Where(topic => string.Equals(topic.CategorySlug, categorySlug, StringComparison.OrdinalIgnoreCase)).ToArray();
@@ -58,6 +63,11 @@ public static class CountryComparisonTopicMap
             if (topic.EntryIds.Count != 3)
             {
                 throw new InvalidOperationException($"Comparison topic '{topic.ResourceKey}' must map exactly one article for each supported country.");
+            }
+
+            if (!MappedCountrySlugs.SetEquals(topic.EntryIds.Keys))
+            {
+                throw new InvalidOperationException($"Comparison topic '{topic.ResourceKey}' does not map the same supported countries as the other topics.");
             }
 
             foreach (var (countrySlug, entryId) in topic.EntryIds)

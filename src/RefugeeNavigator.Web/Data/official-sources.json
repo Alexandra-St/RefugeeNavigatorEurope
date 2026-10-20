@@ -1622,5 +1622,404 @@
     "LastCheckedAt": "2026-10-16T00:00:00+00:00",
     "Id": "131a629b-e3ba-54a3-932b-2cddd661ff40",
     "InformationEntryId": "a5892591-d082-57ce-acf9-5c39ab4f9b84"
+  },
+  {
+    "Id": "867c5784-1021-5dee-ac1d-f986a22d80d1",
+    "InformationEntryId": "49d3c355-af96-54f7-92d5-68062647d464",
+    "Title": "Dočasná ochrana",
+    "Url": "https://ipc.gov.cz/docasna-ochrana/",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "8de946a6-0246-5953-86ee-c28536a94800",
+    "InformationEntryId": "49d3c355-af96-54f7-92d5-68062647d464",
+    "Title": "AKTUALIZOVÁNO 4. 8. 2026: Prodloužení dočasné ochrany do roku 2028 a úprava podmínek pro její udělení",
+    "Url": "https://ipc.gov.cz/prodlouzeni-docasne-ochrany-do-roku-2028-a-uprava-podminek-pro-jeji-udeleni/",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "e47bb7a3-b6e2-5bd2-a968-c3c82ea35b8a",
+    "InformationEntryId": "49d3c355-af96-54f7-92d5-68062647d464",
+    "Title": "Council Implementing Decision (EU) 2026/1912 of 30 July 2026 extending temporary protection as introduced by Implementing Decision (EU) 2022/382",
+    "Url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026D1912",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "0a11c164-3360-5e41-b784-cd3b56eb4555",
+    "InformationEntryId": "49d3c355-af96-54f7-92d5-68062647d464",
+    "Title": "Corrigendum to Council Implementing Decision (EU) 2026/1912 of 30 July 2026 extending temporary protection as introduced by Implementing Decision (EU) 2022/382",
+    "Url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026D1912R(01)",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "b087b0f1-2960-5d54-87cd-c74aa87d0c6e",
+    "InformationEntryId": "49d3c355-af96-54f7-92d5-68062647d464",
+    "Title": "Zákon č. 65/2022 Sb., o některých opatřeních v souvislosti s ozbrojeným konfliktem na území Ukrajiny vyvolaným invazí vojsk Ruské federace",
+    "Url": "https://e-sbirka.gov.cz/sb/2022/65",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "7a5b4d7c-7492-50d4-bedf-c7ef0ff5b8e3",
+    "InformationEntryId": "2d35d95d-3524-5f3c-b7bd-ff61bd67ccd5",
+    "Title": "Zvláštní dlouhodobý pobyt",
+    "Url": "https://ipc.gov.cz/zvlastni-dlouhodoby-pobyt/",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "d577b271-db4d-5866-9ee8-f27514323112",
+    "InformationEntryId": "2d35d95d-3524-5f3c-b7bd-ff61bd67ccd5",
+    "Title": "Kdo může získat zvláštní dlouhodobý pobyt?",
+    "Url": "https://ipc.gov.cz/zvlastni-dlouhodoby-pobyt/kdo-muze-ziskat-zvlastni-dlouhodoby-pobyt/",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "d2e63104-4a25-55cf-9c60-952f374f8d30",
+    "InformationEntryId": "2d35d95d-3524-5f3c-b7bd-ff61bd67ccd5",
+    "Title": "Obecné informace ke zvláštnímu dlouhodobému pobytu",
+    "Url": "https://ipc.gov.cz/zvlastni-dlouhodoby-pobyt/obecne-informace-ke-zvlastnimu-dlouhodobemu-pobytu/",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "0e4e4dee-260a-5f0a-a7dd-cabc6bc35f25",
+    "InformationEntryId": "2d35d95d-3524-5f3c-b7bd-ff61bd67ccd5",
+    "Title": "Vyjádření zájmu o zvláštní dlouhodobý pobyt",
+    "Url": "https://ipc.gov.cz/zvlastni-dlouhodoby-pobyt/vyjadreni-zajmu-o-zvlastni-dlouhodoby-pobyt-v-ramci-spolecne-domacnosti/",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "4ecbda89-cbbd-58da-ab39-339f37996973",
+    "InformationEntryId": "2d35d95d-3524-5f3c-b7bd-ff61bd67ccd5",
+    "Title": "Registrace k získání zvláštního dlouhodobého pobytu, návštěva pracoviště Ministerstva vnitra",
+    "Url": "https://ipc.gov.cz/zvlastni-dlouhodoby-pobyt/registrace-k-ziskani-zvlastniho-dlouhodobeho-pobytu-navsteva-pracoviste-ministerstva-vnitra/",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "03aed13a-d2be-5930-bc57-87fa93d4ac65",
+    "InformationEntryId": "2d35d95d-3524-5f3c-b7bd-ff61bd67ccd5",
+    "Title": "Spuštění registrace ke zvláštnímu dlouhodobému pobytu",
+    "Url": "https://ipc.gov.cz/spusteni-registrace-ke-zvlastnimu-dlouhodobemu-pobytu/",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "b105ba13-8e85-5020-a9aa-d1b4861ba59f",
+    "InformationEntryId": "2d35d95d-3524-5f3c-b7bd-ff61bd67ccd5",
+    "Title": "Nařízení vlády č. 86/2025 Sb., o podrobnostech registrace ke zvláštnímu dlouhodobému pobytu",
+    "Url": "https://e-sbirka.gov.cz/sb/2025/86",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "a3363d61-99d7-5258-b529-075d611b050b",
+    "InformationEntryId": "2d35d95d-3524-5f3c-b7bd-ff61bd67ccd5",
+    "Title": "Zákon č. 65/2022 Sb., o některých opatřeních v souvislosti s ozbrojeným konfliktem na území Ukrajiny vyvolaným invazí vojsk Ruské federace",
+    "Url": "https://e-sbirka.gov.cz/sb/2022/65",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "8cf7b190-8dcc-5ab6-b874-a8f356caf780",
+    "InformationEntryId": "2d35d95d-3524-5f3c-b7bd-ff61bd67ccd5",
+    "Title": "Dočasná ochrana",
+    "Url": "https://ipc.gov.cz/docasna-ochrana/",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "75e6cf90-215f-5076-8c38-a33f661d2693",
+    "InformationEntryId": "2d35d95d-3524-5f3c-b7bd-ff61bd67ccd5",
+    "Title": "Zákon č. 66/2022 Sb., o opatřeních v oblasti zaměstnanosti a oblasti sociálního zabezpečení v souvislosti s ozbrojeným konfliktem na území Ukrajiny vyvolaným invazí vojsk Ruské federace",
+    "Url": "https://e-sbirka.gov.cz/sb/2022/66",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "78900b2b-5ce7-5257-b447-c27f8313d70d",
+    "InformationEntryId": "e8a5e6d5-a989-51de-ae14-b58e724604b8",
+    "Title": "Pomoc pro občany Ukrajiny a jejich zaměstnavatele",
+    "Url": "https://up.gov.cz/pomoc-pro-obcany-ukrajiny-a-jejich-zamestnavate-1",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "e0d09db6-311d-5780-8573-b0b975248cea",
+    "InformationEntryId": "e8a5e6d5-a989-51de-ae14-b58e724604b8",
+    "Title": "Služby pro cizince ze třetích zemí",
+    "Url": "https://up.gov.cz/sluzby-pro-cizince-ze-tretich-zemi",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "e70a38c9-eda0-5c8f-a31b-e34e1e339b3d",
+    "InformationEntryId": "e8a5e6d5-a989-51de-ae14-b58e724604b8",
+    "Title": "Změny v poskytování rekvalifikačních kurzů českého jazyka pro cizince od roku 2026",
+    "Url": "https://up.gov.cz/zmeny-v-poskytovani-rekvalifikacnich-kurzu-ceskeho-jazyka-pro-cizince-od-roku-2026",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "4888d6a7-e06f-5c55-8980-15e85ced78d5",
+    "InformationEntryId": "e8a5e6d5-a989-51de-ae14-b58e724604b8",
+    "Title": "CzechUp – Jazyk, kvalifikace a zaměstnání pro cizince",
+    "Url": "https://up.gov.cz/czechup-jazyk-kvalifikace-a-zamestnani-pro-cizince",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "1d9670e6-8a38-5c4c-b9c9-6bc71384e5e5",
+    "InformationEntryId": "e8a5e6d5-a989-51de-ae14-b58e724604b8",
+    "Title": "Hledáte novou práci? Zaregistrujte se na Úřad práce ČR online",
+    "Url": "https://up.gov.cz/menite-praci",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "19dfdd6c-765e-5a8e-a2a8-d090b1320105",
+    "InformationEntryId": "e8a5e6d5-a989-51de-ae14-b58e724604b8",
+    "Title": "Volná místa - hledání",
+    "Url": "https://up.gov.cz/volna-mista-v-cr",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "71b61e09-6eff-5aee-88d9-b00f940830e8",
+    "InformationEntryId": "e8a5e6d5-a989-51de-ae14-b58e724604b8",
+    "Title": "Nostrifikace",
+    "Url": "https://msmt.gov.cz/vzdelavani/uznavani-zahranicniho-a-ceskeho-studia/nostrifikace",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "a3068749-e0d6-5ffb-aef9-8b261fe051fb",
+    "InformationEntryId": "829b9986-d949-5dd8-80c4-b9b4b7cf4d44",
+    "Title": "Informace o nástupu občana EU/EHP a Švýcarska nebo jeho rodinného příslušníka, nebo cizince, který nepotřebuje pracovní oprávnění do zaměstnání",
+    "Url": "https://mpsv.gov.cz/informace-o-nastupu-u-obcana-eu-ehp-a-svycarska-nebo-jeho-rodinneho-prislusnika-nebo-cizince-ktery-nepotrebuje-pracovni-opravneni-do-zamestnani-k-vysl?inheritRedirect=true",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "f4f235e4-f298-555a-ad9c-e74e4bce8a28",
+    "InformationEntryId": "829b9986-d949-5dd8-80c4-b9b4b7cf4d44",
+    "Title": "Evidence cizinců, občanů EU/EHP, Švýcarska a jejich rodinných příslušníků a uchovávání dokladů",
+    "Url": "https://mpsv.gov.cz/evidence-cizincu-a-eu",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "33a7783a-d12f-5e4e-a80a-a53dd847088e",
+    "InformationEntryId": "829b9986-d949-5dd8-80c4-b9b4b7cf4d44",
+    "Title": "Minimální mzda",
+    "Url": "https://mpsv.gov.cz/minimalni-mzda",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "4e1ad1d9-223c-56f0-9d4d-66f6a2f874a8",
+    "InformationEntryId": "829b9986-d949-5dd8-80c4-b9b4b7cf4d44",
+    "Title": "ZÁKLADNÍ INFORMACE PRO CIZINCE O PRACOVNĚPRÁVNÍCH PŘEDPISECH V ČESKÉ REPUBLICE",
+    "Url": "https://suip.gov.cz/documents/20142/43720/pracovni%2Bpodminky_cizinci_cs-2023_01.pdf/efc26efc-baf1-a51c-ce96-7b15ef018f77",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "4f46763a-6f2c-54b1-b3ed-62ea2dc485e6",
+    "InformationEntryId": "829b9986-d949-5dd8-80c4-b9b4b7cf4d44",
+    "Title": "A3b - Minimální délka dovolené za kalendářní rok nebo její poměrná část",
+    "Url": "https://suip.gov.cz/a3b-minimalni-delka-dovolene-za-kalendarni-rok-nebo-jeji-pomerna-cast",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "f94a2cdf-8bb2-539c-905a-397a567f5369",
+    "InformationEntryId": "829b9986-d949-5dd8-80c4-b9b4b7cf4d44",
+    "Title": "VI.2.1 Obecné podmínky platnosti výpovědi a výpovědní doba",
+    "Url": "https://ppropo.mpsv.cz/VI21Obecnepodminkyplatnostivypov",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "e7175d68-d1de-5ccd-b8f0-e81741108430",
+    "InformationEntryId": "829b9986-d949-5dd8-80c4-b9b4b7cf4d44",
+    "Title": "Pomoc pro občany Ukrajiny a jejich zaměstnavatele",
+    "Url": "https://up.gov.cz/pomoc-pro-obcany-ukrajiny-a-jejich-zamestnavate-1",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "31a84b7a-09aa-5104-8bcd-2ca0401e15f1",
+    "InformationEntryId": "829b9986-d949-5dd8-80c4-b9b4b7cf4d44",
+    "Title": "Zákon č. 66/2022 Sb., o opatřeních v oblasti zaměstnanosti a oblasti sociálního zabezpečení v souvislosti s ozbrojeným konfliktem na území Ukrajiny vyvolaným invazí vojsk Ruské federace",
+    "Url": "https://e-sbirka.gov.cz/sb/2022/66",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "37ad54e2-27b2-563b-b2a5-e8517619390b",
+    "InformationEntryId": "829b9986-d949-5dd8-80c4-b9b4b7cf4d44",
+    "Title": "Obecné informace ke zvláštnímu dlouhodobému pobytu",
+    "Url": "https://ipc.gov.cz/zvlastni-dlouhodoby-pobyt/obecne-informace-ke-zvlastnimu-dlouhodobemu-pobytu/",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "93923489-d91d-5243-8901-d7f55c383577",
+    "InformationEntryId": "d252adbc-48c0-5546-bbe1-2b08e2293f27",
+    "Title": "Zákon č. 65/2022 Sb., o některých opatřeních v souvislosti s ozbrojeným konfliktem na území Ukrajiny vyvolaným invazí vojsk Ruské federace",
+    "Url": "https://e-sbirka.gov.cz/sb/2022/65",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "27f15d64-01ad-589e-a95d-5db32b5b744a",
+    "InformationEntryId": "d252adbc-48c0-5546-bbe1-2b08e2293f27",
+    "Title": "Oznámení plátce pojistného",
+    "Url": "https://cz.pomocukrajine.vzp.cz/oznameni-platce-pojistneho/",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "e7bf1b87-bd83-508a-8377-ad3652f0d086",
+    "InformationEntryId": "d252adbc-48c0-5546-bbe1-2b08e2293f27",
+    "Title": "OZP — informace pro občany Ukrajiny",
+    "Url": "https://www.ozp.cz/ua-cz",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "5dfc1ea5-3379-5fcc-afc4-fa8c9be3f9ef",
+    "InformationEntryId": "d252adbc-48c0-5546-bbe1-2b08e2293f27",
+    "Title": "Získal/a jsem vízum dočasné ochrany a chci se zaregistrovat do českého systému veřejného zdravotního pojištění",
+    "Url": "https://cz.pomocukrajine.vzp.cz/registrace/",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "97322d7e-3022-5096-92ff-192cca1f7d4d",
+    "InformationEntryId": "d252adbc-48c0-5546-bbe1-2b08e2293f27",
+    "Title": "Přechod osob z víza dočasné ochrany na dlouhodobý pobyt na území ČR",
+    "Url": "https://cz.pomocukrajine.vzp.cz/prechod-osob-z-viza-docasne-ochrany-na-dlouhodoby-pobyt-na-uzemi-cr/",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "70acdcb5-28aa-5e21-9cbd-a3738d554c21",
+    "InformationEntryId": "d252adbc-48c0-5546-bbe1-2b08e2293f27",
+    "Title": "Prodloužení zdravotního pojištění po prodloužení dočasné ochrany",
+    "Url": "https://cz.pomocukrajine.vzp.cz/prodlouzeni-zdravotniho-pojisteni-po-prodlouzeni-docasne-ochrany/",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "d94a8789-9178-5f34-b701-6a1c707c93ad",
+    "InformationEntryId": "d252adbc-48c0-5546-bbe1-2b08e2293f27",
+    "Title": "Zdravotnická záchranná služba – tísňová linka 155 nebo 112",
+    "Url": "https://www.nzip.cz/clanek/205-zdravotnicka-zachranna-sluzba",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "ab42f29a-5d3c-5b16-8fe0-2eed41e5c917",
+    "InformationEntryId": "d252adbc-48c0-5546-bbe1-2b08e2293f27",
+    "Title": "Poskytovatelé zdravotních služeb",
+    "Url": "https://www.nzip.cz/clanek/1073-poskytovatele-zdravotnich-sluzeb",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "28a3e62f-be4d-5e9e-86e7-5a3efeca8f25",
+    "InformationEntryId": "d252adbc-48c0-5546-bbe1-2b08e2293f27",
+    "Title": "Za co u lékaře platit můžete a za co ne? Ministerstvo zdravotnictví vyjasňuje pravidla pro pacienty",
+    "Url": "https://mzd.gov.cz/tiskove-centrum-mz/za-co-u-lekare-platit-muzete-a-za-co-ne-ministerstvo-zdravotnictvi-vyjasnuje-pravidla-pro-pacienty/",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "6f8e3aa4-eb9b-59f2-9baa-9dc7d7fa6ffe",
+    "InformationEntryId": "d252adbc-48c0-5546-bbe1-2b08e2293f27",
+    "Title": "Obecné informace ke zvláštnímu dlouhodobému pobytu",
+    "Url": "https://ipc.gov.cz/zvlastni-dlouhodoby-pobyt/obecne-informace-ke-zvlastnimu-dlouhodobemu-pobytu/",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "28ae9265-1d80-5843-99f7-1eae992595f3",
+    "InformationEntryId": "957ae315-47a4-5a73-806e-ca1d6cf258d1",
+    "Title": "Státní humanitární ubytování",
+    "Url": "https://ipc.gov.cz/docasna-ochrana/statni-humanitarni-ubytovani-2/",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "c22981bd-1abc-5801-9bb8-8e70c47f0b8c",
+    "InformationEntryId": "957ae315-47a4-5a73-806e-ca1d6cf258d1",
+    "Title": "Nájemní smlouva",
+    "Url": "https://mmr.gov.cz/cs/ministerstvo/bytova-politika/najemni-vztahy/najemni-smlouva",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "f85327cf-cfbc-5c9a-bef0-d732e6e0437b",
+    "InformationEntryId": "957ae315-47a4-5a73-806e-ca1d6cf258d1",
+    "Title": "Platby spojené s nájmem bytu",
+    "Url": "https://mmr.gov.cz/cs/ministerstvo/bytova-politika/najemni-vztahy/platby-spojene-s-najmem-bytu",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "9def696b-1053-500d-96bd-e00b7b0de833",
+    "InformationEntryId": "957ae315-47a4-5a73-806e-ca1d6cf258d1",
+    "Title": "Dočasná ochrana",
+    "Url": "https://ipc.gov.cz/docasna-ochrana/",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "e0d20dd8-5340-59d2-b091-eb919fc244c7",
+    "InformationEntryId": "957ae315-47a4-5a73-806e-ca1d6cf258d1",
+    "Title": "Zákon č. 66/2022 Sb., o opatřeních v oblasti zaměstnanosti a oblasti sociálního zabezpečení v souvislosti s ozbrojeným konfliktem na území Ukrajiny vyvolaným invazí vojsk Ruské federace",
+    "Url": "https://e-sbirka.gov.cz/sb/2022/66",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "54790931-2d68-5609-8323-603b69b19eb0",
+    "InformationEntryId": "957ae315-47a4-5a73-806e-ca1d6cf258d1",
+    "Title": "Pomoc pro občany Ukrajiny a jejich zaměstnavatele",
+    "Url": "https://up.gov.cz/pomoc-pro-obcany-ukrajiny-a-jejich-zamestnavate-1",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "dde4ab3a-9d00-5bff-995f-0d473d6d7d2c",
+    "InformationEntryId": "954761f7-bc2b-5725-aeba-c8f1d2192588",
+    "Title": "METODICKÉ KOMENTÁŘE K ZÁKONU LEX UKRAJINA ŠKOLSTVÍ",
+    "Url": "https://edu.gov.cz/wp-content/uploads/2025/12/Metodika-lex_UKR_12_2025.pdf",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "78636b76-5425-5ff2-ad54-e4a0698bd558",
+    "InformationEntryId": "954761f7-bc2b-5725-aeba-c8f1d2192588",
+    "Title": "Nostrifikace",
+    "Url": "https://msmt.gov.cz/vzdelavani/uznavani-zahranicniho-a-ceskeho-studia/nostrifikace",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "7d29f882-0750-58a4-a8e5-e4ce7d4f9615",
+    "InformationEntryId": "954761f7-bc2b-5725-aeba-c8f1d2192588",
+    "Title": "Find Your Programme",
+    "Url": "https://studyin.gov.cz/plan-your-studies/find-your-programme",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "56a42220-6ebd-5683-8f28-05f751737622",
+    "InformationEntryId": "954761f7-bc2b-5725-aeba-c8f1d2192588",
+    "Title": "Změny v poskytování rekvalifikačních kurzů českého jazyka pro cizince od roku 2026",
+    "Url": "https://up.gov.cz/zmeny-v-poskytovani-rekvalifikacnich-kurzu-ceskeho-jazyka-pro-cizince-od-roku-2026",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "0a0103b7-751d-5d19-909a-f7696bc6cf0b",
+    "InformationEntryId": "f408e721-31a3-572a-a702-69ab600023a3",
+    "Title": "Zákon č. 66/2022 Sb., o opatřeních v oblasti zaměstnanosti a oblasti sociálního zabezpečení v souvislosti s ozbrojeným konfliktem na území Ukrajiny vyvolaným invazí vojsk Ruské federace",
+    "Url": "https://e-sbirka.gov.cz/sb/2022/66",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "35422666-3296-5760-89cb-b4069aa3d98e",
+    "InformationEntryId": "f408e721-31a3-572a-a702-69ab600023a3",
+    "Title": "Humanitární dávka",
+    "Url": "https://mpsv.gov.cz/humanitarni-davka",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "c0ad7f8a-b90b-5e0b-b8db-984f5027ad42",
+    "InformationEntryId": "f408e721-31a3-572a-a702-69ab600023a3",
+    "Title": "Zákon č. 111/2006 Sb., o pomoci v hmotné nouzi",
+    "Url": "https://e-sbirka.gov.cz/sb/2006/111",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "f407b4c0-aee6-50fa-aed3-4f567c54527e",
+    "InformationEntryId": "f408e721-31a3-572a-a702-69ab600023a3",
+    "Title": "Mimořádná okamžitá pomoc",
+    "Url": "https://mpsv.gov.cz/up-cz/mimoradna-okamzita-pomoc",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "d734f84c-2adc-5ac0-bf20-08f9fa0437fc",
+    "InformationEntryId": "f408e721-31a3-572a-a702-69ab600023a3",
+    "Title": "Pomoc pro občany Ukrajiny a jejich zaměstnavatele",
+    "Url": "https://up.gov.cz/pomoc-pro-obcany-ukrajiny-a-jejich-zamestnavate-1",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
+  },
+  {
+    "Id": "e91302cf-5fe2-5967-9553-f3a543a85431",
+    "InformationEntryId": "f408e721-31a3-572a-a702-69ab600023a3",
+    "Title": "Obecné informace ke zvláštnímu dlouhodobému pobytu",
+    "Url": "https://ipc.gov.cz/zvlastni-dlouhodoby-pobyt/obecne-informace-ke-zvlastnimu-dlouhodobemu-pobytu/",
+    "LastCheckedAt": "2026-10-20T00:16:28+00:00"
   }
 ]
