@@ -70,7 +70,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "b278c1d6-1add-4e65-8af1-e16431eaffb3",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "66088021-839a-4112-adb8-e986052fc897",
@@ -153,7 +153,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "b278c1d6-1add-4e65-8af1-e16431eaffb3",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "dc25b286-1aa2-4f42-a018-fc5d2571868c",
@@ -239,7 +239,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "b278c1d6-1add-4e65-8af1-e16431eaffb3",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": false,
               "OfficialSourceIds": [],
               "Values": {
@@ -326,7 +326,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "06ce2f10-d309-45b2-aced-e9dd8367ffed",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "205eb680-d70e-422d-8709-5757bc7fd16b",
@@ -407,7 +407,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "06ce2f10-d309-45b2-aced-e9dd8367ffed",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "12423382-1710-4b16-a782-06e294c547d1",
@@ -489,7 +489,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "06ce2f10-d309-45b2-aced-e9dd8367ffed",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "205eb680-d70e-422d-8709-5757bc7fd16b",
@@ -573,7 +573,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "a5107970-958a-4be6-9c98-ae484fc24a15",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "55d7be6b-9c33-4ecc-a335-02be0f931080",
@@ -653,7 +653,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "a5107970-958a-4be6-9c98-ae484fc24a15",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "c75470b4-0e6d-4339-b5ac-d5e155c47656",
@@ -732,7 +732,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "a5107970-958a-4be6-9c98-ae484fc24a15",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "c75470b4-0e6d-4339-b5ac-d5e155c47656",
@@ -820,7 +820,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "b76b631c-92de-4379-8136-c9e4e08e2fd2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "8af0cba6-f3a1-4e5b-a6f9-35c62bd4471c"
@@ -897,7 +897,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "b76b631c-92de-4379-8136-c9e4e08e2fd2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "e60d0247-f0b5-4c7b-89dc-f4642bbef3ed",
@@ -975,7 +975,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "b76b631c-92de-4379-8136-c9e4e08e2fd2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "2b15b8cb-2568-4b24-b5eb-4afd6b3682a7"
@@ -1065,7 +1065,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "50829c0b-7ee0-4ee4-be7b-47dfd0dc408d",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "e375e58f-972b-438b-9439-45dc9c51f22c"
@@ -1145,7 +1145,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "50829c0b-7ee0-4ee4-be7b-47dfd0dc408d",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "d083bc50-623f-4817-8439-a3c31f16f30d"
@@ -1223,7 +1223,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "50829c0b-7ee0-4ee4-be7b-47dfd0dc408d",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "dd5b037a-1832-4aa5-ad6f-97d8d4616b12"
@@ -1308,7 +1308,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "bd08644f-dd27-412c-9bfd-888de1fe304d",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "5f2dd96a-c523-4aba-b604-d74d4ab98a0b",
@@ -1389,7 +1389,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "bd08644f-dd27-412c-9bfd-888de1fe304d",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "f221b723-ca1c-4e62-bf91-2a816df58094"
@@ -1470,7 +1470,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "bd08644f-dd27-412c-9bfd-888de1fe304d",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": false,
               "OfficialSourceIds": [],
               "Values": {
@@ -1553,7 +1553,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "084c06c7-592b-4eed-bb20-6cd1913f14a2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "a87ca523-b232-40c5-91e9-de0d5d7c553a",
@@ -1630,7 +1630,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "084c06c7-592b-4eed-bb20-6cd1913f14a2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "27b60775-fb27-40a6-90e9-2107acb5e48f"
@@ -1708,7 +1708,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "084c06c7-592b-4eed-bb20-6cd1913f14a2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "7a22e05d-e139-4a9a-987d-6dec421acd97",
@@ -1799,7 +1799,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "d33628da-cb49-44b5-a7aa-ae6c6ac8f389",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "4d8fabcf-05ce-41a5-96bb-1a02e5f2866a",
@@ -1883,7 +1883,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "d33628da-cb49-44b5-a7aa-ae6c6ac8f389",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "f87e7ade-a2cc-42fc-a8f9-764476219a67",
@@ -1962,7 +1962,7 @@
             {
               "CountrySlug": "spain",
               "InformationEntryId": "d33628da-cb49-44b5-a7aa-ae6c6ac8f389",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": false,
               "OfficialSourceIds": [],
               "Values": {

@@ -73,7 +73,7 @@ public sealed class SpainContentIntegrationTests
         "RefugeeNavigator.Web.Resources.Localization.SharedResource", typeof(SharedResource).Assembly);
 
     [Fact]
-    public async Task SpainCatalogHasExpectedStableIdentityAndNeedsReviewTranslations()
+    public async Task SpainCatalogHasExpectedStableIdentityAndVerifiedTranslations()
     {
         var catalog = await Catalog.Value;
         var country = Assert.Single(catalog.Countries, item => item.Slug == "spain");
@@ -83,8 +83,8 @@ public sealed class SpainContentIntegrationTests
         Assert.Equal(5, catalog.Countries.Count);
         Assert.Equal(40, catalog.InformationEntries.Count);
         Assert.Equal(120, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(96, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(24, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(120, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == SpainId).ToArray();
@@ -104,7 +104,7 @@ public sealed class SpainContentIntegrationTests
                 translations.Select(item => item.LanguageCode).Order(StringComparer.Ordinal).ToArray());
             Assert.All(translations, item =>
             {
-                Assert.Equal(VerificationStatus.NeedsReview, item.VerificationStatus);
+                Assert.Equal(VerificationStatus.Verified, item.VerificationStatus);
                 Assert.False(string.IsNullOrWhiteSpace(item.Title));
                 Assert.False(string.IsNullOrWhiteSpace(item.Summary));
                 Assert.False(string.IsNullOrWhiteSpace(item.Content));
@@ -215,7 +215,7 @@ public sealed class SpainContentIntegrationTests
     [InlineData("en")]
     [InlineData("uk")]
     [InlineData("ru")]
-    public async Task AllSpainCategoryPagesRenderTheirNeedsReviewArticles(string language)
+    public async Task AllSpainCategoryPagesRenderTheirVerifiedArticles(string language)
     {
         var catalog = await Catalog.Value;
         var entries = catalog.InformationEntries.Where(item => item.CountryId == SpainId).ToArray();
@@ -237,7 +237,7 @@ public sealed class SpainContentIntegrationTests
             {
                 var translation = Assert.Single(catalog.InformationEntryTranslations,
                     item => item.InformationEntryId == entry.Id && item.LanguageCode == language);
-                Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+                Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
                 Assert.Contains(translation.Title, html);
                 Assert.Contains(translation.Summary, html);
             }
@@ -251,17 +251,43 @@ public sealed class SpainContentIntegrationTests
     [InlineData("en")]
     [InlineData("uk")]
     [InlineData("ru")]
-    public async Task SpainAppearsInSearchFilterButNeedsReviewArticlesStayHidden(string language)
+    public async Task SpainVerifiedArticlesAppearInSearchAndHonorCategoryFilter(string language)
     {
         var catalog = await Catalog.Value;
         var entries = catalog.InformationEntries.Where(item => item.CountryId == SpainId).ToArray();
+        var noResults = Resources.GetString("Search.NoResults", CultureInfo.GetCultureInfo(language))!;
         var html = WebUtility.HtmlDecode(await RenderAsync<Search>(language, uri: "http://localhost/search?country=spain"));
 
         Assert.Contains("value=\"spain\"", html);
-        foreach (var translation in catalog.InformationEntryTranslations.Where(item =>
-                     entries.Select(entry => entry.Id).Contains(item.InformationEntryId) && item.LanguageCode == language))
+        Assert.DoesNotContain(noResults, html);
+        foreach (var entry in entries)
         {
-            Assert.DoesNotContain(translation.Title, html);
+            var translation = Assert.Single(catalog.InformationEntryTranslations,
+                item => item.InformationEntryId == entry.Id && item.LanguageCode == language);
+            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
+            Assert.Contains(translation.Title, html);
+        }
+
+        foreach (var category in Categories)
+        {
+            var filteredHtml = WebUtility.HtmlDecode(await RenderAsync<Search>(language,
+                uri: $"http://localhost/search?country=spain&category={category}"));
+            var matchingEntries = entries.Where(entry => entry.CategoryId == CategoryIds[category]).ToArray();
+            Assert.NotEmpty(matchingEntries);
+            Assert.DoesNotContain(noResults, filteredHtml);
+            foreach (var entry in matchingEntries)
+            {
+                var translation = Assert.Single(catalog.InformationEntryTranslations,
+                    item => item.InformationEntryId == entry.Id && item.LanguageCode == language);
+                Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
+                Assert.Contains(translation.Title, filteredHtml);
+            }
+            foreach (var entry in entries.Except(matchingEntries))
+            {
+                var translation = Assert.Single(catalog.InformationEntryTranslations,
+                    item => item.InformationEntryId == entry.Id && item.LanguageCode == language);
+                Assert.DoesNotContain(translation.Title, filteredHtml);
+            }
         }
     }
 

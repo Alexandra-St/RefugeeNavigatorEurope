@@ -71,8 +71,8 @@ public sealed class CzechiaContentIntegrationTests
         Assert.Equal(5, catalog.Countries.Count);
         Assert.Equal(40, catalog.InformationEntries.Count);
         Assert.Equal(120, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(96, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(24, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(120, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(entry => entry.CountryId == CzechiaId).ToArray();
