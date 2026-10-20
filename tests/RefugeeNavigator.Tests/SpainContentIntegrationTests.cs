@@ -266,10 +266,10 @@ public sealed class SpainContentIntegrationTests
     }
 
     [Fact]
-    public async Task CountryComparisonContinuesToOfferOnlyTheFourMappedCountries()
+    public async Task CountryComparisonOffersSpainAlongsideTheFourExistingCountries()
     {
         var html = WebUtility.HtmlDecode(await RenderAsync<Compare>("en", uri: "http://localhost/compare"));
-        Assert.DoesNotContain("value=\"spain\"", html, StringComparison.Ordinal);
+        Assert.Contains("value=\"spain\"", html, StringComparison.Ordinal);
         Assert.Contains("value=\"denmark\"", html, StringComparison.Ordinal);
         Assert.Contains("value=\"germany\"", html, StringComparison.Ordinal);
         Assert.Contains("value=\"poland\"", html, StringComparison.Ordinal);
