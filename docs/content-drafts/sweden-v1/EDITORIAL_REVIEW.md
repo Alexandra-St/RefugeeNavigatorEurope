@@ -2,7 +2,7 @@
 
 Baseline: `ab9f844ab80d3adbe7df4064674d814f12c0176a`
 
-## Executive result
+## Initial review result
 
 - Articles reviewed: 8
 - BLOCKER: 0
@@ -110,7 +110,7 @@ No broad legal-meaning divergence was found across the eight translations. The m
 - Social Services Act amendment from 2 January 2027: the SOC-01 draft identifies the current 2026 rule separately and requires checking current law and municipal guidance on or after the effective date.
 - Also recheck the post-5 September 2026 Skatteverket registration detail excluded from HEALTH-01, the current higher-education fee rule and proof requirements, and current housing/tenancy procedures before publication.
 
-## Required corrections before core integration
+## Initial findings requiring correction (retained for history)
 
 - SW-REV-01: remove or support the Platsbanken completeness statement.
 - SW-REV-02: align interpreter-availability certainty across EN / UK / RU.
@@ -125,4 +125,27 @@ None identified that is separate from the required corrections.
 
 ## Integration recommendation
 
-READY FOR CORRECTION PASS
+READY FOR CORE INTEGRATION
+
+## Correction pass
+
+Baseline for this correction pass: `6f7acc0e8127acab9ecd4686b31d1fd266b20609`.
+
+- **SW-REV-01 — RESOLVED:** Removed the unsupported claim that not every job is listed in Platsbanken. The vacancy-search service, official search tools, and the distinction between a listing, a job offer and placement remain.
+- **SW-REV-02 — RESOLVED:** Aligned EN / UK / RU: the accepted Ukraine guidance states that an interpreter is available when interacting with Arbetsförmedlingen. The wording does not promise interpreter access for other services or every circumstance.
+- **SW-REV-03 — RESOLVED:** Added WR-S09 to SE-EMP-02’s editorial source set. The article content and wage scope are unchanged; no wage amount was added.
+- **SW-REV-04 — RESOLVED:** Removed the language-introduction individual-study-plan two-month statement from EN / UK / RU because the accepted matrix does not specify its exact statutory trigger clearly enough. Retained the compulsory-school placement decision within two months of reception and its non-universal caveat. Added the omitted sub-detail to editorial exclusions; SE-EDU01-07 remains represented through the supported compulsory-school rule.
+- **SW-REV-05 — RESOLVED:** Made the required income/asset disclosure and reporting of changes explicit in EN / UK / RU, subject to the Agency’s current form and instructions.
+- **SW-REV-06 — RESOLVED:** Restored the scope to a population-registered temporary-protection holder no longer covered by the Reception Act in EN / UK / RU. Individual municipal assessment and the 2 January 2027 warning remain.
+
+### Post-correction result
+
+- Outstanding BLOCKER: 0
+- Outstanding CORRECTION: 0
+- Outstanding POLISH: 0
+- Articles: 8 OK
+- Articles CHANGES REQUIRED: 0
+- SE-EMP-02 editorial source set: 9 source IDs, including WR-S09.
+- Freshness gates: preserved, including the 2027 temporary-protection extension, 1 January 2027 SFI changes, 2 January 2027 Social Services Act amendment, and the other rechecks listed above.
+
+All eight articles remain editorial drafts and are not approved for publication. This correction pass makes them suitable for core integration while retaining Draft / NeedsReview publication controls.

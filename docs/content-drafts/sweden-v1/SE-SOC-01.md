@@ -27,7 +27,7 @@ Daily allowance is intended for daily living costs. A special grant may cover sp
 
 ## How to apply to the Migration Agency
 
-Apply through the reception unit where you are registered and follow the Agency’s current form and instructions. You may need to disclose income and assets and report changes such as a new address or work. Keep the Agency informed of your residential address and remain in Sweden to receive daily allowance or special grant under the rules effective from 1 October 2026. Recovery of improperly paid aid may apply under statutory conditions.
+Apply through the reception unit where you are registered and follow the Agency’s current form and instructions. You must disclose income and assets as required and report changes such as a new address or work. Keep the Agency informed of your residential address and remain in Sweden to receive daily allowance or special grant under the rules effective from 1 October 2026. Recovery of improperly paid aid may apply under statutory conditions.
 
 The Agency says TPD holders from Ukraine are not subject to the new geographical restriction or attendance checks described for specified other reception-system groups. Do not assume those group-specific rules apply to you; follow the rules that apply to your own support.
 
@@ -37,7 +37,7 @@ Migration Agency support under the Reception Act ends when population registrati
 
 ## Municipal economic assistance
 
-Under the Social Services Act rule in force on 20 October 2026, a person still covered by the Reception Act has no right to economic assistance under Chapter 12, Section 1. Once a person is no longer covered, they may apply to the municipality under the ordinary needs-based rules. The municipality assesses resources, other available support and ability to contribute. Applicants able to work normally must be available to the labour market, subject to acceptable reasons. Applying does not guarantee a grant.
+Under the Social Services Act rule in force on 20 October 2026, a person still covered by the Reception Act has no right to economic assistance under Chapter 12, Section 1. A temporary-protection holder registered in the population register who is no longer covered by the Reception Act may apply to the municipality under the ordinary needs-based rules. The municipality assesses resources, other available support and ability to contribute. Applicants able to work normally must be available to the labour market, subject to acceptable reasons. Applying does not guarantee a grant.
 
 This rule changes from 2 January 2027. If you are relying on municipal-assistance rules on or after that date, check the current law and municipal guidance. Do not treat the future amendment as the rule currently in force.
 
@@ -97,7 +97,7 @@ Content:
 
 ## Як звернутися до Міграційного агентства
 
-Подайте заяву до підрозділу прийому, де ви зареєстровані, та дотримуйтеся актуальної форми й інструкцій Агентства. Може знадобитися повідомити про доходи та майно, а також про зміни, наприклад нову адресу чи роботу. Для отримання щоденної допомоги або спеціальної виплати за правилами, чинними з 1 жовтня 2026 року, потрібно залишатися у Швеції та повідомляти Агентству свою адресу проживання. За встановлених законом умов неправомірно отримані кошти можуть підлягати поверненню.
+Подайте заяву до підрозділу прийому, де ви зареєстровані, та дотримуйтеся актуальної форми й інструкцій Агентства. Ви повинні повідомляти про доходи й майно відповідно до вимог чинної форми, а також про зміни, наприклад нову адресу чи роботу. Для отримання щоденної допомоги або спеціальної виплати за правилами, чинними з 1 жовтня 2026 року, потрібно залишатися у Швеції та повідомляти Агентству свою адресу проживання. За встановлених законом умов неправомірно отримані кошти можуть підлягати поверненню.
 
 Агентство зазначає, що на людей з України з тимчасовим захистом не поширюються нове географічне обмеження та перевірки відвідування, описані для окремих інших груп системи прийому. Не вважайте, що правила для цих груп автоматично стосуються вас; дотримуйтеся вимог, застосовних до вашої допомоги.
 
@@ -107,7 +107,7 @@ Content:
 
 ## Муніципальна економічна допомога
 
-За Законом про соціальні послуги, чинним 20 жовтня 2026 року, людина, на яку ще поширюється Закон про прийом, не має права на економічну допомогу за Главою 12, §1. Після припинення такого охоплення людина може звернутися до муніципалітету за звичайними правилами оцінювання потреб. Муніципалітет оцінює ресурси, іншу доступну підтримку та можливість людини зробити внесок. Працездатні заявники зазвичай мають бути доступними для ринку праці, крім випадків, коли є прийнятні підстави. Подання заяви не гарантує виплати.
+За Законом про соціальні послуги, чинним 20 жовтня 2026 року, людина, на яку ще поширюється Закон про прийом, не має права на економічну допомогу за Главою 12, §1. Особа з тимчасовим захистом, зареєстрована в реєстрі населення і на яку більше не поширюється Закон про прийом, може звернутися до муніципалітету за звичайними правилами оцінювання потреб. Муніципалітет оцінює ресурси, іншу доступну підтримку та можливість людини зробити внесок. Працездатні заявники зазвичай мають бути доступними для ринку праці, крім випадків, коли є прийнятні підстави. Подання заяви не гарантує виплати.
 
 Це правило змінюється з 2 січня 2027 року. Якщо ви покладаєтеся на правила муніципальної допомоги в цю дату або пізніше, перевірте чинний закон та рекомендації муніципалітету. Не застосовуйте майбутню зміну як правило, чинне зараз.
 
@@ -167,7 +167,7 @@ Content:
 
 ## Как обратиться в Миграционное агентство
 
-Подайте заявление в подразделение системы приёма, где вы зарегистрированы, и следуйте действующей форме и инструкциям Агентства. Может потребоваться сообщить о доходах и имуществе, а также об изменениях, например нового адреса или работы. Чтобы получать ежедневное пособие или специальную выплату по правилам, действующим с 1 октября 2026 года, нужно оставаться в Швеции и сообщать Агентству адрес проживания. При установленных законом условиях неправомерно полученную помощь могут потребовать вернуть.
+Подайте заявление в подразделение системы приёма, где вы зарегистрированы, и следуйте действующей форме и инструкциям Агентства. Вы должны указывать доходы и имущество в соответствии с требованиями действующей формы и сообщать об изменениях, например о новом адресе или работе. Чтобы получать ежедневное пособие или специальную выплату по правилам, действующим с 1 октября 2026 года, нужно оставаться в Швеции и сообщать Агентству адрес проживания. При установленных законом условиях неправомерно полученную помощь могут потребовать вернуть.
 
 Агентство указывает, что на людей из Украины с временной защитой не распространяются новое географическое ограничение и проверки посещаемости, описанные для отдельных других групп системы приёма. Не следует считать, что правила для этих групп автоматически относятся к вам; соблюдайте требования, применимые к вашей поддержке.
 
@@ -177,7 +177,7 @@ Content:
 
 ## Муниципальная экономическая помощь
 
-Согласно Закону о социальных услугах в редакции, действующей на 20 октября 2026 года, человек, который всё ещё подпадает под действие Закона о приёме, не имеет права на экономическую помощь по главе 12, §1. После прекращения действия Закона о приёме человек может обратиться в муниципалитет по обычным правилам, основанным на оценке нуждаемости. Муниципалитет оценивает ресурсы, другую доступную поддержку и возможность человека участвовать в покрытии расходов. Трудоспособные заявители обычно должны быть доступны для рынка труда, если нет уважительных причин. Подача заявления не гарантирует выплату.
+Согласно Закону о социальных услугах в редакции, действующей на 20 октября 2026 года, человек, который всё ещё подпадает под действие Закона о приёме, не имеет права на экономическую помощь по главе 12, §1. Зарегистрированный в реестре населения обладатель временной защиты, на которого больше не распространяется Закон о приёме, может обратиться в муниципалитет по обычным правилам, основанным на оценке нуждаемости. Муниципалитет оценивает ресурсы, другую доступную поддержку и возможность человека участвовать в покрытии расходов. Трудоспособные заявители обычно должны быть доступны для рынка труда, если нет уважительных причин. Подача заявления не гарантирует выплату.
 
 Это правило меняется с 2 января 2027 года. Если вы полагаетесь на правила муниципальной помощи в эту дату или позднее, проверьте действующий закон и рекомендации муниципалитета. Не применяйте будущее изменение как правило, действующее сейчас.
 

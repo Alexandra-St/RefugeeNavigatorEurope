@@ -31,7 +31,7 @@ For the specific group of children with temporary protection who are not and sho
 
 Schools normally assess a newly arrived pupil’s prior knowledge unless an assessment is clearly unnecessary. The rector is responsible, and the results help determine grade and teaching-group placement; this is educational planning, not automatic qualification equivalency.
 
-In compulsory school, the placement decision is made within two months of reception. In the language-introduction programme, an individual study plan is prepared within two months under its separate trigger. These are specific rules, not one deadline for every education decision. A preparatory class or adjusted teaching may be considered after individual assessment; neither is a universal or mandatory route.
+In compulsory school, the placement decision is made within two months of reception. This is a specific rule, not a universal two-month deadline for every education decision. A preparatory class or adjusted teaching may be considered after individual assessment; neither is a universal or mandatory route.
 
 ## Language support at school
 
@@ -72,7 +72,7 @@ The Swedish Council for Higher Education (UHR) can evaluate completed foreign qu
 ## Editorial exclusions
 
 - No guaranteed chosen school, course place, upper-secondary admission, university admission, language class or support-hour allocation is asserted.
-- The one-month reception guidance is limited to the specified unregistered/not-to-be-registered child cohort; the two-month timelines are limited to their distinct school forms and triggers.
+- The one-month reception guidance is limited to the specified unregistered/not-to-be-registered child cohort. The compulsory-school placement deadline is a separate rule. The language-introduction programme’s individual-study-plan two-month detail is omitted because the accepted matrix does not identify its exact statutory trigger clearly enough for reader-facing wording.
 - Student finance, individual admissions outcomes, local capacity and professional licensing requirements are outside this draft.
 - SFI rules effective 1 January 2027 require a fresh check before publication after that date; no future rule is inferred here.
 - Fee exemption is not presented as Ukraine-specific or automatic; proof and statutory exceptions require current checking.
@@ -102,7 +102,7 @@ Content:
 
 Школи зазвичай оцінюють попередні знання новоприбулого учня, якщо таке оцінювання явно не є зайвим. За нього відповідає ректор; результати допомагають визначити клас і навчальну групу. Це планування навчання, а не автоматичне визнання кваліфікації.
 
-У межах обов’язкової шкільної освіти рішення про розміщення ухвалюється протягом двох місяців після прийому. У програмі мовного вступу індивідуальний навчальний план готують протягом двох місяців за окремим правилом відліку. Це конкретні правила, а не єдиний строк для всіх рішень у сфері освіти. Підготовчий клас або адаптоване навчання можуть розглядатися після індивідуального оцінювання; жоден із цих варіантів не є універсальним чи обов’язковим.
+У межах обов’язкової шкільної освіти рішення про розміщення ухвалюється протягом двох місяців після прийому. Це окреме правило, а не універсальний двомісячний строк для всіх рішень у сфері освіти. Підготовчий клас або адаптоване навчання можуть розглядатися після індивідуального оцінювання; жоден із цих варіантів не є універсальним чи обов’язковим.
 
 ## Мовна підтримка у школі
 
@@ -143,7 +143,7 @@ University Admissions і Antagning — національні канали по�
 ## Editorial exclusions
 
 - Не гарантуються місце в обраній школі, місце на курсі, вступ до старшої середньої школи чи університету, мовний клас або визначена кількість годин підтримки.
-- Строк прийому впродовж місяця стосується лише визначеної групи дітей без реєстрації; двомісячні строки стосуються окремих форм навчання та правил відліку.
+- Строк прийому впродовж місяця стосується лише визначеної групи дітей без реєстрації. Строк ухвалення рішення про розміщення в межах обов’язкової шкільної освіти є окремим правилом. Деталь про двомісячний строк для індивідуального навчального плану в програмі мовного вступу не включено, оскільки прийнята матриця недостатньо чітко визначає точний законодавчий момент початку його відліку для формулювання в статті.
 - Фінансова підтримка студентів, індивідуальні рішення про вступ, місцева місткість і професійне ліцензування не охоплюються.
 - Правила SFI, що набирають чинності 1 січня 2027 року, потрібно повторно перевірити перед публікацією після цієї дати; майбутні правила не припускаються.
 - Звільнення від плати не подається як пільга для українців або як автоматичне; докази та законодавчі винятки потребують актуальної перевірки.
@@ -173,7 +173,7 @@ Content:
 
 Школа обычно оценивает предыдущие знания недавно прибывшего ученика, если такая оценка явно не нужна. За неё отвечает ректор; результаты помогают определить класс и учебную группу. Это планирование обучения, а не автоматическое признание квалификации.
 
-В рамках обязательного школьного обучения решение о распределении принимается в течение двух месяцев после приёма. В программе языкового введения индивидуальный учебный план составляется в течение двух месяцев по отдельному правилу отсчёта. Это конкретные сроки, а не единый срок для всех решений в сфере образования. После индивидуальной оценки могут быть рассмотрены подготовительный класс или адаптированное обучение; ни один из этих вариантов не является универсальным или обязательным.
+В рамках обязательного школьного обучения решение о распределении принимается в течение двух месяцев после приёма. Это отдельное правило, а не универсальный двухмесячный срок для всех решений в сфере образования. После индивидуальной оценки могут быть рассмотрены подготовительный класс или адаптированное обучение; ни один из этих вариантов не является универсальным или обязательным.
 
 ## Языковая поддержка в школе
 
@@ -214,7 +214,7 @@ University Admissions и Antagning — национальные каналы п�
 ## Editorial exclusions
 
 - Не гарантируются место в выбранной школе, место на курсе, поступление в старшую среднюю школу или университет, языковой класс либо определённое число часов поддержки.
-- Срок приёма в течение месяца относится только к указанной группе детей без регистрации; двухмесячные сроки относятся к отдельным формам обучения и правилам отсчёта.
+- Срок приёма в течение месяца относится только к указанной группе детей без регистрации. Срок решения о распределении в рамках обязательного школьного обучения — отдельное правило. Деталь о двухмесячном сроке для индивидуального учебного плана в программе языкового введения не включена, поскольку принятая матрица недостаточно чётко определяет точный установленный законом момент начала его отсчёта для текста статьи.
 - Финансовая поддержка студентов, индивидуальные решения о поступлении, местная вместимость и профессиональное лицензирование не рассматриваются.
 - Правила SFI, вступающие в силу 1 января 2027 года, нужно заново проверить перед публикацией после этой даты; будущие положения здесь не предполагаются.
 - Освобождение от платы не представлено как льгота для украинцев или автоматическое; подтверждения и законодательные исключения требуют актуальной проверки.

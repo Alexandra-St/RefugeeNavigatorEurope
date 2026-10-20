@@ -176,4 +176,4 @@ Content:
 
 ## Editorial source set
 
-WR-S01, WR-S02, WR-S03, WR-S04, WR-S05, WR-S06, WR-S07, WR-S08
+WR-S01, WR-S02, WR-S03, WR-S04, WR-S05, WR-S06, WR-S07, WR-S08, WR-S09
