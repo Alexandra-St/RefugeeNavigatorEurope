@@ -2371,5 +2371,481 @@
     "Title": "Ministerio de Inclusión, “Ayudas del Gobierno para familias vulnerables desplazadas de Ucrania”",
     "Url": "https://www.inclusion.gob.es/web/ucrania-urgente/w/ayudas-familias-vulnerables-ucrania",
     "LastCheckedAt": "2026-10-20T05:06:53+00:00"
+  },
+  {
+    "Id": "62a4c75c-ef6f-4e14-8f74-74d188d0e858",
+    "InformationEntryId": "d2ab273d-21b7-44e4-b408-f4269a8753d8",
+    "Title": "Council of the European Union, Council Implementing Decision (EU) 2026/1912.",
+    "Url": "https://eur-lex.europa.eu/eli/dec_impl/2026/1912/oj/eng",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "28dcb674-a540-4e7b-91e4-8e9d4e0f7fdd",
+    "InformationEntryId": "d2ab273d-21b7-44e4-b408-f4269a8753d8",
+    "Title": "Official Journal of the European Union, corrigendum to Council Implementing Decision (EU) 2026/1912.",
+    "Url": "https://eur-lex.europa.eu/eli/dec_impl/2026/1912/corrigendum/2026-08-05/oj",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "e17f7ee0-b423-42b3-9c9c-280d33c54298",
+    "InformationEntryId": "d2ab273d-21b7-44e4-b408-f4269a8753d8",
+    "Title": "Swedish Migration Agency, Apply for protection under the Temporary Protection Directive.",
+    "Url": "https://www.migrationsverket.se/en/you-want-to-apply/protection-under-the-temporary-protection-directive/apply-for-protection-under-the-temporary-protection-directive.html",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "584e15ef-7e31-4b1e-9a39-efe2aadf9625",
+    "InformationEntryId": "d2ab273d-21b7-44e4-b408-f4269a8753d8",
+    "Title": "Swedish Migration Agency, Stricter rules when the Temporary Protection Directive is extended.",
+    "Url": "https://www.migrationsverket.se/en/newsarchive/stricterruleswhenthetemporaryprotectiondirectiveisextended.5.15b2309e1a04e5ed207368.html",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "14ccfa7d-301f-48df-9194-7e0efd4f1e95",
+    "InformationEntryId": "d2ab273d-21b7-44e4-b408-f4269a8753d8",
+    "Title": "Swedish Migration Agency, Questions and answers about the Temporary Protection Directive (regional actors FAQ, Swedish).",
+    "Url": "https://www.migrationsverket.se/Andra-aktorer/Regioner/Fragor-och-svar-om-massflyktsdirektivet.html",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "59381359-438b-496f-90d2-311a81913479",
+    "InformationEntryId": "d2ab273d-21b7-44e4-b408-f4269a8753d8",
+    "Title": "Swedish Tax Agency, Coming to Sweden from Ukraine.",
+    "Url": "https://www.skatteverket.se/servicelankar/otherlanguages/englishengelska/individualsandemployees/movingtosweden/comingtoswedenfromukraine.4.1657ce2817f5a993c3a25d.html",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "942e9620-0c86-4d4d-816d-6867928748cc",
+    "InformationEntryId": "d2ab273d-21b7-44e4-b408-f4269a8753d8",
+    "Title": "Swedish Parliament, Act (2024:691), current consolidated text including amendment SFS 2026:1166.",
+    "Url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2024691-om-folkbokforing-av-utlanningar-med_sfs-2024-691/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "108b10ab-13a5-4d5b-8102-dc7e65dbdf77",
+    "InformationEntryId": "d2ab273d-21b7-44e4-b408-f4269a8753d8",
+    "Title": "Swedish Parliament, Aliens Ordinance (2006:97), current text.",
+    "Url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/utlanningsforordning-200697_sfs-2006-97/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "6fd70e1b-fb73-46f1-aa8e-176ec5c280a3",
+    "InformationEntryId": "d2ab273d-21b7-44e4-b408-f4269a8753d8",
+    "Title": "Swedish Parliament, Aliens Act (2005:716), current text.",
+    "Url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/utlanningslag-2005716_sfs-2005-716/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "0a609d19-4eea-4d01-b30d-4cae787fc339",
+    "InformationEntryId": "d2ab273d-21b7-44e4-b408-f4269a8753d8",
+    "Title": "Swedish Migration Agency, You plan to travel abroad or move from Sweden.",
+    "Url": "https://www.migrationsverket.se/en/you-have-a-permit-in-sweden/protection-under-the-temporary-protection-directive/you-plan-to-travel-abroad-or-move-from-sweden.html",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "2db46f66-3651-4889-81ae-0dd1dce97bbb",
+    "InformationEntryId": "d2ab273d-21b7-44e4-b408-f4269a8753d8",
+    "Title": "Council of the European Union, Council Implementing Decision (EU) 2022/382.",
+    "Url": "https://eur-lex.europa.eu/eli/dec_impl/2022/382/oj/eng",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "dc8c2eb8-2fdd-4e68-bec4-4fcf83456555",
+    "InformationEntryId": "befa7777-af70-4269-883c-8918961554dc",
+    "Title": "Swedish Migration Agency, Applying for another type of permit when you have a residence permit under the Temporary Protection Directive.",
+    "Url": "https://www.migrationsverket.se/en/you-have-a-permit-in-sweden/protection-under-the-temporary-protection-directive/you-want-to-apply-for-a-different-type-of-permit.html",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "d4b72ce1-6f3e-4f28-ac6d-ff144ad283d7",
+    "InformationEntryId": "befa7777-af70-4269-883c-8918961554dc",
+    "Title": "Swedish Parliament, Act (2026:456) on residence permits in certain cases for foreigners with temporary protection.",
+    "Url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2026456-om-uppehallstillstand-i-vissa-fall_sfs-2026-456/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "7a6e7566-6de2-4c7a-9b52-0f8b8ccfeaf7",
+    "InformationEntryId": "befa7777-af70-4269-883c-8918961554dc",
+    "Title": "Swedish Parliament, Aliens Ordinance (2006:97), current text.",
+    "Url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/utlanningsforordning-200697_sfs-2006-97/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "b2602495-c681-4853-b69e-c173f70abdcd",
+    "InformationEntryId": "befa7777-af70-4269-883c-8918961554dc",
+    "Title": "Swedish Migration Agency, Permanent residence permit.",
+    "Url": "https://www.migrationsverket.se/en/you-want-to-apply/permanent-residence-permit.html",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "af0b44aa-8339-402f-a993-bb91ff578fe4",
+    "InformationEntryId": "befa7777-af70-4269-883c-8918961554dc",
+    "Title": "Swedish Migration Agency, extend a work permit as an employee or self-employed person.",
+    "Url": "https://www.migrationsverket.se/en/you-want-to-extend/work/employee-or-self-employed/employees.html",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "1edfa642-6b18-494f-81dc-0c2eea1728db",
+    "InformationEntryId": "befa7777-af70-4269-883c-8918961554dc",
+    "Title": "Swedish Migration Agency, Apply for long-term resident status in Sweden.",
+    "Url": "https://www.migrationsverket.se/en/you-want-to-apply/long-term-residents-in-sweden.html",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "67b35a29-610f-49e3-b439-c2521683a619",
+    "InformationEntryId": "befa7777-af70-4269-883c-8918961554dc",
+    "Title": "European Parliament and Council, Directive 2003/109/EC, consolidated text.",
+    "Url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:02003L0109-20260612",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "78f08f69-cbf2-4715-8a6c-faedcec8be27",
+    "InformationEntryId": "befa7777-af70-4269-883c-8918961554dc",
+    "Title": "Swedish Migration Agency, Track-change abolished and rules on statutory limitation period changed.",
+    "Url": "https://www.migrationsverket.se/en/news-archive/news/2025-03-13-track-change-abolished-and-rules-on-statutory-limitation-period-changed.html",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "17fa9717-a2fb-467e-815a-f0628c3f2645",
+    "InformationEntryId": "befa7777-af70-4269-883c-8918961554dc",
+    "Title": "Swedish Migration Agency, Several legislative changes in the field of migration from 12 July.",
+    "Url": "https://www.migrationsverket.se/en/news-archive/news/2026-07-09-several-legislative-changes-in-the-field-of-migration-from-12-july.html",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "06e41800-28b2-4cf4-9885-9453373bd7a0",
+    "InformationEntryId": "befa7777-af70-4269-883c-8918961554dc",
+    "Title": "Swedish Parliament, Aliens Act (2005:716), current text.",
+    "Url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/utlanningslag-2005716_sfs-2005-716/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "b4ecaf9b-6860-4896-a766-0adcc2c5ad4c",
+    "InformationEntryId": "a218013b-3a77-4ba2-829a-d724689837f2",
+    "Title": "Swedish Public Employment Service (Arbetsförmedlingen), Are you from Ukraine and looking for work?",
+    "Url": "https://arbetsformedlingen.se/other-languages/english-engelska/are-you-from-ukraine",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "4801dab3-29e2-446e-934f-3970ffa5f772",
+    "InformationEntryId": "a218013b-3a77-4ba2-829a-d724689837f2",
+    "Title": "Arbetsförmedlingen, Find your new job.",
+    "Url": "https://arbetsformedlingen.se/other-languages/english-engelska/find-your-new-job",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "6f9b2ed9-0476-4981-8f5a-1762613fe963",
+    "InformationEntryId": "a218013b-3a77-4ba2-829a-d724689837f2",
+    "Title": "Arbetsförmedlingen, Get started on your job search.",
+    "Url": "https://arbetsformedlingen.se/other-languages/english-engelska/unemployed---what-happens-now/get-started-on-your-job-search",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "3b4700be-7f2b-402d-ba62-0848efd05c18",
+    "InformationEntryId": "a218013b-3a77-4ba2-829a-d724689837f2",
+    "Title": "Arbetsförmedlingen, Before the planning meeting.",
+    "Url": "https://arbetsformedlingen.se/other-languages/english-engelska/unemployed---what-happens-now/before-the-planning-meeting",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "b6f2e260-476a-48af-8d0e-7bb24b3d76cd",
+    "InformationEntryId": "a218013b-3a77-4ba2-829a-d724689837f2",
+    "Title": "Swedish Council for Higher Education (UHR), FAQ: Evaluation of foreign qualifications.",
+    "Url": "https://www.uhr.se/en/start/recognition-of-foreign-qualifications/how-to-apply-for-an-evaluation/faq/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "eae84f22-281a-40ea-b926-9cac01146e25",
+    "InformationEntryId": "a218013b-3a77-4ba2-829a-d724689837f2",
+    "Title": "UHR, Regulated professions.",
+    "Url": "https://uhr.se/en/start/recognition-of-foreign-qualifications/how-to-use-the-assessment/if-you--want-to-work-in-sweden/regulated-professions/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "3afb974c-1420-4905-aafb-c2b83c2fcfaf",
+    "InformationEntryId": "a218013b-3a77-4ba2-829a-d724689837f2",
+    "Title": "Arbetsförmedlingen, Contact for jobseekers.",
+    "Url": "https://arbetsformedlingen.se/other-languages/english-engelska/contact/contact-for-jobseekers",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "1809031a-2cc5-49ae-b6ed-595c9a675b83",
+    "InformationEntryId": "55949af5-b4fe-404e-bcb7-6ebb37131bab",
+    "Title": "Swedish Migration Agency, Work, school and healthcare.",
+    "Url": "https://www.migrationsverket.se/en/you-have-a-permit-in-sweden/protection-under-the-temporary-protection-directive/work-school-and-healthcare.html",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "0d4b84f3-690b-4dc4-a899-69068c7b2c28",
+    "InformationEntryId": "55949af5-b4fe-404e-bcb7-6ebb37131bab",
+    "Title": "Swedish Tax Agency (Skatteverket), Coming to Sweden from Ukraine.",
+    "Url": "https://www.skatteverket.se/servicelankar/otherlanguages/englishengelska/individualsandemployees/movingtosweden/comingtoswedenfromukraine.4.1657ce2817f5a993c3a25d.html",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "78f75cc3-a5d4-497f-9d4a-de6999d8000c",
+    "InformationEntryId": "55949af5-b4fe-404e-bcb7-6ebb37131bab",
+    "Title": "Skatteverket, New in Sweden and will be employed here.",
+    "Url": "https://www.skatteverket.se/servicelankar/otherlanguages/englishengelska/individualsandemployees/newinswedenandwillbeemployedhere.4.2cf1b5cd163796a5c8bb087.html",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "3d4d281b-b267-4e22-a282-8d736b00ebd2",
+    "InformationEntryId": "55949af5-b4fe-404e-bcb7-6ebb37131bab",
+    "Title": "Swedish Parliament, Employment Protection Act (1982:80), current consolidated text.",
+    "Url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-198280-om-anstallningsskydd_sfs-1982-80/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "63a09689-cc20-4436-8609-4ba8b4aeb034",
+    "InformationEntryId": "55949af5-b4fe-404e-bcb7-6ebb37131bab",
+    "Title": "Swedish Parliament, Working Hours Act (1982:673), current consolidated text.",
+    "Url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/arbetstidslag-1982673_sfs-1982-673/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "57cc8224-b19a-44b3-ac8c-87e78d35b309",
+    "InformationEntryId": "55949af5-b4fe-404e-bcb7-6ebb37131bab",
+    "Title": "Swedish Parliament, Annual Leave Act (1977:480), current consolidated text.",
+    "Url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/semesterlag-1977480_sfs-1977-480/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "20cb6a67-b3ac-4505-8736-2a4c1edfb742",
+    "InformationEntryId": "55949af5-b4fe-404e-bcb7-6ebb37131bab",
+    "Title": "Swedish Work Environment Authority (Arbetsmiljöverket), Swedish labour market model and collective agreements.",
+    "Url": "https://www.av.se/en/work-environment-work-and-inspections/foreign-labour-in-sweden/Posting-foreign-labour-in-sweden/swedish-labour-market-model-and-collective-agreements/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "0e6cf194-dcfa-48d2-b91e-1c3d0334c782",
+    "InformationEntryId": "55949af5-b4fe-404e-bcb7-6ebb37131bab",
+    "Title": "Arbetsmiljöverket, The employer’s responsibility for the work environment.",
+    "Url": "https://www.av.se/en/work-environment-work-and-inspections/the-employers-responsibility-for-the-work-environment2/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "f241d32f-d41c-46f1-90c2-8d61eb4b2aea",
+    "InformationEntryId": "55949af5-b4fe-404e-bcb7-6ebb37131bab",
+    "Title": "Arbetsförmedlingen EURES, Find your new job in Sweden.",
+    "Url": "https://arbetsformedlingen.se/other-languages/english-engelska/find-your-new-job-in-sweden",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "61666e4b-67f1-4ca3-894a-3717737eaf40",
+    "InformationEntryId": "2234b91f-4021-40b2-b9d5-a029a6b533f2",
+    "Title": "National Board of Health and Welfare (Socialstyrelsen), Questions and answers about the right to healthcare and assistance in Sweden.",
+    "Url": "https://www.socialstyrelsen.se/om-socialstyrelsen/krisberedskap/samlad-information-med-anledning-av-kriget-i-ukraina/ratt-till-vard-och-bistand-i-sverige/fragor-och-svar-om-ratt-till-vard-och-bistand-i-sverige/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "3b0a97d1-884f-49ac-b3a2-5571780a342d",
+    "InformationEntryId": "2234b91f-4021-40b2-b9d5-a029a6b533f2",
+    "Title": "Swedish Migration Agency, Work, school and healthcare.",
+    "Url": "https://www.migrationsverket.se/en/you-have-a-permit-in-sweden/protection-under-the-temporary-protection-directive/work-school-and-healthcare.html",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "da69130e-5b7e-4087-b061-f4bea7c3d384",
+    "InformationEntryId": "2234b91f-4021-40b2-b9d5-a029a6b533f2",
+    "Title": "Swedish Parliament, Act (2024:691) on population registration of certain foreigners with temporary protection, current text.",
+    "Url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/lag-2024691-om-folkbokforing-av-utlanningar-med_sfs-2024-691/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "4f474221-b476-49e3-a66b-7651d6ae9a2f",
+    "InformationEntryId": "2234b91f-4021-40b2-b9d5-a029a6b533f2",
+    "Title": "Skatteverket, Coming to Sweden from Ukraine.",
+    "Url": "https://www.skatteverket.se/servicelankar/otherlanguages/englishengelska/individualsandemployees/movingtosweden/comingtoswedenfromukraine.4.1657ce2817f5a993c3a25d.html",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "d9f29509-b6d8-4df9-ae03-15e8b176c741",
+    "InformationEntryId": "2234b91f-4021-40b2-b9d5-a029a6b533f2",
+    "Title": "1177 Vårdguiden, This is 1177 (Stockholm region).",
+    "Url": "https://www.1177.se/en/Stockholm/om-1177/det-har-ar-1177/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "275c1c14-3caa-4343-aa7e-67689edfa9bb",
+    "InformationEntryId": "2234b91f-4021-40b2-b9d5-a029a6b533f2",
+    "Title": "SOS Alarm, 112 — Sweden’s emergency number for urgent assistance.",
+    "Url": "https://www.sosalarm.se/en/112-and-other-important-numbers/important-phone-numbers/112--swedens-emergency-number-for-urgent-assistance/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "48a66397-3f08-4dd6-83fd-be6273d70663",
+    "InformationEntryId": "e0f307e9-7991-4350-89f4-2f84a9047393",
+    "Title": "Swedish Migration Agency, Accommodation for people with residence permits under the Temporary Protection Directive.",
+    "Url": "https://www.migrationsverket.se/en/you-have-a-permit-in-sweden/protection-under-the-temporary-protection-directive/accommodation.html",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "90a45dd7-4cbd-4b8c-bd43-1255df682a22",
+    "InformationEntryId": "e0f307e9-7991-4350-89f4-2f84a9047393",
+    "Title": "Swedish Migration Agency, New Reception Act comes into force on 1 October.",
+    "Url": "https://www.migrationsverket.se/en/news-archive/news/2026-10-01-new-reception-act-comes-into-force-on-1-october.html",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "f8308a50-caa9-4628-9a6e-9b8311020dc5",
+    "InformationEntryId": "e0f307e9-7991-4350-89f4-2f84a9047393",
+    "Title": "Swedish Consumer Agency (Konsumentverket), Rights as a tenant.",
+    "Url": "https://www.konsumentverket.se/varor-och-tjanster/rattigheter-som-hyresgast/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "9c5e8480-665c-4a96-8f6b-9a30757e2fa5",
+    "InformationEntryId": "e0f307e9-7991-4350-89f4-2f84a9047393",
+    "Title": "Konsumentverket, Renting an apartment second-hand.",
+    "Url": "https://www.konsumentverket.se/varor-och-tjanster/hyra-hyreslagenhet-i-andra-hand/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "a58836ea-fb10-49c5-a233-558a004fc880",
+    "InformationEntryId": "e0f307e9-7991-4350-89f4-2f84a9047393",
+    "Title": "Konsumentverket, Renting a home from a private individual.",
+    "Url": "https://www.konsumentverket.se/varor-och-tjanster/hyra-bostad-av-privatperson/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "5cb5eec5-c490-4588-992e-5ad516483f12",
+    "InformationEntryId": "e0f307e9-7991-4350-89f4-2f84a9047393",
+    "Title": "Swedish Courts, Rent, housing cooperatives and land leases — how it works.",
+    "Url": "https://www.domstol.se/amnen/hyra-bostadsratt-och-arrende/sa-gar-det-till/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "2bf43e8d-8479-47a7-b429-f2a41006e080",
+    "InformationEntryId": "cac58c0c-ce69-41ac-877e-4fd124105b89",
+    "Title": "Swedish National Agency for Education (Skolverket), “Utbildning för personer som flytt från Ukraina”.",
+    "Url": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/utbildning-for-personer-som-flytt-fran-ukraina",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "eb031d39-0478-479b-b1d4-116fb19c69d7",
+    "InformationEntryId": "cac58c0c-ce69-41ac-877e-4fd124105b89",
+    "Title": "Skolverket, “Nyanlända elevers utbildning”.",
+    "Url": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/nyanlanda-elevers-utbildning",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "5acde4f0-9f59-4712-a5ee-8c557c0184af",
+    "InformationEntryId": "cac58c0c-ce69-41ac-877e-4fd124105b89",
+    "Title": "Skolverket, “Rätt till modersmålsundervisning”.",
+    "Url": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/ratt-till-modersmalsundervisning",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "f549fba3-6194-4e4c-886c-c77d6d419c77",
+    "InformationEntryId": "cac58c0c-ce69-41ac-877e-4fd124105b89",
+    "Title": "Skolverket, “Rätt till sfi”.",
+    "Url": "https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/ratt-till-sfi",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "69d9a99d-446a-48c2-a7c7-f2fdba39433d",
+    "InformationEntryId": "cac58c0c-ce69-41ac-877e-4fd124105b89",
+    "Title": "Swedish Parliament, Education Act (2010:800), current consolidated text.",
+    "Url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skollag-2010800_sfs-2010-800/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "596cc524-ff1d-46d3-98b7-1c18262b0d86",
+    "InformationEntryId": "cac58c0c-ce69-41ac-877e-4fd124105b89",
+    "Title": "University Admissions in Sweden, “Entry requirements”.",
+    "Url": "https://www.universityadmissions.se/en/support-centre/entry-requirements/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "3e123ec8-d1d8-4685-ad4d-1a4f238d0e75",
+    "InformationEntryId": "cac58c0c-ce69-41ac-877e-4fd124105b89",
+    "Title": "University Admissions in Sweden, “Sweden, bachelor’s admission”.",
+    "Url": "https://www.universityadmissions.se/en/apply-to-bachelors/provide-application-documents-bachelors/country-instructions/sweden/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "c8d6a8e9-0512-4933-b223-2ea0e685b0d7",
+    "InformationEntryId": "cac58c0c-ce69-41ac-877e-4fd124105b89",
+    "Title": "Swedish Council for Higher Education (UHR), Ordinance (2010:543) on application fees and tuition fees at higher education institutions, current text.",
+    "Url": "https://www.uhr.se/en/start/laws-and-regulations/Laws-and-regulations/Ordinance-on-application-fees-and-tuition-fees-at-higher-education-institutions/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "9b90dd74-5ac0-46ae-8a03-8a864fa59844",
+    "InformationEntryId": "cac58c0c-ce69-41ac-877e-4fd124105b89",
+    "Title": "University Admissions in Sweden, “Who is required to pay fees?”",
+    "Url": "https://www.universityadmissions.se/en/fees-scholarships-residence-permit/who-is-required-to-pay-fees/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "091fbf01-e458-4e47-8e5b-18854fa2888e",
+    "InformationEntryId": "cac58c0c-ce69-41ac-877e-4fd124105b89",
+    "Title": "UHR, “The recognition process”.",
+    "Url": "https://uhr.se/en/start/recognition-of-foreign-qualifications/enic-naric-sweden/the-recognition-process/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "c1ba3594-7cfc-4c92-abcb-c1819fdf63cd",
+    "InformationEntryId": "8b5cc53a-9933-4366-8421-d795966267ec",
+    "Title": "Swedish Parliament, Mottagandelag (2026:999), current consolidated text.",
+    "Url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/mottagandelag-2026999_sfs-2026-999/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "9ce9cc8b-cd96-4ba7-a62f-022c049e2b48",
+    "InformationEntryId": "8b5cc53a-9933-4366-8421-d795966267ec",
+    "Title": "Swedish Parliament, Mottagandeförordning (2026:1715), current text.",
+    "Url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/mottagandeforordning-20261715_sfs-2026-1715/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "beeb9ffe-a708-4570-80c0-959830014656",
+    "InformationEntryId": "8b5cc53a-9933-4366-8421-d795966267ec",
+    "Title": "Swedish Migration Agency, “Financial aid for people with temporary protection under the Temporary Protection Directive”.",
+    "Url": "https://www.migrationsverket.se/en/you-have-a-permit-in-sweden/protection-under-the-temporary-protection-directive/financial-aid.html",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "57d10098-a6a9-4cbb-9242-8ba46fe93418",
+    "InformationEntryId": "8b5cc53a-9933-4366-8421-d795966267ec",
+    "Title": "Swedish Migration Agency, “New Reception Act comes into force on 1 October”.",
+    "Url": "https://www.migrationsverket.se/en/news-archive/news/2026-10-01-new-reception-act-comes-into-force-on-1-october.html",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "e0c6e5e6-c491-4394-90fc-729ee9d05c3d",
+    "InformationEntryId": "8b5cc53a-9933-4366-8421-d795966267ec",
+    "Title": "Swedish Parliament, Socialtjänstlag (2025:400), current consolidated text.",
+    "Url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/socialtjanstlag-2025400_sfs-2025-400/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "2f022132-dcbb-4b15-817f-1e9542e63710",
+    "InformationEntryId": "8b5cc53a-9933-4366-8421-d795966267ec",
+    "Title": "National Board of Health and Welfare (Socialstyrelsen), “Questions and answers about the right to healthcare and assistance in Sweden”.",
+    "Url": "https://socialstyrelsen.se/om-socialstyrelsen/krisberedskap/samlad-information-med-anledning-av-kriget-i-ukraina/ratt-till-vard-och-bistand-i-sverige/fragor-och-svar-om-ratt-till-vard-och-bistand-i-sverige/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "92eff09d-9d6e-4478-9693-bba2cc41379c",
+    "InformationEntryId": "8b5cc53a-9933-4366-8421-d795966267ec",
+    "Title": "Swedish Parliament, Socialförsäkringsbalk (2010:110), current consolidated text.",
+    "Url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/socialforsakringsbalk-2010110_sfs-2010-110/",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "e4d07c65-fb07-4f6f-b46a-3d05dfc752d1",
+    "InformationEntryId": "8b5cc53a-9933-4366-8421-d795966267ec",
+    "Title": "Arbetsförmedlingen, “Are you from Ukraine?”.",
+    "Url": "https://arbetsformedlingen.se/other-languages/english-engelska/are-you-from-ukraine",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+  },
+  {
+    "Id": "7db6fc96-e074-4c25-9f56-eb745834f386",
+    "InformationEntryId": "8b5cc53a-9933-4366-8421-d795966267ec",
+    "Title": "Arbetsförmedlingen, “Etableringsersättning”.",
+    "Url": "https://arbetsformedlingen.se/for-arbetssokande/extra-stod/nar-du-deltar-i-ett-program/etableringsersattning",
+    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
   }
 ]
