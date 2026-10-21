@@ -21,3 +21,9 @@ The capture fails if the language attribute is wrong, the held article or Draft-
 Successful runs upload the actual PNG files and run report as the artifact **`netherlands-publication-gate-screenshots`**, retained for 30 days. Open the specific workflow run in GitHub Actions and download that artifact to review the screenshots.
 
 Automated capture and assertions do not equal human visual acceptance. The visual release gate remains **REVIEW PENDING** until the saved screenshots are inspected and accepted. This workflow does not promote content statuses, publish content, or deploy the application.
+
+## Phase 18.4Q — Comparison selector correction
+
+The previous CI capture treated each aspect heading ID as the container for its country panels. In `Compare.razor`, the ID belongs to a heading; both `.structured-country` panels are descendants of the enclosing `section.structured-aspect`, whose `aria-labelledby` references that heading. The capture script now locates that section by the verified `aria-labelledby` relationship for Approved aspects, Draft aspects, and the unavailable `residence-filing` aspect, and asserts both country panels are present. Existing visibility, source-leak, language, and overflow assertions remain enabled.
+
+The actual workflow run ID, screenshot count, and artifact URL are recorded in the run-specific Markdown report uploaded alongside the PNGs and in the GitHub Actions run. Human visual review remains pending until those saved images are inspected.

@@ -38,6 +38,12 @@ async function assertNoOverflow(page, viewport, routeName) {
     `${routeName} overflows at ${viewport.width}px: ${JSON.stringify(widths)}`);
 }
 
+function comparisonAspect(page, aspectId) {
+  const headingId = manifest.aspectDomIds[aspectId];
+  assert.ok(headingId, `No heading ID is configured for aspect ${aspectId}`);
+  return page.locator(`section.structured-aspect[aria-labelledby="${headingId}"]`);
+}
+
 async function saveFullPage(page, name, viewport) {
   await page.evaluate(() => document.fonts.ready);
   const filePath = path.join(outputDirectory, name);
@@ -85,8 +91,9 @@ async function main() {
         await assertLanguage(page, language);
         assert.ok(await page.locator('.structured-comparison').count(), 'Structured comparison did not render in Production');
         for (const aspectId of manifest.approvedAspectIds) {
-          const aspect = page.locator(`#${manifest.aspectDomIds[aspectId]}`);
+          const aspect = comparisonAspect(page, aspectId);
           assert.equal(await aspect.count(), 1, `Approved aspect ${aspectId} is missing`);
+          assert.equal(await aspect.locator('.structured-country').count(), 2, `Approved aspect ${aspectId} must contain both country panels`);
           const netherlandsAnswer = aspect.locator('.structured-country').first();
           assert.ok((await netherlandsAnswer.innerText()).includes('SYNTHETIC-CI-FIXTURE'),
             `Approved Netherlands answer ${aspectId} did not render`);
@@ -94,14 +101,19 @@ async function main() {
             `Approved Netherlands answer ${aspectId} has no source link`);
         }
         for (const aspectId of manifest.draftAspectIds) {
-          const aspect = page.locator(`#${manifest.aspectDomIds[aspectId]}`);
+          const aspect = comparisonAspect(page, aspectId);
+          assert.equal(await aspect.count(), 1, `Draft aspect ${aspectId} is missing`);
+          assert.equal(await aspect.locator('.structured-country').count(), 2, `Draft aspect ${aspectId} must contain both country panels`);
           const netherlandsAnswer = aspect.locator('.structured-country').first();
           assert.ok((await netherlandsAnswer.innerText()).includes(unavailableText[language]),
             `Draft Netherlands answer ${aspectId} did not use the unavailable placeholder`);
           assert.equal(await netherlandsAnswer.locator('.fact-sources a').count(), 0,
             `Draft Netherlands source links leaked for ${aspectId}`);
         }
-        const filing = page.locator(`#${manifest.aspectDomIds[manifest.unavailableAspectId]} .structured-country`).first();
+        const filingAspect = comparisonAspect(page, manifest.unavailableAspectId);
+        assert.equal(await filingAspect.count(), 1, 'residence-filing aspect is missing');
+        assert.equal(await filingAspect.locator('.structured-country').count(), 2, 'residence-filing must contain both country panels');
+        const filing = filingAspect.locator('.structured-country').first();
         assert.ok((await filing.innerText()).includes(unavailableText[language]), 'residence-filing must remain unavailable');
         const comparisonHtml = await page.locator('main').innerHTML();
         assert.ok(!comparisonHtml.includes('DRAFT-ONLY-CONTENT-SENTINEL'), 'Draft answer text leaked into Production HTML');
