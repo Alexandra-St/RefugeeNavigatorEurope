@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Hosting;
 using RefugeeNavigator.Data;
 using RefugeeNavigator.Domain;
 using RefugeeNavigator.Web.Components;
@@ -64,6 +65,11 @@ public sealed class NetherlandsContentIntegrationTests
         ["NL-SOC-01"] = "social-assistance"
     };
     private static readonly string[] Languages = ["en", "uk", "ru"];
+    private static readonly HashSet<Guid> PromotedArticleIds = new()
+    {
+        StableArticleIds["NL-EMP-02"], StableArticleIds["NL-HEALTH-01"],
+        StableArticleIds["NL-HOUSING-01"], StableArticleIds["NL-SOC-01"]
+    };
     private static readonly string[] Categories =
     [
         "temporary-protection", "employment", "healthcare", "housing", "education", "social-assistance"
@@ -101,8 +107,8 @@ public sealed class NetherlandsContentIntegrationTests
 
         Assert.Equal(56, catalog.InformationEntries.Count);
         Assert.Equal(168, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(120, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(48, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(132, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(36, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == NetherlandsId).ToArray();
@@ -121,7 +127,8 @@ public sealed class NetherlandsContentIntegrationTests
                 entryTranslations.Select(item => item.LanguageCode).Order(StringComparer.Ordinal).ToArray());
             Assert.All(entryTranslations, translation =>
             {
-                Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+                Assert.Equal(PromotedArticleIds.Contains(entry.Id) ? VerificationStatus.Verified : VerificationStatus.NeedsReview,
+                    translation.VerificationStatus);
                 Assert.False(string.IsNullOrWhiteSpace(translation.Title));
                 Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
                 Assert.False(string.IsNullOrWhiteSpace(translation.Content));
@@ -311,18 +318,20 @@ public sealed class NetherlandsContentIntegrationTests
     [InlineData("en")]
     [InlineData("uk")]
     [InlineData("ru")]
-    public async Task NetherlandsCategoryPagesRenderNeedsReviewArticlesAndTheirSources(string language)
+    public async Task NetherlandsCategoryPagesRespectProductionTranslationGateForAllLanguages(string language)
     {
         var catalog = await Catalog.Value;
         var entries = catalog.InformationEntries.Where(item => item.CountryId == NetherlandsId).ToArray();
         foreach (var category in Categories)
         {
-            var html = WebUtility.HtmlDecode(await RenderAsync<Category>(language,
-                new Dictionary<string, object?>
-                {
-                    [nameof(Category.CountrySlug)] = "netherlands",
-                    [nameof(Category.CategorySlug)] = category
-                }, $"http://localhost/countries/netherlands/categories/{category}"));
+            var parameters = new Dictionary<string, object?>
+            {
+                [nameof(Category.CountrySlug)] = "netherlands",
+                [nameof(Category.CategorySlug)] = category
+            };
+            var uri = $"http://localhost/countries/netherlands/categories/{category}";
+            var developmentHtml = WebUtility.HtmlDecode(await RenderAsync<Category>(language, parameters, uri));
+            var productionHtml = WebUtility.HtmlDecode(await RenderAsync<Category>(language, parameters, uri, Environments.Production));
             var categoryId = CategoryIds[category];
             var matching = entries.Where(entry => entry.CategoryId == categoryId).ToArray();
             Assert.Equal(category is "temporary-protection" or "employment" ? 2 : 1, matching.Length);
@@ -330,15 +339,39 @@ public sealed class NetherlandsContentIntegrationTests
             {
                 var translation = Assert.Single(catalog.InformationEntryTranslations,
                     item => item.InformationEntryId == entry.Id && item.LanguageCode == language);
-                Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
-                Assert.Contains(translation.Title, html);
-                Assert.Contains(translation.Summary, html);
-                Assert.DoesNotContain("Editorial source set", html, StringComparison.OrdinalIgnoreCase);
+                Assert.Equal(PromotedArticleIds.Contains(entry.Id) ? VerificationStatus.Verified : VerificationStatus.NeedsReview,
+                    translation.VerificationStatus);
+                Assert.Contains(translation.Title, developmentHtml);
+                Assert.Contains(translation.Summary, developmentHtml);
+                if (PromotedArticleIds.Contains(entry.Id))
+                {
+                    Assert.Contains(translation.Title, productionHtml);
+                    Assert.Contains(translation.Summary, productionHtml);
+                }
+                Assert.DoesNotContain("Editorial source set", developmentHtml, StringComparison.OrdinalIgnoreCase);
                 foreach (var source in catalog.OfficialSources.Where(item => item.InformationEntryId == entry.Id))
-                    Assert.Contains($"href=\"{source.Url.AbsoluteUri}\"", html);
+                {
+                    Assert.Contains($"href=\"{source.Url.AbsoluteUri}\"", developmentHtml);
+                    if (PromotedArticleIds.Contains(entry.Id))
+                        Assert.Contains($"href=\"{source.Url.AbsoluteUri}\"", productionHtml);
+                }
             }
-            Assert.DoesNotContain("Country.Netherlands", html, StringComparison.Ordinal);
-            Assert.DoesNotContain("Category.", html, StringComparison.Ordinal);
+
+            foreach (var heldEntry in matching.Where(entry => !PromotedArticleIds.Contains(entry.Id)))
+            {
+                var translation = Assert.Single(catalog.InformationEntryTranslations,
+                    item => item.InformationEntryId == heldEntry.Id && item.LanguageCode == language);
+                Assert.DoesNotContain(translation.Title, productionHtml);
+                Assert.DoesNotContain(translation.Summary, productionHtml);
+                var firstContentLine = translation.Content.Split('\n', StringSplitOptions.RemoveEmptyEntries)[0];
+                var firstContentText = firstContentLine.StartsWith("## ", StringComparison.Ordinal)
+                    ? firstContentLine[3..]
+                    : firstContentLine;
+                Assert.DoesNotContain(firstContentText, productionHtml);
+                Assert.DoesNotContain($"id=\"entry-{heldEntry.Id:N}\"", productionHtml);
+            }
+            Assert.DoesNotContain("Country.Netherlands", productionHtml, StringComparison.Ordinal);
+            Assert.DoesNotContain("Category.", productionHtml, StringComparison.Ordinal);
         }
     }
 
@@ -356,19 +389,25 @@ public sealed class NetherlandsContentIntegrationTests
         foreach (var entry in catalog.InformationEntries.Where(item => item.CountryId == NetherlandsId))
         foreach (var translation in catalog.InformationEntryTranslations.Where(item =>
                      item.InformationEntryId == entry.Id && item.LanguageCode == language))
-            Assert.DoesNotContain(translation.Title, html);
+        {
+            if (PromotedArticleIds.Contains(entry.Id))
+                Assert.Contains(translation.Title, html);
+            else
+                Assert.DoesNotContain(translation.Title, html);
+        }
     }
 
     [Fact]
-    public async Task CountryComparisonV2HasTwentyFourDraftNetherlandsFacts()
+    public async Task CountryComparisonV2HasTwelveApprovedAndTwelveDraftNetherlandsFacts()
     {
         var json = await File.ReadAllTextAsync(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json"));
         using var document = JsonDocument.Parse(json);
         var countrySlugs = FindCountrySlugs(document.RootElement).ToArray();
         Assert.Equal(24, countrySlugs.Count(slug => string.Equals(slug, "netherlands", StringComparison.OrdinalIgnoreCase)));
-        var draftStatuses = FindCountryStatuses(document.RootElement, "netherlands").ToArray();
-        Assert.Equal(24, draftStatuses.Length);
-        Assert.All(draftStatuses, status => Assert.Equal("Draft", status));
+        var statuses = FindCountryStatuses(document.RootElement, "netherlands").ToArray();
+        Assert.Equal(24, statuses.Length);
+        Assert.Equal(12, statuses.Count(status => status == "Approved"));
+        Assert.Equal(12, statuses.Count(status => status == "Draft"));
     }
 
     private static IEnumerable<string> FindCountrySlugs(JsonElement element)
@@ -464,7 +503,8 @@ public sealed class NetherlandsContentIntegrationTests
     }
 
     private static async Task<string> RenderAsync<TComponent>(string language,
-        IDictionary<string, object?>? parameters = null, string uri = "http://localhost/") where TComponent : IComponent
+        IDictionary<string, object?>? parameters = null, string uri = "http://localhost/",
+        string environmentName = "Development") where TComponent : IComponent
     {
         var oldCulture = CultureInfo.CurrentCulture;
         var oldUiCulture = CultureInfo.CurrentUICulture;
@@ -478,9 +518,9 @@ public sealed class NetherlandsContentIntegrationTests
             services.AddLocalization(options => options.ResourcesPath = "Resources");
             services.AddSingleton(await Catalog.Value);
             services.AddSingleton(new StepByStepGuideCatalog([]));
-            services.AddSingleton<IWebHostEnvironment>(new TestEnvironment());
             services.AddSingleton<NavigationManager>(_ => new TestNavigationManager(uri));
             await ComparisonTestServices.RegisterAsync(services);
+            services.AddSingleton<IWebHostEnvironment>(new TestEnvironment(environmentName));
             using var provider = services.BuildServiceProvider();
             await using var renderer = new HtmlRenderer(provider, provider.GetRequiredService<ILoggerFactory>());
             var parameterView = parameters is null ? ParameterView.Empty : ParameterView.FromDictionary(parameters);
@@ -503,10 +543,10 @@ public sealed class NetherlandsContentIntegrationTests
         protected override void NavigateToCore(string uri, bool forceLoad) => Uri = ToAbsoluteUri(uri).AbsoluteUri;
     }
 
-    private sealed class TestEnvironment : IWebHostEnvironment
+    private sealed class TestEnvironment(string environmentName) : IWebHostEnvironment
     {
         public string ApplicationName { get; set; } = "RefugeeNavigator.Tests";
-        public string EnvironmentName { get; set; } = "Development";
+        public string EnvironmentName { get; set; } = environmentName;
         public string WebRootPath { get; set; } = AppContext.BaseDirectory;
         public string ContentRootPath { get; set; } = AppContext.BaseDirectory;
         public IFileProvider WebRootFileProvider { get; set; } = new NullFileProvider();

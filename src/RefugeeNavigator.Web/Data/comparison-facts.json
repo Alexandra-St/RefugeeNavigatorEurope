@@ -1118,7 +1118,7 @@
             {
               "CountrySlug": "netherlands",
               "InformationEntryId": "6a077f79-89c2-55d6-81f3-9ba7279979c9",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "ba44d821-4a3d-528e-8f8a-271b1d33154c",
@@ -1227,7 +1227,7 @@
             {
               "CountrySlug": "netherlands",
               "InformationEntryId": "6a077f79-89c2-55d6-81f3-9ba7279979c9",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "583fa01b-fa9f-588e-acef-167a5f8a71d0",
@@ -1333,7 +1333,7 @@
             {
               "CountrySlug": "netherlands",
               "InformationEntryId": "6a077f79-89c2-55d6-81f3-9ba7279979c9",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "1f249289-a637-55f3-ad23-582657f3ca7c"
@@ -1452,7 +1452,7 @@
             {
               "CountrySlug": "netherlands",
               "InformationEntryId": "d5c4d5fa-3b0f-5cc2-865f-841bd40911d1",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "9b608d08-de8a-58a4-8d19-0d2b4bd63eda",
@@ -1564,7 +1564,7 @@
             {
               "CountrySlug": "netherlands",
               "InformationEntryId": "d5c4d5fa-3b0f-5cc2-865f-841bd40911d1",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "bba4ed15-6a60-5016-9d6e-7183cfdeedfc",
@@ -1673,7 +1673,7 @@
             {
               "CountrySlug": "netherlands",
               "InformationEntryId": "d5c4d5fa-3b0f-5cc2-865f-841bd40911d1",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "e59632da-eb67-5b56-840f-9749cdc9f171",
@@ -1788,7 +1788,7 @@
             {
               "CountrySlug": "netherlands",
               "InformationEntryId": "19dde97c-cb42-5a90-97f7-e344f2139d2e",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "39581114-469f-546f-b52d-ae3906235e34",
@@ -1899,7 +1899,7 @@
             {
               "CountrySlug": "netherlands",
               "InformationEntryId": "19dde97c-cb42-5a90-97f7-e344f2139d2e",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "af04791b-c4e2-595a-8512-6b923e4488fb"
@@ -2006,7 +2006,7 @@
             {
               "CountrySlug": "netherlands",
               "InformationEntryId": "19dde97c-cb42-5a90-97f7-e344f2139d2e",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "6290793b-f3f9-5b9b-a7ab-f71847e8b6b0",
@@ -2463,7 +2463,7 @@
             {
               "CountrySlug": "netherlands",
               "InformationEntryId": "8d466e7d-93f7-596e-a44f-188e04396aa0",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "b4d671c9-8e01-578b-b54a-1f1e822df022",
@@ -2577,7 +2577,7 @@
             {
               "CountrySlug": "netherlands",
               "InformationEntryId": "8d466e7d-93f7-596e-a44f-188e04396aa0",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "b4d671c9-8e01-578b-b54a-1f1e822df022"
@@ -2679,7 +2679,7 @@
             {
               "CountrySlug": "netherlands",
               "InformationEntryId": "8d466e7d-93f7-596e-a44f-188e04396aa0",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "b4d671c9-8e01-578b-b54a-1f1e822df022",
