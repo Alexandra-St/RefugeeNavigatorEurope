@@ -45,12 +45,12 @@ public sealed class NetherlandsContentIntegrationTests
     private static readonly IReadOnlyDictionary<string, int> ExpectedSourceCounts = new Dictionary<string, int>
     {
         ["NL-TP-01"] = 8,
-        ["NL-TP-02"] = 9,
-        ["NL-EMP-01"] = 4,
+        ["NL-TP-02"] = 8,
+        ["NL-EMP-01"] = 3,
         ["NL-EMP-02"] = 6,
         ["NL-HEALTH-01"] = 11,
         ["NL-HOUSING-01"] = 7,
-        ["NL-EDU-01"] = 10,
+        ["NL-EDU-01"] = 9,
         ["NL-SOC-01"] = 4
     };
     private static readonly IReadOnlyDictionary<string, string> DraftFolders = new Dictionary<string, string>
@@ -198,7 +198,7 @@ public sealed class NetherlandsContentIntegrationTests
     }
 
     [Fact]
-    public async Task IntegratedTranslationsMatchAllNetherlandsDraftsWithOnlyTheApprovedDuoCorrection()
+    public async Task IntegratedTranslationsMatchAllNetherlandsDrafts()
     {
         var catalog = await Catalog.Value;
         var repositoryRoot = FindRepositoryRoot();
@@ -217,18 +217,6 @@ public sealed class NetherlandsContentIntegrationTests
             foreach (var (languageCode, section) in languageMap)
             {
                 var expected = ParseDraft(draft, section);
-                if (key == "NL-EDU-01")
-                {
-                    var correction = section switch
-                    {
-                        "EN" => (Old: "and not qualifying for student finance or a grant.", New: "and not qualifying for student finance or a grant for students in secondary education because you do not meet the nationality criteria."),
-                        "UK" => (Old: "а також відсутність права на студентське фінансування чи грант.", New: "а також відсутність права на студентське фінансування чи грант для учнів закладів середньої освіти через невідповідність критеріям громадянства."),
-                        "RU" => (Old: "а также отсутствие права на студенческое финансирование или грант.", New: "а также отсутствие права на студенческое финансирование или грант для учащихся среднего образования из-за несоответствия критериям гражданства."),
-                        _ => throw new InvalidOperationException($"Unexpected language section {section}.")
-                    };
-                    Assert.Equal(1, expected.Content.Split(correction.Old, StringSplitOptions.None).Length - 1);
-                    expected = (expected.Title, expected.Summary, expected.Content.Replace(correction.Old, correction.New, StringComparison.Ordinal));
-                }
                 var actual = Assert.Single(catalog.InformationEntryTranslations,
                     item => item.InformationEntryId == entry.Id && item.LanguageCode == languageCode);
                 Assert.Equal(expected.Title, actual.Title);
@@ -247,9 +235,9 @@ public sealed class NetherlandsContentIntegrationTests
         var entryIds = entries.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => entryIds.Contains(item.InformationEntryId)).ToArray();
 
-        Assert.Equal(59, sources.Length);
-        Assert.Equal(466, catalog.OfficialSources.Count);
-        Assert.Equal(44, sources.Select(item => item.Url.AbsoluteUri).Distinct(StringComparer.OrdinalIgnoreCase).Count());
+        Assert.Equal(56, sources.Length);
+        Assert.Equal(463, catalog.OfficialSources.Count);
+        Assert.Equal(42, sources.Select(item => item.Url.AbsoluteUri).Distinct(StringComparer.OrdinalIgnoreCase).Count());
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         Assert.All(sources, source =>
         {

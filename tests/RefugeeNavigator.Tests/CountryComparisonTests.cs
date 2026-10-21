@@ -65,7 +65,7 @@ public sealed class CountryComparisonTests
         Assert.Equal(132, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Approved));
         Assert.Equal(36, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Draft));
         Assert.All(facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Where(fact => fact.CountrySlug is not ("sweden" or "netherlands")), fact => Assert.Equal(ComparisonFactStatus.Approved, fact.Status));
-        Assert.Equal(327, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Sum(fact => fact.OfficialSourceIds.Count));
+        Assert.Equal(325, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Sum(fact => fact.OfficialSourceIds.Count));
         Assert.Equal(56, catalog.InformationEntries.Count);
         Assert.Equal(168, catalog.InformationEntryTranslations.Count);
         Assert.Equal(132, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
@@ -299,6 +299,14 @@ public sealed class CountryComparisonTests
         Assert.Equal(24, netherlandsFacts.Length);
         Assert.Equal(23, netherlandsFacts.Count(item => item.fact.IsAvailable));
         Assert.Equal(1, netherlandsFacts.Count(item => !item.fact.IsAvailable));
+        Assert.Equal(
+            new[]
+            {
+                Guid.Parse("979a64e2-7a45-5c2b-8151-9ad7f57d61d8"),
+                Guid.Parse("fda6d123-58d8-5858-9e91-311f5266f5ee"),
+                Guid.Parse("249d9618-2212-5251-8f6e-8de0766e0cf3")
+            },
+            netherlandsFacts.Single(item => item.Id == "residence-routes").fact.OfficialSourceIds);
         Assert.Equal(144, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts)
             .Count(fact => fact.CountrySlug != "netherlands"));
         Assert.All(netherlandsFacts, item =>
@@ -381,9 +389,9 @@ public sealed class CountryComparisonTests
             .ToDictionary(item => item.LanguageCode);
         var preservedConditions = new Dictionary<string, string[]>
         {
-            ["en"] = ["only if all criteria are met", "person under temporary protection", "age 18–under 31 on 1 August", "inability to pay/no sponsor", "31 July 2027", "2026–27"],
-            ["uk"] = ["лише за виконання всіх критеріїв", "людина під тимчасовим захистом", "віку від 18 до 31 року (не включно) на 1 серпня", "неможливості сплатити/відсутності спонсора", "31 липня 2027 року", "2026–2027"],
-            ["ru"] = ["только при выполнении всех критериев", "человек под временной защитой", "возраст от 18 до 31 года (не включая) на 1 августа", "невозможность оплатить/отсутствие спонсора", "31 июля 2027 года", "2026–2027"]
+            ["en"] = ["only if all criteria are met", "person under temporary protection", "age 18 to under 31 on 1 August", "inability to pay and no sponsor", "31 July 2027", "2026–27"],
+            ["uk"] = ["лише за виконання всіх критеріїв", "людина під тимчасовим захистом", "віку від 18 до 31 року (не включно) на 1 серпня", "неможливості сплатити й відсутності спонсора", "31 липня 2027 року", "2026–2027"],
+            ["ru"] = ["только при выполнении всех критериев", "человек под временной защитой", "возраст от 18 до 31 года (не включая) на 1 августа", "невозможность оплатить обучение и отсутствие спонсора", "31 июля 2027 года", "2026–2027"]
         };
         foreach (var (language, reason) in nationalityReasons)
         {

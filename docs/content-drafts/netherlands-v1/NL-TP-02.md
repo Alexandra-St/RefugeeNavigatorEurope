@@ -12,7 +12,7 @@ Title:
 Residence Options Beyond Temporary Protection in the Netherlands
 
 Summary:
-Work, partner and other Dutch residence routes have separate requirements. A planned transition document is not yet an application route, and research has not established whether temporary-protection time counts toward permanent residence.
+Work, partner and other Dutch residence routes have separate requirements. Accessible official guidance describes prospective transition planning; it does not establish automatic conversion, individual entitlement or a universal filing procedure. Check current IND guidance for the relevant route. Research has not established whether temporary-protection time counts toward permanent residence.
 
 Content:
 ## Ordinary residence routes are separate
@@ -23,9 +23,9 @@ Dutch residence routes based on work, a partner or family relationship, and othe
 
 Before relying on a route, check its current IND requirements, sponsor or family conditions, documents and filing instructions. The reviewed sources do not establish a general process for applying inside the Netherlands while holding temporary protection, or a complete list of routes available in that situation. Do not assume that an application can be filed in-country or that a change of status is automatic. This article does not recommend a personal application or withdrawing an asylum claim.
 
-## A transition document is still planned, not operational
+## Official guidance describes prospective transition planning
 
-The Cabinet has described an intention to develop a transition document for a future group of people under temporary protection who cannot return and do not have another regular permit. A September 2026 migration memorandum proposes a design and asks decision-makers to approve further legal work and preparation. The current material does not establish that this measure has been enacted, brought into force, opened for applications or guaranteed to any person. No operative application procedure or confirmed individual entitlement was verified as of 20 October 2026. One English Government.nl page still contains older transition information; it should not be treated as a current application instruction.
+Accessible IND and Government.nl guidance describes prospective work on a transition policy or document for some people under temporary protection. The reviewed guidance does not establish automatic conversion, individual entitlement or a universal filing procedure. Check current IND updates and route-specific filing instructions. One English Government.nl page still contains older transition information; do not treat it as current application guidance.
 
 ## Permanent residence needs a separate eligibility check
 
@@ -35,7 +35,7 @@ IND’s general permanent-residence overview describes a five-year residence per
 
 - Ordinary residence routes are separate → NL-TP02-01
 - Ask IND about the route and where an application can be filed → NL-TP02-01, NL-TP02-04
-- A transition document is still planned, not operational → NL-TP02-03
+- Official guidance describes prospective transition planning → NL-TP02-03
 - Permanent residence needs a separate eligibility check → NL-TP02-02
 
 ## Editorial exclusions
@@ -52,7 +52,7 @@ Title:
 Варіанти проживання за межами тимчасового захисту в Нідерландах
 
 Summary:
-Маршрути проживання на підставі роботи, партнерства чи сімейних обставин мають різні вимоги. Запланований документ для переходу ще не є процедурою подання заяви, а дослідження не встановило, чи зараховується час тимчасового захисту до строку для постійного проживання.
+Маршрути проживання на підставі роботи, партнерства чи сімейних обставин мають різні вимоги. Доступні офіційні рекомендації описують перспективне планування переходу, але не встановлюють автоматичного переходу, індивідуального права чи універсальної процедури подання. Перевіряйте актуальні рекомендації IND щодо відповідного маршруту. Дослідження не встановило, чи зараховується час тимчасового захисту до строку для постійного проживання.
 
 Content:
 ## Звичайні маршрути проживання є окремими
@@ -63,9 +63,9 @@ Content:
 
 Перш ніж покладатися на певний маршрут, перевірте чинні вимоги IND, умови щодо спонсора чи сім’ї, документи та інструкції з подання. Перевірені джерела не встановлюють загальної процедури подання заяви в Нідерландах під час тимчасового захисту або повного переліку доступних у такій ситуації маршрутів. Не припускайте, що заяву можна подати всередині країни чи що зміна статусу відбувається автоматично. Цей матеріал не рекомендує конкретну заяву або відкликання заяви про притулок.
 
-## Документ для переходу поки запланований, а не чинний
+## Офіційні рекомендації описують перспективне планування переходу
 
-Кабінет міністрів заявляв про намір розробити документ для переходу для майбутньої групи людей під тимчасовим захистом, які не можуть повернутися й не мають іншого звичайного дозволу на проживання. У меморандумі з питань міграції за вересень 2026 року запропоновано модель і запитано дозвіл на подальшу правову роботу та підготовку. Наявні матеріали не підтверджують, що цей захід ухвалений як закон, набрав чинності, приймає заяви чи гарантований будь-кому. Станом на 20 жовтня 2026 року не підтверджено чинної процедури подання або індивідуального права на документ. На одній англомовній сторінці Government.nl збереглася старіша інформація про перехід; її не слід сприймати як актуальну інструкцію щодо подання.
+Доступні рекомендації IND і Government.nl описують перспективну роботу над політикою або документом для переходу для частини людей під тимчасовим захистом. Перевірені рекомендації не встановлюють автоматичного переходу, індивідуального права чи універсальної процедури подання. Перевіряйте актуальні оновлення IND та інструкції щодо подання за конкретним маршрутом. На одній англомовній сторінці Government.nl досі є старіша інформація про перехід; не сприймайте її як чинну інструкцію щодо подання заяви.
 
 ## Постійне проживання потребує окремої перевірки умов
 
@@ -75,7 +75,7 @@ Content:
 
 - Звичайні маршрути проживання є окремими → NL-TP02-01
 - Запитайте IND про маршрут і місце подання заяви → NL-TP02-01, NL-TP02-04
-- Документ для переходу поки запланований, а не чинний → NL-TP02-03
+- Офіційні рекомендації описують перспективне планування переходу → NL-TP02-03
 - Постійне проживання потребує окремої перевірки умов → NL-TP02-02
 
 ## Editorial exclusions
@@ -92,7 +92,7 @@ Title:
 Варианты проживания за пределами временной защиты в Нидерландах
 
 Summary:
-У маршрутов проживания на основании работы, партнёрства или семейных обстоятельств разные требования. Запланированный переходный документ пока не является процедурой подачи заявления, а исследование не установило, засчитывается ли период временной защиты для постоянного проживания.
+У маршрутов проживания на основании работы, партнёрства или семейных обстоятельств разные требования. Доступные официальные рекомендации описывают перспективное планирование перехода, но не устанавливают автоматический переход, индивидуальное право или универсальную процедуру подачи. Проверяйте актуальные рекомендации IND для соответствующего маршрута. Исследование не установило, засчитывается ли время временной защиты для постоянного проживания.
 
 Content:
 ## Обычные маршруты проживания различаются
@@ -103,9 +103,9 @@ Content:
 
 Прежде чем рассчитывать на конкретный маршрут, проверьте действующие требования IND, условия для спонсора или семьи, документы и порядок подачи. Проверенные источники не устанавливают общей процедуры подачи заявления внутри Нидерландов во время временной защиты или полного перечня маршрутов, доступных в такой ситуации. Не предполагайте, что заявление можно подать внутри страны или что статус меняется автоматически. Этот материал не рекомендует конкретное заявление или отзыв заявления о предоставлении убежища.
 
-## Переходный документ пока планируется, но не действует
+## Официальные рекомендации описывают перспективное планирование перехода
 
-Кабинет министров заявлял о намерении разработать переходный документ для будущей группы людей под временной защитой, которые не могут вернуться и не имеют другого обычного разрешения на проживание. В миграционном меморандуме за сентябрь 2026 года предложена модель и запрошено разрешение на дальнейшую правовую работу и подготовку. Имеющиеся материалы не подтверждают, что эту меру приняли как закон, ввели в действие, открыли для подачи заявлений или гарантировали кому-либо. По состоянию на 20 октября 2026 года действующая процедура подачи и индивидуальное право на документ не подтверждены. На одной англоязычной странице Government.nl осталась более ранняя информация о переходе; её не следует считать актуальной инструкцией по подаче заявления.
+Доступные рекомендации IND и Government.nl описывают перспективную работу над политикой или документом для перехода для некоторых людей под временной защитой. Проверенные рекомендации не устанавливают автоматический переход, индивидуальное право или универсальную процедуру подачи. Проверяйте актуальные обновления IND и инструкции по подаче для конкретного маршрута. На одной англоязычной странице Government.nl всё ещё есть более ранняя информация о переходе; не считайте её действующей инструкцией по подаче заявления.
 
 ## Для постоянного проживания нужна отдельная проверка условий
 
@@ -115,7 +115,7 @@ Content:
 
 - Обычные маршруты проживания различаются → NL-TP02-01
 - Уточните в IND маршрут и место подачи заявления → NL-TP02-01, NL-TP02-04
-- Переходный документ пока планируется, но не действует → NL-TP02-03
+- Официальные рекомендации описывают перспективное планирование перехода → NL-TP02-03
 - Для постоянного проживания нужна отдельная проверка условий → NL-TP02-02
 
 ## Editorial exclusions
@@ -128,4 +128,4 @@ Content:
 
 ## Editorial source set
 
-TP02-S01, TP02-S02, TP02-S03, TP02-S04, TP02-S05, TP02-S06, TP02-S07, TP02-S08, TP02-S10
+TP02-S01, TP02-S02, TP02-S03, TP02-S04, TP02-S05, TP02-S06, TP02-S07, TP02-S08

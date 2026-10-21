@@ -29,20 +29,20 @@ For the described Ukrainian temporary-protection cohort, the January 2026 munici
 
 The government says people in the described temporary-protection arrangement do not have a civic-integration duty because their stay is temporary. This should not be generalized to another residence status. Voluntary Dutch learning is separate from civic integration.
 
-## MBO, higher education and diploma evaluation
+## MBO and higher education
 
-Adults who are lawfully resident may explore MBO or higher education, but the course and institution set admission and language requirements. Nuffic or SBB diploma evaluation can help an institution assess prior education; it is non-binding and does not guarantee admission, equivalence, a professional licence or work authorization. Ask the institution about the programme and its own decision process.
+Adults who are lawfully resident may explore MBO or higher education, but the course and institution set admission and language requirements. Ask the institution about the programme and its own decision process.
 
 ## Conditional DUO MBO course-fee remission for 2026–27
 
-DUO describes a course-fee remission route for specified MBO applicants under temporary protection, but only when all listed conditions are met. For the 2026–27 school year, the conditions include being aged 18 to under 31 on 1 August, being unable to pay and having no sponsor, and not qualifying for student finance or a grant. In some cases, an existing continuous MBO remission may continue after age 30. The application uses the current DUO form and must be submitted by 31 July 2027. Check DUO’s current form and full conditions. This is not a general right to free MBO, higher education or Dutch-language courses.
+DUO describes a course-fee remission route for specified MBO applicants under temporary protection, but only when all listed conditions are met. For the 2026–27 school year, the conditions include being aged 18 to under 31 on 1 August, being unable to pay and having no sponsor, and not qualifying for student finance or a grant for students in secondary education because you do not meet the nationality criteria. In some cases, an existing continuous MBO remission may continue after age 30. The application uses the current DUO form and must be submitted by 31 July 2027. Check DUO’s current form and full conditions. This is not a general right to free MBO, higher education or Dutch-language courses.
 
 ### Claim coverage
 
 - School access and attendance → NL-EDU01-01, NL-EDU01-02
 - Newcomer language support for children → NL-EDU01-03
 - Adult Dutch-language learning is a local route → NL-EDU01-03
-- MBO, higher education and diploma evaluation → NL-EDU01-04
+- MBO and higher education → NL-EDU01-04
 - Conditional DUO MBO course-fee remission for 2026–27 → NL-EDU01-05
 
 ## Editorial exclusions
@@ -76,20 +76,20 @@ Content:
 
 Уряд зазначає, що для людей у описаному режимі тимчасового захисту немає обов’язку громадянської інтеграції, оскільки перебування є тимчасовим. Це правило не слід поширювати на інший статус проживання. Добровільне вивчення нідерландської є окремим від громадянської інтеграції.
 
-## MBO, вища освіта та оцінювання диплома
+## MBO та вища освіта
 
-Повнолітні, які законно проживають у країні, можуть розглянути MBO або вищу освіту, але вимоги до вступу й мови визначає конкретна програма та заклад. Оцінювання диплома через Nuffic або SBB може допомогти закладу розглянути попередню освіту; воно має рекомендаційний характер і не гарантує вступу, еквівалентності, професійної ліцензії чи права на роботу. Запитайте заклад про програму та його процедуру ухвалення рішення.
+Повнолітні, які законно проживають у країні, можуть розглянути MBO або вищу освіту, але вимоги до вступу й мови визначає конкретна програма та заклад. Запитайте заклад про програму та його процедуру ухвалення рішення.
 
 ## Умовне звільнення DUO від плати за MBO у 2026–27 роках
 
-DUO описує можливість звільнення від плати за навчання для визначених заявників MBO під тимчасовим захистом, але лише за виконання всіх перелічених умов. Для 2026–27 навчального року серед умов: вік від 18 років до досягнення 31 року станом на 1 серпня, неможливість сплатити й відсутність спонсора, а також відсутність права на студентське фінансування чи грант. У деяких випадках безперервне звільнення для MBO може тривати після 30 років. Заява подається за актуальною формою DUO до 31 липня 2027 року. Перевірте чинну форму й повний перелік умов DUO. Це не загальне право на безплатну MBO, вищу освіту чи курси нідерландської.
+DUO описує можливість звільнення від плати за навчання для визначених заявників MBO під тимчасовим захистом, але лише за виконання всіх перелічених умов. Для 2026–27 навчального року серед умов: вік від 18 років до досягнення 31 року станом на 1 серпня, неможливість сплатити й відсутність спонсора, а також відсутність права на студентське фінансування чи грант для учнів закладів середньої освіти через невідповідність критеріям громадянства. У деяких випадках безперервне звільнення для MBO може тривати після 30 років. Заява подається за актуальною формою DUO до 31 липня 2027 року. Перевірте чинну форму й повний перелік умов DUO. Це не загальне право на безплатну MBO, вищу освіту чи курси нідерландської.
 
 ### Claim coverage
 
 - Доступ до школи та обов’язкове навчання → NL-EDU01-01, NL-EDU01-02
 - Мовна підтримка для дітей у newcomer-класах → NL-EDU01-03
 - Вивчення нідерландської дорослими залежить від місцевих пропозицій → NL-EDU01-03
-- MBO, вища освіта та оцінювання диплома → NL-EDU01-04
+- MBO та вища освіта → NL-EDU01-04
 - Умовне звільнення DUO від плати за MBO у 2026–27 роках → NL-EDU01-05
 
 ## Editorial exclusions
@@ -123,20 +123,20 @@ Content:
 
 Правительство указывает, что для людей в описанном режиме временной защиты нет обязанности проходить гражданскую интеграцию, поскольку пребывание временное. Это правило нельзя распространять на другой статус проживания. Добровольное изучение нидерландского языка — отдельный вопрос.
 
-## MBO, высшее образование и оценка диплома
+## MBO и высшее образование
 
-Совершеннолетние, законно проживающие в стране, могут рассмотреть обучение MBO или в вузе, но требования к поступлению и языку устанавливает конкретная программа и учебное заведение. Оценка диплома через Nuffic или SBB может помочь учебному заведению рассмотреть предыдущее образование; она носит рекомендательный характер и не гарантирует поступление, эквивалентность, профессиональную лицензию или право на работу. Узнайте у учебного заведения о программе и его порядке принятия решения.
+Совершеннолетние, законно проживающие в стране, могут рассмотреть обучение MBO или в вузе, но требования к поступлению и языку устанавливают конкретная программа и учебное заведение. Узнайте у учебного заведения о программе и его порядке принятия решения.
 
 ## Условное освобождение DUO от платы за MBO в 2026–27 учебном году
 
-DUO описывает возможность освобождения от платы за обучение для определённых заявителей MBO под временной защитой, но только при выполнении всех перечисленных условий. Для 2026–27 учебного года условия включают возраст от 18 лет до достижения 31 года на 1 августа, отсутствие возможности оплатить обучение и спонсора, а также отсутствие права на студенческое финансирование или грант. В некоторых случаях непрерывное освобождение от платы за MBO может сохраняться после 30 лет. Заявление подаётся по действующей форме DUO до 31 июля 2027 года. Проверьте актуальную форму и полный список условий DUO. Это не общее право на бесплатное обучение MBO, высшее образование или курсы нидерландского.
+DUO описывает возможность освобождения от платы за обучение для определённых заявителей MBO под временной защитой, но только при выполнении всех перечисленных условий. Для 2026–27 учебного года условия включают возраст от 18 лет до достижения 31 года на 1 августа, отсутствие возможности оплатить обучение и спонсора, а также отсутствие права на студенческое финансирование или грант для учащихся среднего образования из-за несоответствия критериям гражданства. В некоторых случаях непрерывное освобождение от платы за MBO может сохраняться после 30 лет. Заявление подаётся по действующей форме DUO до 31 июля 2027 года. Проверьте актуальную форму и полный список условий DUO. Это не общее право на бесплатное обучение MBO, высшее образование или курсы нидерландского.
 
 ### Claim coverage
 
 - Доступ к школе и обязательное обучение → NL-EDU01-01, NL-EDU01-02
 - Языковая поддержка детей в newcomer-классах → NL-EDU01-03
 - Курсы нидерландского для взрослых зависят от местных предложений → NL-EDU01-03
-- MBO, высшее образование и оценка диплома → NL-EDU01-04
+- MBO и высшее образование → NL-EDU01-04
 - Условное освобождение DUO от платы за MBO в 2026–27 учебном году → NL-EDU01-05
 
 ## Editorial exclusions
@@ -149,4 +149,4 @@ DUO описывает возможность освобождения от пл
 
 ## Editorial source set
 
-EDU-S01, EDU-S02, EDU-S03, EDU-S04, EDU-S06, EDU-S07, EDU-S08, EDU-S09, EDU-S10, EDU-S11
+EDU-S01, EDU-S02, EDU-S03, EDU-S04, EDU-S07, EDU-S08, EDU-S09, EDU-S10, EDU-S11

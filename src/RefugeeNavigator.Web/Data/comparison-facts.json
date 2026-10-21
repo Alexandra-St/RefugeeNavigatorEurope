@@ -452,14 +452,14 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "8d4d5cf3-b0da-54fc-8de4-bd43d1e39a14",
-                "4c08e6cf-6914-5d97-b06f-8747c2d6dbc8",
-                "979a64e2-7a45-5c2b-8151-9ad7f57d61d8"
+                "979a64e2-7a45-5c2b-8151-9ad7f57d61d8",
+                "fda6d123-58d8-5858-9e91-311f5266f5ee",
+                "249d9618-2212-5251-8f6e-8de0766e0cf3"
               ],
               "Values": {
-                "en": "Dutch ordinary permits, such as a highly skilled migrant or partner route, have separate sponsor, income, employment or relationship conditions assessed individually by the IND. A transition document for some people under temporary protection is still a government plan, not an enacted or operational application route or an entitlement.",
-                "uk": "Звичайні дозволи на проживання в Нідерландах, наприклад для висококваліфікованих працівників або партнерів, мають окремі вимоги до спонсора, доходу, роботи чи стосунків; IND оцінює їх індивідуально. Перехідний документ для частини людей під тимчасовим захистом поки є урядовим планом, а не ухваленою чи чинною процедурою подання або гарантованим правом.",
-                "ru": "Обычные разрешения на проживание в Нидерландах, например для высококвалифицированных специалистов или партнёров, имеют отдельные требования к спонсору, доходу, работе или отношениям; IND оценивает их индивидуально. Переходный документ для некоторых людей под временной защитой пока остаётся правительственным планом, а не принятым или действующим порядком подачи либо гарантированным правом."
+                "en": "Accessible IND, Government.nl and ministerial guidance describes prospective work on a transition policy or document for some people under temporary protection. The reviewed guidance does not establish automatic conversion, individual entitlement or a universal filing procedure. Check current IND guidance for the relevant route.",
+                "uk": "Доступні рекомендації IND, Government.nl та міністерства описують перспективну роботу над політикою або документом для переходу для частини людей під тимчасовим захистом. Перевірені рекомендації не встановлюють автоматичного переходу, індивідуального права чи універсальної процедури подання. Перевіряйте актуальні рекомендації IND щодо відповідного маршруту.",
+                "ru": "Доступные рекомендации IND, Government.nl и министерства описывают перспективную работу над политикой или документом для перехода для некоторых людей под временной защитой. Проверенные рекомендации не устанавливают автоматический переход, индивидуальное право или универсальную процедуру подачи. Проверяйте актуальные рекомендации IND для соответствующего маршрута."
               }
             }
           ]
@@ -1006,13 +1006,12 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "6cbd665c-2c9b-5adf-af7c-f93aa0073d7c",
-                "368fd458-a574-550b-a15a-48183cb3ba0e"
+                "6cbd665c-2c9b-5adf-af7c-f93aa0073d7c"
               ],
               "Values": {
-                "en": "Werkcentrum connects work and development questions to partner organisations and local options; it does not guarantee access to counselling, funded training or a job. IDW can compare a foreign diploma, but its evaluation is non-binding and does not itself grant admission or permission to work.",
-                "uk": "Werkcentrum спрямовує питання про роботу й розвиток до партнерських організацій і місцевих можливостей, але не гарантує консультацію, фінансоване навчання чи роботу. IDW може порівняти іноземний диплом, однак оцінювання не є обов’язковим для закладу й саме по собі не надає права на вступ або роботу.",
-                "ru": "Werkcentrum направляет вопросы о работе и развитии к партнёрским организациям и местным возможностям, но не гарантирует консультацию, финансируемое обучение или работу. IDW может сопоставить иностранный диплом, однако оценка не обязательна для учреждения и сама по себе не даёт права на поступление или работу."
+                "en": "Werkcentrum connects work and development questions to partner organisations and local options; services vary, and it does not guarantee counselling, funded training or a job.",
+                "uk": "Werkcentrum спрямовує питання про роботу й розвиток до партнерських організацій і місцевих можливостей; послуги відрізняються, а консультації, фінансоване навчання чи робота не гарантуються.",
+                "ru": "Werkcentrum связывает вопросы о работе и развитии с партнёрскими организациями и местными возможностями; услуги различаются, а консультации, финансируемое обучение или работа не гарантируются."
               }
             }
           ]
@@ -2343,14 +2342,13 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "fa10f3f5-53eb-5e4d-a962-5bbf49529aee",
                 "400b5488-04f8-5492-ae3e-044af4cd25e9",
                 "c917869f-703b-5f62-99ff-9bb23bfe6443"
               ],
               "Values": {
-                "en": "A Nuffic/SBB credential evaluation can help an institution compare a foreign diploma, but the institution decides admission. For 2026–27, a person under temporary protection may apply to DUO for MBO course-fee remission only if all criteria are met, including age 18–under 31 on 1 August, inability to pay/no sponsor and no eligibility for student finance or a secondary-education student grant because the nationality criteria are not met; apply by 31 July 2027. This is not free education or guaranteed admission.",
-                "uk": "Оцінювання диплома Nuffic/SBB може допомогти закладу порівняти іноземну кваліфікацію, але рішення про вступ ухвалює сам заклад. У 2026–2027 навчальному році людина під тимчасовим захистом може подати до DUO заяву про звільнення від плати за MBO лише за виконання всіх критеріїв, зокрема віку від 18 до 31 року (не включно) на 1 серпня, неможливості сплатити/відсутності спонсора та відсутності права на студентське фінансування чи грант для учнів закладів середньої освіти через невідповідність критеріям громадянства; подати до 31 липня 2027 року. Це не означає безоплатної освіти чи гарантованого вступу.",
-                "ru": "Оценка диплома Nuffic/SBB может помочь учебному заведению сопоставить иностранную квалификацию, но решение о зачислении принимает само заведение. В 2026–2027 учебном году человек под временной защитой может подать в DUO заявление об освобождении от платы за MBO только при выполнении всех критериев, включая возраст от 18 до 31 года (не включая) на 1 августа, невозможность оплатить/отсутствие спонсора и отсутствие права на студенческое финансирование или грант для учащихся среднего образования из-за несоответствия критериям гражданства; срок подачи — до 31 июля 2027 года. Это не означает бесплатного образования или гарантированного поступления."
+                "en": "The institution decides admission and sets course and language requirements. For 2026–27, a person under temporary protection may apply to DUO for MBO course-fee remission only if all criteria are met, including age 18 to under 31 on 1 August, inability to pay and no sponsor, and no eligibility for student finance or a secondary-education student grant because the nationality criteria are not met; apply by 31 July 2027. This is not free education or guaranteed admission.",
+                "uk": "Рішення про вступ ухвалює заклад і він визначає вимоги до курсу та мови. У 2026–2027 навчальному році людина під тимчасовим захистом може подати до DUO заяву про звільнення від плати за MBO лише за виконання всіх критеріїв, зокрема віку від 18 до 31 року (не включно) на 1 серпня, неможливості сплатити й відсутності спонсора, а також відсутності права на студентське фінансування чи грант для учнів закладів середньої освіти через невідповідність критеріям громадянства; подати до 31 липня 2027 року. Це не означає безоплатної освіти чи гарантованого вступу.",
+                "ru": "Решение о зачислении принимает учебное заведение, оно же устанавливает требования к курсу и языку. В 2026–2027 учебном году человек под временной защитой может подать в DUO заявление об освобождении от платы за MBO только при выполнении всех критериев, включая возраст от 18 до 31 года (не включая) на 1 августа, невозможность оплатить обучение и отсутствие спонсора, а также отсутствие права на студенческое финансирование или грант для учащихся среднего образования из-за несоответствия критериям гражданства; подать до 31 июля 2027 года. Это не означает бесплатного образования или гарантированного поступления."
               }
             }
           ]
