@@ -133,3 +133,49 @@ No separate optional polish items were recorded. The review deliberately avoids 
 ## Recommendation
 
 Proceed with a correction pass for TP-01, TP-02, Housing, and Social Assistance. Do not move Housing into core integration review until its 2027 host-household statement has an approved claim mapping or is removed. EMP-01, EMP-02, the limited-scope Health article, and bounded Education article are ready for core integration review subject to the freshness gates above. This review does **not** approve any draft for publication, does not assign verification status, and does not authorize production integration or deployment.
+
+## Phase 18.2D — Correction Pass
+
+Baseline: `ef72ddbd7ec65ccb1c98e38f62761e4510e20229`
+
+The correction pass addressed all five findings from Phase 18.2C. The original findings and recommendation above are retained as the historical review record; their current resolution is recorded here.
+
+### NL-TP01-F01 — RESOLVED
+
+- **What changed:** EN / UK / RU now separately attribute to IND the prior-TPD-in-the-EU wording and the family-joining exception. Each version distinguishes both from the corrected EU Decision’s same-Member-State continuing-holder exception and says the discrepancy is unresolved. Editorial exclusions now match the explicit, attributed exceptions.
+- **Affected languages:** EN / UK / RU.
+- **Claim/source mapping check:** NL-TP01-04 remains the mapped claim. The wording remains within its source boundary (TP01-S01 / TP01-S04 / TP01-S05 / TP01-S08); no new age band, document requirement, or individual outcome was added.
+
+### NL-TP02-F01 — RESOLVED
+
+- **What changed:** TP02-S09 and TP02-S11 were removed from the editorial source set. TP02-S10 remains listed as substantive evidence for the September memorandum’s proposal. The article’s bounded statement that no confirmed operating route was established remains unchanged.
+- **Affected languages:** Source set applies to EN / UK / RU; article text was not changed.
+- **Claim/source mapping check:** NL-TP02-03 remains unchanged; TP02-S10 remains in the source set. The removed record/attachment metadata is not presented as substantive support, and no content of the unread advice is asserted.
+
+### NL-HOUSING-F01 — RESOLVED
+
+- **What changed:** The specific hosted-household co-resident rule and its 1 January 2027 date were removed from all three versions. HOUSING-S09 was removed from the editorial source set; the rule was not moved elsewhere.
+- **Affected languages:** EN / UK / RU.
+- **Claim/source mapping check:** The remaining rent-benefit text continues to map to NL-HOUSING01-03 and HOUSING-S07 / HOUSING-S08. No new claim ID was added and the research matrix was not changed.
+
+### NL-HOUSING-F02 — RESOLVED
+
+- **What changed:** Stale HOUSING-S05 was removed from the editorial source set.
+- **Affected languages:** Source set applies to EN / UK / RU; article text was not changed.
+- **Claim/source mapping check:** NL-HOUSING01-03 remains mapped to HOUSING-S07 / HOUSING-S08 for the current conditional benefit route and criteria.
+
+### NL-SOC-F01 — RESOLVED
+
+- **What changed:** SOC-S03 was removed from the editorial source set.
+- **Affected languages:** Source set applies to EN / UK / RU; article text was not changed.
+- **Claim/source mapping check:** NL-SOC01-03 continues to use SOC-S01 / SOC-S02; SOC-S02 remains the source for the personal reception contribution rules.
+
+### Current outstanding findings
+
+- Outstanding BLOCKER: **0**
+- Outstanding CORRECTION: **0**
+- Outstanding POLISH: **0**
+
+### Current recommendation
+
+**READY FOR CORE INTEGRATION REVIEW.** The corrections clear the Phase 18.2C findings for integration review; they do not approve publication. The previously documented research limitations and freshness gates remain applicable. All eight drafts remain **DRAFT — NOT APPROVED FOR PUBLICATION**. No production content was created and no deployment was authorized.

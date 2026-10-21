@@ -27,8 +27,6 @@ If you find a private rental, check that the written agreement, rent, deposit an
 
 Huurtoeslag is a rent benefit, separate from municipal reception. A person with temporary protection may be able to apply through Mijn toeslagen if the applicant and household meet the current conditions. These can include age, lawful residence and registration, a self-contained rented home, a lease, rent-payment evidence and household income and assets. Temporary protection alone does not establish eligibility or an amount. Use the official eligibility information and application route for your circumstances.
 
-For a person hosted by another household, the official page states that a hosted refugee under temporary protection is not counted as a co-resident for rent benefit through 31 December 2026; from 1 January 2027, the page says they are counted. This is a dated rule—check the current official guidance around that change.
-
 ## A personal contribution may be assessed separately
 
 Some adults aged 18 or over in municipal reception who work or receive specified benefits may have to contribute to reception costs. The municipality assesses the household income under the applicable threshold and rules; some circumstances may allow a reduction or waiver. Rates shown by the government have applied since 1 August 2026 and depend on household and reception details. This contribution is not huurtoeslag or rent, and it does not apply to every displaced person. Ask the municipality how it applies the current rules to your household.
@@ -44,7 +42,7 @@ Some adults aged 18 or over in municipal reception who work or receive specified
 
 - No municipal reception place, chosen location, duration or current capacity is promised.
 - No rent, deposit or benefit amount is calculated for an individual.
-- Huurtoeslag is not guaranteed by temporary protection; the 2027 hosted-household rule is stated with its effective date.
+- Huurtoeslag is not guaranteed by temporary protection. No host-household co-resident calculation rule is included in this draft because it has no approved claim mapping.
 - A personal reception contribution is separate from rent and rent benefit; no universal exemption or payment obligation is asserted.
 
 ## UK
@@ -68,8 +66,6 @@ Content:
 
 Huurtoeslag — це допомога на оренду, окрема від муніципального розміщення. Людина під тимчасовим захистом може подати заяву через Mijn toeslagen, якщо заявник і домогосподарство відповідають чинним умовам. Вони можуть охоплювати вік, законне перебування та реєстрацію, окреме орендоване житло, договір, підтвердження сплати оренди, доходи й активи домогосподарства. Сам тимчасовий захист не визначає право на допомогу чи її розмір. Перевірте офіційну інформацію та порядок подання з урахуванням своїх обставин.
 
-Для людини, яку приймає інше домогосподарство, офіційна сторінка зазначає: до 31 грудня 2026 року гостя-біженця під тимчасовим захистом не враховують як співмешканця для допомоги на оренду; з 1 січня 2027 року, за цією сторінкою, його враховуватимуть. Це правило має визначену дату — перевірте чинні офіційні рекомендації під час переходу.
-
 ## Особистий внесок оцінюється окремо
 
 Деяким повнолітнім від 18 років у муніципальному розміщенні, які працюють або отримують визначені виплати, може бути призначено внесок за витрати на розміщення. Муніципалітет оцінює доходи домогосподарства за застосовними порогами й правилами; за певних обставин можливе зменшення або звільнення від внеску. Наведені урядом ставки діють з 1 серпня 2026 року й залежать від складу домогосподарства та умов розміщення. Це не huurtoeslag і не орендна плата; внесок не стосується кожної переміщеної особи. Запитайте муніципалітет, як чинні правила застосовуються до вашого домогосподарства.
@@ -85,7 +81,7 @@ Huurtoeslag — це допомога на оренду, окрема від м�
 
 - Не гарантується місце, обране розташування, строк муніципального розміщення чи поточна наявність місць.
 - Не розраховується індивідуальна сума оренди, депозиту чи допомоги.
-- Тимчасовий захист не гарантує huurtoeslag; правило щодо гостей з 2027 року зазначене разом із датою набуття чинності.
+- Тимчасовий захист не гарантує huurtoeslag. Правило про врахування гостя в домогосподарстві не включене до цього матеріалу, оскільки для нього немає затвердженого claim mapping.
 - Особистий внесок за розміщення відокремлено від оренди й допомоги; не стверджується універсальне звільнення чи обов’язок платити.
 
 ## RU
@@ -109,8 +105,6 @@ Content:
 
 Huurtoeslag — пособие на аренду, отдельное от муниципального размещения. Человек под временной защитой может подать заявление через Mijn toeslagen, если заявитель и домохозяйство соответствуют действующим условиям. Среди них могут быть возраст, законное пребывание и регистрация, отдельное арендуемое жильё, договор, подтверждение оплаты аренды, доходы и имущество домохозяйства. Одна лишь временная защита не устанавливает право на пособие или его размер. Изучите официальные условия и порядок подачи с учётом своих обстоятельств.
 
-Если человека принимает другое домохозяйство, официальная страница указывает: до 31 декабря 2026 года гостя-беженца под временной защитой не считают совместно проживающим для пособия на аренду; с 1 января 2027 года, согласно этой странице, его будут учитывать. У этого правила есть конкретная дата — проверьте действующие официальные инструкции при переходе.
-
 ## Личный взнос оценивается отдельно
 
 Некоторым взрослым от 18 лет в муниципальном размещении, которые работают или получают определённые выплаты, может быть назначен взнос за расходы на размещение. Муниципалитет оценивает доход домохозяйства по применимым порогам и правилам; в некоторых обстоятельствах возможны снижение или освобождение от взноса. Указанные правительством ставки действуют с 1 августа 2026 года и зависят от состава семьи и условий размещения. Это не huurtoeslag и не арендная плата; взнос не касается каждого перемещённого лица. Узнайте в муниципалитете, как действующие правила применяются к вашему домохозяйству.
@@ -126,9 +120,9 @@ Huurtoeslag — пособие на аренду, отдельное от мун
 
 - Не гарантируются место, выбранное расположение, срок муниципального размещения или наличие мест на текущую дату.
 - Индивидуальные суммы аренды, депозита или пособия не рассчитываются.
-- Временная защита не гарантирует huurtoeslag; правило о принимающих домохозяйствах с 2027 года указано с датой его вступления в силу.
+- Временная защита не гарантирует huurtoeslag. Правило об учёте гостя в домохозяйстве не включено в этот материал, поскольку для него нет утверждённого claim mapping.
 - Личный взнос за размещение отделён от аренды и пособия; универсальное освобождение или обязанность платить не утверждаются.
 
 ## Editorial source set
 
-HOUSING-S01, HOUSING-S02, HOUSING-S03, HOUSING-S04, HOUSING-S05, HOUSING-S06, HOUSING-S07, HOUSING-S08, HOUSING-S09
+HOUSING-S01, HOUSING-S02, HOUSING-S03, HOUSING-S04, HOUSING-S06, HOUSING-S07, HOUSING-S08

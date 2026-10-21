@@ -125,4 +125,4 @@ Leefgeld администрирует муниципалитет, в котор�
 
 ## Editorial source set
 
-SOC-S01, SOC-S02, SOC-S03, SOC-S04, SOC-S05
+SOC-S01, SOC-S02, SOC-S04, SOC-S05
