@@ -120,3 +120,43 @@ No separate optional copy/presentation polish item was confirmed. The possible c
 - **Regression test:** `NetherlandsDuoCourseFeeConditionRequiresNoStudentFinanceEntitlementInAllLanguages` verifies the negative condition in each language and rejects the previous Ukrainian wording. The existing Netherlands comparison/gating tests were run alongside it.
 - **Outstanding findings:** 0 BLOCKER, 0 CORRECTION, 0 POLISH.
 - **Next gate:** READY FOR VIEWPORT VERIFICATION; not ready for publication-gate review because requested 1280 × 720, 390px and 320px visual checks remain incomplete.
+
+## Phase 18.3E — Viewport Verification
+
+**Environment and route:** local Development environment, Netherlands compared with Denmark, all categories: `/compare?country1=netherlands&country2=denmark&category=all`. The existing local Web application was started in Development from its Release output. Language links retained the complete comparison return URL.
+
+**Browser/tool:** ChatGPT in-app browser controlled through the CUA Playwright viewport API. The API exposes viewport control and browser-rendered screenshots, but did not expose the underlying browser build/version; no version is asserted.
+
+### Actual viewport measurements and scenario results
+
+The viewport dimensions below were read from `window.innerWidth`, `window.innerHeight`, `document.documentElement.clientWidth` and `document.documentElement.scrollWidth` for each language after the page rendered. Every screenshot is a full-page browser capture; dimensions in parentheses are the saved image dimensions.
+
+| CSS viewport | Language | innerWidth × innerHeight | clientWidth / scrollWidth | Rendered checks | Full-page screenshot |
+|---|---|---:|---:|---|---|
+| 1280 × 720 | EN | 1280 × 720 | 1280 / 1280 | PASS | [comparison-1280x720-en.jpg](viewport-evidence/comparison-1280x720-en.jpg) (1280 × 9687) |
+| 1280 × 720 | UK | 1280 × 720 | 1280 / 1280 | PASS | [comparison-1280x720-uk.jpg](viewport-evidence/comparison-1280x720-uk.jpg) (1280 × 10356) |
+| 1280 × 720 | RU | 1280 × 720 | 1280 / 1280 | PASS | [comparison-1280x720-ru.jpg](viewport-evidence/comparison-1280x720-ru.jpg) (1280 × 10654) |
+| 390 × 844 | EN | 390 × 844 | 390 / 390 | PASS | [comparison-390x844-en.jpg](viewport-evidence/comparison-390x844-en.jpg) (390 × 19531) |
+| 390 × 844 | UK | 390 × 844 | 390 / 390 | PASS | [comparison-390x844-uk.jpg](viewport-evidence/comparison-390x844-uk.jpg) (390 × 21404) |
+| 390 × 844 | RU | 390 × 844 | 390 / 390 | PASS | [comparison-390x844-ru.jpg](viewport-evidence/comparison-390x844-ru.jpg) (390 × 22481) |
+| 320 × 700 | EN | 320 × 700 | 320 / 320 | PASS | [comparison-320x700-en.jpg](viewport-evidence/comparison-320x700-en.jpg) (320 × 22931) |
+| 320 × 700 | UK | 320 × 700 | 320 / 320 | PASS | [comparison-320x700-uk.jpg](viewport-evidence/comparison-320x700-uk.jpg) (320 × 25560) |
+| 320 × 700 | RU | 320 × 700 | 320 / 320 | PASS | [comparison-320x700-ru.jpg](viewport-evidence/comparison-320x700-ru.jpg) (320 × 28625) |
+
+### Layout and interaction findings
+
+- All nine language/viewport scenarios rendered the Development notice, 24 Draft labels, eight topic groups and 24 aspect headings. The unavailable Netherlands residence-filing answer displayed “Not established in the reviewed sources” (localized in UK/RU) and had no Netherlands source disclosure; the Denmark answer remained visible with its own sources.
+- At 1280 px, the two country answer cards were side by side within the content area (546 px each, with no right-edge overflow). At 390 px and 320 px, both cards stacked in one column; measured card bounds were inside the viewport (x=33 to 357 at 390 px, and x=33 to 287 at 320 px).
+- The document `scrollWidth` equaled `clientWidth` in all nine cases. Visible page elements stayed within the viewport bounds, and headings, paragraphs, links, buttons and summaries had no detected text overflow. Long institution and programme names wrapped without clipping or overlap.
+- Select controls measured 45 px high and the comparison button 44 px. Language controls measured 36 px; disclosure summaries were at least 24 px high. The page remained vertically scrollable at both mobile widths.
+- Source disclosures were present for the available sourced facts. Opening one at 320 px displayed three official links, source-check dates and link text within the card bounds. The full-article comparison disclosure and a nested category disclosure also opened successfully; article links were present. No external source was followed.
+- Navigation, country/category selectors, language switching, localized headings/status labels, and the Netherlands/Denmark country ordering were present. No raw localization keys or unrendered Markdown were observed.
+- The earlier narrow embedded-browser right-edge appearance did not reproduce at the controlled 1280, 390 or 320 CSS-pixel viewports. No BLOCKER, CORRECTION or POLISH finding was confirmed.
+
+**Desktop verdict:** PASS — EN / UK / RU at 1280 × 720.
+
+**Mobile verdict:** PASS — EN / UK / RU at 390 × 844 and 320 × 700.
+
+**Remaining limitations:** The browser build/version was not exposed. These are visual and interaction checks of the local Development rendering, not a fresh legal/source review, Production deployment check, assistive-technology audit or human editorial approval. The existing freshness checks and unresolved evidence gaps recorded above remain applicable.
+
+**Next recommendation:** READY FOR PUBLICATION GATE REVIEW. This is only a recommendation to proceed to the separate publication gate; it does not approve or publish comparison facts and does not authorize deployment.
