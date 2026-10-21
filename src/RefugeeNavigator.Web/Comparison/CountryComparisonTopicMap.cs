@@ -13,21 +13,21 @@ public static class CountryComparisonTopicMap
     private static readonly IReadOnlyList<CountryComparisonTopic> Topics =
     [
         Topic("Compare.Topic.TemporaryProtectionApplication", "temporary-protection",
-            "afc14824-4035-4ca7-9662-6d5352ba63cb", "1a6b97c4-eb9e-5590-8715-c95f5f95677e", "218207bd-2a85-59e1-a945-eedb0604392e", "49d3c355-af96-54f7-92d5-68062647d464", "b278c1d6-1add-4e65-8af1-e16431eaffb3", "d2ab273d-21b7-44e4-b408-f4269a8753d8"),
+            "afc14824-4035-4ca7-9662-6d5352ba63cb", "1a6b97c4-eb9e-5590-8715-c95f5f95677e", "218207bd-2a85-59e1-a945-eedb0604392e", "49d3c355-af96-54f7-92d5-68062647d464", "b278c1d6-1add-4e65-8af1-e16431eaffb3", "d2ab273d-21b7-44e4-b408-f4269a8753d8", "244b1055-4d8c-55b2-820e-60ff018c3b1f"),
         Topic("Compare.Topic.ResidenceAfterProtection", "temporary-protection",
-            "2d106fd3-e981-4ef9-9733-568b654dfca5", "33106e71-115f-5809-9066-7e3d3e5c57a3", "c230d45f-9c76-5912-8c97-dc7d0689baa6", "2d35d95d-3524-5f3c-b7bd-ff61bd67ccd5", "06ce2f10-d309-45b2-aced-e9dd8367ffed", "befa7777-af70-4269-883c-8918961554dc"),
+            "2d106fd3-e981-4ef9-9733-568b654dfca5", "33106e71-115f-5809-9066-7e3d3e5c57a3", "c230d45f-9c76-5912-8c97-dc7d0689baa6", "2d35d95d-3524-5f3c-b7bd-ff61bd67ccd5", "06ce2f10-d309-45b2-aced-e9dd8367ffed", "befa7777-af70-4269-883c-8918961554dc", "c5f5f833-0ab7-5e1a-9325-87a92b21d2ad"),
         Topic("Compare.Topic.FindingEmployment", "employment",
-            "c2356631-3fa2-4553-8fda-50a4419262c0", "283d4519-21f5-5be2-a534-1bd2606d95fc", "a323701f-367e-52bb-9c33-45c4156a1350", "e8a5e6d5-a989-51de-ae14-b58e724604b8", "a5107970-958a-4be6-9c98-ae484fc24a15", "a218013b-3a77-4ba2-829a-d724689837f2"),
+            "c2356631-3fa2-4553-8fda-50a4419262c0", "283d4519-21f5-5be2-a534-1bd2606d95fc", "a323701f-367e-52bb-9c33-45c4156a1350", "e8a5e6d5-a989-51de-ae14-b58e724604b8", "a5107970-958a-4be6-9c98-ae484fc24a15", "a218013b-3a77-4ba2-829a-d724689837f2", "757c1db6-b66b-54b9-ac14-d8a3da958ef5"),
         Topic("Compare.Topic.WorkAuthorizationRights", "employment",
-            "35da68f6-8880-40b2-9b3f-eb2b809b1caf", "c4895b5a-eacd-53d7-a86f-f504dd615c76", "7797d03c-6873-50cd-aef6-0d94a2f5fcab", "829b9986-d949-5dd8-80c4-b9b4b7cf4d44", "b76b631c-92de-4379-8136-c9e4e08e2fd2", "55949af5-b4fe-404e-bcb7-6ebb37131bab"),
+            "35da68f6-8880-40b2-9b3f-eb2b809b1caf", "c4895b5a-eacd-53d7-a86f-f504dd615c76", "7797d03c-6873-50cd-aef6-0d94a2f5fcab", "829b9986-d949-5dd8-80c4-b9b4b7cf4d44", "b76b631c-92de-4379-8136-c9e4e08e2fd2", "55949af5-b4fe-404e-bcb7-6ebb37131bab", "6a077f79-89c2-55d6-81f3-9ba7279979c9"),
         Topic("Compare.Topic.Healthcare", "healthcare",
-            "b1e4aed1-bbaf-4f09-9468-74000bf96430", "895b79b4-ce0d-5bee-9919-42ce3d76ecdb", "d7e0716b-154d-5db3-8790-f73684c07271", "d252adbc-48c0-5546-bbe1-2b08e2293f27", "50829c0b-7ee0-4ee4-be7b-47dfd0dc408d", "2234b91f-4021-40b2-b9d5-a029a6b533f2"),
+            "b1e4aed1-bbaf-4f09-9468-74000bf96430", "895b79b4-ce0d-5bee-9919-42ce3d76ecdb", "d7e0716b-154d-5db3-8790-f73684c07271", "d252adbc-48c0-5546-bbe1-2b08e2293f27", "50829c0b-7ee0-4ee4-be7b-47dfd0dc408d", "2234b91f-4021-40b2-b9d5-a029a6b533f2", "d5c4d5fa-3b0f-5cc2-865f-841bd40911d1"),
         Topic("Compare.Topic.Housing", "housing",
-            "19afdd19-e2cc-4da6-bde3-6dc3d64b7503", "fd041e53-7794-5c1f-9ae4-131930fe69ee", "1f310b3c-dceb-5e3a-90d0-d3a705ca5c53", "957ae315-47a4-5a73-806e-ca1d6cf258d1", "bd08644f-dd27-412c-9bfd-888de1fe304d", "e0f307e9-7991-4350-89f4-2f84a9047393"),
+            "19afdd19-e2cc-4da6-bde3-6dc3d64b7503", "fd041e53-7794-5c1f-9ae4-131930fe69ee", "1f310b3c-dceb-5e3a-90d0-d3a705ca5c53", "957ae315-47a4-5a73-806e-ca1d6cf258d1", "bd08644f-dd27-412c-9bfd-888de1fe304d", "e0f307e9-7991-4350-89f4-2f84a9047393", "19dde97c-cb42-5a90-97f7-e344f2139d2e"),
         Topic("Compare.Topic.EducationLanguage", "education",
-            "fee9dcf0-447d-4402-92a2-8b1bec125944", "f5e0f499-0f60-5465-85f8-de6345029b59", "32ca34e9-22d9-5f59-88a9-bbd7ffd7b5cd", "954761f7-bc2b-5725-aeba-c8f1d2192588", "084c06c7-592b-4eed-bb20-6cd1913f14a2", "cac58c0c-ce69-41ac-877e-4fd124105b89"),
+            "fee9dcf0-447d-4402-92a2-8b1bec125944", "f5e0f499-0f60-5465-85f8-de6345029b59", "32ca34e9-22d9-5f59-88a9-bbd7ffd7b5cd", "954761f7-bc2b-5725-aeba-c8f1d2192588", "084c06c7-592b-4eed-bb20-6cd1913f14a2", "cac58c0c-ce69-41ac-877e-4fd124105b89", "7633a085-4555-5a8f-a9a8-747a0f6e0545"),
         Topic("Compare.Topic.SocialAssistance", "social-assistance",
-            "1a19c1f9-1111-4d60-8490-da548f33083f", "31f5802b-26a0-5cd0-bb24-0a9a4afa706a", "a5892591-d082-57ce-acf9-5c39ab4f9b84", "f408e721-31a3-572a-a702-69ab600023a3", "d33628da-cb49-44b5-a7aa-ae6c6ac8f389", "8b5cc53a-9933-4366-8421-d795966267ec")
+            "1a19c1f9-1111-4d60-8490-da548f33083f", "31f5802b-26a0-5cd0-bb24-0a9a4afa706a", "a5892591-d082-57ce-acf9-5c39ab4f9b84", "f408e721-31a3-572a-a702-69ab600023a3", "d33628da-cb49-44b5-a7aa-ae6c6ac8f389", "8b5cc53a-9933-4366-8421-d795966267ec", "8d466e7d-93f7-596e-a44f-188e04396aa0")
     ];
 
     private static readonly IReadOnlySet<string> MappedCountrySlugs =
@@ -99,7 +99,8 @@ public static class CountryComparisonTopicMap
         string polandId,
         string czechiaId,
         string spainId,
-        string swedenId) =>
+        string swedenId,
+        string netherlandsId) =>
         new(resourceKey, categorySlug, new Dictionary<string, Guid>(StringComparer.OrdinalIgnoreCase)
         {
             ["denmark"] = Guid.Parse(denmarkId),
@@ -107,6 +108,7 @@ public static class CountryComparisonTopicMap
             ["poland"] = Guid.Parse(polandId),
             ["czechia"] = Guid.Parse(czechiaId),
             ["spain"] = Guid.Parse(spainId),
-            ["sweden"] = Guid.Parse(swedenId)
+            ["sweden"] = Guid.Parse(swedenId),
+            ["netherlands"] = Guid.Parse(netherlandsId)
         });
 }

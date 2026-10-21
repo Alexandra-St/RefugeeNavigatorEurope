@@ -281,12 +281,15 @@ public sealed class NetherlandsContentIntegrationTests
     }
 
     [Fact]
-    public async Task CountryComparisonV2HasNoNetherlandsFacts()
+    public async Task CountryComparisonV2HasTwentyFourDraftNetherlandsFacts()
     {
         var json = await File.ReadAllTextAsync(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json"));
         using var document = JsonDocument.Parse(json);
         var countrySlugs = FindCountrySlugs(document.RootElement).ToArray();
-        Assert.DoesNotContain("netherlands", countrySlugs, StringComparer.OrdinalIgnoreCase);
+        Assert.Equal(24, countrySlugs.Count(slug => string.Equals(slug, "netherlands", StringComparison.OrdinalIgnoreCase)));
+        var draftStatuses = FindCountryStatuses(document.RootElement, "netherlands").ToArray();
+        Assert.Equal(24, draftStatuses.Length);
+        Assert.All(draftStatuses, status => Assert.Equal("Draft", status));
     }
 
     private static IEnumerable<string> FindCountrySlugs(JsonElement element)
@@ -305,6 +308,27 @@ public sealed class NetherlandsContentIntegrationTests
         {
             foreach (var item in element.EnumerateArray())
                 foreach (var nested in FindCountrySlugs(item))
+                    yield return nested;
+        }
+    }
+
+    private static IEnumerable<string> FindCountryStatuses(JsonElement element, string countrySlug)
+    {
+        if (element.ValueKind == JsonValueKind.Object)
+        {
+            var isTargetCountry = element.TryGetProperty("CountrySlug", out var slug) &&
+                slug.ValueKind == JsonValueKind.String &&
+                string.Equals(slug.GetString(), countrySlug, StringComparison.OrdinalIgnoreCase);
+            if (isTargetCountry && element.TryGetProperty("Status", out var status) && status.ValueKind == JsonValueKind.String)
+                yield return status.GetString()!;
+            foreach (var property in element.EnumerateObject())
+                foreach (var nested in FindCountryStatuses(property.Value, countrySlug))
+                    yield return nested;
+        }
+        else if (element.ValueKind == JsonValueKind.Array)
+        {
+            foreach (var item in element.EnumerateArray())
+                foreach (var nested in FindCountryStatuses(item, countrySlug))
                     yield return nested;
         }
     }

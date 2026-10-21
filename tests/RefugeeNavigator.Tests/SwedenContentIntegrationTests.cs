@@ -268,7 +268,7 @@ public sealed class SwedenContentIntegrationTests
             .LoadAsync(catalog);
         CountryComparisonTopicMap.Validate(catalog);
         Assert.Contains("sweden", CountryComparisonTopicMap.SupportedCountrySlugs);
-        Assert.Equal(6, facts.Topics.SelectMany(topic => topic.Aspects)
+        Assert.Equal(7, facts.Topics.SelectMany(topic => topic.Aspects)
             .SelectMany(aspect => aspect.Facts).Select(fact => fact.CountrySlug).Distinct(StringComparer.Ordinal).Count());
 
         foreach (var topic in CountryComparisonTopicMap.All)

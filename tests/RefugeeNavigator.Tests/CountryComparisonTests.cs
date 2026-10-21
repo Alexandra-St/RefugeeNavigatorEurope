@@ -34,7 +34,7 @@ public sealed class CountryComparisonTests
     });
 
     [Fact]
-    public async Task StructuredCatalogHasEightTopicsTwentyFourAspectsAndSixCountryFacts()
+    public async Task StructuredCatalogHasEightTopicsTwentyFourAspectsAndSevenCountryFacts()
     {
         var catalog = await LoadCatalogAsync();
         var facts = await FactCatalog.Value;
@@ -43,13 +43,13 @@ public sealed class CountryComparisonTests
         Assert.Equal(8, facts.Topics.Count);
         Assert.Equal(24, facts.Topics.Sum(topic => topic.Aspects.Count));
         Assert.Equal(24, facts.Topics.SelectMany(topic => topic.Aspects).Select(aspect => aspect.QuestionResourceKey).Distinct(StringComparer.Ordinal).Count());
-        Assert.Equal(144, facts.Topics.SelectMany(topic => topic.Aspects).Sum(aspect => aspect.Facts.Count));
-        Assert.Equal(138, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.IsAvailable));
-        Assert.Equal(6, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => !fact.IsAvailable));
+        Assert.Equal(168, facts.Topics.SelectMany(topic => topic.Aspects).Sum(aspect => aspect.Facts.Count));
+        Assert.Equal(161, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.IsAvailable));
+        Assert.Equal(7, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => !fact.IsAvailable));
         Assert.Equal(120, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Approved));
-        Assert.Equal(24, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Draft));
-        Assert.All(facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Where(fact => fact.CountrySlug != "sweden"), fact => Assert.Equal(ComparisonFactStatus.Approved, fact.Status));
-        Assert.Equal(279, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Sum(fact => fact.OfficialSourceIds.Count));
+        Assert.Equal(48, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Draft));
+        Assert.All(facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Where(fact => fact.CountrySlug is not ("sweden" or "netherlands")), fact => Assert.Equal(ComparisonFactStatus.Approved, fact.Status));
+        Assert.Equal(326, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Sum(fact => fact.OfficialSourceIds.Count));
         Assert.Equal(56, catalog.InformationEntries.Count);
         Assert.Equal(168, catalog.InformationEntryTranslations.Count);
         Assert.Equal(120, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
@@ -85,6 +85,7 @@ public sealed class CountryComparisonTests
             ("employment-assistance-conditions", "denmark"),
             ("housing-financial-support", "spain"),
             ("protection-dates", "spain"),
+            ("residence-filing", "netherlands"),
             ("social-child-benefits", "spain"),
             ("social-child-benefits", "sweden")
         }, unavailableFacts.Select(item => (item.Id, item.CountrySlug)).OrderBy(item => item.Id).ToArray());
@@ -114,12 +115,12 @@ public sealed class CountryComparisonTests
 
         foreach (var topic in facts.Topics)
         {
-            Assert.Equal(6, topic.Aspects.SelectMany(aspect => aspect.Facts).Select(fact => fact.CountrySlug).Distinct().Count());
+            Assert.Equal(7, topic.Aspects.SelectMany(aspect => aspect.Facts).Select(fact => fact.CountrySlug).Distinct().Count());
             Assert.Equal(topic.CategorySlug, Assert.Single(CountryComparisonTopicMap.All, mapped => mapped.ResourceKey == topic.TopicResourceKey).CategorySlug);
             foreach (var aspect in topic.Aspects)
             foreach (var fact in aspect.Facts)
             {
-                Assert.Equal(fact.CountrySlug == "sweden" ? ComparisonFactStatus.Draft : ComparisonFactStatus.Approved, fact.Status);
+                Assert.Equal(fact.CountrySlug is "sweden" or "netherlands" ? ComparisonFactStatus.Draft : ComparisonFactStatus.Approved, fact.Status);
                 Assert.All(new[] { "uk", "en", "ru" }, language => Assert.False(string.IsNullOrWhiteSpace(fact.Values.GetValueOrDefault(language))));
                 if (fact.IsAvailable)
                 {
@@ -236,6 +237,118 @@ public sealed class CountryComparisonTests
         Assert.DoesNotContain(GetResource("Compare.DraftStatus", language), productionHtml);
         Assert.DoesNotContain("class=\"draft-label\"", productionHtml);
         Assert.All(swedenFacts, fact => Assert.DoesNotContain(fact.Values[language], productionHtml));
+    }
+
+    [Fact]
+    public async Task NetherlandsHasTwentyFourDraftFactsMappedToOwnedSourcesAndSafeUnavailableAnswer()
+    {
+        var catalog = await LoadCatalogAsync();
+        var facts = await FactCatalog.Value;
+        var expectedArticleIds = new Dictionary<string, Guid>(StringComparer.Ordinal)
+        {
+            ["protection-scheme"] = Guid.Parse("244b1055-4d8c-55b2-820e-60ff018c3b1f"),
+            ["protection-application"] = Guid.Parse("244b1055-4d8c-55b2-820e-60ff018c3b1f"),
+            ["protection-dates"] = Guid.Parse("244b1055-4d8c-55b2-820e-60ff018c3b1f"),
+            ["residence-routes"] = Guid.Parse("c5f5f833-0ab7-5e1a-9325-87a92b21d2ad"),
+            ["residence-conditions"] = Guid.Parse("c5f5f833-0ab7-5e1a-9325-87a92b21d2ad"),
+            ["residence-filing"] = Guid.Parse("c5f5f833-0ab7-5e1a-9325-87a92b21d2ad"),
+            ["employment-vacancies"] = Guid.Parse("757c1db6-b66b-54b9-ac14-d8a3da958ef5"),
+            ["employment-institutions"] = Guid.Parse("757c1db6-b66b-54b9-ac14-d8a3da958ef5"),
+            ["employment-assistance-conditions"] = Guid.Parse("757c1db6-b66b-54b9-ac14-d8a3da958ef5"),
+            ["work-permission"] = Guid.Parse("6a077f79-89c2-55d6-81f3-9ba7279979c9"),
+            ["work-employer-duties"] = Guid.Parse("6a077f79-89c2-55d6-81f3-9ba7279979c9"),
+            ["work-minimum-pay"] = Guid.Parse("6a077f79-89c2-55d6-81f3-9ba7279979c9"),
+            ["healthcare-access"] = Guid.Parse("d5c4d5fa-3b0f-5cc2-865f-841bd40911d1"),
+            ["healthcare-proof"] = Guid.Parse("d5c4d5fa-3b0f-5cc2-865f-841bd40911d1"),
+            ["healthcare-urgent"] = Guid.Parse("d5c4d5fa-3b0f-5cc2-865f-841bd40911d1"),
+            ["housing-initial"] = Guid.Parse("19dde97c-cb42-5a90-97f7-e344f2139d2e"),
+            ["housing-private-rental"] = Guid.Parse("19dde97c-cb42-5a90-97f7-e344f2139d2e"),
+            ["housing-financial-support"] = Guid.Parse("19dde97c-cb42-5a90-97f7-e344f2139d2e"),
+            ["education-school-enrolment"] = Guid.Parse("7633a085-4555-5a8f-a9a8-747a0f6e0545"),
+            ["education-pupil-language"] = Guid.Parse("7633a085-4555-5a8f-a9a8-747a0f6e0545"),
+            ["education-higher-admission"] = Guid.Parse("7633a085-4555-5a8f-a9a8-747a0f6e0545"),
+            ["social-subsistence"] = Guid.Parse("8d466e7d-93f7-596e-a44f-188e04396aa0"),
+            ["social-application"] = Guid.Parse("8d466e7d-93f7-596e-a44f-188e04396aa0"),
+            ["social-child-benefits"] = Guid.Parse("8d466e7d-93f7-596e-a44f-188e04396aa0")
+        };
+        var netherlandsFacts = facts.Topics.SelectMany(topic => topic.Aspects)
+            .SelectMany(aspect => aspect.Facts.Where(fact => fact.CountrySlug == "netherlands")
+                .Select(fact => (aspect.Id, fact))).ToArray();
+
+        Assert.Equal(24, netherlandsFacts.Length);
+        Assert.Equal(23, netherlandsFacts.Count(item => item.fact.IsAvailable));
+        Assert.Equal(1, netherlandsFacts.Count(item => !item.fact.IsAvailable));
+        Assert.Equal(144, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts)
+            .Count(fact => fact.CountrySlug != "netherlands"));
+        Assert.All(netherlandsFacts, item =>
+        {
+            var fact = item.fact;
+            Assert.Equal(expectedArticleIds[item.Id], fact.InformationEntryId);
+            Assert.Equal(ComparisonFactStatus.Draft, fact.Status);
+            Assert.Equal(new[] { "en", "ru", "uk" }, fact.Values.Keys.Order(StringComparer.Ordinal).ToArray());
+            Assert.All(fact.Values.Values, value =>
+            {
+                Assert.False(string.IsNullOrWhiteSpace(value));
+                Assert.DoesNotContain("https://", value, StringComparison.OrdinalIgnoreCase);
+                Assert.DoesNotMatch(@"\b(?:NL-TP|NL-EMP|NL-HEALTH|NL-HOUSING|NL-EDU|NL-SOC)", value);
+            });
+            if (fact.IsAvailable)
+            {
+                Assert.InRange(fact.OfficialSourceIds.Count, 1, 3);
+                Assert.All(fact.OfficialSourceIds, sourceId =>
+                {
+                    var source = Assert.Single(catalog.OfficialSources, itemSource => itemSource.Id == sourceId);
+                    Assert.Equal(fact.InformationEntryId, source.InformationEntryId);
+                });
+            }
+            else
+            {
+                Assert.Equal("residence-filing", item.Id);
+                Assert.Empty(fact.OfficialSourceIds);
+                Assert.Equal(GetResource("Compare.NotEstablishedInReviewedSources", "en"), fact.Values["en"]);
+                Assert.Equal(GetResource("Compare.NotEstablishedInReviewedSources", "uk"), fact.Values["uk"]);
+                Assert.Equal(GetResource("Compare.NotEstablishedInReviewedSources", "ru"), fact.Values["ru"]);
+            }
+        });
+
+        var employmentSources = catalog.OfficialSources.Where(source => source.InformationEntryId == expectedArticleIds["employment-institutions"]).ToArray();
+        var uwvSource = Assert.Single(employmentSources, source => source.Id == Guid.Parse("1690f9d6-0721-5005-b9de-fda56864ed70"));
+        Assert.Equal(new Uri("https://www.uwv.nl/en/individuals/working-in-the-netherlands/ukrainian-refugee"), uwvSource.Url);
+        Assert.Contains(netherlandsFacts.Single(item => item.Id == "employment-institutions").fact.OfficialSourceIds, sourceId => sourceId == uwvSource.Id);
+
+        var healthcare = netherlandsFacts.Single(item => item.Id == "healthcare-access").fact;
+        Assert.True(healthcare.IsAvailable);
+        Assert.Contains("Official pages conflict", healthcare.Values["en"]);
+        Assert.Contains("does not resolve", healthcare.Values["en"]);
+        Assert.Contains("суперечать", healthcare.Values["uk"]);
+        Assert.Contains("не определяет", healthcare.Values["ru"]);
+    }
+
+    [Theory]
+    [InlineData("en", "Netherlands")]
+    [InlineData("uk", "Нідерланди")]
+    [InlineData("ru", "Нидерланды")]
+    public async Task NetherlandsDraftFactsPreviewInDevelopmentAndRemainGatedInProduction(string language, string countryName)
+    {
+        var catalog = await LoadCatalogAsync();
+        var facts = await FactCatalog.Value;
+        var netherlandsFacts = facts.Topics.SelectMany(topic => topic.Aspects)
+            .SelectMany(aspect => aspect.Facts.Where(fact => fact.CountrySlug == "netherlands" && fact.IsAvailable)).ToArray();
+        var query = "?country1=netherlands&country2=germany&category=all";
+
+        var developmentHtml = WebUtility.HtmlDecode(await RenderAsync(catalog, language, query));
+        Assert.Contains("value=\"netherlands\"", developmentHtml);
+        Assert.Contains(countryName, developmentHtml);
+        Assert.Contains(GetResource("Compare.DraftPreviewNotice", language), developmentHtml);
+        Assert.Contains(GetResource("Compare.DraftStatus", language), developmentHtml);
+        Assert.All(netherlandsFacts, fact => Assert.Contains(fact.Values[language], developmentHtml));
+
+        var productionHtml = WebUtility.HtmlDecode(await RenderAsync(catalog, language, query, Environments.Production));
+        Assert.Contains("value=\"netherlands\"", productionHtml);
+        Assert.DoesNotContain(GetResource("Compare.DraftPreviewNotice", language), productionHtml);
+        Assert.DoesNotContain(GetResource("Compare.DraftStatus", language), productionHtml);
+        Assert.DoesNotContain("class=\"draft-label\"", productionHtml);
+        Assert.All(netherlandsFacts, fact => Assert.DoesNotContain(fact.Values[language], productionHtml));
     }
 
     [Theory]
@@ -838,13 +951,13 @@ public sealed class CountryComparisonTests
         Assert.Equal(
             ["temporary-protection", "temporary-protection", "employment", "employment", "healthcare", "housing", "education", "social-assistance"],
             CountryComparisonTopicMap.All.Select(topic => topic.CategorySlug));
-        var expectedCountrySlugs = new[] { "czechia", "denmark", "germany", "poland", "spain", "sweden" };
+        var expectedCountrySlugs = new[] { "czechia", "denmark", "germany", "netherlands", "poland", "spain", "sweden" };
         Assert.Equal(expectedCountrySlugs, CountryComparisonTopicMap.SupportedCountrySlugs.Order(StringComparer.Ordinal).ToArray());
-        Assert.Equal(48, CountryComparisonTopicMap.All.SelectMany(topic => topic.EntryIds.Values).Distinct().Count());
+        Assert.Equal(56, CountryComparisonTopicMap.All.SelectMany(topic => topic.EntryIds.Values).Distinct().Count());
 
         foreach (var topic in CountryComparisonTopicMap.All)
         {
-            Assert.Equal(6, topic.EntryIds.Count);
+            Assert.Equal(7, topic.EntryIds.Count);
             Assert.Equal(expectedCountrySlugs, topic.EntryIds.Keys.Order(StringComparer.Ordinal).ToArray());
             var category = Assert.Single(catalog.Categories, item => item.Slug == topic.CategorySlug);
             foreach (var (countrySlug, entryId) in topic.EntryIds)
