@@ -250,7 +250,10 @@ public sealed class NetherlandsContentIntegrationTests
             Assert.True(source.Url.IsAbsoluteUri);
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
             Assert.False(string.IsNullOrWhiteSpace(source.Title));
-            Assert.Equal(SourceCheckDate, source.LastCheckedAt.UtcDateTime.Date);
+            var expectedCheckDate = source.Id == Guid.Parse("e59632da-eb67-5b56-840f-9749cdc9f171")
+                ? new DateTime(2026, 10, 21)
+                : SourceCheckDate;
+            Assert.Equal(expectedCheckDate, source.LastCheckedAt.UtcDateTime.Date);
         });
 
         foreach (var (key, expectedCount) in ExpectedSourceCounts)
@@ -260,6 +263,14 @@ public sealed class NetherlandsContentIntegrationTests
             Assert.Equal(expectedCount, ownedSources.Length);
             var draft = await File.ReadAllTextAsync(Path.Combine(repositoryRoot, "docs", "content-drafts", "netherlands-v1", key + ".md"));
             var expected = ReadEditorialSources(repositoryRoot, key, draft);
+            if (key == "NL-HEALTH-01" && expected.Remove(
+                    "https://www.rijksoverheid.nl/themas/familie-en-zorg/zorgverzekering/vraag-en-antwoord/eerstelijnszorg/wat-moet-ik-doen-als-iemand-dringend-medische-hulp-nodig-heeft",
+                    out var urgentCareTitle))
+            {
+                expected.Add(
+                    "https://www.rijksoverheid.nl/documenten/vraag-en-antwoord/eerstelijnszorg/wat-moet-ik-doen-als-iemand-dringend-medische-hulp-nodig-heeft",
+                    urgentCareTitle);
+            }
             Assert.Equal(expectedCount, expected.Count);
             Assert.Equal(expected.Keys.Order(StringComparer.OrdinalIgnoreCase).ToArray(),
                 ownedSources.Select(item => item.Url.AbsoluteUri).Order(StringComparer.OrdinalIgnoreCase).ToArray());

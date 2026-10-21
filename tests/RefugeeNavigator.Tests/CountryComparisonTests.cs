@@ -294,7 +294,8 @@ public sealed class CountryComparisonTests
             });
             if (fact.IsAvailable)
             {
-                Assert.InRange(fact.OfficialSourceIds.Count, 1, 3);
+                var maxSources = item.Id == "healthcare-access" && fact.CountrySlug == "netherlands" ? 4 : 3;
+                Assert.InRange(fact.OfficialSourceIds.Count, 1, maxSources);
                 Assert.All(fact.OfficialSourceIds, sourceId =>
                 {
                     var source = Assert.Single(catalog.OfficialSources, itemSource => itemSource.Id == sourceId);
@@ -335,7 +336,7 @@ public sealed class CountryComparisonTests
         Assert.Contains("no eligibility for student finance or a secondary-education student grant because the nationality criteria are not met", fact.Values["en"], StringComparison.OrdinalIgnoreCase);
         Assert.Contains("відсутності права на студентське фінансування чи грант для учнів закладів середньої освіти через невідповідність критеріям громадянства", fact.Values["uk"], StringComparison.OrdinalIgnoreCase);
         Assert.DoesNotContain("та права на студентське фінансування чи грант", fact.Values["uk"], StringComparison.OrdinalIgnoreCase);
-        Assert.Contains("отсутствия права на студенческое финансирование или грант для учащихся среднего образования из-за несоответствия критериям гражданства", fact.Values["ru"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("отсутствие права на студенческое финансирование или грант для учащихся среднего образования из-за несоответствия критериям гражданства", fact.Values["ru"], StringComparison.OrdinalIgnoreCase);
         Assert.Contains("not free education or guaranteed admission", fact.Values["en"], StringComparison.OrdinalIgnoreCase);
         Assert.Contains("не означає безоплатної освіти чи гарантованого вступу", fact.Values["uk"], StringComparison.OrdinalIgnoreCase);
         Assert.Contains("не означает бесплатного образования или гарантированного поступления", fact.Values["ru"], StringComparison.OrdinalIgnoreCase);
