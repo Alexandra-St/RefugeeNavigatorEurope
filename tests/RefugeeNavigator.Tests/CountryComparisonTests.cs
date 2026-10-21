@@ -325,17 +325,50 @@ public sealed class CountryComparisonTests
     }
 
     [Fact]
-    public async Task NetherlandsDuoCourseFeeConditionRequiresNoStudentFinanceEntitlementInAllLanguages()
+    public async Task NetherlandsDuoCourseFeeConditionRequiresNationalityReasonAndAllOtherCriteriaInAllLanguages()
     {
         var fact = (await FactCatalog.Value).Topics.SelectMany(topic => topic.Aspects)
             .Single(aspect => aspect.Id == "education-higher-admission").Facts
             .Single(item => item.CountrySlug == "netherlands");
 
         Assert.Equal(ComparisonFactStatus.Draft, fact.Status);
-        Assert.Contains("no eligibility for student finance or grant", fact.Values["en"], StringComparison.OrdinalIgnoreCase);
-        Assert.Contains("відсутності права на студентське фінансування чи грант", fact.Values["uk"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("no eligibility for student finance or a secondary-education student grant because the nationality criteria are not met", fact.Values["en"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("відсутності права на студентське фінансування чи грант для учнів закладів середньої освіти через невідповідність критеріям громадянства", fact.Values["uk"], StringComparison.OrdinalIgnoreCase);
         Assert.DoesNotContain("та права на студентське фінансування чи грант", fact.Values["uk"], StringComparison.OrdinalIgnoreCase);
-        Assert.Contains("отсутствие права на студенческое финансирование или грант", fact.Values["ru"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("отсутствия права на студенческое финансирование или грант для учащихся среднего образования из-за несоответствия критериям гражданства", fact.Values["ru"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("not free education or guaranteed admission", fact.Values["en"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("не означає безоплатної освіти чи гарантованого вступу", fact.Values["uk"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("не означает бесплатного образования или гарантированного поступления", fact.Values["ru"], StringComparison.OrdinalIgnoreCase);
+
+        var nationalityReasons = new Dictionary<string, string>
+        {
+            ["en"] = "because the nationality criteria are not met",
+            ["uk"] = "через невідповідність критеріям громадянства",
+            ["ru"] = "из-за несоответствия критериям гражданства"
+        };
+        var articleNationalityReasons = new Dictionary<string, string>
+        {
+            ["en"] = "because you do not meet the nationality criteria",
+            ["uk"] = "через невідповідність критеріям громадянства",
+            ["ru"] = "из-за несоответствия критериям гражданства"
+        };
+        var catalog = await LoadCatalogAsync();
+        var articleTranslations = catalog.InformationEntryTranslations
+            .Where(item => item.InformationEntryId == Guid.Parse("7633a085-4555-5a8f-a9a8-747a0f6e0545"))
+            .ToDictionary(item => item.LanguageCode);
+        var preservedConditions = new Dictionary<string, string[]>
+        {
+            ["en"] = ["only if all criteria are met", "person under temporary protection", "age 18–under 31 on 1 August", "inability to pay/no sponsor", "31 July 2027", "2026–27"],
+            ["uk"] = ["лише за виконання всіх критеріїв", "людина під тимчасовим захистом", "віку від 18 до 31 року (не включно) на 1 серпня", "неможливості сплатити/відсутності спонсора", "31 липня 2027 року", "2026–2027"],
+            ["ru"] = ["только при выполнении всех критериев", "человек под временной защитой", "возраст от 18 до 31 года (не включая) на 1 августа", "невозможность оплатить/отсутствие спонсора", "31 июля 2027 года", "2026–2027"]
+        };
+        foreach (var (language, reason) in nationalityReasons)
+        {
+            Assert.Contains(reason, fact.Values[language], StringComparison.OrdinalIgnoreCase);
+            Assert.Contains(articleNationalityReasons[language], articleTranslations[language].Content, StringComparison.OrdinalIgnoreCase);
+            foreach (var condition in preservedConditions[language])
+                Assert.Contains(condition, fact.Values[language], StringComparison.OrdinalIgnoreCase);
+        }
     }
 
     [Theory]

@@ -135,7 +135,63 @@ public sealed class NetherlandsContentIntegrationTests
     }
 
     [Fact]
-    public async Task IntegratedTranslationsMatchAllEightNetherlandsDraftsExactly()
+    public async Task NetherlandsEducationDuoRemissionExplainsNationalityCriterionInAllLanguages()
+    {
+        var catalog = await Catalog.Value;
+        var entry = Assert.Single(catalog.InformationEntries,
+            item => item.Id == StableArticleIds["NL-EDU-01"]);
+        var expectedConditions = new Dictionary<string, string[]>
+        {
+            ["en"] =
+            [
+                "because you do not meet the nationality criteria",
+                "only when all listed conditions are met",
+                "specified MBO applicants under temporary protection",
+                "aged 18 to under 31 on 1 August",
+                "being unable to pay and having no sponsor",
+                "31 July 2027",
+                "not a general right"
+            ],
+            ["uk"] =
+            [
+                "через невідповідність критеріям громадянства",
+                "лише за виконання всіх перелічених умов",
+                "заявників MBO під тимчасовим захистом",
+                "від 18 років до досягнення 31 року станом на 1 серпня",
+                "неможливість сплатити й відсутність спонсора",
+                "31 липня 2027 року",
+                "не загальне право"
+            ],
+            ["ru"] =
+            [
+                "из-за несоответствия критериям гражданства",
+                "только при выполнении всех перечисленных условий",
+                "заявителей MBO под временной защитой",
+                "от 18 лет до достижения 31 года на 1 августа",
+                "отсутствие возможности оплатить обучение и спонсора",
+                "31 июля 2027 года",
+                "не общее право"
+            ]
+        };
+
+        foreach (var (language, conditions) in expectedConditions)
+        {
+            var translation = Assert.Single(catalog.InformationEntryTranslations,
+                item => item.InformationEntryId == entry.Id && item.LanguageCode == language);
+            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+            Assert.Contains("2026–27", translation.Content, StringComparison.Ordinal);
+            foreach (var condition in conditions)
+                Assert.Contains(condition, translation.Content, StringComparison.OrdinalIgnoreCase);
+        }
+
+        var duoSource = Assert.Single(catalog.OfficialSources, source =>
+            source.InformationEntryId == entry.Id &&
+            source.Url.AbsoluteUri == "https://www.duo.nl/particulier/course-fees/asylum-seeker-or-ukrainian.jsp");
+        Assert.Equal(entry.Id, duoSource.InformationEntryId);
+    }
+
+    [Fact]
+    public async Task IntegratedTranslationsMatchAllNetherlandsDraftsWithOnlyTheApprovedDuoCorrection()
     {
         var catalog = await Catalog.Value;
         var repositoryRoot = FindRepositoryRoot();
@@ -154,6 +210,18 @@ public sealed class NetherlandsContentIntegrationTests
             foreach (var (languageCode, section) in languageMap)
             {
                 var expected = ParseDraft(draft, section);
+                if (key == "NL-EDU-01")
+                {
+                    var correction = section switch
+                    {
+                        "EN" => (Old: "and not qualifying for student finance or a grant.", New: "and not qualifying for student finance or a grant for students in secondary education because you do not meet the nationality criteria."),
+                        "UK" => (Old: "а також відсутність права на студентське фінансування чи грант.", New: "а також відсутність права на студентське фінансування чи грант для учнів закладів середньої освіти через невідповідність критеріям громадянства."),
+                        "RU" => (Old: "а также отсутствие права на студенческое финансирование или грант.", New: "а также отсутствие права на студенческое финансирование или грант для учащихся среднего образования из-за несоответствия критериям гражданства."),
+                        _ => throw new InvalidOperationException($"Unexpected language section {section}.")
+                    };
+                    Assert.Equal(1, expected.Content.Split(correction.Old, StringSplitOptions.None).Length - 1);
+                    expected = (expected.Title, expected.Summary, expected.Content.Replace(correction.Old, correction.New, StringComparison.Ordinal));
+                }
                 var actual = Assert.Single(catalog.InformationEntryTranslations,
                     item => item.InformationEntryId == entry.Id && item.LanguageCode == languageCode);
                 Assert.Equal(expected.Title, actual.Title);
