@@ -324,6 +324,20 @@ public sealed class CountryComparisonTests
         Assert.Contains("не определяет", healthcare.Values["ru"]);
     }
 
+    [Fact]
+    public async Task NetherlandsDuoCourseFeeConditionRequiresNoStudentFinanceEntitlementInAllLanguages()
+    {
+        var fact = (await FactCatalog.Value).Topics.SelectMany(topic => topic.Aspects)
+            .Single(aspect => aspect.Id == "education-higher-admission").Facts
+            .Single(item => item.CountrySlug == "netherlands");
+
+        Assert.Equal(ComparisonFactStatus.Draft, fact.Status);
+        Assert.Contains("no eligibility for student finance or grant", fact.Values["en"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("відсутності права на студентське фінансування чи грант", fact.Values["uk"], StringComparison.OrdinalIgnoreCase);
+        Assert.DoesNotContain("та права на студентське фінансування чи грант", fact.Values["uk"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("отсутствие права на студенческое финансирование или грант", fact.Values["ru"], StringComparison.OrdinalIgnoreCase);
+    }
+
     [Theory]
     [InlineData("en", "Netherlands")]
     [InlineData("uk", "Нідерланди")]

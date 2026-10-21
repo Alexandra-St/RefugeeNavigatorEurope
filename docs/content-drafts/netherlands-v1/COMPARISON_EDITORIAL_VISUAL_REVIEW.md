@@ -6,8 +6,8 @@ Review date: 21 October 2026
 ## Executive result
 
 - Reviewed all 24 Netherlands comparison facts in EN, UK and RU against the approved comparison-readiness sections of the eight research matrices and the relevant article-draft sections.
-- Findings: **1 BLOCKER, 0 CORRECTION, 0 POLISH**.
-- Recommendation: **READY FOR CORRECTION PASS**. This is not publication approval.
+- Original finding count: **1 BLOCKER, 0 CORRECTION, 0 POLISH**. The BLOCKER was resolved in Phase 18.3D; outstanding findings are now **0 BLOCKER, 0 CORRECTION, 0 POLISH**.
+- Recommendation: **READY FOR VIEWPORT VERIFICATION**. This is not publication approval.
 - All facts remain Draft. The production comparison gate remains in place; no catalog or application changes were made.
 
 ## Fact verdicts
@@ -36,14 +36,14 @@ The verdict and claim mapping below follow the approved matrix. The separate fin
 | 18 | `housing-financial-support` | Conditional | NL-HOUSING01-03, NL-HOUSING01-04 | Huurtoeslag is conditional; reception contributions are separately described. No 2027 host-household claim appears. |
 | 19 | `education-school-enrolment` | Conditional | NL-EDU01-01, NL-EDU01-02 | School navigation and the stated age rules are qualified by local placement and individual exceptions. |
 | 20 | `education-pupil-language` | Conditional | NL-EDU01-03 | The answer remains pupil-specific and does not promise fixed support or adult course access. |
-| 21 | `education-higher-admission` | Conditional | NL-EDU01-04, NL-EDU01-05 | EN and RU preserve the conditional MBO course-fee criteria; UK reverses one material eligibility condition (finding NL-18.3C-01). |
+| 21 | `education-higher-admission` | Conditional | NL-EDU01-04, NL-EDU01-05 | The conditional MBO course-fee criteria are now semantically aligned in EN, UK and RU; see the resolved NL-18.3C-01 record below. |
 | 22 | `social-subsistence` | Conditional | NL-SOC01-01, NL-SOC01-03 | Leefgeld and reception contributions remain distinct, cohort-dependent and time-sensitive. |
 | 23 | `social-application` | Conditional | NL-SOC01-02, NL-SOC01-05 | Municipal navigation is stated; ordinary assistance scope remains unresolved. |
 | 24 | `social-child-benefits` | Conditional | NL-SOC01-04 | Child benefit and supplementary budget have separate conditions; no automatic individual entitlement is implied. |
 
 ## Findings
 
-### NL-18.3C-01 — Ukrainian DUO eligibility condition is reversed
+### NL-18.3C-01 — Ukrainian DUO eligibility condition was reversed
 
 - **Aspect:** `education-higher-admission`
 - **Language:** UK
@@ -52,6 +52,8 @@ The verdict and claim mapping below follow the approved matrix. The separate fin
 - **Accepted evidence boundary:** Claim NL-EDU01-05 and source EDU-S04 establish a conditional 2026–27 MBO course-fee remission route. The listed criteria include age 18 to under 31 on 1 August, inability to pay/no sponsor, and **no eligibility for student finance/grant**; the application deadline is 31 July 2027. This is not a general education or course entitlement.
 - **Required correction:** Make the Ukrainian phrase express absence of entitlement, for example “і відсутності права на студентське фінансування чи грант,” while retaining the existing cohort, other criteria, deadline and conditional scope.
 - **Traceability:** [Education matrix](../../content-research/netherlands-batch-2026-10-20/education/SOURCES_AND_CLAIMS.md), NL-EDU01-05 / EDU-S04; [DUO course-fee conditions](https://www.duo.nl/particulier/course-fees/asylum-seeker-or-ukrainian.jsp).
+
+**Resolution status: RESOLVED in Phase 18.3D.** The Ukrainian answer now says “та відсутності права на студентське фінансування чи грант,” preserving the matrix condition that the applicant must not be eligible for student finance/grant. The 2026–27 period, age boundary, inability-to-pay/no-sponsor condition, deadline and conditional MBO-only scope were preserved. EN and RU were checked and already expressed the same negative condition.
 
 No other factual, source-mapping or translation correction was identified in the reviewed 24 facts. The evidence limitations listed below remain intentional and should not be “resolved” by inference.
 
@@ -107,4 +109,14 @@ No separate optional copy/presentation polish item was confirmed. The possible c
 
 ## Publication-gate recommendation
 
-**READY FOR CORRECTION PASS.** The UK DUO eligibility reversal is a material blocker, and required desktop/mobile viewport reviews were not available. This review does not approve facts for publication. Preserve the unresolved evidence gaps and freshness gates; do not treat the 20 October source checks as a substitute for the eventual publication-time review.
+**READY FOR VIEWPORT VERIFICATION.** The translation blocker is resolved, with 0 outstanding BLOCKER, 0 CORRECTION and 0 POLISH findings. Required desktop/mobile viewport reviews remain incomplete, so this is **NOT READY FOR PUBLICATION GATE REVIEW** and does not approve facts for publication. Preserve the unresolved evidence gaps and freshness gates; do not treat the 20 October source checks as a substitute for the eventual publication-time review.
+
+## Phase 18.3D — Correction Pass
+
+- **NL-18.3C-01:** RESOLVED.
+- **Exact correction:** Changed the Ukrainian DUO criterion from “та права на студентське фінансування чи грант” to “та відсутності права на студентське фінансування чи грант.” No other language or fact value was changed.
+- **Languages checked:** EN, UK and RU. EN and RU already expressed the negative condition; the corrected UK now matches their meaning without adding criteria.
+- **Evidence:** NL-EDU01-05 / EDU-S04 in the [education research matrix](../../content-research/netherlands-batch-2026-10-20/education/SOURCES_AND_CLAIMS.md); [DUO course-fee conditions](https://www.duo.nl/particulier/course-fees/asylum-seeker-or-ukrainian.jsp).
+- **Regression test:** `NetherlandsDuoCourseFeeConditionRequiresNoStudentFinanceEntitlementInAllLanguages` verifies the negative condition in each language and rejects the previous Ukrainian wording. The existing Netherlands comparison/gating tests were run alongside it.
+- **Outstanding findings:** 0 BLOCKER, 0 CORRECTION, 0 POLISH.
+- **Next gate:** READY FOR VIEWPORT VERIFICATION; not ready for publication-gate review because requested 1280 × 720, 390px and 320px visual checks remain incomplete.
