@@ -201,6 +201,105 @@ public sealed class CategoryRenderingTests
         }
     }
 
+    [Theory]
+    [InlineData("en")]
+    [InlineData("uk")]
+    [InlineData("ru")]
+    public async Task ProductionCategoryRendersOnlyVerifiedCurrentLanguageEntries(string language)
+    {
+        var verified = FixtureEntry(Guid.Parse("30000000-0000-0000-0000-000000000011"), title: "Verified", content: "Verified body", status: VerificationStatus.Verified);
+        var needsReview = FixtureEntry(Guid.Parse("30000000-0000-0000-0000-000000000012"), title: "Needs review", content: "Needs review body", status: VerificationStatus.NeedsReview);
+        var outdated = FixtureEntry(Guid.Parse("30000000-0000-0000-0000-000000000013"), title: "Outdated", content: "Outdated body", status: VerificationStatus.Outdated);
+        var sources = new[]
+        {
+            FixtureSource(Guid.NewGuid(), verified.Entry.Id, "Verified source", "https://example.gov/verified"),
+            FixtureSource(Guid.NewGuid(), needsReview.Entry.Id, "Needs review source", "https://example.gov/needs-review"),
+            FixtureSource(Guid.NewGuid(), outdated.Entry.Id, "Outdated source", "https://example.gov/outdated")
+        };
+        var catalog = await CreateCatalogAsync([verified, needsReview, outdated], sources);
+
+        var html = WebUtility.HtmlDecode(await RenderAsync(catalog, language, "denmark", "employment", environmentName: "Production"));
+
+        Assert.Contains($"Verified {language}", html);
+        var summaries = Regex.Matches(html, "<p class=\"entry-summary\"[^>]*>(.*?)</p>", RegexOptions.Singleline)
+            .Select(match => WebUtility.HtmlDecode(match.Groups[1].Value))
+            .ToArray();
+        Assert.Equal($"Summary {language}", Assert.Single(summaries));
+        Assert.Contains("Verified body", html);
+        Assert.Contains("https://example.gov/verified", html);
+        Assert.Contains($"id=\"entry-{verified.Entry.Id:N}\"", html);
+
+        foreach (var excluded in new[] { (needsReview, "Needs review"), (outdated, "Outdated") })
+        {
+            Assert.DoesNotContain($"{excluded.Item2} {language}", html);
+            Assert.DoesNotContain(excluded.Item1.Content, html);
+            Assert.DoesNotContain($"id=\"entry-{excluded.Item1.Entry.Id:N}\"", html);
+            Assert.DoesNotContain(sources.Single(source => source.InformationEntryId == excluded.Item1.Entry.Id).Url.AbsoluteUri, html);
+            Assert.DoesNotContain($"{excluded.Item2} source", html);
+        }
+    }
+
+    [Fact]
+    public async Task ProductionCategoryEvaluatesMixedTranslationStatusesIndependently()
+    {
+        var entry = FixtureEntry(Guid.Parse("30000000-0000-0000-0000-000000000014"), title: "Mixed language", content: "Mixed language body", status: VerificationStatus.NeedsReview);
+        var catalog = await CreateCatalogAsync([entry], statusOverrides: new Dictionary<(Guid, string), VerificationStatus>
+        {
+            [(entry.Entry.Id, "en")] = VerificationStatus.Verified,
+            [(entry.Entry.Id, "uk")] = VerificationStatus.NeedsReview,
+            [(entry.Entry.Id, "ru")] = VerificationStatus.Outdated
+        });
+
+        var english = WebUtility.HtmlDecode(await RenderAsync(catalog, "en", environmentName: "Production"));
+        var ukrainian = WebUtility.HtmlDecode(await RenderAsync(catalog, "uk", environmentName: "Production"));
+        var russian = WebUtility.HtmlDecode(await RenderAsync(catalog, "ru", environmentName: "Production"));
+
+        Assert.Contains("Mixed language en", english);
+        Assert.Contains("Mixed language body", english);
+        Assert.DoesNotContain("Mixed language uk", ukrainian);
+        Assert.DoesNotContain($"id=\"entry-{entry.Entry.Id:N}\"", ukrainian);
+        Assert.DoesNotContain("Mixed language ru", russian);
+        Assert.DoesNotContain($"id=\"entry-{entry.Entry.Id:N}\"", russian);
+    }
+
+    [Fact]
+    public async Task DevelopmentCategoryKeepsNeedsReviewAndOutdatedEditorialPreview()
+    {
+        var needsReview = FixtureEntry(Guid.Parse("30000000-0000-0000-0000-000000000015"), title: "Preview needs review", status: VerificationStatus.NeedsReview);
+        var outdated = FixtureEntry(Guid.Parse("30000000-0000-0000-0000-000000000016"), title: "Preview outdated", status: VerificationStatus.Outdated);
+        var catalog = await CreateCatalogAsync([needsReview, outdated]);
+
+        var html = WebUtility.HtmlDecode(await RenderAsync(catalog, "en", environmentName: "Development"));
+
+        Assert.Contains("Preview needs review en", html);
+        Assert.Contains("Preview outdated en", html);
+    }
+
+    [Fact]
+    public async Task NetherlandsProductionCategoryKeepsTp01HiddenWhenTp02IsSeparatelyVerified()
+    {
+        var catalog = await ProductionCatalog.Value;
+        var tp01Id = Guid.Parse("244b1055-4d8c-55b2-820e-60ff018c3b1f");
+        var tp02Id = Guid.Parse("c5f5f833-0ab7-5e1a-9325-87a92b21d2ad");
+        var tp01 = catalog.InformationEntryTranslations.Single(translation => translation.InformationEntryId == tp01Id && translation.LanguageCode == "en");
+        var tp02 = catalog.InformationEntryTranslations.Single(translation => translation.InformationEntryId == tp02Id && translation.LanguageCode == "en");
+
+        var heldCatalogHtml = WebUtility.HtmlDecode(await RenderAsync(catalog, "en", "netherlands", "temporary-protection", environmentName: "Production"));
+        var partiallyVerifiedCatalog = WithTranslationStatuses(catalog, new Dictionary<(Guid, string), VerificationStatus>
+        {
+            [(tp02Id, "en")] = VerificationStatus.Verified
+        });
+        var partiallyVerifiedHtml = WebUtility.HtmlDecode(await RenderAsync(partiallyVerifiedCatalog, "en", "netherlands", "temporary-protection", environmentName: "Production"));
+
+        Assert.DoesNotContain($"entry-{tp01Id:N}", heldCatalogHtml);
+        Assert.DoesNotContain($"entry-{tp02Id:N}", heldCatalogHtml);
+        Assert.Contains(tp02.Title, partiallyVerifiedHtml);
+        Assert.Contains($"id=\"entry-{tp02Id:N}\"", partiallyVerifiedHtml);
+        Assert.DoesNotContain(tp01.Title, partiallyVerifiedHtml);
+        Assert.DoesNotContain($"id=\"entry-{tp01Id:N}\"", partiallyVerifiedHtml);
+        Assert.DoesNotContain($"sources-heading-{tp01Id:N}", partiallyVerifiedHtml);
+    }
+
     [Fact]
     public async Task RendersTranslationAndSourceDatesSeparatelyForMultipleSources()
     {
@@ -374,7 +473,8 @@ public sealed class CategoryRenderingTests
 
     private static Task<CatalogData> CreateCatalogAsync(
         IReadOnlyList<EntryFixture> entries,
-        IReadOnlyList<OfficialSource>? sources = null)
+        IReadOnlyList<OfficialSource>? sources = null,
+        IReadOnlyDictionary<(Guid EntryId, string Language), VerificationStatus>? statusOverrides = null)
     {
         var documents = entries.Select(fixture => new
         {
@@ -388,7 +488,9 @@ public sealed class CategoryRenderingTests
                     $"{fixture.Title} {language}",
                     $"Summary {language}",
                     fixture.Content == "Body" ? $"Body {language}" : fixture.Content,
-                    fixture.Status,
+                    statusOverrides is not null && statusOverrides.TryGetValue((fixture.Entry.Id, language), out var statusOverride)
+                        ? statusOverride
+                        : fixture.Status,
                     UpdatedAt)).ToArray()
         }).ToArray();
 
@@ -429,6 +531,30 @@ public sealed class CategoryRenderingTests
         {
             Directory.Delete(contentRoot, recursive: true);
         }
+    }
+
+    private static CatalogData WithTranslationStatuses(
+        CatalogData catalog,
+        IReadOnlyDictionary<(Guid EntryId, string Language), VerificationStatus> statusOverrides)
+    {
+        var translations = catalog.InformationEntryTranslations.Select(translation =>
+            new InformationEntryTranslation(
+                translation.InformationEntryId,
+                translation.LanguageCode,
+                translation.Title,
+                translation.Summary,
+                translation.Content,
+                statusOverrides.TryGetValue((translation.InformationEntryId, translation.LanguageCode), out var status)
+                    ? status
+                    : translation.VerificationStatus,
+                translation.LastUpdatedAt)).ToArray();
+
+        return (CatalogData)Activator.CreateInstance(
+            typeof(CatalogData),
+            BindingFlags.Instance | BindingFlags.NonPublic,
+            binder: null,
+            args: [catalog.Countries, catalog.Categories, catalog.InformationEntries, translations, catalog.OfficialSources],
+            culture: CultureInfo.InvariantCulture)!;
     }
 
     private static CatalogData CreateCatalogWithoutLanguage(CatalogData catalog, string languageCode)
