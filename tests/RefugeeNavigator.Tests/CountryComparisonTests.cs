@@ -731,6 +731,178 @@ public sealed class CountryComparisonTests
     }
 
     [Theory]
+    [InlineData("en")]
+    [InlineData("uk")]
+    [InlineData("ru")]
+    public async Task ProductionRendersApprovedFactsIndependentlyFromDraftFacts(string language)
+    {
+        var catalog = await LoadCatalogAsync();
+        var facts = await FactCatalog.Value;
+        var topic = Assert.Single(facts.Topics, item => item.TopicResourceKey == "Compare.Topic.WorkAuthorizationRights");
+        var aspect = Assert.Single(topic.Aspects, item => item.Id == "work-permission");
+        var germanyFact = Assert.Single(aspect.Facts, fact => fact.CountrySlug == "germany");
+        var privateDraftAnswer = $"DRAFT-ONLY-ANSWER-{language}";
+        var draftFact = germanyFact with
+        {
+            Status = ComparisonFactStatus.Draft,
+            Values = new Dictionary<string, string>(StringComparer.Ordinal)
+            {
+                ["en"] = "DRAFT-ONLY-ANSWER-en",
+                ["uk"] = "DRAFT-ONLY-ANSWER-uk",
+                ["ru"] = "DRAFT-ONLY-ANSWER-ru"
+            }
+        };
+        var mixedFacts = WithFact(facts, topic, aspect, draftFact);
+        const string query = "?country1=germany&country2=poland&category=employment";
+
+        var productionHtml = WebUtility.HtmlDecode(await RenderAsync(catalog, language, query, Environments.Production, mixedFacts));
+        var draftPanel = StructuredCountryPanel(productionHtml, aspect.Id, GetResource("Country.Germany", language));
+        var developmentHtml = WebUtility.HtmlDecode(await RenderAsync(catalog, language, query, comparisonFacts: mixedFacts));
+        var developmentDraftPanel = StructuredCountryPanel(developmentHtml, aspect.Id, GetResource("Country.Germany", language));
+        var polandFact = Assert.Single(aspect.Facts, fact => fact.CountrySlug == "poland");
+
+        Assert.Contains("class=\"structured-comparison\"", productionHtml);
+        Assert.DoesNotContain(privateDraftAnswer, productionHtml);
+        Assert.Contains(GetResource("Compare.NotEstablishedInReviewedSources", language), draftPanel);
+        Assert.DoesNotContain("class=\"draft-label\"", draftPanel);
+        Assert.DoesNotContain("class=\"fact-sources\"", draftPanel);
+        Assert.Contains(polandFact.Values[language], productionHtml);
+        Assert.Contains(privateDraftAnswer, developmentDraftPanel);
+        Assert.Contains(GetResource("Compare.DraftPreviewNotice", language), developmentHtml);
+        Assert.Contains(GetResource("Compare.DraftStatus", language), developmentDraftPanel);
+        Assert.Contains("class=\"fact-sources\"", developmentDraftPanel);
+    }
+
+    [Theory]
+    [InlineData("en")]
+    [InlineData("uk")]
+    [InlineData("ru")]
+    public async Task ProductionApprovedFactRequiresValidOwnedSources(string language)
+    {
+        var catalog = await LoadCatalogAsync();
+        var facts = await FactCatalog.Value;
+        var topic = Assert.Single(facts.Topics, item => item.TopicResourceKey == "Compare.Topic.WorkAuthorizationRights");
+        var aspect = Assert.Single(topic.Aspects, item => item.Id == "work-permission");
+        var germanyFact = Assert.Single(aspect.Facts, fact => fact.CountrySlug == "germany");
+        var replacement = germanyFact with
+        {
+            OfficialSourceIds = [Guid.NewGuid()],
+            Values = new Dictionary<string, string>(StringComparer.Ordinal)
+            {
+                ["en"] = "INVALID-SOURCE-ANSWER-en",
+                ["uk"] = "INVALID-SOURCE-ANSWER-uk",
+                ["ru"] = "INVALID-SOURCE-ANSWER-ru"
+            }
+        };
+        var changedFacts = WithFact(facts, topic, aspect, replacement);
+        var html = WebUtility.HtmlDecode(await RenderAsync(catalog, language,
+            "?country1=germany&country2=poland&category=employment", Environments.Production, changedFacts));
+        var panel = StructuredCountryPanel(html, aspect.Id, GetResource("Country.Germany", language));
+
+        Assert.DoesNotContain(replacement.Values[language], html);
+        Assert.Contains(GetResource("Compare.NotEstablishedInReviewedSources", language), panel);
+        Assert.DoesNotContain("class=\"fact-sources\"", panel);
+    }
+
+    [Theory]
+    [InlineData("en")]
+    [InlineData("uk")]
+    [InlineData("ru")]
+    public async Task ProductionApprovedFactRequiresVerifiedTranslationInTheSelectedLanguage(string language)
+    {
+        var catalog = await LoadCatalogAsync();
+        var facts = await FactCatalog.Value;
+        var topic = Assert.Single(facts.Topics, item => item.TopicResourceKey == "Compare.Topic.FindingEmployment");
+        var aspect = Assert.Single(topic.Aspects, item => item.Id == "employment-vacancies");
+        var denmarkFact = Assert.Single(aspect.Facts, fact => fact.CountrySlug == "denmark");
+        var entryId = denmarkFact.InformationEntryId;
+        var original = Assert.Single(catalog.InformationEntryTranslations, item => item.InformationEntryId == entryId && item.LanguageCode == language);
+        var baselineHtml = WebUtility.HtmlDecode(await RenderAsync(catalog, language,
+            "?country1=denmark&country2=germany&category=employment", Environments.Production, facts));
+        var baselineSourceDetails = Regex.Matches(baselineHtml, "class=\"source-details\"").Count;
+        Assert.True(baselineSourceDetails > 0);
+
+        foreach (var status in new[] { VerificationStatus.NeedsReview, VerificationStatus.Outdated })
+        {
+            var changedCatalog = WithTranslations(catalog, entryId, language, status);
+            var html = WebUtility.HtmlDecode(await RenderAsync(changedCatalog, language,
+                "?country1=denmark&country2=germany&category=employment", Environments.Production, facts));
+            var denmarkPanel = StructuredCountryPanel(html, aspect.Id, GetResource("Country.Denmark", language));
+
+            Assert.DoesNotContain(denmarkFact.Values[language], html);
+            Assert.Contains(GetResource("Compare.NotEstablishedInReviewedSources", language), denmarkPanel);
+            Assert.DoesNotContain("class=\"fact-sources\"", denmarkPanel);
+            Assert.DoesNotContain(original.Title, html);
+            Assert.DoesNotContain(original.Summary, html);
+            Assert.Equal(baselineSourceDetails - 1, Regex.Matches(html, "class=\"source-details\"").Count);
+        }
+    }
+
+    [Theory]
+    [InlineData("en")]
+    [InlineData("uk")]
+    [InlineData("ru")]
+    public async Task NetherlandsApprovedFactsAreGatedPerLinkedArticleAndUnavailableFactDoesNotBlock(string language)
+    {
+        var catalog = await LoadCatalogAsync();
+        var facts = await FactCatalog.Value;
+        var tp01Id = Guid.Parse("244b1055-4d8c-55b2-820e-60ff018c3b1f");
+        var tp02Id = Guid.Parse("c5f5f833-0ab7-5e1a-9325-87a92b21d2ad");
+        var tp02VerifiedCatalog = WithTranslations(catalog, tp02Id, language, VerificationStatus.Verified);
+        var tp01NeedsReviewCatalog = WithTranslations(tp02VerifiedCatalog, tp01Id, language, VerificationStatus.NeedsReview);
+        var tp01OutdatedCatalog = WithTranslations(tp02VerifiedCatalog, tp01Id, language, VerificationStatus.Outdated);
+        var tp01VerifiedCatalog = WithTranslations(tp02VerifiedCatalog, tp01Id, language, VerificationStatus.Verified);
+        var tp01Translation = Assert.Single(catalog.InformationEntryTranslations,
+            item => item.InformationEntryId == tp01Id && item.LanguageCode == language);
+
+        var gatedAspects = new[] { "protection-scheme", "protection-application", "protection-dates" };
+        foreach (var aspectId in gatedAspects)
+        {
+            var (topic, aspect, fact) = FindFact(facts, aspectId, "netherlands");
+            var secretValues = new Dictionary<string, string>(StringComparer.Ordinal)
+            {
+                ["en"] = $"NL-TP01-SECRET-{aspectId}-en",
+                ["uk"] = $"NL-TP01-SECRET-{aspectId}-uk",
+                ["ru"] = $"NL-TP01-SECRET-{aspectId}-ru"
+            };
+            facts = WithFact(facts, topic, aspect, fact with { Status = ComparisonFactStatus.Approved, Values = secretValues });
+        }
+
+        var (routesTopic, routesAspect, routesFact) = FindFact(facts, "residence-routes", "netherlands");
+        facts = WithFact(facts, routesTopic, routesAspect, routesFact with { Status = ComparisonFactStatus.Approved });
+        var filing = FindFact(facts, "residence-filing", "netherlands").Fact;
+        var query = "?country1=netherlands&country2=germany&category=temporary-protection";
+        var tp01VerifiedHtml = WebUtility.HtmlDecode(await RenderAsync(tp01VerifiedCatalog, language, query, Environments.Production, facts));
+        var tp01VerifiedSourceDetails = Regex.Matches(tp01VerifiedHtml, "class=\"source-details\"").Count;
+        Assert.True(tp01VerifiedSourceDetails > 0);
+
+        foreach (var changedCatalog in new[] { tp01NeedsReviewCatalog, tp01OutdatedCatalog })
+        {
+            var html = WebUtility.HtmlDecode(await RenderAsync(changedCatalog, language, query, Environments.Production, facts));
+            var tp01Panel = StructuredCountryPanel(html, "protection-scheme", GetResource("Country.Netherlands", language));
+            var tp01ArticlePanel = FullArticleCountryPanel(html, "Compare.Topic.TemporaryProtectionApplication", GetResource("Country.Netherlands", language));
+
+            Assert.Contains("class=\"structured-comparison\"", html);
+            Assert.Contains(routesFact.Values[language], html);
+            Assert.Contains(GetResource("Compare.NotEstablishedInReviewedSources", language), tp01Panel);
+            Assert.DoesNotContain("class=\"fact-sources\"", tp01Panel);
+            Assert.DoesNotContain(tp01Translation.Title, html);
+            Assert.DoesNotContain(tp01Translation.Summary, html);
+            Assert.DoesNotContain("class=\"article-body\"", tp01ArticlePanel);
+            foreach (var aspectId in gatedAspects)
+                Assert.DoesNotContain($"NL-TP01-SECRET-{aspectId}-{language}", html);
+            Assert.False(filing.IsAvailable);
+            Assert.Equal(ComparisonFactStatus.Draft, filing.Status);
+            Assert.Empty(filing.OfficialSourceIds);
+            Assert.Equal(GetResource("Compare.NotEstablishedInReviewedSources", language), filing.Values[language]);
+            var filingPanel = StructuredCountryPanel(html, "residence-filing", GetResource("Country.Netherlands", language));
+            Assert.Contains(GetResource("Compare.NotEstablishedInReviewedSources", language), filingPanel);
+            Assert.DoesNotContain("class=\"fact-sources\"", filingPanel);
+            Assert.Equal(tp01VerifiedSourceDetails - 1, Regex.Matches(html, "class=\"source-details\"").Count);
+        }
+    }
+
+    [Theory]
     [InlineData("uk")]
     [InlineData("en")]
     [InlineData("ru")]
@@ -1327,6 +1499,57 @@ public sealed class CountryComparisonTests
         Assert.Matches("<span\\b(?=[^>]*aria-hidden=\\\"true\\\")(?=[^>]*class=\\\"external-link-icon\\\")[^>]*>↗</span>", content);
         Assert.Contains($"({GetResource("Common.OpensInNewTab", language)})", visibleContent);
         Assert.DoesNotContain("Common.OpensInNewTab", html);
+    }
+
+    private static (ComparisonTopicFacts Topic, ComparisonAspect Aspect, CountryComparisonFact Fact) FindFact(
+        ComparisonFactCatalog catalog,
+        string aspectId,
+        string countrySlug)
+    {
+        var topic = Assert.Single(catalog.Topics, item => item.Aspects.Any(aspect => aspect.Id == aspectId));
+        var aspect = Assert.Single(topic.Aspects, item => item.Id == aspectId);
+        var fact = Assert.Single(aspect.Facts, item => item.CountrySlug == countrySlug);
+        return (topic, aspect, fact);
+    }
+
+    private static string StructuredCountryPanel(string html, string aspectId, string countryName)
+    {
+        const string sectionStartTag = "<section class=\"structured-aspect\"";
+        var startIndex = html.IndexOf(sectionStartTag, StringComparison.Ordinal);
+        while (startIndex >= 0)
+        {
+            var tagEnd = html.IndexOf('>', startIndex);
+            if (tagEnd >= 0 && html[startIndex..(tagEnd + 1)].Contains(aspectId, StringComparison.Ordinal))
+                break;
+            startIndex = html.IndexOf(sectionStartTag, tagEnd < 0 ? startIndex + sectionStartTag.Length : tagEnd + 1, StringComparison.Ordinal);
+        }
+
+        Assert.True(startIndex >= 0, $"Structured aspect '{aspectId}' was not rendered.");
+        var nextStart = html.IndexOf(sectionStartTag, startIndex + sectionStartTag.Length, StringComparison.Ordinal);
+        var aspectMarkup = nextStart < 0 ? html[startIndex..] : html[startIndex..nextStart];
+        var countryPanels = Regex.Matches(aspectMarkup,
+                "<article class=\"structured-country\"[^>]*>.*?</article>",
+                RegexOptions.Singleline)
+            .Cast<Match>()
+            .Select(match => match.Value)
+            .ToArray();
+        return Assert.Single(countryPanels, panel => panel.Contains($">{countryName}</h", StringComparison.Ordinal));
+    }
+
+    private static string FullArticleCountryPanel(string html, string topicResourceKey, string countryName)
+    {
+        var headingId = $"topic-{topicResourceKey.Replace('.', '-')}";
+        var topicStart = html.IndexOf($"<section class=\"comparison-topic\" aria-labelledby=\"{headingId}\"", StringComparison.Ordinal);
+        Assert.True(topicStart >= 0, $"Full-article topic '{topicResourceKey}' was not rendered.");
+        var nextTopic = html.IndexOf("<section class=\"comparison-topic\"", topicStart + 1, StringComparison.Ordinal);
+        var topicMarkup = nextTopic < 0 ? html[topicStart..] : html[topicStart..nextTopic];
+        var countryPanels = Regex.Matches(topicMarkup,
+                "<article class=\"topic-country\"[^>]*>.*?</article>",
+                RegexOptions.Singleline)
+            .Cast<Match>()
+            .Select(match => match.Value)
+            .ToArray();
+        return Assert.Single(countryPanels, panel => panel.Contains(countryName, StringComparison.Ordinal));
     }
 
     private static string ReadRenderedText(string html) => WebUtility.HtmlDecode(

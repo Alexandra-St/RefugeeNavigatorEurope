@@ -194,6 +194,8 @@
                             {
                                 var fact = aspect.Facts.Single(item => item.CountrySlug == country.Slug);
                                 var countryName = Localizer[CatalogLocalizationKeyResolver.CountryName(country)];
+                                var canRenderFact = CanRenderFact(fact);
+                                var factSources = canRenderFact ? AvailableFactSources(fact) : Array.Empty<OfficialSource>();
                                 <article class="structured-country" aria-label="@Localizer["Compare.CountryPanelHeading", countryName]">
                                     @if (allCategoriesMode)
                                     {
@@ -203,17 +205,17 @@
                                     {
                                         <h5>@countryName</h5>
                                     }
-                                    @if (fact.Status == ComparisonFactStatus.Draft)
+                                    @if (HostEnvironment.IsDevelopment() && fact.Status == ComparisonFactStatus.Draft)
                                     {
                                         <span class="draft-label">@Localizer["Compare.DraftStatus"]</span>
                                     }
-                                    <p>@FactText(fact)</p>
-                                    @if (AvailableFactSources(fact).Count > 0)
+                                    <p>@FactText(fact, canRenderFact)</p>
+                                    @if (factSources.Count > 0)
                                     {
                                         <details class="fact-sources">
-                                            <summary>@Localizer["Compare.FactSources"] (@AvailableFactSources(fact).Count)</summary>
+                                            <summary>@Localizer["Compare.FactSources"] (@factSources.Count)</summary>
                                             <ul>
-                                                @foreach (var source in AvailableFactSources(fact))
+                                                @foreach (var source in factSources)
                                                 {
                                                     var (sourceTitlePrefix, sourceTitleSuffix) = SplitFinalTitleWord(source.Title);
                                                     <li><a href="@source.Url.AbsoluteUri" target="_blank" rel="noopener noreferrer">@sourceTitlePrefix<span class="external-link-final-word">@sourceTitleSuffix<span aria-hidden="true" class="external-link-icon">↗</span></span><span class="visually-hidden"> (@Localizer["Common.OpensInNewTab"])</span></a><span>@Localizer["Compare.SourceChecked"] <time datetime="@source.LastCheckedAt.ToString("O", CultureInfo.InvariantCulture)">@FormatDate(source.LastCheckedAt)</time></span></li>
@@ -249,9 +251,9 @@
                 <p>@Localizer["Compare.ScopeNotice"]</p>
             </aside>
 
-            @if (HostEnvironment.IsDevelopment() || IsStructuredCatalogApproved)
+            @if (HostEnvironment.IsDevelopment() || HasApprovedStructuredFacts)
             {
-                @if (HostEnvironment.IsDevelopment() && !IsStructuredCatalogApproved)
+                @if (HostEnvironment.IsDevelopment() && HasDraftStructuredFacts)
                 {
                     <aside class="draft-preview-notice" role="note">
                         <strong>@Localizer["Compare.DraftPreviewHeading"]</strong>
@@ -287,7 +289,7 @@
                     @fullArticleComparison
                 </details>
             }
-            else if (HostEnvironment.IsDevelopment() || IsStructuredCatalogApproved)
+            else if (HostEnvironment.IsDevelopment() || HasApprovedStructuredFacts)
             {
                 <details class="full-article-comparison">
                     <summary>@Localizer["Compare.ReadFullArticles"]</summary>
@@ -335,8 +337,11 @@
         .SelectMany(aspect => aspect.Facts)
         .Where(fact => fact.CountrySlug == SelectedCountryOne?.Slug || fact.CountrySlug == SelectedCountryTwo?.Slug);
 
-    private bool IsStructuredCatalogApproved => SelectedStructuredFacts.Any() &&
-        SelectedStructuredFacts.All(fact => fact.Status == ComparisonFactStatus.Approved);
+    private bool HasApprovedStructuredFacts =>
+        SelectedStructuredFacts.Any(fact => fact.Status == ComparisonFactStatus.Approved);
+
+    private bool HasDraftStructuredFacts =>
+        SelectedStructuredFacts.Any(fact => fact.Status == ComparisonFactStatus.Draft);
 
     private string? SelectionMessage
     {
@@ -392,7 +397,10 @@
         var languageCode = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
         var translation = Catalog.InformationEntryTranslations.SingleOrDefault(item =>
             item.InformationEntryId == entry.Id && item.LanguageCode == languageCode);
-        var sources = Catalog.OfficialSources.Where(source => source.InformationEntryId == entry.Id).ToArray();
+        var mayRenderSources = HostEnvironment.IsDevelopment() || translation?.VerificationStatus == VerificationStatus.Verified;
+        var sources = mayRenderSources
+            ? Catalog.OfficialSources.Where(source => source.InformationEntryId == entry.Id).ToArray()
+            : Array.Empty<OfficialSource>();
         return new ComparisonArticle(entry, translation, sources);
     }
 
@@ -404,21 +412,31 @@
         return separator < 0 ? (string.Empty, title) : (title[..(separator + 1)], title[(separator + 1)..]);
     }
 
-    private string FactText(CountryComparisonFact fact)
-    {
-        var translation = Catalog.InformationEntryTranslations.SingleOrDefault(item =>
-            item.InformationEntryId == fact.InformationEntryId &&
-            item.LanguageCode == CultureInfo.CurrentUICulture.TwoLetterISOLanguageName);
-        var hasArticle = Catalog.InformationEntries.Any(entry => entry.Id == fact.InformationEntryId);
-        var hasOwnedSources = AvailableFactSources(fact).Count > 0;
-        var verifiedForPublication = translation?.VerificationStatus == VerificationStatus.Verified;
-        var draftPreview = HostEnvironment.IsDevelopment() &&
-            fact.Status == ComparisonFactStatus.Draft &&
-            translation?.VerificationStatus == VerificationStatus.NeedsReview;
-
-        return fact.IsAvailable && hasArticle && hasOwnedSources && (verifiedForPublication || draftPreview)
+    private string FactText(CountryComparisonFact fact, bool canRenderFact) =>
+        canRenderFact
             ? fact.Values[CultureInfo.CurrentUICulture.TwoLetterISOLanguageName]
             : Localizer["Compare.NotEstablishedInReviewedSources"].Value;
+
+    private bool CanRenderFact(CountryComparisonFact fact)
+    {
+        if (!fact.IsAvailable || !Catalog.InformationEntries.Any(entry => entry.Id == fact.InformationEntryId))
+        {
+            return false;
+        }
+
+        var languageCode = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+        var translation = Catalog.InformationEntryTranslations.SingleOrDefault(item =>
+            item.InformationEntryId == fact.InformationEntryId && item.LanguageCode == languageCode);
+        var isDevelopment = HostEnvironment.IsDevelopment();
+        var statusAllowsRendering = fact.Status == ComparisonFactStatus.Approved ||
+            (isDevelopment && fact.Status == ComparisonFactStatus.Draft);
+        var translationAllowsRendering = translation?.VerificationStatus == VerificationStatus.Verified ||
+            (isDevelopment && fact.Status == ComparisonFactStatus.Draft &&
+             translation?.VerificationStatus == VerificationStatus.NeedsReview);
+        var hasValidOwnedSources = fact.OfficialSourceIds.Count > 0 && fact.OfficialSourceIds.All(sourceId =>
+            Catalog.OfficialSources.Any(source => source.Id == sourceId && source.InformationEntryId == fact.InformationEntryId));
+
+        return statusAllowsRendering && translationAllowsRendering && hasValidOwnedSources;
     }
 
     private IReadOnlyList<OfficialSource> AvailableFactSources(CountryComparisonFact fact) =>
