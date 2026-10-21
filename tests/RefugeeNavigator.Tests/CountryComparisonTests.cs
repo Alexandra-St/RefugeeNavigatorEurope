@@ -50,10 +50,10 @@ public sealed class CountryComparisonTests
         Assert.Equal(24, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Draft));
         Assert.All(facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Where(fact => fact.CountrySlug != "sweden"), fact => Assert.Equal(ComparisonFactStatus.Approved, fact.Status));
         Assert.Equal(279, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Sum(fact => fact.OfficialSourceIds.Count));
-        Assert.Equal(48, catalog.InformationEntries.Count);
-        Assert.Equal(144, catalog.InformationEntryTranslations.Count);
+        Assert.Equal(56, catalog.InformationEntries.Count);
+        Assert.Equal(168, catalog.InformationEntryTranslations.Count);
         Assert.Equal(120, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(24, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(48, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Outdated));
         var czechiaId = Guid.Parse("10000000-0000-0000-0000-000000000004");
         var czechiaEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == czechiaId).Select(entry => entry.Id).ToHashSet();
@@ -61,15 +61,20 @@ public sealed class CountryComparisonTests
         var spainEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == spainId).Select(entry => entry.Id).ToHashSet();
         var swedenId = Guid.Parse("10000000-0000-0000-0000-000000000006");
         var swedenEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == swedenId).Select(entry => entry.Id).ToHashSet();
+        var netherlandsId = Guid.Parse("10000000-0000-0000-0000-000000000007");
+        var netherlandsEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == netherlandsId).Select(entry => entry.Id).ToHashSet();
         Assert.All(catalog.InformationEntryTranslations.Where(translation => czechiaEntryIds.Contains(translation.InformationEntryId)),
             translation => Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus));
         Assert.All(catalog.InformationEntryTranslations.Where(translation => spainEntryIds.Contains(translation.InformationEntryId)),
             translation => Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus));
         Assert.All(catalog.InformationEntryTranslations.Where(translation => swedenEntryIds.Contains(translation.InformationEntryId)),
             translation => Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus));
+        Assert.All(catalog.InformationEntryTranslations.Where(translation => netherlandsEntryIds.Contains(translation.InformationEntryId)),
+            translation => Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus));
         Assert.All(catalog.InformationEntryTranslations.Where(translation => !czechiaEntryIds.Contains(translation.InformationEntryId)
                                                                             && !spainEntryIds.Contains(translation.InformationEntryId)
-                                                                            && !swedenEntryIds.Contains(translation.InformationEntryId)),
+                                                                            && !swedenEntryIds.Contains(translation.InformationEntryId)
+                                                                            && !netherlandsEntryIds.Contains(translation.InformationEntryId)),
             translation => Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus));
         var unavailableFacts = facts.Topics.SelectMany(topic => topic.Aspects)
             .SelectMany(aspect => aspect.Facts.Where(fact => !fact.IsAvailable)

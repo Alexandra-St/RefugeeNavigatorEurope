@@ -82,11 +82,11 @@ public sealed class SwedenContentIntegrationTests
         var country = Assert.Single(catalog.Countries, item => item.Slug == "sweden");
         Assert.Equal(SwedenId, country.Id);
         Assert.Equal("Sweden", country.Name);
-        Assert.Equal(6, catalog.Countries.Count);
-        Assert.Equal(48, catalog.InformationEntries.Count);
-        Assert.Equal(144, catalog.InformationEntryTranslations.Count);
+        Assert.Equal(7, catalog.Countries.Count);
+        Assert.Equal(56, catalog.InformationEntries.Count);
+        Assert.Equal(168, catalog.InformationEntryTranslations.Count);
         Assert.Equal(120, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(24, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(48, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == SwedenId).ToArray();

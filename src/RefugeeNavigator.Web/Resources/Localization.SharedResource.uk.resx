@@ -111,6 +111,12 @@
   <data name="Country.Spain.In" xml:space="preserve">
     <value>в Іспанії</value>
   </data>
+  <data name="Country.Netherlands" xml:space="preserve">
+    <value>Нідерланди</value>
+  </data>
+  <data name="Country.Netherlands.In" xml:space="preserve">
+    <value>у Нідерландах</value>
+  </data>
   <data name="Country.BackToCountries" xml:space="preserve">
     <value>До списку країн</value>
   </data>
