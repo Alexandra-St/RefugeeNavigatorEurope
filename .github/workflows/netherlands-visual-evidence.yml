@@ -1,0 +1,72 @@
+name: Netherlands visual evidence
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+      - name: Publish isolated Production application
+        run: dotnet publish src/RefugeeNavigator.Web/RefugeeNavigator.Web.csproj --configuration Release --output "$RUNNER_TEMP/netherlands-visual-app"
+      - name: Prepare synthetic Netherlands catalogs
+        run: python3 .github/scripts/prepare-netherlands-visual-fixture.py "$RUNNER_TEMP/netherlands-visual-app/Data" "$RUNNER_TEMP/netherlands-visual-app/visual-fixture.json"
+      - name: Install filesystem-capable Playwright browser
+        run: |
+          npm install --prefix "$RUNNER_TEMP/netherlands-playwright" --no-save playwright
+          "$RUNNER_TEMP/netherlands-playwright/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Run Production visibility assertions and capture screenshots
+        env:
+          ASPNETCORE_ENVIRONMENT: Production
+          PRIVATE_ALPHA_ACCESS_MODE: public
+          PLAYWRIGHT_PACKAGE: ${{ runner.temp }}/netherlands-playwright/node_modules/playwright
+          APP_DIRECTORY: ${{ runner.temp }}/netherlands-visual-app
+          VISUAL_FIXTURE_MANIFEST: ${{ runner.temp }}/netherlands-visual-app/visual-fixture.json
+          VISUAL_OUTPUT_DIRECTORY: ${{ runner.temp }}/netherlands-visual-evidence
+          VISUAL_BASE_URL: http://127.0.0.1:5184
+          GITHUB_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          dotnet "$APP_DIRECTORY/RefugeeNavigator.Web.dll" --contentRoot "$APP_DIRECTORY" --urls "$VISUAL_BASE_URL" > "$RUNNER_TEMP/netherlands-app.log" 2>&1 &
+          app_pid=$!
+          trap 'kill "$app_pid" 2>/dev/null || true; wait "$app_pid" 2>/dev/null || true' EXIT
+          ready=0
+          for attempt in $(seq 1 40); do
+            if curl --silent --show-error --fail "$VISUAL_BASE_URL/" >/dev/null 2>&1; then
+              ready=1
+              break
+            fi
+            if ! kill -0 "$app_pid" 2>/dev/null; then
+              cat "$RUNNER_TEMP/netherlands-app.log"
+              exit 1
+            fi
+            sleep 2
+          done
+          if [ "$ready" -ne 1 ]; then
+            cat "$RUNNER_TEMP/netherlands-app.log"
+            echo "Application readiness timed out."
+            exit 1
+          fi
+          node "$GITHUB_WORKSPACE/.github/scripts/capture-netherlands-visual-evidence.cjs"
+          cat "$VISUAL_OUTPUT_DIRECTORY/CI_VISUAL_EVIDENCE.md" >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload Netherlands screenshot evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: netherlands-publication-gate-screenshots
+          path: ${{ runner.temp }}/netherlands-visual-evidence/
+          if-no-files-found: error
+          retention-days: 30
