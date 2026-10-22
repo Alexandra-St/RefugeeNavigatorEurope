@@ -219,6 +219,29 @@ public sealed class NetherlandsContentIntegrationTests
     }
 
     [Fact]
+    public async Task NetherlandsEmploymentVacancyGuidanceUsesSupportedChannelsInAllLanguages()
+    {
+        var catalog = await Catalog.Value;
+        var entryId = StableArticleIds["NL-EMP-01"];
+        var expectedArticlePhrases = new Dictionary<string, string[]>
+        {
+            ["en"] = ["EURES for vacancy search", "Europass for sharing a profile", "register in person at a local UWV office"],
+            ["uk"] = ["через EURES", "Europass для представлення профілю", "особисту реєстрацію у місцевому офісі UWV"],
+            ["ru"] = ["через EURES", "Europass для представления профиля", "личную регистрацию в местном офисе UWV"]
+        };
+
+        foreach (var (language, phrases) in expectedArticlePhrases)
+        {
+            var translation = Assert.Single(catalog.InformationEntryTranslations,
+                item => item.InformationEntryId == entryId && item.LanguageCode == language);
+            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+            Assert.DoesNotContain("Work.nl", translation.Content, StringComparison.OrdinalIgnoreCase);
+            foreach (var phrase in phrases)
+                Assert.Contains(phrase, translation.Content, StringComparison.OrdinalIgnoreCase);
+        }
+    }
+
+    [Fact]
     public async Task IntegratedTranslationsMatchAllNetherlandsDrafts()
     {
         var catalog = await Catalog.Value;
@@ -242,7 +265,10 @@ public sealed class NetherlandsContentIntegrationTests
                     item => item.InformationEntryId == entry.Id && item.LanguageCode == languageCode);
                 Assert.Equal(expected.Title, actual.Title);
                 Assert.Equal(expected.Summary, actual.Summary);
-                Assert.Equal(NormalizeLines(expected.Content), NormalizeLines(actual.Content));
+                var expectedContent = key == "NL-EMP-01"
+                    ? ApplyEmploymentVacancyCorrection(expected.Content, languageCode)
+                    : expected.Content;
+                Assert.Equal(NormalizeLines(expectedContent), NormalizeLines(actual.Content));
             }
         }
     }
@@ -418,6 +444,27 @@ public sealed class NetherlandsContentIntegrationTests
         Assert.Equal(24, statuses.Length);
         Assert.Equal(12, statuses.Count(status => status == "Approved"));
         Assert.Equal(12, statuses.Count(status => status == "Draft"));
+
+        var vacanciesAspect = document.RootElement.GetProperty("Topics").EnumerateArray()
+            .SelectMany(topic => topic.GetProperty("Aspects").EnumerateArray())
+            .Single(aspect => aspect.GetProperty("Id").GetString() == "employment-vacancies");
+        var vacanciesFact = vacanciesAspect.GetProperty("Facts").EnumerateArray()
+            .Single(fact => fact.GetProperty("CountrySlug").GetString() == "netherlands");
+        Assert.Equal("Draft", vacanciesFact.GetProperty("Status").GetString());
+        var expectedComparisonPhrases = new Dictionary<string, string[]>
+        {
+            ["en"] = ["EURES for vacancy search", "Europass for sharing a profile"],
+            ["uk"] = ["через EURES", "Europass для представлення профілю"],
+            ["ru"] = ["через EURES", "Europass для представления профиля"]
+        };
+        var values = vacanciesFact.GetProperty("Values");
+        foreach (var (language, phrases) in expectedComparisonPhrases)
+        {
+            var value = values.GetProperty(language).GetString()!;
+            Assert.DoesNotContain("Work.nl", value, StringComparison.OrdinalIgnoreCase);
+            foreach (var phrase in phrases)
+                Assert.Contains(phrase, value, StringComparison.OrdinalIgnoreCase);
+        }
     }
 
     private static IEnumerable<string> FindCountrySlugs(JsonElement element)
@@ -501,6 +548,26 @@ public sealed class NetherlandsContentIntegrationTests
     }
 
     private static string NormalizeLines(string value) => value.Replace("\r\n", "\n").Trim();
+
+    private static string ApplyEmploymentVacancyCorrection(string content, string language)
+    {
+        var (oldParagraph, correctedParagraph) = language switch
+        {
+            "en" => (
+                "Work.nl is an official vacancy-search channel. UWV’s guidance for people covered by temporary protection also points jobseekers to EURES vacancy search and Europass for sharing a profile. These tools help you look for opportunities; a listing is not a job offer, and using a portal does not guarantee employment.",
+                "UWV’s guidance for people covered by temporary protection points jobseekers to EURES for vacancy search and Europass for sharing a profile. These tools help you look for opportunities; a listing is not a job offer, and using a portal does not guarantee employment."),
+            "uk" => (
+                "Work.nl — офіційний канал пошуку вакансій. У своїх рекомендаціях для людей, на яких поширюється тимчасовий захист, UWV також вказує на пошук вакансій через EURES і профіль Europass. Ці інструменти допомагають шукати можливості, але оголошення не є пропозицією роботи, а користування порталом не гарантує працевлаштування.",
+                "У своїх рекомендаціях для людей, на яких поширюється тимчасовий захист, UWV вказує на пошук вакансій через EURES і використання Europass для представлення профілю. Ці інструменти допомагають шукати можливості, але оголошення не є пропозицією роботи, а користування порталом не гарантує працевлаштування."),
+            "ru" => (
+                "Work.nl — официальный канал поиска вакансий. В рекомендациях для людей, на которых распространяется временная защита, UWV также указывает поиск через EURES и профиль Europass. Эти инструменты помогают искать возможности, но объявление не является предложением работы, а использование портала не гарантирует трудоустройство.",
+                "В рекомендациях для людей, на которых распространяется временная защита, UWV указывает на поиск вакансий через EURES и использование Europass для представления профиля. Эти инструменты помогают искать возможности, но объявление не является предложением работы, а использование портала не гарантирует трудоустройство."),
+            _ => throw new ArgumentOutOfRangeException(nameof(language))
+        };
+
+        Assert.Single(Regex.Matches(content, Regex.Escape(oldParagraph)).Cast<Match>());
+        return content.Replace(oldParagraph, correctedParagraph, StringComparison.Ordinal);
+    }
 
     private static string FindRepositoryRoot()
     {
