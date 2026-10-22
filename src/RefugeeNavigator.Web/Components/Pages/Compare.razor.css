@@ -6,7 +6,7 @@
 }
 
 .page-content {
-    width: min(100%, 72rem);
+    width: min(100%, 84rem);
     margin: 0 auto;
 }
 
@@ -266,6 +266,7 @@ a:focus-visible {
 }
 
 .structured-country > p {
+    max-width: 70ch;
     margin: 0.65rem 0 0;
     color: #263f66;
     line-height: 1.55;
@@ -413,6 +414,7 @@ a:focus-visible {
 }
 
 .article-summary {
+    max-width: 70ch;
     margin: 0.55rem 0 0.85rem;
 }
 
@@ -467,6 +469,7 @@ details[open] .when-open {
 }
 
 .article-body {
+    max-width: 70ch;
     padding-top: 0.5rem;
     color: #263f66;
     line-height: 1.6;
