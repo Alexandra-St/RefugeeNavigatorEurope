@@ -58,11 +58,11 @@ public sealed class DenmarkHousingArticleTests
         Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(translation => translation.LanguageCode).OrderBy(code => code));
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
-            Assert.Equal(new DateOnly(2026, 10, 15), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
+            Assert.Equal(new DateOnly(2026, 10, 22), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
         });
         var unsupportedEmphasisMarkers = new[]
         {
@@ -146,23 +146,41 @@ public sealed class DenmarkHousingArticleTests
         Assert.Contains(mandatoryPlacement, visibleHtml);
         Assert.Contains(alternativeHousing, visibleHtml);
         Assert.Equal(RequiredSources.Length, RequiredSources.Count(url => html.Contains($"href=\"{url}\"", StringComparison.Ordinal)));
-        Assert.Equal(VerificationStatus.Verified, Assert.Single(catalog.InformationEntryTranslations,
+        Assert.Equal(VerificationStatus.NeedsReview, Assert.Single(catalog.InformationEntryTranslations,
             translation => translation.InformationEntryId == ArticleId && translation.LanguageCode == language).VerificationStatus);
     }
 
+    [Theory]
+    [InlineData("uk", "Саме подання заяви не гарантує виконання умови постійного проживання для отримання житлової допомоги. Компетентний орган Udbetaling Danmark оцінює конкретні обставини та право на виплату.", "За переглянутими роз’ясненнями, сама лише подана заява на дозвіл не вважається постійним місцем проживання")]
+    [InlineData("en", "An application alone does not guarantee that the fixed-residence condition for housing benefit is met. Udbetaling Danmark, as the competent authority, assesses the individual circumstances and entitlement to payment.", "The guidance reviewed does not treat an application alone as fixed residence")]
+    [InlineData("ru", "Подача заявления сама по себе не гарантирует выполнения условия постоянного проживания для получения жилищного пособия. Компетентный орган Udbetaling Danmark оценивает конкретные обстоятельства и право на выплату.", "Согласно изученным разъяснениям, одно лишь поданное заявление на разрешение не считается постоянным местом жительства")]
+    public async Task HousingBenefitWordingDoesNotInferFixedResidenceFromPendingApplication(
+        string language,
+        string correctedWording,
+        string unsupportedCategoricalWording)
+    {
+        var catalog = await LoadProductionCatalogAsync();
+        var translation = Assert.Single(catalog.InformationEntryTranslations,
+            item => item.InformationEntryId == ArticleId && item.LanguageCode == language);
+
+        Assert.Contains(correctedWording, translation.Content, StringComparison.Ordinal);
+        Assert.DoesNotContain(unsupportedCategoricalWording, translation.Content, StringComparison.Ordinal);
+        Assert.Contains("Udbetaling Danmark", translation.Content, StringComparison.Ordinal);
+        Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+    }
+
     [Fact]
-    public async Task HousingArticleAppearsInSearchAndCountryComparison()
+    public async Task NeedsReviewHousingArticleIsHiddenFromSearchAndV1Comparison()
     {
         var catalog = await LoadProductionCatalogAsync();
         var searchHtml = await RenderAsync<Search>(catalog, "en",
             "/search?q=How%20to%20find%20housing%20in%20Denmark&country=denmark&category=housing");
-        Assert.Contains("href=\"/countries/denmark/categories/housing\"", searchHtml);
-        Assert.Contains("How to find housing in Denmark", WebUtility.HtmlDecode(searchHtml));
+        Assert.DoesNotContain("href=\"/countries/denmark/categories/housing\"", searchHtml);
 
         var compareHtml = await RenderAsync<Compare>(catalog, "en",
             "/compare?country1=denmark&country2=germany&category=housing");
-        Assert.Contains("How to find housing in Denmark", WebUtility.HtmlDecode(compareHtml));
-        Assert.Contains($"href=\"/countries/denmark/categories/housing#entry-{ArticleId:N}\"", compareHtml);
+        Assert.DoesNotContain("How to find housing in Denmark", WebUtility.HtmlDecode(compareHtml));
+        Assert.DoesNotContain($"href=\"/countries/denmark/categories/housing#entry-{ArticleId:N}\"", compareHtml);
     }
 
     [Fact]
