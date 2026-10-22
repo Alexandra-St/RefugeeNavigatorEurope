@@ -74,6 +74,27 @@ public sealed class NetherlandsContentIntegrationTests
     [
         "temporary-protection", "employment", "healthcare", "housing", "education", "social-assistance"
     ];
+    private static readonly HashSet<Guid> RecheckedSourceIds = new()
+    {
+        Guid.Parse("8d4d5cf3-b0da-54fc-8de4-bd43d1e39a14"),
+        Guid.Parse("e6c393e9-1f3a-5913-9134-0a58e750160c"),
+        Guid.Parse("4c08e6cf-6914-5d97-b06f-8747c2d6dbc8"),
+        Guid.Parse("9c54de3d-0b37-5ecc-b879-b39f35082d4f"),
+        Guid.Parse("979a64e2-7a45-5c2b-8151-9ad7f57d61d8"),
+        Guid.Parse("9170db80-3955-5a77-a6fc-1334293d1a23"),
+        Guid.Parse("fda6d123-58d8-5858-9e91-311f5266f5ee"),
+        Guid.Parse("249d9618-2212-5251-8f6e-8de0766e0cf3"),
+        Guid.Parse("1690f9d6-0721-5005-b9de-fda56864ed70"),
+        Guid.Parse("6cbd665c-2c9b-5adf-af7c-f93aa0073d7c"),
+        Guid.Parse("6dae1849-408f-5504-a344-b88a1b3832dd"),
+        Guid.Parse("4b84ead2-52e5-5810-ac8c-cad22c7145d2"),
+        Guid.Parse("7ec8ae01-c6cc-5df9-901c-b0addeaa316b"),
+        Guid.Parse("c917869f-703b-5f62-99ff-9bb23bfe6443"),
+        Guid.Parse("82c68617-079f-55ad-b652-2cd30daec7e1"),
+        Guid.Parse("400b5488-04f8-5492-ae3e-044af4cd25e9"),
+        Guid.Parse("18793b2f-bb3f-5dad-9e71-cd0f724dc971"),
+        Guid.Parse("cae7f886-063b-5136-a924-270709eabe18"),
+    };
     private static readonly DateTime SourceCheckDate = new(2026, 10, 20);
     private static readonly Lazy<Task<CatalogData>> Catalog = new(() =>
         new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync());
@@ -245,7 +266,8 @@ public sealed class NetherlandsContentIntegrationTests
             Assert.True(source.Url.IsAbsoluteUri);
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
             Assert.False(string.IsNullOrWhiteSpace(source.Title));
-            var expectedCheckDate = source.Id == Guid.Parse("e59632da-eb67-5b56-840f-9749cdc9f171")
+            var expectedCheckDate = RecheckedSourceIds.Contains(source.Id)
+                || source.Id == Guid.Parse("e59632da-eb67-5b56-840f-9749cdc9f171")
                 ? new DateTime(2026, 10, 21)
                 : SourceCheckDate;
             Assert.Equal(expectedCheckDate, source.LastCheckedAt.UtcDateTime.Date);
