@@ -37,7 +37,7 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
     ];
 
     [Fact]
-    public async Task CatalogContainsVerifiedCandidateWithFifteenSourcesAndPreservesExistingArticles()
+    public async Task CatalogContainsNeedsReviewPilotWithFifteenSourcesAndPreservesExistingArticles()
     {
         var catalog = await LoadProductionCatalogAsync();
         var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == ArticleId);
@@ -50,12 +50,12 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
         Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(item => item.LanguageCode).OrderBy(code => code));
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
             Assert.Equal(7, Regex.Matches(translation.Content, "(?m)^## ").Count);
-            Assert.Equal(new DateOnly(2026, 10, 15), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
+            Assert.Equal(new DateOnly(2026, 10, 22), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
             Assert.DoesNotContain("L 43", translation.Title + translation.Summary + translation.Content);
         });
 
@@ -81,6 +81,55 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
             item.InformationEntryId == ExistingAfterProtectionId && item.LanguageCode == "en" &&
             item.Title == "Residence options after temporary protection in Denmark" &&
             item.VerificationStatus == VerificationStatus.Verified);
+    }
+
+    [Theory]
+    [InlineData("uk", "Імміграційна служба Данії", "особливі умови", "SL1", "BEK № 828/2026")]
+    [InlineData("en", "Danish Immigration Service", "Special rules", "SL1", "BEK no. 828/2026")]
+    [InlineData("ru", "Иммиграционная служба Дании", "особые условия", "SL1", "BEK № 828/2026")]
+    public async Task InlineOfficialSourceLinksRenderInCategoryAndComparison(
+        string language, string agencyLabel, string militaryLabel, string formLabel, string regulationLabel)
+    {
+        var catalog = await LoadProductionCatalogAsync();
+        var expectedLinks = new[]
+        {
+            (Guid.Parse("486ee6fc-fc67-4d04-891b-acb967e5477b"), agencyLabel),
+            (Guid.Parse("814a05cf-08c2-4f0d-b516-4ff3655f5b3c"), militaryLabel),
+            (Guid.Parse("9d53a568-07c9-4713-a5e8-1c4db5826a98"), formLabel),
+            (Guid.Parse("886dfd95-7713-4c69-9b3f-a2d3be8ad323"), regulationLabel)
+        };
+
+        var categoryHtml = await RenderAsync<Category>(catalog, language,
+            "/countries/denmark/categories/temporary-protection",
+            new Dictionary<string, object?>
+            {
+                [nameof(Category.CountrySlug)] = "denmark",
+                [nameof(Category.CategorySlug)] = "temporary-protection"
+            });
+        // Comparison V1 intentionally hides NeedsReview articles. Use an in-memory
+        // approved copy only to exercise the shared inline-link renderer there.
+        var comparisonCatalog = await LoadCatalogWithTargetTranslationStatusAsync(language, VerificationStatus.Verified);
+        var comparisonHtml = await RenderAsync<Compare>(comparisonCatalog, language,
+            "/compare?country1=denmark&country2=germany&category=temporary-protection");
+
+        foreach (var (sourceId, label) in expectedLinks)
+        {
+            var source = Assert.Single(catalog.OfficialSources, item => item.Id == sourceId && item.InformationEntryId == ArticleId);
+            Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
+            foreach (var html in new[] { categoryHtml, comparisonHtml })
+            {
+                var visibleHtml = WebUtility.HtmlDecode(html);
+                var linkPattern = $"<a\\b(?=[^>]*class=\"article-source-link\")(?=[^>]*href=\"{Regex.Escape(source.Url.AbsoluteUri)}\")[^>]*>{Regex.Escape(label)}(?:<span\\b|</a>)";
+                Assert.Matches(linkPattern, visibleHtml);
+            }
+        }
+
+        var categoryArticle = Regex.Match(categoryHtml,
+            $"<article class=\"information-entry\" aria-labelledby=\"entry-heading-{ArticleId:N}\"[^>]*>(.*?)</article>",
+            RegexOptions.Singleline);
+        Assert.True(categoryArticle.Success);
+        Assert.Equal(15, catalog.OfficialSources.Where(source => source.InformationEntryId == ArticleId)
+            .Count(source => categoryArticle.Groups[1].Value.Contains($"href=\"{source.Url.AbsoluteUri}\"", StringComparison.Ordinal)));
     }
 
     [Theory]
@@ -242,18 +291,47 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
     }
 
     [Fact]
-    public async Task ArticleAppearsInSearchAndCountryComparison()
+    public async Task NeedsReviewArticleRemainsHiddenFromSearchAndComparison()
     {
         var catalog = await LoadProductionCatalogAsync();
         var searchHtml = await RenderAsync<Search>(catalog, "en",
             "/search?q=Temporary%20protection%20in%20Denmark%3A%20how%20to%20apply&country=denmark&category=temporary-protection");
-        Assert.Contains("/countries/denmark/categories/temporary-protection", searchHtml);
-        Assert.Contains("Temporary protection in Denmark: how to apply and extend your permit", WebUtility.HtmlDecode(searchHtml));
+        Assert.DoesNotContain("/countries/denmark/categories/temporary-protection", searchHtml);
+        Assert.DoesNotContain("Temporary protection in Denmark: how to apply and extend your permit", WebUtility.HtmlDecode(searchHtml));
 
         var compareHtml = await RenderAsync<Compare>(catalog, "en",
             "/compare?country1=denmark&country2=germany&category=temporary-protection");
-        Assert.Contains("Temporary protection in Denmark: how to apply and extend your permit", WebUtility.HtmlDecode(compareHtml));
-        Assert.Contains($"/countries/denmark/categories/temporary-protection#entry-{ArticleId:N}", compareHtml);
+        Assert.DoesNotContain("Temporary protection in Denmark: how to apply and extend your permit", WebUtility.HtmlDecode(compareHtml));
+        Assert.DoesNotContain($"/countries/denmark/categories/temporary-protection#entry-{ArticleId:N}", compareHtml);
+    }
+
+    private static async Task<CatalogData> LoadCatalogWithTargetTranslationStatusAsync(
+        string language, VerificationStatus status)
+    {
+        var temporaryRoot = Path.Combine(Path.GetTempPath(), "RefugeeNavigatorDenmarkComparisonLinks", Guid.NewGuid().ToString("N"));
+        var dataDirectory = Path.Combine(temporaryRoot, "Data");
+        Directory.CreateDirectory(dataDirectory);
+        try
+        {
+            foreach (var fileName in new[] { "countries.json", "categories.json", "information-entries.json", "official-sources.json" })
+            {
+                File.Copy(Path.Combine(AppContext.BaseDirectory, "Data", fileName), Path.Combine(dataDirectory, fileName));
+            }
+
+            var entriesPath = Path.Combine(dataDirectory, "information-entries.json");
+            var entries = JsonNode.Parse(await File.ReadAllTextAsync(entriesPath))!.AsArray();
+            var article = entries.Single(entry => entry!["Id"]!.GetValue<string>() == ArticleId.ToString());
+            var translation = article!["Translations"]!.AsArray()
+                .Single(item => item!["LanguageCode"]!.GetValue<string>() == language);
+            translation!["VerificationStatus"] = (int)status;
+            await File.WriteAllTextAsync(entriesPath, entries.ToJsonString());
+
+            return await new JsonCatalogProvider(temporaryRoot).LoadAsync();
+        }
+        finally
+        {
+            Directory.Delete(temporaryRoot, recursive: true);
+        }
     }
 
     [Fact]
