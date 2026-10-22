@@ -451,11 +451,15 @@ public sealed class NetherlandsContentIntegrationTests
         var vacanciesFact = vacanciesAspect.GetProperty("Facts").EnumerateArray()
             .Single(fact => fact.GetProperty("CountrySlug").GetString() == "netherlands");
         Assert.Equal("Draft", vacanciesFact.GetProperty("Status").GetString());
+        Assert.Equal(
+            new[] { "1690f9d6-0721-5005-b9de-fda56864ed70" },
+            vacanciesFact.GetProperty("OfficialSourceIds").EnumerateArray()
+                .Select(sourceId => sourceId.GetString()).ToArray());
         var expectedComparisonPhrases = new Dictionary<string, string[]>
         {
-            ["en"] = ["EURES for vacancy search", "Europass for sharing a profile"],
-            ["uk"] = ["через EURES", "Europass для представлення профілю"],
-            ["ru"] = ["через EURES", "Europass для представления профиля"]
+            ["en"] = ["jobseekers covered by temporary protection", "EURES for vacancy search", "Europass for sharing a profile"],
+            ["uk"] = ["на яких поширюється тимчасовий захист", "через EURES", "Europass для представлення профілю"],
+            ["ru"] = ["на которых распространяется временная защита", "через EURES", "Europass для представления профиля"]
         };
         var values = vacanciesFact.GetProperty("Values");
         foreach (var (language, phrases) in expectedComparisonPhrases)

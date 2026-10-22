@@ -788,11 +788,10 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "98966301-dedb-5b6c-907c-adc84b07dfbb",
                 "1690f9d6-0721-5005-b9de-fda56864ed70"
               ],
               "Values": {
-                "en": "UWV’s guidance points eligible temporary-protection jobseekers to EURES for vacancy search and Europass for sharing a profile. These tools do not guarantee a vacancy, offer or placement; check the conditions for each route.",
+                "en": "UWV’s guidance points jobseekers covered by temporary protection to EURES for vacancy search and Europass for sharing a profile. These tools do not guarantee a vacancy, offer or placement; check the conditions for each route.",
                 "uk": "За рекомендаціями UWV, шукачі роботи, на яких поширюється тимчасовий захист, можуть шукати вакансії через EURES і використовувати Europass для представлення профілю. Ці інструменти не гарантують наявності вакансії, пропозиції роботи чи працевлаштування; перевіряйте умови кожного маршруту.",
                 "ru": "Согласно рекомендациям UWV, соискатели, на которых распространяется временная защита, могут искать вакансии через EURES и использовать Europass для представления профиля. Эти инструменты не гарантируют наличие вакансии, предложение работы или трудоустройство; проверяйте условия каждого маршрута."
               }
