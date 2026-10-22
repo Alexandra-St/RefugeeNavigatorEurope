@@ -51,6 +51,11 @@ SYNTHETIC_FACT = {
     "uk": "SYNTHETIC-CI-FIXTURE — зверніться до відповідної служби, щоб уточнити чинну процедуру для вашої ситуації; місцеві кроки та індивідуальні результати можуть відрізнятися. Цей репрезентативний текст навмисно достатньо довгий для перевірки перенесення рядків на вузькому екрані.",
     "ru": "SYNTHETIC-CI-FIXTURE — обратитесь в компетентную службу, чтобы уточнить действующую процедуру для вашей ситуации; местные шаги и индивидуальные результаты могут различаться. Этот образец намеренно достаточно длинный для проверки переноса строк на узком экране.",
 }
+SYNTHETIC_INLINE_SOURCE_LABEL = {
+    "en": "synthetic official-source example",
+    "uk": "синтетичний приклад офіційного джерела",
+    "ru": "синтетический пример официального источника",
+}
 
 
 def read_json(path: Path):
@@ -107,6 +112,19 @@ def main():
             else:
                 translation["VerificationStatus"] = 1
                 title, summary, content = SYNTHETIC_CORE[language]
+                if entry["Id"] == tp02_entry_id:
+                    source = next(
+                        (item for item in sources
+                         if item["InformationEntryId"] == tp02_entry_id
+                         and item["Url"].lower().startswith("https://")),
+                        None,
+                    )
+                    if source is None:
+                        raise ValueError("Could not find an HTTPS source for the synthetic inline-link example")
+                    content += (
+                        "\n\nSynthetic inline link example: "
+                        f"[[source:{source['Id']}|{SYNTHETIC_INLINE_SOURCE_LABEL[language]}]]."
+                    )
                 translation["Title"] = title
                 translation["Summary"] = summary
                 translation["Content"] = content

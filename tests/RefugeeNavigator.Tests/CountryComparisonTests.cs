@@ -1444,6 +1444,41 @@ public sealed class CountryComparisonTests
         Assert.Contains("href=\"/countries/germany/categories/healthcare#entry-", html);
     }
 
+    [Theory]
+    [InlineData("en", "official authority")]
+    [InlineData("uk", "офіційний орган")]
+    [InlineData("ru", "официальный орган")]
+    public async Task FullArticleComparisonRendersOwnedInlineSourceLinks(string language, string localizedLabel)
+    {
+        var catalog = await LoadCatalogAsync();
+        var topic = CountryComparisonTopicMap.ForCategory("housing")[0];
+        var entryId = CountryComparisonTopicMap.EntryIdFor(topic, "denmark");
+        var source = catalog.OfficialSources.First(item => item.InformationEntryId == entryId);
+        Assert.Equal(VerificationStatus.Verified, catalog.InformationEntryTranslations.Single(item =>
+            item.InformationEntryId == entryId && item.LanguageCode == language).VerificationStatus);
+        var content = $"Contact [[source:{source.Id:D}|{localizedLabel}]] for current details.";
+        var withInlineSource = WithContent(catalog, entryId, language, content);
+
+        var html = await RenderAsync(
+            withInlineSource,
+            language,
+            "?country1=denmark&country2=germany&category=housing");
+
+        var inlineLink = Regex.Match(html,
+            "<a class=\"article-source-link\"(?<attributes>[^>]*)>(?<content>.*?)</a>",
+            RegexOptions.Singleline);
+        Assert.True(inlineLink.Success, "No inline source link was rendered in the full-article comparison.");
+        var href = Regex.Match(inlineLink.Groups["attributes"].Value, "href=\"(?<url>[^\"]+)\"");
+        Assert.Equal(source.Url.AbsoluteUri, WebUtility.HtmlDecode(href.Groups["url"].Value));
+        Assert.Contains("target=\"_blank\"", inlineLink.Groups["attributes"].Value);
+        Assert.Contains("rel=\"noopener noreferrer\"", inlineLink.Groups["attributes"].Value);
+        Assert.StartsWith(localizedLabel, ReadRenderedText(inlineLink.Groups["content"].Value), StringComparison.Ordinal);
+        Assert.Contains("Contact ", WebUtility.HtmlDecode(html));
+        Assert.Contains(" for current details.", WebUtility.HtmlDecode(html));
+        Assert.Contains("class=\"source-details\"", html);
+        Assert.Contains(source.Title, ReadRenderedText(html));
+    }
+
     [Fact]
     public async Task ArticleDetailsHtmlEncodesUntrustedMarkupAndKeepsFormattingSafe()
     {

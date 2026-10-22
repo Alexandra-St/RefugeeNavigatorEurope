@@ -7,6 +7,11 @@ const baseUrl = process.env.VISUAL_BASE_URL;
 const outputDirectory = process.env.VISUAL_OUTPUT_DIRECTORY;
 const manifest = JSON.parse(fs.readFileSync(process.env.VISUAL_FIXTURE_MANIFEST, 'utf8'));
 const languages = ['en', 'uk', 'ru'];
+const inlineSourceLabels = {
+  en: 'synthetic official-source example',
+  uk: 'синтетичний приклад офіційного джерела',
+  ru: 'синтетический пример официального источника',
+};
 const viewports = [
   { width: 1280, height: 720 },
   { width: 390, height: 844 },
@@ -75,6 +80,14 @@ async function main() {
           'The reviewed sample article title is missing');
         assert.ok((await article.innerText()).includes('synthetic') || (await article.innerText()).includes('синтетич'),
           'Synthetic reviewed article content did not render');
+        const categoryInlineLink = article.locator('a.article-source-link');
+        assert.equal(await categoryInlineLink.count(), 1, 'The synthetic category article should render one inline source link');
+        assert.ok((await categoryInlineLink.innerText()).includes(inlineSourceLabels[language]),
+          `The inline source label is not localized for ${language}`);
+        assert.match(await categoryInlineLink.getAttribute('href'), /^https:\/\//,
+          'The inline source URL must come from an HTTPS official source');
+        assert.equal(await categoryInlineLink.getAttribute('target'), '_blank');
+        assert.equal(await categoryInlineLink.getAttribute('rel'), 'noopener noreferrer');
         assert.equal(await page.getByText('HELD-ARTICLE-TEXT-SENTINEL', { exact: false }).count(), 0,
           'Held NL-TP-01 text leaked into the category');
         assert.equal(await page.locator(`#entry-${manifest.heldArticleId.replaceAll('-', '')}`).count(), 0,
@@ -90,6 +103,24 @@ async function main() {
         assert.ok(compareResponse?.ok(), `Comparison page returned ${compareResponse?.status()}`);
         await assertLanguage(page, language);
         assert.ok(await page.locator('.structured-comparison').count(), 'Structured comparison did not render in Production');
+
+        const fullArticleComparison = page.locator('details.full-article-comparison');
+        await fullArticleComparison.locator(':scope > summary').click();
+        const temporaryProtectionArticles = page.locator('details.full-article-category').first();
+        await temporaryProtectionArticles.locator(':scope > summary').click();
+        const residenceArticlePanel = temporaryProtectionArticles.locator('.comparison-topic').nth(1).locator('.topic-country').first();
+        const residenceArticleDetails = residenceArticlePanel.locator('details.article-details');
+        assert.equal(await residenceArticleDetails.count(), 1, 'The reviewed TP-02 full-article panel is missing');
+        await residenceArticleDetails.locator(':scope > summary').click();
+        const comparisonInlineLink = residenceArticleDetails.locator('.article-body a.article-source-link');
+        assert.equal(await comparisonInlineLink.count(), 1, 'The full-article comparison should render one inline source link');
+        assert.ok((await comparisonInlineLink.innerText()).includes(inlineSourceLabels[language]),
+          `The full-article inline source label is not localized for ${language}`);
+        assert.equal(await comparisonInlineLink.getAttribute('href'), await categoryInlineLink.getAttribute('href'),
+          'Category and full-article comparison should resolve the same official source URL');
+        assert.equal(await comparisonInlineLink.getAttribute('target'), '_blank');
+        assert.equal(await comparisonInlineLink.getAttribute('rel'), 'noopener noreferrer');
+
         for (const aspectId of manifest.approvedAspectIds) {
           const aspect = comparisonAspect(page, aspectId);
           assert.equal(await aspect.count(), 1, `Approved aspect ${aspectId} is missing`);
@@ -144,7 +175,7 @@ async function main() {
     '- Languages: EN, UK, RU.',
     '- Viewports: 1280×720, 390×844, 320×700.',
     `- Captured PNG files: ${records.length}.`,
-    '- Assertions: document language, held article absence, approved fact visibility and source links, Draft/unavailable content and source suppression, no horizontal overflow, valid full-page PNG dimensions.',
+    '- Assertions: document language, held article absence, localized inline article source links in Category and expanded full-article Comparison, approved fact visibility and source links, Draft/unavailable content and source suppression, no horizontal overflow, valid full-page PNG dimensions.',
     '- Visual gate: REVIEW PENDING. Automated capture and visibility assertions do not constitute human visual acceptance.',
     '',
     '## Captures',

@@ -498,6 +498,19 @@ details[open] .when-open {
     text-decoration: none;
 }
 
+.article-source-link {
+    color: #155eef;
+    font-weight: 650;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+.article-source-link:focus-visible {
+    border-radius: 0.15rem;
+    outline: 3px solid #155eef;
+    outline-offset: 2px;
+}
+
 .article-link:hover,
 .source-details a:hover {
     color: #0b45b5;

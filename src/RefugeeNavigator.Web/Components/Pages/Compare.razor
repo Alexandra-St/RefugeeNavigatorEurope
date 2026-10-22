@@ -93,7 +93,7 @@
                                                 <span class="when-open">@Localizer["Compare.HideDetails"]</span>
                                             </summary>
                                             <div class="article-body">
-                                                @foreach (var block in ArticleContentFormatter.Parse(translation.Content))
+                                                @foreach (var block in ArticleContentFormatter.Parse(translation.Content, article.Entry!.Id, article.Sources))
                                                 {
                                                     @switch (block.Kind)
                                                     {
@@ -104,12 +104,36 @@
                                                             <ul>
                                                                 @foreach (var listItem in block.Items)
                                                                 {
-                                                                    <li>@listItem</li>
+                                                                        <li>
+                                                                            @foreach (var part in listItem)
+                                                                            {
+                                                                                if (part is ArticleContentSourceLink sourceLink)
+                                                                                {
+                                                                                    <a class="article-source-link" href="@sourceLink.Url.AbsoluteUri" target="_blank" rel="noopener noreferrer">@sourceLink.Label<span aria-hidden="true"> ↗</span><span class="visually-hidden"> (@Localizer["Common.OpensInNewTab"])</span></a>
+                                                                                }
+                                                                                else if (part is ArticleContentText text)
+                                                                                {
+                                                                                    @text.Value
+                                                                                }
+                                                                            }
+                                                                        </li>
                                                                 }
                                                             </ul>
                                                             break;
                                                         default:
-                                                            <p>@block.Text</p>
+                                                            <p>
+                                                                @foreach (var part in block.InlineParts)
+                                                                {
+                                                                    if (part is ArticleContentSourceLink sourceLink)
+                                                                    {
+                                                                        <a class="article-source-link" href="@sourceLink.Url.AbsoluteUri" target="_blank" rel="noopener noreferrer">@sourceLink.Label<span aria-hidden="true"> ↗</span><span class="visually-hidden"> (@Localizer["Common.OpensInNewTab"])</span></a>
+                                                                    }
+                                                                    else if (part is ArticleContentText text)
+                                                                    {
+                                                                        @text.Value
+                                                                    }
+                                                                }
+                                                            </p>
                                                             break;
                                                     }
                                                 }

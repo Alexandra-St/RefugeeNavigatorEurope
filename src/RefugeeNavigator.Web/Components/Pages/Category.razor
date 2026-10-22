@@ -54,7 +54,7 @@
                         <article class="information-entry" aria-labelledby="entry-heading-@item.Entry.Id.ToString("N")" id="entry-@item.Entry.Id.ToString("N")">
                             <h2 id="entry-heading-@item.Entry.Id.ToString("N")">@item.Translation.Title</h2>
                             <p class="entry-summary">@item.Translation.Summary</p>
-                            @foreach (var block in ArticleContentFormatter.Parse(item.Translation.Content))
+                            @foreach (var block in ArticleContentFormatter.Parse(item.Translation.Content, item.Entry.Id, item.Sources))
                             {
                                 @switch (block.Kind)
                                 {
@@ -65,12 +65,36 @@
                                         <ul class="entry-list">
                                             @foreach (var listItem in block.Items)
                                             {
-                                                <li>@listItem</li>
+                                                <li>
+                                                    @foreach (var part in listItem)
+                                                    {
+                                                        if (part is ArticleContentSourceLink sourceLink)
+                                                        {
+                                                            <a class="article-source-link" href="@sourceLink.Url.AbsoluteUri" target="_blank" rel="noopener noreferrer">@sourceLink.Label<span aria-hidden="true"> ↗</span><span class="visually-hidden"> (@Localizer["Common.OpensInNewTab"])</span></a>
+                                                        }
+                                                        else if (part is ArticleContentText text)
+                                                        {
+                                                            @text.Value
+                                                        }
+                                                    }
+                                                </li>
                                             }
                                         </ul>
                                         break;
                                     default:
-                                        <p class="entry-content">@block.Text</p>
+                                        <p class="entry-content">
+                                            @foreach (var part in block.InlineParts)
+                                            {
+                                                if (part is ArticleContentSourceLink sourceLink)
+                                                {
+                                                    <a class="article-source-link" href="@sourceLink.Url.AbsoluteUri" target="_blank" rel="noopener noreferrer">@sourceLink.Label<span aria-hidden="true"> ↗</span><span class="visually-hidden"> (@Localizer["Common.OpensInNewTab"])</span></a>
+                                                }
+                                                else if (part is ArticleContentText text)
+                                                {
+                                                    @text.Value
+                                                }
+                                            }
+                                        </p>
                                         break;
                                 }
                             }

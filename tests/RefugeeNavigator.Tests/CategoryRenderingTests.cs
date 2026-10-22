@@ -370,6 +370,73 @@ public sealed class CategoryRenderingTests
     }
 
     [Theory]
+    [InlineData("en", "official authority")]
+    [InlineData("uk", "офіційний орган")]
+    [InlineData("ru", "официальный орган")]
+    public async Task RendersOwnedHttpsSourceTokensInParagraphsAndLists(string language, string localizedLabel)
+    {
+        var entry = FixtureEntry(Guid.NewGuid());
+        var sourceOne = FixtureSource(Guid.NewGuid(), entry.Entry.Id, "First official source", "https://example.gov/first");
+        var sourceTwo = FixtureSource(Guid.NewGuid(), entry.Entry.Id, "Second official source", "https://example.gov/second");
+        var sourceThree = FixtureSource(Guid.NewGuid(), entry.Entry.Id, "List official source", "https://example.gov/list");
+        var content = $"Before [[source:{sourceOne.Id:D}|{localizedLabel}]] and [[source:{sourceTwo.Id:D}|<img src=x onerror='bad'>]] after.\n\n- Listed [[source:{sourceThree.Id:D}|government service]] item.";
+        var catalog = await CreateCatalogAsync([FixtureEntry(entry.Entry.Id, content: content)], [sourceOne, sourceTwo, sourceThree]);
+
+        var html = await RenderAsync(catalog, language);
+
+        var inlineAnchors = Regex.Matches(html, "<a class=\"article-source-link\"[^>]*>")
+            .Cast<Match>()
+            .ToArray();
+        Assert.Equal(3, inlineAnchors.Length);
+        Assert.All(inlineAnchors, anchor => Assert.Contains("target=\"_blank\" rel=\"noopener noreferrer\"", anchor.Value));
+        Assert.Contains($"href=\"{sourceOne.Url.AbsoluteUri}\"", html);
+        Assert.Contains($"href=\"{sourceTwo.Url.AbsoluteUri}\"", html);
+        Assert.Contains($"href=\"{sourceThree.Url.AbsoluteUri}\"", html);
+        Assert.Contains(localizedLabel, ReadRenderedText(html));
+        Assert.Contains("&lt;img src=x onerror=&#x27;bad&#x27;&gt;", html);
+        Assert.DoesNotContain("<img src=x", html);
+        Assert.Contains("First official source", ReadRenderedText(html));
+        Assert.Contains("Second official source", ReadRenderedText(html));
+        Assert.Contains("List official source", ReadRenderedText(html));
+        Assert.Contains(Resources.GetString("Common.OpensInNewTab", CultureInfo.GetCultureInfo(language))!, ReadRenderedText(html));
+
+        var listItem = Regex.Matches(html, "<li\\b[^>]*>(?<item>.*?)</li>", RegexOptions.Singleline)
+            .Cast<Match>()
+            .Select(match => match.Groups["item"].Value)
+            .Single(item => item.Contains("article-source-link", StringComparison.Ordinal) &&
+                item.Contains(sourceThree.Url.AbsoluteUri, StringComparison.Ordinal));
+        Assert.Contains("government service", WebUtility.HtmlDecode(listItem));
+    }
+
+    [Fact]
+    public async Task InvalidUnownedOrNonHttpsSourceTokensRemainNonClickableText()
+    {
+        var entry = FixtureEntry(Guid.NewGuid());
+        var otherEntry = FixtureEntry(Guid.NewGuid(), countryId: OtherCountryId);
+        var unknownId = Guid.NewGuid();
+        var foreignSource = FixtureSource(Guid.NewGuid(), otherEntry.Entry.Id, "Foreign source", "https://example.gov/foreign");
+        var httpSource = FixtureSource(Guid.NewGuid(), entry.Entry.Id, "HTTP source", "http://example.gov/http");
+        var emptyLabelSource = FixtureSource(Guid.NewGuid(), entry.Entry.Id, "Empty label source", "https://example.gov/empty-label");
+        var invalidTokens = new[]
+        {
+            $"[[source:{unknownId:D}|Unknown source]]",
+            "[[source:not-a-guid|Malformed identifier]]",
+            $"[[source:{foreignSource.Id:D}|Foreign source]]",
+            $"[[source:{httpSource.Id:D}|HTTP source]]",
+            $"[[source:{emptyLabelSource.Id:D}|   ]]"
+        };
+        var content = string.Join(" ", invalidTokens);
+        var catalog = await CreateCatalogAsync(
+            [FixtureEntry(entry.Entry.Id, content: content), otherEntry],
+            [foreignSource, httpSource, emptyLabelSource]);
+
+        var html = await RenderAsync(catalog, "en");
+
+        Assert.DoesNotContain("class=\"article-source-link\"", html);
+        Assert.All(invalidTokens, token => Assert.Contains(token, html));
+    }
+
+    [Theory]
     [MemberData(nameof(ContentParagraphCases))]
     public async Task RendersPlainTextContentAsNonemptyParagraphsInOrder(string content, string[] expectedParagraphs)
     {
