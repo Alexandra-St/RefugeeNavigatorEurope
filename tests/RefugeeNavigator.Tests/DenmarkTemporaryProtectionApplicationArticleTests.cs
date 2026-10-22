@@ -37,7 +37,7 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
     ];
 
     [Fact]
-    public async Task CatalogContainsNeedsReviewPilotWithFifteenSourcesAndPreservesExistingArticles()
+    public async Task CatalogContainsVerifiedPilotWithFifteenSourcesAndPreservesExistingArticles()
     {
         var catalog = await LoadProductionCatalogAsync();
         var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == ArticleId);
@@ -50,7 +50,7 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
         Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(item => item.LanguageCode).OrderBy(code => code));
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
@@ -293,7 +293,7 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
     [Fact]
     public async Task NeedsReviewArticleRemainsHiddenFromSearchAndComparison()
     {
-        var catalog = await LoadProductionCatalogAsync();
+        var catalog = await LoadCatalogWithTargetTranslationStatusAsync("en", VerificationStatus.NeedsReview);
         var searchHtml = await RenderAsync<Search>(catalog, "en",
             "/search?q=Temporary%20protection%20in%20Denmark%3A%20how%20to%20apply&country=denmark&category=temporary-protection");
         Assert.DoesNotContain("/countries/denmark/categories/temporary-protection", searchHtml);

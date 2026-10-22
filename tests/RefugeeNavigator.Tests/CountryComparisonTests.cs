@@ -68,8 +68,8 @@ public sealed class CountryComparisonTests
         Assert.Equal(324, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Sum(fact => fact.OfficialSourceIds.Count));
         Assert.Equal(56, catalog.InformationEntries.Count);
         Assert.Equal(168, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(129, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(39, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(132, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(36, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Outdated));
         var czechiaId = Guid.Parse("10000000-0000-0000-0000-000000000004");
         var czechiaEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == czechiaId).Select(entry => entry.Id).ToHashSet();
@@ -1313,11 +1313,11 @@ public sealed class CountryComparisonTests
                 Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
                 Assert.Contains(translation.Title, visibleHtml);
                 Assert.Contains(translation.Summary, visibleHtml);
-                AssertFullContentIsRendered(translation.Content, visibleHtml);
-                Assert.Contains($"href=\"/countries/{countrySlug}/categories/{categorySlug}#entry-{entryId:N}\"", html);
-
                 var sources = catalog.OfficialSources.Where(source => source.InformationEntryId == entryId).ToArray();
                 Assert.NotEmpty(sources);
+                AssertFullContentIsRendered(translation.Content, visibleHtml, sources);
+                Assert.Contains($"href=\"/countries/{countrySlug}/categories/{categorySlug}#entry-{entryId:N}\"", html);
+
                 foreach (var source in sources)
                 {
                     Assert.Contains(source.Title, ReadRenderedText(html));
@@ -1563,7 +1563,10 @@ public sealed class CountryComparisonTests
         }
     }
 
-    private static void AssertFullContentIsRendered(string content, string renderedHtml)
+    private static void AssertFullContentIsRendered(
+        string content,
+        string renderedHtml,
+        IReadOnlyCollection<OfficialSource> sources)
     {
         var blocks = Regex.Split(content, @"\r?\n\s*\r?\n+")
             .Select(block => block.Trim())
@@ -1579,13 +1582,58 @@ public sealed class CountryComparisonTests
             {
                 foreach (var item in block.Split('\n').Select(line => line.TrimEnd('\r')[2..].Trim()))
                 {
-                    Assert.Matches($"<li\\b[^>]*>{Regex.Escape(item)}</li>", renderedHtml);
+                    if (item.Contains("[[source:", StringComparison.Ordinal))
+                    {
+                        AssertInlineSourceContentIsRendered(item, renderedHtml, sources);
+                    }
+                    else
+                    {
+                        Assert.Matches($"<li\\b[^>]*>{Regex.Escape(item)}</li>", renderedHtml);
+                    }
                 }
+            }
+            else if (block.Contains("[[source:", StringComparison.Ordinal))
+            {
+                AssertInlineSourceContentIsRendered(block, renderedHtml, sources);
             }
             else
             {
                 Assert.Contains(block, renderedHtml);
             }
+        }
+    }
+
+    private static void AssertInlineSourceContentIsRendered(
+        string content,
+        string renderedHtml,
+        IReadOnlyCollection<OfficialSource> sources)
+    {
+        var tokenPattern = new Regex(@"\[\[source:(?<id>[0-9a-fA-F-]{36})\|(?<label>[^\]]+)\]\]");
+        var matches = tokenPattern.Matches(content);
+        Assert.NotEmpty(matches);
+        var cursor = 0;
+
+        foreach (Match match in matches)
+        {
+            var text = content[cursor..match.Index].Trim();
+            if (text.Length > 0)
+            {
+                Assert.Contains(text, renderedHtml);
+            }
+
+            Assert.True(Guid.TryParse(match.Groups["id"].Value, out var sourceId));
+            var source = Assert.Single(sources, item => item.Id == sourceId);
+            Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
+            var label = match.Groups["label"].Value;
+            var linkPattern = $"<a\\b(?=[^>]*class=\\\"article-source-link\\\")(?=[^>]*href=\\\"{Regex.Escape(WebUtility.HtmlEncode(source.Url.AbsoluteUri))}\\\")[^>]*>{Regex.Escape(label)}(?:<span\\b|</a>)";
+            Assert.Matches(linkPattern, renderedHtml);
+            cursor = match.Index + match.Length;
+        }
+
+        var trailingText = content[cursor..].Trim();
+        if (trailingText.Length > 0)
+        {
+            Assert.Contains(trailingText, renderedHtml);
         }
     }
 
