@@ -19,6 +19,7 @@ internal static class ArticleContentFormatter
         }
 
         var blocks = new List<ArticleContentBlock>();
+        var sectionIndex = 0;
         foreach (var sourceBlock in BlockSeparator.Split(content))
         {
             var block = sourceBlock.Trim();
@@ -31,7 +32,13 @@ internal static class ArticleContentFormatter
                 block.IndexOfAny(['\r', '\n']) < 0 &&
                 !string.IsNullOrWhiteSpace(block[3..]))
             {
-                blocks.Add(new ArticleContentBlock(ArticleContentBlockKind.Heading, block[3..].Trim(), [], []));
+                sectionIndex++;
+                blocks.Add(new ArticleContentBlock(
+                    ArticleContentBlockKind.Heading,
+                    block[3..].Trim(),
+                    [],
+                    [],
+                    $"article-section-{informationEntryId:N}-{sectionIndex}"));
                 continue;
             }
 
@@ -43,7 +50,8 @@ internal static class ArticleContentFormatter
                     ArticleContentBlockKind.UnorderedList,
                     string.Empty,
                     [],
-                    lines.Select(line => ParseInline(line.TrimEnd('\r')[2..].Trim(), informationEntryId, sources)).ToArray()));
+                    lines.Select(line => ParseInline(line.TrimEnd('\r')[2..].Trim(), informationEntryId, sources)).ToArray(),
+                    null));
                 continue;
             }
 
@@ -51,7 +59,8 @@ internal static class ArticleContentFormatter
                 ArticleContentBlockKind.Paragraph,
                 block,
                 ParseInline(block, informationEntryId, sources),
-                []));
+                [],
+                null));
         }
 
         return blocks;
@@ -117,7 +126,8 @@ internal sealed record ArticleContentBlock(
     ArticleContentBlockKind Kind,
     string Text,
     IReadOnlyList<ArticleContentInlinePart> InlineParts,
-    IReadOnlyList<IReadOnlyList<ArticleContentInlinePart>> Items);
+    IReadOnlyList<IReadOnlyList<ArticleContentInlinePart>> Items,
+    string? AnchorId);
 
 internal abstract record ArticleContentInlinePart;
 

@@ -189,6 +189,12 @@
   <data name="Category.Sources" xml:space="preserve">
     <value>Источники информации</value>
   </data>
+  <data name="Category.ArticleContents" xml:space="preserve">
+    <value>В этой статье (разделов: {0})</value>
+  </data>
+  <data name="Category.ArticleContentsLabel" xml:space="preserve">
+    <value>Разделы статьи</value>
+  </data>
   <data name="Category.TemporaryProtection" xml:space="preserve">
     <value>Временная защита</value>
   </data>

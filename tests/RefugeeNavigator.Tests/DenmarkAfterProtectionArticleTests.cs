@@ -112,9 +112,12 @@ public sealed class DenmarkAfterProtectionArticleTests
         Assert.True(existingArticle.Success);
         var existingArticleHtml = WebUtility.HtmlDecode(existingArticle.Groups[1].Value);
         Assert.Single(System.Text.RegularExpressions.Regex.Matches(existingArticleHtml, "<h2\\b").Cast<System.Text.RegularExpressions.Match>());
-        Assert.Equal(7, System.Text.RegularExpressions.Regex.Matches(existingArticleHtml, "<h3\\b").Count);
+        Assert.Equal(6, System.Text.RegularExpressions.Regex.Matches(existingArticleHtml, "<h3\\b").Count);
+        Assert.Contains("<details class=\"entry-sources\"", existingArticleHtml);
+        Assert.DoesNotContain("<details class=\"entry-sources\" open", existingArticleHtml);
         Assert.Equal(3, System.Text.RegularExpressions.Regex.Matches(existingArticleHtml, "<ul\\b").Count);
-        Assert.Equal(12, System.Text.RegularExpressions.Regex.Matches(existingArticleHtml, "<li\\b").Count);
+        Assert.Equal(18, System.Text.RegularExpressions.Regex.Matches(existingArticleHtml, "<li\\b").Count);
+        Assert.Equal(6, System.Text.RegularExpressions.Regex.Matches(existingArticleHtml, "<a href=\"#article-section-").Count);
         Assert.All(expectedHeadings.Split('|'), heading =>
             Assert.Matches($"<h3\\b[^>]*class=\"entry-section-heading\"[^>]*>{System.Text.RegularExpressions.Regex.Escape(heading)}</h3>", existingArticleHtml));
     }

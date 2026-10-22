@@ -160,7 +160,7 @@
 }
 
 .information-entry h2,
-.entry-sources h3 {
+.entry-sources > summary {
     margin: 0;
     color: #102a56;
     font-weight: 700;
@@ -273,8 +273,51 @@
     border-top: 1px solid #d8e1ee;
 }
 
-.entry-sources h3 {
+.entry-sources > summary {
     font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.entry-sources > summary:focus-visible,
+.article-toc > summary:focus-visible {
+    outline: 3px solid #155eef;
+    outline-offset: 3px;
+}
+
+.article-toc {
+    max-width: 72ch;
+    margin-top: 0.85rem;
+    border: 1px solid #d8e1ee;
+    border-radius: 0.55rem;
+    padding: 0.55rem 0.75rem;
+    color: #263f66;
+}
+
+.article-toc > summary {
+    color: #155eef;
+    cursor: pointer;
+    font-weight: 650;
+}
+
+.article-toc ol {
+    display: grid;
+    gap: 0.35rem;
+    margin: 0.55rem 0 0;
+    padding-left: 1.35rem;
+}
+
+.article-toc a {
+    color: #155eef;
+    overflow-wrap: anywhere;
+}
+
+.article-toc a:focus-visible {
+    outline: 3px solid #155eef;
+    outline-offset: 2px;
+}
+
+.entry-section-heading {
+    scroll-margin-top: 1rem;
 }
 
 .entry-sources ul {

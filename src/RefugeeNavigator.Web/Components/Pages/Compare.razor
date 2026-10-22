@@ -93,12 +93,30 @@
                                                 <span class="when-open">@Localizer["Compare.HideDetails"]</span>
                                             </summary>
                                             <div class="article-body">
-                                                @foreach (var block in ArticleContentFormatter.Parse(translation.Content, article.Entry!.Id, article.Sources))
+                                                @{
+                                                    var contentBlocks = ArticleContentFormatter.Parse(translation.Content, article.Entry!.Id, article.Sources);
+                                                    var sectionBlocks = contentBlocks.Where(block => block.Kind == ArticleContentBlockKind.Heading).ToArray();
+                                                }
+                                                @if (sectionBlocks.Length >= 3)
+                                                {
+                                                    <details class="article-toc">
+                                                        <summary>@Localizer["Category.ArticleContents", sectionBlocks.Length]</summary>
+                                                        <nav aria-label="@Localizer["Category.ArticleContentsLabel"]">
+                                                            <ol>
+                                                                @foreach (var section in sectionBlocks)
+                                                                {
+                                                                    <li><a href="#@section.AnchorId">@section.Text</a></li>
+                                                                }
+                                                            </ol>
+                                                        </nav>
+                                                    </details>
+                                                }
+                                                @foreach (var block in contentBlocks)
                                                 {
                                                     @switch (block.Kind)
                                                     {
                                                         case ArticleContentBlockKind.Heading:
-                                                            <h5>@block.Text</h5>
+                                                            <h5 id="@block.AnchorId">@block.Text</h5>
                                                             break;
                                                         case ArticleContentBlockKind.UnorderedList:
                                                             <ul>

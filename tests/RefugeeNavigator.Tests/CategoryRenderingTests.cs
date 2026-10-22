@@ -161,6 +161,50 @@ public sealed class CategoryRenderingTests
         Assert.Contains("datetime=\"2024-02-03T04:05:00", html);
     }
 
+    [Theory]
+    [InlineData("uk")]
+    [InlineData("en")]
+    [InlineData("ru")]
+    public async Task LongArticlesHaveLocalizedCollapsedContentsAndSourcesWithUniqueSectionAnchors(string language)
+    {
+        var firstId = Guid.Parse("30000000-0000-0000-0000-000000000021");
+        var secondId = Guid.Parse("30000000-0000-0000-0000-000000000022");
+        const string content = "## First: status?\n\nFirst body.\n\n## Repeated section\n\nSecond body.\n\n## Repeated section\n\nThird body.";
+        var first = FixtureEntry(firstId, title: "First article", content: content);
+        var second = FixtureEntry(secondId, title: "Second article", content: content);
+        var sources = new[]
+        {
+            FixtureSource(Guid.NewGuid(), firstId, "First official source", "https://example.gov/first"),
+            FixtureSource(Guid.NewGuid(), secondId, "Second official source", "https://example.gov/second")
+        };
+        var catalog = await CreateCatalogAsync([first, second], sources);
+
+        var html = await RenderAsync(catalog, language);
+        var culture = CultureInfo.GetCultureInfo(language);
+        var tocLabel = string.Format(culture, Resources.GetString("Category.ArticleContents", culture)!, 3);
+        var sectionIds = Regex.Matches(html, "<h3\\b[^>]*class=\\\"entry-section-heading\\\"[^>]*id=\\\"(?<id>[^\\\"]+)\\\"")
+            .Cast<Match>()
+            .Select(match => match.Groups["id"].Value)
+            .ToArray();
+
+        Assert.Equal(2, Regex.Matches(WebUtility.HtmlDecode(html), Regex.Escape(tocLabel)).Count);
+        Assert.Contains(Resources.GetString("Category.ArticleContentsLabel", culture)!, WebUtility.HtmlDecode(html));
+        Assert.Equal(6, sectionIds.Length);
+        Assert.Equal(sectionIds.Length, sectionIds.Distinct(StringComparer.Ordinal).Count());
+        Assert.All(sectionIds, id => Assert.Contains($"href=\"#{id}\"", html));
+        Assert.Contains("First: status?", WebUtility.HtmlDecode(html));
+        Assert.Contains("Repeated section", WebUtility.HtmlDecode(html));
+        Assert.DoesNotContain("class=\"article-toc\" open", html);
+
+        var sourceDetails = Regex.Matches(html, "<details\\b[^>]*class=\\\"entry-sources\\\"[^>]*>").Cast<Match>().ToArray();
+        Assert.Equal(2, sourceDetails.Length);
+        Assert.All(sourceDetails, details => Assert.DoesNotContain(" open", details.Value));
+        Assert.Contains($"{Resources.GetString("Category.Sources", culture)} (1)", ReadRenderedText(html));
+        Assert.Contains("First official source", ReadRenderedText(html));
+        Assert.Contains("Second official source", ReadRenderedText(html));
+        Assert.Contains("datetime=\"2024-04-05T06:07:00", html);
+    }
+
     [Fact]
     public async Task RendersOnlyMatchingCountryAndCategoryEntriesInCatalogOrder()
     {

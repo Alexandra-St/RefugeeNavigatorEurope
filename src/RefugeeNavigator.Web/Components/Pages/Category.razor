@@ -54,12 +54,30 @@
                         <article class="information-entry" aria-labelledby="entry-heading-@item.Entry.Id.ToString("N")" id="entry-@item.Entry.Id.ToString("N")">
                             <h2 id="entry-heading-@item.Entry.Id.ToString("N")">@item.Translation.Title</h2>
                             <p class="entry-summary">@item.Translation.Summary</p>
-                            @foreach (var block in ArticleContentFormatter.Parse(item.Translation.Content, item.Entry.Id, item.Sources))
+                            @{
+                                var contentBlocks = ArticleContentFormatter.Parse(item.Translation.Content, item.Entry.Id, item.Sources);
+                                var sectionBlocks = contentBlocks.Where(block => block.Kind == ArticleContentBlockKind.Heading).ToArray();
+                            }
+                            @if (sectionBlocks.Length >= 3)
+                            {
+                                <details class="article-toc">
+                                    <summary>@Localizer["Category.ArticleContents", sectionBlocks.Length]</summary>
+                                    <nav aria-label="@Localizer["Category.ArticleContentsLabel"]">
+                                        <ol>
+                                            @foreach (var section in sectionBlocks)
+                                            {
+                                                <li><a href="#@section.AnchorId">@section.Text</a></li>
+                                            }
+                                        </ol>
+                                    </nav>
+                                </details>
+                            }
+                            @foreach (var block in contentBlocks)
                             {
                                 @switch (block.Kind)
                                 {
                                     case ArticleContentBlockKind.Heading:
-                                        <h3 class="entry-section-heading">@block.Text</h3>
+                                        <h3 class="entry-section-heading" id="@block.AnchorId">@block.Text</h3>
                                         break;
                                     case ArticleContentBlockKind.UnorderedList:
                                         <ul class="entry-list">
@@ -108,8 +126,8 @@
 
                             @if (item.Sources.Count > 0)
                             {
-                                <section class="entry-sources" aria-labelledby="sources-heading-@item.Entry.Id.ToString("N")">
-                                    <h3 id="sources-heading-@item.Entry.Id.ToString("N")">@Localizer["Category.Sources"]</h3>
+                                <details class="entry-sources">
+                                    <summary>@Localizer["Category.Sources"] (@item.Sources.Count)</summary>
                                     <ul>
                                         @foreach (var source in item.Sources)
                                         {
@@ -120,7 +138,7 @@
                                             </li>
                                         }
                                     </ul>
-                                </section>
+                                </details>
                             }
                         </article>
                     }

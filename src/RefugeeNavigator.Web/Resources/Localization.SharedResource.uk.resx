@@ -189,6 +189,12 @@
   <data name="Category.Sources" xml:space="preserve">
     <value>Джерела інформації</value>
   </data>
+  <data name="Category.ArticleContents" xml:space="preserve">
+    <value>У цій статті (розділів: {0})</value>
+  </data>
+  <data name="Category.ArticleContentsLabel" xml:space="preserve">
+    <value>Розділи статті</value>
+  </data>
   <data name="Category.TemporaryProtection" xml:space="preserve">
     <value>Тимчасовий захист</value>
   </data>

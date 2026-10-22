@@ -1457,7 +1457,7 @@ public sealed class CountryComparisonTests
         var source = catalog.OfficialSources.First(item => item.InformationEntryId == entryId);
         Assert.Equal(VerificationStatus.Verified, catalog.InformationEntryTranslations.Single(item =>
             item.InformationEntryId == entryId && item.LanguageCode == language).VerificationStatus);
-        var content = $"Contact [[source:{source.Id:D}|{localizedLabel}]] for current details.";
+        var content = $"## First: status?\n\nContact [[source:{source.Id:D}|{localizedLabel}]] for current details.\n\n## Second / step\n\nSecond body.\n\n## Third — next step!\n\nThird body.";
         var withInlineSource = WithContent(catalog, entryId, language, content);
 
         var html = await RenderAsync(
@@ -1476,6 +1476,18 @@ public sealed class CountryComparisonTests
         Assert.StartsWith(localizedLabel, ReadRenderedText(inlineLink.Groups["content"].Value), StringComparison.Ordinal);
         Assert.Contains("Contact ", WebUtility.HtmlDecode(html));
         Assert.Contains(" for current details.", WebUtility.HtmlDecode(html));
+        Assert.Contains("class=\"article-toc\"", html);
+        Assert.Contains(string.Format(CultureInfo.GetCultureInfo(language), Resources.GetString("Category.ArticleContents", CultureInfo.GetCultureInfo(language))!, 3), WebUtility.HtmlDecode(html));
+        Assert.Contains("href=\"#article-section-", html);
+        var tocAnchors = Regex.Matches(html, "<a href=\"(?<href>#article-section-[^\"]+)\"[^>]*>(?<label>.*?)</a>", RegexOptions.Singleline)
+            .Cast<Match>()
+            .Where(match => match.Groups["href"].Value.StartsWith($"#article-section-{entryId:N}-", StringComparison.Ordinal))
+            .ToArray();
+        Assert.Equal(3, tocAnchors.Length);
+        foreach (var anchor in tocAnchors)
+        {
+            Assert.Contains($"id=\"{anchor.Groups["href"].Value[1..]}\"", html);
+        }
         Assert.Contains("class=\"source-details\"", html);
         Assert.Contains(source.Title, ReadRenderedText(html));
     }

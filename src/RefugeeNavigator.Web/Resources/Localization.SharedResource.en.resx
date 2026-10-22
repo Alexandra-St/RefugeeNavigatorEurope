@@ -189,6 +189,12 @@
   <data name="Category.Sources" xml:space="preserve">
     <value>Supporting sources</value>
   </data>
+  <data name="Category.ArticleContents" xml:space="preserve">
+    <value>In this article ({0} sections)</value>
+  </data>
+  <data name="Category.ArticleContentsLabel" xml:space="preserve">
+    <value>Article sections</value>
+  </data>
   <data name="Category.TemporaryProtection" xml:space="preserve">
     <value>Temporary protection</value>
   </data>

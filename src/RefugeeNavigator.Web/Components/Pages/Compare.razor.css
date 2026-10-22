@@ -481,6 +481,47 @@ details[open] .when-open {
     font-size: 1rem;
 }
 
+.article-toc {
+    max-width: 70ch;
+    margin: 0.5rem 0 0.9rem;
+    border: 1px solid #d8e1ee;
+    border-radius: 0.55rem;
+    padding: 0.55rem 0.75rem;
+    color: #263f66;
+}
+
+.article-toc > summary {
+    color: #155eef;
+    cursor: pointer;
+    font-weight: 650;
+}
+
+.article-toc > summary:focus-visible {
+    outline: 3px solid #155eef;
+    outline-offset: 3px;
+}
+
+.article-toc ol {
+    display: grid;
+    gap: 0.35rem;
+    margin: 0.55rem 0 0;
+    padding-left: 1.35rem;
+}
+
+.article-toc a {
+    color: #155eef;
+    overflow-wrap: anywhere;
+}
+
+.article-toc a:focus-visible {
+    outline: 3px solid #155eef;
+    outline-offset: 2px;
+}
+
+.article-body h5 {
+    scroll-margin-top: 1rem;
+}
+
 .article-body p {
     margin: 0.55rem 0;
 }
