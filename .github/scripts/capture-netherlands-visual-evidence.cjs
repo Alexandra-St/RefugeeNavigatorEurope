@@ -86,6 +86,7 @@ async function main() {
           `The inline source label is not localized for ${language}`);
         assert.match(await categoryInlineLink.getAttribute('href'), /^https:\/\//,
           'The inline source URL must come from an HTTPS official source');
+        const categorySourceUrl = await categoryInlineLink.getAttribute('href');
         assert.equal(await categoryInlineLink.getAttribute('target'), '_blank');
         assert.equal(await categoryInlineLink.getAttribute('rel'), 'noopener noreferrer');
         assert.equal(await page.getByText('HELD-ARTICLE-TEXT-SENTINEL', { exact: false }).count(), 0,
@@ -116,7 +117,7 @@ async function main() {
         assert.equal(await comparisonInlineLink.count(), 1, 'The full-article comparison should render one inline source link');
         assert.ok((await comparisonInlineLink.innerText()).includes(inlineSourceLabels[language]),
           `The full-article inline source label is not localized for ${language}`);
-        assert.equal(await comparisonInlineLink.getAttribute('href'), await categoryInlineLink.getAttribute('href'),
+        assert.equal(await comparisonInlineLink.getAttribute('href'), categorySourceUrl,
           'Category and full-article comparison should resolve the same official source URL');
         assert.equal(await comparisonInlineLink.getAttribute('target'), '_blank');
         assert.equal(await comparisonInlineLink.getAttribute('rel'), 'noopener noreferrer');
