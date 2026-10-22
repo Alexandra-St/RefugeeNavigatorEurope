@@ -58,7 +58,7 @@ public sealed class DenmarkHousingArticleTests
         Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(translation => translation.LanguageCode).OrderBy(code => code));
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
@@ -146,7 +146,7 @@ public sealed class DenmarkHousingArticleTests
         Assert.Contains(mandatoryPlacement, visibleHtml);
         Assert.Contains(alternativeHousing, visibleHtml);
         Assert.Equal(RequiredSources.Length, RequiredSources.Count(url => html.Contains($"href=\"{url}\"", StringComparison.Ordinal)));
-        Assert.Equal(VerificationStatus.NeedsReview, Assert.Single(catalog.InformationEntryTranslations,
+        Assert.Equal(VerificationStatus.Verified, Assert.Single(catalog.InformationEntryTranslations,
             translation => translation.InformationEntryId == ArticleId && translation.LanguageCode == language).VerificationStatus);
     }
 
@@ -166,21 +166,21 @@ public sealed class DenmarkHousingArticleTests
         Assert.Contains(correctedWording, translation.Content, StringComparison.Ordinal);
         Assert.DoesNotContain(unsupportedCategoricalWording, translation.Content, StringComparison.Ordinal);
         Assert.Contains("Udbetaling Danmark", translation.Content, StringComparison.Ordinal);
-        Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+        Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
     }
 
     [Fact]
-    public async Task NeedsReviewHousingArticleIsHiddenFromSearchAndV1Comparison()
+    public async Task HousingArticleAppearsInSearchAndCountryComparison()
     {
         var catalog = await LoadProductionCatalogAsync();
         var searchHtml = await RenderAsync<Search>(catalog, "en",
             "/search?q=How%20to%20find%20housing%20in%20Denmark&country=denmark&category=housing");
-        Assert.DoesNotContain("href=\"/countries/denmark/categories/housing\"", searchHtml);
+        Assert.Contains("href=\"/countries/denmark/categories/housing\"", searchHtml);
 
         var compareHtml = await RenderAsync<Compare>(catalog, "en",
             "/compare?country1=denmark&country2=germany&category=housing");
-        Assert.DoesNotContain("How to find housing in Denmark", WebUtility.HtmlDecode(compareHtml));
-        Assert.DoesNotContain($"href=\"/countries/denmark/categories/housing#entry-{ArticleId:N}\"", compareHtml);
+        Assert.Contains("How to find housing in Denmark", WebUtility.HtmlDecode(compareHtml));
+        Assert.Contains($"href=\"/countries/denmark/categories/housing#entry-{ArticleId:N}\"", compareHtml);
     }
 
     [Fact]
