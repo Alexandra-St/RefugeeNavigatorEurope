@@ -60,7 +60,7 @@ public sealed class DenmarkEmploymentRightsArticleTests
     ];
 
     [Fact]
-    public async Task CatalogHasNeedsReviewArticleWithThreeTranslationsAndReviewedSourceSet()
+    public async Task CatalogHasVerifiedArticleWithThreeTranslationsAndReviewedSourceSet()
     {
         var catalog = await LoadProductionCatalogAsync();
         var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == ArticleId);
@@ -103,7 +103,7 @@ public sealed class DenmarkEmploymentRightsArticleTests
         Assert.Contains(catalog.InformationEntryTranslations, item =>
             item.InformationEntryId == ExistingJobSearchArticleId && item.LanguageCode == "en" &&
             item.Title == "Find jobs and job-search guidance in Denmark" &&
-            item.VerificationStatus == VerificationStatus.NeedsReview);
+            item.VerificationStatus == VerificationStatus.Verified);
         Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == DenmarkId));
     }
 

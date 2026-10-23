@@ -28,17 +28,19 @@ public sealed class DenmarkInlineSourceExpansionTests
     [InlineData("en")]
     [InlineData("uk")]
     [InlineData("ru")]
-    public async Task InlineLinksRenderInCategoryAndCompareWithoutPublishingChangedTranslations(string language)
+    public async Task InlineLinksRenderInCategoryAndCompareForAcceptedTranslations(string language)
     {
         var catalog = await LoadProductionCatalogAsync();
         foreach (var translation in catalog.InformationEntryTranslations.Where(item =>
                      Articles.Any(article => article.ArticleId == item.InformationEntryId)))
         {
-            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
+            var expectedPositions = translation.InformationEntryId == JobSearchArticleId ? 2 : 4;
+            Assert.Equal(expectedPositions, Regex.Matches(translation.Content, @"\[\[source:").Count);
         }
         Assert.Equal(6, catalog.InformationEntryTranslations.Count(item =>
             Articles.Any(article => article.ArticleId == item.InformationEntryId) &&
-            item.VerificationStatus == VerificationStatus.NeedsReview));
+            item.VerificationStatus == VerificationStatus.Verified));
 
         var compareCatalog = await LoadComparisonFixtureWithApprovedTargetTranslationsAsync(language);
         foreach (var article in Articles)

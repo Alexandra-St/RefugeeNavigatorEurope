@@ -89,27 +89,18 @@ public sealed class PolandContentIntegrationTests
                 .Select(entry => entry.Id).ToHashSet();
             var countryTranslations = catalog.InformationEntryTranslations
                 .Where(translation => countryEntryIds.Contains(translation.InformationEntryId)).ToArray();
-            var denmarkNeedsReviewIds = countryId == DenmarkId
-                ? new HashSet<Guid>
-                {
-                    Guid.Parse("c2356631-3fa2-4553-8fda-50a4419262c0"),
-                    Guid.Parse("19afdd19-e2cc-4da6-bde3-6dc3d64b7503")
-                }
-                : new HashSet<Guid>();
             Assert.Equal(8, countryEntryIds.Count);
             Assert.Equal(24, countryTranslations.Length);
             Assert.All(countryTranslations, translation =>
             {
-                Assert.Equal(denmarkNeedsReviewIds.Contains(translation.InformationEntryId)
-                    ? VerificationStatus.NeedsReview
-                    : VerificationStatus.Verified, translation.VerificationStatus);
+                Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
             });
         }
         Assert.Equal(24, translations.Length);
         Assert.Equal(24, translations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
         Assert.Equal(0, translations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
-        Assert.Equal(126, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(42, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(132, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(36, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(24, translations.Select(translation => (translation.InformationEntryId, translation.LanguageCode)).Distinct().Count());
         Assert.Equal(entries.Length, entries.Select(entry => entry.Id).Distinct().Count());
         Assert.Equal(CategoryIds.Order().ToArray(), entries.Select(entry => entry.CategoryId).Distinct().Order().ToArray());

@@ -123,12 +123,12 @@ public sealed class DenmarkAfterProtectionArticleTests
     }
 
     [Fact]
-    public async Task ExistingEmploymentArticleRemainsNeedsReviewAndRendersInlineLinks()
+    public async Task ExistingEmploymentArticleRemainsVerifiedAndRendersInlineLinks()
     {
         var catalog = await LoadProductionCatalogAsync();
         var employmentTranslation = Assert.Single(catalog.InformationEntryTranslations,
             translation => translation.InformationEntryId == ExistingEmploymentEntryId && translation.LanguageCode == "en");
-        Assert.Equal(VerificationStatus.NeedsReview, employmentTranslation.VerificationStatus);
+        Assert.Equal(VerificationStatus.Verified, employmentTranslation.VerificationStatus);
         Assert.Contains("Workindenmark provides job listings in English", employmentTranslation.Content);
 
         var html = await RenderAsync<Category>(catalog, "en", "/countries/denmark/categories/employment",
