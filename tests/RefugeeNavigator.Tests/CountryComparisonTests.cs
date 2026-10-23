@@ -68,8 +68,8 @@ public sealed class CountryComparisonTests
         Assert.Equal(324, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Sum(fact => fact.OfficialSourceIds.Count));
         Assert.Equal(56, catalog.InformationEntries.Count);
         Assert.Equal(168, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(132, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(36, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(129, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(39, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Outdated));
         var czechiaId = Guid.Parse("10000000-0000-0000-0000-000000000004");
         var czechiaEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == czechiaId).Select(entry => entry.Id).ToHashSet();
@@ -100,7 +100,8 @@ public sealed class CountryComparisonTests
                                                                             && !swedenEntryIds.Contains(translation.InformationEntryId)
                                                                             && !netherlandsEntryIds.Contains(translation.InformationEntryId)
                                                                             && !inlineLinkArticleIds.Contains(translation.InformationEntryId)
-                                                                            && translation.InformationEntryId != Guid.Parse("afc14824-4035-4ca7-9662-6d5352ba63cb")),
+                                                                            && translation.InformationEntryId != Guid.Parse("afc14824-4035-4ca7-9662-6d5352ba63cb")
+                                                                            && translation.InformationEntryId != Guid.Parse("2d106fd3-e981-4ef9-9733-568b654dfca5")),
             translation => Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus));
         var unavailableFacts = facts.Topics.SelectMany(topic => topic.Aspects)
             .SelectMany(aspect => aspect.Facts.Where(fact => !fact.IsAvailable)
