@@ -117,7 +117,9 @@ public sealed class DenmarkAfterProtectionArticleTests
         Assert.DoesNotContain("<details class=\"entry-sources\" open", existingArticleHtml);
         Assert.Equal(3, System.Text.RegularExpressions.Regex.Matches(existingArticleHtml, "<ul\\b").Count);
         Assert.Equal(18, System.Text.RegularExpressions.Regex.Matches(existingArticleHtml, "<li\\b").Count);
-        Assert.Equal(6, System.Text.RegularExpressions.Regex.Matches(existingArticleHtml, "<a href=\"#article-section-").Count);
+        Assert.Equal(6, System.Text.RegularExpressions.Regex.Matches(
+            existingArticleHtml,
+            $"<a href=\"/countries/denmark/categories/temporary-protection#article-section-{ArticleId:N}-").Count);
         Assert.Equal(4, System.Text.RegularExpressions.Regex.Matches(existingArticleHtml, "class=\"article-source-link\"").Count);
         AssertFourInlineSources(catalog, language, existingArticleHtml);
         Assert.All(expectedHeadings.Split('|'), heading =>

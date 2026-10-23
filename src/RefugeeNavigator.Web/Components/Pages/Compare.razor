@@ -105,7 +105,7 @@
                                                             <ol>
                                                                 @foreach (var section in sectionBlocks)
                                                                 {
-                                                                    <li><a href="#@section.AnchorId">@section.Text</a></li>
+                                                                    <li><a href="@SectionHref(section.AnchorId)">@section.Text</a></li>
                                                                 }
                                                             </ol>
                                                         </nav>
@@ -353,6 +353,17 @@
 </main>
 
 @code {
+    private string SectionHref(string? anchorId)
+    {
+        if (string.IsNullOrWhiteSpace(anchorId))
+        {
+            throw new InvalidOperationException("Article section headings must have an anchor ID.");
+        }
+
+        var currentUri = new Uri(Navigation.Uri);
+        return $"{currentUri.PathAndQuery}#{Uri.EscapeDataString(anchorId)}";
+    }
+
     private IReadOnlyDictionary<string, Microsoft.Extensions.Primitives.StringValues> QueryParameters =>
         QueryHelpers.ParseQuery(new Uri(Navigation.Uri).Query);
 

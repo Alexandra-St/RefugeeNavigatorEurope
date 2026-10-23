@@ -66,7 +66,7 @@
                                         <ol>
                                             @foreach (var section in sectionBlocks)
                                             {
-                                                <li><a href="#@section.AnchorId">@section.Text</a></li>
+                                                <li><a href="@SectionHref(section.AnchorId)">@section.Text</a></li>
                                             }
                                         </ol>
                                     </nav>
@@ -186,6 +186,17 @@
     private string? GuideHref => GuideForCurrentCategory is { } guide && Country is { } country
         ? $"/guides/{country.Slug}/{guide.Slug}"
         : null;
+
+    private string SectionHref(string? anchorId)
+    {
+        if (string.IsNullOrWhiteSpace(anchorId))
+        {
+            throw new InvalidOperationException("Article section headings must have an anchor ID.");
+        }
+
+        var currentUri = new Uri(Navigation.Uri);
+        return $"{currentUri.PathAndQuery}#{Uri.EscapeDataString(anchorId)}";
+    }
 
     private Country? Country => Catalog.Countries.FirstOrDefault(country =>
         string.Equals(country.Slug, CountrySlug, StringComparison.OrdinalIgnoreCase));

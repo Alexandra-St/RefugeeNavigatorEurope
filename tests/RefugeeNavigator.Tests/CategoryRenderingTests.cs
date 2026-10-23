@@ -191,7 +191,7 @@ public sealed class CategoryRenderingTests
         Assert.Contains(Resources.GetString("Category.ArticleContentsLabel", culture)!, WebUtility.HtmlDecode(html));
         Assert.Equal(6, sectionIds.Length);
         Assert.Equal(sectionIds.Length, sectionIds.Distinct(StringComparer.Ordinal).Count());
-        Assert.All(sectionIds, id => Assert.Contains($"href=\"#{id}\"", html));
+        Assert.All(sectionIds, id => Assert.Contains($"href=\"/countries/denmark/categories/employment#{id}\"", html));
         Assert.Contains("First: status?", WebUtility.HtmlDecode(html));
         Assert.Contains("Repeated section", WebUtility.HtmlDecode(html));
         Assert.DoesNotContain("class=\"article-toc\" open", html);
@@ -710,7 +710,8 @@ public sealed class CategoryRenderingTests
             services.AddSingleton(catalog);
             services.AddSingleton(guides ?? new StepByStepGuideCatalog([]));
             services.AddSingleton<IWebHostEnvironment>(new TestWebHostEnvironment(environmentName));
-            services.AddSingleton<NavigationManager, TestNavigationManager>();
+            services.AddSingleton<NavigationManager>(new TestNavigationManager(
+                $"http://localhost/countries/{countrySlug}/categories/{categorySlug}"));
             using var serviceProvider = services.BuildServiceProvider();
             await using var renderer = new HtmlRenderer(serviceProvider, serviceProvider.GetRequiredService<ILoggerFactory>());
 
@@ -759,9 +760,9 @@ public sealed class CategoryRenderingTests
 
     private sealed class TestNavigationManager : NavigationManager
     {
-        public TestNavigationManager()
+        public TestNavigationManager(string uri)
         {
-            Initialize("http://localhost/", "http://localhost/");
+            Initialize("http://localhost/", uri);
         }
 
         protected override void NavigateToCore(string uri, bool forceLoad)

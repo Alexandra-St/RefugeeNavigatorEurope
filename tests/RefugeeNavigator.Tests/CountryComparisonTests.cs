@@ -1474,7 +1474,7 @@ public sealed class CountryComparisonTests
         var html = await RenderAsync(
             withInlineSource,
             language,
-            "?country1=denmark&country2=germany&category=housing");
+            "?country1=denmark&country2=germany&category=housing&tab=full");
 
         var inlineLink = Regex.Match(html,
             "<a class=\"article-source-link\"(?<attributes>[^>]*)>(?<content>.*?)</a>",
@@ -1489,16 +1489,24 @@ public sealed class CountryComparisonTests
         Assert.Contains(" for current details.", WebUtility.HtmlDecode(html));
         Assert.Contains("class=\"article-toc\"", html);
         Assert.Contains(string.Format(CultureInfo.GetCultureInfo(language), Resources.GetString("Category.ArticleContents", CultureInfo.GetCultureInfo(language))!, 3), WebUtility.HtmlDecode(html));
-        Assert.Contains("href=\"#article-section-", html);
-        var tocAnchors = Regex.Matches(html, "<a href=\"(?<href>#article-section-[^\"]+)\"[^>]*>(?<label>.*?)</a>", RegexOptions.Singleline)
+        const string comparisonRoute = "/compare?country1=denmark&amp;country2=germany&amp;category=housing&amp;tab=full";
+        Assert.Contains($"href=\"{comparisonRoute}#article-section-", html);
+        var tocAnchors = Regex.Matches(html, "<a href=\"(?<href>/compare\\?[^\"]*#article-section-[^\"]+)\"[^>]*>(?<label>.*?)</a>", RegexOptions.Singleline)
             .Cast<Match>()
-            .Where(match => match.Groups["href"].Value.StartsWith($"#article-section-{entryId:N}-", StringComparison.Ordinal))
+            .Where(match => match.Groups["href"].Value.Contains($"#article-section-{entryId:N}-", StringComparison.Ordinal))
             .ToArray();
         Assert.Equal(3, tocAnchors.Length);
         foreach (var anchor in tocAnchors)
         {
-            Assert.Contains($"id=\"{anchor.Groups["href"].Value[1..]}\"", html);
+            Assert.StartsWith(comparisonRoute + "#", anchor.Groups["href"].Value, StringComparison.Ordinal);
+            var targetId = anchor.Groups["href"].Value.Split('#')[^1];
+            Assert.Contains($"id=\"{targetId}\"", html);
         }
+        var comparisonHeadingIds = Regex.Matches(html, "<h5\\b[^>]*\\bid=\"(?<id>[^\"]+)\"", RegexOptions.Singleline)
+            .Cast<Match>()
+            .Select(match => match.Groups["id"].Value)
+            .ToArray();
+        Assert.Equal(comparisonHeadingIds.Length, comparisonHeadingIds.Distinct(StringComparer.Ordinal).Count());
         Assert.Contains("class=\"source-details\"", html);
         Assert.Contains(source.Title, ReadRenderedText(html));
     }
