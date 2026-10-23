@@ -103,7 +103,7 @@ public sealed class DenmarkEmploymentRightsArticleTests
         Assert.Contains(catalog.InformationEntryTranslations, item =>
             item.InformationEntryId == ExistingJobSearchArticleId && item.LanguageCode == "en" &&
             item.Title == "Find jobs and job-search guidance in Denmark" &&
-            item.VerificationStatus == VerificationStatus.Verified);
+            item.VerificationStatus == VerificationStatus.NeedsReview);
         Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == DenmarkId));
     }
 

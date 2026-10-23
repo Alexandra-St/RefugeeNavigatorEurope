@@ -68,8 +68,8 @@ public sealed class CountryComparisonTests
         Assert.Equal(324, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Sum(fact => fact.OfficialSourceIds.Count));
         Assert.Equal(56, catalog.InformationEntries.Count);
         Assert.Equal(168, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(132, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(36, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(126, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(42, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Outdated));
         var czechiaId = Guid.Parse("10000000-0000-0000-0000-000000000004");
         var czechiaEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == czechiaId).Select(entry => entry.Id).ToHashSet();
@@ -88,10 +88,18 @@ public sealed class CountryComparisonTests
         Assert.All(catalog.InformationEntryTranslations.Where(translation => netherlandsEntryIds.Contains(translation.InformationEntryId)),
             translation => Assert.Equal(NetherlandsPromotedArticleIds.Contains(translation.InformationEntryId)
                 ? VerificationStatus.Verified : VerificationStatus.NeedsReview, translation.VerificationStatus));
+        var inlineLinkArticleIds = new HashSet<Guid>
+        {
+            Guid.Parse("c2356631-3fa2-4553-8fda-50a4419262c0"),
+            Guid.Parse("19afdd19-e2cc-4da6-bde3-6dc3d64b7503")
+        };
+        Assert.All(catalog.InformationEntryTranslations.Where(translation => inlineLinkArticleIds.Contains(translation.InformationEntryId)),
+            translation => Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus));
         Assert.All(catalog.InformationEntryTranslations.Where(translation => !czechiaEntryIds.Contains(translation.InformationEntryId)
                                                                             && !spainEntryIds.Contains(translation.InformationEntryId)
                                                                             && !swedenEntryIds.Contains(translation.InformationEntryId)
                                                                             && !netherlandsEntryIds.Contains(translation.InformationEntryId)
+                                                                            && !inlineLinkArticleIds.Contains(translation.InformationEntryId)
                                                                             && translation.InformationEntryId != Guid.Parse("afc14824-4035-4ca7-9662-6d5352ba63cb")),
             translation => Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus));
         var unavailableFacts = facts.Topics.SelectMany(topic => topic.Aspects)
@@ -899,7 +907,7 @@ public sealed class CountryComparisonTests
             Assert.DoesNotContain("class=\"fact-sources\"", denmarkPanel);
             Assert.DoesNotContain(original.Title, html);
             Assert.DoesNotContain(original.Summary, html);
-            Assert.Equal(baselineSourceDetails - 1, Regex.Matches(html, "class=\"source-details\"").Count);
+            Assert.Equal(baselineSourceDetails, Regex.Matches(html, "class=\"source-details\"").Count);
         }
     }
 
@@ -1338,6 +1346,12 @@ public sealed class CountryComparisonTests
                     Assert.DoesNotContain("class=\"draft-label\"", html);
                     Assert.DoesNotContain(GetResource("Compare.DraftStatus", language), visibleHtml);
                     Assert.DoesNotContain(GetResource("Compare.DraftPreviewNotice", language), visibleHtml);
+                    Assert.Contains(GetResource(aspect.QuestionResourceKey, language), visibleHtml);
+                    if (!fact.IsAvailable)
+                    {
+                        Assert.Contains(GetResource("Compare.NotEstablishedInReviewedSources", language), visibleHtml);
+                        continue;
+                    }
                     if (fact.InformationEntryId is { } entryId
                         && catalog.InformationEntryTranslations.Any(item => item.InformationEntryId == entryId
                             && item.LanguageCode == language && item.VerificationStatus == VerificationStatus.NeedsReview))
@@ -1356,11 +1370,6 @@ public sealed class CountryComparisonTests
                             AssertExternalSourceLink(html, source, language);
                         }
                     }
-                    else
-                    {
-                        Assert.Contains(GetResource("Compare.NotEstablishedInReviewedSources", language), visibleHtml);
-                    }
-                    Assert.Contains(GetResource(aspect.QuestionResourceKey, language), visibleHtml);
                 }
             }
 
@@ -1455,10 +1464,11 @@ public sealed class CountryComparisonTests
         var topic = CountryComparisonTopicMap.ForCategory("housing")[0];
         var entryId = CountryComparisonTopicMap.EntryIdFor(topic, "denmark");
         var source = catalog.OfficialSources.First(item => item.InformationEntryId == entryId);
-        Assert.Equal(VerificationStatus.Verified, catalog.InformationEntryTranslations.Single(item =>
+        Assert.Equal(VerificationStatus.NeedsReview, catalog.InformationEntryTranslations.Single(item =>
             item.InformationEntryId == entryId && item.LanguageCode == language).VerificationStatus);
+        var comparisonCatalog = WithTranslations(catalog, entryId, language, VerificationStatus.Verified);
         var content = $"## First: status?\n\nContact [[source:{source.Id:D}|{localizedLabel}]] for current details.\n\n## Second / step\n\nSecond body.\n\n## Third — next step!\n\nThird body.";
-        var withInlineSource = WithContent(catalog, entryId, language, content);
+        var withInlineSource = WithContent(comparisonCatalog, entryId, language, content);
 
         var html = await RenderAsync(
             withInlineSource,

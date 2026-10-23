@@ -45,7 +45,7 @@ public sealed class DenmarkHousingArticleTests
     ];
 
     [Fact]
-    public async Task CatalogContainsVerifiedArticleWithAllSourcesAndPreservesExistingDenmarkArticles()
+    public async Task CatalogContainsNeedsReviewArticleWithAllSourcesAndPreservesExistingDenmarkArticles()
     {
         var catalog = await LoadProductionCatalogAsync();
         var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == ArticleId);
@@ -58,11 +58,11 @@ public sealed class DenmarkHousingArticleTests
         Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(translation => translation.LanguageCode).OrderBy(code => code));
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
-            Assert.Equal(new DateOnly(2026, 10, 22), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
+            Assert.Equal(new DateOnly(2026, 10, 23), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
         });
         var unsupportedEmphasisMarkers = new[]
         {
@@ -146,7 +146,7 @@ public sealed class DenmarkHousingArticleTests
         Assert.Contains(mandatoryPlacement, visibleHtml);
         Assert.Contains(alternativeHousing, visibleHtml);
         Assert.Equal(RequiredSources.Length, RequiredSources.Count(url => html.Contains($"href=\"{url}\"", StringComparison.Ordinal)));
-        Assert.Equal(VerificationStatus.Verified, Assert.Single(catalog.InformationEntryTranslations,
+        Assert.Equal(VerificationStatus.NeedsReview, Assert.Single(catalog.InformationEntryTranslations,
             translation => translation.InformationEntryId == ArticleId && translation.LanguageCode == language).VerificationStatus);
     }
 
@@ -166,21 +166,21 @@ public sealed class DenmarkHousingArticleTests
         Assert.Contains(correctedWording, translation.Content, StringComparison.Ordinal);
         Assert.DoesNotContain(unsupportedCategoricalWording, translation.Content, StringComparison.Ordinal);
         Assert.Contains("Udbetaling Danmark", translation.Content, StringComparison.Ordinal);
-        Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
+        Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
     }
 
     [Fact]
-    public async Task HousingArticleAppearsInSearchAndCountryComparison()
+    public async Task NeedsReviewHousingArticleRemainsOutsideSearchAndComparison()
     {
         var catalog = await LoadProductionCatalogAsync();
         var searchHtml = await RenderAsync<Search>(catalog, "en",
             "/search?q=How%20to%20find%20housing%20in%20Denmark&country=denmark&category=housing");
-        Assert.Contains("href=\"/countries/denmark/categories/housing\"", searchHtml);
+        Assert.DoesNotContain("href=\"/countries/denmark/categories/housing\"", searchHtml);
 
         var compareHtml = await RenderAsync<Compare>(catalog, "en",
             "/compare?country1=denmark&country2=germany&category=housing");
-        Assert.Contains("How to find housing in Denmark", WebUtility.HtmlDecode(compareHtml));
-        Assert.Contains($"href=\"/countries/denmark/categories/housing#entry-{ArticleId:N}\"", compareHtml);
+        Assert.DoesNotContain("How to find housing in Denmark", WebUtility.HtmlDecode(compareHtml));
+        Assert.DoesNotContain($"/countries/denmark/categories/housing#entry-{ArticleId:N}", compareHtml);
     }
 
     [Fact]

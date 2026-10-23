@@ -123,12 +123,12 @@ public sealed class DenmarkAfterProtectionArticleTests
     }
 
     [Fact]
-    public async Task ExistingEmploymentArticleRemainsVerifiedAndPlainText()
+    public async Task ExistingEmploymentArticleRemainsNeedsReviewAndRendersInlineLinks()
     {
         var catalog = await LoadProductionCatalogAsync();
         var employmentTranslation = Assert.Single(catalog.InformationEntryTranslations,
             translation => translation.InformationEntryId == ExistingEmploymentEntryId && translation.LanguageCode == "en");
-        Assert.Equal(VerificationStatus.Verified, employmentTranslation.VerificationStatus);
+        Assert.Equal(VerificationStatus.NeedsReview, employmentTranslation.VerificationStatus);
         Assert.Contains("Workindenmark provides job listings in English", employmentTranslation.Content);
 
         var html = await RenderAsync<Category>(catalog, "en", "/countries/denmark/categories/employment",
@@ -144,6 +144,9 @@ public sealed class DenmarkAfterProtectionArticleTests
         Assert.True(existingArticle.Success);
         var existingArticleHtml = existingArticle.Groups[1].Value;
         Assert.Contains("Workindenmark provides job listings in English", WebUtility.HtmlDecode(existingArticleHtml));
+        Assert.Contains("class=\"article-source-link\"", existingArticleHtml);
+        Assert.Contains("https://www.workindenmark.dk/getting-started/finding-vacancies-in-denmark/use-our-job-portal", existingArticleHtml);
+        Assert.Contains("https://jobnet.dk/hjaelp-og-support/vejledninger-og-guides/saadan-soeger-du-job-paa-jobnet", existingArticleHtml);
         Assert.DoesNotContain("entry-section-heading", existingArticleHtml);
         Assert.DoesNotContain("class=\"entry-list\"", existingArticleHtml);
     }
