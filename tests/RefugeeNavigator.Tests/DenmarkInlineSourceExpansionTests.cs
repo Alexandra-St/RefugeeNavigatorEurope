@@ -99,19 +99,22 @@ public sealed class DenmarkInlineSourceExpansionTests
                 {
                     (Guid.Parse("771e221f-dbe5-423b-995c-196ef247f361"), "official guidance"),
                     (Guid.Parse("ee40a28c-8be0-4471-8336-aab8ce453f0d"), "Udbetaling Danmark"),
-                    (Guid.Parse("ce1d50d7-9177-4e11-ada4-7475053a7c2f"), "A deposit loan")
+                    (Guid.Parse("ce1d50d7-9177-4e11-ada4-7475053a7c2f"), "A deposit loan"),
+                    (Guid.Parse("4d779e3b-6659-417c-91ab-6e2dcacd9c05"), "people with permits under sections 1 and 2 of the Ukraine Special Act who apply within the first three years after receiving the permit")
                 },
                 "uk" => new[]
                 {
                     (Guid.Parse("771e221f-dbe5-423b-995c-196ef247f361"), "офіційних рекомендацій"),
                     (Guid.Parse("ee40a28c-8be0-4471-8336-aab8ce453f0d"), "Udbetaling Danmark"),
-                    (Guid.Parse("ce1d50d7-9177-4e11-ada4-7475053a7c2f"), "Позика на заставу")
+                    (Guid.Parse("ce1d50d7-9177-4e11-ada4-7475053a7c2f"), "Позика на заставу"),
+                    (Guid.Parse("4d779e3b-6659-417c-91ab-6e2dcacd9c05"), "осіб із дозволами за §§ 1 і 2 Спеціального закону про Україну, якщо вони подають заяву протягом перших трьох років після отримання дозволу")
                 },
                 _ => new[]
                 {
                     (Guid.Parse("771e221f-dbe5-423b-995c-196ef247f361"), "официальные рекомендации"),
                     (Guid.Parse("ee40a28c-8be0-4471-8336-aab8ce453f0d"), "Udbetaling Danmark"),
-                    (Guid.Parse("ce1d50d7-9177-4e11-ada4-7475053a7c2f"), "Заём на залог")
+                    (Guid.Parse("ce1d50d7-9177-4e11-ada4-7475053a7c2f"), "Заём на залог"),
+                    (Guid.Parse("4d779e3b-6659-417c-91ab-6e2dcacd9c05"), "лиц с разрешениями по §§ 1 и 2 Специального закона об Украине, если они подают заявление в течение первых трёх лет после получения разрешения")
                 }
             };
 
