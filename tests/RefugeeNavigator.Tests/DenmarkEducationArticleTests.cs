@@ -52,7 +52,7 @@ public sealed class DenmarkEducationArticleTests
     ];
 
     [Fact]
-    public async Task CatalogContainsNeedsReviewArticleWithTwentySourcesAndPreservesExistingDenmarkArticles()
+    public async Task CatalogContainsVerifiedArticleWithTwentySourcesAndPreservesExistingDenmarkArticles()
     {
         var catalog = await LoadProductionCatalogAsync();
         var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == ArticleId);
@@ -65,7 +65,7 @@ public sealed class DenmarkEducationArticleTests
         Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(item => item.LanguageCode).OrderBy(code => code));
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
@@ -161,16 +161,16 @@ public sealed class DenmarkEducationArticleTests
     }
 
     [Fact]
-    public async Task NeedsReviewEducationArticleRemainsHiddenFromSearchAndCountryComparison()
+    public async Task VerifiedEducationArticleIsVisibleInSearchAndCountryComparison()
     {
         var catalog = await LoadProductionCatalogAsync();
         var searchHtml = await RenderAsync<Search>(catalog, "en",
             "/search?q=Education%20in%20Denmark&country=denmark&category=education");
-        Assert.DoesNotContain("Education in Denmark: schools, childcare and adult learning", WebUtility.HtmlDecode(searchHtml));
+        Assert.Contains("Education in Denmark: schools, childcare and adult learning", WebUtility.HtmlDecode(searchHtml));
 
         var compareHtml = await RenderAsync<Compare>(catalog, "en",
             "/compare?country1=denmark&country2=germany&category=education");
-        Assert.DoesNotContain("Education in Denmark: schools, childcare and adult learning", WebUtility.HtmlDecode(compareHtml));
+        Assert.Contains("Education in Denmark: schools, childcare and adult learning", WebUtility.HtmlDecode(compareHtml));
     }
 
     [Fact]
