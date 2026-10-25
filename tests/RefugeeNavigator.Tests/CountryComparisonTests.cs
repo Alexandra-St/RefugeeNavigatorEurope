@@ -68,8 +68,8 @@ public sealed class CountryComparisonTests
         Assert.Equal(324, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Sum(fact => fact.OfficialSourceIds.Count));
         Assert.Equal(56, catalog.InformationEntries.Count);
         Assert.Equal(168, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(132, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(36, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(129, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(39, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Outdated));
         var czechiaId = Guid.Parse("10000000-0000-0000-0000-000000000004");
         var czechiaEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == czechiaId).Select(entry => entry.Id).ToHashSet();
@@ -96,12 +96,16 @@ public sealed class CountryComparisonTests
         };
         Assert.All(catalog.InformationEntryTranslations.Where(translation => inlineLinkArticleIds.Contains(translation.InformationEntryId)),
             translation => Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus));
+        var healthcareArticleId = Guid.Parse("b1e4aed1-bbaf-4f09-9468-74000bf96430");
+        Assert.All(catalog.InformationEntryTranslations.Where(translation => translation.InformationEntryId == healthcareArticleId),
+            translation => Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus));
         Assert.All(catalog.InformationEntryTranslations.Where(translation => !czechiaEntryIds.Contains(translation.InformationEntryId)
                                                                             && !spainEntryIds.Contains(translation.InformationEntryId)
                                                                             && !swedenEntryIds.Contains(translation.InformationEntryId)
                                                                             && !netherlandsEntryIds.Contains(translation.InformationEntryId)
                                                                             && !inlineLinkArticleIds.Contains(translation.InformationEntryId)
-                                                                            && translation.InformationEntryId != Guid.Parse("afc14824-4035-4ca7-9662-6d5352ba63cb")),
+                                                                            && translation.InformationEntryId != Guid.Parse("afc14824-4035-4ca7-9662-6d5352ba63cb")
+                                                                            && translation.InformationEntryId != healthcareArticleId),
             translation => Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus));
         var unavailableFacts = facts.Topics.SelectMany(topic => topic.Aspects)
             .SelectMany(aspect => aspect.Facts.Where(fact => !fact.IsAvailable)
@@ -1060,11 +1064,13 @@ public sealed class CountryComparisonTests
         var topic = facts.Topics.Single(item => item.CategorySlug == "healthcare");
         var aspect = topic.Aspects[0];
         var denmarkFact = aspect.Facts.Single(fact => fact.CountrySlug == "denmark");
+        var denmarkHealthcareId = CountryComparisonTopicMap.EntryIdFor(CountryComparisonTopicMap.ForCategory("healthcare")[0], "denmark");
+        var englishFixture = WithTranslations(catalog, denmarkHealthcareId, "en", VerificationStatus.Verified);
         var injected = WithFact(facts, topic, aspect, denmarkFact with
         {
             Values = new Dictionary<string, string>(denmarkFact.Values) { ["en"] = "<script>alert(1)</script>" }
         });
-        var html = await RenderAsync(catalog, "en", "?country1=denmark&country2=germany&category=healthcare", comparisonFacts: injected);
+        var html = await RenderAsync(englishFixture, "en", "?country1=denmark&country2=germany&category=healthcare", comparisonFacts: injected);
         Assert.Contains("&lt;script&gt;alert(1)&lt;/script&gt;", html);
         Assert.DoesNotContain("<script>alert(1)</script>", html);
 
@@ -1086,10 +1092,11 @@ public sealed class CountryComparisonTests
                     ["ru"] = "Не установлено по проверенным источникам."
                 }
             });
-            var unavailableHtml = WebUtility.HtmlDecode(await RenderAsync(catalog, language,
+            var languageFixture = WithTranslations(catalog, denmarkHealthcareId, language, VerificationStatus.Verified);
+            var unavailableHtml = WebUtility.HtmlDecode(await RenderAsync(languageFixture, language,
                 "?country1=denmark&country2=germany&category=healthcare", comparisonFacts: unavailable));
             Assert.Contains(fallback, unavailableHtml);
-            JsonComparisonFactProvider.Validate(unavailable, catalog);
+            JsonComparisonFactProvider.Validate(unavailable, languageFixture);
         }
     }
 
@@ -1516,7 +1523,8 @@ public sealed class CountryComparisonTests
     {
         var catalog = await LoadCatalogAsync();
         var entryId = CountryComparisonTopicMap.EntryIdFor(CountryComparisonTopicMap.ForCategory("healthcare")[0], "denmark");
-        var injected = WithContent(catalog, entryId, "en", "<script>alert(1)</script>\n\n## Safe heading\n\n- Safe list item");
+        var approvedFixture = WithTranslations(catalog, entryId, "en", VerificationStatus.Verified);
+        var injected = WithContent(approvedFixture, entryId, "en", "<script>alert(1)</script>\n\n## Safe heading\n\n- Safe list item");
         var html = await RenderAsync(injected, "en", "?country1=denmark&country2=germany&category=healthcare");
         var visibleHtml = WebUtility.HtmlDecode(html);
 
