@@ -42,7 +42,7 @@ public sealed class DenmarkSocialAssistanceArticleTests
     ];
 
     [Fact]
-    public async Task CatalogContainsVerifiedArticleWithThreeTranslationsAndPreservesExistingDenmarkArticles()
+    public async Task CatalogContainsNeedsReviewArticleWithThreeTranslationsAndPreservesExistingDenmarkArticles()
     {
         var catalog = await LoadProductionCatalogAsync();
         var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == ArticleId);
@@ -56,14 +56,14 @@ public sealed class DenmarkSocialAssistanceArticleTests
         Assert.Equal(3, translations.Length);
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
             Assert.Equal(7, Regex.Matches(translation.Content, "(?m)^## ").Count);
             Assert.DoesNotContain("L 43", translation.Content, StringComparison.OrdinalIgnoreCase);
             Assert.DoesNotContain("**", translation.Content, StringComparison.Ordinal);
-            Assert.Equal(new DateOnly(2026, 10, 15), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
+            Assert.Equal(new DateOnly(2026, 10, 25), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
         });
         Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == DenmarkId));
         Assert.All(ExistingDenmarkArticleIds, id =>
@@ -96,7 +96,7 @@ public sealed class DenmarkSocialAssistanceArticleTests
         string spouseAssets, string workObligation, string otherObligations, string appealPeriod, string municipality,
         string eligibilityLimit, string childcarePhrase)
     {
-        var catalog = await LoadProductionCatalogAsync();
+        var catalog = await LoadCatalogWithSocialAssistanceTranslationStatusAsync(language, VerificationStatus.Verified);
         var html = await RenderAsync<Category>(catalog, language, "/countries/denmark/categories/social-assistance",
             new Dictionary<string, object?>
             {
@@ -104,6 +104,7 @@ public sealed class DenmarkSocialAssistanceArticleTests
                 [nameof(Category.CategorySlug)] = "social-assistance"
             });
         var visibleHtml = WebUtility.HtmlDecode(html);
+        AssertSocialAssistanceInlineLinks(catalog, language, html);
         Assert.Contains(expectedTitle, visibleHtml);
         Assert.Contains(childrenCondition, visibleHtml);
         var spouseUkraineCondition = language switch
@@ -140,21 +141,25 @@ public sealed class DenmarkSocialAssistanceArticleTests
         Assert.Equal(RequiredSources.Length, RequiredSources.Count(url => html.Contains($"href=\"{url}\"", StringComparison.Ordinal)));
         Assert.Contains("<ul class=\"entry-list\"", html);
         Assert.Contains(municipality, visibleHtml, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("href=\"/countries/denmark/categories/social-assistance#article-section-", html);
+
+        var comparisonHtml = await RenderAsync<Compare>(catalog, language,
+            "/compare?country1=denmark&country2=germany&category=social-assistance&tab=full");
+        AssertSocialAssistanceInlineLinks(catalog, language, comparisonHtml);
+        Assert.Contains("href=\"/compare?country1=denmark&amp;country2=germany&amp;category=social-assistance&amp;tab=full#article-section-", comparisonHtml);
     }
 
     [Fact]
-    public async Task ArticleAppearsInSearchAndCountryComparison()
+    public async Task NeedsReviewArticleRemainsHiddenFromSearchAndCountryComparison()
     {
         var catalog = await LoadProductionCatalogAsync();
         var searchHtml = await RenderAsync<Search>(catalog, "en",
             "/search?q=Social%20assistance%20in%20Denmark&country=denmark&category=social-assistance");
-        Assert.Contains("href=\"/countries/denmark/categories/social-assistance\"", searchHtml);
-        Assert.Contains("Social assistance in Denmark: benefits and how to apply", WebUtility.HtmlDecode(searchHtml));
+        Assert.DoesNotContain("Social assistance in Denmark: benefits and how to apply", WebUtility.HtmlDecode(searchHtml));
 
         var compareHtml = await RenderAsync<Compare>(catalog, "en",
             "/compare?country1=denmark&country2=germany&category=social-assistance");
-        Assert.Contains("Social assistance in Denmark: benefits and how to apply", WebUtility.HtmlDecode(compareHtml));
-        Assert.Contains($"href=\"/countries/denmark/categories/social-assistance#entry-{ArticleId:N}\"", compareHtml);
+        Assert.DoesNotContain("Social assistance in Denmark: benefits and how to apply", WebUtility.HtmlDecode(compareHtml));
     }
 
     [Fact]
@@ -187,6 +192,76 @@ public sealed class DenmarkSocialAssistanceArticleTests
                 });
             Assert.Contains("&lt;script&gt;alert(&#x27;x&#x27;)&lt;/script&gt;", html);
             Assert.DoesNotContain("<script>", html);
+        }
+        finally
+        {
+            Directory.Delete(temporaryRoot, recursive: true);
+        }
+    }
+
+    private static void AssertSocialAssistanceInlineLinks(CatalogData catalog, string language, string html)
+    {
+        var expected = language switch
+        {
+            "en" => new[]
+            {
+                (Guid.Parse("b64fed15-d770-4a60-a908-c4cfb8b4df6b"), "kontanthjælp"),
+                (Guid.Parse("675030ce-d243-48a2-a548-d1c2ae7ca323"), "Child and youth benefit"),
+                (Guid.Parse("bf5a5cb2-f724-4957-9af7-7a091903e365"), "help with certain reasonable and necessary expenses")
+            },
+            "uk" => new[]
+            {
+                (Guid.Parse("b64fed15-d770-4a60-a908-c4cfb8b4df6b"), "kontanthjælp"),
+                (Guid.Parse("675030ce-d243-48a2-a548-d1c2ae7ca323"), "Виплата на дітей і молодь"),
+                (Guid.Parse("bf5a5cb2-f724-4957-9af7-7a091903e365"), "допомогу на деякі розумні та необхідні витрати")
+            },
+            "ru" => new[]
+            {
+                (Guid.Parse("b64fed15-d770-4a60-a908-c4cfb8b4df6b"), "kontanthjælp"),
+                (Guid.Parse("675030ce-d243-48a2-a548-d1c2ae7ca323"), "Пособие на детей и молодёжь"),
+                (Guid.Parse("bf5a5cb2-f724-4957-9af7-7a091903e365"), "помощь на некоторые разумные и необходимые расходы")
+            },
+            _ => throw new ArgumentOutOfRangeException(nameof(language))
+        };
+
+        var translation = Assert.Single(catalog.InformationEntryTranslations,
+            item => item.InformationEntryId == ArticleId && item.LanguageCode == language);
+        var tokenIds = Regex.Matches(translation.Content, @"\[\[source:([0-9a-f-]+)\|")
+            .Cast<Match>().Select(match => Guid.Parse(match.Groups[1].Value)).Order().ToArray();
+        Assert.Equal(expected.Select(item => item.Item1).Order().ToArray(), tokenIds);
+        Assert.Equal(3, tokenIds.Length);
+        Assert.Equal(3, Regex.Matches(html, "<a\\b[^>]*article-source-link").Count);
+        var decodedHtml = WebUtility.HtmlDecode(html);
+        foreach (var (sourceId, label) in expected)
+        {
+            var source = Assert.Single(catalog.OfficialSources,
+                item => item.Id == sourceId && item.InformationEntryId == ArticleId);
+            Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
+            Assert.Contains($"href=\"{source.Url.AbsoluteUri}\"", html);
+            Assert.Contains(label, decodedHtml);
+        }
+    }
+
+    private static async Task<CatalogData> LoadCatalogWithSocialAssistanceTranslationStatusAsync(string language, VerificationStatus status)
+    {
+        var temporaryRoot = Path.Combine(Path.GetTempPath(), "RefugeeNavigatorSocialAssistanceComparison", Guid.NewGuid().ToString("N"));
+        var dataDirectory = Path.Combine(temporaryRoot, "Data");
+        Directory.CreateDirectory(dataDirectory);
+        try
+        {
+            foreach (var fileName in new[] { "countries.json", "categories.json", "information-entries.json", "official-sources.json" })
+            {
+                File.Copy(Path.Combine(AppContext.BaseDirectory, "Data", fileName), Path.Combine(dataDirectory, fileName));
+            }
+
+            var entriesPath = Path.Combine(dataDirectory, "information-entries.json");
+            var entries = JsonNode.Parse(await File.ReadAllTextAsync(entriesPath))!.AsArray();
+            var article = entries.Single(entry => entry!["Id"]!.GetValue<string>() == ArticleId.ToString());
+            var translation = article!["Translations"]!.AsArray()
+                .Single(item => item!["LanguageCode"]!.GetValue<string>() == language);
+            translation!["VerificationStatus"] = (int)status;
+            await File.WriteAllTextAsync(entriesPath, entries.ToJsonString());
+            return await new JsonCatalogProvider(temporaryRoot).LoadAsync();
         }
         finally
         {
