@@ -42,7 +42,7 @@ public sealed class DenmarkSocialAssistanceArticleTests
     ];
 
     [Fact]
-    public async Task CatalogContainsNeedsReviewArticleWithThreeTranslationsAndPreservesExistingDenmarkArticles()
+    public async Task CatalogContainsVerifiedArticleWithThreeTranslationsAndPreservesExistingDenmarkArticles()
     {
         var catalog = await LoadProductionCatalogAsync();
         var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == ArticleId);
@@ -56,7 +56,7 @@ public sealed class DenmarkSocialAssistanceArticleTests
         Assert.Equal(3, translations.Length);
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
@@ -152,7 +152,7 @@ public sealed class DenmarkSocialAssistanceArticleTests
     [Fact]
     public async Task NeedsReviewArticleRemainsHiddenFromSearchAndCountryComparison()
     {
-        var catalog = await LoadProductionCatalogAsync();
+        var catalog = await LoadCatalogWithSocialAssistanceTranslationStatusAsync("en", VerificationStatus.NeedsReview);
         var searchHtml = await RenderAsync<Search>(catalog, "en",
             "/search?q=Social%20assistance%20in%20Denmark&country=denmark&category=social-assistance");
         Assert.DoesNotContain("Social assistance in Denmark: benefits and how to apply", WebUtility.HtmlDecode(searchHtml));
