@@ -52,7 +52,7 @@ public sealed class DenmarkEducationArticleTests
     ];
 
     [Fact]
-    public async Task CatalogContainsVerifiedArticleWithTwentySourcesAndPreservesExistingDenmarkArticles()
+    public async Task CatalogContainsNeedsReviewArticleWithTwentySourcesAndPreservesExistingDenmarkArticles()
     {
         var catalog = await LoadProductionCatalogAsync();
         var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == ArticleId);
@@ -65,13 +65,13 @@ public sealed class DenmarkEducationArticleTests
         Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(item => item.LanguageCode).OrderBy(code => code));
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
             Assert.Equal(7, Regex.Matches(translation.Content, "(?m)^## ").Count);
             Assert.Contains("- ", translation.Content);
-            Assert.Equal(new DateOnly(2026, 10, 15), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
+            Assert.Equal(new DateOnly(2026, 10, 25), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
         });
 
         var sources = catalog.OfficialSources.Where(source => source.InformationEntryId == ArticleId).ToArray();
@@ -150,21 +150,27 @@ public sealed class DenmarkEducationArticleTests
         Assert.Equal(expectedHeadings.Split('|'), headings);
         Assert.Equal(RequiredSources.Length, RequiredSources.Count(url => html.Contains($"href=\"{url}\"", StringComparison.Ordinal)));
         Assert.Contains("<ul class=\"entry-list\"", html);
+        AssertEducationInlineLinks(catalog, language, html);
+        Assert.Contains("href=\"/countries/denmark/categories/education#article-section-", html);
+
+        var comparisonCatalog = await LoadCatalogWithEducationTranslationStatusAsync(language, VerificationStatus.Verified);
+        var comparisonHtml = await RenderAsync<Compare>(comparisonCatalog, language,
+            "/compare?country1=denmark&country2=germany&category=education&tab=full");
+        AssertEducationInlineLinks(comparisonCatalog, language, comparisonHtml);
+        Assert.Contains("href=\"/compare?country1=denmark&amp;country2=germany&amp;category=education&amp;tab=full#article-section-", comparisonHtml);
     }
 
     [Fact]
-    public async Task EducationArticleAppearsInSearchAndCountryComparison()
+    public async Task NeedsReviewEducationArticleRemainsHiddenFromSearchAndCountryComparison()
     {
         var catalog = await LoadProductionCatalogAsync();
         var searchHtml = await RenderAsync<Search>(catalog, "en",
             "/search?q=Education%20in%20Denmark&country=denmark&category=education");
-        Assert.Contains($"href=\"/countries/denmark/categories/education\"", searchHtml);
-        Assert.Contains("Education in Denmark: schools, childcare and adult learning", WebUtility.HtmlDecode(searchHtml));
+        Assert.DoesNotContain("Education in Denmark: schools, childcare and adult learning", WebUtility.HtmlDecode(searchHtml));
 
         var compareHtml = await RenderAsync<Compare>(catalog, "en",
             "/compare?country1=denmark&country2=germany&category=education");
-        Assert.Contains("Education in Denmark: schools, childcare and adult learning", WebUtility.HtmlDecode(compareHtml));
-        Assert.Contains($"href=\"/countries/denmark/categories/education#entry-{ArticleId:N}\"", compareHtml);
+        Assert.DoesNotContain("Education in Denmark: schools, childcare and adult learning", WebUtility.HtmlDecode(compareHtml));
     }
 
     [Fact]
@@ -198,6 +204,79 @@ public sealed class DenmarkEducationArticleTests
                 });
             Assert.Contains("&lt;script&gt;alert(&#x27;x&#x27;)&lt;/script&gt;", html);
             Assert.DoesNotContain("<script>", html);
+        }
+        finally
+        {
+            Directory.Delete(temporaryRoot, recursive: true);
+        }
+    }
+
+    private static void AssertEducationInlineLinks(CatalogData catalog, string language, string html)
+    {
+        var expected = language switch
+        {
+            "uk" => new[]
+            {
+                (Guid.Parse("fcb08b16-c39a-4e68-9a7e-25ce55571450"), "дітей, переміщених з України"),
+                (Guid.Parse("55c3e79d-1c9f-43fe-b01f-b0c0787571a4"), "гарантія місця"),
+                (Guid.Parse("12b2a6e7-a5c4-45e3-aa7b-31771977b602"), "направляють дорослих, які відповідають умовам, на курси данської мови"),
+                (Guid.Parse("186153a2-5805-43d8-b615-85eb0c64a256"), "може подати заяву на прирівняний статус за § 2(2) Закону про інтеграцію")
+            },
+            "ru" => new[]
+            {
+                (Guid.Parse("fcb08b16-c39a-4e68-9a7e-25ce55571450"), "детей, перемещённых из Украины"),
+                (Guid.Parse("55c3e79d-1c9f-43fe-b01f-b0c0787571a4"), "гарантию места"),
+                (Guid.Parse("12b2a6e7-a5c4-45e3-aa7b-31771977b602"), "направляют взрослых, соответствующих условиям, на курсы датского языка"),
+                (Guid.Parse("186153a2-5805-43d8-b615-85eb0c64a256"), "может подать заявление на равный статус согласно § 2(2) Закона об интеграции")
+            },
+            "en" => new[]
+            {
+                (Guid.Parse("fcb08b16-c39a-4e68-9a7e-25ce55571450"), "children displaced from Ukraine"),
+                (Guid.Parse("55c3e79d-1c9f-43fe-b01f-b0c0787571a4"), "the guarantee"),
+                (Guid.Parse("12b2a6e7-a5c4-45e3-aa7b-31771977b602"), "refer eligible adults to Danish language education"),
+                (Guid.Parse("186153a2-5805-43d8-b615-85eb0c64a256"), "may apply for equal status under section 2(2) of the Integration Act")
+            },
+            _ => throw new ArgumentOutOfRangeException(nameof(language))
+        };
+
+        var translation = Assert.Single(catalog.InformationEntryTranslations,
+            item => item.InformationEntryId == ArticleId && item.LanguageCode == language);
+        var tokenIds = Regex.Matches(translation.Content, @"\[\[source:([0-9a-f-]+)\|")
+            .Cast<Match>().Select(match => Guid.Parse(match.Groups[1].Value)).Order().ToArray();
+        Assert.Equal(expected.Select(item => item.Item1).Order().ToArray(), tokenIds);
+        Assert.Equal(4, tokenIds.Length);
+
+        var decodedHtml = WebUtility.HtmlDecode(html);
+        foreach (var (sourceId, label) in expected)
+        {
+            var source = Assert.Single(catalog.OfficialSources,
+                item => item.Id == sourceId && item.InformationEntryId == ArticleId);
+            Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
+            Assert.Contains($"href=\"{source.Url.AbsoluteUri}\"", html);
+            Assert.Contains(label, decodedHtml);
+        }
+    }
+
+    private static async Task<CatalogData> LoadCatalogWithEducationTranslationStatusAsync(string language, VerificationStatus status)
+    {
+        var temporaryRoot = Path.Combine(Path.GetTempPath(), "RefugeeNavigatorEducationComparison", Guid.NewGuid().ToString("N"));
+        var dataDirectory = Path.Combine(temporaryRoot, "Data");
+        Directory.CreateDirectory(dataDirectory);
+        try
+        {
+            foreach (var fileName in new[] { "countries.json", "categories.json", "information-entries.json", "official-sources.json" })
+            {
+                File.Copy(Path.Combine(AppContext.BaseDirectory, "Data", fileName), Path.Combine(dataDirectory, fileName));
+            }
+
+            var entriesPath = Path.Combine(dataDirectory, "information-entries.json");
+            var entries = JsonNode.Parse(await File.ReadAllTextAsync(entriesPath))!.AsArray();
+            var article = entries.Single(entry => entry!["Id"]!.GetValue<string>() == ArticleId.ToString());
+            var translation = article!["Translations"]!.AsArray()
+                .Single(item => item!["LanguageCode"]!.GetValue<string>() == language);
+            translation!["VerificationStatus"] = (int)status;
+            await File.WriteAllTextAsync(entriesPath, entries.ToJsonString());
+            return await new JsonCatalogProvider(temporaryRoot).LoadAsync();
         }
         finally
         {
