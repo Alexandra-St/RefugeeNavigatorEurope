@@ -60,7 +60,7 @@ public sealed class DenmarkEmploymentRightsArticleTests
     ];
 
     [Fact]
-    public async Task CatalogHasNeedsReviewArticleWithThreeTranslationsAndReviewedSourceSet()
+    public async Task CatalogHasAcceptedArticleWithThreeTranslationsAndReviewedSourceSet()
     {
         var catalog = await LoadProductionCatalogAsync();
         var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == ArticleId);
@@ -73,7 +73,7 @@ public sealed class DenmarkEmploymentRightsArticleTests
         Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(item => item.LanguageCode).OrderBy(code => code));
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
@@ -186,15 +186,18 @@ public sealed class DenmarkEmploymentRightsArticleTests
     }
 
     [Fact]
-    public async Task NeedsReviewArticleRemainsHiddenFromSearchAndCountryComparison()
+    public async Task AcceptedArticleAppearsInSearchAndCountryComparison()
     {
         var catalog = await LoadProductionCatalogAsync();
         var searchHtml = await RenderAsync<Search>(catalog, "en",
             "/search?q=work%20authorization%20and%20employee%20rights&country=denmark&category=employment");
-        Assert.DoesNotContain("Working in Denmark: work authorization and employee rights", WebUtility.HtmlDecode(searchHtml));
+        Assert.Contains("href=\"/countries/denmark/categories/employment\"", searchHtml);
+        Assert.Contains("Working in Denmark: work authorization and employee rights", WebUtility.HtmlDecode(searchHtml));
         var compareHtml = await RenderAsync<Compare>(catalog, "en",
             "/compare?country1=denmark&country2=germany&category=employment");
-        Assert.DoesNotContain("Working in Denmark: work authorization and employee rights", WebUtility.HtmlDecode(compareHtml));
+        Assert.Contains("Working in Denmark: work authorization and employee rights", WebUtility.HtmlDecode(compareHtml));
+        Assert.Contains($"href=\"/countries/denmark/categories/employment#entry-{ArticleId:N}\"", compareHtml);
+        AssertEmploymentRightsInlineLinks(catalog, "en", compareHtml);
     }
 
     [Fact]
