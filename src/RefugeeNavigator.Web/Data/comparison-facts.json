@@ -449,7 +449,7 @@
             {
               "CountrySlug": "netherlands",
               "InformationEntryId": "c5f5f833-0ab7-5e1a-9325-87a92b21d2ad",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "979a64e2-7a45-5c2b-8151-9ad7f57d61d8",
@@ -562,7 +562,7 @@
             {
               "CountrySlug": "netherlands",
               "InformationEntryId": "c5f5f833-0ab7-5e1a-9325-87a92b21d2ad",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "9c54de3d-0b37-5ecc-b879-b39f35082d4f"
@@ -785,7 +785,7 @@
             {
               "CountrySlug": "netherlands",
               "InformationEntryId": "757c1db6-b66b-54b9-ac14-d8a3da958ef5",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "1690f9d6-0721-5005-b9de-fda56864ed70"
@@ -894,7 +894,7 @@
             {
               "CountrySlug": "netherlands",
               "InformationEntryId": "757c1db6-b66b-54b9-ac14-d8a3da958ef5",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "1690f9d6-0721-5005-b9de-fda56864ed70"
@@ -1002,7 +1002,7 @@
             {
               "CountrySlug": "netherlands",
               "InformationEntryId": "757c1db6-b66b-54b9-ac14-d8a3da958ef5",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "6cbd665c-2c9b-5adf-af7c-f93aa0073d7c"
@@ -2121,7 +2121,7 @@
             {
               "CountrySlug": "netherlands",
               "InformationEntryId": "7633a085-4555-5a8f-a9a8-747a0f6e0545",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "82c68617-079f-55ad-b652-2cd30daec7e1"
@@ -2227,7 +2227,7 @@
             {
               "CountrySlug": "netherlands",
               "InformationEntryId": "7633a085-4555-5a8f-a9a8-747a0f6e0545",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "6dae1849-408f-5504-a344-b88a1b3832dd",
@@ -2338,7 +2338,7 @@
             {
               "CountrySlug": "netherlands",
               "InformationEntryId": "7633a085-4555-5a8f-a9a8-747a0f6e0545",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "400b5488-04f8-5492-ae3e-044af4cd25e9",

@@ -29,7 +29,10 @@ public sealed class CountryComparisonTests
         Guid.Parse("6a077f79-89c2-55d6-81f3-9ba7279979c9"),
         Guid.Parse("d5c4d5fa-3b0f-5cc2-865f-841bd40911d1"),
         Guid.Parse("19dde97c-cb42-5a90-97f7-e344f2139d2e"),
-        Guid.Parse("8d466e7d-93f7-596e-a44f-188e04396aa0")
+        Guid.Parse("8d466e7d-93f7-596e-a44f-188e04396aa0"),
+        Guid.Parse("c5f5f833-0ab7-5e1a-9325-87a92b21d2ad"),
+        Guid.Parse("757c1db6-b66b-54b9-ac14-d8a3da958ef5"),
+        Guid.Parse("7633a085-4555-5a8f-a9a8-747a0f6e0545")
     };
 
     private static readonly HashSet<string> NetherlandsApprovedAspects = new(StringComparer.Ordinal)
@@ -37,7 +40,10 @@ public sealed class CountryComparisonTests
         "work-permission", "work-employer-duties", "work-minimum-pay",
         "healthcare-access", "healthcare-proof", "healthcare-urgent",
         "housing-initial", "housing-private-rental", "housing-financial-support",
-        "social-subsistence", "social-application", "social-child-benefits"
+        "social-subsistence", "social-application", "social-child-benefits",
+        "residence-routes", "residence-conditions",
+        "employment-vacancies", "employment-institutions", "employment-assistance-conditions",
+        "education-school-enrolment", "education-pupil-language", "education-higher-admission"
     };
 
     private static readonly Lazy<Task<CatalogData>> ProductionCatalog = new(
@@ -62,14 +68,14 @@ public sealed class CountryComparisonTests
         Assert.Equal(168, facts.Topics.SelectMany(topic => topic.Aspects).Sum(aspect => aspect.Facts.Count));
         Assert.Equal(161, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.IsAvailable));
         Assert.Equal(7, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => !fact.IsAvailable));
-        Assert.Equal(132, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Approved));
-        Assert.Equal(36, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Draft));
+        Assert.Equal(140, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Approved));
+        Assert.Equal(28, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Draft));
         Assert.All(facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Where(fact => fact.CountrySlug is not ("sweden" or "netherlands")), fact => Assert.Equal(ComparisonFactStatus.Approved, fact.Status));
         Assert.Equal(324, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Sum(fact => fact.OfficialSourceIds.Count));
         Assert.Equal(56, catalog.InformationEntries.Count);
         Assert.Equal(168, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(132, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(36, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(141, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(27, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Outdated));
         var czechiaId = Guid.Parse("10000000-0000-0000-0000-000000000004");
         var czechiaEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == czechiaId).Select(entry => entry.Id).ToHashSet();
@@ -388,7 +394,7 @@ public sealed class CountryComparisonTests
             .Single(aspect => aspect.Id == "education-higher-admission").Facts
             .Single(item => item.CountrySlug == "netherlands");
 
-        Assert.Equal(ComparisonFactStatus.Draft, fact.Status);
+        Assert.Equal(ComparisonFactStatus.Approved, fact.Status);
         Assert.Contains("no eligibility for student finance or a secondary-education student grant because the nationality criteria are not met", fact.Values["en"], StringComparison.OrdinalIgnoreCase);
         Assert.Contains("відсутності права на студентське фінансування чи грант для учнів закладів середньої освіти через невідповідність критеріям громадянства", fact.Values["uk"], StringComparison.OrdinalIgnoreCase);
         Assert.DoesNotContain("та права на студентське фінансування чи грант", fact.Values["uk"], StringComparison.OrdinalIgnoreCase);

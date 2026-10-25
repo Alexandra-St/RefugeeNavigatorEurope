@@ -68,7 +68,10 @@ public sealed class NetherlandsContentIntegrationTests
     private static readonly HashSet<Guid> PromotedArticleIds = new()
     {
         StableArticleIds["NL-EMP-02"], StableArticleIds["NL-HEALTH-01"],
-        StableArticleIds["NL-HOUSING-01"], StableArticleIds["NL-SOC-01"]
+        StableArticleIds["NL-HOUSING-01"], StableArticleIds["NL-SOC-01"],
+        StableArticleIds["NL-TP-02"],
+        StableArticleIds["NL-EMP-01"],
+        StableArticleIds["NL-EDU-01"]
     };
     private static readonly string[] Categories =
     [
@@ -128,8 +131,8 @@ public sealed class NetherlandsContentIntegrationTests
 
         Assert.Equal(56, catalog.InformationEntries.Count);
         Assert.Equal(168, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(132, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(36, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(141, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(27, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == NetherlandsId).ToArray();
@@ -206,7 +209,7 @@ public sealed class NetherlandsContentIntegrationTests
         {
             var translation = Assert.Single(catalog.InformationEntryTranslations,
                 item => item.InformationEntryId == entry.Id && item.LanguageCode == language);
-            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
             Assert.Contains("2026–27", translation.Content, StringComparison.Ordinal);
             foreach (var condition in conditions)
                 Assert.Contains(condition, translation.Content, StringComparison.OrdinalIgnoreCase);
@@ -234,7 +237,7 @@ public sealed class NetherlandsContentIntegrationTests
         {
             var translation = Assert.Single(catalog.InformationEntryTranslations,
                 item => item.InformationEntryId == entryId && item.LanguageCode == language);
-            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
             Assert.DoesNotContain("Work.nl", translation.Content, StringComparison.OrdinalIgnoreCase);
             foreach (var phrase in phrases)
                 Assert.Contains(phrase, translation.Content, StringComparison.OrdinalIgnoreCase);
@@ -434,7 +437,7 @@ public sealed class NetherlandsContentIntegrationTests
     }
 
     [Fact]
-    public async Task CountryComparisonV2HasTwelveApprovedAndTwelveDraftNetherlandsFacts()
+    public async Task CountryComparisonV2HasTwentyApprovedAndFourDraftNetherlandsFacts()
     {
         var json = await File.ReadAllTextAsync(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json"));
         using var document = JsonDocument.Parse(json);
@@ -442,15 +445,15 @@ public sealed class NetherlandsContentIntegrationTests
         Assert.Equal(24, countrySlugs.Count(slug => string.Equals(slug, "netherlands", StringComparison.OrdinalIgnoreCase)));
         var statuses = FindCountryStatuses(document.RootElement, "netherlands").ToArray();
         Assert.Equal(24, statuses.Length);
-        Assert.Equal(12, statuses.Count(status => status == "Approved"));
-        Assert.Equal(12, statuses.Count(status => status == "Draft"));
+        Assert.Equal(20, statuses.Count(status => status == "Approved"));
+        Assert.Equal(4, statuses.Count(status => status == "Draft"));
 
         var vacanciesAspect = document.RootElement.GetProperty("Topics").EnumerateArray()
             .SelectMany(topic => topic.GetProperty("Aspects").EnumerateArray())
             .Single(aspect => aspect.GetProperty("Id").GetString() == "employment-vacancies");
         var vacanciesFact = vacanciesAspect.GetProperty("Facts").EnumerateArray()
             .Single(fact => fact.GetProperty("CountrySlug").GetString() == "netherlands");
-        Assert.Equal("Draft", vacanciesFact.GetProperty("Status").GetString());
+        Assert.Equal("Approved", vacanciesFact.GetProperty("Status").GetString());
         Assert.Equal(
             new[] { "1690f9d6-0721-5005-b9de-fda56864ed70" },
             vacanciesFact.GetProperty("OfficialSourceIds").EnumerateArray()

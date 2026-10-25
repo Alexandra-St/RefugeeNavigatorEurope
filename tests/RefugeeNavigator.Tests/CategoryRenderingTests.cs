@@ -336,7 +336,8 @@ public sealed class CategoryRenderingTests
         var partiallyVerifiedHtml = WebUtility.HtmlDecode(await RenderAsync(partiallyVerifiedCatalog, "en", "netherlands", "temporary-protection", environmentName: "Production"));
 
         Assert.DoesNotContain($"entry-{tp01Id:N}", heldCatalogHtml);
-        Assert.DoesNotContain($"entry-{tp02Id:N}", heldCatalogHtml);
+        Assert.Contains(tp02.Title, heldCatalogHtml);
+        Assert.Contains($"id=\"entry-{tp02Id:N}\"", heldCatalogHtml);
         Assert.Contains(tp02.Title, partiallyVerifiedHtml);
         Assert.Contains($"id=\"entry-{tp02Id:N}\"", partiallyVerifiedHtml);
         Assert.DoesNotContain(tp01.Title, partiallyVerifiedHtml);
