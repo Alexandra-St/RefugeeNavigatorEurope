@@ -199,7 +199,7 @@ public sealed class DenmarkAfterProtectionArticleTests
     }
 
     [Fact]
-    public async Task HealthcareArticleHasThreeCompleteNeedsReviewTranslationsAndNineSources()
+    public async Task HealthcareArticleHasThreeCompleteVerifiedTranslationsAndNineSources()
     {
         var catalog = await LoadProductionCatalogAsync();
         var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == HealthcareArticleId);
@@ -212,7 +212,7 @@ public sealed class DenmarkAfterProtectionArticleTests
         Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(translation => translation.LanguageCode).OrderBy(code => code));
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
@@ -245,7 +245,7 @@ public sealed class DenmarkAfterProtectionArticleTests
         var translation = Assert.Single(catalog.InformationEntryTranslations,
             item => item.InformationEntryId == HealthcareArticleId && item.LanguageCode == language);
 
-        Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+        Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
         Assert.Contains(expectedPurpose, translation.Content);
         Assert.Contains(expectedDigitalCard, translation.Content);
         Assert.Contains(expectedTiming, translation.Content);
@@ -297,12 +297,12 @@ public sealed class DenmarkAfterProtectionArticleTests
     }
 
     [Fact]
-    public async Task HealthcareInlineLinksRenderInCategoryAndComparisonWhileNeedsReviewStaysHiddenFromDiscovery()
+    public async Task HealthcareInlineLinksRenderInCategoryAndComparisonAndVerifiedArticleAppearsInSearch()
     {
         var catalog = await LoadProductionCatalogAsync();
         var searchHtml = await RenderAsync<Search>(catalog, "en",
             "/search?q=How%20to%20access%20healthcare%20in%20Denmark&country=denmark&category=healthcare");
-        Assert.DoesNotContain("href=\"/countries/denmark/categories/healthcare\"", searchHtml);
+        Assert.Contains("href=\"/countries/denmark/categories/healthcare\"", searchHtml);
 
         var categoryHtml = await RenderAsync<Category>(catalog, "en",
             "/countries/denmark/categories/healthcare",
@@ -315,7 +315,7 @@ public sealed class DenmarkAfterProtectionArticleTests
 
         var compareHtml = await RenderAsync<Compare>(catalog, "en",
             "/compare?country1=denmark&country2=germany&category=healthcare");
-        Assert.DoesNotContain("How to access healthcare in Denmark", WebUtility.HtmlDecode(compareHtml));
+        Assert.Contains("How to access healthcare in Denmark", WebUtility.HtmlDecode(compareHtml));
 
         var comparisonFixture = await LoadCatalogWithHealthcareTranslationStatusAsync(VerificationStatus.Verified);
         var fixtureHtml = await RenderAsync<Compare>(comparisonFixture, "en",
