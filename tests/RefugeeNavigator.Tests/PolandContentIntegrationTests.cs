@@ -94,8 +94,8 @@ public sealed class PolandContentIntegrationTests
             Assert.All(countryTranslations, translation =>
             {
                 var expectedStatus = countryId == DenmarkId &&
-                                     translation.InformationEntryId == Guid.Parse("1a19c1f9-1111-4d60-8490-da548f33083f")
-                    ? VerificationStatus.Verified
+                                     translation.InformationEntryId == Guid.Parse("35da68f6-8880-40b2-9b3f-eb2b809b1caf")
+                    ? VerificationStatus.NeedsReview
                     : VerificationStatus.Verified;
                 Assert.Equal(expectedStatus, translation.VerificationStatus);
             });
@@ -103,8 +103,8 @@ public sealed class PolandContentIntegrationTests
         Assert.Equal(24, translations.Length);
         Assert.Equal(24, translations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
         Assert.Equal(0, translations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
-        Assert.Equal(132, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(36, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(129, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(39, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(24, translations.Select(translation => (translation.InformationEntryId, translation.LanguageCode)).Distinct().Count());
         Assert.Equal(entries.Length, entries.Select(entry => entry.Id).Distinct().Count());
         Assert.Equal(CategoryIds.Order().ToArray(), entries.Select(entry => entry.CategoryId).Distinct().Order().ToArray());

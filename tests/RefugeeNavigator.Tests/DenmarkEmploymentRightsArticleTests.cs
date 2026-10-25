@@ -60,7 +60,7 @@ public sealed class DenmarkEmploymentRightsArticleTests
     ];
 
     [Fact]
-    public async Task CatalogHasVerifiedArticleWithThreeTranslationsAndReviewedSourceSet()
+    public async Task CatalogHasNeedsReviewArticleWithThreeTranslationsAndReviewedSourceSet()
     {
         var catalog = await LoadProductionCatalogAsync();
         var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == ArticleId);
@@ -73,7 +73,7 @@ public sealed class DenmarkEmploymentRightsArticleTests
         Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(item => item.LanguageCode).OrderBy(code => code));
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
@@ -81,7 +81,7 @@ public sealed class DenmarkEmploymentRightsArticleTests
             Assert.DoesNotContain("http://", translation.Content, StringComparison.OrdinalIgnoreCase);
             Assert.DoesNotContain("https://", translation.Content, StringComparison.OrdinalIgnoreCase);
             Assert.DoesNotContain("**", translation.Content, StringComparison.Ordinal);
-            Assert.Equal(new DateOnly(2026, 10, 15), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
+            Assert.Equal(new DateOnly(2026, 10, 25), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
         });
 
         var sources = catalog.OfficialSources.Where(source => source.InformationEntryId == ArticleId).ToArray();
@@ -113,7 +113,7 @@ public sealed class DenmarkEmploymentRightsArticleTests
     [InlineData("ru", "Работа в Дании: разрешение на работу и права работников", "Кто может работать в Дании|Трудовой договор|Зарплата и рабочее время|Отпуск, болезнь и условия труда|Налоги и регистрация|Права на работе и куда обратиться|Если работа заканчивается или вы меняете работодателя|Где получить помощь")]
     public async Task LocalizedArticleRendersEightSectionsAndSources(string language, string title, string expectedHeadings)
     {
-        var catalog = await LoadProductionCatalogAsync();
+        var catalog = await LoadCatalogWithTargetStatusAsync(language, VerificationStatus.Verified);
         var html = await RenderAsync<Category>(catalog, language,
             "/countries/denmark/categories/employment",
             new Dictionary<string, object?>
@@ -123,6 +123,7 @@ public sealed class DenmarkEmploymentRightsArticleTests
             });
         var articleHtml = ExtractArticle(html, ArticleId);
         var visibleHtml = WebUtility.HtmlDecode(articleHtml);
+        AssertEmploymentRightsInlineLinks(catalog, language, articleHtml);
 
         Assert.Contains(title, visibleHtml);
         var headings = Regex.Matches(articleHtml, "<h3\\b[^>]*class=\"entry-section-heading\"[^>]*>(.*?)</h3>", RegexOptions.Singleline)
@@ -130,9 +131,14 @@ public sealed class DenmarkEmploymentRightsArticleTests
             .Select(match => WebUtility.HtmlDecode(match.Groups[1].Value))
             .ToArray();
         Assert.Equal(expectedHeadings.Split('|'), headings);
-        Assert.Equal(24, Regex.Matches(articleHtml, "<a\\b[^>]*href=\"https://").Count);
+        Assert.Equal(28, Regex.Matches(articleHtml, "<a\\b[^>]*href=\"https://").Count);
         Assert.Contains("entry-metadata", articleHtml);
         Assert.Contains("entry-sources", articleHtml);
+
+        var compareHtml = await RenderAsync<Compare>(catalog, language,
+            "/compare?country1=denmark&country2=germany&category=employment&tab=full");
+        AssertEmploymentRightsInlineLinks(catalog, language, compareHtml);
+        Assert.Contains("href=\"/compare?country1=denmark&amp;country2=germany&amp;category=employment&amp;tab=full#article-section-", compareHtml);
     }
 
     [Theory]
@@ -164,9 +170,9 @@ public sealed class DenmarkEmploymentRightsArticleTests
     }
 
     [Fact]
-    public async Task ArticleAppearsInSearchAndCountryComparison()
+    public async Task VerifiedInMemoryArticleAppearsInSearchAndCountryComparison()
     {
-        var catalog = await LoadProductionCatalogAsync();
+        var catalog = await LoadCatalogWithTargetStatusAsync("en", VerificationStatus.Verified);
         var searchHtml = await RenderAsync<Search>(catalog, "en",
             "/search?q=work%20authorization%20and%20employee%20rights&country=denmark&category=employment");
         Assert.Contains("href=\"/countries/denmark/categories/employment\"", searchHtml);
@@ -176,6 +182,19 @@ public sealed class DenmarkEmploymentRightsArticleTests
             "/compare?country1=denmark&country2=germany&category=employment");
         Assert.Contains("Working in Denmark: work authorization and employee rights", WebUtility.HtmlDecode(compareHtml));
         Assert.Contains($"href=\"/countries/denmark/categories/employment#entry-{ArticleId:N}\"", compareHtml);
+        AssertEmploymentRightsInlineLinks(catalog, "en", compareHtml);
+    }
+
+    [Fact]
+    public async Task NeedsReviewArticleRemainsHiddenFromSearchAndCountryComparison()
+    {
+        var catalog = await LoadProductionCatalogAsync();
+        var searchHtml = await RenderAsync<Search>(catalog, "en",
+            "/search?q=work%20authorization%20and%20employee%20rights&country=denmark&category=employment");
+        Assert.DoesNotContain("Working in Denmark: work authorization and employee rights", WebUtility.HtmlDecode(searchHtml));
+        var compareHtml = await RenderAsync<Compare>(catalog, "en",
+            "/compare?country1=denmark&country2=germany&category=employment");
+        Assert.DoesNotContain("Working in Denmark: work authorization and employee rights", WebUtility.HtmlDecode(compareHtml));
     }
 
     [Fact]
@@ -213,6 +232,78 @@ public sealed class DenmarkEmploymentRightsArticleTests
         finally
         {
             Directory.Delete(temporaryRoot, recursive: true);
+        }
+    }
+
+    private static async Task<CatalogData> LoadCatalogWithTargetStatusAsync(string language, VerificationStatus status)
+    {
+        var temporaryRoot = Path.Combine(Path.GetTempPath(), "RefugeeNavigatorEmploymentStatus", Guid.NewGuid().ToString("N"));
+        var dataDirectory = Path.Combine(temporaryRoot, "Data");
+        Directory.CreateDirectory(dataDirectory);
+        try
+        {
+            foreach (var fileName in new[] { "countries.json", "categories.json", "information-entries.json", "official-sources.json" })
+            {
+                File.Copy(Path.Combine(AppContext.BaseDirectory, "Data", fileName), Path.Combine(dataDirectory, fileName));
+            }
+
+            var entriesPath = Path.Combine(dataDirectory, "information-entries.json");
+            var entries = JsonNode.Parse(await File.ReadAllTextAsync(entriesPath))!.AsArray();
+            var article = entries.Single(entry => entry!["Id"]!.GetValue<string>() == ArticleId.ToString());
+            var translation = article!["Translations"]!.AsArray()
+                .Single(item => item!["LanguageCode"]!.GetValue<string>() == language);
+            translation!["VerificationStatus"] = (int)status;
+            await File.WriteAllTextAsync(entriesPath, entries.ToJsonString());
+            return await new JsonCatalogProvider(temporaryRoot).LoadAsync();
+        }
+        finally
+        {
+            Directory.Delete(temporaryRoot, recursive: true);
+        }
+    }
+
+    private static void AssertEmploymentRightsInlineLinks(CatalogData catalog, string language, string html)
+    {
+        var expected = language switch
+        {
+            "en" => new[]
+            {
+                (Guid.Parse("b0ceabf9-2608-4748-86f7-e5e826eb6641"), "the Danish Immigration Service"),
+                (Guid.Parse("2acf95dd-1fea-45bc-9478-fda84be4496d"), "written-information rules"),
+                (Guid.Parse("dd5b7430-e9ae-4f48-9e14-3a511ae5fc96"), "a tax card"),
+                (Guid.Parse("25cfdf97-36ca-4f82-8b61-85089d022079"), "anonymous complaints about suspected violations")
+            },
+            "uk" => new[]
+            {
+                (Guid.Parse("b0ceabf9-2608-4748-86f7-e5e826eb6641"), "Імміграційна служба Данії"),
+                (Guid.Parse("2acf95dd-1fea-45bc-9478-fda84be4496d"), "Вимоги щодо письмового інформування"),
+                (Guid.Parse("dd5b7430-e9ae-4f48-9e14-3a511ae5fc96"), "податкової картки"),
+                (Guid.Parse("25cfdf97-36ca-4f82-8b61-85089d022079"), "анонімні скарги про ймовірні порушення")
+            },
+            "ru" => new[]
+            {
+                (Guid.Parse("b0ceabf9-2608-4748-86f7-e5e826eb6641"), "Иммиграционная служба Дании"),
+                (Guid.Parse("2acf95dd-1fea-45bc-9478-fda84be4496d"), "Требования о письменном информировании"),
+                (Guid.Parse("dd5b7430-e9ae-4f48-9e14-3a511ae5fc96"), "налоговой карты"),
+                (Guid.Parse("25cfdf97-36ca-4f82-8b61-85089d022079"), "анонимные жалобы о предполагаемых нарушениях")
+            },
+            _ => throw new ArgumentOutOfRangeException(nameof(language))
+        };
+        var translation = Assert.Single(catalog.InformationEntryTranslations,
+            item => item.InformationEntryId == ArticleId && item.LanguageCode == language);
+        var tokenIds = Regex.Matches(translation.Content, @"\[\[source:([0-9a-f-]+)\|")
+            .Cast<Match>().Select(match => Guid.Parse(match.Groups[1].Value)).Order().ToArray();
+        Assert.Equal(expected.Select(item => item.Item1).Order().ToArray(), tokenIds);
+        Assert.Equal(4, tokenIds.Length);
+        var decodedHtml = WebUtility.HtmlDecode(html);
+        foreach (var (sourceId, label) in expected)
+        {
+            var source = Assert.Single(catalog.OfficialSources,
+                item => item.Id == sourceId && item.InformationEntryId == ArticleId);
+            Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
+            var linkPattern = $"<a\\b(?=[^>]*class=\\\"article-source-link\\\")(?=[^>]*href=\\\"{Regex.Escape(source.Url.AbsoluteUri)}\\\")[^>]*>{Regex.Escape(label)}(?:<span\\b|</a>)";
+            Assert.Matches(linkPattern, decodedHtml);
+            Assert.Contains(label, decodedHtml);
         }
     }
 
