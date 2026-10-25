@@ -44,7 +44,7 @@ public sealed class DenmarkAfterProtectionArticleTests
     ];
 
     [Fact]
-    public async Task CatalogContainsNeedsReviewArticleAndPreservesExistingEmploymentEntry()
+    public async Task CatalogContainsVerifiedArticleAndPreservesExistingEmploymentEntry()
     {
         var catalog = await LoadProductionCatalogAsync();
         var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == ArticleId);
@@ -57,7 +57,7 @@ public sealed class DenmarkAfterProtectionArticleTests
         Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(translation => translation.LanguageCode).OrderBy(code => code));
         Assert.All(translations, translation =>
         {
-            Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
             Assert.Equal(new DateOnly(2026, 10, 23), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
         });
 
@@ -159,22 +159,13 @@ public sealed class DenmarkAfterProtectionArticleTests
     [InlineData("en", "Residence options after temporary protection in Denmark")]
     [InlineData("uk", "Які є варіанти проживання після тимчасового захисту в Данії?")]
     [InlineData("ru", "Какие есть варианты проживания после временной защиты в Дании?")]
-    public async Task NeedsReviewArticleStaysHiddenAndInlineLinksRenderWhenApprovedInFixture(string language, string expectedTitle)
+    public async Task VerifiedArticleAppearsInComparisonWithInlineLinks(string language, string expectedTitle)
     {
         var catalog = await LoadProductionCatalogAsync();
-        var searchHtml = await RenderAsync<Search>(catalog, language,
-            "/search?q=Residence%20options%20after%20temporary%20protection&country=denmark&category=temporary-protection");
-        Assert.DoesNotContain(expectedTitle, WebUtility.HtmlDecode(searchHtml));
-
         var compareHtml = await RenderAsync<Compare>(catalog, language,
             "/compare?country1=denmark&country2=germany&category=temporary-protection");
-        Assert.DoesNotContain(expectedTitle, WebUtility.HtmlDecode(compareHtml));
-
-        var comparisonFixture = await LoadCatalogWithTargetTranslationStatusAsync(language, VerificationStatus.Verified);
-        var fixtureHtml = await RenderAsync<Compare>(comparisonFixture, language,
-            "/compare?country1=denmark&country2=germany&category=temporary-protection");
-        Assert.Contains(expectedTitle, WebUtility.HtmlDecode(fixtureHtml));
-        AssertFourInlineSources(comparisonFixture, language, fixtureHtml);
+        Assert.Contains(expectedTitle, WebUtility.HtmlDecode(compareHtml));
+        AssertFourInlineSources(catalog, language, compareHtml);
     }
 
     private static void AssertFourInlineSources(CatalogData catalog, string language, string html)
@@ -349,35 +340,6 @@ public sealed class DenmarkAfterProtectionArticleTests
 
             Assert.Contains("&lt;script&gt;alert(&#x27;x&#x27;)&lt;/script&gt;", html);
             Assert.DoesNotContain("<script>", html);
-        }
-        finally
-        {
-            Directory.Delete(temporaryRoot, recursive: true);
-        }
-    }
-
-    private static async Task<CatalogData> LoadCatalogWithTargetTranslationStatusAsync(
-        string language, VerificationStatus status)
-    {
-        var temporaryRoot = Path.Combine(Path.GetTempPath(), "RefugeeNavigatorDenmarkResidenceLinks", Guid.NewGuid().ToString("N"));
-        var dataDirectory = Path.Combine(temporaryRoot, "Data");
-        Directory.CreateDirectory(dataDirectory);
-        try
-        {
-            foreach (var fileName in new[] { "countries.json", "categories.json", "information-entries.json", "official-sources.json" })
-            {
-                File.Copy(Path.Combine(AppContext.BaseDirectory, "Data", fileName), Path.Combine(dataDirectory, fileName));
-            }
-
-            var entriesPath = Path.Combine(dataDirectory, "information-entries.json");
-            var entries = JsonNode.Parse(await File.ReadAllTextAsync(entriesPath))!.AsArray();
-            var article = entries.Single(entry => entry!["Id"]!.GetValue<string>() == ArticleId.ToString());
-            var translation = article!["Translations"]!.AsArray()
-                .Single(item => item!["LanguageCode"]!.GetValue<string>() == language);
-            translation!["VerificationStatus"] = (int)status;
-            await File.WriteAllTextAsync(entriesPath, entries.ToJsonString());
-
-            return await new JsonCatalogProvider(temporaryRoot).LoadAsync();
         }
         finally
         {

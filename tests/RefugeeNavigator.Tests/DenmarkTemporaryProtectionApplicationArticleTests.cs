@@ -80,7 +80,7 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
         Assert.Contains(catalog.InformationEntryTranslations, item =>
             item.InformationEntryId == ExistingAfterProtectionId && item.LanguageCode == "en" &&
             item.Title == "Residence options after temporary protection in Denmark" &&
-            item.VerificationStatus == VerificationStatus.NeedsReview);
+            item.VerificationStatus == VerificationStatus.Verified);
     }
 
     [Theory]
