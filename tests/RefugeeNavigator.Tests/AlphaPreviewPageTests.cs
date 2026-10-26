@@ -583,11 +583,18 @@ public sealed class AlphaPreviewPageTests
         var categories = categorySlugs.Select((slug, index) =>
             new InformationCategory(Guid.Parse($"20000000-0000-0000-0000-{index + 1:000000000000}"), slug, slug)).ToArray();
 
+        // Production country navigation requires accepted article content, independently of guide status.
+        var entries = countries.Select((country, index) => new InformationEntry(
+            Guid.Parse($"30000000-0000-0000-0000-{index + 1:000000000000}"), country.Id, categories[0].Id)).ToArray();
+        var translations = entries.SelectMany(entry => new[] { "en", "uk", "ru" }.Select(language =>
+            new InformationEntryTranslation(entry.Id, language, "Accepted article", "Accepted summary", "Accepted content",
+                VerificationStatus.Verified, new DateTimeOffset(2026, 1, 1, 0, 0, 0, TimeSpan.Zero)))).ToArray();
+
         return (CatalogData)Activator.CreateInstance(
             typeof(CatalogData),
             BindingFlags.Instance | BindingFlags.NonPublic,
             binder: null,
-            args: [countries, categories, Array.Empty<InformationEntry>(), Array.Empty<InformationEntryTranslation>(), Array.Empty<OfficialSource>()],
+            args: [countries, categories, entries, translations, Array.Empty<OfficialSource>()],
             culture: CultureInfo.InvariantCulture)!;
     }
 

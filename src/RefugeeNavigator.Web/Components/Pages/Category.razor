@@ -8,6 +8,7 @@
 @using RefugeeNavigator.Data
 @using RefugeeNavigator.Domain
 @inject CatalogData Catalog
+@inject IWebHostEnvironment HostEnvironment
 @inject NavigationManager Navigation
 @inject IStringLocalizer<SharedResource> Localizer
 @inject IServiceProvider Services
@@ -198,7 +199,7 @@
         return $"{currentUri.PathAndQuery}#{Uri.EscapeDataString(anchorId)}";
     }
 
-    private Country? Country => Catalog.Countries.FirstOrDefault(country =>
+    private Country? Country => CountryVisibility.GetVisibleCountries(Catalog, HostEnvironment.IsDevelopment()).FirstOrDefault(country =>
         string.Equals(country.Slug, CountrySlug, StringComparison.OrdinalIgnoreCase));
 
     private InformationCategory? SelectedCategory => Catalog.Categories.FirstOrDefault(category =>

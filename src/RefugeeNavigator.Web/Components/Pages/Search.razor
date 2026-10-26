@@ -1,11 +1,14 @@
 @page "/search"
 @using System.Globalization
+@using Microsoft.AspNetCore.Hosting
 @using Microsoft.AspNetCore.WebUtilities
 @using RefugeeNavigator.Data
 @using RefugeeNavigator.Domain
 @using RefugeeNavigator.Web.Localization
 @using RefugeeNavigator.Web.Search
+@using RefugeeNavigator.Web.Content
 @inject CatalogData Catalog
+@inject IWebHostEnvironment HostEnvironment
 @inject NavigationManager Navigation
 @inject IStringLocalizer<SharedResource> Localizer
 
@@ -32,7 +35,7 @@
                     <label for="country-filter">@Localizer["Search.CountryFilter"]</label>
                     <select id="country-filter" name="country">
                         <option value="">@Localizer["Search.AllCountries"]</option>
-                        @foreach (var country in Catalog.Countries)
+                        @foreach (var country in CountryVisibility.GetVisibleCountries(Catalog, HostEnvironment.IsDevelopment()))
                         {
                             <option value="@country.Slug" selected="@string.Equals(country.Slug, CountrySlug, StringComparison.OrdinalIgnoreCase)">@Localizer[CatalogLocalizationKeyResolver.CountryName(country)]</option>
                         }

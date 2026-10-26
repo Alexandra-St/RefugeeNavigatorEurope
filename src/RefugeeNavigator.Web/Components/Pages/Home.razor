@@ -1,6 +1,9 @@
 @page "/"
 @using RefugeeNavigator.Data
+@using Microsoft.AspNetCore.Hosting
+@using RefugeeNavigator.Web.Content
 @inject CatalogData Catalog
+@inject IWebHostEnvironment HostEnvironment
 @inject IStringLocalizer<SharedResource> Localizer
 
 <PageTitle>@Localizer["Home.PageTitle"]</PageTitle>
@@ -41,7 +44,7 @@
             </div>
 
             <div class="country-grid">
-                @foreach (var country in Catalog.Countries)
+                @foreach (var country in CountryVisibility.GetVisibleCountries(Catalog, HostEnvironment.IsDevelopment()))
                 {
                     var countryDisplayName = Localizer[CatalogLocalizationKeyResolver.CountryName(country)].Value;
                     var countryLocationName = Localizer[$"{CatalogLocalizationKeyResolver.CountryName(country)}.In"].Value;
