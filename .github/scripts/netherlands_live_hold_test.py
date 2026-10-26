@@ -69,6 +69,7 @@ ACCEPTED_FACT_MARKER = {
     "uk": "Доступні рекомендації IND, Government.nl та міністерства описують перспективну роботу",
     "ru": "Доступные рекомендации IND, Government.nl и министерства описывают перспективную работу",
 }
+NETHERLANDS_NAMES = {"en": "Netherlands", "uk": "Нідерланди", "ru": "Нидерланды"}
 
 
 @dataclass
@@ -233,13 +234,18 @@ def article_title(article: Element) -> str:
     return heading.text() if heading else ""
 
 
-def fact_panel(root: Element, aspect_id: str) -> Element | None:
-    aspect = next(
-        (node for node in root.descendants("section", "structured-aspect")
-         if node.attrs.get("id", "").endswith("-" + aspect_id)),
-        None,
-    )
-    return next(aspect.descendants("article", "structured-country"), None) if aspect else None
+def fact_panel(root: Element, aspect_id: str, language: str) -> Element | None:
+    for aspect in root.descendants("section", "structured-aspect"):
+        heading_id = aspect.attrs.get("aria-labelledby", "")
+        if not heading_id.endswith("-" + aspect_id):
+            continue
+        if not any(node.attrs.get("id") == heading_id for node in aspect.descendants()):
+            continue
+        for panel in aspect.descendants("article", "structured-country"):
+            country_heading = next(panel.descendants("h5"), None)
+            if country_heading and normalized(country_heading.text()) == normalized(NETHERLANDS_NAMES[language]):
+                return panel
+    return None
 
 
 def request(send: Callable[[str, str | None], Response] | None, client: HttpClient | None,
@@ -346,7 +352,7 @@ def run_checks(base_url: str, username: str, password: str,
                        f"HTTP {compare_response.status}")
 
         for fact_key, markers in HELD_FACT_MARKERS.items():
-            panel = fact_panel(compare_root, fact_key)
+            panel = fact_panel(compare_root, fact_key, language)
             panel_text = normalized(panel.text()) if panel else ""
             fact_sources = list(panel.descendants("details", "fact-sources")) if panel else []
             suppressed = panel is not None and normalized(UNAVAILABLE_TEXT[language]) in panel_text \
@@ -355,7 +361,7 @@ def run_checks(base_url: str, username: str, password: str,
                            compare_response.status == 200 and suppressed,
                            "Draft answer and sources suppressed" if suppressed else "suppression check failed")
 
-        unavailable_panel = fact_panel(compare_root, "residence-filing")
+        unavailable_panel = fact_panel(compare_root, "residence-filing", language)
         unavailable_text = normalized(unavailable_panel.text()) if unavailable_panel else ""
         unavailable_sources = list(unavailable_panel.descendants("details", "fact-sources")) if unavailable_panel else []
         unavailable_ok = unavailable_panel is not None and normalized(UNAVAILABLE_TEXT[language]) in unavailable_text \
@@ -364,7 +370,7 @@ def run_checks(base_url: str, username: str, password: str,
                        compare_response.status == 200 and unavailable_ok,
                        "unavailable state retained" if unavailable_ok else "unavailable-state check failed")
 
-        positive_panel = fact_panel(compare_root, "residence-routes")
+        positive_panel = fact_panel(compare_root, "residence-routes", language)
         positive_text = normalized(positive_panel.text()) if positive_panel else ""
         positive_sources = list(positive_panel.descendants("details", "fact-sources")) if positive_panel else []
         positive_links = [a for source_group in positive_sources for a in source_group.descendants("a")

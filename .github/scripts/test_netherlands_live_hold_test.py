@@ -22,9 +22,14 @@ def article(entry_id, title, summary="", body="", sources=False):
 def fact_aspect(key, language, *, marker=None, source=False):
     text = marker or hold_test.UNAVAILABLE_TEXT[language]
     source_group = '<details class="fact-sources"><a href="https://source.example/approved">Official source</a></details>' if source else ""
-    return (f'<section class="structured-aspect" id="structured-aspect-temporary-protection-topic-{key}">'
-            f'<article class="structured-country"><h5>Netherlands</h5><p>{text}</p>{source_group}</article>'
-            '<article class="structured-country"><h5>Denmark</h5><p>Other country</p></article></section>')
+    heading_id = f"structured-aspect-temporary-protection-topic-{key}"
+    return (f'<section class="structured-aspect" aria-labelledby="{heading_id}">'
+            f'<h4 id="{heading_id}">Comparison question</h4><div class="structured-columns">'
+            '<article class="structured-country" aria-label="Information about Denmark">'
+            '<h5>Denmark</h5><p>Other country</p></article>'
+            f'<article class="structured-country" aria-label="Information about Netherlands">'
+            f'<h5>{hold_test.NETHERLANDS_NAMES[language]}</h5><p>{text}</p>{source_group}</article>'
+            '</div></section>')
 
 
 class FakeService:
@@ -77,8 +82,12 @@ class NetherlandsLiveHoldTests(unittest.TestCase):
         body += fact_aspect("protection-scheme", "en")
         root = hold_test.parse_document(body)
         self.assertIsNotNone(hold_test.find_article(root, hold_test.HELD_ENTRY_ID))
-        panel = hold_test.fact_panel(root, "protection-scheme")
+        panel = hold_test.fact_panel(root, "protection-scheme", "en")
         self.assertIsNotNone(panel)
+        self.assertEqual(hold_test.normalized(next(panel.descendants("h5")).text()), "netherlands")
+        aspect = next(root.descendants("section", "structured-aspect"))
+        self.assertNotIn("id", aspect.attrs)
+        self.assertTrue(aspect.attrs.get("aria-labelledby"))
         self.assertEqual(len(list(panel.descendants("details", "fact-sources"))), 0)
 
     def test_synthetic_live_hold_verification_passes_without_logging_credentials(self):
@@ -88,8 +97,9 @@ class NetherlandsLiveHoldTests(unittest.TestCase):
             passed = hold_test.run_checks("https://alpha.onrender.com", username, password,
                                           send=FakeService(), sleep=lambda _: None)
         self.assertTrue(passed)
-        self.assertIn("Netherlands live hold verification:", output.getvalue())
+        self.assertIn("Netherlands live hold verification: 48 checks; PASS", output.getvalue())
         self.assertIn("PASS | EN Draft fact protection-scheme", output.getvalue())
+        self.assertIn("PASS | UK unavailable residence-filing", output.getvalue())
         self.assertIn("PASS | RU Approved positive control residence-routes", output.getvalue())
         self.assertNotIn(username, output.getvalue())
         self.assertNotIn(password, output.getvalue())
