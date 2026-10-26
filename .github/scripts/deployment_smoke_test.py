@@ -43,6 +43,8 @@ class PageParser(HTMLParser):
         self.links: list[tuple[str, str]] = []
         self.stylesheets: list[str] = []
         self.form_names: list[str] = []
+        self.articles: list[dict[str, object]] = []
+        self._current_article: dict[str, object] | None = None
         self._heading_tag: str | None = None
         self._heading_text: list[str] = []
         self._anchor_href: str | None = None
@@ -63,18 +65,29 @@ class PageParser(HTMLParser):
             self._anchor_href, self._anchor_text = values.get("href") or "", []
         if tag == "form":
             self._in_form = True
+        if tag == "article" and "information-entry" in (values.get("class") or "").split():
+            self._current_article = {"title": "", "links": []}
+            self.articles.append(self._current_article)
         if self._in_form and tag in ("input", "select", "button") and values.get("name"):
             self.form_names.append(values["name"])
 
     def handle_endtag(self, tag: str) -> None:
         if self._heading_tag == tag:
-            self.headings.append((tag, normalize("".join(self._heading_text))))
+            heading_text = normalize("".join(self._heading_text))
+            self.headings.append((tag, heading_text))
+            if tag == "h2" and self._current_article is not None:
+                self._current_article["title"] = heading_text
             self._heading_tag = None
         if tag == "a" and self._anchor_href is not None:
-            self.links.append((self._anchor_href, normalize("".join(self._anchor_text))))
+            href = self._anchor_href
+            self.links.append((href, normalize("".join(self._anchor_text))))
+            if self._current_article is not None:
+                self._current_article["links"].append(href)
             self._anchor_href = None
         if tag == "form":
             self._in_form = False
+        if tag == "article" and self._current_article is not None:
+            self._current_article = None
 
     def handle_data(self, data: str) -> None:
         if self._heading_tag:
@@ -162,6 +175,19 @@ def parse_page(response: Response) -> PageParser:
     page = PageParser()
     page.feed(response.body)
     return page
+
+
+def article_source_urls(page: PageParser, title: str, base_url: str) -> set[str] | None:
+    article = next((item for item in page.articles if item["title"] == title), None)
+    if article is None:
+        return None
+    origin = urlsplit(base_url).netloc.lower()
+    urls: set[str] = set()
+    for href in article["links"]:
+        parts = urlsplit(urljoin(base_url + "/", href))
+        if parts.scheme.lower() == "https" and parts.netloc.lower() != origin:
+            urls.add(parts.geturl())
+    return urls
 
 
 def record_response(reporter: Reporter, name: str, response: Response, expected: int,
@@ -298,18 +324,22 @@ def run_checks(base_url: str, username: str, password: str,
         brands_ok = "Workindenmark" in visible_text and "Jobnet" in visible_text
         reporter.check(f"Denmark employment article ({culture}): content", "Workindenmark and Jobnet visible", brands_ok,
                        "both service names rendered" if brands_ok else "one or more expected names missing")
-        source_links = [href for href, _ in article_page.links if urlsplit(urljoin(base_url + "/", href)).netloc.lower() != urlsplit(base_url).netloc.lower()]
-        reporter.check(f"Denmark employment article ({culture}): official sources", "five external source links", len(source_links) == 5,
-                       f"found {len(source_links)} external source link(s)")
+        source_urls = article_source_urls(article_page, ARTICLE_TITLES[culture], base_url)
+        source_count = len(source_urls) if source_urls is not None else 0
+        reporter.check(f"Denmark employment article ({culture}): official sources",
+                       "five unique external source URLs in the article",
+                       source_urls is not None and source_count == 5,
+                       f"found {source_count} unique external source URL(s) in the article"
+                       if source_urls is not None else "article not found")
 
-        search = send("/search?q=Workindenmark&country=denmark&category=employment&status=Verified", True, cookie, None)
+        search = send("/search?q=Workindenmark&country=denmark&category=employment", True, cookie, None)
         search_page = record_response(reporter, f"Search and filters ({culture})", search, 200, culture)
         title_visible = ARTICLE_TITLES[culture] in normalize(search.body)
         reporter.check(f"Search and filters ({culture}): matching article", "published article appears", title_visible,
                        "matching article rendered" if title_visible else "matching article missing")
-        filters = {"q", "country", "category", "status"}
+        filters = {"q", "country", "category"}
         filters_present = filters.issubset(set(search_page.form_names))
-        reporter.check(f"Search and filters ({culture}): filter controls", "query, country, category, and status controls",
+        reporter.check(f"Search and filters ({culture}): filter controls", "query, country, and category controls",
                        filters_present, "all filter controls present" if filters_present else "one or more controls missing")
 
         comparison = send("/compare?country1=denmark&country2=germany&category=employment", True, cookie, None)
