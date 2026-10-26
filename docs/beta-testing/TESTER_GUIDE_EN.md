@@ -2,15 +2,15 @@
 
 ## Welcome
 
-This is a restricted Private Beta of Refugee Navigator Europe. Denmark, Germany, and Poland are available, with content in all six categories: temporary protection, employment, healthcare, housing, social assistance, and education.
+This is a restricted Private Beta of Refugee Navigator Europe. Denmark, Germany, Poland, and the accepted Netherlands content are available. Coverage varies by country and topic; not every country has information in every category.
 
-You can use search and filters, compare countries in Country Comparison V2, and open full articles in the article comparison. Interactive step-by-step Temporary Protection guides are available for Germany, Denmark, and Poland.
+You can use search and filters, compare countries in Country Comparison V2, and open full articles in the article comparison. Interactive step-by-step Temporary Protection guides are available for Germany, Denmark, and Poland only.
 
 ## How to test
 
 Sign in using access details shared with you separately, then work through tasks in the way that feels natural. There are no expected “correct” paths. Do not share real immigration-case circumstances. Use hypothetical situations in the interactive guides.
 
-The guides help users navigate information; they do not determine your status, entitlement to a permit, or the outcome of an application. Country Comparison V2 presents factual differences, not a country ranking or personal recommendation. “Information unavailable” means an evidence gap; it does not establish that a service or right is absent.
+The guides help users navigate information; they do not determine your status, entitlement to a permit, or the outcome of an application. Country Comparison V2 presents factual differences, not a country ranking or personal recommendation. In the Netherlands content, “Information unavailable” means an evidence gap; it does not establish that a service or right is absent.
 
 Check important information against the linked official sources. The application is not individualized legal advice, and information may need updating.
 

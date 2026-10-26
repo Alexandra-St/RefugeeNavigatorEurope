@@ -2,7 +2,8 @@
 
 ## Before the session
 
-- [ ] Record the current deployed commit SHA from the release/deployment record; do not assume the latest `main` commit is deployed.
+- [ ] Verify the deployed release and commit SHA against the [Four-Country Private Beta release record](../releases/FOUR_COUNTRY_PRIVATE_BETA_2026-10-26.md); do not assume the latest `main` commit is deployed.
+- [ ] Confirm the session scope is Denmark, Germany, Poland, and Netherlands. Netherlands coverage varies by topic; an unavailable answer may indicate an evidence gap.
 - [ ] Confirm the Private Beta site is accessible.
 - [ ] Share access credentials separately; never put them in notes, feedback, or screenshots.
 - [ ] Explain that the session requires no personal data and that hypothetical situations should be used for guides.
@@ -14,6 +15,7 @@
 - [ ] Record observations separately from interpretation.
 - [ ] Do not ask about real immigration history, status, applications, or personal eligibility.
 - [ ] Note when a guide is perceived as making an individual legal/status decision.
+- [ ] Spot-check Netherlands in Category and Search, then open Netherlands in Country Comparison. If an answer says “information unavailable,” check whether it is understood as an evidence gap rather than proof that a right or service does not exist.
 - [ ] Do not capture or retain credentials or personal information.
 
 ## After the session
