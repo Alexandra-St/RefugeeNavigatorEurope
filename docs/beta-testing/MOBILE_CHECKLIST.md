@@ -6,7 +6,7 @@ Test at least one portrait phone and a narrow viewport of approximately 375–39
 - [ ] Home, country, and category navigation is usable and orientation remains clear.
 - [ ] Search field, filters, and result cards fit and remain usable with the virtual keyboard open.
 - [ ] Comparison country selectors, category selector, cards, and country labels are readable.
-- [ ] Check a Netherlands Category page and Country Comparison at a narrow viewport; confirm that “information unavailable” is understandable as an evidence gap, not proof that a right or service does not exist.
+- [ ] Spot-check a Category page from Czechia or Spain and a Netherlands Category or Country Comparison page at a narrow viewport; confirm that “information unavailable” is understandable as an evidence gap, not proof that a right or service does not exist.
 - [ ] Full-article comparison disclosure is discoverable and can be expanded/collapsed.
 - [ ] Guide scenario cards remain one-column where appropriate, with readable text and usable touch targets.
 - [ ] Guide step text and long warning blocks wrap without clipping.

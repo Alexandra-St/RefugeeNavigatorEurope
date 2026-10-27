@@ -2,7 +2,7 @@
 
 ## Welcome
 
-This is a restricted Private Beta of Refugee Navigator Europe. Denmark, Germany, Poland, and the accepted Netherlands content are available. Coverage varies by country and topic; not every country has information in every category.
+This is a restricted Private Beta of Refugee Navigator Europe. Denmark, Germany, Poland, Czechia, Spain, and the accepted Netherlands content are available. Coverage varies by country and topic; not every country has information in every category. In the Netherlands, “Information unavailable” means an evidence gap; it does not establish that a service or right is absent.
 
 You can use search and filters, compare countries in Country Comparison V2, and open full articles in the article comparison. Interactive step-by-step Temporary Protection guides are available for Germany, Denmark, and Poland only.
 
