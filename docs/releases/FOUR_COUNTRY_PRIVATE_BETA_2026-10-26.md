@@ -1,5 +1,7 @@
 # Four-Country Private Beta Release — 26 October 2026
 
+> **Historical / superseded release record.** The deployed catalog also contained accepted Czechia and Spain content. The documented scope was later corrected and superseded by the [Six-Country Private Beta release record](SIX_COUNTRY_PRIVATE_BETA_2026-10-27.md), which reflects the production-visible scope.
+
 ## Release
 
 - **Status:** Live
