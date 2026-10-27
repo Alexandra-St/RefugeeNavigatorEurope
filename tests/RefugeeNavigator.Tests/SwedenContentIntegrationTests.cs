@@ -72,6 +72,7 @@ public sealed class SwedenContentIntegrationTests
     private static readonly DateTimeOffset SourceCheckTimestamp = new(2026, 10, 20, 14, 4, 15, TimeSpan.Zero);
     private static readonly DateTimeOffset RefreshedArticleTimestamp = new(2026, 10, 27, 20, 28, 46, TimeSpan.Zero);
     private static readonly DateTimeOffset RefreshedSourceCheckTimestamp = new(2026, 10, 27, 20, 28, 46, TimeSpan.Zero);
+    private static readonly DateTimeOffset ResidenceOptionsSourceCheckTimestamp = new(2026, 10, 27, 23, 44, 37, TimeSpan.Zero);
     private static readonly HashSet<Guid> RefreshedSourceIds =
     [
         Guid.Parse("62a4c75c-ef6f-4e14-8f74-74d188d0e858"),
@@ -83,6 +84,19 @@ public sealed class SwedenContentIntegrationTests
         Guid.Parse("942e9620-0c86-4d4d-816d-6867928748cc"),
         Guid.Parse("108b10ab-13a5-4d5b-8102-dc7e65dbdf77"),
         Guid.Parse("0a609d19-4eea-4d01-b30d-4cae787fc339")
+    ];
+    private static readonly HashSet<Guid> ResidenceOptionsSourceIds =
+    [
+        Guid.Parse("dc8c2eb8-2fdd-4e68-bec4-4fcf83456555"),
+        Guid.Parse("d4b72ce1-6f3e-4f28-ac6d-ff144ad283d7"),
+        Guid.Parse("7a6e7566-6de2-4c7a-9b52-0f8b8ccfeaf7"),
+        Guid.Parse("b2602495-c681-4853-b69e-c173f70abdcd"),
+        Guid.Parse("af0b44aa-8339-402f-a993-bb91ff578fe4"),
+        Guid.Parse("1edfa642-6b18-494f-81dc-0c2eea1728db"),
+        Guid.Parse("67b35a29-610f-49e3-b439-c2521683a619"),
+        Guid.Parse("78f08f69-cbf2-4715-8a6c-faedcec8be27"),
+        Guid.Parse("17fa9717-a2fb-467e-815a-f0628c3f2645"),
+        Guid.Parse("06e41800-28b2-4cf4-9885-9453373bd7a0")
     ];
     private static readonly Lazy<Task<CatalogData>> Catalog = new(() =>
         new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync());
@@ -176,9 +190,11 @@ public sealed class SwedenContentIntegrationTests
             Assert.True(source.Url.IsAbsoluteUri);
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
             Assert.False(string.IsNullOrWhiteSpace(source.Title));
-            var expectedCheckedAt = RefreshedSourceIds.Contains(source.Id)
-                ? RefreshedSourceCheckTimestamp
-                : SourceCheckTimestamp;
+            var expectedCheckedAt = ResidenceOptionsSourceIds.Contains(source.Id)
+                ? ResidenceOptionsSourceCheckTimestamp
+                : RefreshedSourceIds.Contains(source.Id)
+                    ? RefreshedSourceCheckTimestamp
+                    : SourceCheckTimestamp;
             Assert.Equal(expectedCheckedAt, source.LastCheckedAt);
         });
 
