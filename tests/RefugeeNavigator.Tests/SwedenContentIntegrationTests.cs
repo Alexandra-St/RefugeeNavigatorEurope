@@ -70,6 +70,20 @@ public sealed class SwedenContentIntegrationTests
     ];
     private static readonly DateTimeOffset ArticleTimestamp = new(2026, 10, 20, 14, 1, 38, TimeSpan.Zero);
     private static readonly DateTimeOffset SourceCheckTimestamp = new(2026, 10, 20, 14, 4, 15, TimeSpan.Zero);
+    private static readonly DateTimeOffset RefreshedArticleTimestamp = new(2026, 10, 27, 20, 28, 46, TimeSpan.Zero);
+    private static readonly DateTimeOffset RefreshedSourceCheckTimestamp = new(2026, 10, 27, 20, 28, 46, TimeSpan.Zero);
+    private static readonly HashSet<Guid> RefreshedSourceIds =
+    [
+        Guid.Parse("62a4c75c-ef6f-4e14-8f74-74d188d0e858"),
+        Guid.Parse("28dcb674-a540-4e7b-91e4-8e9d4e0f7fdd"),
+        Guid.Parse("e17f7ee0-b423-42b3-9c9c-280d33c54298"),
+        Guid.Parse("584e15ef-7e31-4b1e-9a39-efe2aadf9625"),
+        Guid.Parse("14ccfa7d-301f-48df-9194-7e0efd4f1e95"),
+        Guid.Parse("59381359-438b-496f-90d2-311a81913479"),
+        Guid.Parse("942e9620-0c86-4d4d-816d-6867928748cc"),
+        Guid.Parse("108b10ab-13a5-4d5b-8102-dc7e65dbdf77"),
+        Guid.Parse("0a609d19-4eea-4d01-b30d-4cae787fc339")
+    ];
     private static readonly Lazy<Task<CatalogData>> Catalog = new(() =>
         new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync());
     private static readonly ResourceManager Resources = new(
@@ -103,7 +117,10 @@ public sealed class SwedenContentIntegrationTests
                 Assert.False(string.IsNullOrWhiteSpace(translation.Title));
                 Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
                 Assert.False(string.IsNullOrWhiteSpace(translation.Content));
-                Assert.Equal(ArticleTimestamp, translation.LastUpdatedAt);
+                var expectedTimestamp = entry.Id == StableArticleIds["SE-TP-01"]
+                    ? RefreshedArticleTimestamp
+                    : ArticleTimestamp;
+                Assert.Equal(expectedTimestamp, translation.LastUpdatedAt);
             });
         });
         Assert.Equal(new[] { 2, 2, 1, 1, 1, 1 }, Categories.Select(category =>
@@ -159,7 +176,10 @@ public sealed class SwedenContentIntegrationTests
             Assert.True(source.Url.IsAbsoluteUri);
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
             Assert.False(string.IsNullOrWhiteSpace(source.Title));
-            Assert.Equal(SourceCheckTimestamp, source.LastCheckedAt);
+            var expectedCheckedAt = RefreshedSourceIds.Contains(source.Id)
+                ? RefreshedSourceCheckTimestamp
+                : SourceCheckTimestamp;
+            Assert.Equal(expectedCheckedAt, source.LastCheckedAt);
         });
 
         foreach (var (key, expectedCount) in ExpectedSourceCounts)

@@ -21,7 +21,7 @@ Temporary protection (tillfälligt skydd) is an EU protection framework. The EU 
 
 ## Who may be covered
 
-Swedish guidance describes Ukrainian nationals, certain people who previously had protection in Ukraine, and specified family members. Sweden also has a separate national rule for certain people who were lawfully present in Ukraine before 22 December 2023. The conditions differ between groups, so Ukrainian nationality alone does not establish that a person qualifies.
+Swedish guidance describes Ukrainian nationals, certain people who previously had protection in Ukraine, and specified family members. Sweden also has a separate national rule for people who belonged to one of the specified groups and were lawfully present in Sweden before 22 December 2023. The conditions differ between groups, so Ukrainian nationality alone does not establish that a person qualifies.
 
 The reviewed Swedish public guidance does not settle every EU-law case involving third-country nationals or stateless people. If your circumstances do not clearly fit the groups described by the Migration Agency, check its current instructions for your situation; this overview cannot determine eligibility.
 
@@ -41,7 +41,7 @@ Swedish administrative guidance separately describes requirements for first-time
 
 The EU scheme runs through 4 March 2028 for covered groups. Swedish guidance gives different dates for individual permit cohorts: permits decided before 5 August 2026 are stated to run through 4 March 2027; permits decided on or after that date are stated to run through 4 March 2028. These dates describe the stated Swedish permit cohorts and should not be inferred from the EU endpoint alone. Check your decision and card.
 
-At the research date, the Migration Agency expected another extension opportunity in early 2027, but its operational opening, dates and booking were not shown as available. Check current Agency instructions when the next extension period opens; do not rely on a future deadline or procedure that has not been announced.
+As of 27 October 2026, the Migration Agency expected another extension opportunity in early 2027, but exact opening dates and booking instructions were not shown in the official guidance reviewed. Check current Agency instructions when the next extension period opens; do not rely on a future deadline or procedure that has not been announced.
 
 ## Population registration, work and travel
 
@@ -81,7 +81,7 @@ Content:
 
 ## Кого можуть охоплювати правила
 
-Шведські інструкції описують громадян України, певних осіб, які раніше мали захист в Україні, та визначених членів їхніх сімей. Окреме національне правило Швеції також стосується деяких осіб, які законно перебували в Україні до 22 грудня 2023 року. Умови для цих груп різняться, тому самого громадянства України недостатньо, щоб встановити право на захист.
+Шведські інструкції описують громадян України, певних осіб, які раніше мали захист в Україні, та визначених членів їхніх сімей. Окреме національне правило Швеції також стосується осіб, які належали до однієї з визначених груп і законно перебували у Швеції до 22 грудня 2023 року. Умови для цих груп різняться, тому самого громадянства України недостатньо, щоб встановити право на захист.
 
 Перевірені відкриті шведські матеріали не дають відповіді щодо кожного випадку громадян третіх країн або осіб без громадянства за правом ЄС. Якщо ваші обставини чітко не відповідають описаним Міграційним агентством групам, перевірте його актуальні вказівки для вашої ситуації; цей огляд не визначає право конкретної людини.
 
@@ -101,7 +101,7 @@ Content:
 
 Для охоплених груп механізм ЄС діє до 4 березня 2028 року. Шведські інструкції вказують різні дати для окремих груп дозволів: дозволи, щодо яких рішення ухвалено до 5 серпня 2026 року, зазначені як чинні до 4 березня 2027 року; дозволи за рішеннями від цієї дати й пізніше — до 4 березня 2028 року. Це строки, вказані для відповідних шведських груп дозволів; їх не можна визначати лише за датою завершення механізму ЄС. Перевірте своє рішення та картку.
 
-На дату дослідження Міграційне агентство очікувало наступну можливість продовження на початку 2027 року, але відкриття процесу, дати та запис ще не були доступні. Коли розпочнеться наступний період продовження, перевірте актуальні інструкції Агентства; не покладайтеся на майбутній строк чи процедуру, які ще не оголошено.
+Станом на 27 жовтня 2026 року Міграційне агентство очікувало наступну можливість продовження на початку 2027 року, але точні дати відкриття та інструкції щодо запису не були наведені в перевірених офіційних матеріалах. Коли розпочнеться наступний період продовження, перевірте актуальні інструкції Агентства; не покладайтеся на майбутній строк чи процедуру, які ще не оголошено.
 
 ## Реєстрація населення, робота та поїздки
 
@@ -141,7 +141,7 @@ Content:
 
 ## На кого могут распространяться правила
 
-Шведские инструкции описывают граждан Украины, некоторых лиц, ранее имевших защиту в Украине, и определённых членов их семей. Отдельное национальное правило Швеции также распространяется на некоторых лиц, законно находившихся в Украине до 22 декабря 2023 года. Условия для разных групп отличаются, поэтому одного гражданства Украины недостаточно, чтобы установить право на защиту.
+Шведские инструкции описывают граждан Украины, некоторых лиц, ранее имевших защиту в Украине, и определённых членов их семей. Отдельное национальное правило Швеции также распространяется на лиц, которые относились к одной из указанных групп и законно находились в Швеции до 22 декабря 2023 года. Условия для разных групп отличаются, поэтому одного гражданства Украины недостаточно, чтобы установить право на защиту.
 
 Проверенные открытые шведские материалы не охватывают все случаи граждан третьих стран или лиц без гражданства по праву ЕС. Если ваши обстоятельства явно не относятся к описанным Миграционным агентством группам, проверьте его актуальные инструкции для вашей ситуации; этот обзор не определяет право конкретного человека.
 
@@ -161,7 +161,7 @@ Content:
 
 Для охватываемых групп механизм ЕС действует до 4 марта 2028 года. Шведские инструкции указывают разные даты для отдельных групп разрешений: разрешения, по которым решение принято до 5 августа 2026 года, указаны как действующие до 4 марта 2027 года; разрешения по решениям от этой даты и позднее — до 4 марта 2028 года. Это сроки, указанные для соответствующих шведских групп разрешений; их нельзя выводить только из даты окончания механизма ЕС. Проверьте своё решение и карту.
 
-На дату исследования Миграционное агентство ожидало следующую возможность продления в начале 2027 года, однако начало процесса, даты и запись ещё не были доступны. Когда откроется следующий период продления, проверьте актуальные инструкции Агентства; не полагайтесь на будущий срок или процедуру, которые ещё не объявлены.
+По состоянию на 27 октября 2026 года Миграционное агентство ожидало следующую возможность продления в начале 2027 года, но точные даты открытия и инструкции по записи не были указаны в проверенных официальных материалах. Когда откроется следующий период продления, проверьте актуальные инструкции Агентства; не полагайтесь на будущий срок или процедуру, которые ещё не объявлены.
 
 ## Регистрация населения, работа и поездки
 
