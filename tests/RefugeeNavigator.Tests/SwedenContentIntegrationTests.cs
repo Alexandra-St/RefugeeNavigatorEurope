@@ -73,6 +73,8 @@ public sealed class SwedenContentIntegrationTests
     private static readonly DateTimeOffset RefreshedArticleTimestamp = new(2026, 10, 27, 20, 28, 46, TimeSpan.Zero);
     private static readonly DateTimeOffset RefreshedSourceCheckTimestamp = new(2026, 10, 27, 20, 28, 46, TimeSpan.Zero);
     private static readonly DateTimeOffset ResidenceOptionsSourceCheckTimestamp = new(2026, 10, 27, 23, 44, 37, TimeSpan.Zero);
+    private static readonly DateTimeOffset WorkAuthorizationArticleTimestamp = new(2026, 10, 27, 23, 54, 27, TimeSpan.Zero);
+    private static readonly DateTimeOffset WorkAuthorizationSourceCheckTimestamp = new(2026, 10, 27, 23, 54, 27, TimeSpan.Zero);
     private static readonly HashSet<Guid> RefreshedSourceIds =
     [
         Guid.Parse("62a4c75c-ef6f-4e14-8f74-74d188d0e858"),
@@ -97,6 +99,18 @@ public sealed class SwedenContentIntegrationTests
         Guid.Parse("78f08f69-cbf2-4715-8a6c-faedcec8be27"),
         Guid.Parse("17fa9717-a2fb-467e-815a-f0628c3f2645"),
         Guid.Parse("06e41800-28b2-4cf4-9885-9453373bd7a0")
+    ];
+    private static readonly HashSet<Guid> WorkAuthorizationSourceIds =
+    [
+        Guid.Parse("1809031a-2cc5-49ae-b6ed-595c9a675b83"),
+        Guid.Parse("0d4b84f3-690b-4dc4-a899-69068c7b2c28"),
+        Guid.Parse("78f75cc3-a5d4-497f-9d4a-de6999d8000c"),
+        Guid.Parse("3d4d281b-b267-4e22-a282-8d736b00ebd2"),
+        Guid.Parse("63a09689-cc20-4436-8609-4ba8b4aeb034"),
+        Guid.Parse("57cc8224-b19a-44b3-ac8c-87e78d35b309"),
+        Guid.Parse("20cb6a67-b3ac-4505-8736-2a4c1edfb742"),
+        Guid.Parse("0e6cf194-dcfa-48d2-b91e-1c3d0334c782"),
+        Guid.Parse("f241d32f-d41c-46f1-90c2-8d61eb4b2aea")
     ];
     private static readonly Lazy<Task<CatalogData>> Catalog = new(() =>
         new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync());
@@ -133,7 +147,9 @@ public sealed class SwedenContentIntegrationTests
                 Assert.False(string.IsNullOrWhiteSpace(translation.Content));
                 var expectedTimestamp = entry.Id == StableArticleIds["SE-TP-01"]
                     ? RefreshedArticleTimestamp
-                    : ArticleTimestamp;
+                    : entry.Id == StableArticleIds["SE-EMP-02"]
+                        ? WorkAuthorizationArticleTimestamp
+                        : ArticleTimestamp;
                 Assert.Equal(expectedTimestamp, translation.LastUpdatedAt);
             });
         });
@@ -190,11 +206,13 @@ public sealed class SwedenContentIntegrationTests
             Assert.True(source.Url.IsAbsoluteUri);
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
             Assert.False(string.IsNullOrWhiteSpace(source.Title));
-            var expectedCheckedAt = ResidenceOptionsSourceIds.Contains(source.Id)
-                ? ResidenceOptionsSourceCheckTimestamp
-                : RefreshedSourceIds.Contains(source.Id)
-                    ? RefreshedSourceCheckTimestamp
-                    : SourceCheckTimestamp;
+            var expectedCheckedAt = WorkAuthorizationSourceIds.Contains(source.Id)
+                ? WorkAuthorizationSourceCheckTimestamp
+                : ResidenceOptionsSourceIds.Contains(source.Id)
+                    ? ResidenceOptionsSourceCheckTimestamp
+                    : RefreshedSourceIds.Contains(source.Id)
+                        ? RefreshedSourceCheckTimestamp
+                        : SourceCheckTimestamp;
             Assert.Equal(expectedCheckedAt, source.LastCheckedAt);
         });
 

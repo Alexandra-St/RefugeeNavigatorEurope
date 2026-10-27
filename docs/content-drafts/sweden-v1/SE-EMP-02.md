@@ -17,7 +17,7 @@ What a granted Swedish temporary-protection permit means for work, what written 
 Content:
 ## Work authorization
 
-A granted Swedish residence permit under the Temporary Protection Directive includes the right to work while that permit is valid, within its scope and conditions. A pending application or receipt is not the same as a granted permit. Check your own decision and card.
+If you are 16 or older, a granted Swedish residence permit under the Temporary Protection Directive gives you the right to work while that permit is valid, within its scope and conditions. A pending application or receipt is not the same as a granted permit. Check your own decision and card.
 
 ## Employer administration
 
@@ -73,7 +73,7 @@ Summary:
 Content:
 ## Дозвіл на роботу
 
-Наданий шведський дозвіл на проживання в межах Директиви про тимчасовий захист включає право на роботу протягом строку чинності дозволу, у межах його сфери дії та умов. Заява, що перебуває на розгляді, або квитанція про її подання не є наданим дозволом. Перевірте своє рішення та картку.
+Якщо вам виповнилося 16 років, наданий шведський дозвіл на проживання в межах Директиви про тимчасовий захист дає право на роботу протягом строку чинності дозволу, у межах його сфери дії та умов. Заява, що перебуває на розгляді, або квитанція про її подання не є наданим дозволом. Перевірте своє рішення та картку.
 
 ## Адміністративні обов’язки роботодавця
 
@@ -129,7 +129,7 @@ Summary:
 Content:
 ## Разрешение на работу
 
-Предоставленный шведский вид на жительство в рамках Директивы о временной защите включает право на работу в течение срока действия разрешения, в пределах его сферы действия и условий. Заявление на рассмотрении или квитанция о его подаче не являются предоставленным разрешением. Проверьте своё решение и карту.
+Если вам исполнилось 16 лет, выданный шведский вид на жительство в рамках Директивы о временной защите даёт право на работу в течение срока действия разрешения, в пределах его сферы действия и условий. Заявление на рассмотрении или квитанция о его подаче не являются предоставленным разрешением. Проверьте своё решение и карту.
 
 ## Административные обязанности работодателя
 
