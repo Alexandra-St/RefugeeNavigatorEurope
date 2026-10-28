@@ -85,7 +85,7 @@
             {
               "CountrySlug": "sweden",
               "InformationEntryId": "d2ab273d-21b7-44e4-b408-f4269a8753d8",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "e17f7ee0-b423-42b3-9c9c-280d33c54298",
@@ -199,7 +199,7 @@
             {
               "CountrySlug": "sweden",
               "InformationEntryId": "d2ab273d-21b7-44e4-b408-f4269a8753d8",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "e17f7ee0-b423-42b3-9c9c-280d33c54298",
@@ -312,7 +312,7 @@
             {
               "CountrySlug": "sweden",
               "InformationEntryId": "d2ab273d-21b7-44e4-b408-f4269a8753d8",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "62a4c75c-ef6f-4e14-8f74-74d188d0e858",
@@ -434,7 +434,7 @@
             {
               "CountrySlug": "sweden",
               "InformationEntryId": "befa7777-af70-4269-883c-8918961554dc",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "dc8c2eb8-2fdd-4e68-bec4-4fcf83456555",
@@ -546,7 +546,7 @@
             {
               "CountrySlug": "sweden",
               "InformationEntryId": "befa7777-af70-4269-883c-8918961554dc",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "b2602495-c681-4853-b69e-c173f70abdcd",
@@ -658,7 +658,7 @@
             {
               "CountrySlug": "sweden",
               "InformationEntryId": "befa7777-af70-4269-883c-8918961554dc",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "dc8c2eb8-2fdd-4e68-bec4-4fcf83456555",
@@ -770,7 +770,7 @@
             {
               "CountrySlug": "sweden",
               "InformationEntryId": "a218013b-3a77-4ba2-829a-d724689837f2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "4801dab3-29e2-446e-934f-3970ffa5f772",
@@ -879,7 +879,7 @@
             {
               "CountrySlug": "sweden",
               "InformationEntryId": "a218013b-3a77-4ba2-829a-d724689837f2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "3afb974c-1420-4905-aafb-c2b83c2fcfaf",
@@ -988,7 +988,7 @@
             {
               "CountrySlug": "sweden",
               "InformationEntryId": "a218013b-3a77-4ba2-829a-d724689837f2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "b4ecaf9b-6860-4896-a766-0adcc2c5ad4c"
@@ -1102,7 +1102,7 @@
             {
               "CountrySlug": "sweden",
               "InformationEntryId": "55949af5-b4fe-404e-bcb7-6ebb37131bab",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "1809031a-2cc5-49ae-b6ed-595c9a675b83"
@@ -1209,7 +1209,7 @@
             {
               "CountrySlug": "sweden",
               "InformationEntryId": "55949af5-b4fe-404e-bcb7-6ebb37131bab",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "78f75cc3-a5d4-497f-9d4a-de6999d8000c",
@@ -1317,7 +1317,7 @@
             {
               "CountrySlug": "sweden",
               "InformationEntryId": "55949af5-b4fe-404e-bcb7-6ebb37131bab",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "20cb6a67-b3ac-4505-8736-2a4c1edfb742"
@@ -1435,7 +1435,7 @@
             {
               "CountrySlug": "sweden",
               "InformationEntryId": "2234b91f-4021-40b2-b9d5-a029a6b533f2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "61666e4b-67f1-4ca3-894a-3717737eaf40",
@@ -1547,7 +1547,7 @@
             {
               "CountrySlug": "sweden",
               "InformationEntryId": "2234b91f-4021-40b2-b9d5-a029a6b533f2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "da69130e-5b7e-4087-b061-f4bea7c3d384",
@@ -1655,7 +1655,7 @@
             {
               "CountrySlug": "sweden",
               "InformationEntryId": "2234b91f-4021-40b2-b9d5-a029a6b533f2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "61666e4b-67f1-4ca3-894a-3717737eaf40",
@@ -1772,7 +1772,7 @@
             {
               "CountrySlug": "sweden",
               "InformationEntryId": "e0f307e9-7991-4350-89f4-2f84a9047393",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "48a66397-3f08-4dd6-83fd-be6273d70663",
@@ -1882,7 +1882,7 @@
             {
               "CountrySlug": "sweden",
               "InformationEntryId": "e0f307e9-7991-4350-89f4-2f84a9047393",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "9c5e8480-665c-4a96-8f6b-9a30757e2fa5",
@@ -1991,7 +1991,7 @@
             {
               "CountrySlug": "sweden",
               "InformationEntryId": "e0f307e9-7991-4350-89f4-2f84a9047393",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "48a66397-3f08-4dd6-83fd-be6273d70663"
@@ -2107,7 +2107,7 @@
             {
               "CountrySlug": "sweden",
               "InformationEntryId": "cac58c0c-ce69-41ac-877e-4fd124105b89",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "2bf43e8d-8479-47a7-b429-f2a41006e080",
@@ -2212,7 +2212,7 @@
             {
               "CountrySlug": "sweden",
               "InformationEntryId": "cac58c0c-ce69-41ac-877e-4fd124105b89",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "eb031d39-0478-479b-b1d4-116fb19c69d7",
@@ -2323,7 +2323,7 @@
             {
               "CountrySlug": "sweden",
               "InformationEntryId": "cac58c0c-ce69-41ac-877e-4fd124105b89",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "596cc524-ff1d-46d3-98b7-1c18262b0d86",
@@ -2445,7 +2445,7 @@
             {
               "CountrySlug": "sweden",
               "InformationEntryId": "8b5cc53a-9933-4366-8421-d795966267ec",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "c1ba3594-7cfc-4c92-abcb-c1819fdf63cd",
@@ -2559,7 +2559,7 @@
             {
               "CountrySlug": "sweden",
               "InformationEntryId": "8b5cc53a-9933-4366-8421-d795966267ec",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "beeb9ffe-a708-4570-80c0-959830014656",

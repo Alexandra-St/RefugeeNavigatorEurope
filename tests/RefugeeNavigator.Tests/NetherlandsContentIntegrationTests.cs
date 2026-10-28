@@ -131,8 +131,8 @@ public sealed class NetherlandsContentIntegrationTests
 
         Assert.Equal(56, catalog.InformationEntries.Count);
         Assert.Equal(168, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(141, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(27, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(165, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(3, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == NetherlandsId).ToArray();

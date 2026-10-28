@@ -167,7 +167,7 @@ public sealed class SwedenContentIntegrationTests
         "RefugeeNavigator.Web.Resources.Localization.SharedResource", typeof(SharedResource).Assembly);
 
     [Fact]
-    public async Task SwedenCatalogHasExpectedStableIdentityAndNeedsReviewTranslations()
+    public async Task SwedenCatalogHasExpectedStableIdentityAndVerifiedTranslations()
     {
         var catalog = await Catalog.Value;
         var country = Assert.Single(catalog.Countries, item => item.Slug == "sweden");
@@ -176,8 +176,8 @@ public sealed class SwedenContentIntegrationTests
         Assert.Equal(7, catalog.Countries.Count);
         Assert.Equal(56, catalog.InformationEntries.Count);
         Assert.Equal(168, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(141, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(27, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(165, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(3, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == SwedenId).ToArray();
@@ -190,7 +190,7 @@ public sealed class SwedenContentIntegrationTests
             Assert.Equal(Languages.Order(StringComparer.Ordinal).ToArray(), translations.Select(item => item.LanguageCode).Order(StringComparer.Ordinal).ToArray());
             Assert.All(translations, translation =>
             {
-                Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+                Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
                 Assert.False(string.IsNullOrWhiteSpace(translation.Title));
                 Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
                 Assert.False(string.IsNullOrWhiteSpace(translation.Content));
@@ -324,7 +324,7 @@ public sealed class SwedenContentIntegrationTests
     [InlineData("en")]
     [InlineData("uk")]
     [InlineData("ru")]
-    public async Task AllSixSwedenCategoryPagesRenderTheirNeedsReviewArticles(string language)
+    public async Task AllSixSwedenCategoryPagesRenderTheirVerifiedArticles(string language)
     {
         var catalog = await Catalog.Value;
         var entries = catalog.InformationEntries.Where(item => item.CountryId == SwedenId).ToArray();
@@ -343,7 +343,7 @@ public sealed class SwedenContentIntegrationTests
             {
                 var translation = Assert.Single(catalog.InformationEntryTranslations,
                     item => item.InformationEntryId == entry.Id && item.LanguageCode == language);
-                Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+                Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
                 Assert.Contains(translation.Title, html);
                 Assert.Contains(translation.Summary, html);
             }
@@ -357,24 +357,24 @@ public sealed class SwedenContentIntegrationTests
     [InlineData("en")]
     [InlineData("uk")]
     [InlineData("ru")]
-    public async Task SearchOffersSwedenFilterButDoesNotExposeNeedsReviewArticles(string language)
+    public async Task SearchOffersSwedenFilterAndFindsVerifiedArticles(string language)
     {
         var catalog = await Catalog.Value;
         var entries = catalog.InformationEntries.Where(item => item.CountryId == SwedenId).ToArray();
-        var noResults = Resources.GetString("Search.NoResults", CultureInfo.GetCultureInfo(language))!;
         var html = WebUtility.HtmlDecode(await RenderAsync<Search>(language, uri: "http://localhost/search?country=sweden"));
         Assert.Contains("value=\"sweden\"", html);
-        Assert.Contains(noResults, html);
+        Assert.Equal(8, Regex.Matches(html, "class=\"result-card\"").Count);
         foreach (var entry in entries)
         {
             var translation = Assert.Single(catalog.InformationEntryTranslations,
                 item => item.InformationEntryId == entry.Id && item.LanguageCode == language);
-            Assert.DoesNotContain(translation.Title, html);
+            Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
+            Assert.Contains(translation.Title, html);
         }
     }
 
     [Fact]
-    public async Task CountryComparisonMapsSwedenToAllEightNeedsReviewArticles()
+    public async Task CountryComparisonMapsSwedenToAllEightVerifiedArticles()
     {
         var catalog = await Catalog.Value;
         var facts = await new JsonComparisonFactProvider(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json"))
@@ -392,7 +392,7 @@ public sealed class SwedenContentIntegrationTests
             Assert.Equal(SwedenId, entry.CountryId);
             var translations = catalog.InformationEntryTranslations.Where(item => item.InformationEntryId == entryId).ToArray();
             Assert.Equal(3, translations.Length);
-            Assert.All(translations, translation => Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus));
+            Assert.All(translations, translation => Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus));
         }
 
         foreach (var (language, name) in new[] { ("en", "Sweden"), ("uk", "Швеція"), ("ru", "Швеция") })
