@@ -1,6 +1,6 @@
 # SE-EDU-01 — Sources and Claims
 
-Research date: **20 October 2026 (UTC)**. Research-only evidence matrix; not article copy, individual education advice, legal certification, or publication approval. Official pages were opened and reviewed on the research date; exact check times were not recorded. Where a page does not display an update date, that is stated below.
+Research date: **28 October 2026 (UTC)**. Research-only evidence matrix; not article copy, individual education advice, legal certification, or publication approval. The ten owned official pages were reopened on **28 October 2026**; exact catalog check time: **2026-10-28T10:34:41Z**. Where a page does not display an update date, that is stated below.
 
 ## Scope
 
@@ -8,7 +8,7 @@ Working title: **Education and Swedish-Language Learning in Sweden**. Category: 
 
 ## Official source inventory
 
-Research labels are article-local. Each URL is listed once in this matrix. All sources were checked on **20 October 2026**.
+Research labels are article-local. Each URL is listed once in this matrix. All ten owned sources were checked on **28 October 2026**.
 
 ### EDU-S01 — Education for people who have fled Ukraine
 - Authority/title: Swedish National Agency for Education (Skolverket), “Utbildning för personer som flytt från Ukraina”.
@@ -34,49 +34,49 @@ Research labels are article-local. Each URL is listed once in this matrix. All s
 ### EDU-S04 — Swedish for Immigrants (SFI)
 - Authority/title: Skolverket, “Rätt till sfi”.
 - URL: https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/ratt-till-sfi
-- Page says its information was updated for changes effective **1 January 2026**; it also flags new SFI course structure from **1 January 2027**.
+- Page says its information was updated for rules effective **1 January 2026** and flags the new SFI course structure. The linked Skolverket implementation page confirms that the new curricula entered into force on **15 August 2026**, but apply to courses starting after **31 December 2026**; older curricula continue to apply to courses started before **1 January 2027**. The implementation page was also opened for this refresh; it is supplemental guidance, not an additional article-owned source record.
 - Relevant sections: general SFI age and eligibility; TPD-specific conditions; municipal responsibility; time limits.
 - Role: current SFI conditions and upcoming course-structure change; claims SE-EDU01-10–11.
 
 ### EDU-S05 — Education Act
 - Authority/title: Swedish Parliament, Education Act (2010:800), current consolidated text.
 - URL: https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skollag-2010800_sfs-2010-800/
-- Current text checked **20 October 2026**; the Skolverket Ukraine page identifies relevant current provisions, including changes effective in 2026.
+- Current consolidated text checked **28 October 2026**; the Skolverket Ukraine page identifies relevant current provisions, including changes effective in 2026.
 - Relevant sections: Chapters 7–10, 15–17, 20 and 29 as cited by Skolverket.
 - Role: primary legal basis underlying TPD school, SFI and komvux distinctions; claims SE-EDU01-01–02, 10–11.
 
 ### EDU-S06 — Higher-education entry requirements
 - Authority/title: University Admissions in Sweden, “Entry requirements”.
 - URL: https://www.universityadmissions.se/en/support-centre/entry-requirements/
-- Update date not displayed. Checked **20 October 2026**.
+- Update date not displayed. Checked **28 October 2026**.
 - Relevant sections: general and programme-specific requirements; English-language evidence; admission review.
 - Role: admissions route and no-guarantee boundary; claim SE-EDU01-12.
 
 ### EDU-S07 — Sweden bachelor’s application documents
 - Authority/title: University Admissions in Sweden, “Sweden, bachelor’s admission”.
 - URL: https://www.universityadmissions.se/en/apply-to-bachelors/provide-application-documents-bachelors/country-instructions/sweden/
-- Page says last updated **6 October 2026**.
+- Page says last updated **6 October 2026**; reopened and checked **28 October 2026**.
 - Relevant sections: international qualification documentation and application route; Antagning.se/UniversityAdmissions division by programme language.
 - Role: document and application navigation; claim SE-EDU01-12.
 
 ### EDU-S08 — Application and tuition fee rules
 - Authority/title: Swedish Council for Higher Education (UHR), Ordinance (2010:543) on application fees and tuition fees at higher education institutions, current text.
 - URL: https://www.uhr.se/en/start/laws-and-regulations/Laws-and-regulations/Ordinance-on-application-fees-and-tuition-fees-at-higher-education-institutions/
-- Current text checked **20 October 2026**. Section 2 reflects Ordinance 2026:1719 effective **1 October 2026**.
+- Current text checked **28 October 2026**. Section 2 reflects Ordinance 2026:1719 effective **1 October 2026**; the current text retains the general non-study temporary-permit exemption and its stated family-member exception.
 - Relevant sections: §2(4) and corresponding tuition-fee exemption provisions.
 - Role: residence-permit-based fee exemption; claim SE-EDU01-13.
 
 ### EDU-S09 — Fee exemption and documentation
 - Authority/title: University Admissions in Sweden, “Who is required to pay fees?”
 - URL: https://www.universityadmissions.se/en/fees-scholarships-residence-permit/who-is-required-to-pay-fees/
-- Update date not displayed. Checked **20 October 2026**.
+- Update date not displayed. Checked **28 October 2026**. Current guidance explains ordinary proof checks and a term-limited fee exception for certain family members of students for autumn 2026/spring 2027.
 - Relevant sections: temporary Swedish residence permit for reasons other than studies; evidence and documentation route.
 - Role: administrative fee-exemption instructions; claim SE-EDU01-13.
 
 ### EDU-S10 — UHR recognition process
 - Authority/title: UHR, “The recognition process”.
 - URL: https://uhr.se/en/start/recognition-of-foreign-qualifications/enic-naric-sweden/the-recognition-process/
-- Page says last updated **11 September 2026**.
+- Page says last updated **11 September 2026**; reopened and checked **28 October 2026**.
 - Relevant sections: assessment of completed foreign qualifications, documentation, recognition statement and its limits.
 - Role: foreign-qualification evaluation boundary; claim SE-EDU01-14.
 
@@ -102,8 +102,8 @@ Research labels are article-local. Each URL is listed once in this matrix. All s
 ## Conflicts / stale-source notes
 
 - Skolverket’s current Ukraine-specific guidance is more precise than a generic assumption that school rights and compulsory duty are identical: registration eligibility controls that distinction. Use its dated guidance and the cited Education Act provisions.
-- The SFI page says the information reflects rules effective **1 January 2026** and separately flags new course structure effective **1 January 2027**. Any future article release must recheck the operational SFI rules and transition provisions.
-- The fee rule was materially amended effective **1 October 2026**. Do not reuse older emergency-period Ukraine statements; use the current ordinance and verify permit proof/exception handling before publication.
+- **SFI refresh (28 October 2026):** current eligibility guidance still distinguishes temporary-protection holders who are or should be population-registered from those who are not and should not be; the latter have no statutory SFI/komvux right, though the municipality may allow SFI from the second half-year of the year the person turns 18 under the stated conditions. The new course curricula entered into force on 15 August 2026 but apply only to courses starting after 31 December 2026; the older curricula remain applicable to courses already started. The article correctly describes the change as future as of this review and advises readers to recheck after the date. No transitional wording correction is needed in the article.
+- **Higher-education fee refresh (28 October 2026):** the current consolidated ordinance includes SFS 2026:1719, effective 1 October 2026. A temporary Swedish residence permit for reasons other than studies generally exempts the holder from application and tuition fees, subject to the ordinance’s family-member exception and proof/administrative rules. University Admissions also lists a limited family-member exception for autumn 2026/spring 2027. The article’s qualified, non-Ukraine-specific wording remains accurate; it does not imply an automatic exemption.
 - No material contradiction with the accepted Phase 17.1A or 17.1B claims was identified. Education rights, residence registration, healthcare, and social-insurance status remain separate legal domains.
 
 ## Publication blockers / boundaries
@@ -125,4 +125,8 @@ Research labels are article-local. Each URL is listed once in this matrix. All s
 
 ## Article-safety boundary
 
-Keep “education right” distinct from “compulsory-school duty”; school reception distinct from a chosen-school guarantee; language support distinct from universal hours; SFI distinct from non-formal or employment-programme Swedish; folkbokföring distinct from immigration status and from social-insurance “bosatt”; UHR qualification evaluation distinct from licensing/admission; and fee exemption distinct from admission. Recheck SFI changes, fee law, admission instructions and source dates before drafting or publication.
+Keep “education right” distinct from “compulsory-school duty”; school reception distinct from a chosen-school guarantee; language support distinct from universal hours; SFI distinct from non-formal or employment-programme Swedish; folkbokföring distinct from immigration status and from social-insurance “bosatt”; UHR qualification evaluation distinct from licensing/admission; and fee exemption distinct from admission. Recheck SFI implementation, fee law, admission instructions and source dates before publication.
+
+## Focused source refresh — 28 October 2026
+
+**READY FOR HUMAN ACCEPTANCE.** All ten owned official pages in this matrix were reopened. The existing school-rights, municipal-responsibility, placement, mother-tongue support, admission, foreign-qualification evaluation, and fee claims remain supported within their stated cohort and individual-decision caveats. Skolverket’s current SFI page confirms the existing eligibility distinction and municipal discretion. Its linked implementation page says the new SFI curricula entered into force on 15 August 2026 but apply to courses begun after 31 December 2026; earlier-started courses remain under the old curricula. The fee ordinance’s current consolidated text includes SFS 2026:1719 effective 1 October 2026; University Admissions confirms the non-study permit exemption, documentation route, and term-limited family-member exception. The article and three Draft facts were not changed. Translations remain `NeedsReview`, facts remain `Draft`, and Sweden remains hidden in Production. Individual municipal implementation, course availability, programme admission, and permit-proof decisions remain case-specific.

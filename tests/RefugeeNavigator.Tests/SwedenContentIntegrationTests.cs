@@ -78,6 +78,7 @@ public sealed class SwedenContentIntegrationTests
     private static readonly DateTimeOffset HealthcareSourceCheckTimestamp = new(2026, 10, 28, 0, 15, 43, TimeSpan.Zero);
     private static readonly DateTimeOffset HousingArticleTimestamp = new(2026, 10, 28, 0, 33, 37, TimeSpan.Zero);
     private static readonly DateTimeOffset HousingSourceCheckTimestamp = new(2026, 10, 28, 0, 33, 37, TimeSpan.Zero);
+    private static readonly DateTimeOffset EducationSourceCheckTimestamp = new(2026, 10, 28, 10, 34, 41, TimeSpan.Zero);
     private static readonly HashSet<Guid> RefreshedSourceIds =
     [
         Guid.Parse("62a4c75c-ef6f-4e14-8f74-74d188d0e858"),
@@ -133,6 +134,19 @@ public sealed class SwedenContentIntegrationTests
         Guid.Parse("a58836ea-fb10-49c5-a233-558a004fc880"),
         Guid.Parse("5cb5eec5-c490-4588-992e-5ad516483f12"),
         Guid.Parse("15871cb1-c621-4275-ab06-ed2e6d2fdf32")
+    ];
+    private static readonly HashSet<Guid> EducationSourceIds =
+    [
+        Guid.Parse("2bf43e8d-8479-47a7-b429-f2a41006e080"),
+        Guid.Parse("eb031d39-0478-479b-b1d4-116fb19c69d7"),
+        Guid.Parse("5acde4f0-9f59-4712-a5ee-8c557c0184af"),
+        Guid.Parse("f549fba3-6194-4e4c-886c-c77d6d419c77"),
+        Guid.Parse("69d9a99d-446a-48c2-a7c7-f2fdba39433d"),
+        Guid.Parse("596cc524-ff1d-46d3-98b7-1c18262b0d86"),
+        Guid.Parse("3e123ec8-d1d8-4685-ad4d-1a4f238d0e75"),
+        Guid.Parse("c8d6a8e9-0512-4933-b223-2ea0e685b0d7"),
+        Guid.Parse("9b90dd74-5ac0-46ae-8a03-8a864fa59844"),
+        Guid.Parse("091fbf01-e458-4e47-8e5b-18854fa2888e")
     ];
     private static readonly Lazy<Task<CatalogData>> Catalog = new(() =>
         new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync());
@@ -232,15 +246,17 @@ public sealed class SwedenContentIntegrationTests
             Assert.False(string.IsNullOrWhiteSpace(source.Title));
             var expectedCheckedAt = HousingSourceIds.Contains(source.Id)
                 ? HousingSourceCheckTimestamp
-                : WorkAuthorizationSourceIds.Contains(source.Id)
-                ? WorkAuthorizationSourceCheckTimestamp
-                : ResidenceOptionsSourceIds.Contains(source.Id)
-                    ? ResidenceOptionsSourceCheckTimestamp
-                    : HealthcareSourceIds.Contains(source.Id)
-                        ? HealthcareSourceCheckTimestamp
-                        : RefreshedSourceIds.Contains(source.Id)
-                            ? RefreshedSourceCheckTimestamp
-                            : SourceCheckTimestamp;
+                : EducationSourceIds.Contains(source.Id)
+                    ? EducationSourceCheckTimestamp
+                    : WorkAuthorizationSourceIds.Contains(source.Id)
+                        ? WorkAuthorizationSourceCheckTimestamp
+                        : ResidenceOptionsSourceIds.Contains(source.Id)
+                            ? ResidenceOptionsSourceCheckTimestamp
+                            : HealthcareSourceIds.Contains(source.Id)
+                                ? HealthcareSourceCheckTimestamp
+                                : RefreshedSourceIds.Contains(source.Id)
+                                    ? RefreshedSourceCheckTimestamp
+                                    : SourceCheckTimestamp;
             Assert.Equal(expectedCheckedAt, source.LastCheckedAt);
         });
 
