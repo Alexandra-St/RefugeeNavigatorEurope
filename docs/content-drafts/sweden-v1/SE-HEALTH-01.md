@@ -53,10 +53,10 @@ Under the special rule for people covered by Act 2024:691, population registrati
 
 ## Editorial exclusions
 
-- SE-HEALTH01-06 — The four-week notification/identity-appointment procedure is operational and should be checked against current Skatteverket instructions before publication.
+- SE-HEALTH01-06 — The four-week notification window and identity-check appointment were rechecked against current Skatteverket instructions on 28 October 2026. The four weeks are for submitting the notification, not for processing.
 - SE-HEALTH01-07 — Detailed residence-based social-insurance rules are outside this healthcare overview.
 - SE-HEALTH01-08 — The conflicting Försäkringskassan English summary and work-based benefit rules are excluded; they do not establish the population-registration test or healthcare entitlement.
-- The date-specific guidance for first permits granted on or after 5 September 2026 is omitted from the main reader-facing rule and requires a publication-time check.
+- The date-specific guidance for first permits granted on or after 5 September 2026 is omitted from the main reader-facing rule. It was rechecked on 28 October 2026 and remains tied to the current 4 March 2028 endpoint; verify again if the endpoint changes before publication.
 
 ## UK
 

@@ -75,6 +75,7 @@ public sealed class SwedenContentIntegrationTests
     private static readonly DateTimeOffset ResidenceOptionsSourceCheckTimestamp = new(2026, 10, 27, 23, 44, 37, TimeSpan.Zero);
     private static readonly DateTimeOffset WorkAuthorizationArticleTimestamp = new(2026, 10, 27, 23, 54, 27, TimeSpan.Zero);
     private static readonly DateTimeOffset WorkAuthorizationSourceCheckTimestamp = new(2026, 10, 27, 23, 54, 27, TimeSpan.Zero);
+    private static readonly DateTimeOffset HealthcareSourceCheckTimestamp = new(2026, 10, 28, 0, 15, 43, TimeSpan.Zero);
     private static readonly HashSet<Guid> RefreshedSourceIds =
     [
         Guid.Parse("62a4c75c-ef6f-4e14-8f74-74d188d0e858"),
@@ -111,6 +112,15 @@ public sealed class SwedenContentIntegrationTests
         Guid.Parse("20cb6a67-b3ac-4505-8736-2a4c1edfb742"),
         Guid.Parse("0e6cf194-dcfa-48d2-b91e-1c3d0334c782"),
         Guid.Parse("f241d32f-d41c-46f1-90c2-8d61eb4b2aea")
+    ];
+    private static readonly HashSet<Guid> HealthcareSourceIds =
+    [
+        Guid.Parse("61666e4b-67f1-4ca3-894a-3717737eaf40"),
+        Guid.Parse("3b0a97d1-884f-49ac-b3a2-5571780a342d"),
+        Guid.Parse("da69130e-5b7e-4087-b061-f4bea7c3d384"),
+        Guid.Parse("4f474221-b476-49e3-a66b-7651d6ae9a2f"),
+        Guid.Parse("d9f29509-b6d8-4df9-ae03-15e8b176c741"),
+        Guid.Parse("275c1c14-3caa-4343-aa7e-67689edfa9bb")
     ];
     private static readonly Lazy<Task<CatalogData>> Catalog = new(() =>
         new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync());
@@ -210,9 +220,11 @@ public sealed class SwedenContentIntegrationTests
                 ? WorkAuthorizationSourceCheckTimestamp
                 : ResidenceOptionsSourceIds.Contains(source.Id)
                     ? ResidenceOptionsSourceCheckTimestamp
-                    : RefreshedSourceIds.Contains(source.Id)
-                        ? RefreshedSourceCheckTimestamp
-                        : SourceCheckTimestamp;
+                    : HealthcareSourceIds.Contains(source.Id)
+                        ? HealthcareSourceCheckTimestamp
+                        : RefreshedSourceIds.Contains(source.Id)
+                            ? RefreshedSourceCheckTimestamp
+                            : SourceCheckTimestamp;
             Assert.Equal(expectedCheckedAt, source.LastCheckedAt);
         });
 
