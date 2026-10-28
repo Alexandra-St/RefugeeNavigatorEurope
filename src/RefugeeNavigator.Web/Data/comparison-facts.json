@@ -1775,12 +1775,13 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "48a66397-3f08-4dd6-83fd-be6273d70663"
+                "48a66397-3f08-4dd6-83fd-be6273d70663",
+                "15871cb1-c621-4275-ab06-ed2e6d2fdf32"
               ],
               "Values": {
-                "en": "A person covered by the Migration Agency’s guidance may arrange housing independently or ask about Agency accommodation. If population-registered, the person is responsible for arranging their own housing; if someone lacks their own accommodation, an Agency offer may depend on available places and can be in another municipality. No particular location or accommodation offer is guaranteed.",
-                "uk": "Людина, на яку поширюються рекомендації Міграційного агентства, може самостійно організувати житло або звернутися щодо житла від агентства. Після реєстрації населення людина відповідає за власне житло; якщо людина не має власного житла, пропозиція агентства залежить від наявності місць і може бути в іншому муніципалітеті. Конкретне місце чи надання житла не гарантуються.",
-                "ru": "Человек, на которого распространяются рекомендации Миграционного агентства, может самостоятельно организовать жильё или обратиться по поводу жилья от агентства. После регистрации населения человек отвечает за собственное жильё; если у человека нет собственного жилья, предложение агентства зависит от наличия мест и может быть в другом муниципалитете. Конкретное место или предоставление жилья не гарантируются."
+                "en": "A person covered by Sweden’s Reception Act has a right to a place in reception accommodation; the Migration Agency must offer a place or assign a municipality to arrange it. The Agency assigns accommodation where places are available, so the person cannot choose the location and may be placed in another municipality. Population registration changes responsibility for arranging accommodation.",
+                "uk": "Людина, на яку поширюється Закон Швеції про прийом, має право на місце в житлі для прийому; Міграційне агентство має запропонувати місце або направити муніципалітет для організації житла. Агентство розміщує людей там, де є місця, тому людина не може обрати місце й може опинитися в іншому муніципалітеті. Після реєстрації населення відповідальність за облаштування житла змінюється.",
+                "ru": "Человек, на которого распространяется Закон Швеции о приёме, имеет право на место в жилье для приёма; Миграционное агентство должно предложить место или направить муниципалитет для организации жилья. Агентство размещает людей там, где есть места, поэтому человек не может выбрать место и может быть размещён в другом муниципалитете. После регистрации населения ответственность за организацию жилья меняется."
               }
             },
             {

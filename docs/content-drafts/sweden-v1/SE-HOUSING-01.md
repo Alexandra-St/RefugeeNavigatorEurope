@@ -12,12 +12,12 @@ Title:
 Finding Accommodation in Sweden
 
 Summary:
-Compare arranging your own accommodation with asking the Swedish Migration Agency about a possible temporary offer, and learn why private-rental rules depend on the type of letting.
+Learn how reception accommodation works for people covered by Sweden’s Reception Act, and why private-rental rules depend on the type of letting.
 
 Content:
 ## Choose how to arrange accommodation
 
-People covered by the Migration Agency’s temporary-protection accommodation guidance may arrange their own accommodation or ask the Agency about accommodation it may be able to offer. If you are population-registered, you are responsible for arranging your own accommodation. Population registration is an administrative status and is not the same as your immigration status.
+People covered by Sweden’s Reception Act may arrange their own accommodation or ask the Swedish Migration Agency about reception accommodation. If you are population-registered, you are responsible for arranging your own accommodation. Population registration is an administrative status and is not the same as your immigration status.
 
 ## If you arrange your own accommodation
 
@@ -25,7 +25,7 @@ You pay your own housing costs. You must also notify the Migration Agency of you
 
 ## If you need Migration Agency accommodation
 
-If you do not have your own accommodation, the Agency can offer temporary accommodation when places are available. An offer is not guaranteed, you cannot choose the location, and you may be assigned to another municipality. The Agency says an offer may take up to a month, but this is not a guaranteed waiting time; availability and individual circumstances matter. Ask the Agency about the current process.
+If you are covered by the Reception Act, you have a right to a place in reception accommodation. The Migration Agency must offer you a place or assign a municipality to arrange your accommodation. You cannot choose the location, and you may be placed in another municipality. The Agency says it may take up to a month before it makes an offer; this is not a guaranteed waiting time. Ask the Agency about the current process.
 
 ## Reception rules for people with temporary protection
 
@@ -47,7 +47,8 @@ Separate rules may apply when renting a home from a private individual. Some dis
 
 - Accommodation choices and responsibility after registration → SE-HOUSING01-01
 - Own costs and address notification → SE-HOUSING01-02
-- Conditional Agency offer, location, availability and qualified timing → SE-HOUSING01-03
+- Statutory accommodation right and Agency duty, subject to Reception Act coverage → SE-HOUSING01-03
+- Location and qualified timing → SE-HOUSING01-08
 - Reception Act distinction for TPD holders from Ukraine → SE-HOUSING01-04
 - Different private-rental forms → SE-HOUSING01-05
 - Second-hand apartment rent and applicable review route → SE-HOUSING01-06
@@ -55,7 +56,7 @@ Separate rules may apply when renting a home from a private individual. Some dis
 
 ## Editorial exclusions
 
-- No guaranteed accommodation, chosen location, municipality placement, indefinite Agency housing, fixed waiting time or rent reimbursement is promised.
+- The statutory right is limited to people covered by the Reception Act; no chosen location, specific municipality, accommodation type, fixed waiting time, indefinite Agency housing or rent reimbursement is promised.
 - No nationwide deposit amount, deposit cap or universal rent formula is stated.
 - The Reception Act distinction is not presented as a rule about private-tenancy rights.
 - This draft does not provide individualized tenancy advice or determine which rental regime applies to a particular home.
@@ -66,12 +67,12 @@ Title:
 Пошук житла у Швеції
 
 Summary:
-Порівняйте самостійний пошук житла з можливістю звернутися до Міграційного агентства Швеції щодо тимчасового житла та дізнайтеся, чому правила приватної оренди залежать від виду найму.
+Дізнайтеся, як працює житло для людей, на яких поширюється Закон Швеції про прийом, і чому правила приватної оренди залежать від виду найму.
 
 Content:
 ## Оберіть спосіб пошуку житла
 
-Люди, на яких поширюються правила Міграційного агентства щодо житла для осіб із тимчасовим захистом, можуть шукати житло самостійно або запитати Агентство про можливість тимчасового розміщення. Якщо ви зареєстровані в реєстрі населення, ви відповідаєте за самостійне облаштування житла. Реєстрація в реєстрі населення є адміністративним статусом і не тотожна імміграційному статусу.
+Люди, на яких поширюється Закон Швеції про прийом, можуть шукати житло самостійно або звернутися до Міграційного агентства Швеції щодо житла для прийому. Якщо ви зареєстровані в реєстрі населення, ви відповідаєте за самостійне облаштування житла. Реєстрація в реєстрі населення є адміністративним статусом і не тотожна імміграційному статусу.
 
 ## Якщо ви шукаєте житло самостійно
 
@@ -79,7 +80,7 @@ Content:
 
 ## Якщо вам потрібне житло від Міграційного агентства
 
-Якщо у вас немає власного житла, Агентство може запропонувати тимчасове розміщення за наявності місць. Така пропозиція не гарантована, обрати місце не можна, а вас можуть направити до іншого муніципалітету. Агентство зазначає, що очікування на пропозицію може тривати до місяця, але це не гарантований строк; мають значення наявність місць та індивідуальні обставини. Запитайте Агентство про актуальну процедуру.
+Якщо на вас поширюється Закон про прийом, ви маєте право на місце в житлі для прийому. Міграційне агентство має запропонувати вам місце або направити муніципалітет для організації житла. Ви не можете обрати місце, а вас можуть розмістити в іншому муніципалітеті. Агентство зазначає, що до отримання пропозиції може минути до місяця; це не гарантований строк очікування. Запитайте Агентство про актуальну процедуру.
 
 ## Правила прийому для людей із тимчасовим захистом
 
@@ -101,7 +102,8 @@ Content:
 
 - Варіанти житла та відповідальність після реєстрації → SE-HOUSING01-01
 - Власні витрати та повідомлення адреси → SE-HOUSING01-02
-- Умовна пропозиція Агентства, місце, наявність і орієнтовний строк → SE-HOUSING01-03
+- Законне право на житло та обов’язок Агентства за умови поширення Закону про прийом → SE-HOUSING01-03
+- Місце й орієнтовний строк → SE-HOUSING01-08
 - Розмежування за Законом про прийом для людей з України з тимчасовим захистом → SE-HOUSING01-04
 - Різні види приватної оренди → SE-HOUSING01-05
 - Оренда квартири у суборенду та відповідний порядок перегляду → SE-HOUSING01-06
@@ -109,7 +111,7 @@ Content:
 
 ## Editorial exclusions
 
-- Не обіцяються гарантоване житло, вибір місця, розміщення в конкретному муніципалітеті, безстрокове житло від Агентства, фіксований строк очікування чи відшкодування оренди.
+- Законне право обмежене людьми, на яких поширюється Закон про прийом; не обіцяються вибір місця, конкретний муніципалітет, тип житла, фіксований строк очікування, безстрокове житло від Агентства чи відшкодування оренди.
 - Не зазначаються загальнонаціональна сума застави, її граничний розмір або універсальна формула орендної плати.
 - Розмежування за Законом про прийом не подається як правило про права у сфері приватної оренди.
 - Чернетка не є індивідуальною консультацією та не визначає режим оренди для конкретного житла.
@@ -120,12 +122,12 @@ Title:
 Поиск жилья в Швеции
 
 Summary:
-Сравните самостоятельный поиск жилья с возможностью обратиться в Миграционное агентство Швеции по поводу временного размещения и узнайте, почему правила частной аренды зависят от вида найма.
+Узнайте, как устроено жильё для людей, на которых распространяется Закон Швеции о приёме, и почему правила частной аренды зависят от вида найма.
 
 Content:
 ## Выберите способ найти жильё
 
-Люди, на которых распространяются правила Миграционного агентства о жилье для лиц с временной защитой, могут искать жильё самостоятельно или спросить Агентство о возможности временного размещения. Если вы зарегистрированы в реестре населения, вы сами отвечаете за организацию своего жилья. Регистрация в реестре населения — административный статус, не тождественный иммиграционному статусу.
+Люди, на которых распространяется Закон Швеции о приёме, могут искать жильё самостоятельно или обратиться в Миграционное агентство Швеции по поводу жилья для приёма. Если вы зарегистрированы в реестре населения, вы сами отвечаете за организацию своего жилья. Регистрация в реестре населения — административный статус, не тождественный иммиграционному статусу.
 
 ## Если вы ищете жильё самостоятельно
 
@@ -133,7 +135,7 @@ Content:
 
 ## Если вам необходимо жильё от Миграционного агентства
 
-Если у вас нет собственного жилья, Агентство может предложить временное размещение при наличии мест. Такое предложение не гарантировано, выбрать место нельзя, а вас могут направить в другой муниципалитет. Агентство указывает, что предложение может занять до месяца, но это не гарантированный срок ожидания; имеют значение наличие мест и обстоятельства конкретного человека. Уточните у Агентства действующий порядок.
+Если на вас распространяется Закон о приёме, вы имеете право на место в жилье для приёма. Миграционное агентство должно предложить вам место или направить муниципалитет для организации жилья. Вы не можете выбрать место, а вас могут разместить в другом муниципалитете. Агентство указывает, что до предложения может пройти до месяца; это не гарантированный срок ожидания. Уточните у Агентства действующий порядок.
 
 ## Правила приёма для людей с временной защитой
 
@@ -155,7 +157,8 @@ Content:
 
 - Варианты жилья и ответственность после регистрации → SE-HOUSING01-01
 - Собственные расходы и уведомление об адресе → SE-HOUSING01-02
-- Условное предложение Агентства, место, наличие и ориентировочный срок → SE-HOUSING01-03
+- Законное право на жильё и обязанность Агентства при условии действия Закона о приёме → SE-HOUSING01-03
+- Место и ориентировочный срок → SE-HOUSING01-08
 - Различие по Закону о приёме для людей из Украины с временной защитой → SE-HOUSING01-04
 - Разные виды частной аренды → SE-HOUSING01-05
 - Вторичная аренда квартиры и применимый порядок пересмотра → SE-HOUSING01-06
@@ -163,11 +166,11 @@ Content:
 
 ## Editorial exclusions
 
-- Не обещаются гарантированное жильё, выбор места, размещение в конкретном муниципалитете, бессрочное жильё от Агентства, фиксированный срок ожидания или возмещение аренды.
+- Законное право ограничено людьми, на которых распространяется Закон о приёме; не обещаются выбор места, конкретный муниципалитет, тип жилья, фиксированный срок ожидания, бессрочное жильё от Агентства или возмещение аренды.
 - Не указываются общенациональная сумма залога, его предельный размер или универсальная формула арендной платы.
 - Различие по Закону о приёме не представлено как правило о правах в сфере частной аренды.
 - Черновик не является индивидуальной консультацией и не определяет режим аренды для конкретного жилья.
 
 ## Editorial source set
 
-HOUSE-S01, HOUSE-S02, HOUSE-S03, HOUSE-S04, HOUSE-S05, HOUSE-S06
+HOUSE-S01, HOUSE-S02, HOUSE-S03, HOUSE-S04, HOUSE-S05, HOUSE-S06, HOUSE-S07

@@ -2678,42 +2678,42 @@
     "InformationEntryId": "e0f307e9-7991-4350-89f4-2f84a9047393",
     "Title": "Swedish Migration Agency, Accommodation for people with residence permits under the Temporary Protection Directive.",
     "Url": "https://www.migrationsverket.se/en/you-have-a-permit-in-sweden/protection-under-the-temporary-protection-directive/accommodation.html",
-    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+    "LastCheckedAt": "2026-10-28T00:33:37+00:00"
   },
   {
     "Id": "90a45dd7-4cbd-4b8c-bd43-1255df682a22",
     "InformationEntryId": "e0f307e9-7991-4350-89f4-2f84a9047393",
     "Title": "Swedish Migration Agency, New Reception Act comes into force on 1 October.",
     "Url": "https://www.migrationsverket.se/en/news-archive/news/2026-10-01-new-reception-act-comes-into-force-on-1-october.html",
-    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+    "LastCheckedAt": "2026-10-28T00:33:37+00:00"
   },
   {
     "Id": "f8308a50-caa9-4628-9a6e-9b8311020dc5",
     "InformationEntryId": "e0f307e9-7991-4350-89f4-2f84a9047393",
     "Title": "Swedish Consumer Agency (Konsumentverket), Rights as a tenant.",
     "Url": "https://www.konsumentverket.se/varor-och-tjanster/rattigheter-som-hyresgast/",
-    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+    "LastCheckedAt": "2026-10-28T00:33:37+00:00"
   },
   {
     "Id": "9c5e8480-665c-4a96-8f6b-9a30757e2fa5",
     "InformationEntryId": "e0f307e9-7991-4350-89f4-2f84a9047393",
     "Title": "Konsumentverket, Renting an apartment second-hand.",
     "Url": "https://www.konsumentverket.se/varor-och-tjanster/hyra-hyreslagenhet-i-andra-hand/",
-    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+    "LastCheckedAt": "2026-10-28T00:33:37+00:00"
   },
   {
     "Id": "a58836ea-fb10-49c5-a233-558a004fc880",
     "InformationEntryId": "e0f307e9-7991-4350-89f4-2f84a9047393",
     "Title": "Konsumentverket, Renting a home from a private individual.",
     "Url": "https://www.konsumentverket.se/varor-och-tjanster/hyra-bostad-av-privatperson/",
-    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+    "LastCheckedAt": "2026-10-28T00:33:37+00:00"
   },
   {
     "Id": "5cb5eec5-c490-4588-992e-5ad516483f12",
     "InformationEntryId": "e0f307e9-7991-4350-89f4-2f84a9047393",
     "Title": "Swedish Courts, Rent, housing cooperatives and land leases — how it works.",
     "Url": "https://www.domstol.se/amnen/hyra-bostadsratt-och-arrende/sa-gar-det-till/",
-    "LastCheckedAt": "2026-10-20T14:04:15+00:00"
+    "LastCheckedAt": "2026-10-28T00:33:37+00:00"
   },
   {
     "Id": "2bf43e8d-8479-47a7-b429-f2a41006e080",
@@ -3239,5 +3239,12 @@
     "Title": "Dienst Toeslagen, I have children up to the age of 18",
     "Url": "https://www.belastingdienst.nl/wps/wcm/connect/bldcontenten/belastingdienst/individuals/benefits/moving_to_the_netherlands/i_have_children_up_to_the_age_of_18/",
     "LastCheckedAt": "2026-10-20T00:00:00+00:00"
+  },
+  {
+    "Id": "15871cb1-c621-4275-ab06-ed2e6d2fdf32",
+    "InformationEntryId": "e0f307e9-7991-4350-89f4-2f84a9047393",
+    "Title": "Swedish Parliament, Reception Act (2026:999), current consolidated text.",
+    "Url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/mottagandelag-2026999_sfs-2026-999/",
+    "LastCheckedAt": "2026-10-28T00:33:37+00:00"
   }
 ]

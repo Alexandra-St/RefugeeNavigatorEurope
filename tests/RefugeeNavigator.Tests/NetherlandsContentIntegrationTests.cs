@@ -286,7 +286,7 @@ public sealed class NetherlandsContentIntegrationTests
         var sources = catalog.OfficialSources.Where(item => entryIds.Contains(item.InformationEntryId)).ToArray();
 
         Assert.Equal(56, sources.Length);
-        Assert.Equal(463, catalog.OfficialSources.Count);
+        Assert.Equal(464, catalog.OfficialSources.Count);
         Assert.Equal(42, sources.Select(item => item.Url.AbsoluteUri).Distinct(StringComparer.OrdinalIgnoreCase).Count());
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         Assert.All(sources, source =>

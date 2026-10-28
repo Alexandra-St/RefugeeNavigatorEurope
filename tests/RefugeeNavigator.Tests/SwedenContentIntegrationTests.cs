@@ -48,7 +48,7 @@ public sealed class SwedenContentIntegrationTests
         ["SE-EMP-01"] = 7,
         ["SE-EMP-02"] = 9,
         ["SE-HEALTH-01"] = 6,
-        ["SE-HOUSING-01"] = 6,
+        ["SE-HOUSING-01"] = 7,
         ["SE-EDU-01"] = 10,
         ["SE-SOC-01"] = 9,
     };
@@ -76,6 +76,8 @@ public sealed class SwedenContentIntegrationTests
     private static readonly DateTimeOffset WorkAuthorizationArticleTimestamp = new(2026, 10, 27, 23, 54, 27, TimeSpan.Zero);
     private static readonly DateTimeOffset WorkAuthorizationSourceCheckTimestamp = new(2026, 10, 27, 23, 54, 27, TimeSpan.Zero);
     private static readonly DateTimeOffset HealthcareSourceCheckTimestamp = new(2026, 10, 28, 0, 15, 43, TimeSpan.Zero);
+    private static readonly DateTimeOffset HousingArticleTimestamp = new(2026, 10, 28, 0, 33, 37, TimeSpan.Zero);
+    private static readonly DateTimeOffset HousingSourceCheckTimestamp = new(2026, 10, 28, 0, 33, 37, TimeSpan.Zero);
     private static readonly HashSet<Guid> RefreshedSourceIds =
     [
         Guid.Parse("62a4c75c-ef6f-4e14-8f74-74d188d0e858"),
@@ -122,6 +124,16 @@ public sealed class SwedenContentIntegrationTests
         Guid.Parse("d9f29509-b6d8-4df9-ae03-15e8b176c741"),
         Guid.Parse("275c1c14-3caa-4343-aa7e-67689edfa9bb")
     ];
+    private static readonly HashSet<Guid> HousingSourceIds =
+    [
+        Guid.Parse("48a66397-3f08-4dd6-83fd-be6273d70663"),
+        Guid.Parse("90a45dd7-4cbd-4b8c-bd43-1255df682a22"),
+        Guid.Parse("f8308a50-caa9-4628-9a6e-9b8311020dc5"),
+        Guid.Parse("9c5e8480-665c-4a96-8f6b-9a30757e2fa5"),
+        Guid.Parse("a58836ea-fb10-49c5-a233-558a004fc880"),
+        Guid.Parse("5cb5eec5-c490-4588-992e-5ad516483f12"),
+        Guid.Parse("15871cb1-c621-4275-ab06-ed2e6d2fdf32")
+    ];
     private static readonly Lazy<Task<CatalogData>> Catalog = new(() =>
         new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync());
     private static readonly ResourceManager Resources = new(
@@ -159,6 +171,8 @@ public sealed class SwedenContentIntegrationTests
                     ? RefreshedArticleTimestamp
                     : entry.Id == StableArticleIds["SE-EMP-02"]
                         ? WorkAuthorizationArticleTimestamp
+                        : entry.Id == StableArticleIds["SE-HOUSING-01"]
+                            ? HousingArticleTimestamp
                         : ArticleTimestamp;
                 Assert.Equal(expectedTimestamp, translation.LastUpdatedAt);
             });
@@ -207,7 +221,7 @@ public sealed class SwedenContentIntegrationTests
         var entries = catalog.InformationEntries.Where(item => item.CountryId == SwedenId).ToArray();
         var entryIds = entries.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => entryIds.Contains(item.InformationEntryId)).ToArray();
-        Assert.Equal(68, sources.Length);
+        Assert.Equal(69, sources.Length);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         Assert.Equal(60, sources.Select(item => item.Url.AbsoluteUri).Distinct(StringComparer.OrdinalIgnoreCase).Count());
         Assert.All(sources, source =>
@@ -216,7 +230,9 @@ public sealed class SwedenContentIntegrationTests
             Assert.True(source.Url.IsAbsoluteUri);
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
             Assert.False(string.IsNullOrWhiteSpace(source.Title));
-            var expectedCheckedAt = WorkAuthorizationSourceIds.Contains(source.Id)
+            var expectedCheckedAt = HousingSourceIds.Contains(source.Id)
+                ? HousingSourceCheckTimestamp
+                : WorkAuthorizationSourceIds.Contains(source.Id)
                 ? WorkAuthorizationSourceCheckTimestamp
                 : ResidenceOptionsSourceIds.Contains(source.Id)
                     ? ResidenceOptionsSourceCheckTimestamp
