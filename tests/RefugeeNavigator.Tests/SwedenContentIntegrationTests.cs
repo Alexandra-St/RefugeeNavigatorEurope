@@ -79,6 +79,7 @@ public sealed class SwedenContentIntegrationTests
     private static readonly DateTimeOffset HousingArticleTimestamp = new(2026, 10, 28, 0, 33, 37, TimeSpan.Zero);
     private static readonly DateTimeOffset HousingSourceCheckTimestamp = new(2026, 10, 28, 0, 33, 37, TimeSpan.Zero);
     private static readonly DateTimeOffset EducationSourceCheckTimestamp = new(2026, 10, 28, 10, 34, 41, TimeSpan.Zero);
+    private static readonly DateTimeOffset SocialAssistanceSourceCheckTimestamp = new(2026, 10, 28, 10, 48, 26, TimeSpan.Zero);
     private static readonly HashSet<Guid> RefreshedSourceIds =
     [
         Guid.Parse("62a4c75c-ef6f-4e14-8f74-74d188d0e858"),
@@ -147,6 +148,18 @@ public sealed class SwedenContentIntegrationTests
         Guid.Parse("c8d6a8e9-0512-4933-b223-2ea0e685b0d7"),
         Guid.Parse("9b90dd74-5ac0-46ae-8a03-8a864fa59844"),
         Guid.Parse("091fbf01-e458-4e47-8e5b-18854fa2888e")
+    ];
+    private static readonly HashSet<Guid> SocialAssistanceSourceIds =
+    [
+        Guid.Parse("c1ba3594-7cfc-4c92-abcb-c1819fdf63cd"),
+        Guid.Parse("9ce9cc8b-cd96-4ba7-a62f-022c049e2b48"),
+        Guid.Parse("beeb9ffe-a708-4570-80c0-959830014656"),
+        Guid.Parse("57d10098-a6a9-4cbb-9242-8ba46fe93418"),
+        Guid.Parse("e0c6e5e6-c491-4394-90fc-729ee9d05c3d"),
+        Guid.Parse("2f022132-dcbb-4b15-817f-1e9542e63710"),
+        Guid.Parse("92eff09d-9d6e-4478-9693-bba2cc41379c"),
+        Guid.Parse("e4d07c65-fb07-4f6f-b46a-3d05dfc752d1"),
+        Guid.Parse("7db6fc96-e074-4c25-9f56-eb745834f386")
     ];
     private static readonly Lazy<Task<CatalogData>> Catalog = new(() =>
         new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync());
@@ -248,6 +261,8 @@ public sealed class SwedenContentIntegrationTests
                 ? HousingSourceCheckTimestamp
                 : EducationSourceIds.Contains(source.Id)
                     ? EducationSourceCheckTimestamp
+                    : SocialAssistanceSourceIds.Contains(source.Id)
+                        ? SocialAssistanceSourceCheckTimestamp
                     : WorkAuthorizationSourceIds.Contains(source.Id)
                         ? WorkAuthorizationSourceCheckTimestamp
                         : ResidenceOptionsSourceIds.Contains(source.Id)
