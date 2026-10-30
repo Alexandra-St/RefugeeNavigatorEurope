@@ -2,7 +2,7 @@
 
 ## Welcome
 
-This is a restricted Private Beta of Refugee Navigator Europe. Denmark, Germany, Poland, Czechia, Spain, and the accepted Netherlands content are available. Coverage varies by country and topic; not every country has information in every category. In the Netherlands, “Information unavailable” means an evidence gap; it does not establish that a service or right is absent.
+This is a restricted Private Beta of Refugee Navigator Europe. Denmark, Germany, Poland, Czechia, Spain, Netherlands, and Sweden are available. Coverage varies by country and topic; not every country has information in every category. In the Netherlands and Sweden, “Information unavailable” means an evidence gap; it does not establish that a service or right is absent. The child and family benefits answer in Sweden is expected to remain unresolved.
 
 You can use search and filters, compare countries in Country Comparison V2, and open full articles in the article comparison. Interactive step-by-step Temporary Protection guides are available for Germany, Denmark, and Poland only.
 
@@ -10,7 +10,7 @@ You can use search and filters, compare countries in Country Comparison V2, and 
 
 Sign in using access details shared with you separately, then work through tasks in the way that feels natural. There are no expected “correct” paths. Do not share real immigration-case circumstances. Use hypothetical situations in the interactive guides.
 
-The guides help users navigate information; they do not determine your status, entitlement to a permit, or the outcome of an application. Country Comparison V2 presents factual differences, not a country ranking or personal recommendation. In the Netherlands content, “Information unavailable” means an evidence gap; it does not establish that a service or right is absent.
+The guides help users navigate information; they do not determine your status, entitlement to a permit, or the outcome of an application. Country Comparison V2 presents factual differences, not a country ranking or personal recommendation. In content about the Netherlands and Sweden, “Information unavailable” means an evidence gap; it does not establish that a service or right is absent.
 
 Check important information against the linked official sources. The application is not individualized legal advice, and information may need updating.
 
