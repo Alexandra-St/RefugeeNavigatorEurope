@@ -1,5 +1,7 @@
 # Six-Country Private Beta Release — 27 October 2026
 
+> **Historical / superseded release record.** This six-country release was replaced by the Seven-Country Private Beta after Sweden was accepted and promoted. See the [Seven-Country Private Beta release record](SEVEN_COUNTRY_PRIVATE_BETA_2026-10-30.md) for the current live scope. The historical details below are retained as recorded at the time.
+
 ## Release
 
 - **Status:** Live
