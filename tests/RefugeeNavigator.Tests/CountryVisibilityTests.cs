@@ -15,6 +15,7 @@ using RefugeeNavigator.Web.Components;
 using RefugeeNavigator.Web.Components.Pages;
 using RefugeeNavigator.Web.Content;
 using RefugeeNavigator.Web.Guides;
+using RefugeeNavigator.Web.Search;
 
 namespace RefugeeNavigator.Tests;
 
@@ -138,8 +139,9 @@ public sealed class CountryVisibilityTests
     {
         var catalog = await Catalog.Value;
         var home = await RenderAsync<Home>("Development", language);
-        Assert.Equal(7, Regex.Matches(home.Html, "class=\"country-card\"").Count);
+        Assert.Equal(8, Regex.Matches(home.Html, "class=\"country-card\"").Count);
         Assert.Contains("href=\"/countries/sweden\"", home.Html);
+        Assert.Contains("href=\"/countries/romania\"", home.Html);
         var overview = await RenderAsync<CountryOverview>("Development", language, "/countries/sweden",
             new() { [nameof(CountryOverview.CountrySlug)] = "sweden" });
         Assert.False(overview.NotFound);
@@ -148,8 +150,10 @@ public sealed class CountryVisibilityTests
             new() { [nameof(Category.CountrySlug)] = "sweden", [nameof(Category.CategorySlug)] = "employment" });
         Assert.False(category.NotFound);
         Assert.Equal(2, Regex.Matches(category.Html, "class=\"information-entry\"").Count);
-        var search = await RenderAsync<Search>("Development", language, "/search");
+        var search = await RenderAsync<Search>("Development", language, "/search?country=romania");
         Assert.Equal(catalog.Countries.Select(country => country.Slug), SelectValues(search.Html, "country"));
+        Assert.Contains("value=\"romania\"", search.Html);
+        Assert.Equal(8, ArticleSearch.Search(catalog, null, "romania", null, null, language).Count);
         var compare = await RenderAsync<Compare>("Development", language,
             "/compare?country1=sweden&country2=denmark&category=all");
         Assert.Equal(catalog.Countries.Select(country => country.Slug), SelectValues(compare.Html, "country1"));
@@ -157,6 +161,69 @@ public sealed class CountryVisibilityTests
         Assert.DoesNotContain("class=\"selection-message\"", compare.Html);
         Assert.Contains("class=\"draft-preview-notice\"", compare.Html);
         Assert.Contains("class=\"draft-label\"", compare.Html);
+        Assert.Contains("value=\"romania\"", compare.Html);
+        Assert.Contains("class=\"structured-country\"", compare.Html);
+        Assert.DoesNotContain("class=\"result-card\"", search.Html);
+
+        var romaniaEntries = catalog.InformationEntries.Where(entry => entry.CountryId ==
+            catalog.Countries.Single(country => country.Slug == "romania").Id).ToArray();
+        foreach (var entry in romaniaEntries)
+        {
+            var categorySlug = catalog.Categories.Single(category => category.Id == entry.CategoryId).Slug;
+            var translation = catalog.InformationEntryTranslations.Single(item =>
+                item.InformationEntryId == entry.Id && item.LanguageCode == language);
+            var result = await RenderAsync<Category>("Development", language,
+                $"/countries/romania/categories/{categorySlug}", new()
+                {
+                    [nameof(Category.CountrySlug)] = "romania",
+                    [nameof(Category.CategorySlug)] = categorySlug
+                });
+            Assert.False(result.NotFound);
+            Assert.Contains(translation.Title, result.Html);
+        }
+
+        var comparisonFacts = await Facts.Value;
+        foreach (var categorySlug in CountryComparisonTopicMap.All.Select(topic => topic.CategorySlug).Distinct(StringComparer.Ordinal))
+        {
+            var romaniaCompare = await RenderAsync<Compare>("Development", language,
+                $"/compare?country1=romania&country2=denmark&category={categorySlug}");
+            Assert.Contains("class=\"structured-country\"", romaniaCompare.Html);
+            Assert.Contains("class=\"draft-label\"", romaniaCompare.Html);
+            foreach (var aspect in comparisonFacts.Topics.Where(topic => topic.CategorySlug == categorySlug).SelectMany(topic => topic.Aspects))
+            {
+                var fact = aspect.Facts.Single(item => item.CountrySlug == "romania");
+                Assert.Contains(fact.Values[language], romaniaCompare.Html);
+            }
+        }
+    }
+
+    [Theory]
+    [InlineData("en")]
+    [InlineData("uk")]
+    [InlineData("ru")]
+    public async Task ProductionKeepsRomaniaHiddenAcrossNavigationSearchAndCompare(string language)
+    {
+        var home = await RenderAsync<Home>("Production", language);
+        Assert.Equal(7, Regex.Matches(home.Html, "class=\"country-card\"").Count);
+        Assert.DoesNotContain("href=\"/countries/romania\"", home.Html);
+
+        var overview = await RenderAsync<CountryOverview>("Production", language, "/countries/romania",
+            new() { [nameof(CountryOverview.CountrySlug)] = "romania" });
+        Assert.True(overview.NotFound);
+
+        var category = await RenderAsync<Category>("Production", language, "/countries/romania/categories/employment",
+            new() { [nameof(Category.CountrySlug)] = "romania", [nameof(Category.CategorySlug)] = "employment" });
+        Assert.True(category.NotFound);
+
+        var search = await RenderAsync<Search>("Production", language, "/search?country=romania");
+        Assert.DoesNotContain("value=\"romania\"", search.Html);
+        Assert.DoesNotContain("Romania", search.Html);
+
+        var compare = await RenderAsync<Compare>("Production", language,
+            "/compare?country1=romania&country2=denmark&category=employment");
+        Assert.DoesNotContain("value=\"romania\"", SelectValues(compare.Html, "country1"));
+        Assert.Contains("class=\"selection-message\"", compare.Html);
+        Assert.DoesNotContain("class=\"structured-country\"", compare.Html);
     }
 
     private static string[] SelectValues(string html, string name)

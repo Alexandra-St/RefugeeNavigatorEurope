@@ -386,4 +386,6 @@
   <data name="Guide.Optional" xml:space="preserve"><value>Optional preparation</value></data>
   <data name="Guide.Unavailable" xml:space="preserve"><value>This guide is unavailable.</value></data>
   <data name="Guide.Step" xml:space="preserve"><value>Step</value></data>
+  <data name="Country.Romania" xml:space="preserve"><value>Romania</value></data>
+  <data name="Country.Romania.In" xml:space="preserve"><value>in Romania</value></data>
 </root>
