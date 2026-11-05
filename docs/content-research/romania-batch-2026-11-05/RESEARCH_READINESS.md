@@ -2,103 +2,97 @@
 
 ## 1. Current catalog state
 
-Romania is not present in the country catalog. The inspected catalogs contain seven countries, 56 information entries, 24 comparison aspects per country schema, and 464 OfficialSource records overall. No Romania country, article, translation, comparison-fact, or Romania-owned source record was found. No Romania research package, draft article, or Romania-specific test was found in the scoped documentation and test locations.
+The catalog snapshot remains unchanged from the initial readiness audit. Research packages cite and assess official sources, but none have been added to the production catalogs.
 
 | Romania inventory | Current state |
 | --- | --- |
 | Country definition / navigation metadata | Absent from `countries.json` |
 | Articles / translations | 0 articles; 0 translations; no translation statuses |
 | Comparison facts | 0 Romania facts; no statuses or availability values |
-| Romania-owned / linked OfficialSource records | 0 |
-| Romania research or draft documents | None found in the scoped content directories |
-| Romania-specific tests | None found |
-| Production visibility | Not visible; Romania is not a catalog country |
-| Development visibility | Not visible; Development includes all catalog countries, and Romania is not in the catalog |
+| Romania-owned catalog OfficialSources | 0 |
+| Romania research packages | 8 focused `SOURCES_AND_CLAIMS.md` documents; all Ready |
+| Romania-specific tests | None found in the initial scoped audit; no tests were added in the research phases |
+| Production visibility | Absent; Romania is not a catalog country |
+| Development visibility | Absent; Development includes all catalog countries, and Romania is not in the catalog |
 
-`CountryVisibility.GetVisibleCountries` returns all catalog countries in Development. In Production it returns countries with at least one Verified translation. Since Romania has no country definition or entries, neither path can currently expose it. No Romania facts can render in Compare, and there is no Romania option to select.
+The initial audit found seven catalog countries, 56 information entries, 24 comparison aspects in the shared schema, and 464 catalog OfficialSource records overall. None of those production data were changed during this research review. Romania is not visible in either Production or Development because it has no country definition or catalog entries.
 
-The 464 OfficialSource records are project-wide. None is associated with a Romania entry because no Romania-owned entry/source binding exists. This audit does not treat shared or unrelated sources as evidence for Romanian claims.
+## 2. Topic readiness matrix
 
-## 2. Topic matrix
+All eight focused packages were checked directly. Each package states `Ready` in its research verdict; its comparison mapping also explicitly marks the associated three aspects `Ready`. “Ready” means that bounded content can be drafted while retaining the stated caveats. It does not mean human acceptance, production approval, or publication authorization.
 
-There are no Romania claims in the current catalogs to confirm, no Romania-linked official sources, and no existing research matrices to refresh. Each topic therefore needs an initial focused research package before article or comparison-fact drafting. `Needs source refresh` below uses the requested readiness label to mean that source research is required; it does not imply that Romania content or a previous Romania source set already exists.
+| Topic | Focused research | Final verdict | Drafting boundary and remaining caveat |
+| --- | --- | --- | --- |
+| Temporary Protection: Applying and Maintaining Your Status | [temporary-protection-application/SOURCES_AND_CLAIMS.md](temporary-protection-application/SOURCES_AND_CLAIMS.md) | Ready | Separate covered cohorts and exact military-obligation/EU-exception rules. Explain dynamic permit validity separately from any printed date; do not promise a complete document list, appointment, processing time, or mandatory card replacement. |
+| Residence Options Beyond Temporary Protection | [after-temporary-protection/SOURCES_AND_CLAIMS.md](after-temporary-protection/SOURCES_AND_CLAIMS.md) | Ready | Keep ordinary routes purpose-specific and separate from the bounded TP-linked work route. Do not imply automatic conversion; pending work rights and whether TP time counts toward long-term residence remain unresolved. |
+| Finding a Job | [finding-a-job/SOURCES_AND_CLAIMS.md](finding-a-job/SOURCES_AND_CLAIMS.md) | Ready | Identify ANOFM and EURES by their actual roles. Services, registration, training and qualification recognition are conditional; do not promise placement, a course, benefit, or job. |
+| Work Authorization and Employee Rights | [employment-rights/SOURCES_AND_CLAIMS.md](employment-rights/SOURCES_AND_CLAIMS.md) | Ready | Keep the TP work exception distinct from residence permission and employer-specific recruitment rules. Minimum-wage figures are date- and sector-sensitive; recheck at drafting/publication. |
+| Accessing Healthcare | [healthcare/SOURCES_AND_CLAIMS.md](healthcare/SOURCES_AND_CLAIMS.md) | Ready | Explain the defined statutory access and proof route without equating it to blanket ordinary insured status. Emergency access, routine care, contribution duties and local provider availability remain distinct. |
+| Finding Accommodation | [housing/SOURCES_AND_CLAIMS.md](housing/SOURCES_AND_CLAIMS.md) | Ready | Distinguish temporary accommodation support, designated accommodation, and private renting. Local allocation/capacity is not guaranteed; the three-month accommodation sum is not continuing rent support. |
+| Education and Language Learning | [education/SOURCES_AND_CLAIMS.md](education/SOURCES_AND_CLAIMS.md) | Ready | Separate statutory access from local placement, audient status, language support and higher-education admission. Do not promise a chosen school, course, funded place, or admission. |
+| Financial and Social Assistance | [social-assistance/SOURCES_AND_CLAIMS.md](social-assistance/SOURCES_AND_CLAIMS.md) | Ready | Keep VMI, time-limited accommodation support, child allowance, child-raising routes, and disability-related rights separate. Schemes are conditional and application eligibility is not an award. |
 
-| Topic | Current state | Existing sources | Research needed | Readiness |
+**Topic count: 8/8 Ready.** No topic remains `Needs source refresh` or `Blocked` in its focused research verdict.
+
+## 3. Comparison-aspect readiness matrix
+
+The 24 expected shared-schema aspects are listed exactly once below. The status is research readiness, not a Romania comparison-fact status: Romania still has no comparison-fact records. Each `Ready` verdict is present in the linked focused package's aspect mapping.
+
+| Topic | Aspect ID | Focused research | Readiness | Safe drafting boundary |
 | --- | --- | --- | --- | --- |
-| Temporary Protection: Applying and Maintaining Your Status | No Romania entry or draft | None Romania-linked | Establish eligible cohorts, application/registration procedure, competent authority, documents, renewal/extension process, dates and exceptions from Romanian primary law and IGI guidance; date-check changing EU decisions | Needs source refresh |
-| Residence Options Beyond Temporary Protection | No Romania entry or draft | None Romania-linked | Identify routes relevant to the intended audience, status transitions, requirements, filing locations, deadlines, and what cannot be inferred from temporary-protection status | Needs source refresh |
-| Finding a Job | No Romania entry or draft | None Romania-linked | Identify official vacancy-search channels, public employment services, registration steps, and limits on placement or support | Needs source refresh |
-| Work Authorization and Employee Rights | No Romania entry or draft | None Romania-linked | Verify work authorization by status and cohort, employer duties, written terms, working conditions, collective-agreement scope, and current wage rules | Needs source refresh |
-| Accessing Healthcare | No Romania entry or draft | None Romania-linked | Establish access and proof requirements by status, registration/insurance rules, urgent-care routes, and responsible institutions | Needs source refresh |
-| Finding Accommodation | No Romania entry or draft | None Romania-linked | Establish reception/accommodation arrangements, private rental rules, tenant protections, local implementation, and any support eligibility | Needs source refresh |
-| Education and Language Learning | No Romania entry or draft | None Romania-linked | Establish school access and local enrollment responsibilities, language support, adult learning, higher-education admission and fee conditions | Needs source refresh |
-| Financial and Social Assistance | No Romania entry or draft | None Romania-linked | Research benefits individually: legal basis, eligible status, application authority, conditions, amounts/dates where relevant, and family-related boundaries | Needs source refresh |
+| Temporary Protection | `protection-scheme` | [temporary-protection-application](temporary-protection-application/SOURCES_AND_CLAIMS.md) | Ready | Describe each protected cohort separately; preserve the military-obligation rule and its exact EU exception. |
+| Temporary Protection | `protection-application` | [temporary-protection-application](temporary-protection-application/SOURCES_AND_CLAIMS.md) | Ready | IGI route, physical presence/photo and free permit are supported; do not promise appointments, processing times, a complete document checklist, or exact rights-start timing. |
+| Temporary Protection | `protection-dates` | [temporary-protection-application](temporary-protection-application/SOURCES_AND_CLAIMS.md) | Ready | Distinguish EU scheme endpoint from an individual permit's printed validity; use current operational renewal guidance. |
+| Residence Options | `residence-routes` | [after-temporary-protection](after-temporary-protection/SOURCES_AND_CLAIMS.md) | Ready | List selected ordinary routes and distinguish the specific TP-linked work route from other routes. |
+| Residence Options | `residence-conditions` | [after-temporary-protection](after-temporary-protection/SOURCES_AND_CLAIMS.md) | Ready | Keep eligibility route-specific; leave TP-time counting for long-term residence unresolved and avoid undated salary thresholds. |
+| Residence Options | `residence-filing` | [after-temporary-protection](after-temporary-protection/SOURCES_AND_CLAIMS.md) | Ready | Work-purpose TP filing is specifically established; ordinary visa/residence procedures do not establish a general direct TP transition. Filing does not guarantee approval; pending work rights are unresolved. |
+| Finding a Job | `employment-vacancies` | [finding-a-job](finding-a-job/SOURCES_AND_CLAIMS.md) | Ready | ANOFM listings and EURES are distinct channels; listings are dynamic and do not guarantee a job. |
+| Finding a Job | `employment-institutions` | [finding-a-job](finding-a-job/SOURCES_AND_CLAIMS.md) | Ready | Explain ANOFM/county agencies and EURES accurately; access and registration depend on legal category and agency requirements. |
+| Finding a Job | `employment-assistance-conditions` | [finding-a-job](finding-a-job/SOURCES_AND_CLAIMS.md) | Ready | Mediation, counselling and training have category/registration conditions; no automatic course, unemployment payment or placement. |
+| Work Authorization and Employee Rights | `work-permission` | [employment-rights](employment-rights/SOURCES_AND_CLAIMS.md) | Ready | Limit the no-work-authorisation exception to covered TP beneficiaries/former beneficiaries and its period; do not promise post-TP or pending-filing work rights. |
+| Work Authorization and Employee Rights | `work-employer-duties` | [employment-rights](employment-rights/SOURCES_AND_CLAIMS.md) | Ready | Summarize sourced contract, pay, hours, leave, safety and complaint rules; keep uncertain foreign-worker recruitment duties separate. |
+| Work Authorization and Employee Rights | `work-minimum-pay` | [employment-rights](employment-rights/SOURCES_AND_CLAIMS.md) | Ready | State only dated gross wage floors and the construction/sector boundary; recheck current rates before publication. |
+| Healthcare | `healthcare-access` | [healthcare](healthcare/SOURCES_AND_CLAIMS.md) | Ready | State the covered cohort and statutory package; do not imply ordinary insured status or guaranteed local provider availability. |
+| Healthcare | `healthcare-proof` | [healthcare](healthcare/SOURCES_AND_CLAIMS.md) | Ready | Describe provider-side registration and supported documents; exceptional no-CNP handling needs current CNAS/provider confirmation. |
+| Healthcare | `healthcare-urgent` | [healthcare](healthcare/SOURCES_AND_CLAIMS.md) | Ready | Distinguish emergency/112 from routine care and keep the temporary-camp first-response rule within its statutory scope. |
+| Housing | `housing-initial` | [housing](housing/SOURCES_AND_CLAIMS.md) | Ready | Describe the narrow temporary-camp route; location and capacity depend on current local arrangements. |
+| Housing | `housing-private-rental` | [housing](housing/SOURCES_AND_CLAIMS.md) | Ready | Explain written lease and supported duties; keep unresolved deposit/dispute provisions narrow and scoped. |
+| Housing | `housing-financial-support` | [housing](housing/SOURCES_AND_CLAIMS.md) | Ready | Keep the conditional, three-month accommodation sum distinct from VMI and any continuing rent support. |
+| Education | `education-school-enrolment` | [education](education/SOURCES_AND_CLAIMS.md) | Ready | Explain the covered minors' route and audient/placement process; do not promise a particular school or class. |
+| Education | `education-pupil-language` | [education](education/SOURCES_AND_CLAIMS.md) | Ready | Support groups and adult courses depend on their distinct rules and local resources; do not promise a place or language of instruction. |
+| Education | `education-higher-admission` | [education](education/SOURCES_AND_CLAIMS.md) | Ready | Separate admission, credential recognition, language preparation and annual funded-place measures; no guaranteed admission or free place. |
+| Financial and Social Assistance | `social-subsistence` | [social-assistance](social-assistance/SOURCES_AND_CLAIMS.md) | Ready | VMI is means-tested and requires an application/assessment; TP does not guarantee payment. |
+| Financial and Social Assistance | `social-application` | [social-assistance](social-assistance/SOURCES_AND_CLAIMS.md) | Ready | Filing authority and evidence are scheme-specific; one application checklist does not apply to every benefit. |
+| Financial and Social Assistance | `social-child-benefits` | [social-assistance](social-assistance/SOURCES_AND_CLAIMS.md) | Ready | Several distinct conditional child-related routes are evidenced; school attendance alone is not entitlement and payment is not automatic. |
 
-No topic is Ready because no Romania claim-source matrix has been reviewed. No topic is blocked from research by a known legal or technical impediment; the missing country catalog entry is a publication/integration prerequisite, not a reason to infer any content.
+**Aspect count: 24/24 Ready.** No expected aspect remains `Needs source refresh` or `Blocked`; no extra aspect IDs were added.
 
-## 3. Comparison matrix
+## 4. Aggregated drafting caveats
 
-The existing comparison schema defines 24 aspect IDs across eight logical areas. The `Category` column is the current comparison category slug. There are no Romania fact records for any aspect; consequently status, availability, and Romania source coverage are not applicable. All rows require initial research before a fact can be drafted. Do not add new aspect IDs for Romania.
+- **Temporary protection:** preserve cohort differences, the military-obligation evidence and EU exception boundary, and the distinction between EU protection duration and the validity printed on an individual permit. Check current operational renewal instructions rather than asserting mandatory replacement.
+- **Residence and work:** ordinary residence routes do not amount to automatic conversion from TP. Pending work rights for a filed route and TP-time counting toward long-term residence remain unresolved. Do not infer a general in-country transition from the specific work route.
+- **Employment:** minimum wage is date- and sector-sensitive; cite a current gross amount only with its effective date and scope.
+- **Public services:** ANOFM, healthcare providers, municipalities, schools and other services have distinct functions and eligibility/operational conditions. Availability, appointment, placement, course or individual outcome is not guaranteed.
+- **Healthcare:** statutory access for the covered cohort is not a blanket declaration of ordinary insured status; distinguish service-package rules, proof, contributions and emergency care.
+- **Housing:** initial accommodation and the time-limited accommodation sum have defined cohorts, conditions and local allocation. Neither establishes a guaranteed location, vacancy, continuing rent subsidy or general benefit.
+- **Education:** statutory access does not promise a specific placement, course, language support, admission or funded place; implementation and individual requirements matter.
+- **Social assistance:** benefits are scheme-specific and conditional. Distinguish VMI and child-related routes from temporary accommodation support; eligibility to apply is not an award. Do not infer a child benefit from school attendance or imply that TP alone creates universal entitlement.
 
-| Category | Aspect ID | Current status | Available | Romania source coverage | Research gap |
-| --- | --- | --- | --- | --- | --- |
-| `temporary-protection` | `protection-scheme` | No Romania fact | N/A | 0 | Establish applicable scheme, covered groups, and scope from Romanian/EU primary sources |
-| `temporary-protection` | `protection-application` | No Romania fact | N/A | 0 | Establish application/registration route, authority, documents, and procedural limits |
-| `temporary-protection` | `protection-dates` | No Romania fact | N/A | 0 | Verify current legal duration, individual document dates, extensions, and future deadlines |
-| `temporary-protection` | `residence-routes` | No Romania fact | N/A | 0 | Identify post-/alternative-to-protection residence routes relevant to the article scope |
-| `temporary-protection` | `residence-conditions` | No Romania fact | N/A | 0 | Verify requirements and status-specific conditions for each selected route |
-| `temporary-protection` | `residence-filing` | No Romania fact | N/A | 0 | Verify filing authority, place, procedure, documents, and deadlines for selected routes |
-| `employment` | `employment-vacancies` | No Romania fact | N/A | 0 | Identify official vacancy portals and their actual functions |
-| `employment` | `employment-institutions` | No Romania fact | N/A | 0 | Establish the remit and user access routes of ANOFM and other relevant public bodies |
-| `employment` | `employment-assistance-conditions` | No Romania fact | N/A | 0 | Verify eligibility and limits for public employment assistance or training |
-| `employment` | `work-permission` | No Romania fact | N/A | 0 | Verify work authorization by residence/status category and any exceptions |
-| `employment` | `work-employer-duties` | No Romania fact | N/A | 0 | Verify contract, written-information, registration, and employer-obligation rules |
-| `employment` | `work-minimum-pay` | No Romania fact | N/A | 0 | Verify current statutory wage rules, effective dates, and scope without implying guaranteed pay |
-| `healthcare` | `healthcare-access` | No Romania fact | N/A | 0 | Establish healthcare access by status and insurance/registration situation |
-| `healthcare` | `healthcare-proof` | No Romania fact | N/A | 0 | Identify accepted proof, registration documents, and responsible health authorities |
-| `healthcare` | `healthcare-urgent` | No Romania fact | N/A | 0 | Verify urgent and emergency pathways and how they differ from routine care |
-| `housing` | `housing-initial` | No Romania fact | N/A | 0 | Establish reception or initial accommodation arrangements and their limits |
-| `housing` | `housing-private-rental` | No Romania fact | N/A | 0 | Verify rental, subletting, tenancy, and dispute routes from primary sources |
-| `housing` | `housing-financial-support` | No Romania fact | N/A | 0 | Verify rent, deposit, or municipal support conditions and individual assessment rules |
-| `education` | `education-school-enrolment` | No Romania fact | N/A | 0 | Establish enrollment rights/process and local authority responsibilities |
-| `education` | `education-pupil-language` | No Romania fact | N/A | 0 | Verify language support availability and avoid promising a particular class or place |
-| `education` | `education-higher-admission` | No Romania fact | N/A | 0 | Verify admissions, recognition, language, and tuition/application-fee conditions |
-| `social-assistance` | `social-subsistence` | No Romania fact | N/A | 0 | Verify each subsistence benefit's basis, eligibility, amount, and status boundaries |
-| `social-assistance` | `social-application` | No Romania fact | N/A | 0 | Establish application authority, procedure, documents, review, and appeal route |
-| `social-assistance` | `social-child-benefits` | No Romania fact | N/A | 0 | Verify child/family benefits individually; do not imply automatic eligibility or non-existence |
+These caveats preserve the boundaries in the eight focused research packages. They do not indicate that any unverified right or service is absent.
 
-These 24 aspect IDs comprise three aspects for each of the eight logical areas: temporary protection, residence options, job search, employee rights, healthcare, housing, education, and social assistance. The current data groups the first two under `temporary-protection` and the next two under `employment` comparison categories.
+## 5. Recommended next phase
 
-## 4. Risks and unresolved boundaries
+**Romania content drafting / Development-only catalog preparation.** This research verdict is not human acceptance, production approval, status promotion, or deployment authorization. Romania remains absent from both catalog visibility paths until a separate integration decision is made.
 
-- No Romania-specific claim is currently source-backed in the inspected project data. Do not copy neighboring-country rules into Romania content.
-- Temporary-protection eligibility cohorts, registration deadlines, permit-document dates, renewal windows, and future EU/Romanian decisions are time-sensitive and need dated primary-source checks.
-- Separate rules may apply to different nationalities, family members, prior residence situations, third-country nationals, stateless people, or other cohorts. Do not generalize from one group without a source that covers it.
-- Distinguish residence status, work authorization, population/administrative registration, health insurance, and benefit eligibility; do not assume one automatically establishes another.
-- Public-service availability and municipal implementation may vary. Do not promise a job, housing placement, school place, course, payment, or individual outcome.
-- Healthcare, education, housing, and social-assistance eligibility may depend on status, contribution/insurance, residence, income, family situation, local rules, or an individual assessment. Research each claim and benefit separately.
-- Record effective dates and exact deadlines only when a primary source states them; distinguish current rules from announced future changes.
-- Romanian-language official guidance may differ in detail or update timing from English-language summaries. Prefer Romanian primary legislation and authority guidance, recording translation uncertainty where material.
+Recommended drafting order:
 
-These are research boundaries, not findings that any listed right or service exists or does not exist.
+1. Temporary Protection
+2. Residence Options
+3. Work Authorization and Employee Rights
+4. Finding a Job
+5. Healthcare
+6. Housing
+7. Education and Language Learning
+8. Financial and Social Assistance
 
-## 5. Recommended research order
-
-1. **Temporary Protection** — establish current scope, procedures, dates, and cohort-specific exceptions first because rules and extension dates may change.
-2. **Residence Options** — map any routes and transitions using current Romanian legislation and IGI procedure, without assuming automatic conversion from temporary protection.
-3. **Work Authorization and Employee Rights** — establish the legal work position by status before describing job-search steps.
-4. **Finding a Job** — document public vacancy-search and employment-service routes after confirming what the services actually provide.
-5. **Accessing Healthcare** — separate access, insurance, registration, proof, and urgent-care claims.
-6. **Finding Accommodation** — distinguish state/reception arrangements from private renting and any locally assessed support.
-7. **Education and Language Learning** — separate school access, municipal implementation, adult language learning, and higher-education admission/fees.
-8. **Financial and Social Assistance** — research benefits individually and preserve explicit uncertainty wherever eligibility or additional support is not established.
-
-## Research source priority
-
-For the next focused research phases, prioritize Romanian primary authorities and legislation: Romanian government and ministries, especially Inspectoratul General pentru Imigrări; then EU institutions and the European Commission for EU-level rules; ANOFM and labour authorities; CNAS and the Ministry of Health; the Ministry of Education; and social-assistance authorities and legislation. Use secondary or NGO material only as a lead to locate primary sources, not as final support where a primary source is available.
-
-## Overall conclusion
-
-**NOT READY FOR CONTENT ACCEPTANCE**
-
-Romania is absent from the catalog, has no articles/translations, no Romania facts or linked sources, and has no Romania research package or Romania-specific tests. All eight topics need initial focused source research. The next content phase should build the bounded research matrices using existing category/aspect IDs; only after those reviews should Romania drafts, source bindings, tests, country metadata, or any visibility/status changes be proposed. No promotion or deployment is authorized by this audit.
+No drafting, catalog integration, promotion, or deployment is performed by this review.
