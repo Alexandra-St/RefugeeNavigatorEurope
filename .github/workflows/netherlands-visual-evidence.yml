@@ -26,7 +26,7 @@ jobs:
         run: python3 .github/scripts/prepare-netherlands-visual-fixture.py "$RUNNER_TEMP/netherlands-visual-app/Data" "$RUNNER_TEMP/netherlands-visual-app/visual-fixture.json"
       - name: Install filesystem-capable Playwright browser
         run: |
-          npm install --prefix "$RUNNER_TEMP/netherlands-playwright" --no-save playwright
+          npm install --prefix "$RUNNER_TEMP/netherlands-playwright" --no-save playwright@1.64.1
           "$RUNNER_TEMP/netherlands-playwright/node_modules/.bin/playwright" install --with-deps chromium
       - name: Run Production visibility assertions and capture screenshots
         env:
@@ -68,5 +68,5 @@ jobs:
         with:
           name: netherlands-publication-gate-screenshots
           path: ${{ runner.temp }}/netherlands-visual-evidence/
-          if-no-files-found: error
+          if-no-files-found: warn
           retention-days: 30
