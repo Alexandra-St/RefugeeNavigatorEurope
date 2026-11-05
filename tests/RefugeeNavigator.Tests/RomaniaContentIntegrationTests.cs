@@ -110,8 +110,8 @@ public sealed class RomaniaContentIntegrationTests
         var sourceById = catalog.OfficialSources.ToDictionary(source => source.Id);
         var romaniaEntryIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(source => romaniaEntryIds.Contains(source.InformationEntryId)).ToArray();
-        Assert.Equal(53, sources.Length);
-        Assert.Equal(517, catalog.OfficialSources.Count);
+        Assert.Equal(56, sources.Length);
+        Assert.Equal(520, catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(source => source.Id).Distinct().Count());
         Assert.All(sources, source =>
         {
@@ -128,11 +128,11 @@ public sealed class RomaniaContentIntegrationTests
             {
                 "RO-TP-01" => 3,
                 "RO-TP-02" => 8,
-                "RO-EMP-01" => 8,
-                "RO-EMP-02" => 8,
+                "RO-EMP-01" => 9,
+                "RO-EMP-02" => 9,
                 "RO-HEALTH-01" => 6,
                 "RO-HOUSING-01" => 4,
-                "RO-EDU-01" => 9,
+                "RO-EDU-01" => 10,
                 "RO-SOC-01" => 7,
                 _ => throw new InvalidOperationException($"Unexpected draft {code}.")
             };
@@ -181,6 +181,20 @@ public sealed class RomaniaContentIntegrationTests
             Assert.Equal(Aspects[code].Order(StringComparer.Ordinal), facts.Where(fact => fact.InformationEntryId == expected.Id)
                 .Select(fact => comparison.Topics.SelectMany(topic => topic.Aspects).Single(aspect => aspect.Facts.Contains(fact)).Id).Order(StringComparer.Ordinal));
         }
+        var wageAspect = Assert.Single(comparison.Topics.SelectMany(topic => topic.Aspects), aspect => aspect.Id == "work-minimum-pay");
+        var wage = Assert.Single(wageAspect.Facts, fact => fact.CountrySlug == "romania");
+        Assert.Equal("Draft", wage.Status.ToString());
+        Assert.True(wage.IsAvailable);
+        Assert.Equal(new[] { Guid.Parse("8e63ea72-f1ca-52d0-bc87-d5fc2f4e25e8"), Guid.Parse("e4283f53-f70c-5eff-a2c7-3a78fc1615d7") }, wage.OfficialSourceIds);
+        Assert.DoesNotContain(Guid.Parse("70cda0bf-de1c-54bc-b411-386e4dbec151"), wage.OfficialSourceIds);
+        Assert.All(Languages, language =>
+        {
+            var normalizedWage = Regex.Replace(wage.Values[language], @"[^0-9]", "");
+            Assert.Contains("4325", normalizedWage, StringComparison.Ordinal);
+            Assert.Contains("4582", normalizedWage, StringComparison.Ordinal);
+            Assert.True(wage.Values[language].Contains("gross", StringComparison.OrdinalIgnoreCase)
+                || wage.Values[language].Contains("брутто", StringComparison.OrdinalIgnoreCase));
+        });
     }
 
     private static OfficialSource sourceById(CatalogData catalog, Guid id) =>

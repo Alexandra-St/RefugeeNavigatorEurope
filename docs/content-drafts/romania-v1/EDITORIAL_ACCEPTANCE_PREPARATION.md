@@ -2,7 +2,7 @@
 
 **Implementation baseline:** `38d44fd08f24dbd12900e74c0256124f37ed510f`  
 **Review scope:** Romania v1 draft batch and its eight focused research packages  
-**Overall verdict:** `NEEDS CORRECTION BEFORE HUMAN ACCEPTANCE`
+**Overall verdict:** `READY FOR HUMAN ACCEPTANCE` (editorial corrections completed; owner decisions and status promotion remain separate)
 
 ## 1. Batch snapshot
 
@@ -11,12 +11,14 @@
 | Articles | 8 |
 | EN / UK / RU translations | 24; all `NeedsReview` |
 | Comparison facts | 24; all `Draft` |
-| Article-owned OfficialSources | 53, all HTTPS |
+| Article-owned OfficialSources | 56, all HTTPS |
 | Development visibility | Visible |
 | Production visibility | Hidden; seven existing countries remain visible |
 | Research readiness | 8/8 topics Ready; 24/24 aspects Ready |
 
 Research readiness means the scoped evidence packages support bounded drafting. It is not human acceptance, status promotion, or release authorization. This review found editorial corrections that should be completed before an owner decision.
+
+Sections 2–7 preserve the findings recorded at the review baseline for traceability. The Phase 19.13 follow-up in Section 10 is the current correction outcome and supersedes baseline “correction required” wording.
 
 ## 2. Article acceptance matrix
 
@@ -24,14 +26,14 @@ Each language has one translation record per article and all three records are `
 
 | Draft ID | Article GUID | Title | EN / UK / RU | Sources | Research | Caveats preserved in current draft | Comparison aspects | Editorial result |
 | --- | --- | --- | --- | ---: | --- | --- | --- | --- |
-| RO-TP-01 | `24d0ab3d-935c-50b7-8385-c1c54583ec51` | Temporary Protection in Romania: Applying and Maintaining Your Status | NeedsReview / NeedsReview / NeedsReview | 3 | Ready | No universal appointment, document checklist, or processing time; EU endpoint separated from printed card date; military exception is described. | `protection-scheme`, `protection-application`, `protection-dates` | Correction required |
-| RO-TP-02 | `6b966a1f-335e-596a-9825-005d30ab23d4` | Residence Options Beyond Temporary Protection in Romania | NeedsReview / NeedsReview / NeedsReview | 8 | Ready | No automatic conversion; study/family in-country transition not established; filing does not guarantee approval; pending work rights and TP-time counting remain unresolved. | `residence-routes`, `residence-conditions`, `residence-filing` | Correction required |
-| RO-EMP-01 | `54197f49-594b-51d2-a40c-2fcded05f791` | Finding a Job in Romania | NeedsReview / NeedsReview / NeedsReview | 8 | Ready | Vacancies and services are conditional; registration, training, placement, qualification recognition, and employment are not guaranteed. | `employment-vacancies`, `employment-institutions`, `employment-assistance-conditions` | Correction required |
-| RO-EMP-02 | `61d13a69-6704-50ee-8b7b-e673a2828e65` | Work Authorization and Employee Rights in Romania | NeedsReview / NeedsReview / NeedsReview | 8 | Ready | TP work exception is time-bounded; employer formalities remain; collective agreements are not universal; minimum wage is dated and gross. | `work-permission`, `work-employer-duties`, `work-minimum-pay` | Correction required |
-| RO-HEALTH-01 | `be12596b-8657-5b23-a17c-dead174859f3` | Accessing Healthcare in Romania | NeedsReview / NeedsReview / NeedsReview | 6 | Ready | Special package is separated from ordinary insured status; CASS is treated separately; 112 is reserved for life-threatening emergencies. | `healthcare-access`, `healthcare-proof`, `healthcare-urgent` | Correction required |
-| RO-HOUSING-01 | `35bb6fe6-b0b9-5517-af04-e022c7105ec7` | Finding Accommodation in Romania | NeedsReview / NeedsReview / NeedsReview | 4 | Ready | No guaranteed location or place; private renting is separate; support is not automatic or continuing rent reimbursement; old `50/20` is absent. | `housing-initial`, `housing-private-rental`, `housing-financial-support` | Correction required |
-| RO-EDU-01 | `bfd554ff-a41a-5338-ab3e-25bb3c827a73` | Education and Romanian-Language Learning in Romania | NeedsReview / NeedsReview / NeedsReview | 9 | Ready | `Audient` is interim; placement and language support depend on local arrangements; adult courses are distinct; admission/funding is not guaranteed. | `education-school-enrolment`, `education-pupil-language`, `education-higher-admission` | Correction required |
-| RO-SOC-01 | `97f02ab3-3352-597b-ad48-11ebf19993c2` | Financial and Social Assistance in Romania | NeedsReview / NeedsReview / NeedsReview | 7 | Ready | VMI is means-tested; benefits are separate; applying is not an award; school attendance alone does not establish child-benefit eligibility; no amounts are stated. | `social-subsistence`, `social-application`, `social-child-benefits` | Correction required |
+| RO-TP-01 | `24d0ab3d-935c-50b7-8385-c1c54583ec51` | Temporary Protection in Romania: Applying and Maintaining Your Status | NeedsReview / NeedsReview / NeedsReview | 3 | Ready | No universal appointment, document checklist, or processing time; EU endpoint separated from printed card date; military exception is described. | `protection-scheme`, `protection-application`, `protection-dates` | Ready for human acceptance |
+| RO-TP-02 | `6b966a1f-335e-596a-9825-005d30ab23d4` | Residence Options Beyond Temporary Protection in Romania | NeedsReview / NeedsReview / NeedsReview | 8 | Ready | No automatic conversion; study/family in-country transition not established; filing does not guarantee approval; pending work rights and TP-time counting remain unresolved. | `residence-routes`, `residence-conditions`, `residence-filing` | Ready for human acceptance |
+| RO-EMP-01 | `54197f49-594b-51d2-a40c-2fcded05f791` | Finding a Job in Romania | NeedsReview / NeedsReview / NeedsReview | 9 | Ready | Vacancies and services are conditional; registration, training, placement, qualification recognition, and employment are not guaranteed. | `employment-vacancies`, `employment-institutions`, `employment-assistance-conditions` | Ready for human acceptance |
+| RO-EMP-02 | `61d13a69-6704-50ee-8b7b-e673a2828e65` | Work Authorization and Employee Rights in Romania | NeedsReview / NeedsReview / NeedsReview | 9 | Ready | TP work exception is time-bounded; employer formalities remain; collective agreements are not universal; minimum wage is dated and gross. | `work-permission`, `work-employer-duties`, `work-minimum-pay` | Ready for human acceptance |
+| RO-HEALTH-01 | `be12596b-8657-5b23-a17c-dead174859f3` | Accessing Healthcare in Romania | NeedsReview / NeedsReview / NeedsReview | 6 | Ready | Special package is separated from ordinary insured status; CASS is treated separately; 112 is reserved for life-threatening emergencies. | `healthcare-access`, `healthcare-proof`, `healthcare-urgent` | Ready for human acceptance |
+| RO-HOUSING-01 | `35bb6fe6-b0b9-5517-af04-e022c7105ec7` | Finding Accommodation in Romania | NeedsReview / NeedsReview / NeedsReview | 4 | Ready | No guaranteed location or place; private renting is separate; support is not automatic or continuing rent reimbursement; old `50/20` is absent. | `housing-initial`, `housing-private-rental`, `housing-financial-support` | Ready for human acceptance |
+| RO-EDU-01 | `bfd554ff-a41a-5338-ab3e-25bb3c827a73` | Education and Romanian-Language Learning in Romania | NeedsReview / NeedsReview / NeedsReview | 10 | Ready | `Audient` is interim; placement and language support depend on local arrangements; adult courses are distinct; admission/funding is not guaranteed. | `education-school-enrolment`, `education-pupil-language`, `education-higher-admission` | Ready for human acceptance |
+| RO-SOC-01 | `97f02ab3-3352-597b-ad48-11ebf19993c2` | Financial and Social Assistance in Romania | NeedsReview / NeedsReview / NeedsReview | 7 | Ready | VMI is means-tested; benefits are separate; applying is not an award; school attendance alone does not establish child-benefit eligibility; no amounts are stated. | `social-subsistence`, `social-application`, `social-child-benefits` | Ready for human acceptance |
 
 ### Language, date, and wording check
 
@@ -72,7 +74,7 @@ All 24 facts are `Draft`, `IsAvailable=true`, and have article-owned source IDs.
 | employment | `employment-assistance-conditions` | RO-EMP-01 | Yes | Draft | 3 | Mediation, counselling, and training depend on eligibility and availability. | No automatic placement. | Ready |
 | employment | `work-permission` | RO-EMP-02 | Yes | Draft | 2 | Covered current/former TP beneficiaries have a statutory work exception for the applicable period. | Not a general post-TP work right. | Ready |
 | employment | `work-employer-duties` | RO-EMP-02 | Yes | Draft | 3 | Employers follow applicable written-term, pay, time, leave, and safety rules. | Details depend on the employment relationship. | Ready |
-| employment | `work-minimum-pay` | RO-EMP-02 | Yes | Draft | 2 | General gross wage floor begins 1 July 2026; sector rules may differ. | Gross and date-sensitive; construction is a distinct rate. Correct the construction source association before acceptance. | Correction required |
+| employment | `work-minimum-pay` | RO-EMP-02 | Yes | Draft | 2 | 4,325 lei gross/month from 1 July 2026; separate 4,582 lei gross/month construction rate. | Gross, sector-specific and date-sensitive; supported by HG 146/2026 and OUG 156/2024 Art. LXIX. | Ready |
 | healthcare | `healthcare-access` | RO-HEALTH-01 | Yes | Draft | 2 | Defined Ukraine-related statutory package, distinct from ordinary insured status. | Covered cohorts and package rules are limited; no universal service guarantee. | Ready |
 | healthcare | `healthcare-proof` | RO-HEALTH-01 | Yes | Draft | 2 | CNAS registration/data guidance for the Ukraine-related route. | Not a universal proof rule for every service. | Ready |
 | healthcare | `healthcare-urgent` | RO-HEALTH-01 | Yes | Draft | 2 | Call 112 for emergencies; camp first-response provisions are narrower. | Keep emergency and routine care separate. | Ready |
@@ -92,12 +94,12 @@ All 24 aspects have EN/UK/RU values. Dates are equivalent where stated, and the 
 
 ## 6. Source audit
 
-- The 53 integrated source records have unique IDs, HTTPS URLs, and ownership by one of the eight Romania articles. Inline source tokens point to existing sources owned by the same article; no dangling or cross-article token was found in the catalog-integrity review.
+- The 56 integrated source records have unique IDs, HTTPS URLs, and ownership by one of the eight Romania articles. Three missing claim-specific sources were added during Phase 19.13. Inline source tokens point to existing sources owned by the same article; no dangling or cross-article token remains.
 - The 53-source selection is scoped to the eight research packages. No clearly unrelated source was identified, and no stale historical source is presented as current authority without qualification in the user-facing drafts. In particular, the outdated 4 March 2026 permit date, former `50/20` housing programme, and former 4,050 lei agriculture rate are not presented as current.
 - Source-to-claim associations that need correction are itemized in Section 7: TP-01 military and permit-validity citations; TP-02 ordinary routes; ANOFM/EURES; Employee Rights safety/collective-agreement and construction wage sources; Healthcare CASS; Housing rental tax registration; Education annual funded-place measure; and Social Assistance VMI/benefit sources.
 - Comparison fact sources are article-owned. The one aspect-level source mismatch found is `work-minimum-pay`; its construction qualification is not supported by the current OUG 32/2026 source reference.
 
-## 7. Corrections required before acceptance
+## 7. Original findings before the correction pass
 
 | Item | Current wording / issue | Research-supported correction | Severity |
 | --- | --- | --- | --- |
@@ -114,7 +116,7 @@ All 24 aspects have EN/UK/RU values. Dates are equivalent where stated, and the 
 
 **Blocking editorial corrections:** 4.  
 **Minor corrections:** 8.  
-The owner-facing result remains `NEEDS CORRECTION BEFORE HUMAN ACCEPTANCE` until these are reviewed and resolved in a separate content-correction phase.
+These were the findings at the review baseline. Their resolution is recorded in Section 10 below; the owner-facing decision tables remain intentionally blank.
 
 ## 8. Owner decision tables
 
@@ -161,6 +163,12 @@ No decisions are prefilled. Only the project owner’s explicit decisions may au
 | `social-subsistence` |  |
 | `social-application` |  |
 | `social-child-benefits` |  |
+
+## 10. Phase 19.13 correction follow-up
+
+The Phase 19.13 editorial correction pass resolved all findings listed in Section 7: **4/4 blockers and 8/8 minor corrections**. The eight drafts and all 24 catalog translations now match exactly in Title, Summary and Content. Corrected source-to-claim associations use owned OfficialSources; three narrowly missing sources were added (EURES jobseeker vacancies, OUG 156/2024 construction rate, and the annual higher-education-place measure), bringing the Romania-owned source count from 53 to 56. The `work-minimum-pay` fact now cites HG 146/2026 and OUG 156/2024 Art. LXIX and states both gross rates.
+
+All 24 translations remain `NeedsReview`; all 24 comparison facts remain `Draft`. Romania remains visible in Development and hidden in Production. This is readiness for the owner’s human acceptance decision only. The blank decision tables above are unchanged, and no promotion or deployment is authorized.
 
 ## 9. Status and release boundary
 

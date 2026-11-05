@@ -17,9 +17,9 @@ Content:
 
 Romania’s support framework includes temporary accommodation arrangements for eligible displaced people, including designated accommodation settings. Placement depends on the applicable programme, current capacity and local arrangements; it does not guarantee a particular municipality, housing type or length of stay. Ask IGI or the local authority about current options. For details, see [[source:491030f2-f0c2-5494-a295-819a8ad82433|accommodation rules]].
 
-Private renting is a separate arrangement between tenant and landlord. Check the written contract, rent, deposit, utilities and notice terms before signing. Rental registration and tax procedures are handled under current rules; do not assume public accommodation support pays a private rent. For details, see [[source:0c3202ab-c7ce-52ac-88d4-d003597b4468|Housing Law]].
+Private renting is a separate arrangement between tenant and landlord. Check the written contract, rent, deposit, utilities and notice terms before signing. Under the applicable tax procedure, a qualifying lessor registers the rental contract with ANAF within 30 days; this is not a tenant filing duty, and the rule has defined scope. For details, see [[source:0c3202ab-c7ce-52ac-88d4-d003597b4468|Housing Law]] and [[source:39adf310-6ef9-5678-b19c-5daa873b2209|ANAF rental-registration procedure]].
 
-The accommodation sum under the Ukraine support programme is conditional and time-limited. It is not continuing private-rent reimbursement or an automatic payment; confirm current eligibility with the responsible authority. For details, see [[source:ea337feb-2e12-5f3c-81ff-a32bf769e573|the current implementation rules]].
+For the statutory cohort covered by the Ukraine support programme, accommodation support is limited to one period of three consecutive months: 750 lei per month for a single person or 2,000 lei per month for a family. Application follows the prescribed local-authority route, and conditions apply in months two and three, including rules for work-capable adults and children’s education subject to exceptions. This is a statutory flat-rate support measure, not reimbursement of actual rent, an automatic payment or an ongoing general rent subsidy. For details, see [[source:491030f2-f0c2-5494-a295-819a8ad82433|OUG 96/2024]] and [[source:ea337feb-2e12-5f3c-81ff-a32bf769e573|HG 1178/2024 implementation rules]].
 
 ### Claim coverage and editorial exclusions
 
@@ -35,9 +35,9 @@ Content:
 
 Правила підтримки передбачають тимчасове розміщення для визначених категорій переміщених людей, зокрема у призначених місцях. Розміщення залежить від програми, місцевих домовленостей і наявності місць. Це не гарантує конкретного міста, типу житла чи строку проживання. Уточніть поточні варіанти в IGI або місцевої влади. Докладніше: [[source:491030f2-f0c2-5494-a295-819a8ad82433|правила розміщення]].
 
-Приватна оренда — окрема домовленість між орендарем і власником. Перед підписанням перевірте письмовий договір, орендну плату, заставу, комунальні послуги та умови припинення. До договору можуть застосовуватися податкові правила реєстрації; перевірте актуальні вимоги ANAF. Докладніше: [[source:0c3202ab-c7ce-52ac-88d4-d003597b4468|Закон про житло]].
+Приватна оренда — окрема домовленість між орендарем і власником. Перед підписанням перевірте письмовий договір, плату, заставу, комунальні послуги та умови припинення. За застосовною податковою процедурою кваліфікований орендодавець реєструє договір оренди в ANAF протягом 30 днів; це не обов’язок орендаря, а правило має визначену сферу дії. Докладніше: [[source:0c3202ab-c7ce-52ac-88d4-d003597b4468|Закон про житло]] і [[source:39adf310-6ef9-5678-b19c-5daa873b2209|процедура реєстрації ANAF]].
 
-Виплата на проживання за програмою для людей з України обмежена в часі й умовах. Це не постійна компенсація приватної оренди й не автоматична виплата; уточніть чинні критерії у відповідального органу. Докладніше: [[source:ea337feb-2e12-5f3c-81ff-a32bf769e573|чинні правила реалізації]].
+Для визначеної законом категорії, охопленої програмою підтримки людей з України, допомога на проживання надається протягом одного періоду з трьох послідовних місяців: 750 леїв на місяць для однієї людини або 2 000 леїв на місяць для сім’ї. Заяву подають за передбаченою процедурою через місцеву владу; для другого й третього місяців діють умови, зокрема правила щодо працездатних дорослих і навчання дітей з урахуванням винятків. Це встановлена законом фіксована допомога, а не відшкодування фактичної орендної плати, автоматична виплата чи постійна загальна субсидія на оренду. Докладніше: [[source:491030f2-f0c2-5494-a295-819a8ad82433|OUG 96/2024]] і [[source:ea337feb-2e12-5f3c-81ff-a32bf769e573|правила HG 1178/2024]].
 
 ### Claim coverage and editorial exclusions
 
@@ -53,9 +53,9 @@ Content:
 
 Временное размещение может предоставляться по специальным программам с учётом местных условий и наличия мест. Это не гарантирует конкретный город, тип жилья, срок проживания или место в программе. Подробнее: [[source:491030f2-f0c2-5494-a295-819a8ad82433|правила размещения]].
 
-При частной аренде внимательно прочитайте письменный договор: проверьте плату, залог, коммунальные услуги и условия прекращения. Регистрация договора по налоговым правилам может быть обязанностью владельца жилья; проверьте актуальные инструкции ANAF. Подробнее: [[source:0c3202ab-c7ce-52ac-88d4-d003597b4468|Закон о жилье]].
+Частная аренда — отдельное соглашение между арендатором и владельцем. До подписания проверьте письменный договор, плату, залог, коммунальные услуги и условия прекращения. По применимой налоговой процедуре отвечающий условиям арендодатель регистрирует договор аренды в ANAF в течение 30 дней; это не обязанность арендатора, а правило имеет определённую сферу действия. Подробнее: [[source:0c3202ab-c7ce-52ac-88d4-d003597b4468|Закон о жилье]] и [[source:39adf310-6ef9-5678-b19c-5daa873b2209|процедура регистрации ANAF]].
 
-Выплата на проживание по программе для людей из Украины ограничена по времени и условиям. Это не постоянная компенсация частной аренды и не автоматическая выплата; уточните актуальные критерии у ответственного органа. Подробнее: [[source:ea337feb-2e12-5f3c-81ff-a32bf769e573|действующие правила реализации]].
+Для предусмотренной законом категории, охваченной программой поддержки людей из Украины, помощь на проживание предоставляется в течение одного периода из трёх последовательных месяцев: 750 леев в месяц для одного человека или 2 000 леев в месяц для семьи. Заявление подаётся по установленной процедуре через местные органы власти; для второго и третьего месяцев действуют условия, в том числе правила для трудоспособных взрослых и обучения детей с учётом исключений. Это фиксированная установленная законом поддержка, а не возмещение фактической аренды, автоматическая выплата или постоянная общая субсидия на аренду. Подробнее: [[source:491030f2-f0c2-5494-a295-819a8ad82433|OUG 96/2024]] и [[source:ea337feb-2e12-5f3c-81ff-a32bf769e573|правила HG 1178/2024]].
 
 ### Claim coverage and editorial exclusions
 

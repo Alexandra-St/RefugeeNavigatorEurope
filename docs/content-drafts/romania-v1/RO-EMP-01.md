@@ -15,7 +15,7 @@ Summary: Official job-search channels and conditional public employment services
 
 Content:
 
-You can search public vacancies through the National Agency for Employment (ANOFM) and its job-matching portal. EURES also shares European vacancy information. Listings change, and applying does not guarantee an interview or job. Check each employer’s requirements and application instructions. For details, see [[source:f4d17c86-d0f0-5f30-89a4-e41d22039c30|ANOFM vacancies]].
+You can search public vacancies through the National Agency for Employment (ANOFM) and its job-matching portal. Listings change, and applying does not guarantee an interview or job. Check each employer’s requirements and application instructions. For details, see [[source:f4d17c86-d0f0-5f30-89a4-e41d22039c30|ANOFM vacancies]]. EURES is a separate European channel for jobseekers to search vacancies and create a profile; see [[source:8b4add6a-c2bf-549f-8066-6bcd8a7e9789|EURES jobseeker services]].
 
 County employment agencies may provide registration, mediation, counselling or training under the rules for each service. Eligibility, documents and availability depend on your circumstances and local arrangements. Ask the relevant agency what it offers; registration does not guarantee a vacancy, course or placement. For details, see [[source:7ec35359-18dd-5720-87b7-b537bb7c90c5|ANOFM services]].
 
@@ -33,7 +33,7 @@ Summary: Офіційні канали пошуку роботи й умовні
 
 Content:
 
-Публічні вакансії можна шукати через Національне агентство зайнятості (ANOFM) та його портал підбору роботи. EURES також публікує інформацію про вакансії в Європі. Оголошення змінюються, а подання заявки не гарантує співбесіди чи працевлаштування. Перевіряйте вимоги роботодавця й інструкції до кожної вакансії. Докладніше: [[source:f4d17c86-d0f0-5f30-89a4-e41d22039c30|вакансії ANOFM]].
+Публічні вакансії можна шукати через Національне агентство зайнятості (ANOFM) та його портал підбору роботи. Оголошення змінюються, а подання заявки не гарантує співбесіди чи працевлаштування. Перевіряйте вимоги роботодавця й інструкції до кожної вакансії. Докладніше: [[source:f4d17c86-d0f0-5f30-89a4-e41d22039c30|вакансії ANOFM]]. EURES — окремий європейський канал, де шукачі роботи можуть шукати вакансії та створити профіль; див. [[source:8b4add6a-c2bf-549f-8066-6bcd8a7e9789|сервіси EURES для шукачів роботи]].
 
 Повітові агентства зайнятості можуть надавати реєстрацію, посередництво, консультації або навчання відповідно до правил кожної послуги. Право на послугу, документи та її доступність залежать від обставин і місцевих умов. Уточніть пропозиції в агентстві; реєстрація не гарантує вакансії, курсу чи працевлаштування. Докладніше: [[source:7ec35359-18dd-5720-87b7-b537bb7c90c5|послуги ANOFM]].
 
@@ -51,7 +51,7 @@ Summary: Официальные каналы поиска работы и усл
 
 Content:
 
-Вакансии можно искать через Национальное агентство занятости ANOFM и его портал подбора работы. EURES предоставляет дополнительную информацию о вакансиях и условиях жизни и работы в Европе. Объявления меняются, а отклик не гарантирует собеседование или трудоустройство. Подробнее: [[source:f4d17c86-d0f0-5f30-89a4-e41d22039c30|вакансии ANOFM]].
+Публичные вакансии можно искать через Национальное агентство занятости ANOFM и его портал подбора работы. Объявления меняются, а отклик не гарантирует собеседование или трудоустройство. Проверяйте требования работодателя и инструкции к каждой вакансии. Подробнее: [[source:f4d17c86-d0f0-5f30-89a4-e41d22039c30|вакансии ANOFM]]. EURES — отдельный европейский канал, где соискатели могут искать вакансии и создавать профиль; см. [[source:8b4add6a-c2bf-549f-8066-6bcd8a7e9789|сервисы EURES для соискателей]].
 
 Уездные агентства занятости могут предоставлять посредничество, консультации и обучение при соблюдении условий конкретной услуги. Требования, документы и доступность зависят от услуги и местных условий; регистрация не гарантирует курс или место работы. Подробнее: [[source:7ec35359-18dd-5720-87b7-b537bb7c90c5|услуги ANOFM]].
 
@@ -70,4 +70,5 @@ Qualification recognition and professional authorization are occupation-specific
 - `RO-JS-S06` → `7ec35359-18dd-5720-87b7-b537bb7c90c5`
 - `RO-JS-S07` → `840b25fe-edf3-5444-8c80-84c5afce98de`
 - `RO-JS-S08` → `34e1344d-a0c0-5efd-bb74-261a662a5244`
+- `RO-JS-S09` → `8b4add6a-c2bf-549f-8066-6bcd8a7e9789`
 - `RO-JS-S10` → `0320ee26-8918-5e10-8022-a64bd60d708c`

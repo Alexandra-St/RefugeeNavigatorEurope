@@ -15,11 +15,11 @@ Summary: Work authorization boundaries, employee protections and dated minimum-w
 
 Content:
 
-People holding Romanian temporary protection may work under the specific legal exception during the applicable period; the immigration rules also describe the covered former beneficiaries. Do not assume this automatically settles every employer-side formality or a right to work after protection ends. Confirm your status and the job’s requirements. For details, see [[source:49ae3d06-a9a3-5319-bf00-520c542d44c2|the temporary-protection work exception]].
+People in covered current or former temporary-protection categories may work under the specific statutory exception during the applicable temporary-protection period. This work exception does not itself grant or replace a residence permit, and it does not establish a right to work after the relevant period ends. Employer-side formalities and the conditions for the particular job still apply. For details, see [[source:49ae3d06-a9a3-5319-bf00-520c542d44c2|the temporary-protection work exception]].
 
-Romanian employment rules cover matters such as written employment terms, pay, working time, leave and workplace safety. Employers must follow the applicable Labour Code and occupational-safety duties. The exact terms depend on the contract, sector and law. A collective agreement may apply in some workplaces, but it is not universal. For details, see [[source:643a3def-a38f-59f5-b83e-c09284188c61|the Labour Code]].
+Romanian employment rules cover written employment terms, pay, working time and leave under the applicable Labour Code; workplace safety duties are set separately by occupational-safety law. A collective agreement may apply where the legal and workplace conditions are met, but it does not cover every worker automatically. For details, see [[source:643a3def-a38f-59f5-b83e-c09284188c61|the Labour Code]], [[source:0b139749-4942-575f-aad0-3a2d130a40f9|occupational-safety law]] and [[source:823a0fe1-53b7-57ee-ae9b-69719219eb3e|the social-dialogue law]].
 
-From 1 July 2026 the general gross minimum wage is set by HG 146/2026; construction has separate sector rules. Check the current rate and category before relying on it. For details, see [[source:8e63ea72-f1ca-52d0-bc87-d5fc2f4e25e8|the 2026 minimum-wage decision]].
+From 1 July 2026, the general minimum wage is 4,325 lei gross per month under HG 146/2026. A separate statutory construction-sector minimum is 4,582 lei gross per month under OUG 156/2024, Article LXIX. Gross pay is before deductions, not take-home pay; sector scope and rates are date-sensitive, so check the current rules for the job. For details, see [[source:8e63ea72-f1ca-52d0-bc87-d5fc2f4e25e8|HG 146/2026]] and [[source:e4283f53-f70c-5eff-a2c7-3a78fc1615d7|OUG 156/2024, Article LXIX]].
 
 ### Claim coverage and editorial exclusions
 
@@ -33,11 +33,11 @@ Summary: Межі права на роботу, трудові гарантії 
 
 Content:
 
-Для охоплених категорій нинішніх і колишніх бенефіціарів тимчасового захисту закон передбачає роботу без звичайного дозволу на роботу протягом визначеного періоду. Це не гарантує право працювати після завершення цього періоду й не означає автоматичного скасування всіх формальностей роботодавця. Перевірте свій статус і вимоги до конкретної роботи. Докладніше: [[source:49ae3d06-a9a3-5319-bf00-520c542d44c2|виняток для бенефіціарів TP]].
+Люди з охоплених категорій нинішніх або колишніх бенефіціарів тимчасового захисту можуть працювати на підставі спеціального законодавчого винятку протягом відповідного періоду тимчасового захисту. Цей виняток щодо роботи сам по собі не надає і не замінює посвідку на проживання та не встановлює права працювати після завершення відповідного періоду. Формальності роботодавця й умови конкретної роботи залишаються чинними. Докладніше: [[source:49ae3d06-a9a3-5319-bf00-520c542d44c2|виняток для бенефіціарів тимчасового захисту]].
 
-Працівники мають отримувати письмову інформацію про умови зайнятості та користуються захистом правил щодо оплати, робочого часу, відпустки й безпеки праці. Основу становлять Трудовий кодекс і законодавство з охорони праці. Колективна угода може застосовуватися в окремих випадках, але не до кожного працівника. Докладніше: [[source:643a3def-a38f-59f5-b83e-c09284188c61|Трудовий кодекс]].
+Румунські правила регулюють письмову інформацію про умови зайнятості, оплату, робочий час і відпустку відповідно до Трудового кодексу; обов’язки з безпеки праці окремо встановлює законодавство з охорони праці. Колективна угода може застосовуватися за наявності передбачених законом і робочим місцем умов, але не поширюється автоматично на кожного працівника. Докладніше: [[source:643a3def-a38f-59f5-b83e-c09284188c61|Трудовий кодекс]], [[source:0b139749-4942-575f-aad0-3a2d130a40f9|законодавство з охорони праці]] і [[source:823a0fe1-53b7-57ee-ae9b-69719219eb3e|закон про соціальний діалог]].
 
-З 1 липня 2026 року загальну мінімальну зарплату до оподаткування встановлено постановою HG 146/2026; для будівництва діють окремі правила. Перевірте чинну ставку й умови для своєї роботи. Докладніше: [[source:8e63ea72-f1ca-52d0-bc87-d5fc2f4e25e8|рішення про мінімальну зарплату на 2026 рік]].
+З 1 липня 2026 року загальна мінімальна зарплата становить 4 325 леїв брутто на місяць відповідно до HG 146/2026. Окрема законодавча мінімальна ставка для будівництва становить 4 582 леї брутто на місяць відповідно до OUG 156/2024, стаття LXIX. Брутто — це сума до відрахувань, а не сума на руки; галузева сфера дії та ставки залежать від дати, тому перевіряйте чинні правила для конкретної роботи. Докладніше: [[source:8e63ea72-f1ca-52d0-bc87-d5fc2f4e25e8|HG 146/2026]] і [[source:e4283f53-f70c-5eff-a2c7-3a78fc1615d7|OUG 156/2024, стаття LXIX]].
 
 ### Claim coverage and editorial exclusions
 
@@ -51,11 +51,11 @@ Summary: Границы права на работу, трудовые гара�
 
 Content:
 
-Для определённых нынешних и бывших бенефициаров временной защиты закон предусматривает работу без обычного разрешения на работу в установленный период. Это отдельный вопрос от права проживания и не означает права работать после окончания этого периода. Подробнее: [[source:49ae3d06-a9a3-5319-bf00-520c542d44c2|исключение для бенефициаров TP]].
+Люди из охватываемых категорий нынешних или бывших бенефициаров временной защиты могут работать на основании специального законодательного исключения в течение соответствующего периода временной защиты. Это исключение в отношении работы само по себе не предоставляет и не заменяет вид на жительство и не устанавливает права работать после окончания соответствующего периода. Формальности работодателя и условия конкретной работы сохраняются. Подробнее: [[source:49ae3d06-a9a3-5319-bf00-520c542d44c2|исключение для бенефициаров временной защиты]].
 
-Правила трудоустройства регулируют письменную информацию об условиях работы, оплату, рабочее время, отпуск и безопасность труда. Коллективные соглашения могут применяться в отдельных случаях, но не распространяются автоматически на каждого работника. Подробнее: [[source:643a3def-a38f-59f5-b83e-c09284188c61|Трудовой кодекс]].
+Румынские правила регулируют письменную информацию об условиях занятости, оплату, рабочее время и отпуск согласно Трудовому кодексу; обязанности по безопасности труда отдельно установлены законодательством об охране труда. Коллективный договор может применяться при соблюдении предусмотренных законом и на рабочем месте условий, но автоматически не распространяется на каждого работника. Подробнее: [[source:643a3def-a38f-59f5-b83e-c09284188c61|Трудовой кодекс]], [[source:0b139749-4942-575f-aad0-3a2d130a40f9|законодательство об охране труда]] и [[source:823a0fe1-53b7-57ee-ae9b-69719219eb3e|закон о социальном диалоге]].
 
-С 1 июля 2026 года общий минимальный размер оплаты труда до налогов установлен постановлением HG 146/2026; для строительства действуют отдельные правила. Проверяйте текущую ставку и условия для своей работы. Подробнее: [[source:8e63ea72-f1ca-52d0-bc87-d5fc2f4e25e8|решение о минимальной зарплате на 2026 год]].
+С 1 июля 2026 года общая минимальная зарплата составляет 4 325 леев брутто в месяц по HG 146/2026. Отдельная установленная законом минимальная ставка для строительства составляет 4 582 лея брутто в месяц по OUG 156/2024, статья LXIX. Брутто — сумма до удержаний, а не на руки; отраслевой охват и ставки зависят от даты, поэтому проверяйте действующие правила для конкретной работы. Подробнее: [[source:8e63ea72-f1ca-52d0-bc87-d5fc2f4e25e8|HG 146/2026]] и [[source:e4283f53-f70c-5eff-a2c7-3a78fc1615d7|OUG 156/2024, статья LXIX]].
 
 ### Claim coverage and editorial exclusions
 
@@ -64,6 +64,7 @@ Minimum-wage figures are date-sensitive, gross amounts and may have sector-speci
 ## Editorial source set
 
 - `RO-WR-S05` → `54066df3-de04-565d-bc6d-8a211b389c8c`
+- `RO-WR-S06` → `e4283f53-f70c-5eff-a2c7-3a78fc1615d7`
 
 - `RO-WR-S01` → `49ae3d06-a9a3-5319-bf00-520c542d44c2`
 - `RO-WR-S02` → `643a3def-a38f-59f5-b83e-c09284188c61`
