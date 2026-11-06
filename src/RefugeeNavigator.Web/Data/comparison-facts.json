@@ -136,7 +136,8 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "a1509aff-d7fa-5e45-93ee-530d44b2101e",
-                "bf463b9b-1bac-5914-ae1d-64fce762a7dc"
+                "bf463b9b-1bac-5914-ae1d-64fce762a7dc",
+                "38918d42-3122-587a-b06a-a70fd99520bc"
               ],
               "Values": {
                 "en": "Temporary refuge is Slovakia’s implementation of EU temporary protection for defined cohorts; it is not automatic from departure alone. The EU military-obligation rule has a narrow same-state continuity exception.",
@@ -1860,7 +1861,9 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "88261d23-1430-5fda-bd4c-666ba5bc0ac9",
-                "ab4942bd-3d65-56d0-bac6-fa3a247a9a65"
+                "ab4942bd-3d65-56d0-bac6-fa3a247a9a65",
+                "5604f5aa-f855-56a1-a76a-05e0bc267711",
+                "84ac063a-2b96-5676-b97c-ab372f94fd75"
               ],
               "Values": {
                 "en": "Temporary refuge alone does not create public-insurance membership. The separate §9h necessary-care reimbursement route may apply only to a relevant temporary-refuge holder not publicly insured in Slovakia and not covered by another EU Member State’s public health-insurance system; adult and child scope differs.",
@@ -2001,7 +2004,8 @@
               "OfficialSourceIds": [
                 "ab4942bd-3d65-56d0-bac6-fa3a247a9a65",
                 "5604f5aa-f855-56a1-a76a-05e0bc267711",
-                "47be309d-df73-563f-9833-5dbe138239f0"
+                "47be309d-df73-563f-9833-5dbe138239f0",
+                "88261d23-1430-5fda-bd4c-666ba5bc0ac9"
               ],
               "Values": {
                 "en": "Current DOČASNÉ ÚTOČISKO status/document proof and supported legacy A4 proof are status/reimbursement evidence, not a Slovak public-health-insurance card; provider billing and employment enrolment remain separate.",
@@ -2289,8 +2293,7 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "de4856af-6e9b-5754-9a0a-6beb8e2e3727",
-                "6422bbd8-e3d1-51c7-9487-a3680b24a07d"
+                "de4856af-6e9b-5754-9a0a-6beb8e2e3727"
               ],
               "Values": {
                 "en": "Section 68 facility accommodation ordinarily lasts up to 60 days from first grant. Vulnerable groups: people aged 65+, a single parent caring for a child under five, or a court-appointed caregiver caring for a child under five. A vulnerable person may request a written extension for up to six months at a time; repeat requests are possible subject to capacity. A person already housed must apply at least 15 days before expiry. No extension/place is guaranteed.",
@@ -3439,7 +3442,8 @@
                 "0fce5bcf-9acd-5ede-bd57-f880b05a1ce4",
                 "65b6de84-ab98-528b-97d4-9e29dcb0101b",
                 "16837ec6-2b25-5643-b854-d3e478623c96",
-                "532001ba-80ea-5b9b-b4e8-c8feed35a661"
+                "532001ba-80ea-5b9b-b4e8-c8feed35a661",
+                "11f5ef69-4ca5-5306-b447-7be40502d021"
               ],
               "Values": {
                 "en": "Temporary refuge alone does not establish ordinary child or parental allowance. Childcare allowance has a separate special-protection route and conditions; cross-border coordination may affect individual cases.",
