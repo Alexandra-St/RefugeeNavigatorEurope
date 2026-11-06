@@ -71,7 +71,7 @@ public sealed class CountryComparisonTests
         Assert.Equal(163, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Approved));
         Assert.Equal(29, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Draft));
         Assert.All(facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Where(fact => fact.CountrySlug is not ("sweden" or "netherlands" or "romania")), fact => Assert.Equal(ComparisonFactStatus.Approved, fact.Status));
-        Assert.Equal(386, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Sum(fact => fact.OfficialSourceIds.Count));
+        Assert.Equal(392, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Sum(fact => fact.OfficialSourceIds.Count));
         Assert.Equal(64, catalog.InformationEntries.Count);
         Assert.Equal(192, catalog.InformationEntryTranslations.Count);
         Assert.Equal(165, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));

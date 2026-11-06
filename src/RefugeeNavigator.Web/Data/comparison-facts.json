@@ -898,7 +898,8 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "f4d17c86-d0f0-5f30-89a4-e41d22039c30",
-                "e75b4f4d-cf11-5234-93b2-3f404af9a66f"
+                "e75b4f4d-cf11-5234-93b2-3f404af9a66f",
+                "8b4add6a-c2bf-549f-8066-6bcd8a7e9789"
               ],
               "Values": {
                 "en": "ANOFM publishes vacancies and operates a job-matching portal; EURES provides another vacancy channel. Listings change and do not guarantee a job.",
@@ -1022,7 +1023,8 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "30cb19e5-863b-5851-9261-dbd011545668",
-                "7ec35359-18dd-5720-87b7-b537bb7c90c5"
+                "7ec35359-18dd-5720-87b7-b537bb7c90c5",
+                "34e1344d-a0c0-5efd-bb74-261a662a5244"
               ],
               "Values": {
                 "en": "ANOFM county agencies and EURES have distinct public employment roles; check the appropriate service and location.",
@@ -2935,7 +2937,11 @@
               "OfficialSourceIds": [
                 "4c675fc1-cb1b-5315-84f0-969583b5e846",
                 "895a034d-4b7a-5b32-8089-c249d33b34a1",
-                "f90cc1cb-0654-5539-ba74-c5e8d099ff30"
+                "f90cc1cb-0654-5539-ba74-c5e8d099ff30",
+                "695597de-0102-535c-958f-fcb06159773d",
+                "b8c201b0-ab0a-502e-ac96-37cd7b2f5d13",
+                "4944c633-304a-5114-8213-2f843879df73",
+                "6ddd1604-702c-5735-a7c8-059202dd424a"
               ],
               "Values": {
                 "en": "VMI and other schemes use different forms, evidence and responsible agencies.",

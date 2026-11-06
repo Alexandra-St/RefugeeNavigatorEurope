@@ -195,6 +195,35 @@ public sealed class RomaniaContentIntegrationTests
             Assert.True(wage.Values[language].Contains("gross", StringComparison.OrdinalIgnoreCase)
                 || wage.Values[language].Contains("брутто", StringComparison.OrdinalIgnoreCase));
         });
+        AssertRomaniaFactSources(comparison, catalog, "employment-vacancies", "54197f49-594b-51d2-a40c-2fcded05f791",
+            "8b4add6a-c2bf-549f-8066-6bcd8a7e9789");
+        AssertRomaniaFactSources(comparison, catalog, "employment-institutions", "54197f49-594b-51d2-a40c-2fcded05f791",
+            "34e1344d-a0c0-5efd-bb74-261a662a5244");
+        AssertRomaniaFactSources(comparison, catalog, "social-application", "97f02ab3-3352-597b-ad48-11ebf19993c2",
+            "695597de-0102-535c-958f-fcb06159773d",
+            "b8c201b0-ab0a-502e-ac96-37cd7b2f5d13",
+            "4944c633-304a-5114-8213-2f843879df73",
+            "6ddd1604-702c-5735-a7c8-059202dd424a");
+    }
+
+    private static void AssertRomaniaFactSources(
+        ComparisonFactCatalog comparison,
+        CatalogData catalog,
+        string aspectId,
+        string articleId,
+        params string[] expectedSourceIds)
+    {
+        var aspect = Assert.Single(comparison.Topics.SelectMany(topic => topic.Aspects), item => item.Id == aspectId);
+        var fact = Assert.Single(aspect.Facts, item => item.CountrySlug == "romania");
+        Assert.Equal(Guid.Parse(articleId), fact.InformationEntryId);
+        Assert.Equal("Draft", fact.Status.ToString());
+        Assert.True(fact.IsAvailable);
+        foreach (var sourceId in expectedSourceIds)
+        {
+            var source = sourceById(catalog, Guid.Parse(sourceId));
+            Assert.Equal(fact.InformationEntryId, source.InformationEntryId);
+            Assert.Contains(source.Id, fact.OfficialSourceIds);
+        }
     }
 
     private static OfficialSource sourceById(CatalogData catalog, Guid id) =>
