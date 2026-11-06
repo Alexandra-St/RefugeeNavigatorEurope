@@ -1,6 +1,6 @@
 # Slovakia Final Comparison Fact Source Audit
 
-**Audit baseline:** `1ffce00afa13db11bd26819362ee568f02b87a15`  
+**Audit baseline:** `1ffce00afa13db11bd26819362ee568f02b87a15`
 **Verdict:** `NEEDS FURTHER CORRECTION`
 
 ## Summary
