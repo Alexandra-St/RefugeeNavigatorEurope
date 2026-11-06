@@ -1,6 +1,6 @@
 # Slovakia Final Five-Fact Source Audit
 
-**Audit baseline:** `a6485dc880888186c4e64dd8ca49b63798d9a38a`  
+**Audit baseline:** `a6485dc880888186c4e64dd8ca49b63798d9a38a`
 **Verdict:** `READY FOR OWNER ACCEPTANCE`
 
 ## Summary
