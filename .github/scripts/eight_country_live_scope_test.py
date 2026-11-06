@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Authenticated, read-only live check for the accepted seven-country scope."""
+"""Authenticated, read-only live check for the accepted eight-country scope."""
 from __future__ import annotations
 
 import os
@@ -7,15 +7,25 @@ import sys
 import time
 from collections import Counter
 from typing import Callable
-from urllib.parse import quote_plus
 
 import netherlands_live_hold_test as live
 
-COUNTRIES = ("denmark", "germany", "poland", "czechia", "spain", "netherlands", "sweden")
+COUNTRIES = ("denmark", "germany", "poland", "czechia", "spain", "netherlands", "sweden", "romania")
 CATEGORIES = ("temporary-protection", "employment", "healthcare", "housing", "education", "social-assistance")
-SEARCH_RESULT_COUNTS = {"czechia": 8, "spain": 8, "netherlands": 7, "sweden": 8}
+SEARCH_RESULT_COUNTS = {"czechia": 8, "spain": 8, "netherlands": 7, "sweden": 8, "romania": 8}
 LANGUAGES = ("uk", "en", "ru")
+COUNTRY_NAMES = {"en": "Romania", "uk": "Румунія", "ru": "Румыния"}
 SWEDEN_NAMES = {"en": "Sweden", "uk": "Швеція", "ru": "Швеция"}
+ROMANIA_ASPECTS_BY_CATEGORY = {
+    "temporary-protection": ("protection-scheme", "protection-application", "protection-dates",
+                             "residence-routes", "residence-conditions", "residence-filing"),
+    "employment": ("employment-vacancies", "employment-institutions", "employment-assistance-conditions",
+                   "work-permission", "work-employer-duties", "work-minimum-pay"),
+    "healthcare": ("healthcare-access", "healthcare-proof", "healthcare-urgent"),
+    "housing": ("housing-initial", "housing-private-rental", "housing-financial-support"),
+    "education": ("education-school-enrolment", "education-pupil-language", "education-higher-admission"),
+    "social-assistance": ("social-subsistence", "social-application", "social-child-benefits"),
+}
 NOT_FOUND = {
     "uk": "Сторінку не знайдено",
     "en": "Page not found",
@@ -36,14 +46,6 @@ class Reporter:
 
 def nodes(root: live.Element, tag: str, class_name: str) -> list[live.Element]:
     return list(root.descendants(tag, class_name))
-
-
-def visible_not_found(response: live.Response, language: str, forbidden_class: str) -> bool:
-    root = live.parse_document(response.body)
-    has_not_found = any(NOT_FOUND[language].casefold() in heading.text().casefold()
-                        for heading in root.descendants("h1"))
-    page_available = bool(nodes(root, "main", forbidden_class))
-    return response.status == 404 or (response.status == 200 and has_not_found and not page_available)
 
 
 def country_card_slugs(body: str) -> list[str]:
@@ -104,12 +106,12 @@ def run_checks(base_url: str, username: str, password: str,
     reporter.check("Authenticated Home", "HTTP 200", home_response is not None and home_response.status == 200,
                    f"HTTP {home_response.status}" if home_response else "no response")
     if home_response is None or home_response.status != 200:
-        print(f"Seven-country live scope verification: {reporter.count} checks; FAIL")
+        print(f"Eight-country live scope verification: {reporter.count} checks; FAIL")
         return False
 
     slugs = country_card_slugs(home_response.body)
-    reporter.check("Home country cards", "exactly seven accepted countries", Counter(slugs) == Counter(COUNTRIES),
-                   f"{len(slugs)} country card(s); Sweden {'present' if 'sweden' in slugs else 'absent'}")
+    reporter.check("Home country cards", "exactly eight accepted countries", Counter(slugs) == Counter(COUNTRIES),
+                   f"{len(slugs)} country card(s); Romania {'present' if 'romania' in slugs else 'absent'}")
 
     en_cookie = set_language(client, "en", reporter) if client else None
     if client is None:
@@ -118,37 +120,40 @@ def run_checks(base_url: str, username: str, password: str,
         reporter.check("EN language setup", "same-origin redirect and Secure cookie", en_cookie is not None,
                        "cookie set" if en_cookie else f"HTTP {language_response.status}; cookie/redirect missing")
     if not en_cookie:
-        print(f"Seven-country live scope verification: {reporter.count} checks; FAIL")
+        print(f"Eight-country live scope verification: {reporter.count} checks; FAIL")
         return False
 
     for slug in COUNTRIES:
         response = send(f"/countries/{slug}", en_cookie)
         root = live.parse_document(response.body)
         has_heading = any(heading.text().strip() for heading in root.descendants("h1"))
-        reporter.check(f"Country route {slug}", "HTTP 200 with heading", response.status == 200 and has_heading,
-                       f"HTTP {response.status}; {'heading present' if has_heading else 'heading missing'}")
-        article_counts: Counter[str] = Counter()
+        page_ok = response.status == 200 and has_heading and bool(nodes(root, "main", "country-page"))
+        reporter.check(f"Country route {slug}", "HTTP 200 with country page", page_ok,
+                       f"HTTP {response.status}; {'country page present' if page_ok else 'country page missing'}")
+        article_total = 0
         for category in CATEGORIES:
             page = send(f"/countries/{slug}/categories/{category}", en_cookie)
             page_root = live.parse_document(page.body)
-            category_ok = page.status == 200 and any(h.text().strip() for h in page_root.descendants("h1"))
-            reporter.check(f"Category route {slug}/{category}", "HTTP 200 with heading", category_ok,
-                           f"HTTP {page.status}; {'heading present' if category_ok else 'page unavailable'}")
-            article_counts[category] += len(nodes(page_root, "article", "information-entry"))
+            category_ok = page.status == 200 and bool(nodes(page_root, "main", "category-page"))
+            count = len(nodes(page_root, "article", "information-entry"))
+            article_total += count
+            reporter.check(f"Category route {slug}/{category}", "HTTP 200 with category page", category_ok,
+                           f"HTTP {page.status}; {count} accepted article(s)")
         expected_articles = SEARCH_RESULT_COUNTS.get(slug, 8)
-        reporter.check(f"Category verified articles {slug} (EN)", str(expected_articles),
-                       sum(article_counts.values()) == expected_articles,
-                       f"{sum(article_counts.values())} article(s)")
+        reporter.check(f"Category accepted articles {slug} (EN)", str(expected_articles),
+                       article_total == expected_articles, f"{article_total} article(s)")
 
     search_form = send("/search", en_cookie)
     search_values = [value for value in select_values(search_form.body, "country") if value]
-    reporter.check("Search country filter", "exactly seven accepted countries", Counter(search_values) == Counter(COUNTRIES),
-                   f"{len(search_values)} country option(s); Sweden {'present' if 'sweden' in search_values else 'absent'}")
+    reporter.check("Search country filter", "exactly eight accepted countries",
+                   search_form.status == 200 and Counter(search_values) == Counter(COUNTRIES),
+                   f"HTTP {search_form.status}; {len(search_values)} country option(s)")
     compare_form = send("/compare", en_cookie)
     for name in ("country1", "country2"):
         values = [value for value in select_values(compare_form.body, name) if value]
-        reporter.check(f"Compare selector {name}", "exactly seven accepted countries", Counter(values) == Counter(COUNTRIES),
-                       f"{len(values)} country option(s); Sweden {'present' if 'sweden' in values else 'absent'}")
+        reporter.check(f"Compare selector {name}", "exactly eight accepted countries",
+                       compare_form.status == 200 and Counter(values) == Counter(COUNTRIES),
+                       f"HTTP {compare_form.status}; {len(values)} country option(s)")
 
     for language in LANGUAGES:
         cookie = en_cookie if language == "en" else (set_language(client, language, reporter) if client else None)
@@ -157,36 +162,41 @@ def run_checks(base_url: str, username: str, password: str,
             cookie = live.secure_culture_cookie(response, base_url)
             reporter.check(f"{language.upper()} language setup", "same-origin redirect and Secure cookie", cookie is not None,
                            "cookie set" if cookie else f"HTTP {response.status}; cookie/redirect missing")
+        if not cookie:
+            continue
+
+        # Romania: localized country route, all six category pages, and exactly eight articles.
+        country = send("/countries/romania", cookie)
+        country_root = live.parse_document(country.body)
+        headings = [live.normalized(h.text()) for h in country_root.descendants("h1")]
+        country_ok = country.status == 200 and bool(nodes(country_root, "main", "country-page")) \
+            and live.normalized(COUNTRY_NAMES[language]) in headings
+        reporter.check(f"Romania country route ({language.upper()})", f"HTTP 200 and {COUNTRY_NAMES[language]}",
+                       country_ok, f"HTTP {country.status}; localized heading {'present' if country_ok else 'missing'}")
+        romania_article_total = 0
+        for category in CATEGORIES:
+            page = send(f"/countries/romania/categories/{category}", cookie)
+            page_root = live.parse_document(page.body)
+            page_articles = nodes(page_root, "article", "information-entry")
+            romania_article_total += len(page_articles)
+            category_ok = page.status == 200 and bool(nodes(page_root, "main", "category-page"))
+            reporter.check(f"Romania category {category} ({language.upper()})", "HTTP 200 with category page",
+                           category_ok, f"HTTP {page.status}; {len(page_articles)} accepted article(s)")
+        reporter.check(f"Romania accepted articles in Category ({language.upper()})", "exactly eight",
+                       romania_article_total == 8, f"{romania_article_total} article(s)")
+
         for slug, expected in SEARCH_RESULT_COUNTS.items():
             response = send(f"/search?country={slug}", cookie)
             count = len(nodes(live.parse_document(response.body), "article", "result-card"))
             reporter.check(f"Search accepted articles {slug} ({language.upper()})", str(expected),
                            response.status == 200 and count == expected,
                            f"HTTP {response.status}; {count} result(s)")
-        if not cookie:
-            continue
 
-        sweden_page = send("/countries/sweden", cookie)
-        sweden_root = live.parse_document(sweden_page.body)
-        reporter.check(f"Sweden country route ({language.upper()})", "HTTP 200 with country page",
-                       sweden_page.status == 200 and bool(nodes(sweden_root, "main", "country-page")),
-                       f"HTTP {sweden_page.status}; {'country page present' if nodes(sweden_root, 'main', 'country-page') else 'country page missing'}")
-        sweden_article_total = 0
-        for category in CATEGORIES:
-            page = send(f"/countries/sweden/categories/{category}", cookie)
-            page_root = live.parse_document(page.body)
-            category_ok = page.status == 200 and bool(nodes(page_root, "main", "category-page"))
-            count = len(nodes(page_root, "article", "information-entry"))
-            sweden_article_total += count
-            reporter.check(f"Sweden category route {category} ({language.upper()})", "HTTP 200 with category page",
-                           category_ok, f"HTTP {page.status}; {count} verified article(s)")
-        reporter.check(f"Sweden verified category articles ({language.upper()})", "8 accepted articles across categories",
-                       sweden_article_total == 8, f"{sweden_article_total} article(s)")
-
+        # Sweden positive comparison and its intentionally unresolved social-child-benefits fact.
         sweden_compare = send("/compare?country1=sweden&country2=denmark&category=temporary-protection", cookie)
         sweden_compare_root = live.parse_document(sweden_compare.body)
         sweden_panels = nodes(sweden_compare_root, "article", "structured-country")
-        sweden_heading = any("Sweden" in h.text() or "Швеція" in h.text() or "Швеция" in h.text()
+        sweden_heading = any(live.normalized(h.text()) == live.normalized(SWEDEN_NAMES[language])
                              for panel in sweden_panels for h in panel.descendants("h5"))
         sweden_source_links = [a for panel in sweden_panels for group in panel.descendants("details", "fact-sources")
                                for a in group.descendants("a") if a.attrs.get("href", "").startswith("https://")]
@@ -205,14 +215,40 @@ def run_checks(base_url: str, username: str, password: str,
                        "unavailable evidence-gap placeholder with no source group",
                        compare.status == 200 and suppressed,
                        "unresolved placeholder; no sources" if suppressed else "held fact leaked or panel missing")
-    for slug in ("czechia", "spain", "netherlands"):
+
+        # All 24 Romania facts must render as available approved answers with HTTPS source disclosure.
+        rendered_aspects = 0
+        romania_compare_ok = True
+        romania_source_links = 0
+        unavailable_text = live.normalized(live.UNAVAILABLE_TEXT[language])
+        for category, aspect_ids in ROMANIA_ASPECTS_BY_CATEGORY.items():
+            response = send(f"/compare?country1=romania&country2=denmark&category={category}", cookie)
+            root = live.parse_document(response.body)
+            valid_compare = response.status == 200 and not nodes(root, "p", "selection-message")
+            for aspect_id in aspect_ids:
+                panel = fact_panel(root, aspect_id, COUNTRY_NAMES[language])
+                panel_text = live.normalized(panel.text()) if panel else ""
+                groups = list(panel.descendants("details", "fact-sources")) if panel else []
+                links = [a.attrs.get("href", "") for group in groups for a in group.descendants("a")] \
+                    if panel else []
+                has_approved_answer = panel is not None and bool(panel_text) and unavailable_text not in panel_text
+                has_sources = bool(groups) and bool(links) and all(url.startswith("https://") for url in links)
+                romania_compare_ok &= valid_compare and has_approved_answer and has_sources
+                romania_source_links += len(links)
+                rendered_aspects += int(panel is not None)
+        reporter.check(f"Romania Compare facts ({language.upper()})", "24 available answers with source disclosures",
+                       romania_compare_ok and rendered_aspects == 24,
+                       f"{rendered_aspects}/24 aspect panels; {romania_source_links} HTTPS source link(s)")
+
+    for slug in ("czechia", "spain", "netherlands", "romania"):
         response = send(f"/compare?country1={slug}&country2=denmark&category=employment", en_cookie)
         root = live.parse_document(response.body)
-        selectable = response.status == 200 and not nodes(root, "p", "selection-message") and bool(nodes(root, "article", "structured-country"))
+        selectable = response.status == 200 and not nodes(root, "p", "selection-message") \
+            and bool(nodes(root, "article", "structured-country"))
         reporter.check(f"Compare accepted country {slug}", "country selectable and comparison rendered", selectable,
                        f"HTTP {response.status}; {'comparison rendered' if selectable else 'selection unavailable'}")
 
-    print(f"Seven-country live scope verification: {reporter.count} checks; {'FAIL' if reporter.failed else 'PASS'}")
+    print(f"Eight-country live scope verification: {reporter.count} checks; {'FAIL' if reporter.failed else 'PASS'}")
     return not reporter.failed
 
 
