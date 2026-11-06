@@ -71,7 +71,13 @@ public sealed class CountryComparisonTests
         Assert.Equal(187, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Approved));
         Assert.Equal(29, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Draft));
         Assert.All(facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Where(fact => fact.CountrySlug is not ("sweden" or "netherlands" or "slovakia")), fact => Assert.Equal(ComparisonFactStatus.Approved, fact.Status));
-        Assert.Equal(440, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Sum(fact => fact.OfficialSourceIds.Count));
+        var sourcesById = catalog.OfficialSources.ToDictionary(source => source.Id);
+        Assert.All(facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts), fact =>
+            Assert.All(fact.OfficialSourceIds, sourceId =>
+            {
+                Assert.True(sourcesById.TryGetValue(sourceId, out var source), $"Missing comparison source {sourceId}.");
+                Assert.Equal(fact.InformationEntryId, source!.InformationEntryId);
+            }));
         Assert.Equal(72, catalog.InformationEntries.Count);
         Assert.Equal(216, catalog.InformationEntryTranslations.Count);
         Assert.Equal(189, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
