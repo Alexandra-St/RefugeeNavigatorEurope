@@ -384,6 +384,8 @@
   <data name="Guide.Optional" xml:space="preserve"><value>Необязательная подготовка</value></data>
   <data name="Guide.Unavailable" xml:space="preserve"><value>Это руководство недоступно.</value></data>
   <data name="Guide.Step" xml:space="preserve"><value>Шаг</value></data>
+  <data name="Country.Slovakia" xml:space="preserve"><value>Словакия</value></data>
+  <data name="Country.Slovakia.In" xml:space="preserve"><value>в Словакии</value></data>
   <data name="Country.Romania" xml:space="preserve"><value>Румыния</value></data>
   <data name="Country.Romania.In" xml:space="preserve"><value>в Румынии</value></data>
 </root>

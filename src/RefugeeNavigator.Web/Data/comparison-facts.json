@@ -128,6 +128,21 @@
                 "uk": "Тимчасовий захист ЄС поширюється на визначені категорії; закон Румунії також встановлює національні категорії. Умови та правило 2026 року щодо військового обов’язку залежать від категорії; винятки конкретні.",
                 "ru": "Временная защита ЕС действует для определённых категорий; закон Румынии также устанавливает национальные категории. Условия и правило 2026 года о воинской обязанности зависят от категории; исключения конкретны."
               }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "09d72fd2-1fa7-51a2-886b-9ebd93f4678d",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "a1509aff-d7fa-5e45-93ee-530d44b2101e",
+                "38918d42-3122-587a-b06a-a70fd99520bc"
+              ],
+              "Values": {
+                "en": "Temporary refuge is Slovakia’s implementation of EU temporary protection for defined cohorts; it is not automatic from departure alone. The EU military-obligation rule has a narrow same-state continuity exception.",
+                "uk": "Тимчасове укриття є словацьким механізмом тимчасового захисту ЄС для визначених категорій; сам виїзд не надає його автоматично. Умова ЄС щодо військового обов’язку має вузький виняток для безперервного захисту в тій самій державі.",
+                "ru": "Временное убежище — словацкий механизм временной защиты ЕС для определённых категорий; один лишь выезд не даёт его автоматически. Условие ЕС о воинской обязанности имеет узкое исключение для непрерывной защиты в том же государстве."
+              }
             }
           ]
         },
@@ -255,6 +270,21 @@
                 "en": "Apply through IGI using its current intake instructions; expect an in-person step and photograph. No universal appointment or processing time is established.",
                 "uk": "Подайте заяву до IGI за актуальними інструкціями; передбачено особистий етап і фотографування. Загального правила про запис чи строк розгляду не встановлено.",
                 "ru": "Подайте заявление в IGI по актуальным инструкциям; предусмотрен личный этап и фотографирование. Общее правило о записи или сроке рассмотрения не установлено."
+              }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "09d72fd2-1fa7-51a2-886b-9ebd93f4678d",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "a1509aff-d7fa-5e45-93ee-530d44b2101e",
+                "38918d42-3122-587a-b06a-a70fd99520bc"
+              ],
+              "Values": {
+                "en": "Reserve the current DOČASNÉ ÚTOČISKO service; its TP booking horizon is 21 days. The electronic declaration is separate and is not stated to be mandatory.",
+                "uk": "Запишіться на чинну послугу DOČASNÉ ÚTOČISKO; горизонт запису для тимчасового укриття — 21 день. Електронна декларація окрема й не названа обов’язковою.",
+                "ru": "Запишитесь на действующую услугу DOČASNÉ ÚTOČISKO; горизонт записи для временного убежища — 21 день. Электронная декларация отдельна и не названа обязательной."
               }
             }
           ]
@@ -385,6 +415,21 @@
                 "en": "The EU scheme is extended to 4 March 2028; the extension applies from 5 March 2027.",
                 "uk": "Схему ЄС продовжено до 4 березня 2028 року; продовження застосовується з 5 березня 2027 року.",
                 "ru": "Схема ЕС продлена до 4 марта 2028 года; продление применяется с 5 марта 2027 года."
+              }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "09d72fd2-1fa7-51a2-886b-9ebd93f4678d",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "a1509aff-d7fa-5e45-93ee-530d44b2101e",
+                "38918d42-3122-587a-b06a-a70fd99520bc"
+              ],
+              "Values": {
+                "en": "The scheme/status extension runs through 4 March 2028, but an individual document’s printed validity is separate and should be checked through the Ministry validation service.",
+                "uk": "Схема/статус продовжені до 4 березня 2028 року, але друкований строк конкретного документа є окремим; перевірте його через сервіс міністерства.",
+                "ru": "Схема/статус продлены до 4 марта 2028 года, но напечатанный срок конкретного документа рассматривается отдельно; проверьте его через сервис министерства."
               }
             }
           ]
@@ -524,6 +569,21 @@
                 "uk": "У Румунії є маршрути для роботи, навчання, сім’ї та довгострокового проживання; для роботи існує окреме звільнення від візи для бенефіціарів тимчасового захисту.",
                 "ru": "В Румынии есть маршруты для работы, учёбы, семьи и долгосрочного проживания; для работы предусмотрено отдельное освобождение от визы для бенефициаров временной защиты."
               }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "53272a98-60f0-507d-be15-eea36295bdf2",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "764171d4-60e3-52a1-818c-d893f6388d68",
+                "0ad1bc01-1675-5d83-86d5-a410cdcda966"
+              ],
+              "Values": {
+                "en": "Purpose-specific temporary residence and the Blue Card remain separate routes. Section 131o is a limited transition process, not automatic conversion.",
+                "uk": "Тимчасове проживання за окремими цілями та Блакитна картка є різними шляхами. §131o — обмежена перехідна процедура, а не автоматична зміна статусу.",
+                "ru": "Временное проживание по отдельным целям и Голубая карта — разные маршруты. §131o — ограниченная переходная процедура, а не автоматическая смена статуса."
+              }
             }
           ]
         },
@@ -651,6 +711,21 @@
                 "uk": "Для роботи, навчання, сім’ї та довгострокового проживання діють різні умови; правило для роботи після TP має визначені законом межі.",
                 "ru": "Для работы, учёбы, семьи и долгосрочного проживания действуют разные условия; правило для работы после TP ограничено законом."
               }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "53272a98-60f0-507d-be15-eea36295bdf2",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "764171d4-60e3-52a1-818c-d893f6388d68",
+                "0ad1bc01-1675-5d83-86d5-a410cdcda966"
+              ],
+              "Values": {
+                "en": "The pre-end §131o route requires the eligible Slovak purpose/activity for six months immediately before filing; the post-end route tests six months before refuge ends plus uninterrupted continuation to filing. Cross-reference ambiguity remains.",
+                "uk": "Для раннього подання за §131o потрібна відповідна діяльність у Словаччині шість місяців перед поданням; після завершення перевіряють шість місяців до завершення та безперервність до подання. У перехресному посиланні лишається неоднозначність.",
+                "ru": "Для ранней подачи по §131o требуется подходящая деятельность в Словакии шесть месяцев до подачи; после окончания проверяются шесть месяцев до окончания и непрерывность до подачи. В перекрёстной ссылке остаётся неоднозначность."
+              }
             }
           ]
         },
@@ -776,6 +851,21 @@
                 "en": "The reviewed law establishes a TP-linked work filing route; it does not establish a general direct in-country switch for study or family purposes.",
                 "uk": "Перевірене законодавство встановлює робочий маршрут для бенефіціарів TP, але не загальний перехід усередині країни для навчання чи сім’ї.",
                 "ru": "Проверенное законодательство устанавливает рабочий маршрут для бенефициаров TP, но не общий переход внутри страны для учёбы или семьи."
+              }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "53272a98-60f0-507d-be15-eea36295bdf2",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "764171d4-60e3-52a1-818c-d893f6388d68",
+                "0ad1bc01-1675-5d83-86d5-a410cdcda966"
+              ],
+              "Values": {
+                "en": "Pre-end §131o filing has been available since 15 July 2026. Pending lawful stay is not general work authorization; ordinary in-country business filing is not established.",
+                "uk": "Подання до завершення строку за §131o доступне з 15 липня 2026 року. Законне перебування під час розгляду не є загальним дозволом на роботу; звичайне внутрішнє подання для бізнесу не встановлено.",
+                "ru": "Подача до окончания срока по §131o доступна с 15 июля 2026 года. Законное пребывание на время рассмотрения не является общим разрешением на работу; обычная внутренняя подача для бизнеса не установлена."
               }
             }
           ]
@@ -906,6 +996,21 @@
                 "uk": "ANOFM публікує вакансії та має портал підбору роботи; EURES є іншим каналом пошуку. Оголошення змінюються й не гарантують роботу.",
                 "ru": "ANOFM публикует вакансии и имеет портал подбора работы; EURES — другой канал поиска. Объявления меняются и не гарантируют работу."
               }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "c26f0cc5-6316-5051-8ea8-8aa53d5d8742",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "3efe28b7-6ffd-5510-b00f-317f84c1176d",
+                "f37de8f7-7d9c-5e4d-9474-d997fb9477ce"
+              ],
+              "Values": {
+                "en": "Public vacancies can be searched without UoZ registration; vacancy listings are dynamic and do not guarantee a job.",
+                "uk": "Публічні вакансії можна шукати без реєстрації UoZ; списки змінюються й не гарантують працевлаштування.",
+                "ru": "Публичные вакансии можно искать без регистрации UoZ; списки меняются и не гарантируют трудоустройство."
+              }
             }
           ]
         },
@@ -1031,6 +1136,21 @@
                 "uk": "Повітові агентства ANOFM та EURES мають різні функції; перевірте потрібну послугу й місцевий офіс.",
                 "ru": "Уездные агентства ANOFM и EURES выполняют разные функции; проверьте нужную услугу и местный офис."
               }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "c26f0cc5-6316-5051-8ea8-8aa53d5d8742",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "3efe28b7-6ffd-5510-b00f-317f84c1176d",
+                "f37de8f7-7d9c-5e4d-9474-d997fb9477ce"
+              ],
+              "Values": {
+                "en": "ÚPSVaR offers employment services and EURES is a separate search channel; neither determines immigration status or guarantees access to a particular service.",
+                "uk": "ÚPSVaR надає послуги зайнятості, а EURES є окремим каналом пошуку; жоден із них не визначає імміграційний статус і не гарантує конкретної послуги.",
+                "ru": "ÚPSVaR предоставляет услуги занятости, а EURES — отдельный канал поиска; ни один из них не определяет иммиграционный статус и не гарантирует конкретную услугу."
+              }
             }
           ]
         },
@@ -1154,6 +1274,21 @@
                 "en": "Mediation, counselling and training depend on the service’s eligibility and local availability; no placement is guaranteed.",
                 "uk": "Посередництво, консультації та навчання залежать від критеріїв послуги й місцевої наявності; працевлаштування не гарантується.",
                 "ru": "Посредничество, консультации и обучение зависят от критериев услуги и местной доступности; трудоустройство не гарантируется."
+              }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "c26f0cc5-6316-5051-8ea8-8aa53d5d8742",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "3efe28b7-6ffd-5510-b00f-317f84c1176d",
+                "f37de8f7-7d9c-5e4d-9474-d997fb9477ce"
+              ],
+              "Values": {
+                "en": "UoZ and ZoZ are distinct registers. Temporary-refuge-holder UoZ eligibility remains unclear in reviewed guidance and should be confirmed with ÚPSVaR.",
+                "uk": "UoZ і ZoZ — різні реєстри. Право власників тимчасового укриття на UoZ не з’ясоване в перевірених інструкціях і потребує уточнення в ÚPSVaR.",
+                "ru": "UoZ и ZoZ — разные реестры. Право обладателей временного убежища на UoZ неясно по изученным инструкциям и требует уточнения в ÚPSVaR."
               }
             }
           ]
@@ -1285,6 +1420,21 @@
                 "uk": "Для визначених нинішніх і колишніх бенефіціарів тимчасового захисту діє окремий законодавчий виняток на відповідний період; це не загальне право працювати після його завершення.",
                 "ru": "Для определённых нынешних и бывших бенефициаров временной защиты действует отдельное законодательное исключение на соответствующий период; это не общее право работать после его завершения."
               }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "7e043916-46d8-5767-b00e-0ddc38c6c24e",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "c4015793-bfba-529b-b9c3-fbda351a68d6",
+                "28c61de2-1ddb-5984-8020-b9e19bb986e8"
+              ],
+              "Values": {
+                "en": "The work-permit exemption applies to covered temporary-refuge employees, not automatically to self-employment or a pending residence application. §72bc is a separate post-refuge bridge.",
+                "uk": "Виняток щодо дозволу на роботу стосується визначених працівників із тимчасовим укриттям, а не автоматично самозайнятості чи заяви на проживання. §72bc — окремий перехід після укриття.",
+                "ru": "Исключение по разрешению на работу касается определённых работников с временным убежищем, но не автоматически самозанятости или заявления на проживание. §72bc — отдельный переход после убежища."
+              }
             }
           ]
         },
@@ -1410,6 +1560,21 @@
                 "uk": "Роботодавці мають дотримуватися правил щодо письмових умов, оплати, часу роботи, відпустки й безпеки; деталі залежать від трудових відносин.",
                 "ru": "Работодатели обязаны соблюдать правила письменных условий, оплаты, рабочего времени, отпуска и безопасности; детали зависят от трудовых отношений."
               }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "7e043916-46d8-5767-b00e-0ddc38c6c24e",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "c4015793-bfba-529b-b9c3-fbda351a68d6",
+                "28c61de2-1ddb-5984-8020-b9e19bb986e8"
+              ],
+              "Values": {
+                "en": "An employer must submit the prescribed information card within seven working days and meet current filing and document rules.",
+                "uk": "Роботодавець має подати встановлену інформаційну картку протягом семи робочих днів і дотримуватися чинних правил подання та документування.",
+                "ru": "Работодатель должен подать установленную информационную карточку в течение семи рабочих дней и соблюдать действующие правила подачи и документирования."
+              }
             }
           ]
         },
@@ -1529,6 +1694,21 @@
                 "en": "From 1 July 2026, the general minimum is 4,325 lei gross per month; a separate statutory construction rate is 4,582 lei gross per month. Gross is before deductions, and sector scope/rates are date-sensitive.",
                 "uk": "З 1 липня 2026 року загальна мінімальна зарплата становить 4 325 леїв брутто на місяць; окрема законодавча ставка для будівництва — 4 582 леї брутто на місяць. Брутто — до відрахувань; галузева сфера дії та ставки залежать від дати.",
                 "ru": "С 1 июля 2026 года общая минимальная зарплата составляет 4 325 леев брутто в месяц; отдельная установленная законом ставка для строительства — 4 582 лея брутто в месяц. Брутто — до удержаний; отраслевой охват и ставки зависят от даты."
+              }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "7e043916-46d8-5767-b00e-0ddc38c6c24e",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "c4015793-bfba-529b-b9c3-fbda351a68d6",
+                "28c61de2-1ddb-5984-8020-b9e19bb986e8"
+              ],
+              "Values": {
+                "en": "The 2026 gross monthly grade floors are €915, €1,031, €1,147, €1,263, €1,379 and €1,495; applicable grade depends on job complexity and collective agreement.",
+                "uk": "Місячні мінімуми брутто за шістьма рівнями складності у 2026 році: €915, €1 031, €1 147, €1 263, €1 379 і €1 495; рівень залежить від складності роботи та колективного договору.",
+                "ru": "Месячные минимумы брутто по шести уровням сложности в 2026 году: €915, €1 031, €1 147, €1 263, €1 379 и €1 495; уровень зависит от сложности работы и коллективного договора."
               }
             }
           ]
@@ -1667,6 +1847,21 @@
                 "uk": "Визначений законом пакет медичних послуг поширюється на окремі категорії людей з України; він відрізняється від звичайного страхового статусу.",
                 "ru": "Установленный законом пакет медицинских услуг распространяется на отдельные категории людей из Украины; он отличается от обычного страхового статуса."
               }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "88047ea9-f8a9-5e74-9af7-9b8aeb684a24",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "88261d23-1430-5fda-bd4c-666ba5bc0ac9",
+                "ab4942bd-3d65-56d0-bac6-fa3a247a9a65"
+              ],
+              "Values": {
+                "en": "Temporary refuge does not itself create public-insurance membership; uninsured people may use the separate §9h necessary-care reimbursement route, with different adult and child scope.",
+                "uk": "Тимчасове укриття саме по собі не створює членства у державному страхуванні; незастраховані особи можуть мати окремий шлях відшкодування необхідної допомоги за §9h з різним обсягом для дорослих і дітей.",
+                "ru": "Временное убежище само по себе не создаёт членства в государственном страховании; незастрахованные могут воспользоваться отдельным возмещением необходимой помощи по §9h с разным объёмом для взрослых и детей."
+              }
             }
           ]
         },
@@ -1792,6 +1987,21 @@
                 "uk": "Інструкції CNAS описують дані й реєстрацію для маршруту людей з України; це не універсальне правило підтвердження для кожної послуги.",
                 "ru": "Инструкции CNAS описывают данные и регистрацию для маршрута людей из Украины; это не универсальное правило подтверждения для каждой услуги."
               }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "88047ea9-f8a9-5e74-9af7-9b8aeb684a24",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "88261d23-1430-5fda-bd4c-666ba5bc0ac9",
+                "ab4942bd-3d65-56d0-bac6-fa3a247a9a65"
+              ],
+              "Values": {
+                "en": "Temporary-refuge proof and VšZP reimbursement records are not an insurance card or proof of membership; provider billing and employment enrolment follow separate rules.",
+                "uk": "Підтвердження тимчасового укриття та записи про відшкодування VšZP не є страховою карткою чи доказом членства; розрахунки надавача й страхування через роботу регулюються окремо.",
+                "ru": "Подтверждение временного убежища и записи о возмещении VšZP не являются страховой картой или подтверждением членства; расчёты поставщика и страхование через работу регулируются отдельно."
+              }
             }
           ]
         },
@@ -1915,6 +2125,21 @@
                 "en": "Call 112 for emergencies. The special first-response provisions for temporary camps have a narrower scope than routine care.",
                 "uk": "У разі невідкладної ситуації телефонуйте 112. Спеціальні правила першої допомоги в тимчасових таборах мають вужчу сферу, ніж планова допомога.",
                 "ru": "При неотложной ситуации звоните 112. Специальные правила первой помощи во временных лагерях имеют более узкую сферу, чем плановая помощь."
+              }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "88047ea9-f8a9-5e74-9af7-9b8aeb684a24",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "88261d23-1430-5fda-bd4c-666ba5bc0ac9",
+                "ab4942bd-3d65-56d0-bac6-fa3a247a9a65"
+              ],
+              "Values": {
+                "en": "Urgent care, the limited necessary-care package, planned services and full insured care are distinct; medicines may involve copayments.",
+                "uk": "Невідкладна допомога, обмежений пакет необхідної допомоги, планові послуги й повне страхове покриття відрізняються; за ліки може бути доплата.",
+                "ru": "Неотложная помощь, ограниченный пакет необходимой помощи, плановые услуги и полное страховое покрытие различаются; за лекарства может взиматься доплата."
               }
             }
           ]
@@ -2047,6 +2272,21 @@
                 "uk": "Тимчасове житло може надаватися за окремими програмами з урахуванням місцевих умов і наявності місць; конкретне місце чи строк не гарантуються.",
                 "ru": "Временное жильё может предоставляться по отдельным программам с учётом местных условий и наличия мест; конкретное место или срок не гарантируются."
               }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "47762263-5800-578e-964b-13806a059f7f",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "de4856af-6e9b-5754-9a0a-6beb8e2e3727",
+                "6422bbd8-e3d1-51c7-9487-a3680b24a07d"
+              ],
+              "Values": {
+                "en": "Section 68 facility accommodation ordinarily lasts 60 days from the first grant; vulnerability exceptions and a written extension route apply, subject to capacity.",
+                "uk": "Проживання у закладі за §68 зазвичай триває 60 днів від першого надання; діють винятки для вразливих осіб і письмове продовження за наявності можливостей.",
+                "ru": "Размещение в учреждении по §68 обычно длится 60 дней с первого предоставления; действуют исключения для уязвимых лиц и письменное продление при наличии возможностей."
+              }
             }
           ]
         },
@@ -2172,6 +2412,21 @@
                 "uk": "Письмовий договір визначає ключові умови й обов’язки; перевірте чинні податкові вимоги до реєстрації, які можуть стосуватися власника.",
                 "ru": "Письменный договор закрепляет основные условия и обязанности; проверьте действующие налоговые требования регистрации, которые могут относиться к владельцу."
               }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "47762263-5800-578e-964b-13806a059f7f",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "de4856af-6e9b-5754-9a0a-6beb8e2e3727",
+                "6422bbd8-e3d1-51c7-9487-a3680b24a07d"
+              ],
+              "Values": {
+                "en": "Ordinary leases follow the Civil Code; the statutory deposit cap applies only to qualifying short-term leases under Act 98/2014.",
+                "uk": "Звичайна оренда регулюється Цивільним кодексом; законодавча межа застави діє лише для відповідної короткострокової оренди за Законом 98/2014.",
+                "ru": "Обычная аренда регулируется Гражданским кодексом; установленный законом предел залога действует только для подходящей краткосрочной аренды по Закону 98/2014."
+              }
             }
           ]
         },
@@ -2295,6 +2550,21 @@
                 "en": "A three-month accommodation sum is conditional under the current programme; it is not an ongoing rent benefit.",
                 "uk": "Тримісячна виплата на проживання є умовною за чинною програмою; це не постійна допомога на оренду.",
                 "ru": "Трёхмесячная выплата на проживание условна по действующей программе; это не постоянное пособие на аренду."
+              }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "47762263-5800-578e-964b-13806a059f7f",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "de4856af-6e9b-5754-9a0a-6beb8e2e3727",
+                "6422bbd8-e3d1-51c7-9487-a3680b24a07d"
+              ],
+              "Values": {
+                "en": "The §69 accommodation contribution goes through an eligible host/municipality route, not as cash rent support to a displaced person; eligibility and reporting rules apply.",
+                "uk": "Внесок за §69 проходить через відповідного господаря/муніципалітет, а не як орендна готівкова допомога переміщеній особі; діють умови та звітування.",
+                "ru": "Взнос по §69 проходит через подходящего хозяина/муниципалитет, а не как денежная помощь на аренду перемещённому лицу; действуют условия и отчётность."
               }
             }
           ]
@@ -2427,6 +2697,21 @@
                 "uk": "Для визначених дітей з України передбачено доступ до школи; інспекція координує розміщення, але не гарантує обрану школу чи клас.",
                 "ru": "Для определённых детей из Украины предусмотрен доступ к школе; инспекция координирует размещение, но не гарантирует выбранную школу или класс."
               }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "c277d784-6c19-5edb-9137-a1289f9edc94",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "14b260fe-bc1c-577e-9d27-d48e3dbad0b0",
+                "612f910b-a524-5f64-b063-60af5cc5cb63"
+              ],
+              "Values": {
+                "en": "Compulsory-school rules from September 2025 apply to specified Ukrainian/status and age cohorts; admission does not guarantee the chosen school.",
+                "uk": "Правила обов’язкової освіти з вересня 2025 року стосуються визначених категорій дітей України/статусу та віку; вступ не гарантує обрану школу.",
+                "ru": "Правила обязательного обучения с сентября 2025 года относятся к установленным категориям украинских детей/статуса и возраста; зачисление не гарантирует выбранную школу."
+              }
             }
           ]
         },
@@ -2549,6 +2834,21 @@
                 "en": "Pupil language-support groups are organized on request and depend on local demand and resources.",
                 "uk": "Мовні групи для учнів організовують за запитом з урахуванням місцевого попиту й ресурсів.",
                 "ru": "Языковые группы для учащихся организуют по запросу с учётом местного спроса и ресурсов."
+              }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "c277d784-6c19-5edb-9137-a1289f9edc94",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "14b260fe-bc1c-577e-9d27-d48e3dbad0b0",
+                "612f910b-a524-5f64-b063-60af5cc5cb63"
+              ],
+              "Values": {
+                "en": "Language and adaptation supports depend on needs, consent, school capacity and availability; Ukrainian online schooling is not automatically a substitute for Slovak attendance.",
+                "uk": "Мовна й адаптаційна підтримка залежить від потреб, згоди, можливостей школи та наявності; українське онлайн-навчання автоматично не замінює відвідування школи у Словаччині.",
+                "ru": "Языковая и адаптационная поддержка зависит от потребностей, согласия, возможностей школы и наличия; украинское онлайн-обучение автоматически не заменяет посещение школы в Словакии."
               }
             }
           ]
@@ -2676,6 +2976,21 @@
                 "en": "Universities publish annual programme admission criteria; credential recognition and language requirements are separate steps.",
                 "uk": "Університети щороку публікують критерії вступу; визнання документів і мовні вимоги є окремими етапами.",
                 "ru": "Университеты ежегодно публикуют критерии поступления; признание документов и языковые требования — отдельные этапы."
+              }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "c277d784-6c19-5edb-9137-a1289f9edc94",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "14b260fe-bc1c-577e-9d27-d48e3dbad0b0",
+                "612f910b-a524-5f64-b063-60af5cc5cb63"
+              ],
+              "Values": {
+                "en": "Higher-education admission and credential recognition are institution-specific; the temporary-refuge tuition exemption is limited to public/state universities and does not waive every fee.",
+                "uk": "Вступ до вишу й визнання документів залежать від закладу; звільнення від оплати для тимчасового укриття обмежене державними/публічними університетами й не скасовує всі збори.",
+                "ru": "Поступление в вуз и признание документов зависят от учреждения; освобождение от платы для временного убежища ограничено государственными/публичными вузами и не отменяет все сборы."
               }
             }
           ]
@@ -2815,6 +3130,21 @@
                 "uk": "VMI залежить від доходів і потребує заяви та оцінювання; сам тимчасовий захист не гарантує виплати.",
                 "ru": "VMI зависит от доходов и требует заявления и оценки; сама временная защита не гарантирует выплату."
               }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "3e90b7d3-8cc3-5e78-a375-878d1b71b054",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "986d5dea-6083-549e-8925-25930cd949bf",
+                "d85af0e9-1f84-5056-a9d3-9fe1c52ee579"
+              ],
+              "Values": {
+                "en": "Material-need assistance is household-, income- and asset-tested; employment does not automatically end it, and amounts depend on current rules.",
+                "uk": "Допомога у матеріальній скруті залежить від домогосподарства, доходів і майна; працевлаштування не припиняє її автоматично, а суми залежать від чинних правил.",
+                "ru": "Помощь в материальной нужде зависит от домохозяйства, доходов и имущества; работа не прекращает её автоматически, а размеры зависят от действующих правил."
+              }
             }
           ]
         },
@@ -2948,6 +3278,21 @@
                 "uk": "Для VMI та інших програм потрібні різні форми, документи й відповідальні органи.",
                 "ru": "Для VMI и других программ требуются разные формы, документы и ответственные органы."
               }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "3e90b7d3-8cc3-5e78-a375-878d1b71b054",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "986d5dea-6083-549e-8925-25930cd949bf",
+                "d85af0e9-1f84-5056-a9d3-9fe1c52ee579"
+              ],
+              "Values": {
+                "en": "ÚPSVaR material-need applications, municipal one-off assistance and the discretionary MPSVR humanitarian subsidy are separate routes with separate assessments.",
+                "uk": "Заява до ÚPSVaR на допомогу у скруті, одноразова допомога муніципалітету й дискреційна гуманітарна субсидія MPSVR — окремі процедури та оцінювання.",
+                "ru": "Заявление в ÚPSVaR на помощь в нужде, единовременная помощь муниципалитета и дискреционная гуманитарная субсидия MPSVR — отдельные процедуры и оценки."
+              }
             }
           ]
         },
@@ -3067,6 +3412,21 @@
                 "en": "Law provides separate conditional routes for child allowance and certain child-raising support; eligibility depends on statutory conditions.",
                 "uk": "Закон передбачає окремі умовні маршрути допомоги на дитину та деякої підтримки з догляду; право залежить від критеріїв.",
                 "ru": "Закон предусматривает отдельные условные маршруты пособия на ребёнка и некоторой поддержки по уходу; право зависит от критериев."
+              }
+            },
+            {
+              "CountrySlug": "slovakia",
+              "InformationEntryId": "3e90b7d3-8cc3-5e78-a375-878d1b71b054",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "986d5dea-6083-549e-8925-25930cd949bf",
+                "d85af0e9-1f84-5056-a9d3-9fe1c52ee579"
+              ],
+              "Values": {
+                "en": "Temporary refuge alone does not establish ordinary child or parental allowance. Childcare allowance has a separate special-protection route and conditions; cross-border coordination may affect individual cases.",
+                "uk": "Саме тимчасове укриття не дає права на звичайну допомогу на дитину чи батьківську допомогу. Для допомоги на догляд діє окремий шлях спеціального захисту; на конкретні випадки може вплинути транскордонна координація.",
+                "ru": "Само временное убежище не даёт права на обычное пособие на ребёнка или родительское пособие. Для пособия по уходу действует отдельный механизм специальной защиты; на отдельные случаи может повлиять трансграничная координация."
               }
             }
           ]
