@@ -22,7 +22,7 @@ namespace RefugeeNavigator.Tests;
 public sealed class CountryVisibilityTests
 {
     private static readonly string[] AcceptedCountries =
-        ["denmark", "germany", "poland", "czechia", "spain", "sweden", "netherlands", "romania"];
+        ["denmark", "germany", "poland", "czechia", "spain", "sweden", "netherlands", "romania", "slovakia"];
     private static readonly Lazy<Task<CatalogData>> Catalog = new(
         () => new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync());
     private static readonly Lazy<Task<ComparisonFactCatalog>> Facts = new(async () =>
@@ -51,10 +51,10 @@ public sealed class CountryVisibilityTests
     [InlineData("en")]
     [InlineData("uk")]
     [InlineData("ru")]
-    public async Task ProductionHomeAndFiltersExposeExactlyTheEightAcceptedCountries(string language)
+    public async Task ProductionHomeAndFiltersExposeExactlyTheNineAcceptedCountries(string language)
     {
         var home = await RenderAsync<Home>("Production", language);
-        Assert.Equal(8, Regex.Matches(home.Html, "class=\"country-card\"").Count);
+        Assert.Equal(9, Regex.Matches(home.Html, "class=\"country-card\"").Count);
         foreach (var slug in AcceptedCountries) Assert.Contains($"href=\"/countries/{slug}\"", home.Html);
 
         var search = await RenderAsync<Search>("Production", language, "/search");
@@ -205,7 +205,7 @@ public sealed class CountryVisibilityTests
     {
         var catalog = await Catalog.Value;
         var home = await RenderAsync<Home>("Production", language);
-        Assert.Equal(8, Regex.Matches(home.Html, "class=\"country-card\"").Count);
+        Assert.Equal(9, Regex.Matches(home.Html, "class=\"country-card\"").Count);
         Assert.Contains("href=\"/countries/romania\"", home.Html);
 
         var overview = await RenderAsync<CountryOverview>("Production", language, "/countries/romania",

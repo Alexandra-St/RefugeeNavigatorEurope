@@ -132,7 +132,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "09d72fd2-1fa7-51a2-886b-9ebd93f4678d",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "a1509aff-d7fa-5e45-93ee-530d44b2101e",
@@ -276,7 +276,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "09d72fd2-1fa7-51a2-886b-9ebd93f4678d",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "fca86339-e32a-5489-907c-b93555272dc5",
@@ -421,7 +421,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "09d72fd2-1fa7-51a2-886b-9ebd93f4678d",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "bf463b9b-1bac-5914-ae1d-64fce762a7dc",
@@ -575,7 +575,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "53272a98-60f0-507d-be15-eea36295bdf2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "764171d4-60e3-52a1-818c-d893f6388d68",
@@ -717,7 +717,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "53272a98-60f0-507d-be15-eea36295bdf2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "764171d4-60e3-52a1-818c-d893f6388d68",
@@ -858,7 +858,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "53272a98-60f0-507d-be15-eea36295bdf2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "764171d4-60e3-52a1-818c-d893f6388d68",
@@ -1003,7 +1003,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "c26f0cc5-6316-5051-8ea8-8aa53d5d8742",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "3efe28b7-6ffd-5510-b00f-317f84c1176d",
@@ -1143,7 +1143,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "c26f0cc5-6316-5051-8ea8-8aa53d5d8742",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "3efe28b7-6ffd-5510-b00f-317f84c1176d",
@@ -1282,7 +1282,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "c26f0cc5-6316-5051-8ea8-8aa53d5d8742",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "3efe28b7-6ffd-5510-b00f-317f84c1176d",
@@ -1428,7 +1428,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "7e043916-46d8-5767-b00e-0ddc38c6c24e",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "c4015793-bfba-529b-b9c3-fbda351a68d6",
@@ -1568,7 +1568,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "7e043916-46d8-5767-b00e-0ddc38c6c24e",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "c4015793-bfba-529b-b9c3-fbda351a68d6",
@@ -1703,7 +1703,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "7e043916-46d8-5767-b00e-0ddc38c6c24e",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "0ee76a27-1a5b-55c6-94cd-f7ce78a0f0b3",
@@ -1857,7 +1857,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "88047ea9-f8a9-5e74-9af7-9b8aeb684a24",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "88261d23-1430-5fda-bd4c-666ba5bc0ac9",
@@ -1999,7 +1999,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "88047ea9-f8a9-5e74-9af7-9b8aeb684a24",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "ab4942bd-3d65-56d0-bac6-fa3a247a9a65",
@@ -2140,7 +2140,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "88047ea9-f8a9-5e74-9af7-9b8aeb684a24",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "88261d23-1430-5fda-bd4c-666ba5bc0ac9",
@@ -2290,7 +2290,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "47762263-5800-578e-964b-13806a059f7f",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "de4856af-6e9b-5754-9a0a-6beb8e2e3727"
@@ -2429,7 +2429,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "47762263-5800-578e-964b-13806a059f7f",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "9619f980-71d1-507f-888e-7edfa11f4723",
@@ -2568,7 +2568,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "47762263-5800-578e-964b-13806a059f7f",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "de4856af-6e9b-5754-9a0a-6beb8e2e3727",
@@ -2714,7 +2714,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "c277d784-6c19-5edb-9137-a1289f9edc94",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "14b260fe-bc1c-577e-9d27-d48e3dbad0b0",
@@ -2852,7 +2852,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "c277d784-6c19-5edb-9137-a1289f9edc94",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "14b260fe-bc1c-577e-9d27-d48e3dbad0b0",
@@ -2994,7 +2994,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "c277d784-6c19-5edb-9137-a1289f9edc94",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "63e4e7e7-3b0c-59c8-9843-651e2c771549",
@@ -3148,7 +3148,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "3e90b7d3-8cc3-5e78-a375-878d1b71b054",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "986d5dea-6083-549e-8925-25930cd949bf",
@@ -3296,7 +3296,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "3e90b7d3-8cc3-5e78-a375-878d1b71b054",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "986d5dea-6083-549e-8925-25930cd949bf",
@@ -3434,7 +3434,7 @@
             {
               "CountrySlug": "slovakia",
               "InformationEntryId": "3e90b7d3-8cc3-5e78-a375-878d1b71b054",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "479edcef-5ade-5df7-9fe4-53493e06d0e5",
