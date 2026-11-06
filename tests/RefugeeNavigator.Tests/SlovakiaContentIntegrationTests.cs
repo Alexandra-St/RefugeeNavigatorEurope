@@ -127,6 +127,43 @@ public sealed class SlovakiaContentIntegrationTests
         });
     }
 
+    [Fact]
+    public async Task SlovakiaEditorialCorrectionsRemainPresentAcrossArticlesAndComparisonFacts()
+    {
+        var catalog = await Catalog.Value;
+        var comparison = await new JsonComparisonFactProvider(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json")).LoadAsync(catalog);
+        var facts = comparison.Topics.SelectMany(topic => topic.Aspects)
+            .SelectMany(aspect => aspect.Facts
+                .Where(fact => fact.CountrySlug == "slovakia")
+                .Select(fact => (aspect.Id, Fact: fact)))
+            .ToDictionary(item => item.Id, item => item.Fact, StringComparer.Ordinal);
+
+        Assert.Contains("§131o", Article("SK-TP-02", "en"));
+        Assert.Contains("§31(4)", Article("SK-TP-02", "en"));
+        Assert.Contains("ordinary residence routes use their applicable", Article("SK-TP-02", "en"));
+        Assert.Contains("commencement and termination", Fact("work-employer-duties", "en"));
+        Assert.Contains("seven working days", Fact("work-employer-duties", "en"));
+        Assert.Contains("other EU Member State", Fact("healthcare-access", "en"));
+        Assert.Contains("15 days", Fact("housing-initial", "en"));
+        Assert.Contains("3 working days", Fact("housing-financial-support", "en"));
+        Assert.Contains("twice", Fact("housing-financial-support", "en"));
+        Assert.Contains("14 days", Fact("housing-financial-support", "en"));
+        Assert.Contains("5 working days", Fact("housing-financial-support", "en"));
+        Assert.Contains("after 31 Aug 2025", Fact("education-school-enrolment", "en"));
+        Assert.Contains("€8.592", Fact("work-minimum-pay", "en"));
+        Assert.Contains("DOČASNÉ ÚTOČISKO", Fact("healthcare-proof", "en"));
+        Assert.Contains("155", Fact("healthcare-urgent", "en"));
+        Assert.Contains("112", Fact("healthcare-urgent", "en"));
+        Assert.Contains("инвалидности", Fact("social-child-benefits", "ru"));
+        Assert.Contains("возрасте ребёнка", Fact("social-child-benefits", "ru"));
+
+        string Article(string code, string language) => Assert.Single(
+            catalog.InformationEntryTranslations,
+            item => item.InformationEntryId == Articles[code].Id && item.LanguageCode == language).Content;
+
+        string Fact(string aspect, string language) => facts[aspect].Values[language];
+    }
+
     private static string Normalize(string value) => value.Replace("\r\n", "\n", StringComparison.Ordinal).Trim();
 
     private static string FindRepositoryRoot()

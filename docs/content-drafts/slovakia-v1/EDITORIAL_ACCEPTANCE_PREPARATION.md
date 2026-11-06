@@ -2,7 +2,9 @@
 
 **Implementation baseline:** `7d6cecf54733128bd6b1d9ef6722b6002ce578c0`  
 **Review scope:** Slovakia v1 drafts, eight focused research packages, and Slovakia-owned catalog records  
-**Overall verdict:** `NEEDS CORRECTION BEFORE HUMAN ACCEPTANCE`
+**Review-baseline verdict:** `NEEDS CORRECTION BEFORE HUMAN ACCEPTANCE`
+
+**Correction state:** Phase 20.13 corrections implemented; post-correction review pending.
 
 ## 1. Batch snapshot
 
@@ -17,6 +19,8 @@
 | Research readiness | 8/8 topics Ready; 24/24 aspects Ready |
 
 The eight catalog article GUIDs and their mapped comparison categories match `CountryComparisonTopicMap.cs`. Research readiness means that evidence supports bounded drafting; it is not editorial acceptance or owner authorization.
+
+The article and comparison matrices and Sections 3–6 below preserve the findings at the review baseline; current correction outcomes are recorded in Section 9.
 
 ## 2. Article acceptance matrix
 
@@ -108,10 +112,9 @@ The 24 Slovakia facts are present once each, linked to the corresponding mapped 
 | SK-EDU-01, article | School-placement paragraph lacks research-supported grade/document boundary. | Say placement uses available prior education/records and grade is not guaranteed; missing records do not prevent an application, subject to the authority’s assessment. | minor |
 | SK-HOUSING-01, article | §69 rates and caps are not stated, though described as conditional; this is safe but less actionable for hosts. | If retaining amount guidance, state date-qualified host amounts: €5/night owner-provided residential accommodation with monthly room caps €390/€540/€720/€900; €6/night for specified qualifying non-residential accommodation by legal-person/public hosts. Do not present as refugee cash and recheck schedule. | minor |
 | SK-EMP-01, article | The combined services sentence groups counselling/training with broad Employment Services markers; the individual training offer is not clearly supported by its immediately adjacent source. | Place the ÚPSVaR information/advisory-centre and relevant employment-services authority markers next to the service claims, or narrow to what those linked sources expressly establish; keep no-course/no-funding guarantee caveat. | minor |
-| SK-EMP-02, EN/UK/RU | All three list monthly grade minima but omit the corresponding hourly minima without saying scope is monthly-only. | Add the six hourly figures with EN dot and UK/RU decimal-comma formatting, or clarify the monthly-only scope consistently in all three languages. | minor |
 | SK-SOC-01, RU | RU omits EN/UK’s explicit disability-compensation boundary and childcare work/study/age/provider/non-duplication conditions. | Translate those existing EN/UK qualifications into RU; retain case-specific EU coordination. | minor |
 
-**Blockers: 6. Minor corrections: 7.**
+**Blockers: 6. Minor corrections: 7 (the wage-figure correction is one item covering the comparison fact; the article already had the six hourly values).**
 
 ## 7. Owner decision tables
 
@@ -162,3 +165,28 @@ No decision has been entered. These cells are intentionally blank for the owner.
 ## 8. Status and release boundary
 
 All Slovakia translations remain `NeedsReview`; all 24 comparison facts remain `Draft`. Development remains visible and Production remains hidden. No owner decision has been made. This review authorizes no promotion or deployment and changes no content or status record.
+
+## 9. Phase 20.13 correction follow-up
+
+The findings above record the review baseline at `0e99d6367a02af10759f91525b184fb5d1f02d79`. Phase 20.13 implements the corrections against this baseline; this follow-up supersedes the baseline correction statuses while preserving the original audit trail.
+
+All six blockers and all seven requested minor corrections are implemented in the Slovakia drafts, synchronized catalog translations, and the ten affected comparison facts. The minimum-wage article already contained all six 2026 gross hourly and monthly grade amounts in EN/UK/RU at the review baseline; the correction was to make `work-minimum-pay` state the hourly floors too. No OfficialSources were added; current article-owned statutory and operational sources were reused and placed beside the claims they support.
+
+| Correction | Outcome |
+| --- | --- |
+| TP-02 §131o reservation scope and ordinary §31(4) pending stay | Resolved in EN/UK/RU and `residence-filing`; separate booking procedures, pending stay/work distinction and non-conversion boundary stated with Act 404 source. |
+| Employer commencement/termination filings | Resolved in EN/UK/RU and `work-employer-duties`; seven-working-day electronic filing, signature, supporting documents, retention, and separate §72bc update stated. |
+| Healthcare §9h other-EU coverage boundary | Resolved in EN/UK/RU and `healthcare-access`. |
+| §68 vulnerable categories and extension process | Resolved in EN/UK/RU and `housing-initial`, including written repeat requests, capacity and 15-day deadline. |
+| §69 rates, reporting and host requirements | Resolved in EN/UK/RU and `housing-financial-support`; contribution remains host-side, with beneficiary and host reporting separated from address reporting. |
+| §161r transition deadlines | Resolved in EN/UK/RU and `education-school-enrolment`; cohort-specific deadlines are not presented as universal fresh-enrolment deadlines. |
+| 2026 hourly wage grades | Resolved; draft already had monthly/hourly amounts, and the fact now includes both with dated gross/grade qualification. |
+| Healthcare proof and emergency-number roles | Resolved in EN/UK/RU; current `DOČASNÉ ÚTOČISKO`, legacy A4, 155 and 112 meanings stated. |
+| Education records and grade placement | Resolved in EN/UK/RU; missing records do not alone bar application and no grade is guaranteed. |
+| Housing rate/cap specificity | Resolved in EN/UK/RU with dated, host-side amounts and room-cap mapping from research. |
+| Finding-a-job marker placement | Resolved; ÚPSVaR advisory centre, Employment Services Act, and regulated-profession source are attached to their respective claims. |
+| Social-assistance RU parity | Resolved; childcare conditions, disability boundary, separate discretionary humanitarian subsidy and EU-coordination caveat included. |
+
+The modified facts are `residence-filing`, `work-employer-duties`, `work-minimum-pay`, `healthcare-access`, `healthcare-proof`, `healthcare-urgent`, `housing-initial`, `housing-financial-support`, `education-school-enrolment` and `social-child-benefits`. The other 14 Slovakia facts were not changed. No source records were added or removed; Slovakia remains at 81 owned sources.
+
+All 24 Slovakia translations remain `NeedsReview`; all 24 facts remain `Draft` and available. Development remains visible and Production hidden. The owner decision cells remain blank. This correction record is not owner acceptance and authorizes no promotion or deployment; separate post-correction review is required.
