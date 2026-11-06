@@ -1,131 +1,163 @@
-# Slovakia Research Readiness — 6 November 2026
+# Slovakia Content Research Readiness — 6 November 2026
 
-**Repository baseline:** `fc3b21ec80c050e884b497f779bacbf7dc337312`  
-**Research date:** 6 November 2026  
-**Status:** Readiness audit only. No Slovakia catalog content, facts, sources, visibility, or production state was added or changed.
+**Current repository baseline:** `2c13071c66a0cdb15fde142891804922f58936ee`
+**Research packages checked:** 6 November 2026
+**Review scope:** the eight focused Slovakia `SOURCES_AND_CLAIMS.md` packages listed below, this readiness record, and the Romania readiness record as a structural reference. No new broad research was performed.
 
-## 1. Current Slovakia state
+## 1. Current Slovakia catalog state
 
-Counts below were mechanically checked in the four requested JSON catalogs. Slovakia matching used country slug/name, entry ownership, OfficialSource title/URL/metadata, and comparison-fact CountrySlug; exact Slovakia-specific references were also searched in the scoped tests and research documents.
+The initial catalog audit at `fc3b21ec80c050e884b497f779bacbf7dc337312` found no Slovakia catalog entries. Comparing that audit baseline with the current research baseline shows changes only to the eight focused research Markdown files and this readiness record; no catalog, code, test, or visibility files changed during the research phases.
 
-| Inventory | Slovakia state at baseline |
+| Inventory | Current Slovakia state |
 | --- | ---: |
-| Country definition in `countries.json` | 0 |
+| Country in country catalog | 0; absent |
 | Articles / information entries | 0 |
 | Translations | 0 |
 | Comparison facts | 0 |
-| Slovakia-owned OfficialSources | 0 |
-| Existing Slovakia research/draft files under `docs/content-research` | 0 |
-| Slovakia-specific tests | 0 |
-| Slovakia-specific hardcodes in scoped application/catalog/test files | 0 |
-| Production visibility | Not visible; absent from the country catalog |
+| Slovakia-owned catalog `OfficialSources` | 0 |
+| Focused research packages | 8 |
+| Production visibility | Absent |
+| Development visibility | Absent |
 
-Repository-wide catalog context: 8 countries, 64 articles, 192 translations, 520 OfficialSources, and 24 shared comparison aspects. `CountryComparisonTopicMap` maps only the eight existing country slugs for its eight article topics. The generic visibility tests assert exactly the accepted eight countries and derive visibility from catalog content; no Slovakia exception or country-specific visibility rule exists in the scoped tests. This audit does not change the catalog or visibility.
+Source records embedded in these Markdown research files are research evidence and are **not** catalog `OfficialSources`. Research readiness does not create catalog or visibility state.
 
-## 2. Existing comparison contract
+## 2. Topic readiness matrix
 
-The shared catalog has eight topics and exactly 24 aspect IDs. The map below assigns every current aspect once; no new IDs are proposed.
+Each package's own final topic verdict was checked directly. All eight say **READY FOR CONTENT DRAFTING**; the verdict below follows those package verdicts, with their evidence boundaries retained.
 
-| Research topic | Exact existing aspect IDs |
-| --- | --- |
-| Temporary Protection | `protection-scheme`, `protection-application`, `protection-dates` |
-| Residence Options | `residence-routes`, `residence-conditions`, `residence-filing` |
-| Finding a Job | `employment-vacancies`, `employment-institutions`, `employment-assistance-conditions` |
-| Work Authorization and Employee Rights | `work-permission`, `work-employer-duties`, `work-minimum-pay` |
-| Healthcare | `healthcare-access`, `healthcare-proof`, `healthcare-urgent` |
-| Housing | `housing-initial`, `housing-private-rental`, `housing-financial-support` |
-| Education | `education-school-enrolment`, `education-pupil-language`, `education-higher-admission` |
-| Financial and Social Assistance | `social-subsistence`, `social-application`, `social-child-benefits` |
+| Topic | Focused research | Final verdict | Drafting boundary and remaining caveat |
+| --- | --- | --- | --- |
+| Temporary Protection | [temporary-protection-application/SOURCES_AND_CLAIMS.md](temporary-protection-application/SOURCES_AND_CLAIMS.md) | **Ready** | Keep current reservation workflow separate from electronic pre-registration; preserve the EU military-obligation rule and 4 Aug 2026 continuity exception. Slovakia-specific accepted proof is unresolved. Separate the EU/status endpoint from an individual card’s printed validity; do not promise a full checklist, appointment or processing time. |
+| Residence Options | [after-temporary-protection/SOURCES_AND_CLAIMS.md](after-temporary-protection/SOURCES_AND_CLAIMS.md) | **Ready** | Present §131o as a bounded application route, including pre-end availability and separate six-month tests; retain its pre-end cross-reference ambiguity. No automatic conversion. Ordinary in-country business filing is excluded; pending stay does not itself give work permission. Blue Card is separate; current `odídenec` status bars long-term residence, while counting earlier TP time after status change remains unresolved. |
+| Finding a Job | [finding-a-job/SOURCES_AND_CLAIMS.md](finding-a-job/SOURCES_AND_CLAIMS.md) | **Ready** | Public vacancy browsing does not require UoZ registration. Keep UoZ and ZoZ distinct; TP-holder UoZ eligibility remains unresolved and should be checked with ÚPSVaR. EURES is a separate official channel. Services, mediation and training do not guarantee registration, a vacancy, course, benefit or placement; qualification recognition is not universal for non-regulated work. |
+| Work Authorization and Employee Rights | [employment-rights/SOURCES_AND_CLAIMS.md](employment-rights/SOURCES_AND_CLAIMS.md) | **Ready** | Limit the no-permit rule to covered TP employees; self-employment is not established by that exemption. Preserve employer reporting duties and the separate §72bc post-TP bridge. A pending residence application is not a general work right. Refresh 2026 general and six grade wage floors before publication. |
+| Healthcare | [healthcare/SOURCES_AND_CLAIMS.md](healthcare/SOURCES_AND_CLAIMS.md) | **Ready** | TP does not itself create public-insurance membership. Explain uninsured TP §9h reimbursement separately, including adult/child scope, from insurance enrollment and its employment conditions. VšZP reimbursement is not automatic membership; proof and post-employment transition retain qualifications. Medicines may have copayments; urgent care is not all necessary care or full coverage. |
+| Housing | [housing/SOURCES_AND_CLAIMS.md](housing/SOURCES_AND_CLAIMS.md) | **Ready** | Keep §68 facility accommodation and §69 host contribution separate, including their distinct vulnerable-person rules. State the ordinary 60-day limit, written extension request/deadline and capacity caveats. §69 support is host/municipality-side, not refugee rent cash; attach beneficiary and host reporting duties. Private rental is separate; no universal ordinary-lease deposit cap. |
+| Education | [education/SOURCES_AND_CLAIMS.md](education/SOURCES_AND_CLAIMS.md) | **Ready** | Keep September 2025 compulsory-school rules within the specified Ukrainian/status/age cohorts. Access does not guarantee the chosen school; language and adaptation supports depend on needs, consent and availability. Ukrainian online study is not automatically a substitute. Recognition/credit decisions and higher-education admissions are distinct and institution-specific. Temporary-refuge tuition exemption at public/state universities does not extend to all private institutions or all fees. |
+| Financial and Social Assistance | [social-assistance/SOURCES_AND_CLAIMS.md](social-assistance/SOURCES_AND_CLAIMS.md) | **Ready** | Material-need assistance is household-, income- and assets-tested; work does not automatically terminate it. Separate ÚPSVaR regular assistance, municipality one-off aid and MPSVR humanitarian subsidy. TP alone does not establish ordinary child or parental allowance; childcare has a distinct TP route with further conditions. TP alone does not establish ordinary disability compensation. EU coordination is case-specific. |
 
-**Mapping check: 24/24 unique; 8/8 topics; no missing or extra aspect IDs.**
+**Topic count: 8/8 Ready.** No topic is `Needs source refresh` or `Blocked` in its focused package verdict.
 
-## 3. Slovakia research plan and readiness matrix
+## 3. Comparison-aspect readiness matrix
 
-`Ready for focused research` means a bounded research task can begin; it does not mean claims are sufficiently verified for content drafting. Official Slovak law and competent agencies take priority. IOM’s Migration Information Centre is a useful navigation aid, but should not replace current statutory text or agency instructions where these are available.
+The following are the 24 shared comparison aspects. Each expected ID appears exactly once; all 24 are **Ready** in the corresponding package's aspect table. These are research-readiness judgments, not catalog comparison facts.
 
-| Topic | Aspects | Existing evidence | Missing research | Priority | Status |
-| --- | --- | --- | --- | ---: | --- |
-| Temporary Protection | `protection-scheme`; `protection-application`; `protection-dates` | Ministry of Interior (MV SR) registration page describes in-person registration, documents, locations, and travel/termination; Council Implementing Decision (EU) 2026/1912 extends protection to 4 March 2028 and has a corrected military-obligation rule. | Reconcile statutory eligibility cohorts under the Asylum Act with EU Decision 2026/1912; identify Slovakia’s application process and current locations/booking; required documents and biometrics; document validity/online confirmation; travel, absence, address-reporting and termination. Confirm the corrected exception for people already protected continuously on/before 4 Aug 2026, and exactly when the new condition applies to later grants. | 1 | Ready for focused research |
-| Residence Options | `residence-routes`; `residence-conditions`; `residence-filing` | Slov-Lex Act 128/2026 inserts §131o into Act 404/2011; MV SR announced the booking workflow effective 15 July 2026. Ordinary purpose-based temporary residence is separately described by MV SR. | Read the complete current §131o and related amendments, not just the news notice. Establish eligible cohorts and filing window; exact residence purpose/type; six-month activity condition; documents, criminal-record exception for under-14s, appointment rules, decision/document timeline, validity, refusal grounds, TP status while pending and after grant, work rights, exclusions, and relation to one-year continued displaced-person treatment after EU protection ends. Separately map ordinary employment, study, family routes, in-country filing rules, long-term residence, and whether TP time counts. | 2 | Ready for focused research |
-| Finding a Job | `employment-vacancies`; `employment-institutions`; `employment-assistance-conditions` | ÚPSVaR publishes employment services and EURES navigation; the Labour Ministry maintains foreign-employment information. | Identify official vacancy search channels and local ÚPSVaR roles; eligibility and steps for jobseeker registration, mediation, counselling, retraining and courses; EURES scope; qualification recognition authority and procedures. Keep job search services distinct from work authorization and benefit eligibility. | 4 | Ready for focused research |
-| Work Authorization and Employee Rights | `work-permission`; `work-employer-duties`; `work-minimum-pay` | Act 5/2004 and ÚPSVaR materials identify an exemption from work permits for temporary-refuge beneficiaries; the Ministry publishes minimum-wage tables, including 2026 values. | Verify current consolidated §§23a and employer notice deadlines/form (including July 2026 electronic services); contract and agreement forms; rights on pay, working time, rest, leave, safety, complaints and collective agreements; 2026 general and graded minimum-wage amounts and sector rules; transitions under §131o and post-TP work rights. | 3 | Ready for focused research |
-| Healthcare | `healthcare-access`; `healthcare-proof`; `healthcare-urgent` | Health Insurance Act 580/2004 §9h addresses reimbursed care for specified uninsured groups; public insurer and Health Ministry have temporary-refuge guidance. | Verify the current statutory package for a temporary-refuge holder who is not publicly insured, and how employment/public-insurance enrollment changes entitlement; urgent versus routine care; registration/proof documents; provider billing, medicines and copayments; children, pregnancy and vulnerable groups. Resolve differences between public summaries and current law. | 5 | Ready for focused research |
-| Housing | `housing-initial`; `housing-private-rental`; `housing-financial-support` | Asylum Act amendment 69/2026 sets current reception-accommodation limits for displaced persons; MV SR provides reporting guidance; IOM MIC has an updated accommodation-support summary. | Verify current emergency and asylum-facility access, vulnerability categories, duration and extensions; whether the former accommodation allowance remains in force in 2026, exact eligibility, amount, duration, payee and employer/host reporting; private lease/deposit/basic rights; municipality and social-housing boundaries. Do not infer a national housing benefit from older materials. | 6 | Ready for focused research |
-| Education | `education-school-enrolment`; `education-pupil-language`; `education-higher-admission` | Ministry of Education’s Ukraine portal documents enrolment, compulsory education changes effective 2025, adaptation classes and language support. | Verify current age/cohort and deadline rules under Education Act §161r; school placement if capacity is unavailable; language and adaptation supports; recognition/equivalence authority; secondary and university admissions, tuition and funded-place rules. Establish which rules apply to all foreign children versus Ukrainian displaced children specifically. | 7 | Ready for focused research |
-| Financial and Social Assistance | `social-subsistence`; `social-application`; `social-child-benefits` | Ministry of Labour publishes material-need assistance, child allowance, parental and childcare support; Act 69/2026 changes accommodation and displaced-person rules. | Establish displaced-person eligibility for material-need assistance and each child/family/disability scheme separately; interactions with work, residence and insurance; application authority/documents; residence conditions and household assessment. Reconfirm amounts and effective dates from current law; distinguish accommodation support from cash benefits. | 8 | Ready for focused research |
+| Topic | Aspect ID | Focused research | Readiness | Safe drafting boundary |
+| --- | --- | --- | --- | --- |
+| Temporary Protection | `protection-scheme` | [temporary-protection-application](temporary-protection-application/SOURCES_AND_CLAIMS.md) | **Ready** | Limit cohorts to current EU/national rules; preserve the corrected 4 Aug 2026 continuous-protection exception and the unestablished Slovak proof procedure for military-obligation compliance. |
+| Temporary Protection | `protection-application` | [temporary-protection-application](temporary-protection-application/SOURCES_AND_CLAIMS.md) | **Ready** | Use the live TP-specific booking label/horizon; distinguish booking from the optional electronic declaration. Do not promise slot, universal office availability, complete checklist or decision time. |
+| Temporary Protection | `protection-dates` | [temporary-protection-application](temporary-protection-application/SOURCES_AND_CLAIMS.md) | **Ready** | State scheme/status extension through 4 Mar 2028 separately from each document’s printed validity; use the official validation service for an individual confirmation. |
+| Residence Options | `residence-routes` | [after-temporary-protection](after-temporary-protection/SOURCES_AND_CLAIMS.md) | **Ready** | Keep purpose-specific ordinary routes, Blue Card and the limited §131o transition distinct; no universal status conversion. |
+| Residence Options | `residence-conditions` | [after-temporary-protection](after-temporary-protection/SOURCES_AND_CLAIMS.md) | **Ready** | State separate pre-end and post-end six-month activity tests and document exceptions; preserve the pre-end statutory cross-reference ambiguity and unresolved TP-time counting. |
+| Residence Options | `residence-filing` | [after-temporary-protection](after-temporary-protection/SOURCES_AND_CLAIMS.md) | **Ready** | Explain the §131o reservation and statutory notice/document steps; distinguish permission to remain from work permission. Ordinary business in-country filing is excluded; Blue Card remains separate. |
+| Finding a Job | `employment-vacancies` | [finding-a-job](finding-a-job/SOURCES_AND_CLAIMS.md) | **Ready** | Public vacancy search is available without UoZ registration; listings are incomplete/dynamic and do not guarantee a job. |
+| Finding a Job | `employment-institutions` | [finding-a-job](finding-a-job/SOURCES_AND_CLAIMS.md) | **Ready** | Explain ÚPSVaR roles and EURES as distinct channels; do not imply a job-search channel decides immigration status or guarantees access to a particular service. |
+| Finding a Job | `employment-assistance-conditions` | [finding-a-job](finding-a-job/SOURCES_AND_CLAIMS.md) | **Ready** | Keep UoZ/ZoZ, mediation, counselling, training and unemployment benefit separate; TP-specific UoZ eligibility remains unresolved and requires office confirmation. |
+| Work Authorization and Employee Rights | `work-permission` | [employment-rights](employment-rights/SOURCES_AND_CLAIMS.md) | **Ready** | Limit the exemption to covered TP employment; do not extend it to self-employment, pending residence, or post-TP periods beyond the distinct §72bc conditions. |
+| Work Authorization and Employee Rights | `work-employer-duties` | [employment-rights](employment-rights/SOURCES_AND_CLAIMS.md) | **Ready** | State employer’s seven-working-day information-card duty, current electronic form and document/retention requirements; keep the separate §72bc residence-card update distinct. |
+| Work Authorization and Employee Rights | `work-minimum-pay` | [employment-rights](employment-rights/SOURCES_AND_CLAIMS.md) | **Ready** | Give only dated 2026 gross floors, including all six difficulty grades and the applicable collective-agreement/job-grading boundary; refresh before later publication. |
+| Healthcare | `healthcare-access` | [healthcare](healthcare/SOURCES_AND_CLAIMS.md) | **Ready** | Distinguish Slovak public-insurance membership, uninsured TP §9h reimbursement and another-EU-state insurance; preserve adult/child package scope and employment eligibility conditions. |
+| Healthcare | `healthcare-proof` | [healthcare](healthcare/SOURCES_AND_CLAIMS.md) | **Ready** | Name current `DOČASNÉ ÚTOČISKO` proof and supported legacy model 4A; distinguish status/reimbursement records from an insurance card. Identity-only proof before document issuance remains unresolved. |
+| Healthcare | `healthcare-urgent` | [healthcare](healthcare/SOURCES_AND_CLAIMS.md) | **Ready** | Separate urgent-care definition, broader limited necessary-care package, planned services and full insurance. Medicines may have copayments; do not promise every provider or a specific GP. |
+| Housing | `housing-initial` | [housing](housing/SOURCES_AND_CLAIMS.md) | **Ready** | State ordinary §68 limit of 60 days from first grant, exact vulnerability exceptions and written extension procedure; facility placement, capacity and location are not guaranteed. |
+| Housing | `housing-private-rental` | [housing](housing/SOURCES_AND_CLAIMS.md) | **Ready** | Distinguish ordinary Civil Code lease from Act 98/2014 short-term lease; any deposit ceiling belongs only to the latter. Keep private-lease reporting duties attached and do not promise social housing. |
+| Housing | `housing-financial-support` | [housing](housing/SOURCES_AND_CLAIMS.md) | **Ready** | Describe §69 as a host-side contribution with current rate/cap and 60-day/vulnerability rules, not refugee rent cash; include separate beneficiary and host/municipal reporting. |
+| Education | `education-school-enrolment` | [education](education/SOURCES_AND_CLAIMS.md) | **Ready** | State §161r’s Ukrainian/status/age cohort and deadlines separately from §146 foreign-child access; explain capacity referral without a chosen-school guarantee. |
+| Education | `education-pupil-language` | [education](education/SOURCES_AND_CLAIMS.md) | **Ready** | Describe needs-based language support and optional consent-based adaptation classes; no guaranteed class/course or permanent Slovak-language exemption. Ukrainian study is supplemental unless a separate statutory route is confirmed. |
+| Education | `education-higher-admission` | [education](education/SOURCES_AND_CLAIMS.md) | **Ready** | Keep admission, SUDV/RÚŠS recognition and partial-credit decisions distinct. Public/state tuition exemption for TP does not waive every fee or apply automatically to private universities; scholarships are competitive. |
+| Financial and Social Assistance | `social-subsistence` | [social-assistance](social-assistance/SOURCES_AND_CLAIMS.md) | **Ready** | Explain household, income and asset tests, dated components, work-income disregard and municipal one-off aid separately; TP is not a flat-rate award. |
+| Financial and Social Assistance | `social-application` | [social-assistance](social-assistance/SOURCES_AND_CLAIMS.md) | **Ready** | Separate ÚPSVaR regular support, municipality one-off aid and MPSVR humanitarian subsidy. Give evidence categories, not a universal checklist; local one-off competence without permanent residence is unresolved. |
+| Financial and Social Assistance | `social-child-benefits` | [social-assistance](social-assistance/SOURCES_AND_CLAIMS.md) | **Ready** | Assess child allowance, parental allowance and childcare allowance separately; TP-only ordinary eligibility differs from the special childcare route. Disability compensation and humanitarian aid are distinct; EU coordination is case-specific. |
 
-## 4. Mandatory research questions and boundaries
+**Aspect count: 24/24 Ready; each expected aspect ID appears once, with no extra IDs.**
 
-### Temporary protection
+## 4. Focused source-package inventory
 
-- Establish exact current EU and Slovak eligibility cohorts, including family members and non-Ukrainian residents of Ukraine, from Decision 2022/382 and current Slovak asylum legislation.
-- Record that Council Implementing Decision (EU) 2026/1912 extends the EU scheme through **4 March 2028**. Its Article 2 military-obligation condition is subject to the corrigendum’s exception for people already protected in a Member State on/before 4 August 2026 who continuously retain that status; verify applicability dates and Slovak administration before describing individual cohorts.
-- Confirm Slovakia’s registration offices, appointment/booking needs, personal attendance/biometrics, documents, electronic confirmation and permit validity. Current Ministry pages may be operationally stale in their hours or locations.
-- Verify travel within Schengen, return to Ukraine, address reporting, and how status ends—including written notification when permanently departing or taking protection in another Member State.
-- Determine whether any 2026 military-obligation change applies to a new applicant; do not project it onto continuously protected people.
+Counts below are inventory entries in each package, not globally unique documents. Healthcare explicitly records 17 entries representing 15 distinct documents within that package. URLs were not deduplicated across packages, so no total unique-document count is claimed.
 
-### Residence Options and §131o — mandatory focused investigation
+| Topic | Source-package inventory entries |
+| --- | ---: |
+| Temporary Protection | 12 |
+| Residence Options | 7 |
+| Work Authorization and Employee Rights | 16 |
+| Finding a Job | 16 |
+| Healthcare | 17 entries / 15 distinct documents |
+| Housing | 12 |
+| Education | 18 |
+| Financial and Social Assistance | 19 |
+| **Total inventory entries** | **117** |
 
-Treat the route as a distinct statutory transitional measure connected with the termination of temporary refuge. Read current §131o in Act 404/2011 as amended by Act 128/2026, along with relevant Employment Services Act changes. Determine:
+## 5. Aggregated drafting caveats
 
-- who can use the route and the exact filing window;
-- the eligible temporary-residence purpose/type and how it is granted;
-- the six-month purpose/activity test and evidence required;
-- Foreign Police filing process, reservation category, required documents, criminal-record and age exceptions, deadlines and actual operational practice;
-- whether pending filing confers continued residence or work rights;
-- what happens to temporary refuge on filing, notification, refusal and grant;
-- duration of the residence permit and interaction with §131o’s one-year continued displaced-person treatment after scheme termination;
-- exclusions, rejection grounds, and relation to ordinary employment, study, family, business and other routes.
+### Temporary Protection
 
-MV SR’s 13 August notice gives the booking category and says reservations open 21 days ahead; it does not establish all eligibility or legal effects. Do not infer those from the news notice. Use the Slov-Lex statutory text as the primary basis and MV SR for current procedure.
+- Current booking is a required step for ordinary registration and is separate from the active electronic pre-registration/declaration form, which the sources do not call mandatory. Use the TP-specific service and its 21-day booking horizon; do not apply the general 40/60-day booking rules to TP without a live-system change.
+- The EU military-obligation condition applies only where applicable and has a continuity exception for people protected in a Member State on/before 4 Aug 2026 who continuously retain that protection there. No Slovakia-specific accepted-proof checklist or screening process was established.
+- Keep the 4 Mar 2028 scheme/status endpoint separate from the validity printed on a particular card/document; individual records can be checked through MV SR’s validation service. Do not promise a uniform printed expiry, replacement requirement, full document checklist, appointment, or processing time.
 
-### Employment and job search
+### Residence Options
 
-- Verify the work-without-permit rule for holders of temporary refuge, employer information-card duty and deadlines, acceptable contracts, and all employee rights under current Labor Code and Employment Services Act.
-- Capture 2026 statutory minimum wage by monthly/hourly floor and graded minimum wage levels, with effective date and sector/role boundaries. These figures are time-sensitive and must be refreshed at drafting and publication.
-- Check current official vacancies, ÚPSVaR registration eligibility, mediation and retraining conditions, EURES role, and professional-qualification recognition authority. None promises a vacancy, registration, course, credential recognition or job.
-- Do not infer that a right to work while under temporary refuge settles work authorization while a §131o application is pending or after temporary refuge ends.
+- §131o(14) supports filing before general TP termination from 15 Jul 2026. For the pre-end route, state the same eligible purpose activity in Slovakia for at least six months immediately before filing. For the post-end §131o(4) route, state the six months immediately before temporary refuge ends and uninterrupted continuation of that activity through filing. Preserve the genuine subsection cross-reference ambiguity about applying the latter continuity wording to the pre-end route.
+- This is a bounded application process, not an automatic conversion or grant. Ordinary business residence is not established as an ordinary in-country filing route for a TP holder; ordinary employment, study, family, and Blue Card routes remain distinct and purpose-specific.
+- A complete pending application may preserve stay under the applicable rule, but stay does not itself establish work authorisation. The §72bc post-TP employment bridge is separate and conditional. Blue Card has no §131o shortcut.
+- Current `odídenec` status is excluded from long-term residence. Whether earlier TP time counts after a status change remains unresolved; do not infer that it counts.
+
+### Work Authorization and Employee Rights
+
+- The TP work-permit exemption is for employment and does not establish self-employment/business permission. Employer information-card/document duties remain specific; the researched current deadline is seven working days.
+- Keep the post-TP §72bc bridge separate from current TP rights and preserve its cohort/continuity conditions. A pending residence application is not a universal work authorisation.
+- The 2026 general minimum wage and six difficulty-grade floors are gross, date-sensitive values with workplace grading/collective-agreement boundaries. Refresh figures and effective dates before publication.
+
+### Finding a Job
+
+- Public vacancy search is available without UoZ registration where established. UoZ and ZoZ are different registers with different purposes and conditions.
+- Current TP-holder eligibility for UoZ was not established unambiguously; direct the person to confirm with ÚPSVaR rather than claim either blanket eligibility or exclusion.
+- Public mediation, counselling and training do not guarantee an opening, a course, funding, registration, unemployment benefit or placement. EURES is a distinct official channel. Qualification recognition is not universally required for non-regulated work.
 
 ### Healthcare
 
-- Separate public health-insurance membership from statutory reimbursement of care for uninsured temporary-refuge holders. Verify the applicable service scope in Acts 580/2004 and 577/2004, including urgent and routine care.
-- Confirm proof accepted by providers/insurer, employment-triggered insurance, registration steps, payer, medicines, copayments and special groups with the Ministry, insurer and current legislation.
-- Do not claim either blanket full public-insurance status or emergency-only entitlement without resolving the exact statutory provision and cohort.
+- Temporary refuge does not itself create Slovak public-insurance membership. Uninsured TP reimbursement under Act 580/2004 §9h is a separate route and has distinct adult and child scope.
+- Employment-based public insurance has its own eligibility threshold, income/agreement conditions, application deadline and reporting. VšZP’s reimbursement role or provider billing record does not make a patient a VšZP policyholder.
+- Current document proof, identity-only evidence before a physical document arrives, and administrative transition after employment ends retain qualifications. Medicines may have copayments. Keep urgent care distinct from necessary care, planned treatment and full insured coverage.
 
 ### Housing
 
-- Read the current Asylum Act, especially amendments effective in 2026, for reception accommodation and vulnerability-based extension, capacity, application and deadlines.
-- Explicitly determine whether an accommodation allowance remains available in 2026, who is eligible, how long it runs, who receives it, and what host/municipal obligations apply. Treat older allowance guidance as stale until checked against current law and MV SR instructions.
-- Separate temporary reception, any time-limited state contribution, municipal/local support, social housing and private renting. Do not promise availability, a location or continuing rent payment.
+- §68 asylum-facility accommodation and §69 contribution for accommodation by a host are separate regimes with different vulnerable-person definitions. Do not merge those definitions.
+- The ordinary initial §68 period is 60 days from first grant. Facility intake, bed/capacity, priority, location and transportation are not guaranteed; written extension requests and the 15-day-before-end deadline for someone already housed must remain attached to the extension rule.
+- §69 is paid through an eligible host/municipality route, not as rent cash to the displaced person. Keep the ordinary 60-day period and exact vulnerable exceptions, free eligible accommodation, current host rates/caps, and beneficiary/host reporting duties together. Private rental is separate; do not invent an ordinary-rental deposit cap.
 
 ### Education
 
-- Verify the new compulsory-education and application deadlines for Ukrainian children with temporary refuge under §161r, and distinguish those from general foreign-student admission rules.
-- Research ordinary and adaptation-class placement, the fallback if a school has no place, language assistance and local capacity.
-- Check credential recognition with the competent recognition authority, secondary-school and university admission rules, annual funded places and tuition status. Do not transfer Romanian or other-country school rules by analogy.
+- September 2025 compulsory-education changes are cohort-specific to the qualifying Ukrainian-citizen / temporary-protection proceedings or status and statutory age bands. They do not apply to every foreign child.
+- Education access does not guarantee a chosen school or a place at a particular school. Language supports and adaptation classes are needs-, consent-, school- and capacity-dependent; no specific support form/location is guaranteed.
+- Ukrainian online study is not automatically a replacement for Slovak compulsory attendance. Credential recognition and partial-study credit decisions are separate, purpose-specific routes. Higher-education admission is institution-specific; public/state TP tuition exemption does not extend to every private university or every fee.
 
 ### Financial and Social Assistance
 
-- Determine eligibility independently for material-need assistance, child allowance, parental allowance, childcare allowance and disability support. Check any residence-duration, household, employment, insurance, child-residence or coordination requirements.
-- Identify the competent ÚPSVaR office or municipality, evidence and application channels for each scheme.
-- Use current official amounts only when supported by an effective-date source; amounts, subsistence minimums and conditions are time-sensitive. Eligibility to apply is not an award.
-- Do not assume temporary refuge alone creates eligibility for every residence-based or contribution-based benefit.
+- Material-need assistance is household-, income- and assets-tested. Employment does not automatically end entitlement; disclose earnings and apply the statutory disregard/calculation.
+- Separate ÚPSVaR regular assistance, municipality-discretionary one-off assistance and MPSVR humanitarian subsidy. The latter is not a guaranteed disability payment. Standard disability compensation under Act 447/2008 is not established on TP alone.
+- Temporary refuge alone does not establish ordinary child allowance or parental allowance eligibility. Childcare allowance has its own TP/special-protection residence deeming rule for both parent and child and still requires work/study, age, provider and non-duplication conditions. EU coordination is case-specific.
 
-Across all topics, Slovak statutory text and competent Slovak agencies are primary. EU law governs EU temporary protection scope and duration. Do not transfer eligibility, deadlines, work rights, insurance, accommodation payments, benefit conditions, education pathways or residence transitions from another country by analogy.
+These are drafting boundaries drawn from the focused packages. An unresolved claim is not a finding that the underlying right or route is prohibited.
 
-## 5. Priority official-source families
+## 6. Final readiness verdict
 
-- **Temporary Protection / Residence:** MV SR and Foreign Police booking/registration pages; Slov-Lex (Acts 404/2011, 480/2002 and 128/2026); EUR-Lex Council Implementing Decision (EU) 2026/1912 and Decision 2022/382.
-- **Employment / Job search:** Ministry of Labour, Social Affairs and Family; ÚPSVaR (including official vacancies, EURES, registration and employer notices); Slov-Lex (Acts 5/2004 and 311/2001); the relevant qualification recognition authority.
-- **Healthcare:** Ministry of Health; Slov-Lex (Acts 580/2004, 577/2004 and 576/2004); official public health insurers and provider instructions.
-- **Housing:** MV SR / Migration Office; Slov-Lex (Asylum Act 480/2002, including 2026 amendments); current government accommodation-support rules; municipality or higher territorial unit rules where national entitlement is absent.
-- **Education:** Ministry of Education’s Ukraine portal; Slov-Lex (Education Act 245/2008 and applicable financing/recognition legislation); competent credential-recognition body and the relevant school/university authority.
-- **Social assistance:** Ministry of Labour and ÚPSVaR; Slov-Lex (Acts 417/2013 on assistance in material need, 600/2003 on child allowance, 571/2009 on parental allowance, and applicable disability/childcare statutes).
+**READY FOR CONTENT DRAFTING**
 
-## 6. Recommended research order
+- **8/8 topics Ready** according to their focused package verdicts.
+- **24/24 comparison aspects Ready**, each listed once; no extra aspect IDs.
+- **No topic is `Needs source refresh` or `Blocked`.**
+
+This means the evidence is sufficient for bounded drafting with the stated caveats attached. It is **not** owner editorial acceptance, catalog approval, Production promotion, or deployment authorization. Slovakia remains absent from catalogs and from Production and Development visibility.
+
+## 7. Recommended next phase
+
+**Slovakia Development-only content integration.** Do not begin that integration as part of this readiness review.
+
+Recommended drafting/integration order:
 
 1. Temporary Protection
-2. Residence Options, including statutory §131o
+2. Residence Options
 3. Work Authorization and Employee Rights
 4. Finding a Job
 5. Healthcare
@@ -133,26 +165,4 @@ Across all topics, Slovak statutory text and competent Slovak agencies are prima
 7. Education
 8. Financial and Social Assistance
 
-This order preserves the requested sequence and follows key dependencies: protection status defines the cohort; §131o and ordinary residence routes affect later work and service entitlements; employment is then researched before its insurance and benefit interactions. Housing and education have their own urgent time-sensitive 2026 legislation and should follow without importing other countries’ rules. Social-assistance amounts and eligibility are last because they depend on the preceding status, employment and household findings.
-
-## 7. Source discovery references
-
-Initial discovery only; each focused phase must retrieve the current Slovak-language text and check amendment and effective dates.
-
-- [Slov-Lex Act 128/2026 amending Act 404/2011, including §131o](https://www.slov-lex.sk/ezbierky-fe/pravne-predpisy/SK/ZZ/2026/128/20261001)
-- [Current Slov-Lex Act 404/2011 text](https://static.slov-lex.sk/static/SK/ZZ/2011/404/20261001.print.html)
-- [MV SR: §131o transition reservation instructions (13 August 2026)](https://pes.minv.sk/wps/wcm/connect/sk/site/main/spravy/Policia-upozornuje-odidencov)
-- [MV SR: temporary-refuge registration](https://pes.minv.sk/wps/wcm/connect/sk/site/main/zivotne-situacie/Cudzinci/registracia-docasneho-utociska/)
-- [EUR-Lex: Council Implementing Decision (EU) 2026/1912, current corrected text](https://eur-lex.europa.eu/eli/dec_impl/2026/1912/2026-08-04/eng)
-- [ÚPSVaR: employment services information for Ukraine arrivals](https://www.upsvr.gov.sk/media/medialne-spravy/uzitocne-informacie-pre-obcanov-ukrajiny-korisna-informacia-dla-gromadan-ukraini-useful-information-for-citizens-of-ukraine.html?lang=sk&page_id=1159972)
-- [Labour Ministry: 2026 minimum-wage levels](https://employment.gov.sk/sk/praca-zamestnanost/vztah-zamestnanca-zamestnavatela/odmenovanie/minimalne-mzdove-naroky/)
-- [Slov-Lex: Act 69/2026 affecting asylum/reception arrangements](https://static.slov-lex.sk/static/SK/ZZ/2026/69/20260612.print.html)
-- [Ministry of Education: enrolment and education for children from Ukraine](https://ukrajina.minedu.sk/42188-sk/proces-prijimania-deti-a-ziakov-z-ukrajiny/)
-- [Ministry of Labour: material-need assistance](https://employment.gov.sk/sk/rodina-socialna-pomoc/hmotna-nudza/)
-- [Slov-Lex: Health Insurance Act 580/2004](https://www.slov-lex.sk/ezbierky/pravne-predpisy/SK/ZZ/2004/580/)
-
-## 8. Verdict
-
-**READY FOR FOCUSED RESEARCH**
-
-All eight topics can proceed to bounded source and claim investigations. This is not readiness for content drafting, a legal conclusion, human acceptance, catalog integration, Production visibility, or deployment. No blocking issue prevents the first focused research phases; their findings may still gate particular claims or later drafting.
+Production promotion, editorial acceptance and deployment require separate decisions and work.
