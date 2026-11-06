@@ -37,7 +37,7 @@ public sealed class RomaniaContentIntegrationTests
         new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync());
 
     [Fact]
-    public async Task RomaniaHasExpectedDevelopmentOnlyCatalogAndStatusCounts()
+    public async Task RomaniaHasExpectedAcceptedCatalogAndStatusCounts()
     {
         var catalog = await Catalog.Value;
         var romania = Assert.Single(catalog.Countries, country => country.Slug == "romania");
@@ -46,8 +46,8 @@ public sealed class RomaniaContentIntegrationTests
         Assert.Equal(8, catalog.Countries.Count);
         Assert.Equal(64, catalog.InformationEntries.Count);
         Assert.Equal(192, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(165, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(27, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(189, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(3, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(entry => entry.CountryId == RomaniaId).ToArray();
@@ -61,7 +61,7 @@ public sealed class RomaniaContentIntegrationTests
             Assert.Equal(Languages.Order(StringComparer.Ordinal).ToArray(), translations.Select(item => item.LanguageCode).Order(StringComparer.Ordinal).ToArray());
             Assert.All(translations, translation =>
             {
-                Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus);
+                Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
                 Assert.Equal(new DateTimeOffset(2026, 11, 5, 12, 0, 0, TimeSpan.Zero), translation.LastUpdatedAt);
                 Assert.False(string.IsNullOrWhiteSpace(translation.Title));
                 Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
@@ -70,8 +70,10 @@ public sealed class RomaniaContentIntegrationTests
             Assert.Contains(code, Articles.Keys);
         }
 
-        Assert.DoesNotContain(CountryVisibility.GetVisibleCountries(catalog, false), country => country.Slug == "romania");
+        Assert.Contains(CountryVisibility.GetVisibleCountries(catalog, false), country => country.Slug == "romania");
         Assert.Contains(CountryVisibility.GetVisibleCountries(catalog, true), country => country.Slug == "romania");
+        Assert.Equal(8, CountryVisibility.GetVisibleCountries(catalog, false).Count);
+        Assert.Equal(8, CountryVisibility.GetVisibleCountries(catalog, true).Count);
     }
 
     [Fact]
@@ -154,7 +156,7 @@ public sealed class RomaniaContentIntegrationTests
     }
 
     [Fact]
-    public async Task RomaniaComparisonGridHasEightDraftFactsPerAspectAndKeepsProductionHidden()
+    public async Task RomaniaComparisonGridHasEightApprovedFactsPerAspectAndIsProductionVisible()
     {
         var catalog = await Catalog.Value;
         var path = Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json");
@@ -169,7 +171,7 @@ public sealed class RomaniaContentIntegrationTests
         Assert.All(comparison.Topics.SelectMany(topic => topic.Aspects), aspect =>
         {
             var fact = Assert.Single(aspect.Facts, item => item.CountrySlug == "romania");
-            Assert.Equal("Draft", fact.Status.ToString());
+            Assert.Equal("Approved", fact.Status.ToString());
             Assert.True(fact.IsAvailable);
             Assert.Contains(Articles.Values.Select(item => item.Id), id => id == fact.InformationEntryId);
             Assert.NotEmpty(fact.OfficialSourceIds);
@@ -183,7 +185,7 @@ public sealed class RomaniaContentIntegrationTests
         }
         var wageAspect = Assert.Single(comparison.Topics.SelectMany(topic => topic.Aspects), aspect => aspect.Id == "work-minimum-pay");
         var wage = Assert.Single(wageAspect.Facts, fact => fact.CountrySlug == "romania");
-        Assert.Equal("Draft", wage.Status.ToString());
+        Assert.Equal("Approved", wage.Status.ToString());
         Assert.True(wage.IsAvailable);
         Assert.Equal(new[] { Guid.Parse("8e63ea72-f1ca-52d0-bc87-d5fc2f4e25e8"), Guid.Parse("e4283f53-f70c-5eff-a2c7-3a78fc1615d7") }, wage.OfficialSourceIds);
         Assert.DoesNotContain(Guid.Parse("70cda0bf-de1c-54bc-b411-386e4dbec151"), wage.OfficialSourceIds);
@@ -216,7 +218,7 @@ public sealed class RomaniaContentIntegrationTests
         var aspect = Assert.Single(comparison.Topics.SelectMany(topic => topic.Aspects), item => item.Id == aspectId);
         var fact = Assert.Single(aspect.Facts, item => item.CountrySlug == "romania");
         Assert.Equal(Guid.Parse(articleId), fact.InformationEntryId);
-        Assert.Equal("Draft", fact.Status.ToString());
+        Assert.Equal("Approved", fact.Status.ToString());
         Assert.True(fact.IsAvailable);
         foreach (var sourceId in expectedSourceIds)
         {

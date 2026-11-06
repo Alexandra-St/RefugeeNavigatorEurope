@@ -116,7 +116,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "24d0ab3d-935c-50b7-8385-c1c54583ec51",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "822e16b8-0279-5560-b821-541b80d5b5c8",
@@ -245,7 +245,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "24d0ab3d-935c-50b7-8385-c1c54583ec51",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "822e16b8-0279-5560-b821-541b80d5b5c8",
@@ -375,7 +375,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "24d0ab3d-935c-50b7-8385-c1c54583ec51",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "822e16b8-0279-5560-b821-541b80d5b5c8",
@@ -511,7 +511,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "6b966a1f-335e-596a-9825-005d30ab23d4",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "501ff4ab-87d5-514d-b2a5-ac95fc628881",
@@ -639,7 +639,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "6b966a1f-335e-596a-9825-005d30ab23d4",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "501ff4ab-87d5-514d-b2a5-ac95fc628881",
@@ -765,7 +765,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "6b966a1f-335e-596a-9825-005d30ab23d4",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "501ff4ab-87d5-514d-b2a5-ac95fc628881",
@@ -894,7 +894,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "54197f49-594b-51d2-a40c-2fcded05f791",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "f4d17c86-d0f0-5f30-89a4-e41d22039c30",
@@ -1019,7 +1019,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "54197f49-594b-51d2-a40c-2fcded05f791",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "30cb19e5-863b-5851-9261-dbd011545668",
@@ -1143,7 +1143,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "54197f49-594b-51d2-a40c-2fcded05f791",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "c065aa80-dd50-593e-ac02-f23bd49f9bd8",
@@ -1274,7 +1274,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "61d13a69-6704-50ee-8b7b-e673a2828e65",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "49ae3d06-a9a3-5319-bf00-520c542d44c2",
@@ -1398,7 +1398,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "61d13a69-6704-50ee-8b7b-e673a2828e65",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "643a3def-a38f-59f5-b83e-c09284188c61",
@@ -1519,7 +1519,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "61d13a69-6704-50ee-8b7b-e673a2828e65",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "8e63ea72-f1ca-52d0-bc87-d5fc2f4e25e8",
@@ -1656,7 +1656,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "be12596b-8657-5b23-a17c-dead174859f3",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "abdf3c49-b02d-56bd-abbb-486792f2901e",
@@ -1781,7 +1781,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "be12596b-8657-5b23-a17c-dead174859f3",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "33154c72-87f0-5edb-bbcd-445c9fa66ba3",
@@ -1905,7 +1905,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "be12596b-8657-5b23-a17c-dead174859f3",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "abdf3c49-b02d-56bd-abbb-486792f2901e",
@@ -2036,7 +2036,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "35bb6fe6-b0b9-5517-af04-e022c7105ec7",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "491030f2-f0c2-5494-a295-819a8ad82433",
@@ -2161,7 +2161,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "35bb6fe6-b0b9-5517-af04-e022c7105ec7",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "0c3202ab-c7ce-52ac-88d4-d003597b4468",
@@ -2285,7 +2285,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "35bb6fe6-b0b9-5517-af04-e022c7105ec7",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "491030f2-f0c2-5494-a295-819a8ad82433",
@@ -2415,7 +2415,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "bfd554ff-a41a-5338-ab3e-25bb3c827a73",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "4b7f9f52-e26c-5d39-b274-8f0fedf97c8e",
@@ -2538,7 +2538,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "bfd554ff-a41a-5338-ab3e-25bb3c827a73",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "0e8b831f-7fb1-583a-a330-d17999da2cd7",
@@ -2665,7 +2665,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "bfd554ff-a41a-5338-ab3e-25bb3c827a73",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "e47fa493-a454-5f69-ade6-789e193c4d6f",
@@ -2803,7 +2803,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "97f02ab3-3352-597b-ad48-11ebf19993c2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "695597de-0102-535c-958f-fcb06159773d",
@@ -2932,7 +2932,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "97f02ab3-3352-597b-ad48-11ebf19993c2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "4c675fc1-cb1b-5315-84f0-969583b5e846",
@@ -3056,7 +3056,7 @@
             {
               "CountrySlug": "romania",
               "InformationEntryId": "97f02ab3-3352-597b-ad48-11ebf19993c2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "695597de-0102-535c-958f-fcb06159773d",
