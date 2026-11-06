@@ -2,8 +2,10 @@
 
 - **Status:** LIVE
 - **Final verdict:** EIGHT-COUNTRY PRIVATE BETA LIVE
-- **Deployed application SHA:** `2f0a95bd70817b33a2c8d48c4631bb9a0c39e261`
-- **Deployment:** owner manually deployed through the existing Render service.
+- **Current deployed SHA:** `206b085c7a16b2829733f9d873208d2f7acd0c70`
+- **Application/content baseline:** `2f0a95bd70817b33a2c8d48c4631bb9a0c39e261`
+- **Release-record change:** `206b085c...` differs from the application/content baseline only by this release-record document; application code, catalogs, content, statuses, sources, and visibility did not change.
+- **Deployment:** owner manually deployed through the existing Render service and reran the deployment smoke after redeploy.
 - **Access:** Private Beta over HTTPS, protected by Basic Auth; credentials are distributed separately.
 - **Verifier/testing/documentation SHA:** `fc02bc8e2e7d626bed4195182971626b401d7140` (not required to be deployed; no application or catalog changes).
 
@@ -49,14 +51,13 @@ The accepted subset remains 21 `Verified` translations and 20 `Approved` facts. 
 
 ## Authenticated live verification
 
-The owner ran authenticated, read-only checks against the existing live deployment:
+The owner ran authenticated, read-only checks against the existing live deployment. After the redeploy of `206b085c7a16b2829733f9d873208d2f7acd0c70`, the deployment smoke was freshly rerun. The eight-country scope and Netherlands hold checks below were previously completed against the unchanged application/content baseline; they were not rerun after this documentation-only redeploy and remain applicable because no application, content, status, source, or visibility code changed between the deployed SHAs.
 
 | Verification | Result |
 | --- | ---: |
-| Deployment/security smoke | 162/162 PASS |
-| Eight-country live scope | 124/124 PASS |
-| Netherlands live holds | 48/48 PASS |
-| **Total** | **334/334 PASS** |
+| Deployment/security smoke — fresh post-redeploy verification | 162/162 PASS |
+| Eight-country live scope — previous verification, still applicable | 124/124 PASS |
+| Netherlands live holds — previous verification, still applicable | 48/48 PASS |
 
 The deployment/security smoke included Basic Auth protection, anonymous denial, content-leak checks, noindex/nofollow, CSS, language switching, and representative country, category, search, compare, and 404 behavior.
 
@@ -64,7 +65,7 @@ The eight-country scope checks covered the exact Home/Search/Compare country set
 
 ## CI and visual evidence
 
-For the deployed application SHA `2f0a95bd70817b33a2c8d48c4631bb9a0c39e261`:
+For the application/content baseline SHA `2f0a95bd70817b33a2c8d48c4631bb9a0c39e261` (deployed application content):
 
 - CI: success.
 - Netherlands visual evidence: success.
@@ -90,4 +91,4 @@ For verifier/testing/documentation SHA `fc02bc8e2e7d626bed4195182971626b401d7140
 - Sweden `social-child-benefits` remains an evidence gap.
 - Live checks cover the tested routes and gates at verification time; they do not replace ongoing source monitoring, accessibility work, or future content refresh.
 
-No credentials or Authorization values are included in this record. The owner performed the deployment; Codex did not deploy or repeat it.
+No credentials or Authorization values are included in this record. The owner performed the redeploy and fresh smoke; Codex did not deploy or repeat it.
