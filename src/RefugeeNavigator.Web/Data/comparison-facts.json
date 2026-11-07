@@ -470,7 +470,7 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "d584362c-3990-5055-8833-158f2b594773",
-                "62ec9f9f-0d3a-51ba-88aa-6c5aade59a71"
+                "48ff49e5-26d6-59b1-aa02-e0889e97ee54"
               ],
               "Values": {
                 "en": "The latest reviewed Bulgarian notice extends national protection through 4 March 2027; the EU scheme runs through 4 March 2028. These dates do not confirm an individual card’s validity or renewal steps.",
@@ -951,6 +951,9 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
+                "c5368b87-86d7-5236-b0bd-b7c90176bd42",
+                "9591f217-22d0-5a9c-8a50-4d6fcf344a8b",
+                "bd07f58c-b6bc-59b3-83ec-2af08330a37f",
                 "35ed6bdf-578c-586f-abc7-3c7adc9e3779"
               ],
               "Values": {
@@ -1420,9 +1423,10 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "b7350769-5ebb-5ffd-afca-2dda4446d84e",
-                "dc44b7fb-fa68-5658-a89a-37c3d65ae67f",
-                "0fb4e6bd-2a0e-5668-b340-be46f83ce44f"
+                "a8f52573-501f-5ef2-929d-4b3d79934145",
+                "f5d17e23-dfba-5cd0-bde0-b3f0b8dbface",
+                "2df25d74-a7e2-588b-b9ee-368e1f1cfb59",
+                "b7350769-5ebb-5ffd-afca-2dda4446d84e"
               ],
               "Values": {
                 "en": "Registered jobseekers may receive mediation, counselling or referrals depending on status, assessment and available programmes. Eligibility is assessed individually.",
@@ -2538,8 +2542,7 @@
               "OfficialSourceIds": [
                 "89d9cea9-d325-58fc-89fb-0b78c574b5a1",
                 "8ccb8ced-a074-5702-8441-c3cd529cec4b",
-                "530d3b5c-ab37-595c-83a0-c5708fa044af",
-                "a2981f25-2a47-5ef4-ad62-349dee64690b"
+                "530d3b5c-ab37-595c-83a0-c5708fa044af"
               ],
               "Values": {
                 "en": "Law recognizes a right to suitable accommodation or means of accommodation when necessary. Current Program 3 support reimburses eligible providers; it does not guarantee a particular placement.",
@@ -2846,8 +2849,8 @@
               "Status": "Draft",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "530d3b5c-ab37-595c-83a0-c5708fa044af",
-                "08595874-44ef-5b19-92fa-6c341a3352b3"
+                "8ccb8ced-a074-5702-8441-c3cd529cec4b",
+                "530d3b5c-ab37-595c-83a0-c5708fa044af"
               ],
               "Values": {
                 "en": "Program 3 reimbursement goes to eligible accommodation providers, not directly to displaced people as rent money. The latest rate located is not confirmed as current.",
@@ -3493,8 +3496,7 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "17ef8536-9ae0-5c5c-966b-4c03eb8dd90c",
-                "186b8fc2-aee7-52cb-be2b-545a335cd148",
-                "a7b83631-4e8c-5ac5-912a-0e41ec6a1d4c"
+                "186b8fc2-aee7-52cb-be2b-545a335cd148"
               ],
               "Values": {
                 "en": "People with temporary protection may apply for general social assistance through the directorate for their current address. Eligibility and amount depend on an individual assessment and benefit rules.",
@@ -3818,8 +3820,7 @@
                 "d6d804d9-41fe-5e97-a224-e4f0c1319f37",
                 "bb443266-cbc9-55a9-bcbf-eb01ea44d1fc",
                 "32002628-3a71-510d-b41a-1a3d3aaba1da",
-                "2fca0274-a88c-53eb-91f2-bf43da33a367",
-                "ee3b40c6-a4a0-5ff0-b52e-db5d7de3c551"
+                "2fca0274-a88c-53eb-91f2-bf43da33a367"
               ],
               "Values": {
                 "en": "Family benefits follow separate rules. Eligibility for temporary-protection holders has been interpreted differently in individual cases; do not assume entitlement. Insurance-based maternity or childcare benefits are a separate route.",
