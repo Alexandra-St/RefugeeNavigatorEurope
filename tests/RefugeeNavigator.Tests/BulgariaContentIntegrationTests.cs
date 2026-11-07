@@ -23,7 +23,7 @@ public sealed class BulgariaContentIntegrationTests
     private static readonly Lazy<Task<CatalogData>> Catalog = new(() => new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync());
 
     [Fact]
-    public async Task BulgariaCatalogHasEightDevelopmentOnlyDraftArticles()
+    public async Task BulgariaCatalogHasEightAcceptedArticlesAndIsVisibleInProductionAndDevelopment()
     {
         var catalog = await Catalog.Value;
         var country = Assert.Single(catalog.Countries, item => item.Slug == "bulgaria");
@@ -32,8 +32,8 @@ public sealed class BulgariaContentIntegrationTests
         Assert.Equal(10, catalog.Countries.Count);
         Assert.Equal(80, catalog.InformationEntries.Count);
         Assert.Equal(240, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(213, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(27, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(237, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(3, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == CountryId).ToArray();
@@ -45,9 +45,11 @@ public sealed class BulgariaContentIntegrationTests
             Assert.Equal(expected.Category, catalog.Categories.Single(item => item.Id == entry.CategoryId).Slug);
             var translations = catalog.InformationEntryTranslations.Where(item => item.InformationEntryId == expected.Id).ToArray();
             Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(item => item.LanguageCode).Order(StringComparer.Ordinal).ToArray());
+            Assert.Equal(3, translations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+            Assert.Equal(0, translations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
             Assert.All(translations, item =>
             {
-                Assert.Equal(VerificationStatus.NeedsReview, item.VerificationStatus);
+                Assert.Equal(VerificationStatus.Verified, item.VerificationStatus);
                 Assert.Equal(new DateTimeOffset(2026, 11, 7, 12, 0, 0, TimeSpan.Zero), item.LastUpdatedAt);
                 Assert.False(string.IsNullOrWhiteSpace(item.Title));
                 Assert.False(string.IsNullOrWhiteSpace(item.Summary));
@@ -57,9 +59,9 @@ public sealed class BulgariaContentIntegrationTests
 
         var production = CountryVisibility.GetVisibleCountries(catalog, false);
         var development = CountryVisibility.GetVisibleCountries(catalog, true);
-        Assert.DoesNotContain(production, item => item.Slug == "bulgaria");
+        Assert.Contains(production, item => item.Slug == "bulgaria");
         Assert.Contains(development, item => item.Slug == "bulgaria");
-        Assert.Equal(9, production.Count);
+        Assert.Equal(10, production.Count);
         Assert.Equal(10, development.Count);
     }
 
@@ -123,7 +125,7 @@ public sealed class BulgariaContentIntegrationTests
     }
 
     [Fact]
-    public async Task BulgariaHasTwentyFourAvailableDraftFactsAndCompleteTopicMappings()
+    public async Task BulgariaHasTwentyFourAvailableApprovedFactsAndCompleteTopicMappings()
     {
         var catalog = await Catalog.Value;
         CountryComparisonTopicMap.Validate(catalog);
@@ -143,11 +145,26 @@ public sealed class BulgariaContentIntegrationTests
         }].Id, CountryComparisonTopicMap.EntryIdFor(topic, "bulgaria")));
 
         var comparison = await new JsonComparisonFactProvider(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json")).LoadAsync(catalog);
-        var facts = comparison.Topics.SelectMany(item => item.Aspects).SelectMany(item => item.Facts).Where(item => item.CountrySlug == "bulgaria").ToArray();
+        var allFacts = comparison.Topics.SelectMany(item => item.Aspects).SelectMany(item => item.Facts).ToArray();
+        var facts = allFacts.Where(item => item.CountrySlug == "bulgaria").ToArray();
         Assert.Equal(24, facts.Length);
-        Assert.Equal(24, facts.Count(item => item.Status == ComparisonFactStatus.Draft));
+        Assert.Equal(24, facts.Count(item => item.Status == ComparisonFactStatus.Approved));
+        Assert.Equal(0, facts.Count(item => item.Status == ComparisonFactStatus.Draft));
         Assert.Equal(24, facts.Count(item => item.IsAvailable));
         Assert.Equal(8, facts.Select(item => item.InformationEntryId).Distinct().Count());
+
+        var netherlandsId = catalog.Countries.Single(item => item.Slug == "netherlands").Id;
+        var netherlandsEntryIds = catalog.InformationEntries.Where(item => item.CountryId == netherlandsId)
+            .Select(item => item.Id).ToHashSet();
+        Assert.Equal(3, catalog.InformationEntryTranslations.Count(item => netherlandsEntryIds.Contains(item.InformationEntryId)
+            && item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(4, allFacts.Count(item => item.CountrySlug == "netherlands" && item.Status == ComparisonFactStatus.Draft));
+        var socialChildBenefits = Assert.Single(comparison.Topics.SelectMany(item => item.Aspects), item => item.Id == "social-child-benefits");
+        var swedenChildBenefits = Assert.Single(socialChildBenefits.Facts, item => item.CountrySlug == "sweden");
+        Assert.Equal(ComparisonFactStatus.Draft, swedenChildBenefits.Status);
+        Assert.False(swedenChildBenefits.IsAvailable);
+        Assert.Empty(swedenChildBenefits.OfficialSourceIds);
+
         var sourcesById = catalog.OfficialSources.ToDictionary(item => item.Id);
         Assert.All(facts, fact =>
         {

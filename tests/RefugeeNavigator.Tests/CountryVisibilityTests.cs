@@ -22,7 +22,7 @@ namespace RefugeeNavigator.Tests;
 public sealed class CountryVisibilityTests
 {
     private static readonly string[] AcceptedCountries =
-        ["denmark", "germany", "poland", "czechia", "spain", "sweden", "netherlands", "romania", "slovakia"];
+        ["denmark", "germany", "poland", "czechia", "spain", "sweden", "netherlands", "romania", "slovakia", "bulgaria"];
     private static readonly Lazy<Task<CatalogData>> Catalog = new(
         () => new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync());
     private static readonly Lazy<Task<ComparisonFactCatalog>> Facts = new(async () =>
@@ -51,10 +51,10 @@ public sealed class CountryVisibilityTests
     [InlineData("en")]
     [InlineData("uk")]
     [InlineData("ru")]
-    public async Task ProductionHomeAndFiltersExposeExactlyTheNineAcceptedCountries(string language)
+    public async Task ProductionHomeAndFiltersExposeExactlyTheTenAcceptedCountries(string language)
     {
         var home = await RenderAsync<Home>("Production", language);
-        Assert.Equal(9, Regex.Matches(home.Html, "class=\"country-card\"").Count);
+        Assert.Equal(10, Regex.Matches(home.Html, "class=\"country-card\"").Count);
         foreach (var slug in AcceptedCountries) Assert.Contains($"href=\"/countries/{slug}\"", home.Html);
 
         var search = await RenderAsync<Search>("Production", language, "/search");
@@ -100,7 +100,7 @@ public sealed class CountryVisibilityTests
     public async Task ProductionSearchPreservesVerifiedResultsAndHeldArticleSuppression(string language)
     {
         var catalog = await Catalog.Value;
-        foreach (var slug in new[] { "czechia", "spain", "netherlands", "sweden", "romania" })
+        foreach (var slug in new[] { "czechia", "spain", "netherlands", "sweden", "romania", "bulgaria" })
         {
             var result = await RenderAsync<Search>("Production", language, $"/search?country={slug}");
             Assert.Equal(slug == "netherlands" ? 7 : 8,
@@ -121,7 +121,7 @@ public sealed class CountryVisibilityTests
     [InlineData("ru")]
     public async Task ProductionCompareAcceptsSwedenAndOtherAcceptedCountries(string language)
     {
-        foreach (var slug in new[] { "czechia", "spain", "netherlands", "sweden", "romania" })
+        foreach (var slug in new[] { "czechia", "spain", "netherlands", "sweden", "romania", "bulgaria" })
         {
             var result = await RenderAsync<Compare>("Production", language,
                 $"/compare?country1={slug}&country2=denmark&category=employment");
@@ -205,7 +205,7 @@ public sealed class CountryVisibilityTests
     {
         var catalog = await Catalog.Value;
         var home = await RenderAsync<Home>("Production", language);
-        Assert.Equal(9, Regex.Matches(home.Html, "class=\"country-card\"").Count);
+        Assert.Equal(10, Regex.Matches(home.Html, "class=\"country-card\"").Count);
         Assert.Contains("href=\"/countries/romania\"", home.Html);
 
         var overview = await RenderAsync<CountryOverview>("Production", language, "/countries/romania",

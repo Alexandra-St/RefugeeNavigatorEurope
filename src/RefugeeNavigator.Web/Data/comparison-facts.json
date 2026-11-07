@@ -148,7 +148,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "4a1e4c9b-a09c-5c92-bc37-2c9a15b459bc",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "e834f7a7-8491-5bca-87a7-ac344af0b9e3",
@@ -306,7 +306,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "4a1e4c9b-a09c-5c92-bc37-2c9a15b459bc",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "48ff49e5-26d6-59b1-aa02-e0889e97ee54"
@@ -466,7 +466,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "4a1e4c9b-a09c-5c92-bc37-2c9a15b459bc",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "d584362c-3990-5055-8833-158f2b594773",
@@ -634,7 +634,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "c276de77-a6b9-5ff7-bbc7-685349b1009a",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "9591f217-22d0-5a9c-8a50-4d6fcf344a8b",
@@ -791,7 +791,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "c276de77-a6b9-5ff7-bbc7-685349b1009a",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "bd07f58c-b6bc-59b3-83ec-2af08330a37f",
@@ -948,7 +948,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "c276de77-a6b9-5ff7-bbc7-685349b1009a",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "c5368b87-86d7-5236-b0bd-b7c90176bd42",
@@ -1109,7 +1109,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "d210414c-a502-59ef-b10e-1ae642b50207",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "d6bee524-62dd-5ebc-8312-8d7e63f19570",
@@ -1264,7 +1264,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "d210414c-a502-59ef-b10e-1ae642b50207",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "a8f52573-501f-5ef2-929d-4b3d79934145",
@@ -1420,7 +1420,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "d210414c-a502-59ef-b10e-1ae642b50207",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "a8f52573-501f-5ef2-929d-4b3d79934145",
@@ -1582,7 +1582,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "26a17913-a1f2-5710-b11b-df406dab09cc",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "373b6a60-13a0-5389-b206-3f6ff5273607",
@@ -1738,7 +1738,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "26a17913-a1f2-5710-b11b-df406dab09cc",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "e4e44917-22d5-54b4-9ec4-7015ca609886",
@@ -1893,7 +1893,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "26a17913-a1f2-5710-b11b-df406dab09cc",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "a80c9f59-8c5b-5cce-94ce-2e9469932979"
@@ -2061,7 +2061,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "47c384e4-2d8f-50bb-af6a-356d49a4c089",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "28e76747-8363-5eb1-8d86-0546eb4d4e66",
@@ -2218,7 +2218,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "47c384e4-2d8f-50bb-af6a-356d49a4c089",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "6dd90ade-3354-5160-97dc-fe4d66eed6cb",
@@ -2377,7 +2377,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "47c384e4-2d8f-50bb-af6a-356d49a4c089",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "9308dd40-64e8-51f3-8b13-650f9c2a7bb2",
@@ -2537,7 +2537,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "f763854d-dee2-5cb3-aacb-6c01203b52fc",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "89d9cea9-d325-58fc-89fb-0b78c574b5a1",
@@ -2693,7 +2693,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "f763854d-dee2-5cb3-aacb-6c01203b52fc",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "94fa7cba-f8a1-5b34-bcbc-21b8cb4aa20f"
@@ -2846,7 +2846,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "f763854d-dee2-5cb3-aacb-6c01203b52fc",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "8ccb8ced-a074-5702-8441-c3cd529cec4b",
@@ -3007,7 +3007,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "db6f961d-e976-52c1-8ef3-d826ee46b3fc",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "f87c647e-62bb-5082-abf5-77ef42366d97",
@@ -3162,7 +3162,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "db6f961d-e976-52c1-8ef3-d826ee46b3fc",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "f500c89e-8bcc-5f93-b0ff-f6acfc803ab9",
@@ -3320,7 +3320,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "db6f961d-e976-52c1-8ef3-d826ee46b3fc",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "a50255f6-0186-54a7-93c4-c07cb0bb3a47",
@@ -3492,7 +3492,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "7fede68e-bccb-53f8-9648-984d7ac6fb68",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "17ef8536-9ae0-5c5c-966b-4c03eb8dd90c",
@@ -3658,7 +3658,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "7fede68e-bccb-53f8-9648-984d7ac6fb68",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "7b024801-b3db-5fba-b291-8430a49efc62",
@@ -3813,7 +3813,7 @@
             {
               "CountrySlug": "bulgaria",
               "InformationEntryId": "7fede68e-bccb-53f8-9648-984d7ac6fb68",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "af0b7177-83a8-595e-ab12-761e7e50f976",
