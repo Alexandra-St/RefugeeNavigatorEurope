@@ -68,11 +68,11 @@ public sealed class CzechiaContentIntegrationTests
 
         Assert.Equal(CzechiaId, country.Id);
         Assert.Equal("Czechia", country.Name);
-        Assert.Equal(9, catalog.Countries.Count);
-        Assert.Equal(72, catalog.InformationEntries.Count);
-        Assert.Equal(216, catalog.InformationEntryTranslations.Count);
+        Assert.Equal(10, catalog.Countries.Count);
+        Assert.Equal(80, catalog.InformationEntries.Count);
+        Assert.Equal(240, catalog.InformationEntryTranslations.Count);
         Assert.Equal(213, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(3, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(27, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(entry => entry.CountryId == CzechiaId).ToArray();

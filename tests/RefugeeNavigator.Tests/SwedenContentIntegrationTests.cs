@@ -173,11 +173,11 @@ public sealed class SwedenContentIntegrationTests
         var country = Assert.Single(catalog.Countries, item => item.Slug == "sweden");
         Assert.Equal(SwedenId, country.Id);
         Assert.Equal("Sweden", country.Name);
-        Assert.Equal(9, catalog.Countries.Count);
-        Assert.Equal(72, catalog.InformationEntries.Count);
-        Assert.Equal(216, catalog.InformationEntryTranslations.Count);
+        Assert.Equal(10, catalog.Countries.Count);
+        Assert.Equal(80, catalog.InformationEntries.Count);
+        Assert.Equal(240, catalog.InformationEntryTranslations.Count);
         Assert.Equal(213, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(3, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(27, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == SwedenId).ToArray();
@@ -381,7 +381,7 @@ public sealed class SwedenContentIntegrationTests
             .LoadAsync(catalog);
         CountryComparisonTopicMap.Validate(catalog);
         Assert.Contains("sweden", CountryComparisonTopicMap.SupportedCountrySlugs);
-        Assert.Equal(9, facts.Topics.SelectMany(topic => topic.Aspects)
+        Assert.Equal(10, facts.Topics.SelectMany(topic => topic.Aspects)
             .SelectMany(aspect => aspect.Facts).Select(fact => fact.CountrySlug).Distinct(StringComparer.Ordinal).Count());
 
         foreach (var topic in CountryComparisonTopicMap.All)
