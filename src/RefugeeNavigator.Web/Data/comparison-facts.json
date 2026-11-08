@@ -174,6 +174,21 @@
                 "uk": "Австрія надає тимчасовий захист визначеним групам як `vorübergehendes Aufenthaltsrecht`; право підтверджує картка `Ausweis für Vertriebene`.",
                 "ru": "Австрия предоставляет временную защиту определённым группам как `vorübergehendes Aufenthaltsrecht`; это право подтверждает карта `Ausweis für Vertriebene`."
               }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "c8c06066-d3cd-55ce-88b0-3499384eece7",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "21a3a70f-2515-5c72-97a8-4ca8cd80e064",
+                "90ddcc13-3ffa-5c4c-a16c-18e4b89d292c"
+              ],
+              "Values": {
+                "en": "EU temporary protection in Italy covers defined displaced groups and specified family, stateless, or Ukrainian-residence-permit cases; Ukrainian nationality alone does not establish eligibility.",
+                "uk": "В Італії тимчасовий захист ЄС охоплює визначені групи переміщених осіб і окремі випадки для членів сімей, осіб без громадянства чи власників української посвідки; самого громадянства України недостатньо.",
+                "ru": "В Италии временная защита ЕС охватывает определённые группы перемещённых лиц и отдельные случаи для членов семей, лиц без гражданства или обладателей украинского ВНЖ; одного гражданства Украины недостаточно."
+              }
             }
           ]
         },
@@ -344,6 +359,20 @@
                 "en": "Initial registration is through designated police recording locations; the BFA issues the displaced-person card after required steps. Check current instructions for your documents and route.",
                 "uk": "Первинна реєстрація відбувається у визначених пунктах поліції; BFA видає картку переміщеної особи після необхідних етапів. Перевірте актуальні вказівки щодо документів і місця звернення.",
                 "ru": "Первичная регистрация проходит в определённых пунктах полиции; BFA выдаёт карту перемещённого лица после необходимых этапов. Уточните актуальные требования к документам и месту обращения."
+              }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "c8c06066-d3cd-55ce-88b0-3499384eece7",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "90ddcc13-3ffa-5c4c-a16c-18e4b89d292c"
+              ],
+              "Values": {
+                "en": "Apply to the Questura responsible for the applicant’s domicile. The TP permit is issued electronically and free of charge; a uniform document checklist or processing time is not established.",
+                "uk": "Заяву подають до Questura за місцем проживання заявника. Посвідку TP видають електронно й безоплатно; єдиного списку документів чи строку розгляду не встановлено.",
+                "ru": "Заявление подают в Questura по месту проживания заявителя. Посвидетельство TP выдают электронно и бесплатно; единый список документов или срок рассмотрения не установлен."
               }
             }
           ]
@@ -522,6 +551,21 @@
                 "en": "The current protection period runs to 4 March 2028. Austrian and EU materials give conflicting military-transition dates (30 July, 4 August and 5 August 2026); ask BFA how they apply to your case.",
                 "uk": "Поточний період захисту триває до 4 березня 2028 року. Австрійські та європейські матеріали наводять різні дати військового перехідного періоду (30 липня, 4 та 5 серпня 2026 року); уточніть у BFA, як вони стосуються вашої справи.",
                 "ru": "Текущий период защиты действует до 4 марта 2028 года. Австрийские и европейские материалы указывают разные даты военного переходного периода (30 июля, 4 и 5 августа 2026 года); уточните в BFA, как они применяются к вашему делу."
+              }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "c8c06066-d3cd-55ce-88b0-3499384eece7",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "9e67a296-0fac-5005-98b9-11e079bd56e5",
+                "dde016b4-2f2d-5322-9d21-0269318f8456"
+              ],
+              "Values": {
+                "en": "The EU temporary-protection scheme runs through 4 March 2028. That date does not establish an individual permit’s printed expiry or a uniform Italian renewal process.",
+                "uk": "Схема тимчасового захисту ЄС діє до 4 березня 2028 року. Ця дата не визначає строк на індивідуальній посвідці чи єдину процедуру її поновлення в Італії.",
+                "ru": "Схема временной защиты ЕС действует до 4 марта 2028 года. Эта дата не определяет срок в индивидуальном документе или единую процедуру его продления в Италии."
               }
             }
           ]
@@ -707,6 +751,23 @@
                 "uk": "Тимчасовий захист не перетворюється автоматично на інший дозвіл. Спеціальний маршрут RWR+ для переміщених осіб за §41a(7b) відрізняється від інших дозволів на проживання за §4a.",
                 "ru": "Временная защита не преобразуется автоматически в другой статус. Специальный маршрут RWR+ для перемещённых лиц по §41a(7b) отличается от других разрешений на проживание по §4a."
               }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "28aee635-27ff-525c-9cd3-8673b5ba2be3",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "87ee9811-270e-5769-af67-4e0359110d0e",
+                "4cd09057-d389-5bf3-bcbc-5e4853bff7fa",
+                "59c83267-a469-5689-b90c-af386a8be359",
+                "d6453609-a10e-5141-a854-e692cb7b7a26"
+              ],
+              "Values": {
+                "en": "Earlier Italy TP-to-work conversion windows ended by 4 March 2026. TP does not automatically convert into another permit, and no current general conversion route is established.",
+                "uk": "Попередні строки конверсії TP у робочу посвідку в Італії завершилися не пізніше 4 березня 2026 року. TP не переходить автоматично в іншу посвідку; чинного загального маршруту конверсії не встановлено.",
+                "ru": "Прежние сроки конверсии TP в рабочий ВНЖ в Италии завершились не позднее 4 марта 2026 года. TP не преобразуется автоматически в другой документ; действующий общий маршрут конверсии не установлен."
+              }
             }
           ]
         },
@@ -879,6 +940,21 @@
                 "en": "The special §41a(7b) RWR+ route has employment-history conditions and does not require the §4a waiver. Other §4a titles have route-specific requirements and a conditional written waiver effective on grant.",
                 "uk": "Спеціальний маршрут RWR+ за §41a(7b) має вимоги до трудової історії та не потребує відмови за §4a. Інші дозволи за §4a мають окремі вимоги й умовну письмову відмову, що набирає чинності після надання дозволу.",
                 "ru": "Для специального маршрута RWR+ по §41a(7b) требуется соответствующая трудовая история, но отказ по §4a не нужен. У других разрешений по §4a свои требования и условный письменный отказ, вступающий в силу при выдаче разрешения."
+              }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "28aee635-27ff-525c-9cd3-8673b5ba2be3",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "7f87bebf-55df-51f3-97b0-f01b05eb5fe8",
+                "b5723ac1-589f-5aeb-9159-a2c41b8d2694"
+              ],
+              "Values": {
+                "en": "Employment, self-employment, family, study, and qualified-worker routes have separate requirements. TP alone does not waive those route-specific conditions.",
+                "uk": "Маршрути найманої чи самостійної роботи, сімейний, навчальний і для кваліфікованих працівників мають окремі вимоги. Сам TP не скасовує умов конкретного маршруту.",
+                "ru": "Маршруты наёмной или самостоятельной работы, семейный, учебный и для квалифицированных работников имеют отдельные требования. Сам TP не отменяет условий конкретного маршрута."
               }
             }
           ]
@@ -1054,6 +1130,21 @@
                 "uk": "Подання заяви на спеціальну RWR+ саме по собі не продовжує перебування після завершення тимчасового захисту. Належне своєчасне подання за §4a може забезпечити законність перебування під час розгляду, але не дає дозволу на роботу.",
                 "ru": "Подача заявления на специальную RWR+ сама по себе не продлевает пребывание после окончания временной защиты. Надлежащая своевременная подача по §4a может обеспечить законность пребывания на время рассмотрения, но не даёт разрешения на работу."
               }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "28aee635-27ff-525c-9cd3-8673b5ba2be3",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "7f87bebf-55df-51f3-97b0-f01b05eb5fe8",
+                "d6453609-a10e-5141-a854-e692cb7b7a26"
+              ],
+              "Values": {
+                "en": "Filing channels and pending-application effects depend on the specific permit route. A pending application does not automatically authorize work or establish a universal right to file from Italy.",
+                "uk": "Спосіб подання та наслідки очікування залежать від конкретного типу посвідки. Подана заява автоматично не дає права працювати й не встановлює універсального права подати її з Італії.",
+                "ru": "Способ подачи и последствия ожидания зависят от конкретного типа ВНЖ. Поданное заявление автоматически не даёт права работать и не устанавливает универсального права подать его из Италии."
+              }
             }
           ]
         }
@@ -1228,6 +1319,23 @@
                 "uk": "В AMS `alle jobs` та відкритому eJob-Room можна шукати вакансії без реєстрації в AMS. Перегляд вакансій відрізняється від реєстрації шукачем роботи та від дозволу на роботу.",
                 "ru": "В AMS `alle jobs` и открытом eJob-Room можно искать вакансии без регистрации в AMS. Просмотр объявлений отличается от регистрации соискателем и от разрешения на работу."
               }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "39091eb7-04c7-5b45-83b7-585f5f1ce719",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "abc42049-2855-5401-a962-d280e2246b66",
+                "fa89fdf2-3536-540c-948f-0d563d3779eb",
+                "506705f0-38ff-5f0b-a952-ff01d6839763",
+                "fe531bd6-ec15-5477-859c-ce34778e9094"
+              ],
+              "Values": {
+                "en": "Official vacancy sources include SIISL, EURES, and regional public portals; none is a complete national vacancy list. SIISL account functions require accepted digital identity.",
+                "uk": "Офіційні вакансії публікують SIISL, EURES і регіональні державні портали; жоден із них не є повним національним переліком. Для функцій облікового запису SIISL потрібна прийнятна цифрова ідентифікація.",
+                "ru": "Официальные вакансии публикуют SIISL, EURES и региональные государственные порталы; ни один из них не является полным национальным списком. Для функций аккаунта SIISL нужна подходящая цифровая идентификация."
+              }
             }
           ]
         },
@@ -1397,6 +1505,22 @@
                 "en": "Holders of an `Ausweis für Vertriebene` may register with AMS as jobseekers. The reviewed guidance does not establish that police registration alone before card issue is sufficient.",
                 "uk": "Власники `Ausweis für Vertriebene` можуть зареєструватися в AMS як шукачі роботи. Перевірені вказівки не підтверджують, що до видачі картки достатньо лише поліцейської реєстрації.",
                 "ru": "Владельцы `Ausweis für Vertriebene` могут зарегистрироваться в AMS как соискатели. Проверенные инструкции не подтверждают, что до выдачи карты достаточно одной полицейской регистрации."
+              }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "39091eb7-04c7-5b45-83b7-585f5f1ce719",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "506705f0-38ff-5f0b-a952-ff01d6839763",
+                "3dde8424-7871-5ea0-aa29-e0b9b029b207",
+                "f6a5d695-3b24-534e-b307-27684464e973"
+              ],
+              "Values": {
+                "en": "Regional services and CPI may offer counselling, assessment, referrals, or training. Services and places vary; registration does not guarantee a job or course.",
+                "uk": "Регіональні служби та CPI можуть надавати консультації, оцінювання, направлення чи навчання. Послуги й місця різняться; реєстрація не гарантує роботу чи курс.",
+                "ru": "Региональные службы и CPI могут предоставлять консультации, оценку, направления или обучение. Услуги и места различаются; регистрация не гарантирует работу или курс."
               }
             }
           ]
@@ -1570,6 +1694,22 @@
                 "en": "AMS advice, referrals and training depend on individual assessment and available places. `Arbeitslosengeld` is a separate insurance-based decision, not an automatic result of jobseeker registration.",
                 "uk": "Консультації, направлення та навчання AMS залежать від індивідуальної оцінки й наявності місць. `Arbeitslosengeld` — окреме рішення на основі страхового стажу, а не автоматичний наслідок реєстрації шукачем роботи.",
                 "ru": "Консультации, направления и обучение AMS зависят от индивидуальной оценки и наличия мест. `Arbeitslosengeld` — отдельное решение на основе страхового стажа, а не автоматический результат регистрации соискателем."
+              }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "39091eb7-04c7-5b45-83b7-585f5f1ce719",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "3dde8424-7871-5ea0-aa29-e0b9b029b207",
+                "5324ee9e-8a51-5ea6-bafe-af6b91d59241",
+                "cfc357c7-2c7c-56f8-9db8-3b6cb4a03371"
+              ],
+              "Values": {
+                "en": "Jobseeker/DID registration is separate from NASpI eligibility. Ukrainian contribution periods are not automatically credited under the reviewed sources.",
+                "uk": "Реєстрація шукача роботи/DID відокремлена від права на NASpI. Автоматичне зарахування українського страхового стажу перевіреними джерелами не підтверджено.",
+                "ru": "Регистрация соискателя/DID отделена от права на NASpI. Автоматический зачёт украинского страхового стажа проверенными источниками не подтверждён."
               }
             }
           ]
@@ -1746,6 +1886,21 @@
                 "uk": "Особа з відповідної категорії, яка має `Ausweis für Vertriebene`, може працювати за наймом без звичайного дозволу AMS; для зміни роботодавця не потрібен окремий імміграційний дозвіл на робоче місце.",
                 "ru": "Лицо из соответствующей категории с `Ausweis für Vertriebene` может работать по найму без обычного разрешения AMS; для смены работодателя не требуется отдельное иммиграционное разрешение на рабочее место."
               }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "d988941a-e709-53ba-a2bf-47f1ac2f9956",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "71bec450-10ba-5e0a-91b0-a89fb36469da",
+                "6e2ccdc9-1ebb-560f-ba77-b0cc7036d099"
+              ],
+              "Values": {
+                "en": "People covered by Italy’s TP measures may work under the TP-specific rule; the receipt for the TP application may support work before the permit arrives. This does not apply to every immigration receipt.",
+                "uk": "Люди, охоплені заходами TP в Італії, можуть працювати за спеціальним правилом; квитанція про заяву TP може дозволяти почати до видачі посвідки. Це не стосується кожної імміграційної квитанції.",
+                "ru": "Люди, охваченные мерами TP в Италии, могут работать по специальному правилу; квитанция о заявлении TP может позволять начать работу до выдачи документа. Это не относится к любой иммиграционной квитанции."
+              }
             }
           ]
         },
@@ -1918,6 +2073,24 @@
                 "uk": "Для працівника, який підлягає страхуванню, роботодавець зазвичай реєструє його в ÖGK до початку роботи.",
                 "ru": "Для работника, подлежащего страхованию, работодатель обычно регистрирует его в ÖGK до начала работы."
               }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "d988941a-e709-53ba-a2bf-47f1ac2f9956",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "d10ee8f0-2ecd-5ae7-9b6a-b11299c906a9",
+                "b7dd3838-344c-512c-8aa5-06ccd37bb170",
+                "9a90b8d1-4fe9-5330-9929-dff6c65e2c1a",
+                "43281ca0-91bc-5cd5-9f98-e0aa3d3c2333",
+                "68944a2e-e956-5367-835e-70e9ef31de64"
+              ],
+              "Values": {
+                "en": "TP does not remove ordinary employer duties, including hiring communications, written information, social contributions, work insurance, and safety obligations.",
+                "uk": "TP не скасовує звичайних обов’язків роботодавця, зокрема повідомлень про найм, письмової інформації, соціальних внесків, страхування працівників і правил безпеки.",
+                "ru": "TP не отменяет обычных обязанностей работодателя, включая уведомления о найме, письменную информацию, социальные взносы, страхование работников и требования безопасности."
+              }
             }
           ]
         },
@@ -2082,6 +2255,21 @@
                 "en": "Austria has no single universal statutory national minimum wage. Minimum pay usually follows the applicable collective agreement and job classification or another binding instrument.",
                 "uk": "В Австрії немає єдиної універсальної встановленої законом мінімальної зарплати для всієї країни. Мінімальна оплата зазвичай визначається колективним договором і класифікацією роботи або іншим обов’язковим механізмом.",
                 "ru": "В Австрии нет единой универсальной установленной законом минимальной зарплаты для всей страны. Минимальная оплата обычно определяется коллективным договором и классификацией должности либо другим обязательным механизмом."
+              }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "d988941a-e709-53ba-a2bf-47f1ac2f9956",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "037214ac-ab9a-539c-a76a-bf123bdf3a24",
+                "b2a55a1b-5371-5137-8067-f579049322f0"
+              ],
+              "Values": {
+                "en": "Italy has no single statutory minimum wage amount for every job. For private subordinate work, representative CCNL agreements inform pay benchmarks under the 2026 framework.",
+                "uk": "В Італії немає єдиної законодавчої мінімальної суми оплати для всіх робіт. Для приватної найманої праці репрезентативні договори CCNL є орієнтиром у межах правил 2026 року.",
+                "ru": "В Италии нет единой установленной законом минимальной суммы оплаты для всех работ. Для частной наёмной работы репрезентативные соглашения CCNL служат ориентиром в рамках правил 2026 года."
               }
             }
           ]
@@ -2267,6 +2455,21 @@
                 "uk": "Автоматичне спеціальне обов’язкове медичне страхування для українців завершилося 31 травня 2025 року. Сам тимчасовий захист чи картка переміщеної особи не підтверджують чинне страхування; інші підстави залежать від обставин.",
                 "ru": "Автоматическое специальное обязательное медицинское страхование для украинцев закончилось 31 мая 2025 года. Одна лишь временная защита или карта перемещённого лица не подтверждает действующую страховку; другие основания зависят от обстоятельств."
               }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "462ace7d-8deb-5cd7-a530-548c79a8e144",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "a51bc867-e348-51f3-aa86-9a853bb56e7b",
+                "4195c68d-304c-57a4-9d32-bc78d32840a7"
+              ],
+              "Values": {
+                "en": "TP does not itself complete SSN registration. The special Ukraine-related mandatory-registration framework is established through 31 December 2026; later national rules were not established in the reviewed sources.",
+                "uk": "TP сам по собі не завершує реєстрацію в SSN. Спеціальний обов’язковий маршрут для України встановлений до 31 грудня 2026 року; подальші національні правила не встановлені перевіреними джерелами.",
+                "ru": "TP сам по себе не завершает регистрацию в SSN. Специальный обязательный маршрут для Украины установлен до 31 декабря 2026 года; дальнейшие национальные правила не установлены проверенными источниками."
+              }
             }
           ]
         },
@@ -2438,6 +2641,21 @@
                 "en": "An e-card is a way to access care, not the insurance entitlement itself. An insured person may use substitute proof if the physical card is unavailable.",
                 "uk": "e-card дає змогу отримувати медичні послуги, але сама по собі не є правом на страхове покриття. Якщо картки немає, застрахована особа може використати альтернативне підтвердження.",
                 "ru": "e-card помогает получить медицинские услуги, но сама по себе не является страховым правом. Если физической карты нет, застрахованный может использовать альтернативное подтверждение."
+              }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "462ace7d-8deb-5cd7-a530-548c79a8e144",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "d16850c8-af12-57de-b209-a1bbed836180",
+                "e069d1a3-4f69-5478-8621-95d0bc9447b2"
+              ],
+              "Values": {
+                "en": "A codice fiscale is an identifier, not proof of active SSN entitlement. A Tessera Sanitaria or TEAM is not automatically issued to every TP holder and does not alone establish the underlying entitlement.",
+                "uk": "Codice fiscale є ідентифікатором, а не доказом чинного права на SSN. Tessera Sanitaria чи TEAM не видається автоматично кожному власнику TP і сама не встановлює базове право.",
+                "ru": "Codice fiscale — идентификатор, а не доказательство действующего права на SSN. Tessera Sanitaria или TEAM не выдаётся автоматически каждому владельцу TP и сама по себе не подтверждает основное право."
               }
             }
           ]
@@ -2611,6 +2829,22 @@
                 "en": "Call 144 or 112 for emergencies; 1450 is health advice and 141 is the on-call doctor. Emergency admission does not make all later care or treatment free.",
                 "uk": "У невідкладній ситуації телефонуйте 144 або 112; 1450 — медична консультація, 141 — черговий лікар. Невідкладна госпіталізація не означає, що подальша допомога й лікування безкоштовні.",
                 "ru": "При экстренной ситуации звоните 144 или 112; 1450 — медицинская консультация, 141 — дежурный врач. Экстренная госпитализация не означает, что последующая помощь и лечение бесплатны."
+              }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "462ace7d-8deb-5cd7-a530-548c79a8e144",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "a19d1117-94ab-5bbc-a087-f5bf752f932b",
+                "b451ee0a-2430-561b-93e5-72d9c974f539",
+                "b334d68e-72e8-5f53-9c82-f9a61b22a459"
+              ],
+              "Values": {
+                "en": "Emergency services are available through 112/118 or an emergency department. Urgent-care access does not make all continuing treatment, prescriptions, or follow-up free.",
+                "uk": "У невідкладній ситуації можна телефонувати 112/118 або звернутися до відділення невідкладної допомоги. Це не означає, що подальше лікування, рецепти чи контрольні послуги безоплатні.",
+                "ru": "При неотложной ситуации можно звонить 112/118 или обратиться в отделение неотложной помощи. Это не означает, что дальнейшее лечение, рецепты или контрольные услуги бесплатны."
               }
             }
           ]
@@ -2789,6 +3023,21 @@
                 "uk": "Особа з тимчасовим захистом і недостатніми коштами може подати заяву на земельну `Grundversorgung`. Допомога залежить від потреб і не гарантує місця; місця для первинного прийому обмежені.",
                 "ru": "Человек с временной защитой и недостаточными средствами может подать заявление на земельную `Grundversorgung`. Помощь зависит от нуждаемости и не гарантирует место; мест первичного размещения мало."
               }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "5aafddcb-e302-52b7-9365-f95e7261d3a4",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "72f205a1-4d67-52b3-b696-321a170a1721",
+                "bbcd4b5d-4f57-55b2-a371-fd0dfb8f7283"
+              ],
+              "Values": {
+                "en": "Specified CAS/SAI reception arrangements may continue through 4 March 2027, subject to programme eligibility and capacity. No individual bed or location is guaranteed.",
+                "uk": "Окремі домовленості CAS/SAI можуть діяти до 4 березня 2027 року з урахуванням умов програми й наявних місць. Місце чи конкретне місто не гарантуються.",
+                "ru": "Отдельные договорённости CAS/SAI могут действовать до 4 марта 2027 года с учётом условий программы и наличия мест. Место или конкретный город не гарантируются."
+              }
             }
           ]
         },
@@ -2959,6 +3208,21 @@
                 "uk": "Приватна оренда регулюється звичайними правилами: MRG застосовується повністю, частково або не застосовується залежно від житла. Договір зазвичай може бути усним, але строкові договори в межах MRG мають бути письмовими; універсального законодавчого обмеження застави немає.",
                 "ru": "Частная аренда регулируется обычными правилами: MRG действует полностью, частично или не действует в зависимости от жилья. Договор обычно может быть устным, но срочный договор в сфере MRG должен быть письменным; универсального законодательного ограничения залога нет."
               }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "5aafddcb-e302-52b7-9365-f95e7261d3a4",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "00e97a56-faa7-575e-964a-308be2bef690",
+                "d9ae0c0c-40f6-503b-957a-5418a01ae104"
+              ],
+              "Values": {
+                "en": "TP does not guarantee landlord acceptance. Tenancy rules depend on the contract; the three-month deposit ceiling under Law 392/1978 applies only to residential leases within that law’s scope.",
+                "uk": "TP не гарантує згоди орендодавця. Правила залежать від договору; межа застави у три місячні платежі за Законом 392/1978 діє лише для житлових договорів у сфері цього закону.",
+                "ru": "TP не гарантирует согласия арендодателя. Правила зависят от договора; предел залога в три месячных платежа по Закону 392/1978 действует только для жилых договоров в сфере этого закона."
+              }
             }
           ]
         },
@@ -3127,6 +3391,22 @@
                 "en": "Private-housing support under `Grundversorgung` is provincially administered; federal cost ceilings are not guaranteed beneficiary payments. `Wohnbeihilfe` varies by province, with no single Austria-wide TP allowance established.",
                 "uk": "Підтримку приватного житла в межах `Grundversorgung` адмініструють землі; федеральні граничні суми не є гарантованою виплатою отримувачу. `Wohnbeihilfe` відрізняється між землями; єдиної загальноавстрійської виплати для осіб із тимчасовим захистом не встановлено.",
                 "ru": "Поддержку частного жилья в рамках `Grundversorgung` администрируют земли; федеральные пределы расходов не являются гарантированной выплатой получателю. `Wohnbeihilfe` различается по землям; единой общенациональной выплаты для лиц с временной защитой не установлено."
+              }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "5aafddcb-e302-52b7-9365-f95e7261d3a4",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "b091a118-3e1d-5d46-8edc-6ead572cb357",
+                "0c706877-d98f-59cb-9722-513bcafbe524",
+                "a41f3529-1f11-5663-be5f-024e85c231ed"
+              ],
+              "Values": {
+                "en": "Reviewed sources establish no automatic nationwide TP rent or deposit payment. Housing support is regional or municipal and programme-specific.",
+                "uk": "Перевірені джерела не встановлюють автоматичної загальнонаціональної виплати TP на оренду чи заставу. Житлова допомога залежить від регіону, муніципалітету й окремої програми.",
+                "ru": "Проверенные источники не устанавливают автоматическую общенациональную выплату TP на аренду или залог. Жилищная помощь зависит от региона, муниципалитета и отдельной программы."
               }
             }
           ]
@@ -3307,6 +3587,23 @@
                 "uk": "Обов’язкове шкільне навчання триває дев’ять років із вересня після досягнення шести років; саме українське онлайн-навчання його не замінює. Bildungsdirektion визначає місце в обов’язковій школі, але обрана школа чи автоматичне зарахування до класу не гарантуються.",
                 "ru": "Обязательное школьное обучение длится девять лет с сентября после достижения шести лет; одно лишь украинское онлайн-обучение его не заменяет. Bildungsdirektion определяет место в обязательной школе, но выбранная школа или автоматическое определение класса не гарантируются."
               }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "ba3d3110-730d-5340-a89a-2b6722430bdd",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "7438de87-d5e2-533a-bc14-700916f7a5fc",
+                "6ebe5a94-c0e8-5372-9e7a-69a6316c2835",
+                "d2d06713-0ddc-5959-ba9d-3dd7fbb23c91",
+                "e2ee94d0-6f04-521d-b615-e7a89b736300"
+              ],
+              "Values": {
+                "en": "Children with TP can enrol in school and are subject to compulsory education, generally ages 6–16. Missing records do not automatically block initial enrolment; the school assesses class placement, and a preferred place is not guaranteed.",
+                "uk": "Діти з TP можуть зараховуватися до школи й підпадають під обов’язкову освіту, зазвичай у віці 6–16 років. Відсутність документів сама по собі не блокує початкове зарахування; клас визначає школа, бажане місце не гарантується.",
+                "ru": "Дети с TP могут поступать в школу и подпадают под обязательное образование, обычно в возрасте 6–16 лет. Отсутствие документов само по себе не препятствует первоначальному зачислению; класс определяет школа, желаемое место не гарантируется."
+              }
             }
           ]
         },
@@ -3474,6 +3771,22 @@
                 "en": "Schools assess German-language needs and may use `Deutschförderklassen`, `Deutschförderkurse` or a site-specific support plan in 2026/27. No individual course, number of hours or duration is guaranteed.",
                 "uk": "Школи оцінюють потребу в підтримці німецької мови й у 2026/27 році можуть застосовувати `Deutschförderklassen`, `Deutschförderkurse` або власний план підтримки. Конкретний курс, кількість годин чи тривалість не гарантуються.",
                 "ru": "Школы оценивают потребность в поддержке немецкого языка и в 2026/27 году могут применять `Deutschförderklassen`, `Deutschförderkurse` или собственный план поддержки. Конкретный курс, число часов или длительность не гарантируются."
+              }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "ba3d3110-730d-5340-a89a-2b6722430bdd",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "e2ee94d0-6f04-521d-b615-e7a89b736300",
+                "1bd54c5a-43de-5f7f-94ae-6055299b40c4",
+                "4f761dfe-59ae-5f18-b676-d42ccd62a6b2"
+              ],
+              "Values": {
+                "en": "Schools may arrange Italian-language support based on pupil needs and school organisation; no fixed course or hours are guaranteed. Ukrainian online schooling alone is not established as a substitute for Italian compulsory education.",
+                "uk": "Школи можуть організовувати підтримку з італійської мови з урахуванням потреб учня та організації школи; фіксований курс чи години не гарантуються. Саме лише українське онлайн-навчання не замінює обов’язкову освіту в Італії.",
+                "ru": "Школы могут организовать поддержку по итальянскому языку с учётом потребностей ученика и организации школы; фиксированный курс или часы не гарантируются. Только украинское онлайн-обучение не заменяет обязательное образование в Италии."
               }
             }
           ]
@@ -3654,6 +3967,22 @@
                 "en": "Temporary protection does not itself guarantee university or Fachhochschule admission. Recognition, admission and credit transfer are separate decisions; the 2026/27 Ukrainian tuition waiver is limited by citizenship and institution, and Ernst Mach – Ukraine ended 30 June 2026.",
                 "uk": "Тимчасовий захист сам по собі не гарантує вступу до університету чи Fachhochschule. Визнання, вступ і зарахування кредитів вирішуються окремо; звільнення від плати для українців у 2026/27 році обмежене громадянством і типом закладу, а Ernst Mach – Ukraine завершено 30 червня 2026 року.",
                 "ru": "Временная защита сама по себе не гарантирует поступления в университет или Fachhochschule. Признание, поступление и зачёт кредитов решаются отдельно; освобождение от платы для украинцев в 2026/27 году ограничено гражданством и типом учреждения, а Ernst Mach – Ukraine завершилась 30 июня 2026 года."
+              }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "ba3d3110-730d-5340-a89a-2b6722430bdd",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "a82fdeb8-baff-5aac-8993-f05b44cd3b27",
+                "319056b6-9058-5f2f-8d2c-f95689eff0fa",
+                "51e8ea72-7871-56a4-9e94-b0baed7bb956"
+              ],
+              "Values": {
+                "en": "University admission, qualification recognition, credit transfer, and language requirements are institution- and programme-specific. TP creates no universal tuition waiver.",
+                "uk": "Вступ до університету, визнання кваліфікації, перенесення кредитів і мовні вимоги залежать від закладу та програми. TP не створює універсального звільнення від оплати.",
+                "ru": "Поступление в университет, признание квалификации, зачёт кредитов и языковые требования зависят от учреждения и программы. TP не создаёт универсального освобождения от платы."
               }
             }
           ]
@@ -3840,6 +4169,23 @@
                 "uk": "`Grundversorgung` надається з урахуванням потреб і адмініструється землями; сам тимчасовий захист не гарантує грошової допомоги. Звичайні `Sozialhilfe`/`Mindestsicherung` та страхова допомога з безробіття — окремі програми зі своїми умовами.",
                 "ru": "`Grundversorgung` предоставляется с учётом нуждаемости и администрируется землями; одна лишь временная защита не гарантирует денежную помощь. Обычные `Sozialhilfe`/`Mindestsicherung` и страховое пособие по безработице — отдельные программы со своими условиями."
               }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "55696570-3337-5e2f-8a24-71e256e869e9",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "ccecfa58-086f-536c-8c5f-c5cadca292fe",
+                "ba05db6f-e8b8-5965-b8fb-83f07c81bd51",
+                "fe044454-1d3e-5919-a717-2d634507c0b0",
+                "985e24fc-147e-573f-ba43-1e38837cd7f6"
+              ],
+              "Values": {
+                "en": "TP alone does not create a national subsistence cash entitlement. ADI and SFL have separate status, household, and means conditions and do not automatically include TP.",
+                "uk": "Сам TP не створює національного права на грошову допомогу для проживання. ADI та SFL мають окремі вимоги до статусу, домогосподарства й доходів і не включають TP автоматично.",
+                "ru": "Сам TP не создаёт национального права на денежную помощь для проживания. ADI и SFL имеют отдельные требования к статусу, домохозяйству и доходам и не включают TP автоматически."
+              }
             }
           ]
         },
@@ -4020,6 +4366,22 @@
                 "uk": "Після необхідних реєстраційних кроків зверніться по `Grundversorgung` до відповідного органу землі або уповноваженого надавача. Потреби оцінюють, про доходи треба повідомляти, а порядок відрізняється між землями.",
                 "ru": "После необходимых регистрационных шагов обратитесь за `Grundversorgung` в соответствующий орган земли или к уполномоченному поставщику. Нуждаемость оценивают, о доходах необходимо сообщать, а порядок различается по землям."
               }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "55696570-3337-5e2f-8a24-71e256e869e9",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "ccecfa58-086f-536c-8c5f-c5cadca292fe",
+                "e54a62aa-2cbf-5369-9412-09a4843bc511",
+                "985e24fc-147e-573f-ba43-1e38837cd7f6"
+              ],
+              "Values": {
+                "en": "Use each INPS benefit’s own application rules; ISEE applies where the scheme requires it. CAF/patronato can assist with documents but do not decide eligibility; local Comune help is separate.",
+                "uk": "Для кожної виплати INPS діють власні правила подання; ISEE застосовується, якщо цього вимагає програма. CAF/patronato допомагають із документами, але не визначають право; допомога Comune окрема.",
+                "ru": "Для каждой выплаты INPS действуют свои правила подачи; ISEE применяется, если этого требует программа. CAF/patronato помогают с документами, но не определяют право; помощь Comune является отдельной."
+              }
             }
           ]
         },
@@ -4195,6 +4557,22 @@
                 "en": "From 1 July 2026, displaced Ukrainians’ `Familienbeihilfe` follows the current general conditions and the Grundversorgung boundary, with a narrow significant-disability exception; the former employment/AMS condition no longer applies. `Kinderabsetzbetrag` is paid with it; childcare and maternity benefits have separate conditions.",
                 "uk": "З 1 липня 2026 року `Familienbeihilfe` для переміщених українців підпорядковується чинним загальним умовам і правилу щодо Grundversorgung, із вузьким винятком для випадку значної інвалідності; колишня вимога працевлаштування/реєстрації в AMS не діє. `Kinderabsetzbetrag` виплачується разом із нею; допомога на догляд за дитиною та виплата у зв’язку з вагітністю й пологами мають окремі умови.",
                 "ru": "С 1 июля 2026 года `Familienbeihilfe` для перемещённых украинцев подчиняется текущим общим условиям и правилу о Grundversorgung, с узким исключением для случая значительной инвалидности; прежнее требование о работе/регистрации в AMS больше не действует. `Kinderabsetzbetrag` выплачивается вместе с ней; пособия по уходу за ребёнком и материнству имеют отдельные условия."
+              }
+            },
+            {
+              "CountrySlug": "italy",
+              "InformationEntryId": "55696570-3337-5e2f-8a24-71e256e869e9",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "fc1804f9-10b7-5244-aaeb-54567bef91ec",
+                "d75ac4f8-3933-534c-a119-fe5bc3b3cc28",
+                "70970455-9332-5216-a73e-5253d3cfd362"
+              ],
+              "Values": {
+                "en": "The current INPS manual lists TP permits for AUU subject to general conditions, while older 2022 guidance differs. Current Bonus nido guidance is separate; no payment is automatic.",
+                "uk": "Чинний посібник INPS вказує посвідки TP для AUU за загальних умов, тоді як вказівки 2022 року відрізняються. Чинні правила Bonus nido окремі; виплата не автоматична.",
+                "ru": "Действующее руководство INPS указывает ВНЖ TP для AUU при соблюдении общих условий, тогда как указания 2022 года отличаются. Правила Bonus nido отдельные; выплата не автоматическая."
               }
             }
           ]

@@ -5059,5 +5059,495 @@
     "Title": "AMS, Arbeitslosengeld",
     "Url": "https://www.ams.at/arbeitsuchende/arbeitslos-was-tun/geld-vom-ams/arbeitslosengeld",
     "LastCheckedAt": "2026-11-07T00:00:00+00:00"
+  },
+  {
+    "Id": "21a3a70f-2515-5c72-97a8-4ca8cd80e064",
+    "InformationEntryId": "c8c06066-d3cd-55ce-88b0-3499384eece7",
+    "Title": "Council of the EU, Implementing Decision 2022/382",
+    "Url": "https://eur-lex.europa.eu/eli/dec_impl/2022/382/oj/eng",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "90ddcc13-3ffa-5c4c-a16c-18e4b89d292c",
+    "InformationEntryId": "c8c06066-d3cd-55ce-88b0-3499384eece7",
+    "Title": "Presidency of the Council of Ministers, DPCM 28 March 2022",
+    "Url": "https://www.protezionecivile.gov.it/en/normativa/dpcm-del-28-marzo-2022/",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "9e67a296-0fac-5005-98b9-11e079bd56e5",
+    "InformationEntryId": "c8c06066-d3cd-55ce-88b0-3499384eece7",
+    "Title": "Council of the EU, Implementing Decision 2026/1912",
+    "Url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02026D1912-20260804",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "dde016b4-2f2d-5322-9d21-0269318f8456",
+    "InformationEntryId": "c8c06066-d3cd-55ce-88b0-3499384eece7",
+    "Title": "EU Official Journal, corrigendum to Decision 2026/1912",
+    "Url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32026D1912R%2801%29",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "1ee569b4-6afd-5fbf-ada2-de3ea8f01d7a",
+    "InformationEntryId": "c8c06066-d3cd-55ce-88b0-3499384eece7",
+    "Title": "Ministry of the Interior, Protezione temporanea in Italia booklet",
+    "Url": "https://libertaciviliimmigrazione.dlci.interno.gov.it/sites/default/files/2025-04/ultima_versione_opuscolo_informativo_protezione_temporanea_italiano.pdf",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "87ee9811-270e-5769-af67-4e0359110d0e",
+    "InformationEntryId": "28aee635-27ff-525c-9cd3-8673b5ba2be3",
+    "Title": "Gazzetta Ufficiale, DPCM 28 March 2022",
+    "Url": "https://www.gazzettaufficiale.it/eli/id/2022/04/15/22A02488/SG",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "4cd09057-d389-5bf3-bcbc-5e4853bff7fa",
+    "InformationEntryId": "28aee635-27ff-525c-9cd3-8673b5ba2be3",
+    "Title": "Normattiva, Law 213/2023 conversion provision",
+    "Url": "https://www.normattiva.it/eli/stato/LEGGE/2023/12/30/213/CONSOLIDATED",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "59c83267-a469-5689-b90c-af386a8be359",
+    "InformationEntryId": "28aee635-27ff-525c-9cd3-8673b5ba2be3",
+    "Title": "Normattiva, DL 202/2024 conversion provision",
+    "Url": "https://www.normattiva.it/atto/caricaDettaglioAtto?atto.codiceRedazionale=24G00227&atto.dataPubblicazioneGazzetta=2024-12-27&tipoDettaglio=vigente",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "7f87bebf-55df-51f3-97b0-f01b05eb5fe8",
+    "InformationEntryId": "28aee635-27ff-525c-9cd3-8673b5ba2be3",
+    "Title": "Normattiva, consolidated TUI immigration law",
+    "Url": "https://www.normattiva.it/atto/caricaDettaglioAtto?atto.codiceRedazionale=098G0348&atto.dataPubblicazioneGazzetta=1998-08-18&bloccoAggiornamentoBreadCrumb=true&tipoDettaglio=vigente",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "b5723ac1-589f-5aeb-9159-a2c41b8d2694",
+    "InformationEntryId": "28aee635-27ff-525c-9cd3-8673b5ba2be3",
+    "Title": "Ministry of the Interior, visa and permit guidance",
+    "Url": "https://www.interno.gov.it/it/temi/immigrazione-e-asilo/modalita-dingresso/visto-e-permesso-soggiorno",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "d6453609-a10e-5141-a854-e692cb7b7a26",
+    "InformationEntryId": "28aee635-27ff-525c-9cd3-8673b5ba2be3",
+    "Title": "Gazzetta Ufficiale, Legislative Decree 83/2026",
+    "Url": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaDettaglioAtto/originario?atto.codiceRedazionale=26G00100&atto.dataPubblicazioneGazzetta=2026-05-20&elenco30giorni=false",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "7f550c54-1bf0-5d43-9b44-f6cf252a8002",
+    "InformationEntryId": "28aee635-27ff-525c-9cd3-8673b5ba2be3",
+    "Title": "Council of the EU, transition recommendation",
+    "Url": "https://eur-lex.europa.eu/eli/C/2025/5129/oj",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "abc42049-2855-5401-a962-d280e2246b66",
+    "InformationEntryId": "39091eb7-04c7-5b45-83b7-585f5f1ce719",
+    "Title": "Ministry of Labour, SIISL platform information",
+    "Url": "https://www.lavoro.gov.it/notizie/pagine/piattaforma-siisl-aperta-cittadini-e-imprese",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "fa89fdf2-3536-540c-948f-0d563d3779eb",
+    "InformationEntryId": "39091eb7-04c7-5b45-83b7-585f5f1ce719",
+    "Title": "SIISL official platform",
+    "Url": "https://siisl.lavoro.gov.it/",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "506705f0-38ff-5f0b-a952-ff01d6839763",
+    "InformationEntryId": "39091eb7-04c7-5b45-83b7-585f5f1ce719",
+    "Title": "Ministry of Labour, CPI services",
+    "Url": "https://lavoro.gov.it/sportello-unico-digitale/ricerca-di-occupazione/ricerca-di-occupazione-e-assistenza-centri-limpiego",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "3dde8424-7871-5ea0-aa29-e0b9b029b207",
+    "InformationEntryId": "39091eb7-04c7-5b45-83b7-585f5f1ce719",
+    "Title": "Ministry of Labour, DID guidance",
+    "Url": "https://lavoro.gov.it/en/node/16508",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "fe531bd6-ec15-5477-859c-ce34778e9094",
+    "InformationEntryId": "39091eb7-04c7-5b45-83b7-585f5f1ce719",
+    "Title": "EURES services",
+    "Url": "https://eures.europa.eu/eures-services/help-and-support_en",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "f6a5d695-3b24-534e-b307-27684464e973",
+    "InformationEntryId": "39091eb7-04c7-5b45-83b7-585f5f1ce719",
+    "Title": "Ministry of Labour, GOL measures",
+    "Url": "https://lavoro.gov.it/temi-e-priorita/occupazione/focus/programma-gol/pagine/misure-nazionali",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "5324ee9e-8a51-5ea6-bafe-af6b91d59241",
+    "InformationEntryId": "39091eb7-04c7-5b45-83b7-585f5f1ce719",
+    "Title": "INPS, NASpI service",
+    "Url": "https://www.inps.it/content/inps-site/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.50593.naspi-indennit-mensile-di-disoccupazione.html",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "cfc357c7-2c7c-56f8-9db8-3b6cb4a03371",
+    "InformationEntryId": "39091eb7-04c7-5b45-83b7-585f5f1ce719",
+    "Title": "INPS, social-security agreements",
+    "Url": "https://www.inps.it/it/it/dettaglio-approfondimento.schede-informative.stati-extra-ue-convenzionati-con-l-italia.html",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "71bec450-10ba-5e0a-91b0-a89fb36469da",
+    "InformationEntryId": "d988941a-e709-53ba-a2bf-47f1ac2f9956",
+    "Title": "Civil Protection, OCDPC 872/2022, Article 7",
+    "Url": "https://www.protezionecivile.gov.it/it/normativa/ocdpc-n-872-del-4-marzo-2022-disposizioni-urgenti-di-protezione-civile-assicurare-sul-territorio-nazionale-laccoglienza-il-soccorso-e-lassistenza-alla-0/",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "6e2ccdc9-1ebb-560f-ba77-b0cc7036d099",
+    "InformationEntryId": "d988941a-e709-53ba-a2bf-47f1ac2f9956",
+    "Title": "Civil Protection, Ukraine work FAQ",
+    "Url": "https://domande-risposte.protezionecivile.gov.it/it/approfondimento/emergenza-ucraina/",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "72ca572d-6adb-5a83-ab03-352506fdd230",
+    "InformationEntryId": "d988941a-e709-53ba-a2bf-47f1ac2f9956",
+    "Title": "Gazzetta Ufficiale, DPCM 28 March 2022",
+    "Url": "https://www.gazzettaufficiale.it/eli/id/2022/04/15/22A02488/SG",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "d10ee8f0-2ecd-5ae7-9b6a-b11299c906a9",
+    "InformationEntryId": "d988941a-e709-53ba-a2bf-47f1ac2f9956",
+    "Title": "Ministry of Labour, mandatory communications and SIISL",
+    "Url": "https://www.lavoro.gov.it/stampa-e-media/comunicati/pagine/dal-primo-aprile-2026-comunicazioni-obbligatorie-anche-su-siisl",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "b7dd3838-344c-512c-8aa5-06ccd37bb170",
+    "InformationEntryId": "d988941a-e709-53ba-a2bf-47f1ac2f9956",
+    "Title": "Normattiva, written employment information",
+    "Url": "https://www.normattiva.it/eli/id/1997/06/12/097G0188/CONSOLIDATED/20260628",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "037214ac-ab9a-539c-a76a-bf123bdf3a24",
+    "InformationEntryId": "d988941a-e709-53ba-a2bf-47f1ac2f9956",
+    "Title": "Italian Constitution, Article 36",
+    "Url": "https://www.senato.it/istituzione/la-costituzione/parte-i/titolo-iii/articolo-36",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "b2a55a1b-5371-5137-8067-f579049322f0",
+    "InformationEntryId": "d988941a-e709-53ba-a2bf-47f1ac2f9956",
+    "Title": "Gazzetta Ufficiale, 2026 fair-remuneration law",
+    "Url": "https://www.gazzettaufficiale.it/atto/vediMenuHTML?atto.codiceRedazionale=26A03291&atto.dataPubblicazioneGazzetta=2026-06-27&tipoSerie=serie_generale&tipoVigenza=originario",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "9a90b8d1-4fe9-5330-9929-dff6c65e2c1a",
+    "InformationEntryId": "d988941a-e709-53ba-a2bf-47f1ac2f9956",
+    "Title": "INPS, employer contribution duties",
+    "Url": "https://www.inps.it/it/it/inps-comunica/diritti-e-obblighi-in-materia-di-sicurezza-sociale-nell-unione-e/per-le-imprese/pagamento-dei-contributi-previdenziali.html",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "43281ca0-91bc-5cd5-9f98-e0aa3d3c2333",
+    "InformationEntryId": "d988941a-e709-53ba-a2bf-47f1ac2f9956",
+    "Title": "INAIL, compulsory work insurance",
+    "Url": "https://www.inail.it/portale/assicurazione/it/lassicurazione-inail/La-tutela-assicurativa-nell-ue/Assicurazione-contro-infortuni-e-malattie-professionali-in-Italia.html",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "68944a2e-e956-5367-835e-70e9ef31de64",
+    "InformationEntryId": "d988941a-e709-53ba-a2bf-47f1ac2f9956",
+    "Title": "Normattiva, Legislative Decree 81/2008, workplace safety",
+    "Url": "https://www.normattiva.it/atto/caricaDettaglioAtto?atto.codiceRedazionale=008G0104&atto.dataPubblicazioneGazzetta=2008-04-30&bloccoAggiornamentoBreadCrumb=true&tipoDettaglio=vigente",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "a51bc867-e348-51f3-aa86-9a853bb56e7b",
+    "InformationEntryId": "462ace7d-8deb-5cd7-a530-548c79a8e144",
+    "Title": "Ministry of Health, Ukraine healthcare guidance",
+    "Url": "https://www.salute.gov.it/new/it/tema/assistenza-sanitaria-paesi-extra-ue/emergenza-ucraina/",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "4195c68d-304c-57a4-9d32-bc78d32840a7",
+    "InformationEntryId": "462ace7d-8deb-5cd7-a530-548c79a8e144",
+    "Title": "Gazzetta Ufficiale, Law 26/2026",
+    "Url": "https://www.gazzettaufficiale.it/eli/id/2026/02/28/26A01010/SG",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "925134e7-accb-536b-926c-1fae201ef1ad",
+    "InformationEntryId": "462ace7d-8deb-5cd7-a530-548c79a8e144",
+    "Title": "Civil Protection, Ukraine emergency FAQ",
+    "Url": "https://domande-risposte.protezionecivile.gov.it/it/approfondimento/emergenza-ucraina/",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "d1375712-1a31-5862-a6de-b1525f62c643",
+    "InformationEntryId": "462ace7d-8deb-5cd7-a530-548c79a8e144",
+    "Title": "Ministry of Health, SSN registration",
+    "Url": "https://www.salute.gov.it/new/it/tema/iscrizione-al-ssn/iscrizione-dei-cittadini-stranieri-al-servizio-sanitario-nazionale-ssn/",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "d16850c8-af12-57de-b209-a1bbed836180",
+    "InformationEntryId": "462ace7d-8deb-5cd7-a530-548c79a8e144",
+    "Title": "Agenzia delle Entrate, Tessera Sanitaria guidance",
+    "Url": "https://www1.agenziaentrate.gov.it/web_app_entrate/tessera_sanitaria.html/1000",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "e069d1a3-4f69-5478-8621-95d0bc9447b2",
+    "InformationEntryId": "462ace7d-8deb-5cd7-a530-548c79a8e144",
+    "Title": "Ministry of Health, TEAM guidance",
+    "Url": "https://www.salute.gov.it/new/it/tema/cure-nellunione-europea/tessera-europea-assicurazione-malattia-team/",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "a19d1117-94ab-5bbc-a087-f5bf752f932b",
+    "InformationEntryId": "462ace7d-8deb-5cd7-a530-548c79a8e144",
+    "Title": "Ministry of Health, ticket and exemptions",
+    "Url": "https://www.salute.gov.it/new/it/tema/esenzioni-dal-ticket/ticket-ed-esenzioni/",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "b451ee0a-2430-561b-93e5-72d9c974f539",
+    "InformationEntryId": "462ace7d-8deb-5cd7-a530-548c79a8e144",
+    "Title": "Normattiva, TUI Article 35",
+    "Url": "https://www.normattiva.it/atto/caricaDettaglioAtto?atto.codiceRedazionale=098G0348&atto.dataPubblicazioneGazzetta=1998-08-18&bloccoAggiornamentoBreadCrumb=true&classica=true&dataVigenza=08%2F11%2F2026&generaTabId=true&tipoDettaglio=singolavigenza&title=lbl.dettaglioAtto",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "b334d68e-72e8-5f53-9c82-f9a61b22a459",
+    "InformationEntryId": "462ace7d-8deb-5cd7-a530-548c79a8e144",
+    "Title": "Ministry of Health, emergency departments",
+    "Url": "https://www.salute.gov.it/portale/prontoSoccorso/homeProntoSoccorso.jsp",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "72f205a1-4d67-52b3-b696-321a170a1721",
+    "InformationEntryId": "5aafddcb-e302-52b7-9365-f95e7261d3a4",
+    "Title": "Civil Protection, OCDPC 1175/2025",
+    "Url": "https://www.protezionecivile.gov.it/it/normativa/ocdpc-n-1175-del-17-dicembre-2025/",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "bbcd4b5d-4f57-55b2-a371-fd0dfb8f7283",
+    "InformationEntryId": "5aafddcb-e302-52b7-9365-f95e7261d3a4",
+    "Title": "Civil Protection, Ukraine reception FAQ",
+    "Url": "https://domande-risposte.protezionecivile.gov.it/it/approfondimento/assistenza-e-accoglienza-ucraina/",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "a54617d2-595a-5c29-b88c-51fe7637d6f4",
+    "InformationEntryId": "5aafddcb-e302-52b7-9365-f95e7261d3a4",
+    "Title": "Civil Protection, Ukraine reception system",
+    "Url": "https://emergenze.protezionecivile.gov.it/it/pagina-base/il-sistema-di-accoglienza-e-assistenza-alla-popolazione-ucraina/",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "00e97a56-faa7-575e-964a-308be2bef690",
+    "InformationEntryId": "5aafddcb-e302-52b7-9365-f95e7261d3a4",
+    "Title": "Normattiva, Law 431/1998",
+    "Url": "https://www.normattiva.it/atto/caricaDettaglioAtto?atto.codiceRedazionale=098G0483&atto.dataPubblicazioneGazzetta=1998-12-15&bloccoAggiornamentoBreadCrumb=true&dataVigenza=&generaTabId=true&qId=&tabID=&tipoDettaglio=vigente&title=lbl.dettaglioAtto",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "d9ae0c0c-40f6-503b-957a-5418a01ae104",
+    "InformationEntryId": "5aafddcb-e302-52b7-9365-f95e7261d3a4",
+    "Title": "Gazzetta Ufficiale, Law 392/1978",
+    "Url": "https://www.gazzettaufficiale.it/eli/gu/1978/07/29/211/sg/pdf",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "76119203-6236-5c68-920e-afeb99ef4287",
+    "InformationEntryId": "5aafddcb-e302-52b7-9365-f95e7261d3a4",
+    "Title": "Agenzia delle Entrate, RLI Web",
+    "Url": "https://apptel.agenziaentrate.gov.it/RliWeb/",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "31720367-ed49-526a-a51b-846e840e7045",
+    "InformationEntryId": "5aafddcb-e302-52b7-9365-f95e7261d3a4",
+    "Title": "Interior Ministry, residence-registration guidance",
+    "Url": "https://dait.interno.gov.it/servizi-demografici/circolari/circolare-dait-n35-del-18-aprile-2024",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "b091a118-3e1d-5d46-8edc-6ead572cb357",
+    "InformationEntryId": "5aafddcb-e302-52b7-9365-f95e7261d3a4",
+    "Title": "Infrastructure Ministry, housing access",
+    "Url": "https://mit.gov.it/temi/casa/accesso-allabitazione",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "0c706877-d98f-59cb-9722-513bcafbe524",
+    "InformationEntryId": "5aafddcb-e302-52b7-9365-f95e7261d3a4",
+    "Title": "Regione Lazio, 2026 rent support",
+    "Url": "https://www.regione.lazio.it/documenti/88324",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "a41f3529-1f11-5663-be5f-024e85c231ed",
+    "InformationEntryId": "5aafddcb-e302-52b7-9365-f95e7261d3a4",
+    "Title": "Comune di Livorno, 2026 rent call",
+    "Url": "https://www.comune.livorno.it/s3/3612/allegati/argomenti/assistenza-sociale/bando-affitti/bando-affitti-2026/bando-affitti-2026.pdf",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "7438de87-d5e2-533a-bc14-700916f7a5fc",
+    "InformationEntryId": "ba3d3110-730d-5340-a89a-2b6722430bdd",
+    "Title": "Normattiva, DPR 394/1999, Article 45",
+    "Url": "https://www.normattiva.it/atto/caricaDettaglioAtto?atto.codiceRedazionale=099G0265&atto.dataPubblicazioneGazzetta=1999-11-03&bloccoAggiornamentoBreadCrumb=true&classica=true&dataVigenza=03%2F05%2F2026&generaTabId=true&qId=&tabID=&tipoDettaglio=singolavigenza&title=lbl.dettaglioAtto",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "6ebe5a94-c0e8-5372-9e7a-69a6316c2835",
+    "InformationEntryId": "ba3d3110-730d-5340-a89a-2b6722430bdd",
+    "Title": "Normattiva, compulsory education law",
+    "Url": "https://www.normattiva.it/atto/caricaDettaglioAtto?atto.codiceRedazionale=006G0318&atto.dataPubblicazioneGazzetta=2006-12-27&bloccoAggiornamentoBreadCrumb=true&classica=true&dataVigenza=&generaTabId=true&qId=&tabID=0.5570099692317021&tipoDettaglio=vigente&title=lbl.dettaglioAtto",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "d2d06713-0ddc-5959-ba9d-3dd7fbb23c91",
+    "InformationEntryId": "ba3d3110-730d-5340-a89a-2b6722430bdd",
+    "Title": "MIM, 2026/27 enrolment circular",
+    "Url": "https://www.mim.gov.it/documents/20182/8782792/m_pi.AOODGCASIS.REGISTRO%2BUFFICIALE%28U%29.0008069.18-12-2025.pdf/6beceb90-1af0-fce7-18d4-98dfdd56ec40?t=1766131880390&version=1.0",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "e2ee94d0-6f04-521d-b615-e7a89b736300",
+    "InformationEntryId": "ba3d3110-730d-5340-a89a-2b6722430bdd",
+    "Title": "MIM, Ukraine school guidance",
+    "Url": "https://www.mim.gov.it/documents/20182/6740601/Accoglienza%2Bscolastica%2Bper%2Bgli%2Bstudenti%2Bucraini.%2BIndicazioni%2Boperative.pdf/537575d9-f15d-d31f-e833-b7d26c0881db?t=165000739745&version=1.0",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "1bd54c5a-43de-5f7f-94ae-6055299b40c4",
+    "InformationEntryId": "ba3d3110-730d-5340-a89a-2b6722430bdd",
+    "Title": "MIM, foreign-pupil guidance",
+    "Url": "https://www.mim.gov.it/documents/20182/2223566/linee_guida_integrazione_alunni_stranieri.pdf/5e41fc48-3c68-2a17-ae75-1b5da6a55667",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "4f761dfe-59ae-5f18-b676-d42ccd62a6b2",
+    "InformationEntryId": "ba3d3110-730d-5340-a89a-2b6722430bdd",
+    "Title": "MIM, home-education guidelines",
+    "Url": "https://www.mim.gov.it/documents/9064803/9297240/Linee%2Bguida_Istruzione%2Bparentale.pdf/0db2a68f-e7ba-e694-98d1-d854dd5223c0?t=1766060610567",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "a82fdeb8-baff-5aac-8993-f05b44cd3b27",
+    "InformationEntryId": "ba3d3110-730d-5340-a89a-2b6722430bdd",
+    "Title": "MUR, Universitaly procedures",
+    "Url": "https://www.universitaly.it/en/studenti-stranieri",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "319056b6-9058-5f2f-8d2c-f95689eff0fa",
+    "InformationEntryId": "ba3d3110-730d-5340-a89a-2b6722430bdd",
+    "Title": "MUR, foreign qualification recognition",
+    "Url": "https://www.mur.gov.it/en/node/127",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "51e8ea72-7871-56a4-9e94-b0baed7bb956",
+    "InformationEntryId": "ba3d3110-730d-5340-a89a-2b6722430bdd",
+    "Title": "MUR, regional right-to-study guidance",
+    "Url": "https://www.mur.gov.it/it/aree-tematiche/universita/studenti-diritto-allo-studio-e-residenze/diritto-allo-studio",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "ccecfa58-086f-536c-8c5f-c5cadca292fe",
+    "InformationEntryId": "55696570-3337-5e2f-8a24-71e256e869e9",
+    "Title": "INPS, Assegno di Inclusione service",
+    "Url": "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.assegno-di-inclusione-adi.html",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "ba05db6f-e8b8-5965-b8fb-83f07c81bd51",
+    "InformationEntryId": "55696570-3337-5e2f-8a24-71e256e869e9",
+    "Title": "INPS, Supporto per la Formazione e il Lavoro service",
+    "Url": "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.supporto-per-la-formazione-e-il-lavoro-sfl-.html",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "fe044454-1d3e-5919-a717-2d634507c0b0",
+    "InformationEntryId": "55696570-3337-5e2f-8a24-71e256e869e9",
+    "Title": "Normattiva, ADI/SFL legal framework",
+    "Url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2023-05-04;48",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "d807b816-6a74-5390-8090-673cd1a3e3bf",
+    "InformationEntryId": "55696570-3337-5e2f-8a24-71e256e869e9",
+    "Title": "Gazzetta Ufficiale, Ukraine emergency-support changes",
+    "Url": "https://www.gazzettaufficiale.it/eli/id/2024/12/27/24G00224/sg",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "0373fa9c-9b6e-504d-8e90-dbc65a81e492",
+    "InformationEntryId": "55696570-3337-5e2f-8a24-71e256e869e9",
+    "Title": "Civil Protection, OCDPC 1175/2025",
+    "Url": "https://www.protezionecivile.gov.it/it/normativa/ocdpc-n-1175-del-17-dicembre-2025/",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "5ebecce7-0ccc-5fa7-87ab-998e65c98469",
+    "InformationEntryId": "55696570-3337-5e2f-8a24-71e256e869e9",
+    "Title": "Civil Protection, Ukraine assistance FAQ",
+    "Url": "https://domande-risposte.protezionecivile.gov.it/it/approfondimento/assistenza-e-accoglienza-ucraina/",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "e54a62aa-2cbf-5369-9412-09a4843bc511",
+    "InformationEntryId": "55696570-3337-5e2f-8a24-71e256e869e9",
+    "Title": "INPS, ISEE portal",
+    "Url": "https://www.inps.it/it/it/dettaglio-scheda.it.schede-servizio-strumento.schede-servizi.Portale-unico-ISEE.html",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "fc1804f9-10b7-5244-aaeb-54567bef91ec",
+    "InformationEntryId": "55696570-3337-5e2f-8a24-71e256e869e9",
+    "Title": "INPS, AUU citizen application manual",
+    "Url": "https://servizi2.inps.it/servizi/AssegnoUnicoFigli/Content/Manuale/ManualeUtente.pdf",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "d75ac4f8-3933-534c-a119-fe5bc3b3cc28",
+    "InformationEntryId": "55696570-3337-5e2f-8a24-71e256e869e9",
+    "Title": "INPS, older AUU guidance",
+    "Url": "https://www.inps.it/content/dam/inps-site/it/scorporati/circolari-e-messaggi/2022/07/Circolare_13898/Allegati/13729_Messaggio-numero-2951-del-25-07-2022.pdf",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "70970455-9332-5216-a73e-5253d3cfd362",
+    "InformationEntryId": "55696570-3337-5e2f-8a24-71e256e869e9",
+    "Title": "INPS, Bonus nido 2026 circular",
+    "Url": "https://www.inps.it/content/dam/inps-site/it/scorporati/circolari-e-messaggi/2026/03/Circolare_15207/Allegati/16651_Circolare-numero-29-del-27-03-2026.pdf",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "ded13fd0-3f6f-5e5d-b306-4d4964afbc2c",
+    "InformationEntryId": "55696570-3337-5e2f-8a24-71e256e869e9",
+    "Title": "INPS, Comune maternity allowance",
+    "Url": "https://www.inps.it/it/it/dettaglio-approfondimento.schede-informative.assegno-di-maternit--dei-comuni.html",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
+  },
+  {
+    "Id": "985e24fc-147e-573f-ba43-1e38837cd7f6",
+    "InformationEntryId": "55696570-3337-5e2f-8a24-71e256e869e9",
+    "Title": "Normattiva, Law 328/2000, social services",
+    "Url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2000-11-08;328",
+    "LastCheckedAt": "2026-11-08T00:00:00+00:00"
   }
 ]

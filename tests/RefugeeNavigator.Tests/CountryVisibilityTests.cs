@@ -139,7 +139,7 @@ public sealed class CountryVisibilityTests
     {
         var catalog = await Catalog.Value;
         var home = await RenderAsync<Home>("Development", language);
-        Assert.Equal(11, Regex.Matches(home.Html, "class=\"country-card\"").Count);
+        Assert.Equal(12, Regex.Matches(home.Html, "class=\"country-card\"").Count);
         Assert.Contains("href=\"/countries/sweden\"", home.Html);
         Assert.Contains("href=\"/countries/romania\"", home.Html);
         var overview = await RenderAsync<CountryOverview>("Development", language, "/countries/sweden",
