@@ -71,7 +71,7 @@ public sealed class SlovakiaContentIntegrationTests
         var ids = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => ids.Contains(item.InformationEntryId)).ToArray();
         Assert.Equal(81, sources.Length);
-        Assert.Equal(722, catalog.OfficialSources.Count);
+        Assert.Equal(723, catalog.OfficialSources.Count);
         Assert.All(sources, item =>
         {
             Assert.Contains(item.InformationEntryId, ids);

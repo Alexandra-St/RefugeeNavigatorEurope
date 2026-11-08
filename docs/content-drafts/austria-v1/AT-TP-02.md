@@ -15,7 +15,7 @@ Summary: Temporary protection continues while valid; other residence routes have
 
 Content:
 
-Austria’s temporary right of residence continues while it remains valid. It does not automatically convert into another residence title. If you are considering a longer-term route, check its requirements and filing location with the competent authority before your current right ends. [[source:fe7206c3-7361-5a98-be23-e10902661348|NAG filing rules]]
+Austria’s temporary right of residence continues while it remains valid. [[source:c4d20d35-d2e7-53c8-af33-d017a61f9702|AsylG §62]] It does not automatically convert into another residence title. [[source:867f2e4e-1f48-591d-9819-8de70bd8c903|Special RWR+ conditions]] [[source:c799014e-9cc6-5090-8218-a4d7acec717f|§4a transition rule]] If you are considering a longer-term route, check its requirements and filing location with the competent authority before your current right ends. [[source:fe7206c3-7361-5a98-be23-e10902661348|NAG filing rules]]
 
 One route is the special Red-White-Red Card Plus for displaced persons under §41a(7b). It is application-based and depends on qualifying employment and other conditions. The special route does not require the written waiver used for other NAG routes. Official guidance supports applying while temporary protection remains valid, but filing this application does not itself extend your stay after temporary protection ends. [[source:867f2e4e-1f48-591d-9819-8de70bd8c903|Special RWR+ conditions]] [[source:2f35ef5f-7315-5d86-91a6-cb8fb133ec07|Vienna authority guidance]] [[source:2584201a-b416-5fd9-9631-1e82611cf693|Employment-history condition]]
 
@@ -33,7 +33,7 @@ Summary: Тимчасовий захист діє, поки він чинний;
 
 Content:
 
-Право на тимчасове проживання в Австрії діє, поки залишається чинним. Воно не перетворюється автоматично на інший дозвіл на проживання. Якщо ви розглядаєте довгостроковий варіант, до завершення поточного права перевірте його вимоги та місце подання у компетентного органу. [[source:fe7206c3-7361-5a98-be23-e10902661348|Правила подання за NAG]]
+Право на тимчасове проживання в Австрії діє, поки залишається чинним. [[source:c4d20d35-d2e7-53c8-af33-d017a61f9702|Правова основа тимчасового права проживання]] Воно не перетворюється автоматично на інший дозвіл на проживання. [[source:867f2e4e-1f48-591d-9819-8de70bd8c903|Умови спеціальної RWR+]] [[source:c799014e-9cc6-5090-8218-a4d7acec717f|Правило переходу за §4a]] Якщо ви розглядаєте довгостроковий варіант, до завершення поточного права перевірте його вимоги та місце подання у компетентного органу. [[source:fe7206c3-7361-5a98-be23-e10902661348|Правила подання за NAG]]
 
 Один із варіантів — спеціальна «червоно-біло-червона картка плюс» для переміщених осіб за §41a(7b). Для неї потрібна заява, відповідна трудова історія та виконання інших умов. Для цього спеціального маршруту не потрібна письмова відмова від тимчасового захисту, яка застосовується до інших маршрутів NAG. Офіційні вказівки допускають подання, поки тимчасовий захист чинний, але сама заява не продовжує право на перебування після завершення тимчасового захисту. [[source:867f2e4e-1f48-591d-9819-8de70bd8c903|Умови спеціальної RWR+]] [[source:2f35ef5f-7315-5d86-91a6-cb8fb133ec07|Вказівки відомства Відня]] [[source:2584201a-b416-5fd9-9631-1e82611cf693|Вимога щодо трудової історії]]
 
@@ -51,7 +51,7 @@ Summary: Временная защита действует, пока остаё
 
 Content:
 
-Право на временное проживание в Австрии действует, пока оно остаётся в силе. Оно не преобразуется автоматически в другое разрешение на проживание. Если вы рассматриваете долгосрочный вариант, до окончания текущего права уточните требования и место подачи в компетентном органе. [[source:fe7206c3-7361-5a98-be23-e10902661348|Правила подачи по NAG]]
+Право на временное проживание в Австрии действует, пока оно остаётся в силе. [[source:c4d20d35-d2e7-53c8-af33-d017a61f9702|Правовая основа временного права проживания]] Оно не преобразуется автоматически в другое разрешение на проживание. [[source:867f2e4e-1f48-591d-9819-8de70bd8c903|Условия специальной RWR+]] [[source:c799014e-9cc6-5090-8218-a4d7acec717f|Правило перехода по §4a]] Если вы рассматриваете долгосрочный вариант, до окончания текущего права уточните требования и место подачи в компетентном органе. [[source:fe7206c3-7361-5a98-be23-e10902661348|Правила подачи по NAG]]
 
 Один из вариантов — специальная «красно-бело-красная карта плюс» для перемещённых лиц по §41a(7b). Для неё нужна подача заявления, соответствующая трудовая история и выполнение других условий. Для этого специального маршрута не требуется письменный отказ от временной защиты, который применяется к другим маршрутам NAG. Официальные инструкции допускают подачу, пока временная защита действует, но сама подача не продлевает право на пребывание после окончания временной защиты. [[source:867f2e4e-1f48-591d-9819-8de70bd8c903|Условия специальной RWR+]] [[source:2f35ef5f-7315-5d86-91a6-cb8fb133ec07|Инструкции ведомства Вены]] [[source:2584201a-b416-5fd9-9631-1e82611cf693|Требование к трудовой истории]]
 
@@ -62,6 +62,8 @@ Content:
 Материал не определяет право на конкретное разрешение, не обещает решение или общее право на работу во время перехода. Законное пребывание на период рассмотрения не является разрешением на работу.
 
 ## Editorial source set
+
+- `AT-RES-S11` → `c4d20d35-d2e7-53c8-af33-d017a61f9702` — Austria RIS, AsylG §62
 
 - `AT-RES-S02` → `fe7206c3-7361-5a98-be23-e10902661348` — Austria RIS, NAG §21, filing rules
 - `AT-RES-S03` → `867f2e4e-1f48-591d-9819-8de70bd8c903` — Austria RIS, NAG §41a, special RWR+ conditions
