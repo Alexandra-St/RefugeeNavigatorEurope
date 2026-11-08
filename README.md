@@ -1,6 +1,6 @@
 # Refugee Navigator Europe
 
-An open-source application helping Ukrainians under temporary protection navigate practical information about living in Europe.
+A source-available application helping Ukrainians under temporary protection navigate practical information about living in Europe.
 
 ## Private Beta
 
@@ -68,4 +68,4 @@ See [contribution guidelines](docs/CONTRIBUTING.md). Research, source verificati
 
 ## License
 
-[MIT](LICENSE).
+Proprietary — source available for viewing and evaluation only. All rights reserved. See [LICENSE](LICENSE).
