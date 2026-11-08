@@ -65,12 +65,12 @@ public sealed class CountryComparisonTests
         Assert.Equal(8, facts.Topics.Count);
         Assert.Equal(24, facts.Topics.Sum(topic => topic.Aspects.Count));
         Assert.Equal(24, facts.Topics.SelectMany(topic => topic.Aspects).Select(aspect => aspect.QuestionResourceKey).Distinct(StringComparer.Ordinal).Count());
-        Assert.Equal(240, facts.Topics.SelectMany(topic => topic.Aspects).Sum(aspect => aspect.Facts.Count));
-        Assert.Equal(233, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.IsAvailable));
+        Assert.Equal(264, facts.Topics.SelectMany(topic => topic.Aspects).Sum(aspect => aspect.Facts.Count));
+        Assert.Equal(257, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.IsAvailable));
         Assert.Equal(7, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => !fact.IsAvailable));
         Assert.Equal(235, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Approved));
-        Assert.Equal(5, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Draft));
-        Assert.All(facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Where(fact => fact.CountrySlug is not ("sweden" or "netherlands")), fact => Assert.Equal(ComparisonFactStatus.Approved, fact.Status));
+        Assert.Equal(29, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Draft));
+        Assert.All(facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Where(fact => fact.CountrySlug is not ("sweden" or "netherlands" or "austria")), fact => Assert.Equal(ComparisonFactStatus.Approved, fact.Status));
         var sourcesById = catalog.OfficialSources.ToDictionary(source => source.Id);
         Assert.All(facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts), fact =>
             Assert.All(fact.OfficialSourceIds, sourceId =>
@@ -78,10 +78,10 @@ public sealed class CountryComparisonTests
                 Assert.True(sourcesById.TryGetValue(sourceId, out var source), $"Missing comparison source {sourceId}.");
                 Assert.Equal(fact.InformationEntryId, source!.InformationEntryId);
             }));
-        Assert.Equal(80, catalog.InformationEntries.Count);
-        Assert.Equal(240, catalog.InformationEntryTranslations.Count);
+        Assert.Equal(88, catalog.InformationEntries.Count);
+        Assert.Equal(264, catalog.InformationEntryTranslations.Count);
         Assert.Equal(237, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(3, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(27, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Outdated));
         var czechiaId = Guid.Parse("10000000-0000-0000-0000-000000000004");
         var czechiaEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == czechiaId).Select(entry => entry.Id).ToHashSet();
@@ -93,6 +93,7 @@ public sealed class CountryComparisonTests
         var bulgariaEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == bulgariaId).Select(entry => entry.Id).ToHashSet();
         var netherlandsId = Guid.Parse("10000000-0000-0000-0000-000000000007");
         var netherlandsEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == netherlandsId).Select(entry => entry.Id).ToHashSet();
+        var austriaEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == Guid.Parse("10000000-0000-0000-0000-000000000011")).Select(entry => entry.Id).ToHashSet();
         Assert.All(catalog.InformationEntryTranslations.Where(translation => czechiaEntryIds.Contains(translation.InformationEntryId)),
             translation => Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus));
         Assert.All(catalog.InformationEntryTranslations.Where(translation => spainEntryIds.Contains(translation.InformationEntryId)),
@@ -128,6 +129,7 @@ public sealed class CountryComparisonTests
                                                                             && !spainEntryIds.Contains(translation.InformationEntryId)
                                                                             && !swedenEntryIds.Contains(translation.InformationEntryId)
                                                                             && !netherlandsEntryIds.Contains(translation.InformationEntryId)
+                                                                            && !austriaEntryIds.Contains(translation.InformationEntryId)
                                                                             && !catalog.InformationEntries.Any(entry => entry.CountryId == Guid.Parse("10000000-0000-0000-0000-000000000008") && entry.Id == translation.InformationEntryId)
                                                                             && !catalog.InformationEntries.Any(entry => entry.CountryId == Guid.Parse("10000000-0000-0000-0000-000000000009") && entry.Id == translation.InformationEntryId)
                                                                             && !inlineLinkArticleIds.Contains(translation.InformationEntryId)
@@ -176,12 +178,12 @@ public sealed class CountryComparisonTests
 
         foreach (var topic in facts.Topics)
         {
-            Assert.Equal(10, topic.Aspects.SelectMany(aspect => aspect.Facts).Select(fact => fact.CountrySlug).Distinct().Count());
+            Assert.Equal(11, topic.Aspects.SelectMany(aspect => aspect.Facts).Select(fact => fact.CountrySlug).Distinct().Count());
             Assert.Equal(topic.CategorySlug, Assert.Single(CountryComparisonTopicMap.All, mapped => mapped.ResourceKey == topic.TopicResourceKey).CategorySlug);
             foreach (var aspect in topic.Aspects)
             foreach (var fact in aspect.Facts)
             {
-                var expectedStatus = fact.CountrySlug == "sweden" && !fact.IsAvailable ||
+                var expectedStatus = fact.CountrySlug == "austria" || fact.CountrySlug == "sweden" && !fact.IsAvailable ||
                     fact.CountrySlug == "netherlands" && !NetherlandsApprovedAspects.Contains(aspect.Id)
                     ? ComparisonFactStatus.Draft
                     : ComparisonFactStatus.Approved;
@@ -361,7 +363,7 @@ public sealed class CountryComparisonTests
                 Guid.Parse("249d9618-2212-5251-8f6e-8de0766e0cf3")
             },
             netherlandsFacts.Single(item => item.Id == "residence-routes").fact.OfficialSourceIds);
-        Assert.Equal(216, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts)
+        Assert.Equal(240, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts)
             .Count(fact => fact.CountrySlug != "netherlands"));
         Assert.All(netherlandsFacts, item =>
         {
@@ -1291,13 +1293,13 @@ public sealed class CountryComparisonTests
         Assert.Equal(
             ["temporary-protection", "temporary-protection", "employment", "employment", "healthcare", "housing", "education", "social-assistance"],
             CountryComparisonTopicMap.All.Select(topic => topic.CategorySlug));
-        var expectedCountrySlugs = new[] { "bulgaria", "czechia", "denmark", "germany", "netherlands", "poland", "romania", "slovakia", "spain", "sweden" };
+        var expectedCountrySlugs = new[] { "austria", "bulgaria", "czechia", "denmark", "germany", "netherlands", "poland", "romania", "slovakia", "spain", "sweden" };
         Assert.Equal(expectedCountrySlugs, CountryComparisonTopicMap.SupportedCountrySlugs.Order(StringComparer.Ordinal).ToArray());
-        Assert.Equal(80, CountryComparisonTopicMap.All.SelectMany(topic => topic.EntryIds.Values).Distinct().Count());
+        Assert.Equal(88, CountryComparisonTopicMap.All.SelectMany(topic => topic.EntryIds.Values).Distinct().Count());
 
         foreach (var topic in CountryComparisonTopicMap.All)
         {
-            Assert.Equal(10, topic.EntryIds.Count);
+            Assert.Equal(11, topic.EntryIds.Count);
             Assert.Equal(expectedCountrySlugs, topic.EntryIds.Keys.Order(StringComparer.Ordinal).ToArray());
             var category = Assert.Single(catalog.Categories, item => item.Slug == topic.CategorySlug);
             foreach (var (countrySlug, entryId) in topic.EntryIds)

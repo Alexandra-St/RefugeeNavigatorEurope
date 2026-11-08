@@ -390,4 +390,6 @@
   <data name="Country.Romania.In" xml:space="preserve"><value>у Румунії</value></data>
   <data name="Country.Bulgaria" xml:space="preserve"><value>Болгарія</value></data>
   <data name="Country.Bulgaria.In" xml:space="preserve"><value>у Болгарії</value></data>
+  <data name="Country.Austria" xml:space="preserve"><value>Австрія</value></data>
+  <data name="Country.Austria.In" xml:space="preserve"><value>в Австрії</value></data>
 </root>

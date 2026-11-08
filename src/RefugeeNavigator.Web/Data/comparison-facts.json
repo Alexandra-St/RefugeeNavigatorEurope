@@ -159,6 +159,21 @@
                 "uk": "Категорії ЄС охоплюють громадян України, які проживали в Україні до 24 лютого 2022 року, та окремих членів сім’ї. Болгарія також описує національний шлях; самих громадянства чи виїзду недостатньо для підтвердження права.",
                 "ru": "Категории ЕС охватывают граждан Украины, проживавших в Украине до 24 февраля 2022 года, и отдельных членов семьи. Болгария также описывает национальный путь; одного гражданства или выезда недостаточно для подтверждения права."
               }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "cae7f1a1-51c1-5b6c-a01d-b5bea8fb9cd2",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "2441d7de-46e9-5f61-a36b-665e06af139b",
+                "9fdd8cef-d41e-530a-a196-738a77c1edae"
+              ],
+              "Values": {
+                "en": "Austria grants temporary protection as a `vorübergehendes Aufenthaltsrecht` to defined groups; the `Ausweis für Vertriebene` documents that right.",
+                "uk": "Австрія надає тимчасовий захист визначеним групам як `vorübergehendes Aufenthaltsrecht`; право підтверджує картка `Ausweis für Vertriebene`.",
+                "ru": "Австрия предоставляет временную защиту определённым группам как `vorübergehendes Aufenthaltsrecht`; это право подтверждает карта `Ausweis für Vertriebene`."
+              }
             }
           ]
         },
@@ -315,6 +330,20 @@
                 "en": "EU rules adopted in 2026 address military obligations where applicable, with a continuity exception for prior protection in the same Member State. Bulgaria has not published a local proof checklist; ask AREF how the rule applies.",
                 "uk": "Правила ЄС 2026 року стосуються військових обов’язків, коли це застосовно, і містять виняток для безперервного захисту в тій самій державі. Болгарія не опублікувала місцевого переліку доказів; уточнюйте застосування правила в AREF.",
                 "ru": "Правила ЕС 2026 года касаются воинских обязанностей, когда это применимо, и предусматривают исключение для непрерывной защиты в том же государстве. Болгария не опубликовала местный перечень доказательств; уточняйте применение правила в AREF."
+              }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "cae7f1a1-51c1-5b6c-a01d-b5bea8fb9cd2",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "ea5185f7-d875-5fa7-b4bc-1da82628c315"
+              ],
+              "Values": {
+                "en": "Initial registration is through designated police recording locations; the BFA issues the displaced-person card after required steps. Check current instructions for your documents and route.",
+                "uk": "Первинна реєстрація відбувається у визначених пунктах поліції; BFA видає картку переміщеної особи після необхідних етапів. Перевірте актуальні вказівки щодо документів і місця звернення.",
+                "ru": "Первичная регистрация проходит в определённых пунктах полиции; BFA выдаёт карту перемещённого лица после необходимых этапов. Уточните актуальные требования к документам и месту обращения."
               }
             }
           ]
@@ -476,6 +505,23 @@
                 "en": "The latest reviewed Bulgarian notice extends national protection through 4 March 2027; the EU scheme runs through 4 March 2028. These dates do not confirm an individual card’s validity or renewal steps.",
                 "uk": "За останнім перевіреним повідомленням Болгарії, національний захист продовжено до 4 березня 2027 року; схема ЄС діє до 4 березня 2028 року. Ці дати не підтверджують строк дії окремої картки чи порядок її поновлення.",
                 "ru": "Согласно последнему проверенному уведомлению Болгарии, национальная защита продлена до 4 марта 2027 года; схема ЕС действует до 4 марта 2028 года. Эти даты не подтверждают срок действия отдельной карты или порядок её продления."
+              }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "cae7f1a1-51c1-5b6c-a01d-b5bea8fb9cd2",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "aee98c48-02d0-51fa-8566-aa260901b80d",
+                "a95d2973-b058-568a-a3e2-b3dd754e1ab8",
+                "9fdd8cef-d41e-530a-a196-738a77c1edae",
+                "b46e0b79-e4da-51c6-97d8-6baf45e67df4"
+              ],
+              "Values": {
+                "en": "The current protection period runs to 4 March 2028. Austrian and EU materials give conflicting military-transition dates (30 July, 4 August and 5 August 2026); ask BFA how they apply to your case.",
+                "uk": "Поточний період захисту триває до 4 березня 2028 року. Австрійські та європейські матеріали наводять різні дати військового перехідного періоду (30 липня, 4 та 5 серпня 2026 року); уточніть у BFA, як вони стосуються вашої справи.",
+                "ru": "Текущий период защиты действует до 4 марта 2028 года. Австрийские и европейские материалы указывают разные даты военного переходного периода (30 июля, 4 и 5 августа 2026 года); уточните в BFA, как они применяются к вашему делу."
               }
             }
           ]
@@ -645,6 +691,22 @@
                 "uk": "Тимчасовий захист є окремим від звичайних дозволів на проживання. У Болгарії є робочі, навчальні, сімейні, бізнесові та інші маршрути зі своїми умовами; для деяких зазвичай потрібна віза D.",
                 "ru": "Временная защита отличается от обычных разрешений на проживание. В Болгарии предусмотрены рабочие, учебные, семейные, деловые и другие маршруты со своими условиями; для некоторых обычно нужна виза D."
               }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "dc76be21-d9dc-5070-83ca-9a7468d78e71",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "867f2e4e-1f48-591d-9819-8de70bd8c903",
+                "c799014e-9cc6-5090-8218-a4d7acec717f",
+                "e2763a6c-67ce-59a8-a317-8dd81a8cb938"
+              ],
+              "Values": {
+                "en": "Temporary protection does not automatically convert to another title. The special displaced-person RWR+ route under §41a(7b) is distinct from other residence titles filed under §4a.",
+                "uk": "Тимчасовий захист не перетворюється автоматично на інший дозвіл. Спеціальний маршрут RWR+ для переміщених осіб за §41a(7b) відрізняється від інших дозволів на проживання за §4a.",
+                "ru": "Временная защита не преобразуется автоматически в другой статус. Специальный маршрут RWR+ для перемещённых лиц по §41a(7b) отличается от других разрешений на проживание по §4a."
+              }
             }
           ]
         },
@@ -801,6 +863,22 @@
                 "en": "A single residence-and-work permit permits in-country filing only in specified circumstances. The reviewed law does not confirm that a temporary-protection card qualifies; check with Migration Directorate.",
                 "uk": "Єдиний дозвіл на проживання і роботу дозволяє подання в країні лише за визначених обставин. Перевірене законодавство не підтверджує, що картка тимчасового захисту відповідає цій умові; уточніть у Директораті міграції.",
                 "ru": "Единое разрешение на проживание и работу допускает подачу внутри страны только в определённых обстоятельствах. Изученный закон не подтверждает, что карта временной защиты подходит; уточните в Директорате миграции."
+              }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "dc76be21-d9dc-5070-83ca-9a7468d78e71",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "867f2e4e-1f48-591d-9819-8de70bd8c903",
+                "c799014e-9cc6-5090-8218-a4d7acec717f",
+                "2584201a-b416-5fd9-9631-1e82611cf693"
+              ],
+              "Values": {
+                "en": "The special §41a(7b) RWR+ route has employment-history conditions and does not require the §4a waiver. Other §4a titles have route-specific requirements and a conditional written waiver effective on grant.",
+                "uk": "Спеціальний маршрут RWR+ за §41a(7b) має вимоги до трудової історії та не потребує відмови за §4a. Інші дозволи за §4a мають окремі вимоги й умовну письмову відмову, що набирає чинності після надання дозволу.",
+                "ru": "Для специального маршрута RWR+ по §41a(7b) требуется соответствующая трудовая история, но отказ по §4a не нужен. У других разрешений по §4a свои требования и условный письменный отказ, вступающий в силу при выдаче разрешения."
               }
             }
           ]
@@ -961,6 +1039,21 @@
                 "uk": "Очікування звичайного дозволу зазвичай не продовжує тимчасовий захист, не створює права залишатися після його завершення і саме по собі не дозволяє працювати. Правила довгострокового резидента ЄС виключають бенефіціарів під час захисту.",
                 "ru": "Ожидание обычного разрешения обычно не продлевает временную защиту, не создаёт права оставаться после её окончания и само по себе не разрешает работать. Правила долгосрочного резидента ЕС исключают бенефициаров на время защиты."
               }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "dc76be21-d9dc-5070-83ca-9a7468d78e71",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "fe7206c3-7361-5a98-be23-e10902661348",
+                "c799014e-9cc6-5090-8218-a4d7acec717f"
+              ],
+              "Values": {
+                "en": "Filing the special RWR+ application does not itself extend stay after temporary protection ends. A qualifying timely §4a filing may bridge lawful stay while pending, but this is not work authorization.",
+                "uk": "Подання заяви на спеціальну RWR+ саме по собі не продовжує перебування після завершення тимчасового захисту. Належне своєчасне подання за §4a може забезпечити законність перебування під час розгляду, але не дає дозволу на роботу.",
+                "ru": "Подача заявления на специальную RWR+ сама по себе не продлевает пребывание после окончания временной защиты. Надлежащая своевременная подача по §4a может обеспечить законность пребывания на время рассмотрения, но не даёт разрешения на работу."
+              }
             }
           ]
         }
@@ -1120,6 +1213,21 @@
                 "uk": "Шукайте вакансії через електронну біржу праці Агентства зайнятості та EURES. Оголошення можуть змінюватися або вакансія може бути закрита; уточнюйте деталі в роботодавця.",
                 "ru": "Ищите вакансии через электронную биржу труда Агентства занятости и EURES. Объявления могут меняться или вакансия может быть закрыта; уточняйте детали у работодателя."
               }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "7f03cea4-6c2e-5990-91eb-01b4933ba53d",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "6fec9cf4-a417-510f-ae3e-0ef298d15c8d",
+                "5f3f093b-1667-568f-9693-2f5a10166add"
+              ],
+              "Values": {
+                "en": "AMS `alle jobs` and the public eJob-Room let you search vacancies without registering with AMS. Public browsing is separate from jobseeker registration and work authorization.",
+                "uk": "В AMS `alle jobs` та відкритому eJob-Room можна шукати вакансії без реєстрації в AMS. Перегляд вакансій відрізняється від реєстрації шукачем роботи та від дозволу на роботу.",
+                "ru": "В AMS `alle jobs` и открытом eJob-Room можно искать вакансии без регистрации в AMS. Просмотр объявлений отличается от регистрации соискателем и от разрешения на работу."
+              }
             }
           ]
         },
@@ -1275,6 +1383,20 @@
                 "en": "People with temporary protection may apply to register as jobseekers through the Labour Bureau serving where they live or are settled; registration is not automatic.",
                 "uk": "Люди з тимчасовим захистом можуть подати заяву на реєстрацію як шукачі роботи до бюро праці за місцем проживання або поселення; реєстрація не відбувається автоматично.",
                 "ru": "Люди с временной защитой могут подать заявление на регистрацию как соискатели работы в бюро труда по месту проживания или поселения; регистрация не происходит автоматически."
+              }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "7f03cea4-6c2e-5990-91eb-01b4933ba53d",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "0d13b6f8-ebfd-544e-866f-a5881902da1f"
+              ],
+              "Values": {
+                "en": "Holders of an `Ausweis für Vertriebene` may register with AMS as jobseekers. The reviewed guidance does not establish that police registration alone before card issue is sufficient.",
+                "uk": "Власники `Ausweis für Vertriebene` можуть зареєструватися в AMS як шукачі роботи. Перевірені вказівки не підтверджують, що до видачі картки достатньо лише поліцейської реєстрації.",
+                "ru": "Владельцы `Ausweis für Vertriebene` могут зарегистрироваться в AMS как соискатели. Проверенные инструкции не подтверждают, что до выдачи карты достаточно одной полицейской регистрации."
               }
             }
           ]
@@ -1432,6 +1554,22 @@
                 "en": "Registered jobseekers may receive mediation, counselling or referrals depending on status, assessment and available programmes. Eligibility is assessed individually.",
                 "uk": "Зареєстровані шукачі роботи можуть отримати посередництво, консультації чи направлення залежно від статусу, оцінки та доступних програм. Право визначають індивідуально.",
                 "ru": "Зарегистрированные соискатели могут получить посредничество, консультации или направления в зависимости от статуса, оценки и доступных программ. Право определяется индивидуально."
+              }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "7f03cea4-6c2e-5990-91eb-01b4933ba53d",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "0fd19c6c-39b1-5b47-926d-c16c5db89fd1",
+                "4682269e-a81f-5cc0-a56d-d1a75212ce6f",
+                "6fb69e2b-ca13-528e-88c4-5462df9ce01e"
+              ],
+              "Values": {
+                "en": "AMS advice, referrals and training depend on individual assessment and available places. `Arbeitslosengeld` is a separate insurance-based decision, not an automatic result of jobseeker registration.",
+                "uk": "Консультації, направлення та навчання AMS залежать від індивідуальної оцінки й наявності місць. `Arbeitslosengeld` — окреме рішення на основі страхового стажу, а не автоматичний наслідок реєстрації шукачем роботи.",
+                "ru": "Консультации, направления и обучение AMS зависят от индивидуальной оценки и наличия мест. `Arbeitslosengeld` — отдельное решение на основе страхового стажа, а не автоматический результат регистрации соискателем."
               }
             }
           ]
@@ -1594,6 +1732,20 @@
                 "uk": "Особа, яка наразі користується тимчасовим захистом у Болгарії, може працювати за наймом без окремого дозволу на ринок праці. Це право діє лише поки чинний захист.",
                 "ru": "Лицо, пользующееся временной защитой в Болгарии, может работать по найму без отдельного разрешения на рынок труда. Это право действует только пока защита сохраняет силу."
               }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "a1ac34e6-0c0e-5bb2-870c-9d93aee852c2",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "e7b5f714-7b45-5cce-9ea3-e1c3ff1a2ec0"
+              ],
+              "Values": {
+                "en": "A covered displaced person holding an `Ausweis für Vertriebene` may take dependent employment without an ordinary AMS employment permit; changing employer does not require job-specific immigration permission.",
+                "uk": "Особа з відповідної категорії, яка має `Ausweis für Vertriebene`, може працювати за наймом без звичайного дозволу AMS; для зміни роботодавця не потрібен окремий імміграційний дозвіл на робоче місце.",
+                "ru": "Лицо из соответствующей категории с `Ausweis für Vertriebene` может работать по найму без обычного разрешения AMS; для смены работодателя не требуется отдельное иммиграционное разрешение на рабочее место."
+              }
             }
           ]
         },
@@ -1752,6 +1904,20 @@
                 "uk": "Звільнення від дозволу не скасовує обов’язків роботодавця. Підтвердіть чинний статус захисту та перевірте вимоги до договору, повідомлення й реєстрації.",
                 "ru": "Освобождение от разрешения не отменяет обязанностей работодателя. Подтвердите действующий статус защиты и проверьте требования к договору, уведомлению и регистрации."
               }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "a1ac34e6-0c0e-5bb2-870c-9d93aee852c2",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "ddddb9a7-9de6-5e5a-b05c-cf7e54227220"
+              ],
+              "Values": {
+                "en": "For an insurable employee, the employer generally registers the employee with ÖGK before work begins.",
+                "uk": "Для працівника, який підлягає страхуванню, роботодавець зазвичай реєструє його в ÖGK до початку роботи.",
+                "ru": "Для работника, подлежащего страхованию, работодатель обычно регистрирует его в ÖGK до начала работы."
+              }
             }
           ]
         },
@@ -1902,6 +2068,20 @@
                 "en": "As of 7 November 2026, the gross national minimum wage is €620.20 monthly or €3.74 hourly for the normal full-time basis; applicable occupation rules may differ.",
                 "uk": "Станом на 7 листопада 2026 року національна мінімальна зарплата брутто становить €620,20 на місяць або €3,74 на годину за звичайної повної зайнятості; для окремих професій можуть діяти інші правила.",
                 "ru": "На 7 ноября 2026 года национальная минимальная зарплата брутто составляет €620,20 в месяц или €3,74 в час при обычной полной занятости; для отдельных профессий могут действовать другие правила."
+              }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "a1ac34e6-0c0e-5bb2-870c-9d93aee852c2",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "50256202-1281-588f-a278-f1fcd249aa5f"
+              ],
+              "Values": {
+                "en": "Austria has no single universal statutory national minimum wage. Minimum pay usually follows the applicable collective agreement and job classification or another binding instrument.",
+                "uk": "В Австрії немає єдиної універсальної встановленої законом мінімальної зарплати для всієї країни. Мінімальна оплата зазвичай визначається колективним договором і класифікацією роботи або іншим обов’язковим механізмом.",
+                "ru": "В Австрии нет единой универсальной установленной законом минимальной зарплаты для всей страны. Минимальная оплата обычно определяется коллективным договором и классификацией должности либо другим обязательным механизмом."
               }
             }
           ]
@@ -2072,6 +2252,21 @@
                 "uk": "За законодавством Болгарії, люди з тимчасовим захистом включені до категорії обов’язкового медичного страхування з урахуванням застосовних правил сплати внесків.",
                 "ru": "По законодательству Болгарии, люди с временной защитой включены в категорию обязательного медицинского страхования с учётом применимых правил уплаты взносов."
               }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "44e8aebe-fd7e-5ed8-acb2-f949d6243e26",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "bb9aa455-4d25-5e92-b61a-6c2cbbc56ea1",
+                "08e77a90-174a-50d8-acdc-eb76db5f4349"
+              ],
+              "Values": {
+                "en": "Automatic Ukraine-specific compulsory health insurance ended on 31 May 2025. Temporary protection or the displaced-person card alone does not establish active insurance; other coverage routes depend on your circumstances.",
+                "uk": "Автоматичне спеціальне обов’язкове медичне страхування для українців завершилося 31 травня 2025 року. Сам тимчасовий захист чи картка переміщеної особи не підтверджують чинне страхування; інші підстави залежать від обставин.",
+                "ru": "Автоматическое специальное обязательное медицинское страхование для украинцев закончилось 31 мая 2025 года. Одна лишь временная защита или карта перемещённого лица не подтверждает действующую страховку; другие основания зависят от обстоятельств."
+              }
             }
           ]
         },
@@ -2230,6 +2425,20 @@
                 "uk": "Чинна картка захисту підтверджує статус, але не сплату актуальних страхових внесків. Перевіряйте страховий статус і покриття медичної допомоги окремо.",
                 "ru": "Действующая карта защиты подтверждает статус, но не уплату актуальных страховых взносов. Проверяйте страховой статус и покрытие медицинской помощи отдельно."
               }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "44e8aebe-fd7e-5ed8-acb2-f949d6243e26",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "4cb1295d-0528-519d-8259-d4dc0242cc47"
+              ],
+              "Values": {
+                "en": "An e-card is a way to access care, not the insurance entitlement itself. An insured person may use substitute proof if the physical card is unavailable.",
+                "uk": "e-card дає змогу отримувати медичні послуги, але сама по собі не є правом на страхове покриття. Якщо картки немає, застрахована особа може використати альтернативне підтвердження.",
+                "ru": "e-card помогает получить медицинские услуги, но сама по себе не является страховым правом. Если физической карты нет, застрахованный может использовать альтернативное подтверждение."
+              }
             }
           ]
         },
@@ -2387,6 +2596,21 @@
                 "en": "For a suspected medical emergency, call 112 or seek emergency care. This route does not mean all urgent, follow-up or planned care is free.",
                 "uk": "Якщо є підозра на невідкладний стан, телефонуйте 112 або звертайтеся по екстрену допомогу. Це не означає, що вся термінова, подальша чи планова допомога безоплатна.",
                 "ru": "При подозрении на неотложное состояние звоните 112 или обращайтесь за экстренной помощью. Это не означает, что вся срочная, последующая или плановая помощь бесплатна."
+              }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "44e8aebe-fd7e-5ed8-acb2-f949d6243e26",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "f336a2fc-f1ad-5a37-8041-03462e7d842a",
+                "9be1f3b0-4c85-59db-8dc4-0a39d5ed535f"
+              ],
+              "Values": {
+                "en": "Call 144 or 112 for emergencies; 1450 is health advice and 141 is the on-call doctor. Emergency admission does not make all later care or treatment free.",
+                "uk": "У невідкладній ситуації телефонуйте 144 або 112; 1450 — медична консультація, 141 — черговий лікар. Невідкладна госпіталізація не означає, що подальша допомога й лікування безкоштовні.",
+                "ru": "При экстренной ситуации звоните 144 или 112; 1450 — медицинская консультация, 141 — дежурный врач. Экстренная госпитализация не означает, что последующая помощь и лечение бесплатны."
               }
             }
           ]
@@ -2549,6 +2773,22 @@
                 "uk": "Закон визнає право на належне житло або засоби для проживання за потреби. Чинна Програма 3 відшкодовує витрати відповідним надавачам, але не гарантує конкретне місце.",
                 "ru": "Закон признаёт право на подходящее жильё или средства для проживания при необходимости. Действующая Программа 3 возмещает расходы соответствующим поставщикам, но не гарантирует конкретное место."
               }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "b7ae3606-2d3b-5ddc-b178-f1905d72996e",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "38108e68-88b6-5c40-b139-bb87c5f7cccd",
+                "3d38de04-2837-5b20-9772-7b0603ea4a22",
+                "f2752617-a380-5da6-b221-9045fafa5162"
+              ],
+              "Values": {
+                "en": "A person with temporary protection and insufficient resources may apply for provincial `Grundversorgung`. It is needs-based and does not guarantee a bed; first-arrival places are limited.",
+                "uk": "Особа з тимчасовим захистом і недостатніми коштами може подати заяву на земельну `Grundversorgung`. Допомога залежить від потреб і не гарантує місця; місця для первинного прийому обмежені.",
+                "ru": "Человек с временной защитой и недостаточными средствами может подать заявление на земельную `Grundversorgung`. Помощь зависит от нуждаемости и не гарантирует место; мест первичного размещения мало."
+              }
             }
           ]
         },
@@ -2703,6 +2943,22 @@
                 "uk": "Приватна оренда відбувається за звичайним договором із власником і загальними нормами цивільного права. Письмовий договір наполегливо рекомендується; умови й наявність житла залежать від сторін.",
                 "ru": "Частная аренда оформляется обычным договором с владельцем и регулируется общими нормами гражданского права. Письменный договор настоятельно рекомендуется; условия и наличие жилья зависят от сторон."
               }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "b7ae3606-2d3b-5ddc-b178-f1905d72996e",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "bf8989f8-8f80-5d09-92df-f62922357a0d",
+                "999aebc5-8d51-4778-9faa-dbcf00af4e1a",
+                "d7b78824-4403-5067-b1fc-f4370a4591af"
+              ],
+              "Values": {
+                "en": "Private renting follows ordinary tenancy rules: MRG applies fully, partly or not at all depending on the property. Leases may generally be oral, but fixed-term leases within MRG scope require writing; Austria has no universal statutory deposit cap.",
+                "uk": "Приватна оренда регулюється звичайними правилами: MRG застосовується повністю, частково або не застосовується залежно від житла. Договір зазвичай може бути усним, але строкові договори в межах MRG мають бути письмовими; універсального законодавчого обмеження застави немає.",
+                "ru": "Частная аренда регулируется обычными правилами: MRG действует полностью, частично или не действует в зависимости от жилья. Договор обычно может быть устным, но срочный договор в сфере MRG должен быть письменным; универсального законодательного ограничения залога нет."
+              }
             }
           ]
         },
@@ -2856,6 +3112,21 @@
                 "en": "Program 3 reimbursement goes to eligible accommodation providers, not directly to displaced people as rent money. The latest rate located is not confirmed as current.",
                 "uk": "Відшкодування за Програмою 3 отримують відповідні надавачі житла, а не переміщені люди як гроші на оренду. Останній знайдений тариф не підтверджено як чинний.",
                 "ru": "Возмещение по Программе 3 получают соответствующие поставщики жилья, а не перемещённые лица в виде денег на аренду. Последний найденный тариф не подтверждён как действующий."
+              }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "b7ae3606-2d3b-5ddc-b178-f1905d72996e",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "38108e68-88b6-5c40-b139-bb87c5f7cccd",
+                "11bb2c86-f865-5c0e-8f8d-260a9f26f16a"
+              ],
+              "Values": {
+                "en": "Private-housing support under `Grundversorgung` is provincially administered; federal cost ceilings are not guaranteed beneficiary payments. `Wohnbeihilfe` varies by province, with no single Austria-wide TP allowance established.",
+                "uk": "Підтримку приватного житла в межах `Grundversorgung` адмініструють землі; федеральні граничні суми не є гарантованою виплатою отримувачу. `Wohnbeihilfe` відрізняється між землями; єдиної загальноавстрійської виплати для осіб із тимчасовим захистом не встановлено.",
+                "ru": "Поддержку частного жилья в рамках `Grundversorgung` администрируют земли; федеральные пределы расходов не являются гарантированной выплатой получателю. `Wohnbeihilfe` различается по землям; единой общенациональной выплаты для лиц с временной защитой не установлено."
               }
             }
           ]
@@ -3020,6 +3291,22 @@
                 "uk": "Діти з тимчасовим захистом можуть подаватися до державного дитсадка чи школи через регіональне управління освіти. Діють загальні вікові правила; зарахування залежить від документів і наявності місць.",
                 "ru": "Дети с временной защитой могут обращаться в государственный детский сад или школу через региональное управление образования. Действуют общие возрастные правила; зачисление зависит от документов и наличия мест."
               }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "28c9cf8a-012f-5018-b9e0-48c8fcc4f8d5",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "eb79f315-5e9a-537c-a299-8a3ed6ea4efd",
+                "c63d3db2-c4c6-52f8-b8b3-5c17759e439f",
+                "53d965ee-2779-5f91-ae2a-bddb6715ed71"
+              ],
+              "Values": {
+                "en": "Compulsory schooling covers nine school years from September after age six; Ukrainian online schooling alone does not replace it. The Bildungsdirektion arranges a compulsory-school place, but a preferred school or automatic grade placement is not guaranteed.",
+                "uk": "Обов’язкове шкільне навчання триває дев’ять років із вересня після досягнення шести років; саме українське онлайн-навчання його не замінює. Bildungsdirektion визначає місце в обов’язковій школі, але обрана школа чи автоматичне зарахування до класу не гарантуються.",
+                "ru": "Обязательное школьное обучение длится девять лет с сентября после достижения шести лет; одно лишь украинское онлайн-обучение его не заменяет. Bildungsdirektion определяет место в обязательной школе, но выбранная школа или автоматическое определение класса не гарантируются."
+              }
             }
           ]
         },
@@ -3172,6 +3459,21 @@
                 "en": "Newly arrived pupils may receive additional Bulgarian-language teaching or other support according to need. Rules set maximum course amounts by stage, not a guaranteed course or number of hours.",
                 "uk": "Новоприбулі учні можуть отримати додаткове навчання болгарської мови чи іншу підтримку відповідно до потреб. Правила визначають максимальні обсяги за етапами, а не гарантований курс чи кількість годин.",
                 "ru": "Недавно прибывшие ученики могут получить дополнительные занятия болгарским языком или иную поддержку по потребности. Правила устанавливают максимальный объём по этапам, а не гарантированный курс или число часов."
+              }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "28c9cf8a-012f-5018-b9e0-48c8fcc4f8d5",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "ad8f3eb2-23aa-5b13-90ec-1dc597df18d7",
+                "31dc189b-429d-5dd3-9a5e-f11aba7c397c"
+              ],
+              "Values": {
+                "en": "Schools assess German-language needs and may use `Deutschförderklassen`, `Deutschförderkurse` or a site-specific support plan in 2026/27. No individual course, number of hours or duration is guaranteed.",
+                "uk": "Школи оцінюють потребу в підтримці німецької мови й у 2026/27 році можуть застосовувати `Deutschförderklassen`, `Deutschförderkurse` або власний план підтримки. Конкретний курс, кількість годин чи тривалість не гарантуються.",
+                "ru": "Школы оценивают потребность в поддержке немецкого языка и в 2026/27 году могут применять `Deutschförderklassen`, `Deutschförderkurse` или собственный план поддержки. Конкретный курс, число часов или длительность не гарантируются."
               }
             }
           ]
@@ -3334,6 +3636,24 @@
                 "en": "Temporary-protection holders may apply through a limited state-university route, with places allocated by year, programme and institution. Diploma recognition and admission requirements remain separate decisions.",
                 "uk": "Особи з тимчасовим захистом можуть подаватися за обмеженою процедурою до державних університетів; місця розподіляють за роком, програмою та закладом. Визнання диплома й вимоги вступу вирішуються окремо.",
                 "ru": "Лица с временной защитой могут подавать документы по ограниченной процедуре в государственные университеты; места распределяются по году, программе и вузу. Признание диплома и требования приёма решаются отдельно."
+              }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "28c9cf8a-012f-5018-b9e0-48c8fcc4f8d5",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "bd72dc2b-147a-5230-bc48-909c7f901776",
+                "676f0daf-5f96-5322-85a0-e36daf446d6b",
+                "17de6eb2-d2e0-5a2d-8d86-bfe8582526e2",
+                "a8aae671-c9ea-513a-bd55-580d70406a1e",
+                "04d980c3-cab7-5406-9837-0f009e5f7f9d"
+              ],
+              "Values": {
+                "en": "Temporary protection does not itself guarantee university or Fachhochschule admission. Recognition, admission and credit transfer are separate decisions; the 2026/27 Ukrainian tuition waiver is limited by citizenship and institution, and Ernst Mach – Ukraine ended 30 June 2026.",
+                "uk": "Тимчасовий захист сам по собі не гарантує вступу до університету чи Fachhochschule. Визнання, вступ і зарахування кредитів вирішуються окремо; звільнення від плати для українців у 2026/27 році обмежене громадянством і типом закладу, а Ernst Mach – Ukraine завершено 30 червня 2026 року.",
+                "ru": "Временная защита сама по себе не гарантирует поступления в университет или Fachhochschule. Признание, поступление и зачёт кредитов решаются отдельно; освобождение от платы для украинцев в 2026/27 году ограничено гражданством и типом учреждения, а Ernst Mach – Ukraine завершилась 30 июня 2026 года."
               }
             }
           ]
@@ -3503,6 +3823,23 @@
                 "uk": "Люди з тимчасовим захистом можуть подати заяву на загальну соціальну допомогу до дирекції за поточною адресою. Право й розмір залежать від індивідуальної оцінки та правил допомоги.",
                 "ru": "Люди с временной защитой могут подать заявление на общую социальную помощь в дирекцию по текущему адресу. Право и размер зависят от индивидуальной оценки и правил пособия."
               }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "fc9332d0-9eda-5f09-b3ca-df3c9e63f755",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "339829c7-0da4-5471-a95d-0e81fba214f3",
+                "3c390b3a-5aff-5f80-968a-f2ca980ef5b8",
+                "c4a07770-f931-5c2b-a4bf-447ba07eb492",
+                "f76f3963-1cd0-5f0a-a0d0-824fcb1bee6f"
+              ],
+              "Values": {
+                "en": "`Grundversorgung` is needs-based and provincially administered; temporary protection alone does not guarantee cash. Ordinary `Sozialhilfe`/`Mindestsicherung` and insurance-based unemployment benefit are separate schemes with their own eligibility rules.",
+                "uk": "`Grundversorgung` надається з урахуванням потреб і адмініструється землями; сам тимчасовий захист не гарантує грошової допомоги. Звичайні `Sozialhilfe`/`Mindestsicherung` та страхова допомога з безробіття — окремі програми зі своїми умовами.",
+                "ru": "`Grundversorgung` предоставляется с учётом нуждаемости и администрируется землями; одна лишь временная защита не гарантирует денежную помощь. Обычные `Sozialhilfe`/`Mindestsicherung` и страховое пособие по безработице — отдельные программы со своими условиями."
+              }
             }
           ]
         },
@@ -3669,6 +4006,20 @@
                 "uk": "Зверніться до дирекції соціальної допомоги за поточною адресою й уточніть заяву та докази для конкретної виплати. Рекомендації ASP вимагають чинні документи про захист або статус.",
                 "ru": "Обратитесь в дирекцию социальной помощи по текущему адресу и уточните заявление и подтверждения для конкретной выплаты. Рекомендации ASP требуют действующие документы о защите или статусе."
               }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "fc9332d0-9eda-5f09-b3ca-df3c9e63f755",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "c4a07770-f931-5c2b-a4bf-447ba07eb492"
+              ],
+              "Values": {
+                "en": "Apply for `Grundversorgung` through the responsible Land office or designated provider after the required registration steps. Need is assessed, income must be reported, and procedures vary by province.",
+                "uk": "Після необхідних реєстраційних кроків зверніться по `Grundversorgung` до відповідного органу землі або уповноваженого надавача. Потреби оцінюють, про доходи треба повідомляти, а порядок відрізняється між землями.",
+                "ru": "После необходимых регистрационных шагов обратитесь за `Grundversorgung` в соответствующий орган земли или к уполномоченному поставщику. Нуждаемость оценивают, о доходах необходимо сообщать, а порядок различается по землям."
+              }
             }
           ]
         },
@@ -3826,6 +4177,24 @@
                 "en": "Family benefits follow separate rules. Eligibility for temporary-protection holders has been interpreted differently in individual cases; do not assume entitlement. Insurance-based maternity or childcare benefits are a separate route.",
                 "uk": "Сімейні виплати регулюються окремо. Право осіб із тимчасовим захистом тлумачили по-різному в окремих справах; не слід вважати виплату гарантованою. Страхові виплати у зв’язку з материнством чи доглядом — окремий механізм.",
                 "ru": "Семейные выплаты регулируются отдельно. Право лиц с временной защитой трактовалось по-разному в отдельных делах; не следует считать выплату гарантированной. Страховые выплаты по беременности и уходу — отдельный механизм."
+              }
+            },
+            {
+              "CountrySlug": "austria",
+              "InformationEntryId": "fc9332d0-9eda-5f09-b3ca-df3c9e63f755",
+              "Status": "Draft",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "4dd9f2b4-71ac-58b3-8612-23b82ab08f9d",
+                "fbb31c5f-fe12-5937-93f5-ca4f9f770374",
+                "21cfb8a5-fc59-5ed8-8ac7-de16f5d2900e",
+                "5639b8e1-a9da-5507-b219-24f5699e2495",
+                "358c5219-739e-528a-8de8-dff5f77c79e0"
+              ],
+              "Values": {
+                "en": "From 1 July 2026, displaced Ukrainians’ `Familienbeihilfe` follows the current general conditions and the Grundversorgung boundary, with a narrow significant-disability exception; the former employment/AMS condition no longer applies. `Kinderabsetzbetrag` is paid with it; childcare and maternity benefits have separate conditions.",
+                "uk": "З 1 липня 2026 року `Familienbeihilfe` для переміщених українців підпорядковується чинним загальним умовам і правилу щодо Grundversorgung, із вузьким винятком для випадку значної інвалідності; колишня вимога працевлаштування/реєстрації в AMS не діє. `Kinderabsetzbetrag` виплачується разом із нею; допомога на догляд за дитиною та виплата у зв’язку з вагітністю й пологами мають окремі умови.",
+                "ru": "С 1 июля 2026 года `Familienbeihilfe` для перемещённых украинцев подчиняется текущим общим условиям и правилу о Grundversorgung, с узким исключением для случая значительной инвалидности; прежнее требование о работе/регистрации в AMS больше не действует. `Kinderabsetzbetrag` выплачивается вместе с ней; пособия по уходу за ребёнком и материнству имеют отдельные условия."
               }
             }
           ]
