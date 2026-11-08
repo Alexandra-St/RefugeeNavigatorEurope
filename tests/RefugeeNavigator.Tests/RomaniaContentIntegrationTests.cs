@@ -46,8 +46,8 @@ public sealed class RomaniaContentIntegrationTests
         Assert.Equal(11, catalog.Countries.Count);
         Assert.Equal(88, catalog.InformationEntries.Count);
         Assert.Equal(264, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(237, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(27, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(261, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(3, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(entry => entry.CountryId == RomaniaId).ToArray();
@@ -72,7 +72,7 @@ public sealed class RomaniaContentIntegrationTests
 
         Assert.Contains(CountryVisibility.GetVisibleCountries(catalog, false), country => country.Slug == "romania");
         Assert.Contains(CountryVisibility.GetVisibleCountries(catalog, true), country => country.Slug == "romania");
-        Assert.Equal(10, CountryVisibility.GetVisibleCountries(catalog, false).Count);
+        Assert.Equal(11, CountryVisibility.GetVisibleCountries(catalog, false).Count);
         Assert.Equal(11, CountryVisibility.GetVisibleCountries(catalog, true).Count);
     }
 

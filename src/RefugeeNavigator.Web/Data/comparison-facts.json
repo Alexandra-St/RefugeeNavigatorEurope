@@ -163,7 +163,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "cae7f1a1-51c1-5b6c-a01d-b5bea8fb9cd2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "2441d7de-46e9-5f61-a36b-665e06af139b",
@@ -335,7 +335,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "cae7f1a1-51c1-5b6c-a01d-b5bea8fb9cd2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "ea5185f7-d875-5fa7-b4bc-1da82628c315"
@@ -510,7 +510,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "cae7f1a1-51c1-5b6c-a01d-b5bea8fb9cd2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "aee98c48-02d0-51fa-8566-aa260901b80d",
@@ -695,7 +695,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "dc76be21-d9dc-5070-83ca-9a7468d78e71",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "867f2e4e-1f48-591d-9819-8de70bd8c903",
@@ -868,7 +868,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "dc76be21-d9dc-5070-83ca-9a7468d78e71",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "867f2e4e-1f48-591d-9819-8de70bd8c903",
@@ -1043,7 +1043,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "dc76be21-d9dc-5070-83ca-9a7468d78e71",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "fe7206c3-7361-5a98-be23-e10902661348",
@@ -1217,7 +1217,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "7f03cea4-6c2e-5990-91eb-01b4933ba53d",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "6fec9cf4-a417-510f-ae3e-0ef298d15c8d",
@@ -1388,7 +1388,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "7f03cea4-6c2e-5990-91eb-01b4933ba53d",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "0d13b6f8-ebfd-544e-866f-a5881902da1f"
@@ -1559,7 +1559,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "7f03cea4-6c2e-5990-91eb-01b4933ba53d",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "0fd19c6c-39b1-5b47-926d-c16c5db89fd1",
@@ -1736,7 +1736,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "a1ac34e6-0c0e-5bb2-870c-9d93aee852c2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "e7b5f714-7b45-5cce-9ea3-e1c3ff1a2ec0"
@@ -1908,7 +1908,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "a1ac34e6-0c0e-5bb2-870c-9d93aee852c2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "ddddb9a7-9de6-5e5a-b05c-cf7e54227220"
@@ -2073,7 +2073,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "a1ac34e6-0c0e-5bb2-870c-9d93aee852c2",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "50256202-1281-588f-a278-f1fcd249aa5f"
@@ -2256,7 +2256,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "44e8aebe-fd7e-5ed8-acb2-f949d6243e26",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "bb9aa455-4d25-5e92-b61a-6c2cbbc56ea1",
@@ -2429,7 +2429,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "44e8aebe-fd7e-5ed8-acb2-f949d6243e26",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "4cb1295d-0528-519d-8259-d4dc0242cc47"
@@ -2601,7 +2601,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "44e8aebe-fd7e-5ed8-acb2-f949d6243e26",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "f336a2fc-f1ad-5a37-8041-03462e7d842a",
@@ -2777,7 +2777,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "b7ae3606-2d3b-5ddc-b178-f1905d72996e",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "38108e68-88b6-5c40-b139-bb87c5f7cccd",
@@ -2947,7 +2947,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "b7ae3606-2d3b-5ddc-b178-f1905d72996e",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "bf8989f8-8f80-5d09-92df-f62922357a0d",
@@ -3117,7 +3117,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "b7ae3606-2d3b-5ddc-b178-f1905d72996e",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "38108e68-88b6-5c40-b139-bb87c5f7cccd",
@@ -3295,7 +3295,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "28c9cf8a-012f-5018-b9e0-48c8fcc4f8d5",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "eb79f315-5e9a-537c-a299-8a3ed6ea4efd",
@@ -3464,7 +3464,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "28c9cf8a-012f-5018-b9e0-48c8fcc4f8d5",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "ad8f3eb2-23aa-5b13-90ec-1dc597df18d7",
@@ -3641,7 +3641,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "28c9cf8a-012f-5018-b9e0-48c8fcc4f8d5",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "bd72dc2b-147a-5230-bc48-909c7f901776",
@@ -3827,7 +3827,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "fc9332d0-9eda-5f09-b3ca-df3c9e63f755",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "339829c7-0da4-5471-a95d-0e81fba214f3",
@@ -4010,7 +4010,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "fc9332d0-9eda-5f09-b3ca-df3c9e63f755",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "c4a07770-f931-5c2b-a4bf-447ba07eb492"
@@ -4182,7 +4182,7 @@
             {
               "CountrySlug": "austria",
               "InformationEntryId": "fc9332d0-9eda-5f09-b3ca-df3c9e63f755",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "4dd9f2b4-71ac-58b3-8612-23b82ab08f9d",

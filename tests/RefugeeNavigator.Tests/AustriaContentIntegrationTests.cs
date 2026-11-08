@@ -38,7 +38,7 @@ public sealed class AustriaContentIntegrationTests
         await new JsonComparisonFactProvider(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json")).LoadAsync(await Catalog.Value));
 
     [Fact]
-    public async Task AustriaHasEightNeedsReviewArticlesAndIsVisibleOnlyInDevelopment()
+    public async Task AustriaHasEightVerifiedArticlesAndIsVisibleInProductionAndDevelopment()
     {
         var catalog = await Catalog.Value;
         var country = Assert.Single(catalog.Countries, item => item.Slug == "austria");
@@ -47,8 +47,8 @@ public sealed class AustriaContentIntegrationTests
         Assert.Equal(11, catalog.Countries.Count);
         Assert.Equal(88, catalog.InformationEntries.Count);
         Assert.Equal(264, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(237, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(27, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(261, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(3, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == CountryId).ToArray();
@@ -63,16 +63,16 @@ public sealed class AustriaContentIntegrationTests
             Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(item => item.LanguageCode).Order(StringComparer.Ordinal).ToArray());
             Assert.All(translations, item =>
             {
-                Assert.Equal(VerificationStatus.NeedsReview, item.VerificationStatus);
+                Assert.Equal(VerificationStatus.Verified, item.VerificationStatus);
                 Assert.Equal(new DateTimeOffset(2026, 11, 8, 0, 0, 0, TimeSpan.Zero), item.LastUpdatedAt);
             });
         }
 
         var production = CountryVisibility.GetVisibleCountries(catalog, false);
         var development = CountryVisibility.GetVisibleCountries(catalog, true);
-        Assert.DoesNotContain(production, item => item.Slug == "austria");
+        Assert.Contains(production, item => item.Slug == "austria");
         Assert.Contains(development, item => item.Slug == "austria");
-        Assert.Equal(10, production.Count);
+        Assert.Equal(11, production.Count);
         Assert.Equal(11, development.Count);
     }
 
@@ -137,7 +137,7 @@ public sealed class AustriaContentIntegrationTests
     }
 
     [Fact]
-    public async Task AustriaHasTwentyFourAvailableDraftFactsWithCompleteMappingsAndPreservedHolds()
+    public async Task AustriaHasTwentyFourAvailableApprovedFactsWithCompleteMappingsAndPreservedHolds()
     {
         var catalog = await Catalog.Value;
         var comparison = await Facts.Value;
@@ -162,7 +162,7 @@ public sealed class AustriaContentIntegrationTests
         Assert.Equal(24, facts.Length);
         Assert.Equal(AspectIds.Order(StringComparer.Ordinal), comparison.Topics.SelectMany(item => item.Aspects)
             .Where(aspect => aspect.Facts.Any(fact => fact.CountrySlug == "austria")).Select(aspect => aspect.Id).Order(StringComparer.Ordinal));
-        Assert.Equal(24, facts.Count(item => item.Status == ComparisonFactStatus.Draft));
+        Assert.Equal(24, facts.Count(item => item.Status == ComparisonFactStatus.Approved));
         Assert.All(facts, item => Assert.True(item.IsAvailable));
         Assert.Equal(8, facts.Select(item => item.InformationEntryId).Distinct().Count());
         var sourcesById = catalog.OfficialSources.ToDictionary(item => item.Id);
