@@ -144,6 +144,14 @@ def fact_panel(root: live.Element, aspect_id: str, country_name: str) -> live.El
     return None
 
 
+def has_available_answer(panel: live.Element | None, language: str) -> bool:
+    if panel is None:
+        return False
+    unavailable = live.normalized(live.UNAVAILABLE_TEXT[language])
+    paragraphs = [live.normalized(node.text()) for node in panel.descendants("p")]
+    return any(text and text != unavailable for text in paragraphs)
+
+
 def set_language(client: live.HttpClient, language: str, reporter: Reporter) -> str | None:
     response = client.request(f"/set-language?culture={language}&returnUrl=%2F")
     cookie = live.secure_culture_cookie(response, client.base_url)
@@ -274,19 +282,15 @@ def run_checks(base_url: str, username: str, password: str,
         rendered_aspects = 0
         italy_compare_ok = True
         italy_source_links = 0
-        unavailable_text = live.normalized(live.UNAVAILABLE_TEXT[language])
         for category, aspect_ids in ITALY_ASPECTS_BY_CATEGORY.items():
             response = send(f"/compare?country1=italy&country2=denmark&category={category}", cookie)
             root = live.parse_document(response.body)
             valid_compare = response.status == 200 and not nodes(root, "p", "selection-message")
             for aspect_id in aspect_ids:
                 panel = fact_panel(root, aspect_id, ITALY_NAMES[language])
-                panel_text = live.normalized(panel.text()) if panel else ""
-                paragraphs = [live.normalized(node.text()) for node in panel.descendants("p")] if panel else []
                 groups = list(panel.descendants("details", "fact-sources")) if panel else []
                 links = [a.attrs.get("href", "") for group in groups for a in group.descendants("a")] if panel else []
-                has_answer = bool(paragraphs) and any(text and unavailable_text not in text for text in paragraphs) \
-                    and unavailable_text not in panel_text
+                has_answer = has_available_answer(panel, language)
                 has_sources = bool(groups) and bool(links) and all(url.startswith("https://") for url in links)
                 italy_compare_ok &= valid_compare and has_answer and has_sources
                 italy_source_links += sum(url.startswith("https://") for url in links)
@@ -400,18 +404,16 @@ def run_checks(base_url: str, username: str, password: str,
         rendered_aspects = 0
         slovakia_compare_ok = True
         slovakia_source_links = 0
-        unavailable_text = live.normalized(live.UNAVAILABLE_TEXT[language])
         for category, aspect_ids in SLOVAKIA_ASPECTS_BY_CATEGORY.items():
             response = send(f"/compare?country1=slovakia&country2=denmark&category={category}", cookie)
             root = live.parse_document(response.body)
             valid_compare = response.status == 200 and not nodes(root, "p", "selection-message")
             for aspect_id in aspect_ids:
                 panel = fact_panel(root, aspect_id, SLOVAKIA_NAMES[language])
-                panel_text = live.normalized(panel.text()) if panel else ""
                 groups = list(panel.descendants("details", "fact-sources")) if panel else []
                 links = [a.attrs.get("href", "") for group in groups for a in group.descendants("a")] \
                     if panel else []
-                has_answer = panel is not None and bool(panel_text) and unavailable_text not in panel_text
+                has_answer = has_available_answer(panel, language)
                 has_sources = bool(groups) and bool(links) and all(url.startswith("https://") for url in links)
                 slovakia_compare_ok &= valid_compare and has_answer and has_sources
                 slovakia_source_links += len(links)
@@ -424,20 +426,16 @@ def run_checks(base_url: str, username: str, password: str,
         rendered_aspects = 0
         bulgaria_compare_ok = True
         bulgaria_source_links = 0
-        unavailable_text = live.normalized(live.UNAVAILABLE_TEXT[language])
         for category, aspect_ids in BULGARIA_ASPECTS_BY_CATEGORY.items():
             response = send(f"/compare?country1=bulgaria&country2=denmark&category={category}", cookie)
             root = live.parse_document(response.body)
             valid_compare = response.status == 200 and not nodes(root, "p", "selection-message")
             for aspect_id in aspect_ids:
                 panel = fact_panel(root, aspect_id, BULGARIA_NAMES[language])
-                panel_text = live.normalized(panel.text()) if panel else ""
-                paragraphs = [live.normalized(node.text()) for node in panel.descendants("p")] if panel else []
                 groups = list(panel.descendants("details", "fact-sources")) if panel else []
                 links = [a.attrs.get("href", "") for group in groups for a in group.descendants("a")] \
                     if panel else []
-                has_answer = bool(paragraphs) and any(text and unavailable_text not in text for text in paragraphs) \
-                    and unavailable_text not in panel_text
+                has_answer = has_available_answer(panel, language)
                 has_sources = bool(groups) and bool(links) and all(url.startswith("https://") for url in links)
                 bulgaria_compare_ok &= valid_compare and has_answer and has_sources
                 bulgaria_source_links += sum(url.startswith("https://") for url in links)
@@ -451,20 +449,16 @@ def run_checks(base_url: str, username: str, password: str,
         rendered_aspects = 0
         austria_compare_ok = True
         austria_source_links = 0
-        unavailable_text = live.normalized(live.UNAVAILABLE_TEXT[language])
         for category, aspect_ids in AUSTRIA_ASPECTS_BY_CATEGORY.items():
             response = send(f"/compare?country1=austria&country2=denmark&category={category}", cookie)
             root = live.parse_document(response.body)
             valid_compare = response.status == 200 and not nodes(root, "p", "selection-message")
             for aspect_id in aspect_ids:
                 panel = fact_panel(root, aspect_id, AUSTRIA_NAMES[language])
-                panel_text = live.normalized(panel.text()) if panel else ""
-                paragraphs = [live.normalized(node.text()) for node in panel.descendants("p")] if panel else []
                 groups = list(panel.descendants("details", "fact-sources")) if panel else []
                 links = [a.attrs.get("href", "") for group in groups for a in group.descendants("a")] \
                     if panel else []
-                has_answer = bool(paragraphs) and any(text and unavailable_text not in text for text in paragraphs) \
-                    and unavailable_text not in panel_text
+                has_answer = has_available_answer(panel, language)
                 has_sources = bool(groups) and bool(links) and all(url.startswith("https://") for url in links)
                 austria_compare_ok &= valid_compare and has_answer and has_sources
                 austria_source_links += sum(url.startswith("https://") for url in links)
@@ -502,18 +496,16 @@ def run_checks(base_url: str, username: str, password: str,
         rendered_aspects = 0
         romania_compare_ok = True
         romania_source_links = 0
-        unavailable_text = live.normalized(live.UNAVAILABLE_TEXT[language])
         for category, aspect_ids in ROMANIA_ASPECTS_BY_CATEGORY.items():
             response = send(f"/compare?country1=romania&country2=denmark&category={category}", cookie)
             root = live.parse_document(response.body)
             valid_compare = response.status == 200 and not nodes(root, "p", "selection-message")
             for aspect_id in aspect_ids:
                 panel = fact_panel(root, aspect_id, COUNTRY_NAMES[language])
-                panel_text = live.normalized(panel.text()) if panel else ""
                 groups = list(panel.descendants("details", "fact-sources")) if panel else []
                 links = [a.attrs.get("href", "") for group in groups for a in group.descendants("a")] \
                     if panel else []
-                has_approved_answer = panel is not None and bool(panel_text) and unavailable_text not in panel_text
+                has_approved_answer = has_available_answer(panel, language)
                 has_sources = bool(groups) and bool(links) and all(url.startswith("https://") for url in links)
                 romania_compare_ok &= valid_compare and has_approved_answer and has_sources
                 romania_source_links += len(links)

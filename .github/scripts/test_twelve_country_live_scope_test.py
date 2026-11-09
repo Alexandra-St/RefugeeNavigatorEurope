@@ -187,6 +187,11 @@ def fixture_response(path: str, countries: tuple[str, ...] | None = None, cookie
                 if bad_italy_fact == aspect_id and bad_italy_fact_mode == "unavailable":
                     answer = live.UNAVAILABLE_TEXT[language]
                     sources = ""
+                elif (bad_italy_fact == aspect_id and bad_italy_fact_mode == "qualified-placeholder-phrase"
+                      and language == "en"):
+                    answer = ("The special Ukraine-related mandatory-registration framework is established through "
+                              "31 December 2026; later national rules were not established in the reviewed sources.")
+                    sources = '<details class="fact-sources"><a href="https://example.gov/italy">Official source</a></details>'
                 elif bad_italy_fact == aspect_id and bad_italy_fact_mode == "missing-source":
                     answer = f"Approved Italy answer for {aspect_id}"
                     sources = ""
@@ -351,6 +356,19 @@ class TwelveCountryLiveScopeTests(unittest.TestCase):
         for language in ("EN", "UK", "RU"):
             self.assertIn(f"FAIL | Italy Compare facts ({language})", output)
 
+    def test_italy_exact_unavailable_placeholder_fails_as_available_fact(self):
+        passed, output = self.run_fixture(bad_italy_fact="healthcare-access")
+        self.assertFalse(passed)
+        for language in ("EN", "UK", "RU"):
+            self.assertIn(f"FAIL | Italy Compare facts ({language})", output)
+
+    def test_italy_answer_containing_placeholder_phrase_remains_available(self):
+        passed, output = self.run_fixture(bad_italy_fact="healthcare-access",
+                                          bad_italy_fact_mode="qualified-placeholder-phrase")
+        self.assertTrue(passed)
+        for language in ("EN", "UK", "RU"):
+            self.assertIn(f"PASS | Italy Compare facts ({language})", output)
+
     def test_italy_fact_without_source_disclosure_fails(self):
         passed, output = self.run_fixture(bad_italy_fact="education-pupil-language",
                                           bad_italy_fact_mode="missing-source")
@@ -451,6 +469,17 @@ class TwelveCountryLiveScopeTests(unittest.TestCase):
         for language in ("EN", "UK", "RU"):
             self.assertIn(f"PASS | {language} Sweden social-child-benefits hold", output)
         self.assertNotIn("Authorization", output)
+
+    def test_exact_placeholder_is_not_an_available_answer_and_sweden_hold_still_passes(self):
+        response = fixture_response("/compare?country1=sweden&country2=denmark&category=social-assistance")
+        root = live.parse_document(response.body)
+        panel = scope.fact_panel(root, "social-child-benefits", scope.SWEDEN_NAMES["en"])
+        self.assertIsNotNone(panel)
+        self.assertFalse(scope.has_available_answer(panel, "en"))
+        self.assertFalse(list(panel.descendants("details", "fact-sources")))
+        passed, output = self.run_fixture()
+        self.assertTrue(passed)
+        self.assertIn("PASS | EN Sweden social-child-benefits hold", output)
 
 
 if __name__ == "__main__":
