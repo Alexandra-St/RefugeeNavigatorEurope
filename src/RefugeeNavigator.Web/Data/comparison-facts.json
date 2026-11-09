@@ -178,7 +178,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "c8c06066-d3cd-55ce-88b0-3499384eece7",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "21a3a70f-2515-5c72-97a8-4ca8cd80e064",
@@ -364,7 +364,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "c8c06066-d3cd-55ce-88b0-3499384eece7",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "90ddcc13-3ffa-5c4c-a16c-18e4b89d292c"
@@ -556,7 +556,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "c8c06066-d3cd-55ce-88b0-3499384eece7",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "9e67a296-0fac-5005-98b9-11e079bd56e5",
@@ -755,7 +755,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "28aee635-27ff-525c-9cd3-8673b5ba2be3",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "87ee9811-270e-5769-af67-4e0359110d0e",
@@ -945,7 +945,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "28aee635-27ff-525c-9cd3-8673b5ba2be3",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "7f87bebf-55df-51f3-97b0-f01b05eb5fe8",
@@ -1134,7 +1134,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "28aee635-27ff-525c-9cd3-8673b5ba2be3",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "7f87bebf-55df-51f3-97b0-f01b05eb5fe8",
@@ -1323,7 +1323,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "39091eb7-04c7-5b45-83b7-585f5f1ce719",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "abc42049-2855-5401-a962-d280e2246b66",
@@ -1510,7 +1510,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "39091eb7-04c7-5b45-83b7-585f5f1ce719",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "506705f0-38ff-5f0b-a952-ff01d6839763",
@@ -1699,7 +1699,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "39091eb7-04c7-5b45-83b7-585f5f1ce719",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "3dde8424-7871-5ea0-aa29-e0b9b029b207",
@@ -1890,7 +1890,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "d988941a-e709-53ba-a2bf-47f1ac2f9956",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "71bec450-10ba-5e0a-91b0-a89fb36469da",
@@ -2077,7 +2077,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "d988941a-e709-53ba-a2bf-47f1ac2f9956",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "d10ee8f0-2ecd-5ae7-9b6a-b11299c906a9",
@@ -2260,7 +2260,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "d988941a-e709-53ba-a2bf-47f1ac2f9956",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "037214ac-ab9a-539c-a76a-bf123bdf3a24",
@@ -2459,7 +2459,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "462ace7d-8deb-5cd7-a530-548c79a8e144",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "a51bc867-e348-51f3-aa86-9a853bb56e7b",
@@ -2646,7 +2646,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "462ace7d-8deb-5cd7-a530-548c79a8e144",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "d16850c8-af12-57de-b209-a1bbed836180",
@@ -2834,7 +2834,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "462ace7d-8deb-5cd7-a530-548c79a8e144",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "a19d1117-94ab-5bbc-a087-f5bf752f932b",
@@ -3027,7 +3027,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "5aafddcb-e302-52b7-9365-f95e7261d3a4",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "72f205a1-4d67-52b3-b696-321a170a1721",
@@ -3212,7 +3212,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "5aafddcb-e302-52b7-9365-f95e7261d3a4",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "00e97a56-faa7-575e-964a-308be2bef690",
@@ -3396,7 +3396,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "5aafddcb-e302-52b7-9365-f95e7261d3a4",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "b091a118-3e1d-5d46-8edc-6ead572cb357",
@@ -3591,7 +3591,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "ba3d3110-730d-5340-a89a-2b6722430bdd",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "7438de87-d5e2-533a-bc14-700916f7a5fc",
@@ -3776,7 +3776,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "ba3d3110-730d-5340-a89a-2b6722430bdd",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "e2ee94d0-6f04-521d-b615-e7a89b736300",
@@ -3972,7 +3972,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "ba3d3110-730d-5340-a89a-2b6722430bdd",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "a82fdeb8-baff-5aac-8993-f05b44cd3b27",
@@ -4173,7 +4173,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "55696570-3337-5e2f-8a24-71e256e869e9",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "ccecfa58-086f-536c-8c5f-c5cadca292fe",
@@ -4370,7 +4370,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "55696570-3337-5e2f-8a24-71e256e869e9",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "ccecfa58-086f-536c-8c5f-c5cadca292fe",
@@ -4562,7 +4562,7 @@
             {
               "CountrySlug": "italy",
               "InformationEntryId": "55696570-3337-5e2f-8a24-71e256e869e9",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "fc1804f9-10b7-5244-aaeb-54567bef91ec",
