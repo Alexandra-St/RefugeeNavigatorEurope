@@ -39,7 +39,7 @@ public sealed class LithuaniaContentIntegrationTests
         await new JsonComparisonFactProvider(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json")).LoadAsync(await Catalog.Value));
 
     [Fact]
-    public async Task LithuaniaHasEightNeedsReviewArticlesAndRemainsHiddenInProduction()
+    public async Task LithuaniaHasEightVerifiedArticlesAndIsVisibleInProduction()
     {
         var catalog = await Catalog.Value;
         var country = Assert.Single(catalog.Countries, item => item.Slug == "lithuania");
@@ -48,8 +48,8 @@ public sealed class LithuaniaContentIntegrationTests
         Assert.Equal(13, catalog.Countries.Count);
         Assert.Equal(104, catalog.InformationEntries.Count);
         Assert.Equal(312, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(285, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(27, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(309, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(3, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
         var entries = catalog.InformationEntries.Where(item => item.CountryId == CountryId).ToArray();
         Assert.Equal(8, entries.Length);
@@ -61,11 +61,11 @@ public sealed class LithuaniaContentIntegrationTests
         {
             var translations = catalog.InformationEntryTranslations.Where(t => t.InformationEntryId == entry.Id).ToArray();
             Assert.Equal(3, translations.Length);
-            Assert.All(translations, t => { Assert.Equal(VerificationStatus.NeedsReview, t.VerificationStatus); Assert.Equal(new DateTimeOffset(2026, 11, 9, 0, 0, 0, TimeSpan.Zero), t.LastUpdatedAt); });
+            Assert.All(translations, t => { Assert.Equal(VerificationStatus.Verified, t.VerificationStatus); Assert.Equal(new DateTimeOffset(2026, 11, 9, 0, 0, 0, TimeSpan.Zero), t.LastUpdatedAt); });
         }
-        Assert.DoesNotContain(CountryVisibility.GetVisibleCountries(catalog, false), c => c.Slug == "lithuania");
+        Assert.Contains(CountryVisibility.GetVisibleCountries(catalog, false), c => c.Slug == "lithuania");
         Assert.Contains(CountryVisibility.GetVisibleCountries(catalog, true), c => c.Slug == "lithuania");
-        Assert.Equal(12, CountryVisibility.GetVisibleCountries(catalog, false).Count);
+        Assert.Equal(13, CountryVisibility.GetVisibleCountries(catalog, false).Count);
         Assert.Equal(13, CountryVisibility.GetVisibleCountries(catalog, true).Count);
     }
 
@@ -111,7 +111,7 @@ public sealed class LithuaniaContentIntegrationTests
     }
 
     [Fact]
-    public async Task LithuaniaHasTwentyFourDraftFactsWithOwnedSourcesAndExistingHoldsRemain()
+    public async Task LithuaniaHasTwentyFourApprovedFactsWithOwnedSourcesAndExistingHoldsRemain()
     {
         var catalog = await Catalog.Value; var comparison = await Facts.Value; CountryComparisonTopicMap.Validate(catalog);
         Assert.Contains("lithuania", CountryComparisonTopicMap.SupportedCountrySlugs);
@@ -126,8 +126,8 @@ public sealed class LithuaniaContentIntegrationTests
         foreach (var topic in CountryComparisonTopicMap.All) { Assert.Equal(13, topic.EntryIds.Count); Assert.Equal(mapped[topic.ResourceKey], CountryComparisonTopicMap.EntryIdFor(topic, "lithuania")); }
         var all = comparison.Topics.SelectMany(t => t.Aspects).SelectMany(a => a.Facts).ToArray(); var lt = all.Where(f => f.CountrySlug == "lithuania").ToArray();
         Assert.Equal(312, all.Length); Assert.Equal(305, all.Count(f => f.IsAvailable)); Assert.Equal(7, all.Count(f => !f.IsAvailable));
-        Assert.Equal(283, all.Count(f => f.Status == ComparisonFactStatus.Approved)); Assert.Equal(29, all.Count(f => f.Status == ComparisonFactStatus.Draft));
-        Assert.Equal(24, lt.Length); Assert.All(lt, f => { Assert.Equal(ComparisonFactStatus.Draft, f.Status); Assert.True(f.IsAvailable); Assert.Equal(ArticleByAspect[Assert.Single(comparison.Topics.SelectMany(t => t.Aspects).Where(a => a.Facts.Contains(f)).Select(a => a.Id))], f.InformationEntryId); Assert.Equal(new[] { "en", "ru", "uk" }, f.Values.Keys.Order(StringComparer.Ordinal).ToArray()); Assert.All(f.Values.Values, v => Assert.False(string.IsNullOrWhiteSpace(v))); Assert.NotEmpty(f.OfficialSourceIds); Assert.All(f.OfficialSourceIds, id => Assert.Equal(f.InformationEntryId, catalog.OfficialSources.Single(s => s.Id == id).InformationEntryId)); });
+        Assert.Equal(307, all.Count(f => f.Status == ComparisonFactStatus.Approved)); Assert.Equal(5, all.Count(f => f.Status == ComparisonFactStatus.Draft));
+        Assert.Equal(24, lt.Length); Assert.All(lt, f => { Assert.Equal(ComparisonFactStatus.Approved, f.Status); Assert.True(f.IsAvailable); Assert.Equal(ArticleByAspect[Assert.Single(comparison.Topics.SelectMany(t => t.Aspects).Where(a => a.Facts.Contains(f)).Select(a => a.Id))], f.InformationEntryId); Assert.Equal(new[] { "en", "ru", "uk" }, f.Values.Keys.Order(StringComparer.Ordinal).ToArray()); Assert.All(f.Values.Values, v => Assert.False(string.IsNullOrWhiteSpace(v))); Assert.NotEmpty(f.OfficialSourceIds); Assert.All(f.OfficialSourceIds, id => Assert.Equal(f.InformationEntryId, catalog.OfficialSources.Single(s => s.Id == id).InformationEntryId)); });
         var nl = all.Where(f => f.CountrySlug == "netherlands").ToArray(); Assert.Equal(20, nl.Count(f => f.Status == ComparisonFactStatus.Approved)); Assert.Equal(4, nl.Count(f => f.Status == ComparisonFactStatus.Draft));
         foreach (var aspect in new[] { "protection-scheme", "protection-application", "protection-dates", "residence-filing" }) Assert.Equal(ComparisonFactStatus.Draft, Assert.Single(comparison.Topics.SelectMany(t => t.Aspects).Single(a => a.Id == aspect).Facts, f => f.CountrySlug == "netherlands").Status);
         var nlFiling = Assert.Single(comparison.Topics.SelectMany(t => t.Aspects).Single(a => a.Id == "residence-filing").Facts, f => f.CountrySlug == "netherlands"); Assert.False(nlFiling.IsAvailable); Assert.Empty(nlFiling.OfficialSourceIds);
