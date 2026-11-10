@@ -128,6 +128,6 @@
         && !string.IsNullOrWhiteSpace(CountrySlug)
         && !CountryVisibility.GetVisibleCountries(Catalog, false).Any(country =>
             string.Equals(country.Slug, CountrySlug, StringComparison.OrdinalIgnoreCase))
-                ? null
+                ? VerificationStatus.NeedsReview.ToString()
                 : VerificationStatus.Verified.ToString();
 }

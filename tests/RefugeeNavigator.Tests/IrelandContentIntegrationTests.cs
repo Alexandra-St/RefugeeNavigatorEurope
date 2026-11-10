@@ -1,5 +1,6 @@
 using System.Globalization;
 using System.Net;
+using System.Reflection;
 using System.Resources;
 using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Components;
@@ -173,6 +174,13 @@ public sealed class IrelandContentIntegrationTests
         var productionOverview = await RenderAsync<CountryOverview>("Production", language, "/countries/ireland",
             new() { [nameof(CountryOverview.CountrySlug)] = "ireland" });
         Assert.True(productionOverview.NotFound);
+        var productionCategory = await RenderAsync<Category>("Production", language,
+            "/countries/ireland/categories/employment", new()
+            {
+                [nameof(Category.CountrySlug)] = "ireland",
+                [nameof(Category.CategorySlug)] = "employment"
+            });
+        Assert.True(productionCategory.NotFound);
         var productionResults = await RenderAsync<Search>("Production", language, "/search?country=ireland");
         Assert.Empty(Regex.Matches(productionResults.Html, "class=\"result-card\"").Cast<Match>());
         var productionCompare = await RenderAsync<Compare>("Production", language, "/compare");
@@ -218,6 +226,25 @@ public sealed class IrelandContentIntegrationTests
     }
 
     [Fact]
+    public async Task DevelopmentIrelandSearchExcludesOutdatedTranslation()
+    {
+        const string language = "en";
+        var catalog = await Catalog.Value;
+        var outdatedTranslation = Assert.Single(catalog.InformationEntryTranslations,
+            item => item.InformationEntryId == Articles["IE-EMP-01"].Id && item.LanguageCode == language);
+        var previewCatalog = WithIrelandTranslationStatus(catalog, outdatedTranslation.InformationEntryId,
+            language, VerificationStatus.Outdated);
+
+        var search = await RenderAsync<Search>("Development", language, "/search?country=ireland",
+            catalogOverride: previewCatalog);
+
+        Assert.Equal(4, Regex.Matches(search.Html, "class=\"result-card\"").Count);
+        Assert.DoesNotContain(outdatedTranslation.Title, search.Html);
+        Assert.Contains(catalog.InformationEntryTranslations.Single(item =>
+            item.InformationEntryId == Articles["IE-EMP-02"].Id && item.LanguageCode == language).Title, search.Html);
+    }
+
+    [Fact]
     public void IrelandCountryLocalizationIsPresentInAllLanguages()
     {
         Assert.Equal("Ireland", Resources.GetString("Country.Ireland", CultureInfo.GetCultureInfo("en")));
@@ -236,6 +263,20 @@ public sealed class IrelandContentIntegrationTests
             .Select(match => match.Groups[1].Value).ToArray();
     }
 
+    private static CatalogData WithIrelandTranslationStatus(CatalogData catalog, Guid informationEntryId,
+        string languageCode, VerificationStatus status)
+    {
+        var translations = catalog.InformationEntryTranslations.Select(item =>
+            item.InformationEntryId == informationEntryId && item.LanguageCode == languageCode
+                ? new InformationEntryTranslation(item.InformationEntryId, item.LanguageCode, item.Title,
+                    item.Summary, item.Content, status, item.LastUpdatedAt)
+                : item);
+        return (CatalogData)Activator.CreateInstance(typeof(CatalogData),
+            BindingFlags.Instance | BindingFlags.NonPublic, binder: null,
+            args: [catalog.Countries, catalog.Categories, catalog.InformationEntries, translations, catalog.OfficialSources],
+            culture: CultureInfo.InvariantCulture)!;
+    }
+
     private static string FindRepositoryRoot()
     {
         var directory = new DirectoryInfo(AppContext.BaseDirectory);
@@ -245,7 +286,8 @@ public sealed class IrelandContentIntegrationTests
     }
 
     private static async Task<(string Html, bool NotFound)> RenderAsync<TComponent>(string environment,
-        string language, string path = "/", Dictionary<string, object?>? parameters = null) where TComponent : IComponent
+        string language, string path = "/", Dictionary<string, object?>? parameters = null,
+        CatalogData? catalogOverride = null) where TComponent : IComponent
     {
         var oldCulture = CultureInfo.CurrentCulture;
         var oldUiCulture = CultureInfo.CurrentUICulture;
@@ -255,7 +297,7 @@ public sealed class IrelandContentIntegrationTests
             var services = new ServiceCollection();
             services.AddLogging();
             services.AddLocalization(options => options.ResourcesPath = "Resources");
-            services.AddSingleton(await Catalog.Value);
+            services.AddSingleton(catalogOverride ?? await Catalog.Value);
             services.AddSingleton(await Facts.Value);
             services.AddSingleton(new StepByStepGuideCatalog([]));
             services.AddSingleton<IWebHostEnvironment>(new TestEnvironment(environment));
