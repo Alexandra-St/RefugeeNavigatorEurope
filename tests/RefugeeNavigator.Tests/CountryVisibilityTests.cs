@@ -185,7 +185,7 @@ public sealed class CountryVisibilityTests
     {
         var catalog = await Catalog.Value;
         var home = await RenderAsync<Home>("Development", language);
-        Assert.Equal(13, Regex.Matches(home.Html, "class=\"country-card\"").Count);
+        Assert.Equal(14, Regex.Matches(home.Html, "class=\"country-card\"").Count);
         Assert.Contains("href=\"/countries/lithuania\"", home.Html);
         Assert.Contains("href=\"/countries/sweden\"", home.Html);
         Assert.Contains("href=\"/countries/romania\"", home.Html);
@@ -203,8 +203,8 @@ public sealed class CountryVisibilityTests
         Assert.Equal(8, ArticleSearch.Search(catalog, null, "romania", null, null, language).Count);
         var compare = await RenderAsync<Compare>("Development", language,
             "/compare?country1=sweden&country2=denmark&category=all");
-        Assert.Equal(catalog.Countries.Select(country => country.Slug), SelectValues(compare.Html, "country1"));
-        Assert.Equal(catalog.Countries.Select(country => country.Slug), SelectValues(compare.Html, "country2"));
+        Assert.Equal(AcceptedCountries, SelectValues(compare.Html, "country1"));
+        Assert.Equal(AcceptedCountries, SelectValues(compare.Html, "country2"));
         Assert.DoesNotContain("class=\"selection-message\"", compare.Html);
         Assert.Contains("class=\"draft-preview-notice\"", compare.Html);
         Assert.Contains("class=\"draft-label\"", compare.Html);

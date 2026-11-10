@@ -6046,5 +6046,495 @@
     "Title": "SADM, Residence municipality social-assistance contacts",
     "Url": "https://socmin.lrv.lt/lt/veiklos-sritys/socialine-integracija/lietuva-ukrainai/socialine-parama-ukrainieciams/kontaktai-del-socialines-paramos-savivaldybese/",
     "LastCheckedAt": "2026-11-09T00:00:00+00:00"
+  },
+  {
+    "Id": "d6cbee4e-dbe6-5464-b54b-f81ea1cd540d",
+    "InformationEntryId": "db600af0-bbf7-517b-ac82-3a7781105b8d",
+    "Title": "JobsIreland, [Jobseeker FAQs](https://jobsireland.ie/en-US/jobseekerfaq)",
+    "Url": "https://jobsireland.ie/en-US/jobseekerfaq",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "f773e9ec-db97-59ca-8797-7dcf21fd6fe8",
+    "InformationEntryId": "db600af0-bbf7-517b-ac82-3a7781105b8d",
+    "Title": "DSP, [Intreo – the Public Employment Services](https://www.gov.ie/en/department-of-social-protection/organisation-information/intreo-the-public-employment-services/)",
+    "Url": "https://www.gov.ie/en/department-of-social-protection/organisation-information/intreo-the-public-employment-services/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "3ed2440d-3dd1-5b9a-8b02-c709e07c3d39",
+    "InformationEntryId": "db600af0-bbf7-517b-ac82-3a7781105b8d",
+    "Title": "European Commission / EURES, [Help and support](https://eures.europa.eu/eures-services/help-and-support_en)",
+    "Url": "https://eures.europa.eu/eures-services/help-and-support_en",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "db73e5f2-bab3-5ad2-a765-2388d86db0dc",
+    "InformationEntryId": "db600af0-bbf7-517b-ac82-3a7781105b8d",
+    "Title": "European Commission / EURES, [Living and working conditions: Ireland](https://eures.europa.eu/living-and-working/living-and-working-conditions-europe/living-and-working-conditions-ireland_en)",
+    "Url": "https://eures.europa.eu/living-and-working/living-and-working-conditions-europe/living-and-working-conditions-ireland_en",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "e94aa98b-d7c8-56fb-8d29-7c1c0c65c092",
+    "InformationEntryId": "db600af0-bbf7-517b-ac82-3a7781105b8d",
+    "Title": "DSP, [Intreo Employment Services for Beneficiaries of Temporary Protection](https://www.gov.ie/en/department-of-social-protection/publications/intreo-employment-services-for-beneficiaries-of-temporary-protection/)",
+    "Url": "https://www.gov.ie/en/department-of-social-protection/publications/intreo-employment-services-for-beneficiaries-of-temporary-protection/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "b7edd3b4-1941-55f5-9ecf-fcec0cf0aa9e",
+    "InformationEntryId": "db600af0-bbf7-517b-ac82-3a7781105b8d",
+    "Title": "DFHERIS, [Skills to Compete courses](https://www.gov.ie/en/department-of-further-and-higher-education-research-innovation-and-science/services/improve-your-job-opportunities-with-skills-to-compete-courses/)",
+    "Url": "https://www.gov.ie/en/department-of-further-and-higher-education-research-innovation-and-science/services/improve-your-job-opportunities-with-skills-to-compete-courses/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "e65655f3-ee2f-51d7-9cb4-a222c19d92db",
+    "InformationEntryId": "db600af0-bbf7-517b-ac82-3a7781105b8d",
+    "Title": "SOLAS / National Enterprise Hub, [Skills to Advance](https://www.neh.gov.ie/sustainability/understand-sustainability/skills-to-advance-boost-skills-boost-business)",
+    "Url": "https://www.neh.gov.ie/sustainability/understand-sustainability/skills-to-advance-boost-skills-boost-business",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "f366a9f2-b4bf-5ffd-bbd3-eb26c00c0aab",
+    "InformationEntryId": "db600af0-bbf7-517b-ac82-3a7781105b8d",
+    "Title": "DSP, [Work Placement Experience Programme](https://www.gov.ie/en/department-of-social-protection/services/work-placement-experience-programme/)",
+    "Url": "https://www.gov.ie/en/department-of-social-protection/services/work-placement-experience-programme/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "8268bba5-e3a7-5a5a-a172-6996291243ff",
+    "InformationEntryId": "db600af0-bbf7-517b-ac82-3a7781105b8d",
+    "Title": "QQI, [Recognition of foreign qualifications](https://www.qqi.ie/recognition-of-foreign-qualifications)",
+    "Url": "https://www.qqi.ie/recognition-of-foreign-qualifications",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "8f91c5cd-e52f-51f0-a704-25590ee12f33",
+    "InformationEntryId": "e6b45fb5-4180-5e57-8e48-30c25ddad0f8",
+    "Title": "Irish Statute Book, *International Protection Act 2026*, §237",
+    "Url": "https://www.irishstatutebook.ie/eli/2026/act/9/section/237/enacted/en/index.html",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "c53776e5-612c-588d-a4bc-0d2396e90a0e",
+    "InformationEntryId": "e6b45fb5-4180-5e57-8e48-30c25ddad0f8",
+    "Title": "Irish Statute Book, *Employment Permits Act 2024*, §§7–8",
+    "Url": "https://www.irishstatutebook.ie/eli/2024/act/17/section/8/enacted/en/html",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "2f72b8bb-d0c3-57de-8511-c9fd6d6f203a",
+    "InformationEntryId": "e6b45fb5-4180-5e57-8e48-30c25ddad0f8",
+    "Title": "Immigration Service Delivery (ISD), [FAQs – for Ukraine Nationals and Residents of Ukraine](https://www.irishimmigration.ie/faqs-for-ukraine-nationals-and-residents-of-ukraine/)",
+    "Url": "https://www.irishimmigration.ie/faqs-for-ukraine-nationals-and-residents-of-ukraine/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "cf6469ea-24e8-5c0d-99fd-d8b4f918f618",
+    "InformationEntryId": "e6b45fb5-4180-5e57-8e48-30c25ddad0f8",
+    "Title": "ISD, [Notice for Employers of Beneficiaries of Temporary Protection](https://www.irishimmigration.ie/notice-for-employers-of-beneficiaries-of-temporary-protection/)",
+    "Url": "https://www.irishimmigration.ie/notice-for-employers-of-beneficiaries-of-temporary-protection/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "5a8c6e26-dc04-563b-b524-e412fcd4f547",
+    "InformationEntryId": "e6b45fb5-4180-5e57-8e48-30c25ddad0f8",
+    "Title": "WRC, [Terms of Employment](https://www.workplacerelations.ie/en/what_you_should_know/employer-obligations/terms-of-employment/)",
+    "Url": "https://www.workplacerelations.ie/en/what_you_should_know/employer-obligations/terms-of-employment/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "ec94d9c5-078a-5e78-a5c4-537e1608c85d",
+    "InformationEntryId": "e6b45fb5-4180-5e57-8e48-30c25ddad0f8",
+    "Title": "WRC, [Payslips](https://www.workplacerelations.ie/en/what_you_should_know/hours-and-wages/payslips/)",
+    "Url": "https://www.workplacerelations.ie/en/what_you_should_know/hours-and-wages/payslips/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "30ce687d-394f-5161-b89e-ee807d2bd5fb",
+    "InformationEntryId": "e6b45fb5-4180-5e57-8e48-30c25ddad0f8",
+    "Title": "Revenue, [Paying employees' tax to Revenue](https://www.revenue.ie/en/employing-people/paying-your-employees-tax-to-revenue/index.aspx)",
+    "Url": "https://www.revenue.ie/en/employing-people/paying-your-employees-tax-to-revenue/index.aspx",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "8e3f72bc-08ea-56a4-b4b0-e7646641ddf4",
+    "InformationEntryId": "e6b45fb5-4180-5e57-8e48-30c25ddad0f8",
+    "Title": "Revenue, [Who do you include on a payroll submission?](https://www.revenue.ie/en/employing-people/becoming-an-employer-and-ongoing-obligations/information-on-payroll-submission/who-do-you-include-on-a-payroll-submission.aspx)",
+    "Url": "https://www.revenue.ie/en/employing-people/becoming-an-employer-and-ongoing-obligations/information-on-payroll-submission/who-do-you-include-on-a-payroll-submission.aspx",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "c3a5fa42-a95b-55b8-bce9-fefdd3c335b3",
+    "InformationEntryId": "e6b45fb5-4180-5e57-8e48-30c25ddad0f8",
+    "Title": "Revenue, [When you start a new job](https://www.revenue.ie/en/jobs-and-pensions/changing-jobs/start-new-job.aspx)",
+    "Url": "https://www.revenue.ie/en/jobs-and-pensions/changing-jobs/start-new-job.aspx",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "c6219d95-6219-50bd-b768-9470b15ef59e",
+    "InformationEntryId": "e6b45fb5-4180-5e57-8e48-30c25ddad0f8",
+    "Title": "WRC, [Working Hours & Breaks](https://www.workplacerelations.ie/en/what_you_should_know/hours-and-wages/working_hours/)",
+    "Url": "https://www.workplacerelations.ie/en/what_you_should_know/hours-and-wages/working_hours/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "525a6165-1438-5a55-8106-1089b588b87b",
+    "InformationEntryId": "e6b45fb5-4180-5e57-8e48-30c25ddad0f8",
+    "Title": "WRC, [Annual Leave](https://www.workplacerelations.ie/en/what_you_should_know/leave/annual-leave/)",
+    "Url": "https://www.workplacerelations.ie/en/what_you_should_know/leave/annual-leave/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "8b823964-6e9e-554e-aad3-1659fcc6806e",
+    "InformationEntryId": "e6b45fb5-4180-5e57-8e48-30c25ddad0f8",
+    "Title": "WRC, [Public Holidays](https://www.workplacerelations.ie/en/what_you_should_know/public-holidays/)",
+    "Url": "https://www.workplacerelations.ie/en/what_you_should_know/public-holidays/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "5c35b938-00f2-5d1a-a02a-46c50d64ef8e",
+    "InformationEntryId": "e6b45fb5-4180-5e57-8e48-30c25ddad0f8",
+    "Title": "WRC, [Employment Equality](https://www.workplacerelations.ie/en/what_you_should_know/equal-status-and-employment-equality/employment-equality/employment-equality/)",
+    "Url": "https://www.workplacerelations.ie/en/what_you_should_know/equal-status-and-employment-equality/employment-equality/employment-equality/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "08b6c3ac-f730-5a10-9655-557f30814afc",
+    "InformationEntryId": "e6b45fb5-4180-5e57-8e48-30c25ddad0f8",
+    "Title": "Health and Safety Authority (HSA), [Safety, Health and Welfare at Work Act 2005 – employer duties](https://www.hsa.ie/eng/topics/managing_health_and_safety/safety-_health_and_welfare_at_work_act_2005/)",
+    "Url": "https://www.hsa.ie/eng/topics/managing_health_and_safety/safety-_health_and_welfare_at_work_act_2005/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "b167dc8f-afd9-5fff-8a5f-49ec2c8727e3",
+    "InformationEntryId": "e6b45fb5-4180-5e57-8e48-30c25ddad0f8",
+    "Title": "HSA, [Information, Instruction, Training and Supervision](https://www.hsa.ie/your_industry/health_and_social_care_sector/managing-health-and-safety-in-health-and-social-care/information_instruction_training_and_supervision/)",
+    "Url": "https://www.hsa.ie/your_industry/health_and_social_care_sector/managing-health-and-safety-in-health-and-social-care/information_instruction_training_and_supervision/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "7e6c51ae-784c-5494-acdd-6e44526fef30",
+    "InformationEntryId": "e6b45fb5-4180-5e57-8e48-30c25ddad0f8",
+    "Title": "WRC, [National Minimum Wage](https://www.workplacerelations.ie/en/what_you_should_know/hours-and-wages/national%20minimum%20wage/national_minimum_wage.html)",
+    "Url": "https://www.workplacerelations.ie/en/what_you_should_know/hours-and-wages/national%20minimum%20wage/national_minimum_wage.html",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "59d457af-4e8a-5542-b3b8-ed202a624bcc",
+    "InformationEntryId": "e6b45fb5-4180-5e57-8e48-30c25ddad0f8",
+    "Title": "Irish Statute Book, S.I. No. 472/2025, [National Minimum Wage Order 2025](https://www.irishstatutebook.ie/eli/2025/si/472/made/en/)",
+    "Url": "https://www.irishstatutebook.ie/eli/2025/si/472/made/en/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "b903f2b0-1053-5c44-9bbc-00be5a28cfb1",
+    "InformationEntryId": "e6b45fb5-4180-5e57-8e48-30c25ddad0f8",
+    "Title": "DETE, [Registration bodies for certain employments](https://www.enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/employment-permit-eligibility/registration-bodies-for-certain-employments/)",
+    "Url": "https://www.enterprise.gov.ie/en/what-we-do/workplace-and-skills/employment-permits/employment-permit-eligibility/registration-bodies-for-certain-employments/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "a818f974-269f-5775-9951-795f665754d3",
+    "InformationEntryId": "e6b45fb5-4180-5e57-8e48-30c25ddad0f8",
+    "Title": "QQI/NARIC Ireland, [Recognition of foreign qualifications](https://www.qqi.ie/recognition-of-foreign-qualifications)",
+    "Url": "https://www.qqi.ie/recognition-of-foreign-qualifications",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "3696a797-65a5-5915-adb0-0d4cc9e0b264",
+    "InformationEntryId": "e6b45fb5-4180-5e57-8e48-30c25ddad0f8",
+    "Title": "DSP, [PRSI Employer Guide](https://www.gov.ie/en/department-of-social-protection/publications/prsi-employer-guide/)",
+    "Url": "https://www.gov.ie/en/department-of-social-protection/publications/prsi-employer-guide/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "c53c975b-f313-572b-b8bc-0e0969e7e2c0",
+    "InformationEntryId": "864a1ff8-dc63-56bf-ae78-860a452a8f04",
+    "Title": "Irish Statute Book, *International Protection Act 2026*, No. 9 of 2026, §237(11)(b)",
+    "Url": "https://www.irishstatutebook.ie/eli/2026/act/9/section/237/enacted/en/index.html",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "f6eb3634-c3c5-5e83-9959-0f55cacc85b1",
+    "InformationEntryId": "864a1ff8-dc63-56bf-ae78-860a452a8f04",
+    "Title": "HSE, “Medical cards for people from Ukraine”",
+    "Url": "https://www.hse.ie/services/schemes-allowances/medical-cards/other-types-of-medical-card/ukr-card/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "5f9d91d3-784e-5f4b-8beb-e8455e04583f",
+    "InformationEntryId": "864a1ff8-dc63-56bf-ae78-860a452a8f04",
+    "Title": "HSE, “What a medical card covers”",
+    "Url": "https://www.hse.ie/services/schemes-allowances/medical-cards/about-the-medical-card/what-it-covers/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "4f7c5150-4700-5c07-8b44-126545a53e9a",
+    "InformationEntryId": "864a1ff8-dc63-56bf-ae78-860a452a8f04",
+    "Title": "HSE, “PPS number for health services: why we ask for yours”",
+    "Url": "https://www2.hse.ie/services/pps-number/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "dff60bca-abb6-55df-9b97-09a59a7e494a",
+    "InformationEntryId": "864a1ff8-dc63-56bf-ae78-860a452a8f04",
+    "Title": "HSE, “The emergency department (ED)”",
+    "Url": "https://www2.hse.ie/emergencies/the-emergency-department-ed/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "ab35fd53-d52f-5f35-8409-35a8188407a4",
+    "InformationEntryId": "864a1ff8-dc63-56bf-ae78-860a452a8f04",
+    "Title": "Department of the Taoiseach, “How to contact emergency services in Ireland”",
+    "Url": "https://www.gov.ie/en/department-of-the-taoiseach/services/how-to-contact-emergency-services-in-ireland/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "db6987ac-b288-5a3d-b333-e53d83d6640f",
+    "InformationEntryId": "864a1ff8-dc63-56bf-ae78-860a452a8f04",
+    "Title": "HSE, “When to visit an injury unit”",
+    "Url": "https://www.hse.ie/emergencies/when-to-visit-an-injury-unit/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "82692a7a-0eee-526e-9ec8-df6123636f91",
+    "InformationEntryId": "864a1ff8-dc63-56bf-ae78-860a452a8f04",
+    "Title": "HSE, “When to go to a GP out of hours”",
+    "Url": "https://www.hse.ie/emergencies/when-to-go-to-a-gp-out-of-hours/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "1a773d94-d40a-52e7-a918-ed4d517c58e9",
+    "InformationEntryId": "864a1ff8-dc63-56bf-ae78-860a452a8f04",
+    "Title": "HSE, “Wexford General Hospital Emergency Department”",
+    "Url": "https://www2.hse.ie/services/find-urgent-emergency-care/wexford-general-hospital-emergency-department/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "e3d51e0a-6f8c-5951-91f7-4e1ad5807875",
+    "InformationEntryId": "864a1ff8-dc63-56bf-ae78-860a452a8f04",
+    "Title": "Department of Health, “Minister Donnelly welcomes the abolition of public hospital in-patient charges”",
+    "Url": "https://www.gov.ie/en/department-of-health/press-releases/minister-donnelly-welcomes-the-abolition-of-public-hospital-in-patient-charges/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "4f1a222d-934c-52a3-ad9d-66f64870bf2d",
+    "InformationEntryId": "8dc791b3-5002-59ab-b8fb-2c7ab1dbf43b",
+    "Title": "Irish Statute Book, International Protection Act 2026, §237(11)(a)",
+    "Url": "https://www.irishstatutebook.ie/eli/2026/act/9/section/237/enacted/en/index.html",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "b79194e0-5f77-5c1e-b2de-aef2757ed1f3",
+    "InformationEntryId": "8dc791b3-5002-59ab-b8fb-2c7ab1dbf43b",
+    "Title": "Department of Justice, Home Affairs and Migration, Employment, childcare and education",
+    "Url": "https://www.gov.ie/en/department-of-justice-home-affairs-and-migration/publications/employment-childcare-and-education/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "952cd14b-42aa-5ba8-ab46-b2aa960e8f56",
+    "InformationEntryId": "8dc791b3-5002-59ab-b8fb-2c7ab1dbf43b",
+    "Title": "Department of Education and Youth, Education policy",
+    "Url": "https://www.gov.ie/en/department-of-education/policies/education/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "94915a3f-b9c5-5847-851f-e87883c4e3cc",
+    "InformationEntryId": "8dc791b3-5002-59ab-b8fb-2c7ab1dbf43b",
+    "Title": "Department of Education and Youth, School admissions/enrolment",
+    "Url": "https://www.gov.ie/en/department-of-education/policy-information/school-admissionsenrolment/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "f3edd22f-3e85-5c96-a90d-32cc180d983c",
+    "InformationEntryId": "8dc791b3-5002-59ab-b8fb-2c7ab1dbf43b",
+    "Title": "Department of Education and Youth, Information for schools – Ukraine",
+    "Url": "https://www.gov.ie/en/department-of-education/publications/information-for-schools-ukraine/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "c0e52c25-a392-51bb-b9cb-db982c5d457d",
+    "InformationEntryId": "8dc791b3-5002-59ab-b8fb-2c7ab1dbf43b",
+    "Title": "Department of Education and Youth, EAL Criteria A new entrants 2026/27",
+    "Url": "https://www.gov.ie/en/department-of-education/guidelines-for-applying-for-eal-supports-for-criteria-a-new-entrants-for-the-202627-school-year/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "be10d190-cbe8-54fb-84f1-48bb5a7be625",
+    "InformationEntryId": "8dc791b3-5002-59ab-b8fb-2c7ab1dbf43b",
+    "Title": "Department of Education and Youth, EAL Criteria B non-new entrants 2026/27",
+    "Url": "https://www.gov.ie/en/department-of-education/guidelines-for-applying-for-eal-supports-for-criteria-b-non-new-entrant-pupils-for-the-202627-school-year/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "2a4d0e05-f90b-5592-a24b-1a998ff5f32a",
+    "InformationEntryId": "8dc791b3-5002-59ab-b8fb-2c7ab1dbf43b",
+    "Title": "Department of Education and Youth, Allocation of teachers to schools",
+    "Url": "https://www.gov.ie/en/department-of-education/services/allocation-of-teachers-to-schools/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "d8a478cc-111b-5701-ba5b-7356a5685b7d",
+    "InformationEntryId": "8dc791b3-5002-59ab-b8fb-2c7ab1dbf43b",
+    "Title": "Quality and Qualifications Ireland (QQI), Recognition of foreign qualifications",
+    "Url": "https://www.qqi.ie/recognition-of-foreign-qualifications",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "a0535b58-f9c1-5a30-96c1-c07b68c24342",
+    "InformationEntryId": "8dc791b3-5002-59ab-b8fb-2c7ab1dbf43b",
+    "Title": "Central Applications Office (CAO), About CAO",
+    "Url": "https://www.cao.ie/?page=aboutCAO",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "50e59b15-838f-581e-89e8-2dfda5af1d91",
+    "InformationEntryId": "8dc791b3-5002-59ab-b8fb-2c7ab1dbf43b",
+    "Title": "CAO, Entry Requirements Criteria for EU/EFTA/UK Applicants for 2026",
+    "Url": "https://www2.cao.ie/downloads/documents/2026/Guidelines-EU-EFTA-UK-2026.pdf",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "7f8e17c5-dcf4-518b-8a17-0fd162fb3efb",
+    "InformationEntryId": "8dc791b3-5002-59ab-b8fb-2c7ab1dbf43b",
+    "Title": "CAO, Third Level Higher Education Information Sheet 2026",
+    "Url": "https://www2.cao.ie/downloads/documents/2026/infosheets/third_level_infosheet_2026.pdf",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "0df1d1bf-5c79-54d4-ae65-c75f9eac3631",
+    "InformationEntryId": "8dc791b3-5002-59ab-b8fb-2c7ab1dbf43b",
+    "Title": "Department of Further and Higher Education, Research, Innovation and Science, Higher Education Temporary Tuition Fee Support Scheme for Displaced Persons (Ukraine) 2026/27",
+    "Url": "https://assets.gov.ie/static/documents/5d92e0e2/Temporary_Tution_Fee_Support_Scheme_2026_2027.pdf",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "0b52966b-c8fb-5d4f-a527-737556b42643",
+    "InformationEntryId": "8dc791b3-5002-59ab-b8fb-2c7ab1dbf43b",
+    "Title": "Student Universal Support Ireland (SUSI), Eligibility Criteria",
+    "Url": "https://www.susi.ie/eligibility-criteria",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "342200ce-ce4c-55f9-b495-6924af3b16d5",
+    "InformationEntryId": "8dc791b3-5002-59ab-b8fb-2c7ab1dbf43b",
+    "Title": "SUSI, Residency Criteria",
+    "Url": "https://www.susi.ie/eligibility-criteria/residency-criteria",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "af9a8fa6-f874-59f2-a681-b3dca9263aea",
+    "InformationEntryId": "682561e1-29db-5332-974b-cf38327a859d",
+    "Title": "Irish Statute Book, International Protection Act 2026 §237",
+    "Url": "https://www.irishstatutebook.ie/eli/2026/act/9/section/237/enacted/en/index.html",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "b9d843b4-679f-53f4-9531-2f1fba41daa0",
+    "InformationEntryId": "682561e1-29db-5332-974b-cf38327a859d",
+    "Title": "Department of Social Protection (DSP), Beneficiary of Temporary Protection Weekly Payment",
+    "Url": "https://www.gov.ie/en/department-of-social-protection/services/beneficiary-of-temporary-protection-weekly-payment/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "a3508c0a-cddf-52cd-894f-11b1ed1cb879",
+    "InformationEntryId": "682561e1-29db-5332-974b-cf38327a859d",
+    "Title": "Department of Justice, Home Affairs and Migration, Designated Accommodation Centres",
+    "Url": "https://www.gov.ie/en/department-of-justice-home-affairs-and-migration/publications/designated-accommodation-centres/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "beeae331-6870-5253-a8be-a7a1719de28d",
+    "InformationEntryId": "682561e1-29db-5332-974b-cf38327a859d",
+    "Title": "DSP, Operational Guidelines: determination of Habitual Residence",
+    "Url": "https://www.gov.ie/en/department-of-social-protection/publications/operational-guidelines-for-deciding-officers-and-designated-persons-on-the-determination-of-habitual-residence/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "dde56465-3a0b-5c73-988b-090e25867d23",
+    "InformationEntryId": "682561e1-29db-5332-974b-cf38327a859d",
+    "Title": "Houses of the Oireachtas, Minister for Social Protection, written answers, 22 March 2022",
+    "Url": "https://data.oireachtas.ie/ie/oireachtas/debateRecord/dail/2022-03-22/writtens/mul%40/main.pdf",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "6de651ce-e3ac-5883-b2c4-c86b129c676c",
+    "InformationEntryId": "682561e1-29db-5332-974b-cf38327a859d",
+    "Title": "DSP, Basic Supplementary Welfare Allowance",
+    "Url": "https://www.gov.ie/en/department-of-social-protection/services/basic-supplementary-welfare-allowance/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "e8c9274e-5e6d-5410-a347-2e84f0661f74",
+    "InformationEntryId": "682561e1-29db-5332-974b-cf38327a859d",
+    "Title": "DSP, Additional Needs Payment",
+    "Url": "https://www.gov.ie/en/service/80b24c-exceptional-needs-payments-swa/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "3ae64949-765b-5265-9fd3-ccd31963c84f",
+    "InformationEntryId": "682561e1-29db-5332-974b-cf38327a859d",
+    "Title": "DSP, Jobseeker's Allowance",
+    "Url": "https://www.gov.ie/en/department-of-social-protection/services/jobseekers-allowance/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "3e679850-7d2f-5bb4-87e2-5ec0b5ddf2e5",
+    "InformationEntryId": "682561e1-29db-5332-974b-cf38327a859d",
+    "Title": "DSP, Child Benefit",
+    "Url": "https://www.gov.ie/en/department-of-social-protection/services/child-benefit/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "59dc667b-f9d9-5239-ab8e-345f3d378a06",
+    "InformationEntryId": "682561e1-29db-5332-974b-cf38327a859d",
+    "Title": "DSP, Operational Guidelines: Child Benefit",
+    "Url": "https://www.gov.ie/en/department-of-social-protection/publications/operational-guidelines-child-benefit/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "76da03d8-5958-542b-a28d-4432c1204fce",
+    "InformationEntryId": "682561e1-29db-5332-974b-cf38327a859d",
+    "Title": "DSP, Working Family Payment (WFP)",
+    "Url": "https://www.gov.ie/en/department-of-social-protection/services/working-family-payment-wfp/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "88a70360-6bf8-5d68-904a-3db655909dde",
+    "InformationEntryId": "682561e1-29db-5332-974b-cf38327a859d",
+    "Title": "DSP, How to access Community Welfare Services",
+    "Url": "https://www.gov.ie/en/department-of-social-protection/publications/how-to-access-community-welfare-services/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "41dbf61e-a32a-55e2-9043-0279991b0272",
+    "InformationEntryId": "682561e1-29db-5332-974b-cf38327a859d",
+    "Title": "DSP, Operational Guidelines: Payment-related issues",
+    "Url": "https://www.gov.ie/en/department-of-social-protection/publications/operational-guidelines-payment-related-issues/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "3115b1e9-b542-5af3-8cf2-fb3c789c8c19",
+    "InformationEntryId": "682561e1-29db-5332-974b-cf38327a859d",
+    "Title": "DSP, Operational Guidelines: Jobseeker's Allowance",
+    "Url": "https://www.gov.ie/en/department-of-social-protection/publications/operational-guidelines-jobseekers-allowance/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "0293b718-c923-58a5-8c65-a77cc94d07d1",
+    "InformationEntryId": "682561e1-29db-5332-974b-cf38327a859d",
+    "Title": "DSP, MyWelfare",
+    "Url": "https://www.gov.ie/en/department-of-social-protection/services/mywelfare/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "f32c6b68-e961-5f18-9fdd-6b542fd8af1a",
+    "InformationEntryId": "682561e1-29db-5332-974b-cf38327a859d",
+    "Title": "DSP, Get a Personal Public Service (PPS) Number",
+    "Url": "https://www.gov.ie/en/department-of-social-protection/services/get-a-personal-public-service-pps-number/",
+    "LastCheckedAt": "2026-11-10T00:00:00+00:00"
   }
 ]

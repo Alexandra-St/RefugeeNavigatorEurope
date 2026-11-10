@@ -121,6 +121,13 @@
         Query,
         CountrySlug,
         CategorySlug,
-        VerificationStatus.Verified.ToString(),
+        SearchStatusFilter,
         CultureInfo.CurrentUICulture.TwoLetterISOLanguageName);
+
+    private string? SearchStatusFilter => HostEnvironment.IsDevelopment()
+        && !string.IsNullOrWhiteSpace(CountrySlug)
+        && !CountryVisibility.GetVisibleCountries(Catalog, false).Any(country =>
+            string.Equals(country.Slug, CountrySlug, StringComparison.OrdinalIgnoreCase))
+                ? null
+                : VerificationStatus.Verified.ToString();
 }
