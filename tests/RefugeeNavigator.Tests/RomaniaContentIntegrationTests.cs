@@ -43,11 +43,11 @@ public sealed class RomaniaContentIntegrationTests
         var romania = Assert.Single(catalog.Countries, country => country.Slug == "romania");
         Assert.Equal(RomaniaId, romania.Id);
         Assert.Equal("Romania", romania.Name);
-        Assert.Equal(12, catalog.Countries.Count);
-        Assert.Equal(96, catalog.InformationEntries.Count);
-        Assert.Equal(288, catalog.InformationEntryTranslations.Count);
+        Assert.Equal(13, catalog.Countries.Count);
+        Assert.Equal(104, catalog.InformationEntries.Count);
+        Assert.Equal(312, catalog.InformationEntryTranslations.Count);
         Assert.Equal(285, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(3, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(27, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(entry => entry.CountryId == RomaniaId).ToArray();
@@ -73,7 +73,7 @@ public sealed class RomaniaContentIntegrationTests
         Assert.Contains(CountryVisibility.GetVisibleCountries(catalog, false), country => country.Slug == "romania");
         Assert.Contains(CountryVisibility.GetVisibleCountries(catalog, true), country => country.Slug == "romania");
         Assert.Equal(12, CountryVisibility.GetVisibleCountries(catalog, false).Count);
-        Assert.Equal(12, CountryVisibility.GetVisibleCountries(catalog, true).Count);
+        Assert.Equal(13, CountryVisibility.GetVisibleCountries(catalog, true).Count);
     }
 
     [Fact]
@@ -113,7 +113,7 @@ public sealed class RomaniaContentIntegrationTests
         var romaniaEntryIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(source => romaniaEntryIds.Contains(source.InformationEntryId)).ToArray();
         Assert.Equal(56, sources.Length);
-        Assert.Equal(793, catalog.OfficialSources.Count);
+        Assert.Equal(864, catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(source => source.Id).Distinct().Count());
         Assert.All(sources, source =>
         {
@@ -163,7 +163,7 @@ public sealed class RomaniaContentIntegrationTests
         var comparison = await new JsonComparisonFactProvider(path).LoadAsync(catalog);
         CountryComparisonTopicMap.Validate(catalog);
         Assert.Contains("romania", CountryComparisonTopicMap.SupportedCountrySlugs);
-        Assert.Equal(96, CountryComparisonTopicMap.All.SelectMany(topic => topic.EntryIds.Values).Distinct().Count());
+        Assert.Equal(104, CountryComparisonTopicMap.All.SelectMany(topic => topic.EntryIds.Values).Distinct().Count());
 
         var facts = comparison.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts)
             .Where(fact => fact.CountrySlug == "romania").ToArray();

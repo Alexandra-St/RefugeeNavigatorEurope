@@ -21,6 +21,52 @@ namespace RefugeeNavigator.Tests;
 
 public sealed class CountryVisibilityTests
 {
+
+    [Theory]
+    [InlineData("en")]
+    [InlineData("uk")]
+    [InlineData("ru")]
+    public async Task LithuaniaIsHiddenInProductionAndAvailableAsDevelopmentPreview(string language)
+    {
+        var catalog = await Catalog.Value;
+        var productionHome = await RenderAsync<Home>("Production", language);
+        Assert.DoesNotContain("href=\"/countries/lithuania\"", productionHome.Html);
+        var productionSearch = await RenderAsync<Search>("Production", language, "/search");
+        Assert.DoesNotContain("lithuania", SelectValues(productionSearch.Html, "country"));
+        var productionCompare = await RenderAsync<Compare>("Production", language, "/compare");
+        Assert.DoesNotContain("lithuania", SelectValues(productionCompare.Html, "country1"));
+        var hidden = await RenderAsync<CountryOverview>("Production", language, "/countries/lithuania",
+            new() { [nameof(CountryOverview.CountrySlug)] = "lithuania" });
+        Assert.True(hidden.NotFound);
+
+        var home = await RenderAsync<Home>("Development", language);
+        Assert.Contains("href=\"/countries/lithuania\"", home.Html);
+        var overview = await RenderAsync<CountryOverview>("Development", language, "/countries/lithuania",
+            new() { [nameof(CountryOverview.CountrySlug)] = "lithuania" });
+        Assert.False(overview.NotFound);
+        var category = await RenderAsync<Category>("Development", language, "/countries/lithuania/categories/temporary-protection",
+            new() { [nameof(Category.CountrySlug)] = "lithuania", [nameof(Category.CategorySlug)] = "temporary-protection" });
+        Assert.False(category.NotFound);
+        Assert.Contains("class=\"information-entry\"", category.Html);
+        var tpEntries = catalog.InformationEntries.Where(e => e.CountryId == catalog.Countries.Single(c => c.Slug == "lithuania").Id
+            && catalog.Categories.Single(c => c.Id == e.CategoryId).Slug == "temporary-protection").ToArray();
+        Assert.Equal(2, tpEntries.Length);
+        foreach (var entry in tpEntries)
+        {
+            var translation = Assert.Single(catalog.InformationEntryTranslations, t => t.InformationEntryId == entry.Id && t.LanguageCode == language);
+            Assert.Contains(translation.Title, category.Html);
+        }
+
+        var search = await RenderAsync<Search>("Development", language, "/search?country=lithuania");
+        Assert.Contains("value=\"lithuania\"", search.Html);
+        Assert.DoesNotContain("class=\"result-card\"", search.Html);
+        var compare = await RenderAsync<Compare>("Development", language,
+            "/compare?country1=lithuania&country2=denmark&category=temporary-protection");
+        Assert.Contains("value=\"lithuania\" selected", compare.Html);
+        Assert.Contains("class=\"draft-label\"", compare.Html);
+        Assert.Contains("class=\"draft-preview-notice\"", compare.Html);
+    }
+
     private static readonly string[] AcceptedCountries =
         ["denmark", "germany", "poland", "czechia", "spain", "sweden", "netherlands", "romania", "slovakia", "bulgaria", "austria", "italy"];
     private static readonly Lazy<Task<CatalogData>> Catalog = new(
@@ -139,7 +185,8 @@ public sealed class CountryVisibilityTests
     {
         var catalog = await Catalog.Value;
         var home = await RenderAsync<Home>("Development", language);
-        Assert.Equal(12, Regex.Matches(home.Html, "class=\"country-card\"").Count);
+        Assert.Equal(13, Regex.Matches(home.Html, "class=\"country-card\"").Count);
+        Assert.Contains("href=\"/countries/lithuania\"", home.Html);
         Assert.Contains("href=\"/countries/sweden\"", home.Html);
         Assert.Contains("href=\"/countries/romania\"", home.Html);
         var overview = await RenderAsync<CountryOverview>("Development", language, "/countries/sweden",

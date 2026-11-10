@@ -394,4 +394,6 @@
   <data name="Country.Austria.In" xml:space="preserve"><value>в Австрії</value></data>
   <data name="Country.Italy" xml:space="preserve"><value>Італія</value></data>
   <data name="Country.Italy.In" xml:space="preserve"><value>в Італії</value></data>
+  <data name="Country.Lithuania" xml:space="preserve"><value>Литва</value></data>
+  <data name="Country.Lithuania.In" xml:space="preserve"><value>у Литві</value></data>
 </root>

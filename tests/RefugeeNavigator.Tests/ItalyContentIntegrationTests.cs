@@ -76,11 +76,11 @@ public sealed class ItalyContentIntegrationTests
         var country = Assert.Single(catalog.Countries, item => item.Slug == "italy");
         Assert.Equal(CountryId, country.Id);
         Assert.Equal("Italy", country.Name);
-        Assert.Equal(12, catalog.Countries.Count);
-        Assert.Equal(96, catalog.InformationEntries.Count);
-        Assert.Equal(288, catalog.InformationEntryTranslations.Count);
+        Assert.Equal(13, catalog.Countries.Count);
+        Assert.Equal(104, catalog.InformationEntries.Count);
+        Assert.Equal(312, catalog.InformationEntryTranslations.Count);
         Assert.Equal(285, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(3, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(27, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == CountryId).ToArray();
@@ -114,7 +114,7 @@ public sealed class ItalyContentIntegrationTests
         Assert.Contains(production, item => item.Slug == "italy");
         Assert.Contains(development, item => item.Slug == "italy");
         Assert.Equal(12, production.Count);
-        Assert.Equal(12, development.Count);
+        Assert.Equal(13, development.Count);
     }
 
     [Fact]
@@ -126,7 +126,7 @@ public sealed class ItalyContentIntegrationTests
         var entryIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => entryIds.Contains(item.InformationEntryId)).ToArray();
         Assert.Equal(70, sources.Length);
-        Assert.Equal(793, catalog.OfficialSources.Count);
+        Assert.Equal(864, catalog.OfficialSources.Count);
         Assert.Equal(70, sources.Select(item => item.Id).Distinct().Count());
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         var sourceById = catalog.OfficialSources.ToDictionary(item => item.Id);
@@ -186,7 +186,7 @@ public sealed class ItalyContentIntegrationTests
         var comparison = await Facts.Value;
         CountryComparisonTopicMap.Validate(catalog);
         Assert.Contains("italy", CountryComparisonTopicMap.SupportedCountrySlugs);
-        Assert.Equal(96, CountryComparisonTopicMap.All.SelectMany(item => item.EntryIds.Values).Distinct().Count());
+        Assert.Equal(104, CountryComparisonTopicMap.All.SelectMany(item => item.EntryIds.Values).Distinct().Count());
         var expectedTopicArticles = new Dictionary<string, Guid>
         {
             ["Compare.Topic.TemporaryProtectionApplication"] = Articles["IT-TP-01"].Id,
@@ -200,17 +200,17 @@ public sealed class ItalyContentIntegrationTests
         };
         Assert.All(CountryComparisonTopicMap.All, topic =>
         {
-            Assert.Equal(12, topic.EntryIds.Count);
+            Assert.Equal(13, topic.EntryIds.Count);
             Assert.Equal(expectedTopicArticles[topic.ResourceKey], CountryComparisonTopicMap.EntryIdFor(topic, "italy"));
         });
 
         var allFacts = comparison.Topics.SelectMany(item => item.Aspects).SelectMany(item => item.Facts).ToArray();
         var italyFacts = allFacts.Where(item => item.CountrySlug == "italy").ToArray();
-        Assert.Equal(288, allFacts.Length);
-        Assert.Equal(281, allFacts.Count(item => item.IsAvailable));
+        Assert.Equal(312, allFacts.Length);
+        Assert.Equal(305, allFacts.Count(item => item.IsAvailable));
         Assert.Equal(7, allFacts.Count(item => !item.IsAvailable));
         Assert.Equal(283, allFacts.Count(item => item.Status == ComparisonFactStatus.Approved));
-        Assert.Equal(5, allFacts.Count(item => item.Status == ComparisonFactStatus.Draft));
+        Assert.Equal(29, allFacts.Count(item => item.Status == ComparisonFactStatus.Draft));
         Assert.Equal(24, italyFacts.Length);
         Assert.Equal(24, italyFacts.Count(item => item.Status == ComparisonFactStatus.Approved));
         Assert.All(italyFacts, item => Assert.True(item.IsAvailable));
@@ -236,11 +236,11 @@ public sealed class ItalyContentIntegrationTests
             Assert.All(fact.Values.Values, value => Assert.False(string.IsNullOrWhiteSpace(value)));
         });
 
-        Assert.Equal(12, catalog.Countries.Count);
-        Assert.Equal(96, catalog.InformationEntries.Count);
-        Assert.Equal(288, catalog.InformationEntryTranslations.Count);
+        Assert.Equal(13, catalog.Countries.Count);
+        Assert.Equal(104, catalog.InformationEntries.Count);
+        Assert.Equal(312, catalog.InformationEntryTranslations.Count);
         Assert.Equal(285, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(3, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(27, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
 
         var netherlandsEntries = catalog.InformationEntries.Where(item => item.CountryId == Guid.Parse("10000000-0000-0000-0000-000000000007"))
             .Select(item => item.Id).ToHashSet();
