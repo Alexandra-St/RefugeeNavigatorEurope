@@ -1,8 +1,8 @@
 # Finland v1 — Post-correction editorial review
 
-**Review date:** 11 November 2026  
-**Baseline:** `ad812580cdb01885d3593b006a5449de4a100aec`  
-**Content correction commit:** `798497b35c9c1a58dd2fe01c4966f7a841d241c1`  
+**Review date:** 11 November 2026
+**Baseline:** `ad812580cdb01885d3593b006a5449de4a100aec`
+**Content correction commit:** `798497b35c9c1a58dd2fe01c4966f7a841d241c1`
 **Scope:** All eight Finland v1 drafts, the initial Finland editorial review, the aggregate research readiness file and the eight corresponding focused research packages. France's post-correction review was consulted only for document structure. No external research was used; no draft content was changed.
 
 ## Recommendation
