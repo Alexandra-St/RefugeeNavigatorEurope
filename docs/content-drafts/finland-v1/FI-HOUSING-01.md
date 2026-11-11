@@ -1,0 +1,79 @@
+# FI-HOUSING-01 — Housing in Finland
+
+- Country: Finland
+- Category: `housing`
+- Article ID: `61b331e0-76bb-58f4-91e7-e5944ba77e31`
+- Research package: `docs/content-research/finland-batch-2026-11-11/housing/SOURCES_AND_CLAIMS.md`
+- Translation status: `NeedsReview` (EN / UK / RU)
+- Comparison aspects: `housing-initial, housing-private-rental, housing-financial-support`
+
+## EN
+
+Title: Housing in Finland
+
+Summary: Reception accommodation, private renting and what to do when reception services end.
+
+Content:
+
+If you need accommodation while applying for temporary protection, contact the reception centre assigned to you. It arranges reception accommodation where capacity is available; you cannot rely on a place in a chosen city or a particular apartment. A positive TP decision alone does not immediately end reception accommodation. Ask the centre how your individual service and accommodation end date is calculated. [[source:45f577c1-dcea-5ba8-836a-9ae09b16045a|Reception Act]] [[source:f54e2b14-c6f2-5995-8c6b-3f90c8393440|Migri reception-centre accommodation]] [[source:85d9daa4-fef0-5e7c-90d2-e05632281cd8|Reception-service duration]] [[source:6830e02f-92d4-54f2-a3b7-6bedaae4d38a|2026 Reception Act amendment]]
+
+You may live in private accommodation while remaining a reception client, but the reception system does not reimburse rent, deposit, electricity or water. Reception allowance is not rent subsidy. For a private lease, prefer a written agreement; a fixed-term lease must be written. The deposit and advance-rent rules changed on 1 October 2026, so check which rule applies to your lease date. A landlord may ask for a Finnish personal identity code, but the reviewed law does not establish it as a universal legal prerequisite. Home insurance is not generally compulsory by law, though a landlord may make it a lease condition. Discrimination based on origin/nationality is prohibited, while objective ability-to-pay checks may be used. [[source:70ceb378-7bca-5511-ad1e-ec0841db32bb|Private accommodation under reception]] [[source:e7e96b5a-d430-5c8c-b776-d55536fe6b57|Deposit rules]] [[source:c75631c7-d96f-56b9-a249-a5289d738718|Rent and advance rent]] [[source:39f3e43f-922d-5c15-a834-a61cf89db071|Identity and rental checklist]] [[source:a60a728a-8d92-5802-a6f1-d0f66d378e68|Non-Discrimination Act]] [[source:666206b7-da88-5d2b-b519-6fbbc59830e1|Banking and insurance guidance]]
+
+From 1 September 2026, reception services may end three months after you become eligible to apply for `kotikunta` (municipality of residence), even if you have not registered one. Get your individual end date and move-out instructions from the reception centre. No uniform extra move-out period or guaranteed replacement home was found. If you have nowhere to sleep, contact the wellbeing services county’s emergency social services; they can assess temporary urgent accommodation, not guarantee long-term housing. Kela housing allowance or rental-deposit help requires a separate application and decision. An application for municipal/state-subsidised housing does not guarantee allocation; Varke is the current national housing authority, replacing ARA. [[source:85d9daa4-fef0-5e7c-90d2-e05632281cd8|Three-month transition rule]] [[source:623cb0cd-a15b-54ff-ae05-e984cdae2926|Social Welfare Act emergency housing]] [[source:5ffd873e-3618-5f4d-a010-992c5b9ddf40|Kela Ukraine housing guidance]] [[source:cd54f852-6cf1-5d43-9729-fcedb6aa719d|Kela social-assistance expenses]] [[source:1991f1f3-0949-5f30-9b92-b8420d28e51b|Kela deposit assistance]]
+
+### Claim coverage and editorial exclusions
+
+This article covers assigned reception accommodation, private renting and the 2026 transition. Reception does not reimburse private rent/deposit/utilities; reception allowance is not rent support. The three-month clock starts from eligibility to apply for `kotikunta`, not actual registration. County temporary shelter is individually assessed and not long-term housing. Kela support and subsidised-housing allocation are not guaranteed.
+
+## UK
+
+Title: Житло у Фінляндії
+
+Summary: Проживання в центрі прийому, приватна оренда та дії після завершення послуг прийому.
+
+Content:
+
+Якщо вам потрібне житло під час подання заяви на тимчасовий захист, зверніться до призначеного вам центру прийому. Він організовує проживання за наявності місць; не можна розраховувати на конкретне місто чи квартиру. Саме позитивне рішення щодо TP не припиняє проживання в центрі негайно. Попросіть центр розрахувати вашу індивідуальну дату завершення послуг і проживання. [[source:45f577c1-dcea-5ba8-836a-9ae09b16045a|Закон про прийом]] [[source:f54e2b14-c6f2-5995-8c6b-3f90c8393440|Розміщення Migri у центрі прийому]] [[source:85d9daa4-fef0-5e7c-90d2-e05632281cd8|Тривалість послуг прийому]] [[source:6830e02f-92d4-54f2-a3b7-6bedaae4d38a|Поправка до Закону про прийом 2026 року]]
+
+Ви можете жити приватно й залишатися клієнтом системи прийому, але вона не відшкодовує оренду, заставу, електроенергію чи воду. Допомога на прийом не є субсидією на оренду. Для приватного житла бажано мати письмовий договір; строковий договір має бути письмовим. Правила застави й передоплати змінилися 1 жовтня 2026 року, тому перевірте норму для дати вашого договору. Орендодавець може попросити фінський особистий код, але перевірене законодавство не встановлює його як універсальну юридичну передумову. Страхування житла за законом зазвичай не обов’язкове, хоча його можуть передбачити договором. Заборонена дискримінація за походженням/національністю; водночас можуть перевіряти платоспроможність за об’єктивними критеріями. [[source:70ceb378-7bca-5511-ad1e-ec0841db32bb|Приватне проживання в системі прийому]] [[source:e7e96b5a-d430-5c8c-b776-d55536fe6b57|Правила застави]] [[source:c75631c7-d96f-56b9-a249-a5289d738718|Оренда й передоплата]] [[source:39f3e43f-922d-5c15-a834-a61cf89db071|Особистий код і оренда]] [[source:a60a728a-8d92-5802-a6f1-d0f66d378e68|Закон про недискримінацію]] [[source:666206b7-da88-5d2b-b519-6fbbc59830e1|Банки та страхування]]
+
+З 1 вересня 2026 року послуги прийому можуть завершитися через три місяці після набуття права подати заяву на `kotikunta` (муніципалітет проживання), навіть якщо ви його не зареєстрували. Отримайте від центру вашу дату завершення та інструкції щодо виїзду. Єдиного додаткового строку для виїзду чи гарантованого нового житла не встановлено. Якщо вам ніде переночувати, зверніться до екстреної соціальної служби wellbeing services county: вона може оцінити потребу в тимчасовому терміновому житлі, але не гарантує довгострокове помешкання. Допомога Kela на житло чи заставу потребує окремої заяви й рішення. Заява на муніципальне/державне субсидоване житло не гарантує його отримання; національним органом є Varke замість ARA. [[source:85d9daa4-fef0-5e7c-90d2-e05632281cd8|Правило тримісячного переходу]] [[source:623cb0cd-a15b-54ff-ae05-e984cdae2926|Тимчасове житло за законом про соціальне забезпечення]] [[source:5ffd873e-3618-5f4d-a010-992c5b9ddf40|Інструкції Kela для українців щодо житла]] [[source:cd54f852-6cf1-5d43-9729-fcedb6aa719d|Витрати соціальної допомоги Kela]] [[source:1991f1f3-0949-5f30-9b92-b8420d28e51b|Допомога Kela на заставу]]
+
+### Claim coverage and editorial exclusions
+
+Стаття описує місце в центрі прийому, приватну оренду та перехід 2026 року. Система прийому не компенсує приватну оренду/заставу/комунальні послуги; допомога на прийом не є субсидією. Тримісячний строк відраховується від права подати на `kotikunta`, а не від фактичної реєстрації. Тимчасове житло від соціальної служби оцінюється індивідуально й не є довгостроковою гарантією. Допомога Kela та отримання субсидованого житла не гарантовані.
+
+## RU
+
+Title: Жильё в Финляндии
+
+Summary: Проживание в центре приёма, частная аренда и действия после окончания услуг приёма.
+
+Content:
+
+Если вам нужно жильё во время подачи заявления на временную защиту, обратитесь в назначенный вам центр приёма. Он организует размещение при наличии мест; нельзя рассчитывать на конкретный город или квартиру. Само положительное решение по TP не прекращает проживание в центре немедленно. Попросите центр рассчитать вашу индивидуальную дату окончания услуг и проживания. [[source:45f577c1-dcea-5ba8-836a-9ae09b16045a|Закон о приёме]] [[source:f54e2b14-c6f2-5995-8c6b-3f90c8393440|Размещение Migri в центре приёма]] [[source:85d9daa4-fef0-5e7c-90d2-e05632281cd8|Срок услуг приёма]] [[source:6830e02f-92d4-54f2-a3b7-6bedaae4d38a|Поправка к Закону о приёме 2026 года]]
+
+Вы можете жить в частном жилье и оставаться клиентом системы приёма, но она не возмещает аренду, залог, электричество или воду. Помощь на приёме не является субсидией на аренду. Для частного жилья предпочтителен письменный договор; срочный договор должен быть письменным. Правила залога и предоплаты изменились 1 октября 2026 года, поэтому проверьте норму для даты вашего договора. Арендодатель может запросить финский личный код, но изученное законодательство не устанавливает его как универсальное юридическое условие. Страхование жилья обычно не обязательно по закону, хотя арендодатель может включить его в договор. Дискриминация по происхождению/национальности запрещена, при этом объективная проверка платёжеспособности допустима. [[source:70ceb378-7bca-5511-ad1e-ec0841db32bb|Частное проживание в системе приёма]] [[source:e7e96b5a-d430-5c8c-b776-d55536fe6b57|Правила залога]] [[source:c75631c7-d96f-56b9-a249-a5289d738718|Аренда и предоплата]] [[source:39f3e43f-922d-5c15-a834-a61cf89db071|Личный код и аренда]] [[source:a60a728a-8d92-5802-a6f1-d0f66d378e68|Закон о недискриминации]] [[source:666206b7-da88-5d2b-b519-6fbbc59830e1|Банки и страхование]]
+
+С 1 сентября 2026 года услуги приёма могут завершиться через три месяца после возникновения права подать заявление на `kotikunta` (муниципалитет проживания), даже если вы его не зарегистрировали. Получите в центре свою дату окончания и инструкции по выезду. Единый дополнительный срок выезда или гарантированное новое жильё не установлены. Если вам негде ночевать, обратитесь в экстренную социальную службу wellbeing services county: она может оценить необходимость временного срочного жилья, но не гарантирует долгосрочное проживание. Помощь Kela на жильё или залог требует отдельного заявления и решения. Заявление на муниципальное/государственное субсидируемое жильё не гарантирует его предоставление; национальный орган — Varke вместо ARA. [[source:85d9daa4-fef0-5e7c-90d2-e05632281cd8|Правило трёхмесячного перехода]] [[source:623cb0cd-a15b-54ff-ae05-e984cdae2926|Временное жильё по Закону о социальном обеспечении]] [[source:5ffd873e-3618-5f4d-a010-992c5b9ddf40|Инструкции Kela по жилью для украинцев]] [[source:cd54f852-6cf1-5d43-9729-fcedb6aa719d|Расходы социальной помощи Kela]] [[source:1991f1f3-0949-5f30-9b92-b8420d28e51b|Помощь Kela на залог]]
+
+### Claim coverage and editorial exclusions
+
+Статья описывает место в центре приёма, частную аренду и переход 2026 года. Система приёма не возмещает частную аренду/залог/коммунальные услуги; помощь на приёме не является субсидией. Трёхмесячный срок отсчитывается от права подать на `kotikunta`, а не от регистрации. Временное жильё от соцслужбы оценивается индивидуально и не является долгосрочной гарантией. Помощь Kela и получение субсидируемого жилья не гарантированы.
+
+## Editorial source set
+
+- `FI-HOUSING-01-S01` → `45f577c1-dcea-5ba8-836a-9ae09b16045a` — Finlex, Reception Act 746/2011, current consolidated Finnish text (research source FI-HOUSING-S01; [official source](https://www.finlex.fi/fi/lainsaadanto/2011/746))
+- `FI-HOUSING-01-S02` → `f54e2b14-c6f2-5995-8c6b-3f90c8393440` — Migri, “After arrival” (research source FI-HOUSING-S02; [official source](https://migri.fi/en/after-arrival))
+- `FI-HOUSING-01-S03` → `70ceb378-7bca-5511-ad1e-ec0841db32bb` — Migri, “Staying in private accommodation” / “Accommodation” (research source FI-HOUSING-S04; [official source](https://migri.fi/en/living-in-a-reception-centre))
+- `FI-HOUSING-01-S04` → `85d9daa4-fef0-5e7c-90d2-e05632281cd8` — Migri, “Duration and reduction of reception services” (research source FI-HOUSING-S06; [official source](https://migri.fi/en/duration-and-reduction-of-reception-services))
+- `FI-HOUSING-01-S05` → `6830e02f-92d4-54f2-a3b7-6bedaae4d38a` — Finlex, Act amending Reception Act 481/2026 (research source FI-HOUSING-S07; [official source](https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2026/481))
+- `FI-HOUSING-01-S06` → `623cb0cd-a15b-54ff-ae05-e984cdae2926` — Finlex, Social Welfare Act 1301/2014, current consolidated text (research source FI-HOUSING-S09; [official source](https://www.finlex.fi/en/legislation/2014/1301))
+- `FI-HOUSING-01-S07` → `5ffd873e-3618-5f4d-a010-992c5b9ddf40` — Kela, “Kela benefits for those who have fled the war in Ukraine” (research source FI-HOUSING-S11; [official source](https://www.kela.fi/how-the-war-in-ukraine-affects-the-benefits-available-from-kela))
+- `FI-HOUSING-01-S08` → `cd54f852-6cf1-5d43-9729-fcedb6aa719d` — Kela, “For what types of expenses can you get social assistance?” (research source FI-HOUSING-S15; [official source](https://www.kela.fi/social-assistance-for-what-expenses))
+- `FI-HOUSING-01-S09` → `1991f1f3-0949-5f30-9b92-b8420d28e51b` — Kela, “Other supporting documents” / social assistance (research source FI-HOUSING-S16; [official source](https://www.kela.fi/social-assistance-supporting-documents))
+- `FI-HOUSING-01-S10` → `e7e96b5a-d430-5c8c-b776-d55536fe6b57` — Finlex, Act on Residential Leases 481/1995, as amended (research source FI-HOUSING-S22; [official source](https://www.finlex.fi/en/legislation/1995/481))
+- `FI-HOUSING-01-S11` → `c75631c7-d96f-56b9-a249-a5289d738718` — Finnish Competition and Consumer Authority, “Paying the rent and rent raise” (research source FI-HOUSING-S25; [official source](https://www.kkv.fi/en/consumer-affairs/housing/rental-apartments/paying-the-rent-and-rent-raise/))
+- `FI-HOUSING-01-S12` → `39f3e43f-922d-5c15-a834-a61cf89db071` — Suomi.fi, “Checklist — Work in Finland” (research source FI-HOUSING-S28; [official source](https://www.suomi.fi/guides/work-in-finland/checklist))
+- `FI-HOUSING-01-S13` → `a60a728a-8d92-5802-a6f1-d0f66d378e68` — Finlex, Non-Discrimination Act 1325/2014, current consolidated text (research source FI-HOUSING-S29; [official source](https://www.finlex.fi/en/legislation/2014/1325))
+- `FI-HOUSING-01-S14` → `666206b7-da88-5d2b-b519-6fbbc59830e1` — Suomi.fi, “Advice on banking and insurance matters” (research source FI-HOUSING-S30; [official source](https://www.suomi.fi/citizen/rights-and-participation-in-society/welcome-to-adulthood/guide/managing-your-finances/advice-on-banking-and-insurance))

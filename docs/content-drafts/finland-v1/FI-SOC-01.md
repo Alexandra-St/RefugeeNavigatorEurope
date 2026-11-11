@@ -1,0 +1,87 @@
+# FI-SOC-01 — Social assistance and family benefits in Finland
+
+- Country: Finland
+- Category: `social-assistance`
+- Article ID: `51691974-1c20-5b25-9572-66624984a52f`
+- Research package: `docs/content-research/finland-batch-2026-11-11/social-assistance/SOURCES_AND_CLAIMS.md`
+- Translation status: `NeedsReview` (EN / UK / RU)
+- Comparison aspects: `social-subsistence, social-application, social-child-benefits`
+
+## EN
+
+Title: Social assistance and family benefits in Finland
+
+Summary: Reception allowance, Kela support, unemployment benefit and family payments are separate applications with separate rules.
+
+Content:
+
+While you are a reception-services client, apply for reception allowance through your reception centre. The centre assesses your household’s immediate needs and income/resources. Migri publishes 2026 rates by household type and whether meals are provided; your individual amount may differ. Wages and available resources can affect the assessment, but a job does not automatically end every award. Private rent is not reimbursed, and supplementary reception allowance for necessary special expenses is individually assessed. [[source:b81175f1-eb6f-5e6a-a1af-db122bd8fa6a|Migri reception allowance]]
+
+From 1 September 2026, reception services can end at most three months after you become eligible to apply for `kotikunta`, even if you have not actually registered one. Ask the centre for your individual end date. After reception ends with `kotikunta`, you may apply to Kela for basic social assistance if income, assets and other benefits do not cover necessary costs; Kela makes a separate decision. Without `kotikunta`, the reviewed national guidance does not establish a regular recurring support route. Anyone in Finland can seek urgent help for essential subsistence and care from Kela and urgent social services/emergency lodging from the wellbeing services county. This is an assessed emergency route, not a guaranteed monthly payment. [[source:a9734191-6060-5223-96b6-8acac2459063|Three-month transition rule]] [[source:f3fff495-e76e-5760-9381-1c6012124292|Kela eligibility and urgent support]] [[source:54aeabdc-7ce2-56a9-b414-42acb9a18583|Kela guidance for people from Ukraine]] [[source:8a039a93-38cb-550d-a584-3632043c859b|Social Assistance Act]] [[source:893de843-3cc2-5321-b43f-eea77dad270f|Social Welfare Act]]
+
+If unemployed, register with the local employment authority and apply separately to Kela or an unemployment fund. Since 1 May 2026 Kela’s `yleistuki` replaced its labour market subsidy and basic unemployment allowance. TP status alone does not guarantee it; current rules impose a work-condition boundary for relevant temporary-permit holders. Registration, the authority’s labour-policy statement and Kela/fund payment decision are distinct. Kela also offers basic social assistance through online, paper and service-point routes; ask it about alternatives if you cannot use e-identification. [[source:106b820f-90b4-5b37-8789-2b592084ff1b|General social security benefit]] [[source:10fd09f6-6334-525e-8f05-788b37a71db3|TP holder unemployment conditions]] [[source:71f31cc7-a8ce-507f-8a9e-6590fbd85ef8|Kela jobseeker and payment steps]] [[source:34bf1e04-5824-5d04-a945-c6aa92e9a5f0|Unemployment funds]] [[source:43e9bd3e-ac6f-55e3-b329-aeba4d0c3d2b|Kela application channels]]
+
+Child benefit and other family benefits are not automatic from TP or `kotikunta`. Kela describes a TP child-benefit application route after at least one year in Finland, but its application form is dated and each case needs a decision; a child living outside Finland is not established by the reviewed TP guidance. Parental allowance and child home care allowance have separate conditions. The announced three-year residence rule for child home care allowance starts in 2027, not 2026. Housing allowance is another separate Kela benefit. [[source:9ce83adb-45b3-5399-99e5-452e5e5f9edd|Child benefit rules]] [[source:d5bed9b1-7eb7-5223-a1d1-c56b705c712e|TP child-benefit form]] [[source:6343a83f-5bb6-5569-9636-c1c3ac175675|Parental allowance]] [[source:6f00998a-e0b4-5aa5-ae87-999b8401047e|Child home care allowance and 2027 change]] [[source:3185add2-bec7-5bce-bb43-68d04894928f|Housing allowance]]
+
+### Claim coverage and editorial exclusions
+
+This article distinguishes reception allowance, Kela basic assistance, county urgent support, current `yleistuki`, housing allowance and family benefits. No automatic Kela handoff or regular no-`kotikunta` payment is promised. Income/resources and jobseeking duties can affect decisions. TP child-benefit guidance is partly based on a dated form; child-abroad and family-benefit cases require individual Kela confirmation. The 2027 child-home-care residence rule is not current in 2026.
+
+## UK
+
+Title: Соціальна допомога та сімейні виплати у Фінляндії
+
+Summary: Допомога на прийом, виплати Kela, допомога з безробіття й сімейні виплати — окремі програми з окремими заявами та умовами.
+
+Content:
+
+Поки ви є клієнтом послуг прийому, подавайте заяву на допомогу на прийом через свій центр. Центр оцінює невідкладні потреби домогосподарства, доходи й ресурси. Migri публікує ставки на 2026 рік за типом домогосподарства та наявністю харчування; індивідуальна сума може відрізнятися. Зарплата й доступні ресурси можуть вплинути на оцінку, але робота не припиняє автоматично кожну виплату. Приватна оренда не компенсується, а додаткова допомога на необхідні особливі витрати оцінюється індивідуально. [[source:b81175f1-eb6f-5e6a-a1af-db122bd8fa6a|Допомога на прийом Migri]]
+
+З 1 вересня 2026 року послуги прийому можуть завершитися не пізніше ніж через три місяці після набуття права подати заяву на `kotikunta`, навіть якщо ви його фактично не зареєстрували. Запитайте в центру вашу індивідуальну дату завершення. Після завершення прийому за наявності `kotikunta` можна подати до Kela заяву на базову соціальну допомогу, якщо доходів, майна й інших виплат недостатньо для необхідних витрат; Kela ухвалює окреме рішення. Без `kotikunta` перевірені загальнонаціональні інструкції не встановлюють регулярної періодичної виплати. Будь-хто у Фінляндії може звернутися по термінову допомогу для необхідного існування й догляду до Kela, а по екстрені соціальні послуги/тимчасове житло — до wellbeing services county. Це оцінювана термінова допомога, а не гарантована щомісячна виплата. [[source:a9734191-6060-5223-96b6-8acac2459063|Правило тримісячного переходу]] [[source:f3fff495-e76e-5760-9381-1c6012124292|Умови Kela й термінова допомога]] [[source:54aeabdc-7ce2-56a9-b414-42acb9a18583|Інструкції Kela для людей з України]] [[source:8a039a93-38cb-550d-a584-3632043c859b|Закон про соціальну допомогу]] [[source:893de843-3cc2-5321-b43f-eea77dad270f|Закон про соціальне забезпечення]]
+
+Якщо ви безробітні, зареєструйтеся в місцевому органі зайнятості й окремо подайте заяву до Kela або каси безробіття. З 1 травня 2026 року виплата Kela `yleistuki` замінила її допомогу на ринку праці й базову допомогу з безробіття. Сам статус TP не гарантує її: чинні правила встановлюють вимогу щодо трудового стажу для відповідних власників тимчасового дозволу. Реєстрація, висновок органу зайнятості та рішення про виплату Kela/каси — різні етапи. Kela приймає заяви на базову соціальну допомогу онлайн, поштою та у сервісному пункті; запитайте про альтернативу, якщо немає електронної ідентифікації. [[source:106b820f-90b4-5b37-8789-2b592084ff1b|Загальна допомога соціального забезпечення]] [[source:10fd09f6-6334-525e-8f05-788b37a71db3|Умови для власників TP]] [[source:71f31cc7-a8ce-507f-8a9e-6590fbd85ef8|Етапи реєстрації та виплати Kela]] [[source:34bf1e04-5824-5d04-a945-c6aa92e9a5f0|Каси безробіття]] [[source:43e9bd3e-ac6f-55e3-b329-aeba4d0c3d2b|Канали подання до Kela]]
+
+Допомога на дитину та інші сімейні виплати не надаються автоматично через TP чи `kotikunta`. Kela описує маршрут подання на дитячу допомогу для сім’ї з TP після щонайменше року у Фінляндії, але форма заяви датована, а кожну справу вирішують окремо; право для дитини за межами країни не встановлено перевіреними TP-інструкціями. Допомога батькам і допомога з догляду за дитиною вдома мають окремі умови. Оголошене правило про три роки проживання для виплати за догляд удома починається у 2027 році, а не у 2026. Допомога на житло — ще одна окрема виплата Kela. [[source:9ce83adb-45b3-5399-99e5-452e5e5f9edd|Правила дитячої допомоги]] [[source:d5bed9b1-7eb7-5223-a1d1-c56b705c712e|Форма для TP щодо дитячої допомоги]] [[source:6343a83f-5bb6-5569-9636-c1c3ac175675|Допомога батькам]] [[source:6f00998a-e0b4-5aa5-ae87-999b8401047e|Допомога з догляду вдома й зміна 2027 року]] [[source:3185add2-bec7-5bce-bb43-68d04894928f|Допомога на житло]]
+
+### Claim coverage and editorial exclusions
+
+Стаття розрізняє допомогу на прийом, базову допомогу Kela, термінову допомогу округу, чинну `yleistuki`, допомогу на житло та сімейні виплати. Автоматичний перехід до Kela чи регулярна виплата без `kotikunta` не обіцяються. Доходи/ресурси та вимоги пошуку роботи можуть впливати на рішення. Інструкції про TP-дитячу допомогу частково ґрунтуються на датованій формі; випадки з дитиною за кордоном та інші сімейні виплати слід уточнити в Kela. Правило 2027 року не діє у 2026.
+
+## RU
+
+Title: Социальная помощь и семейные пособия в Финляндии
+
+Summary: Пособие на приёме, выплаты Kela, помощь по безработице и семейные пособия — отдельные программы с разными заявлениями и условиями.
+
+Content:
+
+Пока вы являетесь клиентом услуг приёма, подавайте заявление на пособие через свой центр. Центр оценивает неотложные потребности домохозяйства, доходы и средства. Migri публикует ставки на 2026 год в зависимости от состава семьи и предоставления питания; личная сумма может отличаться. Зарплата и доступные средства могут повлиять на оценку, но работа не прекращает автоматически каждую выплату. Частная аренда не компенсируется, а дополнительное пособие на необходимые особые расходы оценивается индивидуально. [[source:b81175f1-eb6f-5e6a-a1af-db122bd8fa6a|Пособие на приёме Migri]]
+
+С 1 сентября 2026 года услуги приёма могут завершиться не позднее чем через три месяца после возникновения права подать заявление на `kotikunta`, даже если вы фактически его не зарегистрировали. Уточните в центре свою индивидуальную дату окончания. После окончания приёма при наличии `kotikunta` можно подать в Kela заявление на базовую социальную помощь, если доходов, имущества и других пособий недостаточно для необходимых расходов; Kela выносит отдельное решение. Без `kotikunta` изученные национальные инструкции не устанавливают регулярную периодическую выплату. Любой находящийся в Финляндии может обратиться за срочной помощью для необходимого существования и ухода в Kela, а за экстренными социальными услугами/временным жильём — в wellbeing services county. Это оцениваемая срочная помощь, а не гарантированная ежемесячная выплата. [[source:a9734191-6060-5223-96b6-8acac2459063|Правило трёхмесячного перехода]] [[source:f3fff495-e76e-5760-9381-1c6012124292|Условия Kela и срочная помощь]] [[source:54aeabdc-7ce2-56a9-b414-42acb9a18583|Инструкции Kela для людей из Украины]] [[source:8a039a93-38cb-550d-a584-3632043c859b|Закон о социальной помощи]] [[source:893de843-3cc2-5321-b43f-eea77dad270f|Закон о социальном обеспечении]]
+
+Если вы безработны, зарегистрируйтесь в местном органе занятости и отдельно подайте заявление в Kela или кассу безработицы. С 1 мая 2026 года выплата Kela `yleistuki` заменила её пособие на рынке труда и базовое пособие по безработице. Сам статус TP не гарантирует её: действующие правила предусматривают требование к трудовому стажу для соответствующих обладателей временного разрешения. Регистрация, заключение органа занятости и решение о выплате Kela/кассы — разные этапы. Kela принимает заявления на базовую социальную помощь онлайн, по почте и в сервисном пункте; уточните альтернативу, если нет электронной идентификации. [[source:106b820f-90b4-5b37-8789-2b592084ff1b|Общее пособие социального обеспечения]] [[source:10fd09f6-6334-525e-8f05-788b37a71db3|Условия для обладателей TP]] [[source:71f31cc7-a8ce-507f-8a9e-6590fbd85ef8|Этапы регистрации и выплаты Kela]] [[source:34bf1e04-5824-5d04-a945-c6aa92e9a5f0|Кассы безработицы]] [[source:43e9bd3e-ac6f-55e3-b329-aeba4d0c3d2b|Каналы подачи в Kela]]
+
+Детское и другие семейные пособия не предоставляются автоматически из-за TP или `kotikunta`. Kela описывает маршрут подачи на детское пособие для семьи с TP после как минимум года в Финляндии, но форма заявления датирована, а каждый случай решается отдельно; право для ребёнка за пределами Финляндии изученными TP-инструкциями не установлено. Родительское пособие и пособие по уходу за ребёнком дома имеют отдельные условия. Объявленное требование трёх лет проживания для выплаты по уходу дома вступает в силу в 2027 году, а не в 2026. Жилищное пособие Kela — отдельная выплата. [[source:9ce83adb-45b3-5399-99e5-452e5e5f9edd|Правила детского пособия]] [[source:d5bed9b1-7eb7-5223-a1d1-c56b705c712e|Форма TP для детского пособия]] [[source:6343a83f-5bb6-5569-9636-c1c3ac175675|Родительское пособие]] [[source:6f00998a-e0b4-5aa5-ae87-999b8401047e|Пособие по уходу дома и изменение 2027 года]] [[source:3185add2-bec7-5bce-bb43-68d04894928f|Жилищное пособие]]
+
+### Claim coverage and editorial exclusions
+
+Статья различает пособие на приёме, базовую помощь Kela, срочную помощь округа, текущее `yleistuki`, жилищное и семейные пособия. Автоматический переход к Kela или регулярная выплата без `kotikunta` не обещаются. Доходы/средства и требования поиска работы влияют на решения. Информация TP о детском пособии частично основана на датированной форме; случаи с ребёнком за границей и другие семейные пособия требуют уточнения в Kela. Правило 2027 года не действует в 2026.
+
+## Editorial source set
+
+- `FI-SOC-01-S01` → `b81175f1-eb6f-5e6a-a1af-db122bd8fa6a` — Migri, “Reception allowance” (research source FI-SOC-S01; [official source](https://migri.fi/en/reception-allowance1))
+- `FI-SOC-01-S02` → `a9734191-6060-5223-96b6-8acac2459063` — Finlex, Act 481/2026 amending the Reception Act (research source FI-SOC-S03; [official source](https://www.finlex.fi/fi/lainsaadanto/saadoskokoelma/2026/481))
+- `FI-SOC-01-S03` → `f3fff495-e76e-5760-9381-1c6012124292` — Kela, “Can you get social assistance?” (research source FI-SOC-S08; [official source](https://www.kela.fi/social-assistance-can-you-get-it))
+- `FI-SOC-01-S04` → `54aeabdc-7ce2-56a9-b414-42acb9a18583` — Kela, “How the war in Ukraine affects the benefits available from Kela” (research source FI-SOC-S09; [official source](https://www.kela.fi/how-the-war-in-ukraine-affects-the-benefits-available-from-kela))
+- `FI-SOC-01-S05` → `8a039a93-38cb-550d-a584-3632043c859b` — Finlex, Social Assistance Act 1412/1997 (research source FI-SOC-S11; [official source](https://www.finlex.fi/en/legislation/1997/1412))
+- `FI-SOC-01-S06` → `43e9bd3e-ac6f-55e3-b329-aeba4d0c3d2b` — Kela, “How to apply for social assistance” (research source FI-SOC-S12; [official source](https://www.kela.fi/social-assistance-how-to-apply))
+- `FI-SOC-01-S07` → `893de843-3cc2-5321-b43f-eea77dad270f` — Finlex, Social Welfare Act 1301/2014 (research source FI-SOC-S15; [official source](https://www.finlex.fi/en/legislation/2014/1301))
+- `FI-SOC-01-S08` → `106b820f-90b4-5b37-8789-2b592084ff1b` — Kela, “General social security benefit during unemployment” (research source FI-SOC-S16; [official source](https://www.kela.fi/unemployment-general-social-security-benefit))
+- `FI-SOC-01-S09` → `10fd09f6-6334-525e-8f05-788b37a71db3` — Kela, “Questions and answers about general social security benefit” (research source FI-SOC-S17; [official source](https://www.kela.fi/news/frequently-asked-questions-about-the-general-social-security-benefit))
+- `FI-SOC-01-S10` → `71f31cc7-a8ce-507f-8a9e-6590fbd85ef8` — Kela, “If you become unemployed” (research source FI-SOC-S19; [official source](https://www.kela.fi/if-you-become-unemployed))
+- `FI-SOC-01-S11` → `34bf1e04-5824-5d04-a945-c6aa92e9a5f0` — Kela, “Unemployment funds” (research source FI-SOC-S21; [official source](https://www.kela.fi/unemployment-funds))
+- `FI-SOC-01-S12` → `3185add2-bec7-5bce-bb43-68d04894928f` — Kela, “General housing allowance” (research source FI-SOC-S22; [official source](https://www.kela.fi/general-housing-allowance))
+- `FI-SOC-01-S13` → `9ce83adb-45b3-5399-99e5-452e5e5f9edd` — Kela, “Child benefit” (research source FI-SOC-S23; [official source](https://www.kela.fi/child-benefit))
+- `FI-SOC-01-S14` → `d5bed9b1-7eb7-5223-a1d1-c56b705c712e` — Kela, Ukraine-specific form UA1e, “Application – Kela card and child benefit” (research source FI-SOC-S24; [official source](https://www.kela.fi/benefit-forms/UA1e.pdf))
+- `FI-SOC-01-S15` → `6343a83f-5bb6-5569-9636-c1c3ac175675` — Kela, “Parental allowance and partial parental allowance” (research source FI-SOC-S25; [official source](https://www.kela.fi/on-parental-leave))
+- `FI-SOC-01-S16` → `6f00998a-e0b4-5aa5-ae87-999b8401047e` — Kela, “Child home care allowance” (research source FI-SOC-S26; [official source](https://www.kela.fi/child-home-care-allowance))
