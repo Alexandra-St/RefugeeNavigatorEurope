@@ -58,11 +58,11 @@ public sealed class FranceContentIntegrationTests
         var country = Assert.Single(catalog.Countries, item => item.Slug == "france");
         Assert.Equal(CountryId, country.Id);
         Assert.Equal("France", country.Name);
-        Assert.Equal(15, catalog.Countries.Count);
-        Assert.Equal(115, catalog.InformationEntries.Count);
-        Assert.Equal(345, catalog.InformationEntryTranslations.Count);
+        Assert.Equal(16, catalog.Countries.Count);
+        Assert.Equal(123, catalog.InformationEntries.Count);
+        Assert.Equal(369, catalog.InformationEntryTranslations.Count);
         Assert.Equal(309, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(36, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(60, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == CountryId).ToArray();
@@ -106,7 +106,7 @@ public sealed class FranceContentIntegrationTests
     public async Task FranceTranslationsAndEightyArticleOwnedSourcesMatchDraftsExactly()
     {
         var catalog = await Catalog.Value;
-        Assert.Equal(1014, catalog.OfficialSources.Count);
+        Assert.Equal(1114, catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         var repositoryRoot = FindRepositoryRoot();
         var draftsRoot = Path.Combine(repositoryRoot, "docs", "content-drafts", "france-v1");
@@ -120,7 +120,7 @@ public sealed class FranceContentIntegrationTests
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
             Assert.Equal(new DateTimeOffset(2026, 11, 11, 0, 0, 0, TimeSpan.Zero), source.LastCheckedAt);
         });
-        Assert.All(catalog.OfficialSources.GroupBy(item => (item.InformationEntryId, item.Url.AbsoluteUri)), group => Assert.Single(group));
+        Assert.All(catalog.OfficialSources.GroupBy(item => (item.InformationEntryId, item.Title, item.Url.AbsoluteUri)), group => Assert.Single(group));
 
         var sourceById = catalog.OfficialSources.ToDictionary(item => item.Id);
         foreach (var (articleCode, expected) in Articles)
@@ -202,7 +202,7 @@ public sealed class FranceContentIntegrationTests
         Assert.DoesNotContain("france", SelectValues(productionCompare.Html, "country2"));
 
         var developmentHome = await RenderAsync<Home>("Development", language);
-        Assert.Equal(15, Regex.Matches(developmentHome.Html, "class=\"country-card\"").Count);
+        Assert.Equal(16, Regex.Matches(developmentHome.Html, "class=\"country-card\"").Count);
         Assert.Contains("href=\"/countries/france\"", developmentHome.Html);
         var developmentOverview = await RenderAsync<CountryOverview>("Development", language, "/countries/france",
             new() { [nameof(CountryOverview.CountrySlug)] = "france" });

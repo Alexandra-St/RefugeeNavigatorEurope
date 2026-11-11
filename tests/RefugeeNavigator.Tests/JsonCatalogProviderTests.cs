@@ -38,7 +38,8 @@ public class JsonCatalogProviderTests
                 (Guid.Parse("10000000-0000-0000-0000-000000000012"), "Italy", "italy"),
                 (Guid.Parse("10000000-0000-0000-0000-000000000013"), "Lithuania", "lithuania"),
                 (Guid.Parse("10000000-0000-0000-0000-000000000014"), "Ireland", "ireland"),
-                (Guid.Parse("10000000-0000-0000-0000-000000000015"), "France", "france")
+                (Guid.Parse("10000000-0000-0000-0000-000000000015"), "France", "france"),
+                (Guid.Parse("10000000-0000-0000-0000-000000000016"), "Finland", "finland")
             },
             catalog.Countries.Select(country => (country.Id, country.Name, country.Slug)));
         Assert.Equal(
