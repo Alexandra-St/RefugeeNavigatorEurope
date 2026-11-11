@@ -24,15 +24,23 @@ jobs:
         run: dotnet publish src/RefugeeNavigator.Web/RefugeeNavigator.Web.csproj --configuration Release --output "$RUNNER_TEMP/netherlands-visual-app"
       - name: Prepare synthetic Netherlands catalogs
         run: python3 .github/scripts/prepare-netherlands-visual-fixture.py "$RUNNER_TEMP/netherlands-visual-app/Data" "$RUNNER_TEMP/netherlands-visual-app/visual-fixture.json"
-      - name: Install filesystem-capable Playwright browser
+      - name: Install Playwright and locate system browser
         run: |
-          npm install --prefix "$RUNNER_TEMP/netherlands-playwright" --no-save playwright@1.64.1
-          "$RUNNER_TEMP/netherlands-playwright/node_modules/.bin/playwright" install --with-deps chromium
+          set -euo pipefail
+          npm install --prefix "$RUNNER_TEMP/netherlands-playwright" --no-save playwright-core@1.64.1
+          browser_path="$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || command -v chromium-browser || true)"
+          if [ -z "$browser_path" ]; then
+            echo "No system Chrome/Chromium executable found."
+            exit 1
+          fi
+          echo "PLAYWRIGHT_EXECUTABLE_PATH=$browser_path" >> "$GITHUB_ENV"
+          echo "Using browser: $browser_path"
+          "$browser_path" --version
       - name: Run Production visibility assertions and capture screenshots
         env:
           ASPNETCORE_ENVIRONMENT: Production
           PRIVATE_ALPHA_ACCESS_MODE: public
-          PLAYWRIGHT_PACKAGE: ${{ runner.temp }}/netherlands-playwright/node_modules/playwright
+          PLAYWRIGHT_PACKAGE: ${{ runner.temp }}/netherlands-playwright/node_modules/playwright-core
           APP_DIRECTORY: ${{ runner.temp }}/netherlands-visual-app
           VISUAL_FIXTURE_MANIFEST: ${{ runner.temp }}/netherlands-visual-app/visual-fixture.json
           VISUAL_OUTPUT_DIRECTORY: ${{ runner.temp }}/netherlands-visual-evidence

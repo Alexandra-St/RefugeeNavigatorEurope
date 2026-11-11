@@ -62,7 +62,11 @@ async function saveFullPage(page, name, viewport) {
 
 async function main() {
   fs.mkdirSync(outputDirectory, { recursive: true });
-  const browser = await chromium.launch({ headless: true });
+  const executablePath = process.env.PLAYWRIGHT_EXECUTABLE_PATH;
+  if (!executablePath) {
+    throw new Error('PLAYWRIGHT_EXECUTABLE_PATH is not set.');
+  }
+  const browser = await chromium.launch({ headless: true, executablePath });
   const records = [];
   try {
     for (const language of languages) {
