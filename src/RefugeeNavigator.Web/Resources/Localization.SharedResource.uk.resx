@@ -398,4 +398,6 @@
   <data name="Country.Lithuania.In" xml:space="preserve"><value>у Литві</value></data>
   <data name="Country.Ireland" xml:space="preserve"><value>Ірландія</value></data>
   <data name="Country.Ireland.In" xml:space="preserve"><value>в Ірландії</value></data>
+  <data name="Country.France" xml:space="preserve"><value>Франція</value></data>
+  <data name="Country.France.In" xml:space="preserve"><value>у Франції</value></data>
 </root>

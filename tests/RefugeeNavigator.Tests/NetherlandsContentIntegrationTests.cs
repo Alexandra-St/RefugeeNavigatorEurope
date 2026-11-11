@@ -121,7 +121,7 @@ public sealed class NetherlandsContentIntegrationTests
             ["spain"] = (Guid.Parse("10000000-0000-0000-0000-000000000005"), "Spain"),
             ["sweden"] = (Guid.Parse("10000000-0000-0000-0000-000000000006"), "Sweden")
         };
-        Assert.Equal(14, catalog.Countries.Count);
+        Assert.Equal(15, catalog.Countries.Count);
         foreach (var (slug, expected) in existingCountries)
         {
             var existing = Assert.Single(catalog.Countries, item => item.Slug == slug);
@@ -129,10 +129,10 @@ public sealed class NetherlandsContentIntegrationTests
             Assert.Equal(expected.Name, existing.Name);
         }
 
-        Assert.Equal(109, catalog.InformationEntries.Count);
-        Assert.Equal(327, catalog.InformationEntryTranslations.Count);
+        Assert.Equal(115, catalog.InformationEntries.Count);
+        Assert.Equal(345, catalog.InformationEntryTranslations.Count);
         Assert.Equal(309, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(18, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(36, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == NetherlandsId).ToArray();
@@ -286,7 +286,7 @@ public sealed class NetherlandsContentIntegrationTests
         var sources = catalog.OfficialSources.Where(item => entryIds.Contains(item.InformationEntryId)).ToArray();
 
         Assert.Equal(56, sources.Length);
-        Assert.Equal(934, catalog.OfficialSources.Count);
+        Assert.Equal(1014, catalog.OfficialSources.Count);
         Assert.Equal(42, sources.Select(item => item.Url.AbsoluteUri).Distinct(StringComparer.OrdinalIgnoreCase).Count());
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         Assert.All(sources, source =>

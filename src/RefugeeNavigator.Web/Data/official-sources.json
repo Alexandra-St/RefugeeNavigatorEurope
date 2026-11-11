@@ -6536,5 +6536,565 @@
     "Title": "DSP, Get a Personal Public Service (PPS) Number",
     "Url": "https://www.gov.ie/en/department-of-social-protection/services/get-a-personal-public-service-pps-number/",
     "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "04f61765-f6e7-5f22-87c0-60f6382fa42c",
+    "InformationEntryId": "d16ad009-3391-5e3b-80b2-5b0d348503d3",
+    "Title": "Ministry of the Interior, “Information à destination des personnes déplacées d'Ukraine et souhaitant demander une protection temporaire en France”",
+    "Url": "https://www.interieur.gouv.fr/actualites/grands-dossiers/situation-en-ukraine/information-a-destination-des-personnes-deplacees-dukraine-et-souhaitant-demander-protection",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "e2edcf2a-7726-564c-b2b7-39ed8f3c61e5",
+    "InformationEntryId": "d16ad009-3391-5e3b-80b2-5b0d348503d3",
+    "Title": "Légifrance, CESEDA Article R. 581-1",
+    "Url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042806002",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "0bd34fff-4661-54b4-a77b-558e7530f328",
+    "InformationEntryId": "d16ad009-3391-5e3b-80b2-5b0d348503d3",
+    "Title": "Légifrance, CESEDA Article R. 581-4",
+    "Url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045467881",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "44083afc-531a-52d2-be25-8f39a26a7087",
+    "InformationEntryId": "d16ad009-3391-5e3b-80b2-5b0d348503d3",
+    "Title": "Council of the European Union, Implementing Decision (EU) 2026/1912, consolidated text with Corrigendum C1",
+    "Url": "https://eur-lex.europa.eu/eli/dec_impl/2026/1912/2026-08-04/eng",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "da565478-4674-5985-8dc7-dc9cd31502f9",
+    "InformationEntryId": "d16ad009-3391-5e3b-80b2-5b0d348503d3",
+    "Title": "Préfecture d’Ille-et-Vilaine, “Ressortissants ukrainiens déplacés dans le cadre du conflit en Ukraine”",
+    "Url": "https://www.ille-et-vilaine.gouv.fr/Demarches/Ressortissants-etrangers-vos-demarches/Sejour/Autres-demarches/Demarches-pour-les-ressortissants-ukrainiens/Ressortissants-ukrainiens-deplaces-dans-le-cadre-du-conflit-en-Ukraine",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "44c2a53e-f0ab-5eb3-b167-016b7e89c86d",
+    "InformationEntryId": "d16ad009-3391-5e3b-80b2-5b0d348503d3",
+    "Title": "Préfecture de Seine-Saint-Denis, “Ukraine - Nouvelles modalités”",
+    "Url": "https://www.seine-saint-denis.gouv.fr/Actualites/Breves-Informations-Conseils/Ukraine-Nouvelles-modalites",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "bec70186-5af2-54e6-8ba3-2a4f8ce770c1",
+    "InformationEntryId": "d16ad009-3391-5e3b-80b2-5b0d348503d3",
+    "Title": "Préfecture des Alpes-Maritimes, “Protection temporaire : première demande et renouvellement”",
+    "Url": "https://www.alpes-maritimes.gouv.fr/Demarches/Espace-ressortissants-Ukrainiens/Protection-temporaire-premiere-demande-et-renouvellement",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "b2ddce19-bb59-5c68-8bd1-f5c4776194b4",
+    "InformationEntryId": "82179b12-c3bd-5bf1-be0a-374502fc0386",
+    "Title": "France Travail, “Offres d'emploi” / job-search help on France Travail",
+    "Url": "https://candidat.francetravail.fr/offres/recherche?offresPartenaires=true",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "f2adac91-b65e-506a-90bb-8a729f812fa3",
+    "InformationEntryId": "82179b12-c3bd-5bf1-be0a-374502fc0386",
+    "Title": "France Travail, “Des partenaires pour vous proposer plus d’offres d’emploi”",
+    "Url": "https://www.francetravail.fr/candidat/vos-services-en-ligne/des-partenaires-pour-vous-propos.html",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "c870153e-d6fd-5315-889c-4a5693524dce",
+    "InformationEntryId": "82179b12-c3bd-5bf1-be0a-374502fc0386",
+    "Title": "France Travail, “Comment postuler à une offre partenaire qui m'intéresse ?”",
+    "Url": "https://www.francetravail.fr/faq/candidat/ma-recherche-demploi/les-offres-demploi/postuler-a-unedes-offres/comment-postuler-a-une-offre-par.html",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "a0b9c516-4340-5373-89e2-9833bfac6385",
+    "InformationEntryId": "82179b12-c3bd-5bf1-be0a-374502fc0386",
+    "Title": "European Commission / EURES, “Help and support”",
+    "Url": "https://eures.europa.eu/eures-services/help-and-support_en",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "f7310b12-f2cf-5cff-bb39-887d87436cf1",
+    "InformationEntryId": "82179b12-c3bd-5bf1-be0a-374502fc0386",
+    "Title": "France Travail, “Je suis travailleur étranger : puis-je m’inscrire à France Travail ?”",
+    "Url": "https://www.francetravail.fr/candidat/mes-droits-aux-aides-et-allocati/a-chaque-situation-son-allocatio/quelle-est-ma-situation-personne/je-suis-travailleur-etranger--pu.html",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "1b5d164b-dda3-57f8-ab22-09eb8424d283",
+    "InformationEntryId": "82179b12-c3bd-5bf1-be0a-374502fc0386",
+    "Title": "France Travail, “Vous êtes déplacés ukrainiens, trouvez des informations ici”",
+    "Url": "https://www.francetravail.fr/international/mobilite-internationale/toutes-les-actus/a-garder/vous-etes-deplaces-ukrainiens-tr.html",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "a3d23582-5dd0-5ae8-ba1e-c7fb48e46e7a",
+    "InformationEntryId": "82179b12-c3bd-5bf1-be0a-374502fc0386",
+    "Title": "France Travail, “Premier entretien France Travail”",
+    "Url": "https://www.francetravail.fr/faq/candidat/ma-recherche-demploi/laccompagnement-par-le-reseau-fr/diagnostic/premier-entretien-france-travail.html",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "2b033f12-8f12-5d32-a767-66b34dbfaa08",
+    "InformationEntryId": "82179b12-c3bd-5bf1-be0a-374502fc0386",
+    "Title": "France Travail / Mes aides, “Ateliers-Conseils : Préparer sa candidature”",
+    "Url": "https://mes-aides.francetravail.fr/trouver-un-emploi/preparer-une-candidature/france-travail/ateliers-conseils-preparer-une-candidature-",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "7d86532f-1621-5249-a9c4-c4601c445f70",
+    "InformationEntryId": "82179b12-c3bd-5bf1-be0a-374502fc0386",
+    "Title": "France Travail, “L'Aide individuelle à la formation (AIF)”",
+    "Url": "https://www.francetravail.fr/candidat/en-formation/mes-aides-financieres/laide-individuelle-a-la-formatio.html",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "31156c8e-048f-5bc5-b106-eba23f4c8a62",
+    "InformationEntryId": "82179b12-c3bd-5bf1-be0a-374502fc0386",
+    "Title": "France Travail, “La Préparation Opérationnelle à l’Emploi individuelle (POEI)”",
+    "Url": "https://www.francetravail.fr/candidat/en-formation/mes-aides-financieres/la-preparation-operationnelle-a.html",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "6e0d6326-3d7a-572b-8831-2f38bc849acd",
+    "InformationEntryId": "82179b12-c3bd-5bf1-be0a-374502fc0386",
+    "Title": "Service-Public (DILA), “Professions réglementées : quelles sont les règles ?” (F23458)",
+    "Url": "https://entreprendre.service-public.gouv.fr/vosdroits/F23458",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "b60b2add-694c-562f-b2a3-fc7de41930c3",
+    "InformationEntryId": "82179b12-c3bd-5bf1-be0a-374502fc0386",
+    "Title": "France Travail, “Formulaire d'enregistrement des déplacés ukrainiens”",
+    "Url": "https://deplacesukrainiens.francetravail.fr/",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "fe5742e2-c9ee-597d-a28c-127927ad09e9",
+    "InformationEntryId": "084c5497-7b96-59a2-9d9a-4b0be9b5a2ff",
+    "Title": "Légifrance, CESEDA, Article R. 581-4",
+    "Url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045467881",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "e1101cf4-493b-5db0-9f14-aec2da984320",
+    "InformationEntryId": "084c5497-7b96-59a2-9d9a-4b0be9b5a2ff",
+    "Title": "Service-Public, *Autorisation de travail d'un salarié étranger en France*, APS « protection temporaire - Ukraine » section",
+    "Url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2728",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "ef1d77ff-cffa-5e6b-a1da-dbe7815a8a9e",
+    "InformationEntryId": "084c5497-7b96-59a2-9d9a-4b0be9b5a2ff",
+    "Title": "Service-Public, *Faire reconnaître en France un diplôme obtenu à l'étranger*",
+    "Url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F463",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "0e05d85a-b6b0-5977-9ccf-2b4b8ef67e4f",
+    "InformationEntryId": "084c5497-7b96-59a2-9d9a-4b0be9b5a2ff",
+    "Title": "Urssaf, *DPAE - Réaliser la déclaration préalable à l’embauche*",
+    "Url": "https://www.urssaf.fr/accueil/employeur/embaucher-gerer-salaries/embaucher/declaration-prealable-embauche.html",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "83570ae4-17de-557c-a220-1d6fb1703ab6",
+    "InformationEntryId": "084c5497-7b96-59a2-9d9a-4b0be9b5a2ff",
+    "Title": "Service-Public, *Le contrat de travail d’un salarié est-il obligatoirement écrit ?*",
+    "Url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F15635",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "d9e7aa4b-7888-5f10-9781-05dadd3ca055",
+    "InformationEntryId": "084c5497-7b96-59a2-9d9a-4b0be9b5a2ff",
+    "Title": "Code du travail, Articles L. 3243-2 and R. 3243-1",
+    "Url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033024092/2024-02-05",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "91dc0114-966e-52e5-9af1-f6ce928b96f7",
+    "InformationEntryId": "084c5497-7b96-59a2-9d9a-4b0be9b5a2ff",
+    "Title": "Code du travail, Articles L. 3121-27–28",
+    "Url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006189631/2026-05-18",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "e50ac115-9173-54bb-9c97-d03c242da0e2",
+    "InformationEntryId": "084c5497-7b96-59a2-9d9a-4b0be9b5a2ff",
+    "Title": "Code du travail, Articles L. 3131-1 and L. 3132-2",
+    "Url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006178005/2026-02-05",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "f303efba-8b8a-5f4b-bf7a-9e7d8d66cb9f",
+    "InformationEntryId": "084c5497-7b96-59a2-9d9a-4b0be9b5a2ff",
+    "Title": "Code du travail, Article L. 3141-3",
+    "Url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000033008307/2026-05-18",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "318c2d73-2b4c-54c5-ba40-fb46d4792584",
+    "InformationEntryId": "084c5497-7b96-59a2-9d9a-4b0be9b5a2ff",
+    "Title": "Légifrance, Arrêté du 22 mai 2026 relatif au relèvement du salaire minimum de croissance",
+    "Url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054126589",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "2739c2af-eba1-5f69-8db4-a3c39053b700",
+    "InformationEntryId": "084c5497-7b96-59a2-9d9a-4b0be9b5a2ff",
+    "Title": "Urssaf, *Montant du Smic*",
+    "Url": "https://www.urssaf.fr/accueil/outils-documentation/taux-baremes/montant-smic.html",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "6ed6a544-9a62-56f8-b826-5f25b5962bb3",
+    "InformationEntryId": "084c5497-7b96-59a2-9d9a-4b0be9b5a2ff",
+    "Title": "Service-Public, *Contrat d'apprentissage*",
+    "Url": "https://entreprendre.service-public.gouv.fr/vosdroits/F2918",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "42d2785e-421c-5350-b47d-7c9fec5c49de",
+    "InformationEntryId": "ffc21bf8-901c-5ec3-9f54-fce1dc797974",
+    "Title": "Service Public, “Qu’est-ce que la protection universelle maladie (Puma) ?”",
+    "Url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F34308",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "6cb1a5f7-eb87-513e-8f7a-6b36b4327f13",
+    "InformationEntryId": "ffc21bf8-901c-5ec3-9f54-fce1dc797974",
+    "Title": "Assurance Maladie (ameli.fr), “La protection universelle maladie”",
+    "Url": "https://www.ameli.fr/assure/droits-demarches/principes/protection-universelle-maladie",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "a0a389b7-dd84-57c0-a329-cb6eea323bbb",
+    "InformationEntryId": "ffc21bf8-901c-5ec3-9f54-fce1dc797974",
+    "Title": "Assurance Maladie (ameli.fr), “L’Assurance Maladie active ses dispositifs d'accompagnement auprès des personnes venant d’Ukraine”",
+    "Url": "https://www.ameli.fr/assure/droits-demarches/situations-particulieres/refugie-ukrainien",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "95231101-ce03-5cee-b49f-49326f5831e4",
+    "InformationEntryId": "ffc21bf8-901c-5ec3-9f54-fce1dc797974",
+    "Title": "Assurance Maladie (ameli.fr), Cerfa 15763*02, S1106 “Demande d’ouverture des droits à l’assurance maladie”",
+    "Url": "https://www.ameli.fr/sites/default/files/formulaires/168/s1106_-_demande_puma_-_assurance_maladie.pdf",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "4b740a6a-bb7a-5cdb-8a70-eddf1240b192",
+    "InformationEntryId": "ffc21bf8-901c-5ec3-9f54-fce1dc797974",
+    "Title": "Légifrance, CESEDA, Article R581-4",
+    "Url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045467881",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "147fa01a-5f92-5a89-bbfa-e5afd27d860b",
+    "InformationEntryId": "ffc21bf8-901c-5ec3-9f54-fce1dc797974",
+    "Title": "Assurance Maladie (ameli.fr), “Vous êtes né à l’étranger et vous demandez votre numéro de sécurité sociale”",
+    "Url": "https://www.ameli.fr/assure/droits-demarches/europe-international/protection-sociale-france/ne-etranger-demander-numero-securite-sociale",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "26265905-bd2e-5032-8620-04c8c4105b4b",
+    "InformationEntryId": "ffc21bf8-901c-5ec3-9f54-fce1dc797974",
+    "Title": "Assurance Maladie (ameli.fr), “Obtenir une attestation de droits”",
+    "Url": "https://www.ameli.fr/assure/adresses-et-contacts/l-obtention-d-un-document/obtenir-une-attestation/obtenir-une-attestation-de-droits",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "b60a3f98-6a12-547d-8325-2d63033b2ec6",
+    "InformationEntryId": "ffc21bf8-901c-5ec3-9f54-fce1dc797974",
+    "Title": "Assurance Maladie (ameli.fr), “Demander sa carte Vitale : conditions et démarches”",
+    "Url": "https://www.ameli.fr/assure/remboursements/etre-bien-rembourse/carte-vitale/carte-vitale-application/demander-sa-carte-vitale-conditions-et-demarches",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "f923322c-4336-5c6a-a971-f23901bb4ce2",
+    "InformationEntryId": "ffc21bf8-901c-5ec3-9f54-fce1dc797974",
+    "Title": "Légifrance, Code de la santé publique, Article R1112-13",
+    "Url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006160947",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "010743ce-b056-5209-b588-aa9c42ea764c",
+    "InformationEntryId": "ffc21bf8-901c-5ec3-9f54-fce1dc797974",
+    "Title": "Service Public, “Quels sont les numéros en cas d'urgence (Samu, pompiers...) et les numéros d'écoute ?”",
+    "Url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F33954",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "3c1a6816-df33-5ade-8d32-3abfe155a39b",
+    "InformationEntryId": "ffc21bf8-901c-5ec3-9f54-fce1dc797974",
+    "Title": "Service Public, “Les frais en cas d'hospitalisation et de passage aux urgences ont augmenté le 1er mars”",
+    "Url": "https://www.service-public.gouv.fr/particuliers/actualites/A18830",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "3c583919-da7b-5fae-9412-289045bbd474",
+    "InformationEntryId": "ffc21bf8-901c-5ec3-9f54-fce1dc797974",
+    "Title": "Assurance Maladie (ameli.fr), “La participation forfaitaire de 2 €” and “La franchise médicale”",
+    "Url": "https://www.ameli.fr/assure/remboursements/reste-charge/participation-forfaitaire-2-euros",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "c1e00c90-969a-5831-90a5-6c8e06edb96c",
+    "InformationEntryId": "0a1c276b-9a49-5bf5-8be8-104974dd0e5e",
+    "Title": "Service-Public / DILA, “Instruction obligatoire”",
+    "Url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1898",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "721e7d54-e295-5eec-9467-b8580f3ba6c4",
+    "InformationEntryId": "0a1c276b-9a49-5bf5-8be8-104974dd0e5e",
+    "Title": "Service-Public / DILA, “École primaire (maternelle ou élémentaire) pour un élève venant de l’étranger”",
+    "Url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1866",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "d95b3e68-784e-517c-8f8e-b72f1789357c",
+    "InformationEntryId": "0a1c276b-9a49-5bf5-8be8-104974dd0e5e",
+    "Title": "Service-Public / DILA, “Scolarisation au collège ou lycée d’un élève venant de l’étranger”",
+    "Url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F21304",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "fe6b9f9e-ea2b-5864-bd31-e4f19b566e7b",
+    "InformationEntryId": "0a1c276b-9a49-5bf5-8be8-104974dd0e5e",
+    "Title": "Ministry of National Education, Circular 2002-063, “Modalités d’inscription et de scolarisation des élèves de nationalité étrangère des premier et second degrés”",
+    "Url": "https://www.education.gouv.fr/botexte/sp10020425/MENE0200681C.htm",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "d3ac151f-b455-548c-b287-781e29a82249",
+    "InformationEntryId": "0a1c276b-9a49-5bf5-8be8-104974dd0e5e",
+    "Title": "Ministry of National Education, “Règlement type départemental des écoles maternelles et élémentaires publiques”",
+    "Url": "https://www.education.gouv.fr/bo/14/Hebdo28/MENE1416234C.htm",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "8e80f891-0c43-5ad7-a308-c54c4c55d097",
+    "InformationEntryId": "0a1c276b-9a49-5bf5-8be8-104974dd0e5e",
+    "Title": "Ministry / Eduscol, “Centre académique pour la scolarisation des élèves allophones nouvellement arrivés … (Casnav)”",
+    "Url": "https://eduscol.education.fr/1201/centre-academique-pour-la-scolarisation-des-eleves-allophones-nouvellement-arrives-et-des-enfants-issus-de-familles-itinerantes-et-de-voyageurs-casnav",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "2df78ca1-4bf3-5849-8787-653493834a9c",
+    "InformationEntryId": "0a1c276b-9a49-5bf5-8be8-104974dd0e5e",
+    "Title": "Ministry of National Education, Circular 2012-141, “Organisation de la scolarité des élèves allophones nouvellement arrivés”",
+    "Url": "https://www.education.gouv.fr/bo/12/Hebdo37/MENE1234231C.htm",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "714901f0-72f3-5a48-98ce-01d5386131fd",
+    "InformationEntryId": "0a1c276b-9a49-5bf5-8be8-104974dd0e5e",
+    "Title": "Ministry / Eduscol, “Ressources pour l’accueil et la scolarisation des élèves allophones nouvellement arrivés (EANA)”",
+    "Url": "https://eduscol.education.gouv.fr/5421/ressources-pour-l-accueil-et-la-scolarisation-des-eleves-allophones-nouvellement-arrives-eana",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "a6183b59-838e-56e5-8066-1768086909de",
+    "InformationEntryId": "0a1c276b-9a49-5bf5-8be8-104974dd0e5e",
+    "Title": "France Éducation international, “Centre ENIC-NARIC France” brochure",
+    "Url": "https://france-education-international.fr/document/plaquette-centre-enic-naric-france",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "fefcb22a-b35d-539b-83fe-9f6701a8329b",
+    "InformationEntryId": "0a1c276b-9a49-5bf5-8be8-104974dd0e5e",
+    "Title": "France Éducation international, “Les procédures d’évaluation des diplômes au centre ENIC-NARIC France”",
+    "Url": "https://www.france-education-international.fr/article/les-procedures-devaluation-des-diplomes-au-centre-enic-naric-france",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "7fbc1443-4b67-5318-94df-a8f1bb815751",
+    "InformationEntryId": "0a1c276b-9a49-5bf5-8be8-104974dd0e5e",
+    "Title": "Ministry of Higher Education, “FAQ — Droits d’inscription différenciés pour les étudiants extra-communautaires”",
+    "Url": "https://www.enseignementsup-recherche.gouv.fr/fr/faq-droits-d-inscription-differencies-pour-les-etudiants-extra-communautaires-103043",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "e394c1c2-23f2-53c9-9850-b203e20ce6bd",
+    "InformationEntryId": "0a1c276b-9a49-5bf5-8be8-104974dd0e5e",
+    "Title": "Etudiant.gouv.fr, “Bourses sur critères sociaux : pour qui ?”",
+    "Url": "https://www.etudiant.gouv.fr/fr/bourses-sur-criteres-sociaux-pour-qui-2980",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "cbace8b3-b2c4-5267-a435-d0ab4669841f",
+    "InformationEntryId": "0a1c276b-9a49-5bf5-8be8-104974dd0e5e",
+    "Title": "Etudiant.gouv.fr / CROUS network, “Accueil des étudiants ukrainiens”",
+    "Url": "https://www.etudiant.gouv.fr/fr/accueil-des-etudiants-ukrainiens-2699",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "ed6beedb-b5a5-5853-9c02-70596459860c",
+    "InformationEntryId": "0a1c276b-9a49-5bf5-8be8-104974dd0e5e",
+    "Title": "Service-Public / DILA, “Études supérieures : première inscription d’un étudiant”",
+    "Url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2861",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "2904e4ab-3e09-50f9-a7be-f186f08a1d53",
+    "InformationEntryId": "0a1c276b-9a49-5bf5-8be8-104974dd0e5e",
+    "Title": "Ministry of Higher Education, “Venir étudier en France”",
+    "Url": "https://www.enseignementsup-recherche.gouv.fr/fr/venir-etudier-en-france-103163",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "718e2b4a-ad53-5ce9-acb4-c1b5f6ff99fd",
+    "InformationEntryId": "0a1c276b-9a49-5bf5-8be8-104974dd0e5e",
+    "Title": "Parcoursup, “Étudiants internationaux” FAQ",
+    "Url": "https://www.parcoursup.gouv.fr/faq/thematiques/candidats-parcoursup/etudiants-internationaux",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "7d9198a1-070b-50a1-bd36-53a3c93dd6c2",
+    "InformationEntryId": "0a1c276b-9a49-5bf5-8be8-104974dd0e5e",
+    "Title": "Service-Public / DILA, “Coût d’une inscription dans l’enseignement supérieur”",
+    "Url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F36520",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "f8346eeb-5f33-56c2-9551-106493cdca2e",
+    "InformationEntryId": "8d7dd894-f0c5-53f4-831c-4c936f27fdff",
+    "Title": "Légifrance, CESEDA, Article L. 581-9",
+    "Url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042775671/2024-12-16",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "ba87b018-5dbb-5a3e-aeb9-c84e254ad507",
+    "InformationEntryId": "8d7dd894-f0c5-53f4-831c-4c936f27fdff",
+    "Title": "Légifrance, CESEDA, Article D. 581-7",
+    "Url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042805990/2026-06-30",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "88f22446-24f4-5a55-b6dd-a1c026e2b655",
+    "InformationEntryId": "8d7dd894-f0c5-53f4-831c-4c936f27fdff",
+    "Title": "Légifrance, CESEDA, Title V Chapter III, ADA provisions D. 553-1 to D. 553-28",
+    "Url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006070158/LEGISCTA000042806148/2026-10-13",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "e7915cbf-568f-5224-9872-9331f849e885",
+    "InformationEntryId": "8d7dd894-f0c5-53f4-831c-4c936f27fdff",
+    "Title": "Légifrance, CESEDA, Annex 8 ADA tariff",
+    "Url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006070158/LEGISCTA000042906403/2026-07-16",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "30eefa69-19ee-5e61-9970-def480d5bae9",
+    "InformationEntryId": "8d7dd894-f0c5-53f4-831c-4c936f27fdff",
+    "Title": "Légifrance, Decree No. 2026-463, 9 June 2026, on material reception conditions",
+    "Url": "https://www.legifrance.gouv.fr/eli/decret/2026/6/9/2026-463/jo/texte",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "6ab4e1c0-eea2-5c1a-b231-50aff97e701e",
+    "InformationEntryId": "8d7dd894-f0c5-53f4-831c-4c936f27fdff",
+    "Title": "Service-Public, “En quoi consiste l’allocation pour demandeur d’asile (Ada) ?”",
+    "Url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F33314",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "aa0f80be-7a98-5b27-a6e2-38286081f4ed",
+    "InformationEntryId": "8d7dd894-f0c5-53f4-831c-4c936f27fdff",
+    "Title": "OFII, “Formulaire de demande de prolongation des droits à l’ADA” for APS-BPT holders",
+    "Url": "https://www.ofii.fr/wp-content/uploads/2024/05/Formulaire-fran%C3%A7ais-ukrainien-de-demande-de-prolongation-des-droits-%C3%A0-lADA.pdf",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "d9b295aa-1f88-5757-8f43-2ac5380c3323",
+    "InformationEntryId": "8d7dd894-f0c5-53f4-831c-4c936f27fdff",
+    "Title": "Cnaf, Letter LR 2022-021, “Allocataires bénéficiaires de la protection temporaire”",
+    "Url": "https://caf.fr/sites/default/files/medias/cnaf/Nous_connaitre/qui%20sommes%20nous/Textes%20de%20r%C3%A9f%C3%A9rence/Circulaires/2022/LR%202022-021%20_%20Allocataires%20b%C3%A9n%C3%A9ficiaires%20de%20la%20protection%20temporaire.pdf",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "578950a0-3c5d-5381-b147-e25efcf10d57",
+    "InformationEntryId": "8d7dd894-f0c5-53f4-831c-4c936f27fdff",
+    "Title": "Service-Public, “RSA : demandeur de 25 ans et plus”",
+    "Url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F19778",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "6815e9c0-8515-5710-bf49-894d46130955",
+    "InformationEntryId": "8d7dd894-f0c5-53f4-831c-4c936f27fdff",
+    "Title": "Service-Public, “Prime d’activité : salarié ou fonctionnaire”",
+    "Url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2882",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "0e30784a-4434-5fd1-8ff8-6d09c8bbc9f1",
+    "InformationEntryId": "8d7dd894-f0c5-53f4-831c-4c936f27fdff",
+    "Title": "France Travail, “Ai-je droit à l’allocation chômage ?”",
+    "Url": "https://www.francetravail.fr/candidat/mes-droits-aux-aides-et-allocati/lessentiel-a-savoir-sur-lallocat/ai-je-droit-a-lallocation-chomag.html",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "775187a4-09eb-598f-8ad9-d6597a73788d",
+    "InformationEntryId": "8d7dd894-f0c5-53f4-831c-4c936f27fdff",
+    "Title": "France Travail, foreign-worker registration",
+    "Url": "https://www.francetravail.fr/candidat/mes-droits-aux-aides-et-allocati/a-chaque-situation-son-allocatio/quelle-est-ma-situation-personne/je-suis-travailleur-etranger--pu.html",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "81962221-e550-5428-a37b-5f22a506b512",
+    "InformationEntryId": "8d7dd894-f0c5-53f4-831c-4c936f27fdff",
+    "Title": "CAF, “La connexion à Mon Compte”",
+    "Url": "https://www.caf.fr/allocataires/actualites/la-caf-et-vous/la-connexion-mon-compte",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "650055dc-935c-54e5-b5ed-0852700604e1",
+    "InformationEntryId": "8d7dd894-f0c5-53f4-831c-4c936f27fdff",
+    "Title": "Service-Public, RSA resources and routes",
+    "Url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F24585",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "38455e80-cab7-5f37-8260-776ea2ee5396",
+    "InformationEntryId": "8d7dd894-f0c5-53f4-831c-4c936f27fdff",
+    "Title": "Service-Public, foreign nationals and family benefits",
+    "Url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2787",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "d67ebe35-199e-526d-ac69-ec317fd6452b",
+    "InformationEntryId": "8d7dd894-f0c5-53f4-831c-4c936f27fdff",
+    "Title": "Service-Public, “Allocations familiales (famille de 2 enfants ou plus)”",
+    "Url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F13213",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "93163d39-f5ee-518f-a68b-c47f9424d030",
+    "InformationEntryId": "8d7dd894-f0c5-53f4-831c-4c936f27fdff",
+    "Title": "CAF des Yvelines, “Je suis déplacé(e) ukrainien(ne)”",
+    "Url": "https://www.caf.fr/allocataires/caf-des-yvelines/offre-de-service/je-suis-de-nationalite-etrangere/je-suis-deplacee-ukrainienne",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "af06f9ab-d2e9-5061-aff5-9035528ed1f1",
+    "InformationEntryId": "8d7dd894-f0c5-53f4-831c-4c936f27fdff",
+    "Title": "Service-Public, “Allocation de rentrée scolaire (ARS)”",
+    "Url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1878",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "1bcae388-5a74-5027-87a3-0a18751ce5fb",
+    "InformationEntryId": "8d7dd894-f0c5-53f4-831c-4c936f27fdff",
+    "Title": "Service-Public, “Que comprend la prestation d’accueil du jeune enfant (Paje) ?”",
+    "Url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F13218",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "8b1f980f-6253-5bb8-92d7-fa191870f9ad",
+    "InformationEntryId": "8d7dd894-f0c5-53f4-831c-4c936f27fdff",
+    "Title": "Service-Public, CCAS/CIAS contact and extra-legal aid",
+    "Url": "https://www.service-public.gouv.fr/particuliers/actualites/A18757",
+    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
   }
 ]
