@@ -1,7 +1,7 @@
 # Hungary: social assistance and family benefits
 
-**Research checked:** 12 November 2026  
-**Canonical comparison aspects:** `social-subsistence`, `social-application`, `social-child-benefits`  
+**Research checked:** 12 November 2026
+**Canonical comparison aspects:** `social-subsistence`, `social-application`, `social-child-benefits`
 **Scope:** Official-source research for a future practical article. This is not an article and does not integrate content into the catalog.
 
 ## Executive finding
@@ -257,4 +257,3 @@ Only official Hungarian legislation, government authority, Treasury and tax auth
 | HU-SOC-S12 | OIF / NDGAP | `Tájékoztató menedékeskénti kérelem benyújtásáról és az elektronikus adatrögzítési felület használatáról` | https://oif.gov.hu/index.php/tajekoztatok/tajekoztato-menedekeskenti-kerelem-benyujtasarol-es-az-elektronikus-adatrogzitesi-felulet-hasznalatarol | Updated 2026-03-03 15:30 | 2026-11-12 | Topic 1 boundary: newborn's TP recognition requires a separate procedure; no automatic status through parent. | Current official page |
 | HU-SOC-S13 | Magyar Államkincstár | `Családi ellátás az EGT tagállamokban` | https://www.allamkincstar.gov.hu/csaladok-tamogatasa/Csalad_gyermek/csaladi-ellatas-az-egt-tagallamokban | Page updated date not stated | 2026-11-12 | EEA family-benefit coordination and family-as-a-whole assessment; does not establish Ukraine-specific coordination. | Current official guidance |
 | HU-SOC-S14 | Council of Europe, European Social Charter | `Ukraine - Social Rights` | https://www.coe.int/en/web/european-social-charter/ukraine | Page updated date not stated | 2026-11-12 | Ukraine ratified the Revised European Social Charter on 21 December 2006; supports the narrow Social Act §3(2)/§7 emergency-aid boundary. | Current treaty-status page |
-
