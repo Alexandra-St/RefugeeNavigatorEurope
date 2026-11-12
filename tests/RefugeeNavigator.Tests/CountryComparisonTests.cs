@@ -78,10 +78,10 @@ public sealed class CountryComparisonTests
                 Assert.True(sourcesById.TryGetValue(sourceId, out var source), $"Missing comparison source {sourceId}.");
                 Assert.Equal(fact.InformationEntryId, source!.InformationEntryId);
             }));
-        Assert.Equal(123, catalog.InformationEntries.Count);
-        Assert.Equal(369, catalog.InformationEntryTranslations.Count);
+        Assert.Equal(131, catalog.InformationEntries.Count);
+        Assert.Equal(393, catalog.InformationEntryTranslations.Count);
         Assert.Equal(309, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(60, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(84, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Outdated));
         var czechiaId = Guid.Parse("10000000-0000-0000-0000-000000000004");
         var czechiaEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == czechiaId).Select(entry => entry.Id).ToHashSet();
@@ -97,6 +97,7 @@ public sealed class CountryComparisonTests
         var irelandEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == Guid.Parse("10000000-0000-0000-0000-000000000014")).Select(entry => entry.Id).ToHashSet();
         var franceEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == Guid.Parse("10000000-0000-0000-0000-000000000015")).Select(entry => entry.Id).ToHashSet();
         var finlandEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == Guid.Parse("10000000-0000-0000-0000-000000000016")).Select(entry => entry.Id).ToHashSet();
+        var belgiumEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == Guid.Parse("10000000-0000-0000-0000-000000000017")).Select(entry => entry.Id).ToHashSet();
         Assert.All(catalog.InformationEntryTranslations.Where(translation => finlandEntryIds.Contains(translation.InformationEntryId)),
             translation => Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus));
         Assert.All(catalog.InformationEntryTranslations.Where(translation => czechiaEntryIds.Contains(translation.InformationEntryId)),
@@ -142,6 +143,7 @@ public sealed class CountryComparisonTests
                                                                             && !irelandEntryIds.Contains(translation.InformationEntryId)
                                                                             && !franceEntryIds.Contains(translation.InformationEntryId)
                                                                             && !finlandEntryIds.Contains(translation.InformationEntryId)
+                                                                            && !belgiumEntryIds.Contains(translation.InformationEntryId)
                                                                             && !inlineLinkArticleIds.Contains(translation.InformationEntryId)
                                                                             && translation.InformationEntryId != Guid.Parse("afc14824-4035-4ca7-9662-6d5352ba63cb")
                                                                             && translation.InformationEntryId != healthcareArticleId

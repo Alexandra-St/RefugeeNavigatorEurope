@@ -62,11 +62,11 @@ public sealed class FinlandContentIntegrationTests
         var country = Assert.Single(catalog.Countries, item => item.Slug == "finland");
         Assert.Equal(CountryId, country.Id);
         Assert.Equal("Finland", country.Name);
-        Assert.Equal(16, catalog.Countries.Count);
-        Assert.Equal(123, catalog.InformationEntries.Count);
-        Assert.Equal(369, catalog.InformationEntryTranslations.Count);
+        Assert.Equal(17, catalog.Countries.Count);
+        Assert.Equal(131, catalog.InformationEntries.Count);
+        Assert.Equal(393, catalog.InformationEntryTranslations.Count);
         Assert.Equal(309, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(60, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(84, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == CountryId).ToArray();
@@ -110,7 +110,7 @@ public sealed class FinlandContentIntegrationTests
     public async Task FinlandTranslationsAndOneHundredArticleOwnedSourcesMatchDraftsExactly()
     {
         var catalog = await Catalog.Value;
-        Assert.Equal(1114, catalog.OfficialSources.Count);
+        Assert.Equal(1260, catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         var repositoryRoot = FindRepositoryRoot();
         var draftsRoot = Path.Combine(repositoryRoot, "docs", "content-drafts", "finland-v1");
@@ -203,14 +203,14 @@ public sealed class FinlandContentIntegrationTests
         var productionResults = await RenderAsync<Search>("Production", language, "/search?country=finland");
         Assert.Empty(Regex.Matches(productionResults.Html, "class=\"result-card\"").Cast<Match>());
         var productionCompare = await RenderAsync<Compare>("Production", language, "/compare");
-        foreach (var hiddenSlug in new[] { "finland", "france", "ireland" })
+        foreach (var hiddenSlug in new[] { "finland", "france", "ireland", "belgium" })
         {
             Assert.DoesNotContain(hiddenSlug, SelectValues(productionCompare.Html, "country1"));
             Assert.DoesNotContain(hiddenSlug, SelectValues(productionCompare.Html, "country2"));
         }
 
         var developmentHome = await RenderAsync<Home>("Development", language);
-        Assert.Equal(16, Regex.Matches(developmentHome.Html, "class=\"country-card\"").Count);
+        Assert.Equal(17, Regex.Matches(developmentHome.Html, "class=\"country-card\"").Count);
         Assert.Contains("href=\"/countries/finland\"", developmentHome.Html);
         var developmentOverview = await RenderAsync<CountryOverview>("Development", language, "/countries/finland",
             new() { [nameof(CountryOverview.CountrySlug)] = "finland" });
@@ -244,12 +244,13 @@ public sealed class FinlandContentIntegrationTests
         }
 
         var developmentCompare = await RenderAsync<Compare>("Development", language, "/compare");
-        foreach (var hiddenSlug in new[] { "finland", "france", "ireland" })
+        foreach (var hiddenSlug in new[] { "finland", "france", "ireland", "belgium" })
         {
             Assert.DoesNotContain(hiddenSlug, SelectValues(developmentCompare.Html, "country1"));
             Assert.DoesNotContain(hiddenSlug, SelectValues(developmentCompare.Html, "country2"));
         }
         Assert.DoesNotContain("finland", CountryComparisonTopicMap.SupportedCountrySlugs);
+        Assert.DoesNotContain("belgium", CountryComparisonTopicMap.SupportedCountrySlugs);
         Assert.DoesNotContain("ireland", CountryComparisonTopicMap.SupportedCountrySlugs);
         Assert.DoesNotContain("france", CountryComparisonTopicMap.SupportedCountrySlugs);
         Assert.DoesNotContain("finland", CountryComparisonTopicMap.SupportedCountrySlugs);

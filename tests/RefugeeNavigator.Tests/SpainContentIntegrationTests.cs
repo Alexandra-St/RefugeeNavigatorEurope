@@ -80,11 +80,11 @@ public sealed class SpainContentIntegrationTests
 
         Assert.Equal(SpainId, country.Id);
         Assert.Equal("Spain", country.Name);
-        Assert.Equal(16, catalog.Countries.Count);
-        Assert.Equal(123, catalog.InformationEntries.Count);
-        Assert.Equal(369, catalog.InformationEntryTranslations.Count);
+        Assert.Equal(17, catalog.Countries.Count);
+        Assert.Equal(131, catalog.InformationEntries.Count);
+        Assert.Equal(393, catalog.InformationEntryTranslations.Count);
         Assert.Equal(309, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(60, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(84, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == SpainId).ToArray();
