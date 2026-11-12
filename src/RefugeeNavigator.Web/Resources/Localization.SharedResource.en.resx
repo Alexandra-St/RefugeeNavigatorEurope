@@ -406,4 +406,6 @@
   <data name="Country.Finland.In" xml:space="preserve"><value>in Finland</value></data>
   <data name="Country.Belgium" xml:space="preserve"><value>Belgium</value></data>
   <data name="Country.Belgium.In" xml:space="preserve"><value>in Belgium</value></data>
+  <data name="Country.Hungary" xml:space="preserve"><value>Hungary</value></data>
+  <data name="Country.Hungary.In" xml:space="preserve"><value>in Hungary</value></data>
 </root>
