@@ -144,8 +144,6 @@ public sealed class BelgiumContentIntegrationTests
                 Assert.True(ownedSources.TryGetValue(sourceId, out var source));
                 Assert.Equal(expected.Id, source!.InformationEntryId);
                 var expectedTitle = sourceMatch.Groups["title"].Value;
-                if (sourceMatch.Groups["key"].Value is "BE-EDU-01-S21" or "BE-EDU-01-S28")
-                    expectedTitle += $" [{sourceMatch.Groups["key"].Value}]";
                 Assert.Equal(expectedTitle, source.Title);
                 Assert.Equal(sourceMatch.Groups["url"].Value, source.Url.AbsoluteUri);
             }
@@ -245,6 +243,15 @@ public sealed class BelgiumContentIntegrationTests
                 });
             Assert.False(category.NotFound);
             Assert.Equal(expectedCount, Regex.Matches(category.Html, "class=\"information-entry\"").Count);
+            if (categorySlug == "education")
+            {
+                Assert.DoesNotContain("[BE-EDU-01-S21]", category.Html);
+                Assert.DoesNotContain("[BE-EDU-01-S28]", category.Html);
+                var visibleText = Regex.Replace(category.Html, "<[^>]+>", " ");
+                visibleText = Regex.Replace(visibleText, @"\s+", " ");
+                Assert.Contains("Study in Flanders / Flemish Government, “Tuition fees” — general tuition guidance", visibleText);
+                Assert.Contains("Study in Flanders / Flemish Government, “Tuition fees” — temporary-protection fee category", visibleText);
+            }
         }
 
         var developmentCompare = await RenderAsync<Compare>("Development", language, "/compare");
