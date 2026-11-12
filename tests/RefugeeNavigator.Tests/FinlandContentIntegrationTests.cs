@@ -62,11 +62,11 @@ public sealed class FinlandContentIntegrationTests
         var country = Assert.Single(catalog.Countries, item => item.Slug == "finland");
         Assert.Equal(CountryId, country.Id);
         Assert.Equal("Finland", country.Name);
-        Assert.Equal(17, catalog.Countries.Count);
-        Assert.Equal(131, catalog.InformationEntries.Count);
-        Assert.Equal(393, catalog.InformationEntryTranslations.Count);
+        Assert.Equal(18, catalog.Countries.Count);
+        Assert.Equal(138, catalog.InformationEntries.Count);
+        Assert.Equal(414, catalog.InformationEntryTranslations.Count);
         Assert.Equal(309, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(84, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(105, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == CountryId).ToArray();
@@ -110,7 +110,7 @@ public sealed class FinlandContentIntegrationTests
     public async Task FinlandTranslationsAndOneHundredArticleOwnedSourcesMatchDraftsExactly()
     {
         var catalog = await Catalog.Value;
-        Assert.Equal(1260, catalog.OfficialSources.Count);
+        Assert.Equal(1357, catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         var repositoryRoot = FindRepositoryRoot();
         var draftsRoot = Path.Combine(repositoryRoot, "docs", "content-drafts", "finland-v1");
@@ -210,7 +210,7 @@ public sealed class FinlandContentIntegrationTests
         }
 
         var developmentHome = await RenderAsync<Home>("Development", language);
-        Assert.Equal(17, Regex.Matches(developmentHome.Html, "class=\"country-card\"").Count);
+        Assert.Equal(18, Regex.Matches(developmentHome.Html, "class=\"country-card\"").Count);
         Assert.Contains("href=\"/countries/finland\"", developmentHome.Html);
         var developmentOverview = await RenderAsync<CountryOverview>("Development", language, "/countries/finland",
             new() { [nameof(CountryOverview.CountrySlug)] = "finland" });
