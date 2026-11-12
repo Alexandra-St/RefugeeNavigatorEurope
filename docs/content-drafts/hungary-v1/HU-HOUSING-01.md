@@ -125,7 +125,7 @@ Content:
 
 - `HU-HOUSING-01-S01` → `5614950d-6ab4-5686-a53a-8c632bc3d488` — NJT, Government Decree 196/2025, consolidated (research source HU-HOUSING-S01; [official source](https://njt.jog.gov.hu/jogszabaly/2025-196-20-22))
 - `HU-HOUSING-01-S02` → `cfe06190-a9ff-53c0-be45-15bbf60509d9` — OIF / NDGAP, “Menedékeskénti elismerését kérőknek nyújtott ellátások és támogatások” (research source HU-HOUSING-S02; [official source](https://www.oif.gov.hu/menedekeskenti-elismereset-keroknek-nyujtott-ellatasok-es-tamogatasok))
-- `HU-HOUSING-01-S03` → `c7daa0bb-96e5-5d55-a419-8a53613f0608` — OIF / NDGAP, “Menedékeseknek nyújtott ellátások és támogatások” (research source HU-HOUSING-S03; [official source](https://oif.gov.hu/menedekeseknek-nyujtott-ellatasok-es-tamogatasok))
+- `HU-HOUSING-01-S03` → `c7daa0bb-96e5-5d55-a419-8a53613f0608` — OIF / NDGAP, “Menedékeseknek nyújtott ellátások és támogatások” (research source HU-HOUSING-S03; [official source](https://www.oif.gov.hu/menedekeseknek-nyujtott-ellatasok-es-tamogatasok))
 - `HU-HOUSING-01-S04` → `c0234d97-e7fa-50a6-b038-b988c0ee1907` — NJT, Social Administration Act III of 1993, consolidated (research source HU-HOUSING-S04; [official source](https://njt.jog.gov.hu/jogszabaly/1993-3-00-00.100))
 - `HU-HOUSING-01-S05` → `c3fbfdbe-37d5-588b-9ed4-5b515d35e97a` — BMSZKI, “Éjjeli menedékhelyek” (research source HU-HOUSING-S05; [official source](https://bmszki.hu/hu/szallasok/ejjeli-menedekhelyek))
 - `HU-HOUSING-01-S07` → `de0e0250-5328-59d8-89cc-40aad4839160` — NJT, Housing Act LXXVIII of 1993, consolidated (research source HU-HOUSING-S07; [official source](https://njt.jog.gov.hu/jogszabaly/1993-78-00-00))
