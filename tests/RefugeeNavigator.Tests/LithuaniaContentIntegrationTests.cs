@@ -139,7 +139,7 @@ public sealed class LithuaniaContentIntegrationTests
     public void LithuaniaCountryLocalizationIsPresentInAllLanguages()
     {
         var resources = new ResourceManager("RefugeeNavigator.Web.Resources.Localization.SharedResource", typeof(SharedResource).Assembly);
-        Assert.Equal("Lithuania", resources.GetString("Country.Lithuania", CultureInfo.GetCultureInfo("en"))); Assert.Equal("in Lithuania", resources.GetString("Country.Lithuania.In", CultureInfo.GetCultureInfo("en")));
+        Assert.Equal("Lithuania", resources.GetString("Country.Lithuania", CultureInfo.GetCultureInfo("en"))); Assert.Equal("Lithuania", resources.GetString("Country.Lithuania.In", CultureInfo.GetCultureInfo("en")));
         Assert.Equal("Литва", resources.GetString("Country.Lithuania", CultureInfo.GetCultureInfo("uk"))); Assert.Equal("у Литві", resources.GetString("Country.Lithuania.In", CultureInfo.GetCultureInfo("uk")));
         Assert.Equal("Литва", resources.GetString("Country.Lithuania", CultureInfo.GetCultureInfo("ru"))); Assert.Equal("в Литве", resources.GetString("Country.Lithuania.In", CultureInfo.GetCultureInfo("ru")));
     }

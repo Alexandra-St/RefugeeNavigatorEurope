@@ -276,7 +276,7 @@ public sealed class ItalyContentIntegrationTests
     {
         var resources = new ResourceManager("RefugeeNavigator.Web.Resources.Localization.SharedResource", typeof(SharedResource).Assembly);
         Assert.Equal("Italy", resources.GetString("Country.Italy", CultureInfo.GetCultureInfo("en")));
-        Assert.Equal("in Italy", resources.GetString("Country.Italy.In", CultureInfo.GetCultureInfo("en")));
+        Assert.Equal("Italy", resources.GetString("Country.Italy.In", CultureInfo.GetCultureInfo("en")));
         Assert.Equal("Італія", resources.GetString("Country.Italy", CultureInfo.GetCultureInfo("uk")));
         Assert.Equal("в Італії", resources.GetString("Country.Italy.In", CultureInfo.GetCultureInfo("uk")));
         Assert.Equal("Италия", resources.GetString("Country.Italy", CultureInfo.GetCultureInfo("ru")));

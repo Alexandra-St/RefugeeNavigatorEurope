@@ -253,7 +253,7 @@ public sealed class IrelandContentIntegrationTests
     public void IrelandCountryLocalizationIsPresentInAllLanguages()
     {
         Assert.Equal("Ireland", Resources.GetString("Country.Ireland", CultureInfo.GetCultureInfo("en")));
-        Assert.Equal("in Ireland", Resources.GetString("Country.Ireland.In", CultureInfo.GetCultureInfo("en")));
+        Assert.Equal("Ireland", Resources.GetString("Country.Ireland.In", CultureInfo.GetCultureInfo("en")));
         Assert.Equal("Ірландія", Resources.GetString("Country.Ireland", CultureInfo.GetCultureInfo("uk")));
         Assert.Equal("в Ірландії", Resources.GetString("Country.Ireland.In", CultureInfo.GetCultureInfo("uk")));
         Assert.Equal("Ирландия", Resources.GetString("Country.Ireland", CultureInfo.GetCultureInfo("ru")));

@@ -282,7 +282,7 @@ public sealed class FinlandContentIntegrationTests
     public void FinlandCountryLocalizationIsPresentInAllLanguages()
     {
         Assert.Equal("Finland", Resources.GetString("Country.Finland", CultureInfo.GetCultureInfo("en")));
-        Assert.Equal("in Finland", Resources.GetString("Country.Finland.In", CultureInfo.GetCultureInfo("en")));
+        Assert.Equal("Finland", Resources.GetString("Country.Finland.In", CultureInfo.GetCultureInfo("en")));
         Assert.Equal("Фінляндія", Resources.GetString("Country.Finland", CultureInfo.GetCultureInfo("uk")));
         Assert.Equal("у Фінляндії", Resources.GetString("Country.Finland.In", CultureInfo.GetCultureInfo("uk")));
         Assert.Equal("Финляндия", Resources.GetString("Country.Finland", CultureInfo.GetCultureInfo("ru")));

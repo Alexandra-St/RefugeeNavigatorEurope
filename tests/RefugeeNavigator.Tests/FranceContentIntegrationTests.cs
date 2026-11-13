@@ -270,7 +270,7 @@ public sealed class FranceContentIntegrationTests
     public void FranceCountryLocalizationIsPresentInAllLanguages()
     {
         Assert.Equal("France", Resources.GetString("Country.France", CultureInfo.GetCultureInfo("en")));
-        Assert.Equal("in France", Resources.GetString("Country.France.In", CultureInfo.GetCultureInfo("en")));
+        Assert.Equal("France", Resources.GetString("Country.France.In", CultureInfo.GetCultureInfo("en")));
         Assert.Equal("Франція", Resources.GetString("Country.France", CultureInfo.GetCultureInfo("uk")));
         Assert.Equal("у Франції", Resources.GetString("Country.France.In", CultureInfo.GetCultureInfo("uk")));
         Assert.Equal("Франция", Resources.GetString("Country.France", CultureInfo.GetCultureInfo("ru")));

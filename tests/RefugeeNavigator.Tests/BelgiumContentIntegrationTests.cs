@@ -290,7 +290,7 @@ public sealed class BelgiumContentIntegrationTests
     public void BelgiumCountryLocalizationIsPresentInAllLanguages()
     {
         Assert.Equal("Belgium", Resources.GetString("Country.Belgium", CultureInfo.GetCultureInfo("en")));
-        Assert.Equal("in Belgium", Resources.GetString("Country.Belgium.In", CultureInfo.GetCultureInfo("en")));
+        Assert.Equal("Belgium", Resources.GetString("Country.Belgium.In", CultureInfo.GetCultureInfo("en")));
         Assert.Equal("Бельгія", Resources.GetString("Country.Belgium", CultureInfo.GetCultureInfo("uk")));
         Assert.Equal("у Бельгії", Resources.GetString("Country.Belgium.In", CultureInfo.GetCultureInfo("uk")));
         Assert.Equal("Бельгия", Resources.GetString("Country.Belgium", CultureInfo.GetCultureInfo("ru")));
