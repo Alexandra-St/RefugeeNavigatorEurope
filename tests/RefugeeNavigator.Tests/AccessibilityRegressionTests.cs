@@ -19,21 +19,39 @@ public sealed class AccessibilityRegressionTests
 
         Assert.True(rule.Success, $"Could not find the form-control rule in {fileName}.");
         var border = GetDeclaration(rule.Groups["body"].Value, "border");
-        var borderMatch = Regex.Match(border, @"^(?<width>\d+(?:\.\d+)?px)\s+solid\s+(?<color>#[0-9a-fA-F]{6})$");
+        var borderMatch = Regex.Match(border, @"^(?<width>\d+(?:\.\d+)?px)\s+solid\s+(?<color>var\(--color-control-border\))$");
         Assert.True(borderMatch.Success, $"Expected a solid pixel control border, found '{border}'.");
         Assert.Equal("1px", borderMatch.Groups["width"].Value);
 
         var background = GetDeclaration(rule.Groups["body"].Value, "background");
-        var surfaceMatch = Regex.Match(background, @"^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$");
-        Assert.True(surfaceMatch.Success, $"Expected an explicit solid control surface, found '{background}'.");
+        Assert.Equal("var(--color-surface)", background);
 
-        var contrast = ContrastRatio(borderMatch.Groups["color"].Value, surfaceMatch.Value);
-        Assert.True(contrast >= 3.0, $"{fileName} control boundary contrast is {contrast:F2}:1; required at least 3:1.");
+        var themeCssPath = Path.GetFullPath(Path.Combine(
+            AppContext.BaseDirectory,
+            "..", "..", "..", "..", "..",
+            "src", "RefugeeNavigator.Web", "wwwroot", "app.css"));
+        var themeCss = File.ReadAllText(themeCssPath);
+        AssertThemeControlContrast(themeCss, ":root", "Light");
+        AssertThemeControlContrast(themeCss, ":root[data-theme=\"dark\"]", "Dark");
 
         var focusRule = Regex.Match(css, $@"{Regex.Escape(focusSelector)}\s*,?[^{{]*\{{(?<body>[^}}]*)\}}", RegexOptions.Singleline);
         Assert.True(focusRule.Success, $"The focus-visible rule for {focusSelector} is missing.");
-        Assert.Contains("outline: 3px solid #155eef", focusRule.Groups["body"].Value, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("outline: 3px solid var(--color-primary)", focusRule.Groups["body"].Value, StringComparison.OrdinalIgnoreCase);
         Assert.Contains("outline-offset: 3px", focusRule.Groups["body"].Value, StringComparison.OrdinalIgnoreCase);
+    }
+
+    private static void AssertThemeControlContrast(string css, string selector, string themeName)
+    {
+        var themeRule = Regex.Match(css, $@"{Regex.Escape(selector)}\s*\{{(?<body>[^}}]*)\}}");
+        Assert.True(themeRule.Success, $"Could not find the {themeName} theme tokens.");
+
+        var borderColor = GetDeclaration(themeRule.Groups["body"].Value, "--color-control-border");
+        var surfaceColor = GetDeclaration(themeRule.Groups["body"].Value, "--color-surface");
+        Assert.Matches(@"^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$", borderColor);
+        Assert.Matches(@"^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})$", surfaceColor);
+
+        var contrast = ContrastRatio(borderColor, surfaceColor);
+        Assert.True(contrast >= 3.0, $"{themeName} control boundary contrast is {contrast:F2}:1; required at least 3:1.");
     }
 
     private static string GetDeclaration(string declarations, string property)

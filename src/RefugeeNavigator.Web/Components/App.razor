@@ -5,6 +5,7 @@
 <html lang="@CultureInfo.CurrentUICulture.TwoLetterISOLanguageName">
 <head>
     <meta charset="utf-8" />
+    <script src="/theme.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
     <link rel="stylesheet" href="@Assets["app.css"]" />
@@ -16,5 +17,14 @@
     <SiteHeader />
     <Routes />
     <script src="@Assets["_framework/blazor.web.js"]"></script>
+    <script>
+        window.syncThemeToggle();
+    </script>
+    <script>
+        Blazor.addEventListener("enhancedload", () => {
+            window.applyEffectiveTheme();
+            window.syncThemeToggle();
+        });
+    </script>
 </body>
 </html>

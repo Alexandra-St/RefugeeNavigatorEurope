@@ -15,20 +15,20 @@
     gap: 0.4rem;
     padding: 0.25rem 0.35rem;
     border-radius: 0.25rem;
-    color: #155eef;
+    color: var(--color-primary);
     font-weight: 650;
     line-height: 1.4;
     text-decoration: none;
 }
 
 .home-return-link:hover {
-    color: #0b45b5;
+    color: var(--color-primary-hover);
     text-decoration: underline;
     text-underline-offset: 0.2em;
 }
 
 .home-return-link:focus-visible {
-    outline: 3px solid #155eef;
+    outline: 3px solid var(--color-primary);
     outline-offset: 2px;
 }
 

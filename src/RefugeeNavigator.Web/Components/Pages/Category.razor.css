@@ -1,8 +1,8 @@
 .category-page {
     min-height: 100vh;
     padding: 1.75rem 1.5rem 2rem;
-    background: #f5f8fc;
-    color: #172b4d;
+    background: var(--color-page);
+    color: var(--color-text);
 }
 
 .page-content {
@@ -14,20 +14,20 @@
     display: inline-block;
     margin-bottom: 1.25rem;
     border-radius: 0.2rem;
-    color: #155eef;
+    color: var(--color-primary);
     font-weight: 650;
     line-height: 1.5;
     text-decoration: none;
 }
 
 .back-link:hover {
-    color: #0b45b5;
+    color: var(--color-primary-hover);
     text-decoration: underline;
     text-underline-offset: 0.2em;
 }
 
 .back-link:focus-visible {
-    outline: 3px solid #155eef;
+    outline: 3px solid var(--color-primary);
     outline-offset: 4px;
 }
 
@@ -39,7 +39,7 @@
 
 .eyebrow {
     margin: 0 0 0.6rem;
-    color: #155eef;
+    color: var(--color-primary);
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.1em;
@@ -48,7 +48,7 @@
 
 .category-header h1 {
     margin: 0;
-    color: #102a56;
+    color: var(--color-heading);
     font-size: clamp(2.2rem, 5vw, 3.5rem);
     font-weight: 700;
     letter-spacing: -0.04em;
@@ -59,7 +59,7 @@
 .subtitle {
     max-width: 42rem;
     margin: 1rem auto 0;
-    color: #425675;
+    color: var(--color-muted);
     font-size: clamp(1.1rem, 2vw, 1.35rem);
 }
 
@@ -73,16 +73,16 @@
     max-width: 54rem;
     margin: -0.5rem auto 2rem;
     padding: 1.25rem 1.5rem;
-    border: 1px solid #b8cdef;
-    border-left: 5px solid #155eef;
+    border: 1px solid var(--color-border-accent);
+    border-left: 5px solid var(--color-primary);
     border-radius: 0.85rem;
-    background: #e9f1ff;
+    background: var(--color-callout);
     box-shadow: 0 4px 14px rgb(16 42 86 / 8%);
 }
 
 .guide-callout h2 {
     margin: 0;
-    color: #102a56;
+    color: var(--color-heading);
     font-size: clamp(1.2rem, 2.5vw, 1.35rem);
     font-weight: 700;
     line-height: 1.3;
@@ -90,7 +90,7 @@
 
 .guide-callout p {
     margin: 0.35rem 0 0;
-    color: #425675;
+    color: var(--color-muted);
     line-height: 1.5;
 }
 
@@ -102,9 +102,9 @@
     align-items: center;
     justify-content: center;
     padding: 0.6rem 1rem;
-    border: 1px solid #155eef;
+    border: 1px solid var(--color-primary);
     border-radius: 0.45rem;
-    background: #155eef;
+    background: var(--color-button);
     color: #fff;
     font-weight: 700;
     line-height: 1.3;
@@ -114,12 +114,12 @@
 }
 
 .guide-callout a:hover {
-    border-color: #0b45b5;
-    background: #0b45b5;
+    border-color: var(--color-primary-hover);
+    background: var(--color-button-hover);
 }
 
 .guide-callout a:focus-visible {
-    outline: 3px solid #102a56;
+    outline: 3px solid var(--color-heading);
     outline-offset: 3px;
 }
 
@@ -127,16 +127,16 @@
     max-width: 54rem;
     margin: 0 auto;
     padding: 2rem;
-    border: 1px solid #d8e1ee;
+    border: 1px solid var(--color-border);
     border-radius: 0.85rem;
-    background: #fff;
+    background: var(--color-surface);
     box-shadow: 0 2px 8px rgb(16 42 86 / 4%);
     text-align: center;
 }
 
 .content-placeholder h2 {
     margin: 0;
-    color: #102a56;
+    color: var(--color-heading);
     font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 700;
     letter-spacing: -0.025em;
@@ -144,7 +144,7 @@
 
 .content-placeholder p {
     margin: 0.8rem 0 0;
-    color: #425675;
+    color: var(--color-muted);
 }
 
 .information-entries {
@@ -154,16 +154,16 @@
 
 .information-entry {
     padding: 1.75rem;
-    border: 1px solid #d8e1ee;
+    border: 1px solid var(--color-border);
     border-radius: 0.85rem;
-    background: #fff;
+    background: var(--color-surface);
     box-shadow: 0 2px 8px rgb(16 42 86 / 4%);
 }
 
 .information-entry h2,
 .entry-sources > summary {
     margin: 0;
-    color: #102a56;
+    color: var(--color-heading);
     font-weight: 700;
 }
 
@@ -173,7 +173,7 @@
 
 .entry-summary {
     margin: 0.75rem 0 0;
-    color: #263f66;
+    color: var(--color-secondary);
     font-size: 1.1rem;
     font-weight: 600;
 }
@@ -181,7 +181,7 @@
 .entry-content {
     max-width: 72ch;
     margin: 1rem 0 0;
-    color: #425675;
+    color: var(--color-muted);
     line-height: 1.75;
     white-space: pre-line;
     overflow-wrap: anywhere;
@@ -195,9 +195,9 @@
     max-width: 100%;
     margin-top: 1rem;
     overflow-x: auto;
-    border: 1px solid #d8e1ee;
+    border: 1px solid var(--color-border);
     border-radius: 0.5rem;
-    color: #425675;
+    color: var(--color-muted);
     -webkit-overflow-scrolling: touch;
 }
 
@@ -211,14 +211,14 @@
 .entry-table td {
     min-width: 8rem;
     padding: 0.65rem 0.85rem;
-    border-bottom: 1px solid #d8e1ee;
+    border-bottom: 1px solid var(--color-border);
     text-align: left;
     vertical-align: top;
 }
 
 .entry-table th {
-    background: #f2f6fc;
-    color: #102a56;
+    background: var(--color-table-header);
+    color: var(--color-heading);
     font-weight: 700;
 }
 
@@ -237,7 +237,7 @@
 .entry-section-heading {
     max-width: 72ch;
     margin: 1.5rem 0 0.55rem;
-    color: #102a56;
+    color: var(--color-heading);
     font-size: 1.2rem;
     font-weight: 700;
     line-height: 1.4;
@@ -257,7 +257,7 @@
     max-width: 72ch;
     margin: 0.8rem 0 0;
     padding-left: 1.5rem;
-    color: #425675;
+    color: var(--color-muted);
     line-height: 1.7;
 }
 
@@ -276,7 +276,7 @@
 }
 
 .article-source-link {
-    color: #155eef;
+    color: var(--color-primary);
     font-weight: 650;
     text-decoration: underline;
     text-underline-offset: 0.15em;
@@ -285,15 +285,15 @@
 .article-inline-code {
     padding: 0.08em 0.3em;
     border-radius: 0.25rem;
-    background: #eef2f8;
-    color: #263f66;
+    background: var(--color-code-bg);
+    color: var(--color-secondary);
     font-size: 0.92em;
     overflow-wrap: anywhere;
 }
 
 .article-source-link:focus-visible {
     border-radius: 0.15rem;
-    outline: 3px solid #155eef;
+    outline: 3px solid var(--color-primary);
     outline-offset: 2px;
 }
 
@@ -310,20 +310,20 @@
 }
 
 .entry-metadata dt {
-    color: #425675;
+    color: var(--color-muted);
     font-size: 0.9rem;
     font-weight: 650;
 }
 
 .entry-metadata dd {
     margin: 0;
-    color: #172b4d;
+    color: var(--color-text);
 }
 
 .entry-sources {
     margin-top: 1.5rem;
     padding-top: 1.25rem;
-    border-top: 1px solid #d8e1ee;
+    border-top: 1px solid var(--color-border);
 }
 
 .entry-sources > summary {
@@ -333,21 +333,21 @@
 
 .entry-sources > summary:focus-visible,
 .article-toc > summary:focus-visible {
-    outline: 3px solid #155eef;
+    outline: 3px solid var(--color-primary);
     outline-offset: 3px;
 }
 
 .article-toc {
     max-width: 72ch;
     margin-top: 0.85rem;
-    border: 1px solid #d8e1ee;
+    border: 1px solid var(--color-border);
     border-radius: 0.55rem;
     padding: 0.55rem 0.75rem;
-    color: #263f66;
+    color: var(--color-secondary);
 }
 
 .article-toc > summary {
-    color: #155eef;
+    color: var(--color-primary);
     cursor: pointer;
     font-weight: 650;
 }
@@ -360,12 +360,12 @@
 }
 
 .article-toc a {
-    color: #155eef;
+    color: var(--color-primary);
     overflow-wrap: anywhere;
 }
 
 .article-toc a:focus-visible {
-    outline: 3px solid #155eef;
+    outline: 3px solid var(--color-primary);
     outline-offset: 2px;
 }
 
@@ -381,36 +381,36 @@
 }
 
 .entry-sources a {
-    color: #155eef;
+    color: var(--color-primary);
     font-weight: 650;
     overflow-wrap: anywhere;
 }
 
 .entry-sources a:hover {
-    color: #0b45b5;
+    color: var(--color-primary-hover);
     text-decoration-thickness: 2px;
     text-underline-offset: 0.15em;
 }
 
 .entry-sources a:focus-visible {
-    outline: 3px solid #155eef;
+    outline: 3px solid var(--color-primary);
     outline-offset: 3px;
 }
 
 .source-checked {
     display: block;
     margin-top: 0.2rem;
-    color: #425675;
+    color: var(--color-muted);
     font-size: 0.9rem;
 }
 
 .information-note {
     margin-top: 2rem;
     padding: 1rem 1.2rem;
-    border-left: 4px solid #3978df;
+    border-left: 4px solid var(--color-primary);
     border-radius: 0.25rem;
-    background: #e9f1ff;
-    color: #263f66;
+    background: var(--color-callout);
+    color: var(--color-secondary);
 }
 
 .information-note p {
