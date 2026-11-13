@@ -161,6 +161,19 @@ public sealed class CategoryRenderingTests
         Assert.Contains("datetime=\"2024-02-03T04:05:00", html);
     }
 
+    [Fact]
+    public async Task RendersInlineCodeInSummaryAndKeepsPlainSummaryText()
+    {
+        var entry = FixtureEntry(Guid.NewGuid(), summary: "Status is `menedékes`.");
+        var catalog = await CreateCatalogAsync([entry]);
+
+        var html = WebUtility.HtmlDecode(await RenderAsync(catalog, "en"));
+
+        Assert.Matches("<p class=\"entry-summary\"[^>]*>\\s*Status is <code\\b[^>]*class=\"article-inline-code\"[^>]*>menedékes</code>\\.\\s*</p>", html);
+        Assert.DoesNotContain("`menedékes`", html);
+        Assert.Contains("Body en", html);
+    }
+
     [Theory]
     [InlineData("uk")]
     [InlineData("en")]
@@ -535,6 +548,13 @@ public sealed class CategoryRenderingTests
         Assert.Matches("<code\\b[^>]*class=\"article-inline-code\"[^>]*>menedékes</code>", english);
         Assert.Matches("<code\\b[^>]*class=\"article-inline-code\"[^>]*>szolgáltatást kérő</code>", english);
         Assert.Matches("<code\\b[^>]*class=\"article-inline-code\"[^>]*>08E</code>", english);
+        var englishSummary = Regex.Matches(english, "<p class=\"entry-summary\"[^>]*>.*?</p>", RegexOptions.Singleline)
+            .Cast<Match>()
+            .Select(match => match.Value)
+            .First(summary => summary.Contains("menedékes", StringComparison.Ordinal));
+        Assert.Matches("<code\\b[^>]*class=\"article-inline-code\"[^>]*>menedékes</code>", englishSummary);
+        Assert.Matches("<code\\b[^>]*class=\"article-inline-code\"[^>]*>szolgáltatást kérő</code>", englishSummary);
+        Assert.DoesNotContain("`", englishSummary);
         var englishArticleContent = string.Join("\n", Regex.Matches(english, "<p class=\"entry-content\"[^>]*>.*?</p>", RegexOptions.Singleline)
             .Cast<Match>()
             .Select(match => match.Value));
@@ -728,11 +748,13 @@ public sealed class CategoryRenderingTests
         Guid countryId = default,
         Guid categoryId = default,
         string title = "Title",
+        string summary = "Summary",
         string content = "Body",
         VerificationStatus status = VerificationStatus.NeedsReview) =>
         new(
             new InformationEntry(id, countryId == default ? CountryId : countryId, categoryId == default ? CategoryId : categoryId),
             title,
+            summary,
             content,
             status);
 
@@ -762,7 +784,7 @@ public sealed class CategoryRenderingTests
                     fixture.Entry.Id,
                     language,
                     $"{fixture.Title} {language}",
-                    $"Summary {language}",
+                    fixture.Summary == "Summary" ? $"Summary {language}" : fixture.Summary,
                     fixture.Content == "Body" ? $"Body {language}" : fixture.Content,
                     statusOverrides is not null && statusOverrides.TryGetValue((fixture.Entry.Id, language), out var statusOverride)
                         ? statusOverride
@@ -920,6 +942,7 @@ public sealed class CategoryRenderingTests
     private sealed record EntryFixture(
         InformationEntry Entry,
         string Title,
+        string Summary,
         string Content,
         VerificationStatus Status);
 

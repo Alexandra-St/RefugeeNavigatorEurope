@@ -158,7 +158,7 @@ internal static class ArticleContentFormatter
         return cells.Count >= 2;
     }
 
-    private static IReadOnlyList<ArticleContentInlinePart> ParseInline(
+    internal static IReadOnlyList<ArticleContentInlinePart> ParseInline(
         string text,
         Guid informationEntryId,
         IReadOnlyCollection<OfficialSource> sources)

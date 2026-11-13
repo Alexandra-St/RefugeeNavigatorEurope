@@ -54,7 +54,12 @@
                     {
                         <article class="information-entry" aria-labelledby="entry-heading-@item.Entry.Id.ToString("N")" id="entry-@item.Entry.Id.ToString("N")">
                             <h2 id="entry-heading-@item.Entry.Id.ToString("N")">@item.Translation.Title</h2>
-                            <p class="entry-summary">@item.Translation.Summary</p>
+                            <p class="entry-summary">
+                                @foreach (var part in ArticleContentFormatter.ParseInline(item.Translation.Summary, item.Entry.Id, item.Sources))
+                                {
+                                    @RenderArticleInlinePart(part)
+                                }
+                            </p>
                             @{
                                 var contentBlocks = ArticleContentFormatter.Parse(item.Translation.Content, item.Entry.Id, item.Sources);
                                 var sectionBlocks = contentBlocks.Where(block => block.Kind == ArticleContentBlockKind.Heading).ToArray();
