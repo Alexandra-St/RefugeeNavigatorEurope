@@ -24,6 +24,8 @@ public sealed class AlphaPreviewPageTests
     private static readonly ResourceManager Resources = new(
         "RefugeeNavigator.Web.Resources.Localization.SharedResource",
         typeof(SharedResource).Assembly);
+    private static readonly Lazy<Task<CatalogData>> RegisteredCountryCatalog = new(
+        () => new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync());
 
     [Theory]
     [InlineData("uk", "Пошук інформації", "Порівняння країн", "Відкрити пошук", "Попередній перегляд")]
@@ -233,6 +235,31 @@ public sealed class AlphaPreviewPageTests
             var linkText = Regex.Replace(link.Groups["content"].Value, "<span[^>]*>.*?</span>", string.Empty, RegexOptions.Singleline);
             Assert.Equal(string.Format(CultureInfo.GetCultureInfo(language), linkLabelTemplate, country.Name), WebUtility.HtmlDecode(linkText).Trim());
         }
+    }
+
+    [Fact]
+    public async Task HomepageShowsFlagsForRegisteredCountriesAndKeepsUnknownSlugFallback()
+    {
+        var catalog = await RegisteredCountryCatalog.Value;
+        var html = WebUtility.HtmlDecode(await RenderAsync<Home>("en", catalog: catalog));
+
+        AssertCountryFlag(html, "netherlands", "🇳🇱");
+        AssertCountryFlag(html, "romania", "🇷🇴");
+        AssertCountryFlag(html, "slovakia", "🇸🇰");
+        AssertCountryFlag(html, "hungary", "🇭🇺");
+        var countryFlagMethod = typeof(Home).GetMethod("CountryFlag", BindingFlags.NonPublic | BindingFlags.Static);
+        Assert.NotNull(countryFlagMethod);
+        Assert.Equal(string.Empty, countryFlagMethod!.Invoke(null, ["unknown-country"]));
+    }
+
+    private static void AssertCountryFlag(string html, string slug, string flag)
+    {
+        var countryCard = Regex.Matches(html, @"<article class=""country-card""[^>]*>(?<content>.*?)</article>", RegexOptions.Singleline)
+            .Cast<Match>()
+            .Select(match => match.Groups["content"].Value)
+            .SingleOrDefault(content => content.Contains($"href=\"/countries/{slug}\"", StringComparison.Ordinal));
+        Assert.NotNull(countryCard);
+        Assert.Contains(flag, countryCard);
     }
 
     [Theory]
@@ -530,7 +557,8 @@ public sealed class AlphaPreviewPageTests
         IDictionary<string, object?>? parameters = null,
         string currentPath = "/",
         StepByStepGuideCatalog? guides = null,
-        string environmentName = "Development")
+        string environmentName = "Development",
+        CatalogData? catalog = null)
         where TComponent : IComponent
     {
         var originalCulture = CultureInfo.CurrentCulture;
@@ -544,7 +572,7 @@ public sealed class AlphaPreviewPageTests
             var services = new ServiceCollection();
             services.AddLogging();
             services.AddLocalization(options => options.ResourcesPath = "Resources");
-            services.AddSingleton(CreateCatalog());
+            services.AddSingleton(catalog ?? CreateCatalog());
             await ComparisonTestServices.RegisterAsync(services);
             services.AddSingleton(guides ?? new StepByStepGuideCatalog([]));
             services.AddSingleton<IWebHostEnvironment>(new TestWebHostEnvironment(environmentName));
