@@ -91,6 +91,23 @@ public sealed class ArticleSearchTests
         Assert.DoesNotContain("Review status", WebUtility.HtmlDecode(html));
     }
 
+    [Fact]
+    public async Task SearchPageRendersInlineFormattingInSummaries()
+    {
+        var html = await RenderAsync(
+            CreateCatalog(firstSummary: "Work with `menedékes` and **official** support."),
+            "en",
+            "?country=denmark");
+
+        var visibleHtml = WebUtility.HtmlDecode(html);
+        Assert.Contains("search-inline-code", visibleHtml);
+        Assert.Contains("<strong", visibleHtml);
+        Assert.Contains("menedékes</code>", visibleHtml);
+        Assert.Contains("official</strong>", visibleHtml);
+        Assert.DoesNotContain("`menedékes`", visibleHtml);
+        Assert.DoesNotContain("**official**", visibleHtml);
+    }
+
     [Theory]
     [InlineData("en", "Needs review", "May be outdated", "Translation status", "Preview", "early search")]
     [InlineData("uk", "Потребує перевірки", "Може бути застарілою", "Статус перекладу", "Попередній перегляд", "початкова версія пошуку")]
@@ -150,7 +167,7 @@ public sealed class ArticleSearchTests
         Assert.Contains("No articles match these search criteria.", noMatchesHtml);
     }
 
-    private static CatalogData CreateCatalog(bool includeEntries = true)
+    private static CatalogData CreateCatalog(bool includeEntries = true, string? firstSummary = null)
     {
         var countries = new[]
         {
@@ -172,7 +189,7 @@ public sealed class ArticleSearchTests
         var translations = includeEntries
             ? new[]
             {
-                Translation(FirstEntryId, "en", "Employment guide", "Job <guide> & practical", "Employers share job opportunities.", VerificationStatus.Verified),
+                Translation(FirstEntryId, "en", "Employment guide", firstSummary ?? "Job <guide> & practical", "Employers share job opportunities.", VerificationStatus.Verified),
                 Translation(FirstEntryId, "uk", "Працевлаштування", "Робота", "Роботодавці публікують вакансії.", VerificationStatus.Verified),
                 Translation(FirstEntryId, "ru", "Трудоустройство", "Работа", "Работодатели публикуют вакансии.", VerificationStatus.Verified),
                 Translation(SecondEntryId, "en", "Another article", "Medical help", "Find a clinic.", VerificationStatus.NeedsReview),

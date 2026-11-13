@@ -41,7 +41,7 @@ The support is tied to the temporary-protection period and its own conditions. I
 
 For an immediate basic-needs emergency, the reviewed research does not establish a national same-day cash route or hotline. Contact the local municipality/social service immediately and explain the emergency. A narrow statutory emergency safeguard applies where life or physical integrity is in immediate danger; it is not a guaranteed same-day cash payment, fixed amount or universal food programme. [[source:1205ed96-21f4-5d7e-8f77-cb5bb35a8c6d|Emergency assistance boundary]] [[source:1107f603-269f-5132-8561-9acc7236bf00|European Social Charter status relevant to emergency scope]]
 
-### Family and child benefits
+## Family and child benefits
 
 Temporary protection by itself is not listed as a standalone qualifying status in the Hungarian Family Support Act. TP alone therefore does not establish entitlement to `családi pótlék` (family allowance), `anyasági támogatás` (maternity support), GYES or GYET. A person may qualify through Hungarian citizenship, another covered residence/status or legal basis, or a benefit-specific condition. The same boundary applies to a pending TP applicant. Ask the competent government office or Hungarian State Treasury (MÁK) to assess the person's actual basis. [[source:5d022371-5bc2-5752-8437-af703d7de480|Family Support Act status categories]] [[source:01857427-6878-54fc-8dae-fcd56dee7695|Family allowance guidance]]
 
@@ -118,7 +118,7 @@ Content:
 
 У разі термінової нестачі базових засобів дослідження не встановлює загальнонаціонального маршруту одноразової виплати того ж дня чи гарячої лінії. Негайно зверніться до муніципалітету/соціальної служби й поясніть ситуацію. Вузька законодавча гарантія екстреної допомоги діє, коли є безпосередня загроза життю або фізичній недоторканності; це не гарантована виплата того ж дня, фіксована сума чи універсальна програма харчової допомоги. [[source:1205ed96-21f4-5d7e-8f77-cb5bb35a8c6d|Межі екстреної допомоги]] [[source:1107f603-269f-5132-8561-9acc7236bf00|Статус Європейської соціальної хартії щодо екстреної сфери]]
 
-### Сімейні виплати та допомога на дітей
+## Сімейні виплати та допомога на дітей
 
 Сам тимчасовий захист не зазначений як окрема підстава для права на виплати в угорському Законі про підтримку сімей. Тому одного TP недостатньо для права на `családi pótlék` (сімейну допомогу), `anyasági támogatás` (допомогу у зв’язку з материнством), GYES чи GYET. Людина може мати право на виплату через громадянство Угорщини, інший охоплений статус/дозвіл на проживання чи правову підставу або умови конкретної виплати. Та сама межа діє для заявника, чию заяву TP ще розглядають. Попросіть компетентний державний орган або Угорське державне казначейство (MÁK) оцінити саме вашу підставу. [[source:5d022371-5bc2-5752-8437-af703d7de480|Категорії статусу за Законом про підтримку сімей]] [[source:01857427-6878-54fc-8dae-fcd56dee7695|Інструкція щодо сімейної допомоги]]
 
@@ -195,7 +195,7 @@ Content:
 
 При срочной нехватке предметов первой необходимости исследование не устанавливает общенациональный маршрут выплаты денег в тот же день или горячую линию. Немедленно обратитесь в муниципалитет/социальную службу и объясните ситуацию. Узкая законодательная гарантия экстренной помощи действует при непосредственной угрозе жизни или физической неприкосновенности; это не гарантированная выплата в тот же день, фиксированная сумма или всеобщая программа продовольственной помощи. [[source:1205ed96-21f4-5d7e-8f77-cb5bb35a8c6d|Границы экстренной помощи]] [[source:1107f603-269f-5132-8561-9acc7236bf00|Статус Европейской социальной хартии для экстренной сферы]]
 
-### Семейные выплаты и пособия на детей
+## Семейные выплаты и пособия на детей
 
 Сам временный статус не указан как отдельная квалифицирующая категория в венгерском Законе о поддержке семей. Поэтому одного TP недостаточно для права на `családi pótlék` (семейное пособие), `anyasági támogatás` (пособие по материнству), GYES или GYET. Человек может иметь право на выплату на основании гражданства Венгрии, другого охватываемого статуса/вида на жительство или правового основания либо условий конкретной выплаты. То же ограничение действует для заявителя, чьё заявление на TP ещё рассматривается. Попросите компетентный госорган или Государственное казначейство Венгрии (MÁK) оценить конкретное основание. [[source:5d022371-5bc2-5752-8437-af703d7de480|Категории статуса по Закону о поддержке семей]] [[source:01857427-6878-54fc-8dae-fcd56dee7695|Информация о семейном пособии]]
 

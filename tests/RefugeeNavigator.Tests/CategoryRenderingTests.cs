@@ -658,6 +658,21 @@ public sealed class CategoryRenderingTests
     }
 
     [Fact]
+    public async Task RendersHungarySocialAssistanceFamilyBenefitsHeadingWithoutMarkdownMarkers()
+    {
+        var catalog = await ProductionCatalog.Value;
+        var html = WebUtility.HtmlDecode(await RenderAsync(
+            catalog,
+            "en",
+            "hungary",
+            "social-assistance",
+            environmentName: "Production"));
+
+        Assert.Matches("<h3\\b[^>]*class=\"entry-section-heading\"[^>]*>Family and child benefits</h3>", html);
+        Assert.DoesNotContain("### Family and child benefits", html);
+    }
+
+    [Fact]
     public async Task InvalidUnownedOrNonHttpsSourceTokensRemainNonClickableText()
     {
         var entry = FixtureEntry(Guid.NewGuid());

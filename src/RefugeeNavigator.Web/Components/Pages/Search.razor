@@ -1,4 +1,5 @@
 @page "/search"
+@using Microsoft.AspNetCore.Components
 @using System.Globalization
 @using Microsoft.AspNetCore.Hosting
 @using Microsoft.AspNetCore.WebUtilities
@@ -85,9 +86,17 @@
                     {
                         var countryName = Localizer[CatalogLocalizationKeyResolver.CountryName(result.Country)];
                         var categoryName = Localizer[CatalogLocalizationKeyResolver.CategoryName(result.Category)];
+                        var resultSources = Catalog.OfficialSources
+                            .Where(source => source.InformationEntryId == result.Entry.Id)
+                            .ToArray();
                         <article class="result-card">
                             <h3><a href="/countries/@result.Country.Slug/categories/@result.Category.Slug">@result.Translation.Title</a></h3>
-                            <p class="result-summary">@result.Translation.Summary</p>
+                            <p class="result-summary">
+                                @foreach (var part in ArticleContentFormatter.ParseInline(result.Translation.Summary, result.Entry.Id, resultSources))
+                                {
+                                    @RenderSummaryPart(part)
+                                }
+                            </p>
                             <dl class="result-metadata">
                                 <div><dt>@Localizer["Search.ResultCountry"]</dt><dd>@countryName</dd></div>
                                 <div><dt>@Localizer["Search.ResultCategory"]</dt><dd>@categoryName</dd></div>
@@ -130,4 +139,35 @@
             string.Equals(country.Slug, CountrySlug, StringComparison.OrdinalIgnoreCase))
                 ? VerificationStatus.NeedsReview.ToString()
                 : VerificationStatus.Verified.ToString();
+
+    private static RenderFragment RenderSummaryPart(ArticleContentInlinePart part) => builder =>
+    {
+        switch (part)
+        {
+            case ArticleContentSourceLink sourceLink:
+                builder.OpenElement(0, "a");
+                builder.AddAttribute(1, "class", "result-summary-source-link");
+                builder.AddAttribute(2, "href", sourceLink.Url.AbsoluteUri);
+                builder.AddAttribute(3, "target", "_blank");
+                builder.AddAttribute(4, "rel", "noopener noreferrer");
+                builder.AddContent(5, sourceLink.Label);
+                builder.AddContent(6, " ↗");
+                builder.CloseElement();
+                break;
+            case ArticleContentStrong strong:
+                builder.OpenElement(0, "strong");
+                builder.AddContent(1, strong.Value);
+                builder.CloseElement();
+                break;
+            case ArticleContentCode code:
+                builder.OpenElement(0, "code");
+                builder.AddAttribute(1, "class", "search-inline-code");
+                builder.AddContent(2, code.Value);
+                builder.CloseElement();
+                break;
+            case ArticleContentText text:
+                builder.AddContent(0, text.Value);
+                break;
+        }
+    };
 }
