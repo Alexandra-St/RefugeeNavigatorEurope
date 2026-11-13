@@ -7,6 +7,7 @@ internal static class ArticleContentFormatter
 {
     private static readonly Regex BlockSeparator = new(@"\r?\n[^\S\r\n]*(?:\r?\n)+", RegexOptions.CultureInvariant);
     private static readonly Regex InlineSourceToken = new(@"\[\[source:(?<id>[^|\]\r\n]+)\|(?<label>[^\]\r\n]*)\]\]", RegexOptions.CultureInvariant);
+    private static readonly Regex InlineBoldToken = new(@"\*\*(?<text>[^*\r\n]+)\*\*", RegexOptions.CultureInvariant);
 
     public static IReadOnlyList<ArticleContentBlock> Parse(
         string? content,
@@ -78,7 +79,7 @@ internal static class ArticleContentFormatter
         {
             if (match.Index > position)
             {
-                result.Add(new ArticleContentText(text[position..match.Index]));
+                AddTextParts(result, text[position..match.Index]);
             }
 
             var label = match.Groups["label"].Value;
@@ -108,10 +109,30 @@ internal static class ArticleContentFormatter
 
         if (position < text.Length)
         {
-            result.Add(new ArticleContentText(text[position..]));
+            AddTextParts(result, text[position..]);
         }
 
         return result;
+    }
+
+    private static void AddTextParts(List<ArticleContentInlinePart> result, string text)
+    {
+        var position = 0;
+        foreach (Match match in InlineBoldToken.Matches(text))
+        {
+            if (match.Index > position)
+            {
+                result.Add(new ArticleContentText(text[position..match.Index]));
+            }
+
+            result.Add(new ArticleContentStrong(match.Groups["text"].Value));
+            position = match.Index + match.Length;
+        }
+
+        if (position < text.Length)
+        {
+            result.Add(new ArticleContentText(text[position..]));
+        }
     }
 }
 
@@ -132,5 +153,7 @@ internal sealed record ArticleContentBlock(
 internal abstract record ArticleContentInlinePart;
 
 internal sealed record ArticleContentText(string Value) : ArticleContentInlinePart;
+
+internal sealed record ArticleContentStrong(string Value) : ArticleContentInlinePart;
 
 internal sealed record ArticleContentSourceLink(string Label, Uri Url) : ArticleContentInlinePart;

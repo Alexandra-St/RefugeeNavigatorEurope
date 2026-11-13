@@ -454,6 +454,64 @@ public sealed class CategoryRenderingTests
     }
 
     [Fact]
+    public async Task RendersParagraphBoldAlongsideOrdinaryTextAndOwnedSourceLink()
+    {
+        var entry = FixtureEntry(Guid.NewGuid());
+        var source = FixtureSource(Guid.NewGuid(), entry.Entry.Id, "Official guidance", "https://example.gov/guidance");
+        var content = $"**Work routes.** Ordinary text. [[source:{source.Id:D}|Official guidance]]";
+        var catalog = await CreateCatalogAsync([FixtureEntry(entry.Entry.Id, content: content)], [source]);
+
+        var html = await RenderAsync(catalog, "en");
+
+        Assert.Matches("<strong\\b[^>]*>Work routes\\.</strong>", html);
+        Assert.DoesNotContain("**Work routes.**", html);
+        Assert.Contains("Ordinary text.", ReadRenderedText(html));
+        Assert.Contains("class=\"article-source-link\"", html);
+        Assert.Contains($"href=\"{source.Url.AbsoluteUri}\"", html);
+        Assert.Contains("Official guidance", ReadRenderedText(html));
+    }
+
+    [Fact]
+    public async Task RendersBoldTextInsideUnorderedListItems()
+    {
+        var catalog = await CreateCatalogAsync([FixtureEntry(Guid.NewGuid(), content: "- **Important.** List text.")]);
+
+        var html = await RenderAsync(catalog, "en");
+        var listItem = Regex.Match(html, "<li\\b[^>]*>(?<item>.*?)</li>", RegexOptions.Singleline);
+
+        Assert.True(listItem.Success);
+        Assert.Matches("<strong\\b[^>]*>Important\\.</strong>", listItem.Groups["item"].Value);
+        Assert.Contains("List text.", WebUtility.HtmlDecode(listItem.Groups["item"].Value));
+    }
+
+    [Fact]
+    public async Task PreservesMalformedBoldMarkersAsLiteralText()
+    {
+        var catalog = await CreateCatalogAsync([FixtureEntry(Guid.NewGuid(), content: "**unfinished\n\n****")]);
+
+        var html = await RenderAsync(catalog, "en");
+
+        Assert.Equal(new[] { "**unfinished", "****" }, ReadContentParagraphs(html));
+        Assert.DoesNotContain("<strong", html);
+    }
+
+    [Fact]
+    public async Task RendersBoldInHungaryTemporaryProtectionArticleInDevelopment()
+    {
+        var catalog = await ProductionCatalog.Value;
+        var englishArticle = catalog.InformationEntryTranslations.Single(translation =>
+            translation.LanguageCode == "en" && translation.Content.Contains("**Work routes.**", StringComparison.Ordinal));
+
+        var html = await RenderAsync(catalog, "en", "hungary", "temporary-protection", environmentName: "Development");
+
+        Assert.Contains(englishArticle.Title, html);
+        Assert.Matches("<strong\\b[^>]*>Work routes\\.</strong>", html);
+        Assert.DoesNotContain("**Work routes.**", html);
+        Assert.Contains("class=\"article-source-link\"", html);
+        Assert.Contains("National Card guidance", ReadRenderedText(html));
+    }
+
+    [Fact]
     public async Task InvalidUnownedOrNonHttpsSourceTokensRemainNonClickableText()
     {
         var entry = FixtureEntry(Guid.NewGuid());

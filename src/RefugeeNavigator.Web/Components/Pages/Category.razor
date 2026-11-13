@@ -91,6 +91,10 @@
                                                         {
                                                             <a class="article-source-link" href="@sourceLink.Url.AbsoluteUri" target="_blank" rel="noopener noreferrer">@sourceLink.Label<span aria-hidden="true"> ↗</span><span class="visually-hidden"> (@Localizer["Common.OpensInNewTab"])</span></a>
                                                         }
+                                                        else if (part is ArticleContentStrong strong)
+                                                        {
+                                                            <strong>@strong.Value</strong>
+                                                        }
                                                         else if (part is ArticleContentText text)
                                                         {
                                                             @text.Value
@@ -107,6 +111,10 @@
                                                 if (part is ArticleContentSourceLink sourceLink)
                                                 {
                                                     <a class="article-source-link" href="@sourceLink.Url.AbsoluteUri" target="_blank" rel="noopener noreferrer">@sourceLink.Label<span aria-hidden="true"> ↗</span><span class="visually-hidden"> (@Localizer["Common.OpensInNewTab"])</span></a>
+                                                }
+                                                else if (part is ArticleContentStrong strong)
+                                                {
+                                                    <strong>@strong.Value</strong>
                                                 }
                                                 else if (part is ArticleContentText text)
                                                 {
