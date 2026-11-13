@@ -30,10 +30,10 @@ public sealed class BulgariaContentIntegrationTests
         Assert.Equal(CountryId, country.Id);
         Assert.Equal("Bulgaria", country.Name);
         Assert.Equal(18, catalog.Countries.Count);
-        Assert.Equal(138, catalog.InformationEntries.Count);
-        Assert.Equal(414, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(309, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(105, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(139, catalog.InformationEntries.Count);
+        Assert.Equal(417, catalog.InformationEntryTranslations.Count);
+        Assert.Equal(333, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(84, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == CountryId).ToArray();
@@ -61,7 +61,7 @@ public sealed class BulgariaContentIntegrationTests
         var development = CountryVisibility.GetVisibleCountries(catalog, true);
         Assert.Contains(production, item => item.Slug == "bulgaria");
         Assert.Contains(development, item => item.Slug == "bulgaria");
-        Assert.Equal(13, production.Count);
+        Assert.Equal(14, production.Count);
         Assert.Equal(18, development.Count);
     }
 
@@ -74,7 +74,7 @@ public sealed class BulgariaContentIntegrationTests
         var entryIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => entryIds.Contains(item.InformationEntryId)).ToArray();
         Assert.Equal(65, sources.Length);
-        Assert.Equal(1357, catalog.OfficialSources.Count);
+        Assert.Equal(1365, catalog.OfficialSources.Count);
         Assert.Equal(65, sources.Select(item => item.Id).Distinct().Count());
         var sourceById = catalog.OfficialSources.ToDictionary(item => item.Id);
         Assert.All(sources, item =>

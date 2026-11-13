@@ -1,5 +1,20 @@
 # Hungary Content Research Readiness — 12 November 2026
 
+## Follow-up status — 13 November 2026
+
+This follow-up supersedes the 12 November status below for the four named aspects only. HU-TP-01 has been prepared as a bounded editorial draft; no runtime catalog or Compare integration is included.
+
+| Aspect | Current state | Drafting boundary |
+|---|---|---|
+| `protection-scheme` | Resolved with qualification | State the defined groups; present current OIF/UNHCR guidance for military-aged men together with the EU rule for new grants from 5 August 2026; refer affected cases to OIF. |
+| `protection-application` | Resolved with qualification | Explain personal submission, optional data entry, required verification/recording/biometrics, available identity documents, and OIF/Kormányablak routes. No-document and unverified edge routes are not claimed. |
+| `residence-filing` | Resolved with qualification | Filing another permit does not itself end the existing Asylum-Act title; §1(3) ends it simultaneously with the new permit's grant. Filing location remains permit-specific. |
+| `housing-initial` | Resolved | Status update only. Housing details remain in HU-HOUSING-01 and are not imported into HU-TP-01. |
+
+**Current aggregate:** 0 blocked aspects; 3 ready; 21 ready with qualification. All eight topics are now ready with qualification. The prior detailed readiness sections retain the 12 November research snapshot and are superseded for these four rows by this dated update and the follow-up sections in the focused packages.
+
+**Follow-up sources:** the temporary-protection package adds `HU-TP-S17`; the residence-options package adds `HU-RES-S23` through `HU-RES-S25`. Aggregate source inventory: 128 rows (127 prior rows plus one TP and three residence-options rows).
+
 **Review scope:** Exactly the eight Hungary focused research packages listed in the inventory below.
 
 **Baseline:** `64ffda3f748380e4a9e6bb7d8a556026e295dba7`

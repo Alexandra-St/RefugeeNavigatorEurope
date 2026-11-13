@@ -638,6 +638,26 @@ public sealed class CategoryRenderingTests
     }
 
     [Fact]
+    public async Task RendersHungaryTemporaryProtectionApplicationDraftAndSourcesInDevelopment()
+    {
+        var catalog = await ProductionCatalog.Value;
+        var articleId = Guid.Parse("1bb2a2b8-cfe0-5595-8155-138443fade17");
+        var englishArticle = Assert.Single(catalog.InformationEntryTranslations, translation =>
+            translation.InformationEntryId == articleId && translation.LanguageCode == "en");
+
+        var html = WebUtility.HtmlDecode(await RenderAsync(catalog, "en", "hungary", "temporary-protection", environmentName: "Development"));
+
+        Assert.Contains(englishArticle.Title, html);
+        Assert.Contains("Hungary’s temporary-protection status (", html);
+        Assert.Contains("class=\"article-inline-code\">menedékes</code>", html);
+        Assert.Contains("class=\"entry-summary\"", html);
+        Assert.Contains("class=\"article-inline-code\"", html);
+        Assert.Contains("class=\"article-source-link\"", html);
+        Assert.Contains("href=\"https://oif.gov.hu/index.php/tajekoztatok/tajekoztato-menedekeskenti-kerelem-benyujtasarol-es-az-elektronikus-adatrogzitesi-felulet-hasznalatarol\"", html);
+        Assert.Contains("Hungary’s Asylum Act", ReadRenderedText(html));
+    }
+
+    [Fact]
     public async Task InvalidUnownedOrNonHttpsSourceTokensRemainNonClickableText()
     {
         var entry = FixtureEntry(Guid.NewGuid());

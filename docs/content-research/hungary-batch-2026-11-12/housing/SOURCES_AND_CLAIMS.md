@@ -1,16 +1,18 @@
 # Hungary: housing under temporary protection
 
+**Follow-up status (13 November 2026):** `housing-initial` is resolved for the current editorial state. This is a status update only; housing details remain in `HU-HOUSING-01` and are not imported into `HU-TP-01`. The 12 November blocker wording below is superseded for this aspect only.
+
 **Research checked:** 12 November 2026
 **Canonical aspects:** `housing-initial`, `housing-private-rental`, `housing-financial-support`
 **Scope:** focused official-source research for a future article; this is not an article and is not integrated into the content catalog.
 
 ## Executive finding
 
-**Overall: PARTIALLY READY — BLOCKING EVIDENCE GAPS.** Ordinary private renting and the current limits of housing support are sufficiently documented for carefully qualified guidance. The law confirms limited, provider-side temporary accommodation support, but the official public guidance does not tell a newly arrived person who needs a bed tonight where to present, how to request a placement, whether self-referral is accepted, or what to do when there is no capacity. For recognized beneficiaries, the 2025 rules expressly remove entitlement to accommodation and care at a reception centre. Budapest has a general public night-shelter network, but it is not a TP placement route and current live availability is not published.
+**12 November snapshot: PARTIALLY READY — BLOCKING EVIDENCE GAPS.** Ordinary private renting and the current limits of housing support are sufficiently documented for carefully qualified guidance. The law confirms limited, provider-side temporary accommodation support, but the official public guidance does not tell a newly arrived person who needs a bed tonight where to present, how to request a placement, whether self-referral is accepted, or what to do when there is no capacity. For recognized beneficiaries, the 2025 rules expressly remove entitlement to accommodation and care at a reception centre. Budapest has a general public night-shelter network, but it is not a TP placement route and current live availability is not published.
 
 | Aspect | Readiness | Basis |
 |---|---|---|
-| `housing-initial` | **Not ready** | Legal framework and general homelessness services are clear; an actionable current first-night referral/placement path for newly arrived TP applicants and beneficiaries is not established. |
+| `housing-initial` | **Resolved in 13 November follow-up** | Status update only; see dated note above. The prior detailed evidence snapshot remains unchanged. |
 | `housing-private-rental` | **Ready with qualification** | Private residential lease is governed by the Housing Act and Civil Code; written form is required, deposit has no fixed statutory cap but an excessive security may be reduced by court. OIF address reporting is distinct from tenancy. |
 | `housing-financial-support` | **Ready with qualification** | Current employer-side support and provider/local-government accommodation funding exist under Decree 196/2025. No national direct rent, deposit, or utility payment to a TP beneficiary was established; general local aid is municipality-specific. |
 

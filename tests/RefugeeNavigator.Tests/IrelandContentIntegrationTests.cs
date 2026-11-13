@@ -57,10 +57,10 @@ public sealed class IrelandContentIntegrationTests
         Assert.Equal(CountryId, country.Id);
         Assert.Equal("Ireland", country.Name);
         Assert.Equal(18, catalog.Countries.Count);
-        Assert.Equal(138, catalog.InformationEntries.Count);
-        Assert.Equal(414, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(309, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(105, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(139, catalog.InformationEntries.Count);
+        Assert.Equal(417, catalog.InformationEntryTranslations.Count);
+        Assert.Equal(333, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(84, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == CountryId).ToArray();
@@ -104,7 +104,7 @@ public sealed class IrelandContentIntegrationTests
     public async Task IrelandTranslationsAndSeventyArticleOwnedSourcesMatchDraftsExactly()
     {
         var catalog = await Catalog.Value;
-        Assert.Equal(1357, catalog.OfficialSources.Count);
+        Assert.Equal(1365, catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         var repositoryRoot = FindRepositoryRoot();
         var draftsRoot = Path.Combine(repositoryRoot, "docs", "content-drafts", "ireland-v1");
@@ -169,7 +169,7 @@ public sealed class IrelandContentIntegrationTests
     {
         var catalog = await Catalog.Value;
         var productionHome = await RenderAsync<Home>("Production", language);
-        Assert.Equal(13, Regex.Matches(productionHome.Html, "class=\"country-card\"").Count);
+        Assert.Equal(14, Regex.Matches(productionHome.Html, "class=\"country-card\"").Count);
         Assert.DoesNotContain("href=\"/countries/ireland\"", productionHome.Html);
         var productionSearch = await RenderAsync<Search>("Production", language, "/search");
         Assert.DoesNotContain("ireland", SelectValues(productionSearch.Html, "country"));

@@ -46,10 +46,10 @@ public sealed class LithuaniaContentIntegrationTests
         Assert.Equal(CountryId, country.Id);
         Assert.Equal("Lithuania", country.Name);
         Assert.Equal(18, catalog.Countries.Count);
-        Assert.Equal(138, catalog.InformationEntries.Count);
-        Assert.Equal(414, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(309, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(105, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(139, catalog.InformationEntries.Count);
+        Assert.Equal(417, catalog.InformationEntryTranslations.Count);
+        Assert.Equal(333, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(84, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
         var entries = catalog.InformationEntries.Where(item => item.CountryId == CountryId).ToArray();
         Assert.Equal(8, entries.Length);
@@ -65,7 +65,7 @@ public sealed class LithuaniaContentIntegrationTests
         }
         Assert.Contains(CountryVisibility.GetVisibleCountries(catalog, false), c => c.Slug == "lithuania");
         Assert.Contains(CountryVisibility.GetVisibleCountries(catalog, true), c => c.Slug == "lithuania");
-        Assert.Equal(13, CountryVisibility.GetVisibleCountries(catalog, false).Count);
+        Assert.Equal(14, CountryVisibility.GetVisibleCountries(catalog, false).Count);
         Assert.Equal(18, CountryVisibility.GetVisibleCountries(catalog, true).Count);
     }
 
@@ -78,7 +78,7 @@ public sealed class LithuaniaContentIntegrationTests
         var ids = Articles.Values.Select(x => x.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(s => ids.Contains(s.InformationEntryId)).ToArray();
         Assert.Equal(71, sources.Length);
-        Assert.Equal(1357, catalog.OfficialSources.Count);
+        Assert.Equal(1365, catalog.OfficialSources.Count);
         Assert.Equal(71, sources.Select(s => s.Id).Distinct().Count());
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(s => s.Id).Distinct().Count());
         Assert.All(sources, s => { Assert.Contains(s.InformationEntryId, ids); Assert.Equal("https", s.Url.Scheme); Assert.Equal(new DateTimeOffset(2026, 11, 9, 0, 0, 0, TimeSpan.Zero), s.LastCheckedAt); });

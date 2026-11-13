@@ -67,7 +67,9 @@ public sealed class CountryVisibilityTests
         Assert.DoesNotContain("class=\"draft-preview-notice\"", compare.Html);
     }
 
-    private static readonly string[] AcceptedCountries =
+    private static readonly string[] ProductionCoreCountries =
+        ["denmark", "germany", "poland", "czechia", "spain", "sweden", "netherlands", "romania", "slovakia", "bulgaria", "austria", "italy", "lithuania", "hungary"];
+    private static readonly string[] ProductionCompareCountries =
         ["denmark", "germany", "poland", "czechia", "spain", "sweden", "netherlands", "romania", "slovakia", "bulgaria", "austria", "italy", "lithuania"];
     private static readonly Lazy<Task<CatalogData>> Catalog = new(
         () => new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync());
@@ -79,7 +81,7 @@ public sealed class CountryVisibilityTests
     public async Task OneVerifiedTranslationMakesACountryVisibleWithoutChangingTheCountryList()
     {
         var catalog = await Catalog.Value;
-        Assert.Equal(AcceptedCountries, CountryVisibility.GetVisibleCountries(catalog, false).Select(country => country.Slug));
+        Assert.Equal(ProductionCoreCountries, CountryVisibility.GetVisibleCountries(catalog, false).Select(country => country.Slug));
         Assert.Equal(catalog.Countries, CountryVisibility.GetVisibleCountries(catalog, true));
 
         var sweden = catalog.Countries.Single(country => country.Slug == "sweden");
@@ -97,17 +99,17 @@ public sealed class CountryVisibilityTests
     [InlineData("en")]
     [InlineData("uk")]
     [InlineData("ru")]
-    public async Task ProductionHomeAndFiltersExposeExactlyTheThirteenAcceptedCountries(string language)
+    public async Task ProductionHomeAndFiltersExposeCoreCountriesWhileCompareKeepsItsSeparateCountrySet(string language)
     {
         var home = await RenderAsync<Home>("Production", language);
-        Assert.Equal(13, Regex.Matches(home.Html, "class=\"country-card\"").Count);
-        foreach (var slug in AcceptedCountries) Assert.Contains($"href=\"/countries/{slug}\"", home.Html);
+        Assert.Equal(ProductionCoreCountries.Length, Regex.Matches(home.Html, "class=\"country-card\"").Count);
+        foreach (var slug in ProductionCoreCountries) Assert.Contains($"href=\"/countries/{slug}\"", home.Html);
 
         var search = await RenderAsync<Search>("Production", language, "/search");
-        Assert.Equal(AcceptedCountries, SelectValues(search.Html, "country"));
+        Assert.Equal(ProductionCoreCountries, SelectValues(search.Html, "country"));
         var compare = await RenderAsync<Compare>("Production", language, "/compare");
-        Assert.Equal(AcceptedCountries, SelectValues(compare.Html, "country1"));
-        Assert.Equal(AcceptedCountries, SelectValues(compare.Html, "country2"));
+        Assert.Equal(ProductionCompareCountries, SelectValues(compare.Html, "country1"));
+        Assert.Equal(ProductionCompareCountries, SelectValues(compare.Html, "country2"));
     }
 
     [Theory]
@@ -117,7 +119,7 @@ public sealed class CountryVisibilityTests
     public async Task ProductionDirectCountryAndCategoryRoutesExposeAllAcceptedCountries(string language)
     {
         var catalog = await Catalog.Value;
-        foreach (var slug in AcceptedCountries)
+        foreach (var slug in ProductionCoreCountries)
         {
             var overview = await RenderAsync<CountryOverview>("Production", language, $"/countries/{slug}",
                 new() { [nameof(CountryOverview.CountrySlug)] = slug });
@@ -135,6 +137,27 @@ public sealed class CountryVisibilityTests
                     });
                 Assert.False(result.NotFound);
                 Assert.Contains("class=\"category-page\"", result.Html);
+                if (slug == "hungary")
+                {
+                    var entries = catalog.InformationEntries.Where(entry => entry.CountryId ==
+                        catalog.Countries.Single(country => country.Slug == "hungary").Id).ToArray();
+                    var expectedCount = category.Slug switch
+                    {
+                        "temporary-protection" or "employment" => 2,
+                        "healthcare" or "housing" or "education" or "social-assistance" => 1,
+                        _ => throw new InvalidOperationException($"Unexpected Hungary category {category.Slug}.")
+                    };
+                    var categoryEntries = entries.Where(entry => entry.CategoryId == category.Id).ToArray();
+                    Assert.Equal(expectedCount, categoryEntries.Length);
+                    Assert.Equal(expectedCount, Regex.Matches(result.Html, "class=\"information-entry\"").Count);
+                    foreach (var entry in categoryEntries)
+                    {
+                        var translation = Assert.Single(catalog.InformationEntryTranslations,
+                            item => item.InformationEntryId == entry.Id && item.LanguageCode == language);
+                        Assert.Contains(translation.Title, result.Html);
+                        Assert.Contains($"id=\"entry-{entry.Id:N}\"", result.Html);
+                    }
+                }
             }
         }
     }
@@ -146,7 +169,7 @@ public sealed class CountryVisibilityTests
     public async Task ProductionSearchPreservesVerifiedResultsAndHeldArticleSuppression(string language)
     {
         var catalog = await Catalog.Value;
-        foreach (var slug in new[] { "czechia", "spain", "netherlands", "sweden", "romania", "bulgaria" })
+        foreach (var slug in new[] { "czechia", "spain", "netherlands", "sweden", "romania", "bulgaria", "hungary" })
         {
             var result = await RenderAsync<Search>("Production", language, $"/search?country={slug}");
             Assert.Equal(slug == "netherlands" ? 7 : 8,
@@ -186,6 +209,7 @@ public sealed class CountryVisibilityTests
         var catalog = await Catalog.Value;
         var home = await RenderAsync<Home>("Development", language);
         Assert.Equal(18, Regex.Matches(home.Html, "class=\"country-card\"").Count);
+        Assert.Contains("href=\"/countries/hungary\"", home.Html);
         Assert.Contains("href=\"/countries/lithuania\"", home.Html);
         Assert.Contains("href=\"/countries/sweden\"", home.Html);
         Assert.Contains("href=\"/countries/romania\"", home.Html);
@@ -193,6 +217,12 @@ public sealed class CountryVisibilityTests
             new() { [nameof(CountryOverview.CountrySlug)] = "sweden" });
         Assert.False(overview.NotFound);
         Assert.Equal(6, Regex.Matches(overview.Html, "class=\"category-card\"").Count);
+        var hungaryOverview = await RenderAsync<CountryOverview>("Development", language, "/countries/hungary",
+            new() { [nameof(CountryOverview.CountrySlug)] = "hungary" });
+        Assert.False(hungaryOverview.NotFound);
+        Assert.Equal(6, Regex.Matches(hungaryOverview.Html, "class=\"category-card\"").Count);
+        var hungarySearch = await RenderAsync<Search>("Development", language, "/search?country=hungary");
+        Assert.Equal(8, Regex.Matches(hungarySearch.Html, "class=\"result-card\"").Count);
         var category = await RenderAsync<Category>("Development", language, "/countries/sweden/categories/employment",
             new() { [nameof(Category.CountrySlug)] = "sweden", [nameof(Category.CategorySlug)] = "employment" });
         Assert.False(category.NotFound);
@@ -203,8 +233,8 @@ public sealed class CountryVisibilityTests
         Assert.Equal(8, ArticleSearch.Search(catalog, null, "romania", null, null, language).Count);
         var compare = await RenderAsync<Compare>("Development", language,
             "/compare?country1=sweden&country2=denmark&category=all");
-        Assert.Equal(AcceptedCountries, SelectValues(compare.Html, "country1"));
-        Assert.Equal(AcceptedCountries, SelectValues(compare.Html, "country2"));
+        Assert.Equal(ProductionCompareCountries, SelectValues(compare.Html, "country1"));
+        Assert.Equal(ProductionCompareCountries, SelectValues(compare.Html, "country2"));
         Assert.DoesNotContain("class=\"selection-message\"", compare.Html);
         Assert.Contains("class=\"draft-preview-notice\"", compare.Html);
         Assert.Contains("class=\"draft-label\"", compare.Html);
@@ -252,7 +282,7 @@ public sealed class CountryVisibilityTests
     {
         var catalog = await Catalog.Value;
         var home = await RenderAsync<Home>("Production", language);
-        Assert.Equal(13, Regex.Matches(home.Html, "class=\"country-card\"").Count);
+        Assert.Equal(ProductionCoreCountries.Length, Regex.Matches(home.Html, "class=\"country-card\"").Count);
         Assert.Contains("href=\"/countries/romania\"", home.Html);
 
         var overview = await RenderAsync<CountryOverview>("Production", language, "/countries/romania",

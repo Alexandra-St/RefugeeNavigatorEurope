@@ -6,12 +6,12 @@
 
 ## Executive finding
 
-**Overall: PARTIALLY READY — BLOCKING EVIDENCE GAPS.** Hungary's ordinary in-country filing route, personal appearance, identity capture, interim evidence, grant document, and current 4 March 2028 document validity are substantially documented by current OIF pages and Hungarian legislation. Two material matters prevent safe end-to-end applicant guidance: (1) a direct conflict between the binding EU rule for new grants to persons subject to Ukrainian military obligations and OIF's current statement that the older rules remain unchanged for conscription-liable Ukrainians; and (2) official sources do not provide a complete route for a person with no identity documents at all. Appointment and border/remote filing edge mechanics also remain unestablished.
+**Current follow-up status (13 November 2026): READY WITH QUALIFICATIONS for the bounded HU-TP-01 draft.** The prior 12 November review treated the military-rule conflict and an undocumented-applicant route as blockers to a broad guide. HU-TP-01 reports the core groups, presents current OIF/UNHCR guidance alongside the EU rule for new grants, directs affected military-obligation cases to OIF, and limits application instructions to the documented route. It does not promise a no-document fallback, guaranteed walk-in, or border/remote filing.
 
 | Aspect | Readiness | Basis |
 |---|---|---|
-| `protection-scheme` | **Not ready** | EU law effective for new grants from 5 August 2026 requires evidence of compliance with Ukrainian military obligations where applicable; current OIF guidance dated 3 November says conscription-liable Ukrainian citizens can still qualify under the old rules. |
-| `protection-application` | **Not ready** | Core in-country route is clear, but no complete official fallback is established for applicants with no identity documents; appointment and border/remote filing details are not fully established. |
+| `protection-scheme` | **Ready with qualification** | State the bounded cohorts. Present OIF/UNHCR guidance for military-aged men alongside EU Decision 2026/1912 for new grants; do not promise an outcome for a person subject to Ukrainian military obligations. |
+| `protection-application` | **Ready with qualification** | OIF's in-person filing sequence, available-document formulation and service routes are established. No-document fallback and appointment/border edge cases remain outside the article's claims. |
 | `protection-dates` | **Ready with qualification** | EU and Hungarian law, plus current OIF guidance, support 4 March 2028 for the relevant layers and no holder action. A live OIF validity page has an internally inconsistent stale 2027 statement. |
 
 ## 1. Exact Hungarian terminology
@@ -162,6 +162,8 @@ All sources below are official Hungarian government/OIF, Hungarian legislation, 
 | HU-TP-S15 | OIF / NDGAP | `Átmenetileg hosszabb várakozási idő fordulhat elő az ügyfélszolgálatokon!` | https://oif.gov.hu/hirek/atmenetileg-hosszabb-varakozasi-ido-fordulhat-elo-az-ugyfelszolgalatokon | Updated 2026-10-27 15:33 | 2026-11-12 | General large-office queue warning for non-booked visitors; does not make TP appointment mandatory. | Current general service notice |
 | HU-TP-S16 | OIF / NDGAP | `Tájékoztatás az EnterHungary felület helyreállításáról` | https://www.oif.gov.hu/hirek/tajekoztatas-az-enterhungary-felulet-helyreallitasarol | Updated 2026-11-03 14:15 | 2026-11-12 | General Enter Hungary restoration and availability; does not make TP application online. | Current general service notice |
 
+| HU-TP-S17 | UNHCR Hungary | `Temporary Protection status` | https://help.unhcr.org/hungary/temporary-protection/ | Page reviewed 2026-11-13 | 2026-11-13 | Core eligibility groups; public statement that previously eligible people remain eligible, including military-aged men; application at NDGAP and competent Government Office. Read military statement together with EU Decision 2026/1912. | Current public guidance; qualified by EU rule for new grants |
+
 ## 11. Claim ledger
 
 | Claim | Aspect | Supported? | Qualification | Source IDs |
@@ -200,25 +202,21 @@ All sources below are official Hungarian government/OIF, Hungarian legislation, 
 
 ## 12. Blocking gaps
 
-### `protection-scheme` — NOT READY
+### `protection-scheme` — READY WITH QUALIFICATION (follow-up 13 November 2026)
 
 - **Known:** The core cohorts and the Hungarian exclusion of the Article 2(2) permanent-residence group are stated in current national law. EU Decision 2026/1912 sets a military-obligation condition for new grants from 5 August 2026, with an exception for continuously protected existing beneficiaries.
-- **Missing:** An authoritative current Hungarian implementation clarifying whether/how the EU rule applies to newly recognized conscription-liable Ukrainian applicants.
-- **Why material:** It changes eligibility for a broad, foreseeable applicant group; a practical article cannot safely promise either access or exclusion.
-- **Official evidence needed:** Updated OIF instruction consistent with the EU decision or an authoritative Hungarian legal measure/interpretation resolving the conflict.
-- **What can still be safely drafted:** Core eligibility categories and documented exclusions, explicitly excluding any definitive statement about military-liable new applicants.
+- **Resolution for bounded drafting:** OIF's 3 November notice and UNHCR's current public Hungary guidance state that previously eligible groups remain eligible, including men of military age. EU Decision 2026/1912 separately requires compliance with military obligations for new grants from 5 August 2026 where applicable, while exempting people who continuously held TP in the same Member State before the specified date. The article presents both and directs an affected individual to OIF; it makes no individual eligibility determination.
+- **Scope limit:** This resolves safe wording for HU-TP-01, not an individual's military-obligation assessment. Core cohorts and documented national exclusions remain as listed above.
 
-### `protection-application` — NOT READY
+### `protection-application` — READY WITH QUALIFICATION (follow-up 13 November 2026)
 
 - **Known:** Ordinary in-country filing channel, authority, personal attendance, biometrics, alternative-to-passport examples, interim proof, and granted document are documented.
-- **Missing:** A complete no-identity-document route, including how identity/eligibility can be verified and whether an application can be initiated while evidence is obtained. TP-specific appointment/walk-in certainty and final border/abroad filing are also not established.
-- **Why material:** The missing-document case materially affects displaced applicants and a false promise or denial could send a reader into an unusable process. Appointment uncertainty can cause a wasted trip but does not negate the documented ordinary route.
-- **Official evidence needed:** Current OIF procedure for applicants with no identity evidence, plus explicit TP appointment/access and border/consular filing instructions if those routes are to be discussed.
-- **What can still be safely drafted:** Constrained instructions for applicants who have at least one identity document, directing them to verify appointment/access with OIF and explaining that online data capture is not filing.
+- **Resolution for bounded drafting:** OIF's public procedure specifies that applicants bring the completed form and passport or other available identity documents; it describes identity checks, data recording, biometrics, and when filing is complete. It distinguishes optional online entry, competent OIF regional offices, and Government Office submission after electronic data entry.
+- **Scope limit:** No-document fallback, guaranteed walk-in, mandatory appointment, and border/remote filing remain unestablished and are expressly excluded from HU-TP-01.
 
 ## 13. Article drafting boundary
 
-**Decision: Do not draft yet** as a full practical article. A narrowly scoped draft could be prepared only after explicitly excluding the unresolved military-liability and no-document cases, but those are central enough that this research package does not authorize a general applicant-facing guide.
+**Current decision (13 November 2026): Draft with qualifications.** HU-TP-01 is scoped to the evidenced cohorts and procedure, presents the military-rule sources together, and excludes unsupported individual determinations and no-document/edge-case instructions. The 12 November hold is superseded for this bounded article.
 
 ### Safe to state
 
