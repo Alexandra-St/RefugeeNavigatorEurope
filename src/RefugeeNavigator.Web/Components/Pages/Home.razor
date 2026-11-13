@@ -1,4 +1,5 @@
 @page "/"
+@using System.Globalization
 @using RefugeeNavigator.Data
 @using Microsoft.AspNetCore.Hosting
 @using RefugeeNavigator.Web.Content
@@ -44,7 +45,8 @@
             </div>
 
             <div class="country-grid">
-                @foreach (var country in CountryVisibility.GetVisibleCountries(Catalog, HostEnvironment.IsDevelopment()))
+                @foreach (var country in CountryVisibility.GetVisibleCountries(Catalog, HostEnvironment.IsDevelopment())
+                    .OrderBy(country => Localizer[CatalogLocalizationKeyResolver.CountryName(country)].Value, StringComparer.Create(CultureInfo.CurrentUICulture, ignoreCase: false)))
                 {
                     var countryDisplayName = Localizer[CatalogLocalizationKeyResolver.CountryName(country)].Value;
                     var countryLocationName = Localizer[$"{CatalogLocalizationKeyResolver.CountryName(country)}.In"].Value;

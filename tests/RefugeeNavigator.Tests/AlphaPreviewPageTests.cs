@@ -45,7 +45,6 @@ public sealed class AlphaPreviewPageTests
         var expectedCountryRoutes = new[] { "/countries/denmark", "/countries/germany", "/countries/poland" };
         var routePositions = expectedCountryRoutes.Select(route => visibleHtml.IndexOf($"href=\"{route}\"", StringComparison.Ordinal)).ToArray();
         Assert.All(routePositions, position => Assert.True(position >= 0));
-        Assert.True(routePositions[0] < routePositions[1] && routePositions[1] < routePositions[2]);
         var searchLink = Regex.Match(visibleHtml, "<a\\b[^>]*href=\"/search\"[^>]*>(?<content>.*?)</a>", RegexOptions.Singleline);
         Assert.True(searchLink.Success);
         Assert.Contains(searchCta, searchLink.Groups["content"].Value);
@@ -205,18 +204,15 @@ public sealed class AlphaPreviewPageTests
         };
 
         var renderedHeadings = Regex.Matches(visibleHtml, @"<h3\b[^>]*>(?<name>.*?)</h3>", RegexOptions.Singleline)
+            .Cast<Match>()
+            .Where(match => match.Groups["name"].Value.Contains("country-flag", StringComparison.Ordinal))
             .Select(match => NormalizeHtmlText(match.Groups["name"].Value))
-            .TakeLast(3)
             .ToArray();
-        var expectedHeadings = countries.Select(country => $"{country.Name} {CountryFlagFor(country.Slug)}");
+        var expectedHeadings = countries.Select(country => $"{country.Name} {CountryFlagFor(country.Slug)}")
+            .OrderBy(name => name, StringComparer.Create(CultureInfo.GetCultureInfo(language), ignoreCase: false));
         Assert.True(expectedHeadings.SequenceEqual(renderedHeadings), visibleHtml);
 
-        var countryCards = Regex.Matches(visibleHtml, @"<article class=""country-card""[^>]*>(?<content>.*?)</article>", RegexOptions.Singleline)
-            .Cast<Match>()
-            .Select(match => match.Groups["content"].Value)
-            .ToArray();
-
-        foreach (var (country, index) in countries.Select((country, index) => (country, index)))
+        foreach (var country in countries)
         {
             var link = Regex.Match(
                 html,
@@ -228,9 +224,11 @@ public sealed class AlphaPreviewPageTests
             Assert.Contains("aria-hidden=\"true\"", link.Groups["content"].Value);
 
             var flag = CountryFlagFor(country.Slug);
+            var countryCard = Regex.Match(visibleHtml, $"<article class=\"country-card\"[^>]*>(?<content>.*?)href=\"/countries/{Regex.Escape(country.Slug)}\".*?</article>", RegexOptions.Singleline);
+            Assert.True(countryCard.Success, $"Expected card for {country.Slug}.");
             Assert.Matches(
                 $"<span[^>]*>{Regex.Escape(country.Name)}</span>\\s*<span[^>]*aria-hidden=\"true\"[^>]*>{Regex.Escape(flag)}</span>",
-                countryCards[index]);
+                countryCard.Groups["content"].Value);
 
             var linkText = Regex.Replace(link.Groups["content"].Value, "<span[^>]*>.*?</span>", string.Empty, RegexOptions.Singleline);
             Assert.Equal(string.Format(CultureInfo.GetCultureInfo(language), linkLabelTemplate, country.Name), WebUtility.HtmlDecode(linkText).Trim());
@@ -250,6 +248,29 @@ public sealed class AlphaPreviewPageTests
         var countryFlagMethod = typeof(Home).GetMethod("CountryFlag", BindingFlags.NonPublic | BindingFlags.Static);
         Assert.NotNull(countryFlagMethod);
         Assert.Equal(string.Empty, countryFlagMethod!.Invoke(null, ["unknown-country"]));
+    }
+
+    [Theory]
+    [InlineData("en", "Austria", "Belgium", "Bulgaria", "Hungary")]
+    [InlineData("uk", "Австрія", "Бельгія", "Болгарія", "Угорщина")]
+    [InlineData("ru", "Австрия", "Бельгия", "Болгария", "Венгрия")]
+    public async Task HomepageCountryCardsFollowLocalizedAlphabeticalOrder(
+        string language, string austria, string belgium, string bulgaria, string hungary)
+    {
+        var html = WebUtility.HtmlDecode(await RenderAsync<Home>(language, catalog: await RegisteredCountryCatalog.Value));
+        var names = Regex.Matches(html, "<h3\\b[^>]*class=\"country-name\"[^>]*>(?<name>.*?)</h3>", RegexOptions.Singleline)
+            .Cast<Match>()
+            .Select(match => NormalizeHtmlText(Regex.Replace(match.Groups["name"].Value, "<span class=\"country-flag\"[^>]*>.*?</span>", string.Empty, RegexOptions.Singleline)))
+            .ToArray();
+
+        var austriaIndex = Array.IndexOf(names, austria);
+        var belgiumIndex = Array.IndexOf(names, belgium);
+        var bulgariaIndex = Array.IndexOf(names, bulgaria);
+        var hungaryIndex = Array.IndexOf(names, hungary);
+
+        Assert.True(austriaIndex >= 0 && austriaIndex < belgiumIndex, string.Join(" | ", names));
+        Assert.True(belgiumIndex < bulgariaIndex, string.Join(" | ", names));
+        if (language == "en") Assert.True(bulgariaIndex < hungaryIndex, string.Join(" | ", names));
     }
 
     private static void AssertCountryFlag(string html, string slug, string flag)
