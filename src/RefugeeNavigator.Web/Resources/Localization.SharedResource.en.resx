@@ -64,7 +64,7 @@
     <value>Choose a country</value>
   </data>
   <data name="Home.CountryDescription" xml:space="preserve">
-    <value>Explore practical information about living in {0} under temporary protection.</value>
+    <value>Explore practical information about living {0} under temporary protection.</value>
   </data>
   <data name="Home.CountryLinkLabel" xml:space="preserve">
     <value>Explore practical information for {0}</value>
@@ -124,13 +124,13 @@
     <value>Country overview</value>
   </data>
   <data name="Country.HeaderSubtitle" xml:space="preserve">
-    <value>Practical information for Ukrainians under temporary protection in {0}.</value>
+    <value>Practical information for Ukrainians under temporary protection {0}.</value>
   </data>
   <data name="Country.LivingIn" xml:space="preserve">
-    <value>Living in {0}</value>
+    <value>Living {0}</value>
   </data>
   <data name="Country.LivingDescription" xml:space="preserve">
-    <value>Explore essential topics related to living in {0} under temporary protection.</value>
+    <value>Explore essential topics related to living {0} under temporary protection.</value>
   </data>
   <data name="Country.ExploreTopics" xml:space="preserve">
     <value>Explore essential topics</value>

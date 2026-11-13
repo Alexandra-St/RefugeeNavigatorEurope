@@ -20,6 +20,27 @@ public class CatalogLocalizationTests
         Assert.Equal(expectedKey, CatalogLocalizationKeyResolver.CountryName(country));
     }
 
+    [Fact]
+    public void EnglishCountryLocationTemplatesComposeWithoutDuplicatePreposition()
+    {
+        var resources = CreateResourceManager();
+        var culture = CultureInfo.GetCultureInfo("en");
+        var location = resources.GetString("Country.Hungary.In", culture)!;
+
+        var home = string.Format(culture, resources.GetString("Home.CountryDescription", culture)!, location);
+        var header = string.Format(culture, resources.GetString("Country.HeaderSubtitle", culture)!, location);
+        var livingIn = string.Format(culture, resources.GetString("Country.LivingIn", culture)!, location);
+        var livingDescription = string.Format(culture, resources.GetString("Country.LivingDescription", culture)!, location);
+
+        Assert.Contains("living in Hungary", home);
+        Assert.DoesNotContain("in in Hungary", home);
+        Assert.Contains("temporary protection in Hungary", header);
+        Assert.DoesNotContain("in in Hungary", header);
+        Assert.Equal("Living in Hungary", livingIn);
+        Assert.Contains("living in Hungary", livingDescription);
+        Assert.DoesNotContain("in in Hungary", livingDescription);
+    }
+
     [Theory]
     [InlineData("temporary-protection", "Category.TemporaryProtection")]
     [InlineData("employment", "Category.Employment")]
