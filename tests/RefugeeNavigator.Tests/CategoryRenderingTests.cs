@@ -496,6 +496,64 @@ public sealed class CategoryRenderingTests
     }
 
     [Fact]
+    public async Task RendersPipeTablesWithAlignmentAndInlineFormatting()
+    {
+        var entry = FixtureEntry(Guid.NewGuid());
+        var source = FixtureSource(Guid.NewGuid(), entry.Entry.Id, "Official guidance", "https://example.gov/guidance");
+        var content = $"| Period | **Gross amount** | Center |\n|---|---:|:---:|\n| Month | HUF 322,800 | [[source:{source.Id:D}|Official guidance]] |\n| Week | HUF 74,210 | Other |";
+        var catalog = await CreateCatalogAsync([FixtureEntry(entry.Entry.Id, content: content)], [source]);
+
+        var html = await RenderAsync(catalog, "en");
+
+        Assert.Contains("<table", html);
+        Assert.Matches("<thead\\b", html);
+        Assert.Matches("<tbody\\b", html);
+        Assert.Matches("<th\\b[^>]*scope=\"col\"[^>]*>Period</th>", html);
+        Assert.Contains("<strong>Gross amount</strong>", html);
+        Assert.Contains("Month", html);
+        Assert.Contains("HUF 322,800", html);
+        Assert.Contains("class=\"align-right\"", html);
+        Assert.Contains("class=\"align-center\"", html);
+        Assert.Contains("class=\"article-source-link\"", html);
+        Assert.Contains($"href=\"{source.Url.AbsoluteUri}\"", html);
+        Assert.DoesNotContain("|---|---:|", WebUtility.HtmlDecode(html));
+    }
+
+    [Fact]
+    public async Task MalformedPipeTableRemainsLiteralParagraphContent()
+    {
+        const string content = "| Header | Value |\n| not-a-separator | --- |\n| A | B |";
+        var catalog = await CreateCatalogAsync([FixtureEntry(Guid.NewGuid(), content: content)]);
+
+        var html = await RenderAsync(catalog, "en");
+
+        Assert.DoesNotContain("<table", html);
+        Assert.Equal(new[] { content }, ReadContentParagraphs(html));
+    }
+
+    [Fact]
+    public async Task RendersHungaryEmploymentWageTablesInAllLanguagesInDevelopment()
+    {
+        var catalog = await ProductionCatalog.Value;
+        var english = WebUtility.HtmlDecode(await RenderAsync(catalog, "en", "hungary", "employment", environmentName: "Development"));
+        var ukrainian = WebUtility.HtmlDecode(await RenderAsync(catalog, "uk", "hungary", "employment", environmentName: "Development"));
+        var russian = WebUtility.HtmlDecode(await RenderAsync(catalog, "ru", "hungary", "employment", environmentName: "Development"));
+
+        Assert.True(Regex.Matches(english, "<table\\b").Count >= 2);
+        Assert.Contains("Period", english);
+        Assert.Contains("Gross amount", english);
+        Assert.Contains("HUF 322,800", english);
+        Assert.Contains("HUF 373,200", english);
+        Assert.DoesNotContain("|---|---:|", english);
+        Assert.Contains("Період", ukrainian);
+        Assert.Contains("<table", ukrainian);
+        Assert.DoesNotContain("|---|---:|", ukrainian);
+        Assert.Contains("Период", russian);
+        Assert.Contains("<table", russian);
+        Assert.DoesNotContain("|---|---:|", russian);
+    }
+
+    [Fact]
     public async Task RendersBoldInHungaryTemporaryProtectionArticleInDevelopment()
     {
         var catalog = await ProductionCatalog.Value;

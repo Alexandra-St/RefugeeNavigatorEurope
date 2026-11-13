@@ -104,6 +104,41 @@
                                             }
                                         </ul>
                                         break;
+                                    case ArticleContentBlockKind.Table:
+                                        <div class="entry-table-wrapper" role="region" tabindex="0" aria-label="Article data table">
+                                            <table class="entry-table">
+                                                <thead>
+                                                    <tr>
+                                                        @for (var columnIndex = 0; columnIndex < block.TableHeaders!.Count; columnIndex++)
+                                                        {
+                                                            <th scope="col" class="@TableAlignmentClass(block.TableAlignments![columnIndex])">
+                                                                @foreach (var part in block.TableHeaders[columnIndex])
+                                                                {
+                                                                    @RenderArticleInlinePart(part)
+                                                                }
+                                                            </th>
+                                                        }
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (var row in block.TableRows!)
+                                                    {
+                                                        <tr>
+                                                            @for (var columnIndex = 0; columnIndex < row.Count; columnIndex++)
+                                                            {
+                                                                <td class="@TableAlignmentClass(block.TableAlignments![columnIndex])">
+                                                                    @foreach (var part in row[columnIndex])
+                                                                    {
+                                                                        @RenderArticleInlinePart(part)
+                                                                    }
+                                                                </td>
+                                                            }
+                                                        </tr>
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        break;
                                     default:
                                         <p class="entry-content">
                                             @foreach (var part in block.InlineParts)
@@ -260,6 +295,45 @@
     }
 
     private static string FormatDate(DateTimeOffset value) => value.ToString("d MMM yyyy", CultureInfo.CurrentCulture);
+
+    private static string TableAlignmentClass(ArticleContentColumnAlignment alignment) => alignment switch
+    {
+        ArticleContentColumnAlignment.Right => "align-right",
+        ArticleContentColumnAlignment.Center => "align-center",
+        _ => string.Empty
+    };
+
+    private RenderFragment RenderArticleInlinePart(ArticleContentInlinePart part) => builder =>
+    {
+        switch (part)
+        {
+            case ArticleContentSourceLink sourceLink:
+                builder.OpenElement(0, "a");
+                builder.AddAttribute(1, "class", "article-source-link");
+                builder.AddAttribute(2, "href", sourceLink.Url.AbsoluteUri);
+                builder.AddAttribute(3, "target", "_blank");
+                builder.AddAttribute(4, "rel", "noopener noreferrer");
+                builder.AddContent(5, sourceLink.Label);
+                builder.OpenElement(6, "span");
+                builder.AddAttribute(7, "aria-hidden", "true");
+                builder.AddContent(8, " ↗");
+                builder.CloseElement();
+                builder.OpenElement(9, "span");
+                builder.AddAttribute(10, "class", "visually-hidden");
+                builder.AddContent(11, $" ({Localizer["Common.OpensInNewTab"]})");
+                builder.CloseElement();
+                builder.CloseElement();
+                break;
+            case ArticleContentStrong strong:
+                builder.OpenElement(12, "strong");
+                builder.AddContent(13, strong.Value);
+                builder.CloseElement();
+                break;
+            case ArticleContentText text:
+                builder.AddContent(14, text.Value);
+                break;
+        }
+    };
 
     private static (string Prefix, string Suffix) SplitFinalTitleWord(string title)
     {

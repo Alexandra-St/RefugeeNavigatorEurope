@@ -8,6 +8,7 @@ internal static class ArticleContentFormatter
     private static readonly Regex BlockSeparator = new(@"\r?\n[^\S\r\n]*(?:\r?\n)+", RegexOptions.CultureInvariant);
     private static readonly Regex InlineSourceToken = new(@"\[\[source:(?<id>[^|\]\r\n]+)\|(?<label>[^\]\r\n]*)\]\]", RegexOptions.CultureInvariant);
     private static readonly Regex InlineBoldToken = new(@"\*\*(?<text>[^*\r\n]+)\*\*", RegexOptions.CultureInvariant);
+    private static readonly Regex TableSeparatorCell = new(@"^:?-+:?$", RegexOptions.CultureInvariant);
 
     public static IReadOnlyList<ArticleContentBlock> Parse(
         string? content,
@@ -44,6 +45,12 @@ internal static class ArticleContentFormatter
             }
 
             var lines = block.Split('\n');
+            if (TryParseTable(lines, informationEntryId, sources, out var table))
+            {
+                blocks.Add(table);
+                continue;
+            }
+
             if (lines.All(line => line.TrimEnd('\r').StartsWith("- ", StringComparison.Ordinal)) &&
                 lines.All(line => !string.IsNullOrWhiteSpace(line.TrimEnd('\r')[2..])))
             {
@@ -65,6 +72,89 @@ internal static class ArticleContentFormatter
         }
 
         return blocks;
+    }
+
+    private static bool TryParseTable(
+        string[] lines,
+        Guid informationEntryId,
+        IReadOnlyCollection<OfficialSource> sources,
+        out ArticleContentBlock table)
+    {
+        table = default!;
+        if (lines.Length < 3 || !TrySplitTableRow(lines[0], out var headers) || headers.Count < 2 ||
+            !TrySplitTableRow(lines[1], out var separators) || separators.Count != headers.Count ||
+            !lines.Skip(2).All(line => TrySplitTableRow(line, out var cells) && cells.Count == headers.Count))
+        {
+            return false;
+        }
+
+        var alignments = new List<ArticleContentColumnAlignment>(separators.Count);
+        foreach (var separator in separators)
+        {
+            var value = separator.Trim();
+            if (!TableSeparatorCell.IsMatch(value))
+            {
+                return false;
+            }
+
+            var left = value.StartsWith(':');
+            var right = value.EndsWith(':');
+            alignments.Add((left, right) switch
+            {
+                (true, true) => ArticleContentColumnAlignment.Center,
+                (true, false) => ArticleContentColumnAlignment.Left,
+                (false, true) => ArticleContentColumnAlignment.Right,
+                _ => ArticleContentColumnAlignment.Default
+            });
+        }
+
+        var rows = new List<IReadOnlyList<IReadOnlyList<ArticleContentInlinePart>>>();
+        foreach (var line in lines.Skip(2))
+        {
+            TrySplitTableRow(line, out var cells);
+            rows.Add(cells.Select(cell => ParseInline(cell, informationEntryId, sources)).ToArray());
+        }
+
+        table = new ArticleContentBlock(
+            ArticleContentBlockKind.Table,
+            string.Empty,
+            [],
+            [],
+            null,
+            headers.Select(cell => ParseInline(cell, informationEntryId, sources)).ToArray(),
+            alignments,
+            rows);
+        return true;
+    }
+
+    private static bool TrySplitTableRow(string line, out List<string> cells)
+    {
+        var value = line.Trim().TrimEnd('\r').Trim();
+        if (value.StartsWith('|')) value = value[1..];
+        if (value.EndsWith('|')) value = value[..^1];
+        cells = [];
+        var cellStart = 0;
+        var sourceTokenEnd = -1;
+        for (var index = 0; index < value.Length; index++)
+        {
+            if (index >= sourceTokenEnd && value.AsSpan(index).StartsWith("[[source:", StringComparison.Ordinal))
+            {
+                var tokenEnd = value.IndexOf("]]", index, StringComparison.Ordinal);
+                if (tokenEnd >= 0)
+                {
+                    sourceTokenEnd = tokenEnd + 2;
+                }
+            }
+
+            if (value[index] == '|' && index >= sourceTokenEnd)
+            {
+                cells.Add(value[cellStart..index].Trim());
+                cellStart = index + 1;
+            }
+        }
+
+        cells.Add(value[cellStart..].Trim());
+        return cells.Count >= 2;
     }
 
     private static IReadOnlyList<ArticleContentInlinePart> ParseInline(
@@ -140,15 +230,21 @@ internal enum ArticleContentBlockKind
 {
     Paragraph,
     Heading,
-    UnorderedList
+    UnorderedList,
+    Table
 }
+
+internal enum ArticleContentColumnAlignment { Default, Left, Right, Center }
 
 internal sealed record ArticleContentBlock(
     ArticleContentBlockKind Kind,
     string Text,
     IReadOnlyList<ArticleContentInlinePart> InlineParts,
     IReadOnlyList<IReadOnlyList<ArticleContentInlinePart>> Items,
-    string? AnchorId);
+    string? AnchorId,
+    IReadOnlyList<IReadOnlyList<ArticleContentInlinePart>>? TableHeaders = null,
+    IReadOnlyList<ArticleContentColumnAlignment>? TableAlignments = null,
+    IReadOnlyList<IReadOnlyList<IReadOnlyList<ArticleContentInlinePart>>>? TableRows = null);
 
 internal abstract record ArticleContentInlinePart;
 
