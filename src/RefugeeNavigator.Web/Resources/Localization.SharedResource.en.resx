@@ -64,7 +64,7 @@
     <value>Choose a country</value>
   </data>
   <data name="Home.CountryDescription" xml:space="preserve">
-    <value>Explore practical information about living {0} under temporary protection.</value>
+    <value>Explore practical information about living in {0} under temporary protection.</value>
   </data>
   <data name="Home.CountryLinkLabel" xml:space="preserve">
     <value>Explore practical information for {0}</value>
@@ -124,13 +124,13 @@
     <value>Country overview</value>
   </data>
   <data name="Country.HeaderSubtitle" xml:space="preserve">
-    <value>Practical information for Ukrainians under temporary protection {0}.</value>
+    <value>Practical information for Ukrainians under temporary protection in {0}.</value>
   </data>
   <data name="Country.LivingIn" xml:space="preserve">
-    <value>Living {0}</value>
+    <value>Living in {0}</value>
   </data>
   <data name="Country.LivingDescription" xml:space="preserve">
-    <value>Explore essential topics related to living {0} under temporary protection.</value>
+    <value>Explore essential topics related to living in {0} under temporary protection.</value>
   </data>
   <data name="Country.ExploreTopics" xml:space="preserve">
     <value>Explore essential topics</value>
@@ -387,25 +387,25 @@
   <data name="Guide.Unavailable" xml:space="preserve"><value>This guide is unavailable.</value></data>
   <data name="Guide.Step" xml:space="preserve"><value>Step</value></data>
   <data name="Country.Slovakia" xml:space="preserve"><value>Slovakia</value></data>
-  <data name="Country.Slovakia.In" xml:space="preserve"><value>in Slovakia</value></data>
+  <data name="Country.Slovakia.In" xml:space="preserve"><value>Slovakia</value></data>
   <data name="Country.Romania" xml:space="preserve"><value>Romania</value></data>
-  <data name="Country.Romania.In" xml:space="preserve"><value>in Romania</value></data>
+  <data name="Country.Romania.In" xml:space="preserve"><value>Romania</value></data>
   <data name="Country.Bulgaria" xml:space="preserve"><value>Bulgaria</value></data>
-  <data name="Country.Bulgaria.In" xml:space="preserve"><value>in Bulgaria</value></data>
+  <data name="Country.Bulgaria.In" xml:space="preserve"><value>Bulgaria</value></data>
   <data name="Country.Austria" xml:space="preserve"><value>Austria</value></data>
-  <data name="Country.Austria.In" xml:space="preserve"><value>in Austria</value></data>
+  <data name="Country.Austria.In" xml:space="preserve"><value>Austria</value></data>
   <data name="Country.Italy" xml:space="preserve"><value>Italy</value></data>
-  <data name="Country.Italy.In" xml:space="preserve"><value>in Italy</value></data>
+  <data name="Country.Italy.In" xml:space="preserve"><value>Italy</value></data>
   <data name="Country.Lithuania" xml:space="preserve"><value>Lithuania</value></data>
-  <data name="Country.Lithuania.In" xml:space="preserve"><value>in Lithuania</value></data>
+  <data name="Country.Lithuania.In" xml:space="preserve"><value>Lithuania</value></data>
   <data name="Country.Ireland" xml:space="preserve"><value>Ireland</value></data>
-  <data name="Country.Ireland.In" xml:space="preserve"><value>in Ireland</value></data>
+  <data name="Country.Ireland.In" xml:space="preserve"><value>Ireland</value></data>
   <data name="Country.France" xml:space="preserve"><value>France</value></data>
-  <data name="Country.France.In" xml:space="preserve"><value>in France</value></data>
+  <data name="Country.France.In" xml:space="preserve"><value>France</value></data>
   <data name="Country.Finland" xml:space="preserve"><value>Finland</value></data>
-  <data name="Country.Finland.In" xml:space="preserve"><value>in Finland</value></data>
+  <data name="Country.Finland.In" xml:space="preserve"><value>Finland</value></data>
   <data name="Country.Belgium" xml:space="preserve"><value>Belgium</value></data>
-  <data name="Country.Belgium.In" xml:space="preserve"><value>in Belgium</value></data>
+  <data name="Country.Belgium.In" xml:space="preserve"><value>Belgium</value></data>
   <data name="Country.Hungary" xml:space="preserve"><value>Hungary</value></data>
-  <data name="Country.Hungary.In" xml:space="preserve"><value>in Hungary</value></data>
+  <data name="Country.Hungary.In" xml:space="preserve"><value>Hungary</value></data>
 </root>

@@ -41,6 +41,27 @@ public class CatalogLocalizationTests
         Assert.DoesNotContain("in in Hungary", livingDescription);
     }
 
+    [Fact]
+    public async Task EnglishCountryLocationsDoNotRepeatTemplatePreposition()
+    {
+        var catalog = await new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync();
+        var resources = CreateResourceManager();
+        var culture = CultureInfo.GetCultureInfo("en");
+
+        Assert.All(catalog.Countries, country =>
+        {
+            var location = resources.GetString($"{CatalogLocalizationKeyResolver.CountryName(country)}.In", culture);
+            Assert.False(string.IsNullOrWhiteSpace(location), $"Missing English location for {country.Slug}.");
+            Assert.False(location!.StartsWith("in ", StringComparison.OrdinalIgnoreCase),
+                $"English location for {country.Slug} must not include the template-owned preposition: {location}");
+            if (country.Slug == "netherlands")
+            {
+                var home = string.Format(culture, resources.GetString("Home.CountryDescription", culture)!, location);
+                Assert.Contains("living in the Netherlands", home);
+            }
+        });
+    }
+
     [Theory]
     [InlineData("temporary-protection", "Category.TemporaryProtection")]
     [InlineData("employment", "Category.Employment")]
