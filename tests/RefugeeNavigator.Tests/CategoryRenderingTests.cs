@@ -496,6 +496,54 @@ public sealed class CategoryRenderingTests
     }
 
     [Fact]
+    public async Task RendersCodeSpansAlongsideBoldAndOwnedSourceLinks()
+    {
+        var entry = FixtureEntry(Guid.NewGuid());
+        var source = FixtureSource(Guid.NewGuid(), entry.Entry.Id, "Official guidance", "https://example.gov/guidance");
+        var content = $"**Important.** Status `menedékes`. `08E` for `**literal**`. [[source:{source.Id:D}|Official guidance]]";
+        var catalog = await CreateCatalogAsync([FixtureEntry(entry.Entry.Id, content: content)], [source]);
+
+        var html = WebUtility.HtmlDecode(await RenderAsync(catalog, "en"));
+        Assert.Matches("<strong\\b[^>]*>Important\\.</strong>", html);
+        Assert.Matches("<code\\b[^>]*class=\"article-inline-code\"[^>]*>menedékes</code>", html);
+        Assert.Matches("<code\\b[^>]*class=\"article-inline-code\"[^>]*>08E</code>", html);
+        Assert.Matches("<code\\b[^>]*class=\"article-inline-code\"[^>]*>\\*\\*literal\\*\\*</code>", html);
+        Assert.Contains("class=\"article-source-link\"", html);
+        Assert.DoesNotContain("<strong>**literal**</strong>", html);
+        Assert.DoesNotContain("`menedékes`", WebUtility.HtmlDecode(html));
+    }
+
+    [Fact]
+    public async Task MalformedCodeSpanMarkersRemainLiteralAndListCellsReuseInlineFormatting()
+    {
+        var entry = FixtureEntry(Guid.NewGuid(), content: "`unfinished\n\n- Use `08E`.");
+        var catalog = await CreateCatalogAsync([entry]);
+
+        var html = await RenderAsync(catalog, "en");
+        Assert.Contains("`unfinished", WebUtility.HtmlDecode(html));
+        Assert.Matches("<code\\b[^>]*class=\"article-inline-code\"[^>]*>08E</code>", html);
+    }
+
+    [Fact]
+    public async Task RendersInlineCodeSpansInHungaryEmploymentInAllLanguagesInDevelopment()
+    {
+        var catalog = await ProductionCatalog.Value;
+        var english = WebUtility.HtmlDecode(await RenderAsync(catalog, "en", "hungary", "employment", environmentName: "Development"));
+        var ukrainian = WebUtility.HtmlDecode(await RenderAsync(catalog, "uk", "hungary", "employment", environmentName: "Development"));
+        var russian = WebUtility.HtmlDecode(await RenderAsync(catalog, "ru", "hungary", "employment", environmentName: "Development"));
+
+        Assert.Matches("<code\\b[^>]*class=\"article-inline-code\"[^>]*>menedékes</code>", english);
+        Assert.Matches("<code\\b[^>]*class=\"article-inline-code\"[^>]*>szolgáltatást kérő</code>", english);
+        Assert.Matches("<code\\b[^>]*class=\"article-inline-code\"[^>]*>08E</code>", english);
+        var englishArticleContent = string.Join("\n", Regex.Matches(english, "<p class=\"entry-content\"[^>]*>.*?</p>", RegexOptions.Singleline)
+            .Cast<Match>()
+            .Select(match => match.Value));
+        Assert.DoesNotContain("`menedékes`", WebUtility.HtmlDecode(englishArticleContent));
+        Assert.Matches("<code\\b[^>]*class=\"article-inline-code\"[^>]*>menedékes</code>", ukrainian);
+        Assert.Matches("<code\\b[^>]*class=\"article-inline-code\"[^>]*>menedékes</code>", russian);
+    }
+
+    [Fact]
     public async Task RendersPipeTablesWithAlignmentAndInlineFormatting()
     {
         var entry = FixtureEntry(Guid.NewGuid());

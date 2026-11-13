@@ -282,6 +282,15 @@
     text-underline-offset: 0.15em;
 }
 
+.article-inline-code {
+    padding: 0.08em 0.3em;
+    border-radius: 0.25rem;
+    background: #eef2f8;
+    color: #263f66;
+    font-size: 0.92em;
+    overflow-wrap: anywhere;
+}
+
 .article-source-link:focus-visible {
     border-radius: 0.15rem;
     outline: 3px solid #155eef;

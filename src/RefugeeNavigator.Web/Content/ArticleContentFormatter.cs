@@ -8,6 +8,7 @@ internal static class ArticleContentFormatter
     private static readonly Regex BlockSeparator = new(@"\r?\n[^\S\r\n]*(?:\r?\n)+", RegexOptions.CultureInvariant);
     private static readonly Regex InlineSourceToken = new(@"\[\[source:(?<id>[^|\]\r\n]+)\|(?<label>[^\]\r\n]*)\]\]", RegexOptions.CultureInvariant);
     private static readonly Regex InlineBoldToken = new(@"\*\*(?<text>[^*\r\n]+)\*\*", RegexOptions.CultureInvariant);
+    private static readonly Regex InlineCodeToken = new(@"`(?<text>[^`\r\n]+)`", RegexOptions.CultureInvariant);
     private static readonly Regex TableSeparatorCell = new(@"^:?-+:?$", RegexOptions.CultureInvariant);
 
     public static IReadOnlyList<ArticleContentBlock> Parse(
@@ -208,6 +209,26 @@ internal static class ArticleContentFormatter
     private static void AddTextParts(List<ArticleContentInlinePart> result, string text)
     {
         var position = 0;
+        foreach (Match match in InlineCodeToken.Matches(text))
+        {
+            if (match.Index > position)
+            {
+                AddBoldParts(result, text[position..match.Index]);
+            }
+
+            result.Add(new ArticleContentCode(match.Groups["text"].Value));
+            position = match.Index + match.Length;
+        }
+
+        if (position < text.Length)
+        {
+            AddBoldParts(result, text[position..]);
+        }
+    }
+
+    private static void AddBoldParts(List<ArticleContentInlinePart> result, string text)
+    {
+        var position = 0;
         foreach (Match match in InlineBoldToken.Matches(text))
         {
             if (match.Index > position)
@@ -251,5 +272,7 @@ internal abstract record ArticleContentInlinePart;
 internal sealed record ArticleContentText(string Value) : ArticleContentInlinePart;
 
 internal sealed record ArticleContentStrong(string Value) : ArticleContentInlinePart;
+
+internal sealed record ArticleContentCode(string Value) : ArticleContentInlinePart;
 
 internal sealed record ArticleContentSourceLink(string Label, Uri Url) : ArticleContentInlinePart;

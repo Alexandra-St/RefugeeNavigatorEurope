@@ -91,6 +91,10 @@
                                                         {
                                                             <a class="article-source-link" href="@sourceLink.Url.AbsoluteUri" target="_blank" rel="noopener noreferrer">@sourceLink.Label<span aria-hidden="true"> ↗</span><span class="visually-hidden"> (@Localizer["Common.OpensInNewTab"])</span></a>
                                                         }
+                                                        else if (part is ArticleContentCode codePart)
+                                                        {
+                                                            <code class="article-inline-code">@codePart.Value</code>
+                                                        }
                                                         else if (part is ArticleContentStrong strong)
                                                         {
                                                             <strong>@strong.Value</strong>
@@ -146,6 +150,10 @@
                                                 if (part is ArticleContentSourceLink sourceLink)
                                                 {
                                                     <a class="article-source-link" href="@sourceLink.Url.AbsoluteUri" target="_blank" rel="noopener noreferrer">@sourceLink.Label<span aria-hidden="true"> ↗</span><span class="visually-hidden"> (@Localizer["Common.OpensInNewTab"])</span></a>
+                                                }
+                                                else if (part is ArticleContentCode codePart)
+                                                {
+                                                    <code class="article-inline-code">@codePart.Value</code>
                                                 }
                                                 else if (part is ArticleContentStrong strong)
                                                 {
@@ -327,6 +335,12 @@
             case ArticleContentStrong strong:
                 builder.OpenElement(12, "strong");
                 builder.AddContent(13, strong.Value);
+                builder.CloseElement();
+                break;
+            case ArticleContentCode code:
+                builder.OpenElement(15, "code");
+                builder.AddAttribute(16, "class", "article-inline-code");
+                builder.AddContent(17, code.Value);
                 builder.CloseElement();
                 break;
             case ArticleContentText text:
