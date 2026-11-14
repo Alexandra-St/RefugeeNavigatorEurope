@@ -602,7 +602,7 @@ details[open] .when-open {
     margin: 0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 960px) {
     .selection-grid,
     .topic-columns,
     .structured-columns {

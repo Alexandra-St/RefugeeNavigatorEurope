@@ -126,7 +126,7 @@ public sealed class ItalyContentIntegrationTests
         var entryIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => entryIds.Contains(item.InformationEntryId)).ToArray();
         Assert.Equal(70, sources.Length);
-        Assert.Equal(1365, catalog.OfficialSources.Count);
+        Assert.Equal(1366, catalog.OfficialSources.Count);
         Assert.Equal(70, sources.Select(item => item.Id).Distinct().Count());
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         var sourceById = catalog.OfficialSources.ToDictionary(item => item.Id);
@@ -186,7 +186,7 @@ public sealed class ItalyContentIntegrationTests
         var comparison = await Facts.Value;
         CountryComparisonTopicMap.Validate(catalog);
         Assert.Contains("italy", CountryComparisonTopicMap.SupportedCountrySlugs);
-        Assert.Equal(104, CountryComparisonTopicMap.All.SelectMany(item => item.EntryIds.Values).Distinct().Count());
+        Assert.Equal(112, CountryComparisonTopicMap.All.SelectMany(item => item.EntryIds.Values).Distinct().Count());
         var expectedTopicArticles = new Dictionary<string, Guid>
         {
             ["Compare.Topic.TemporaryProtectionApplication"] = Articles["IT-TP-01"].Id,
@@ -200,16 +200,16 @@ public sealed class ItalyContentIntegrationTests
         };
         Assert.All(CountryComparisonTopicMap.All, topic =>
         {
-            Assert.Equal(13, topic.EntryIds.Count);
+            Assert.Equal(14, topic.EntryIds.Count);
             Assert.Equal(expectedTopicArticles[topic.ResourceKey], CountryComparisonTopicMap.EntryIdFor(topic, "italy"));
         });
 
         var allFacts = comparison.Topics.SelectMany(item => item.Aspects).SelectMany(item => item.Facts).ToArray();
         var italyFacts = allFacts.Where(item => item.CountrySlug == "italy").ToArray();
-        Assert.Equal(312, allFacts.Length);
-        Assert.Equal(305, allFacts.Count(item => item.IsAvailable));
+        Assert.Equal(336, allFacts.Length);
+        Assert.Equal(329, allFacts.Count(item => item.IsAvailable));
         Assert.Equal(7, allFacts.Count(item => !item.IsAvailable));
-        Assert.Equal(307, allFacts.Count(item => item.Status == ComparisonFactStatus.Approved));
+        Assert.Equal(331, allFacts.Count(item => item.Status == ComparisonFactStatus.Approved));
         Assert.Equal(5, allFacts.Count(item => item.Status == ComparisonFactStatus.Draft));
         Assert.Equal(24, italyFacts.Length);
         Assert.Equal(24, italyFacts.Count(item => item.Status == ComparisonFactStatus.Approved));

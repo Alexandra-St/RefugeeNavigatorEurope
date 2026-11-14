@@ -251,7 +251,17 @@
                                     {
                                         <span class="draft-label">@Localizer["Compare.DraftStatus"]</span>
                                     }
-                                    <p>@FactText(fact, canRenderFact)</p>
+                                    <p>@if (canRenderFact)
+                                    {
+                                        @foreach (var part in ArticleContentFormatter.ParseInline(FactText(fact, true), fact.InformationEntryId, Array.Empty<OfficialSource>()))
+                                        {
+                                            @RenderFactPart(part)
+                                        }
+                                    }
+                                    else
+                                    {
+                                        @FactText(fact, false)
+                                    }</p>
                                     @if (factSources.Count > 0)
                                     {
                                         <details class="fact-sources">
@@ -473,6 +483,27 @@
         canRenderFact
             ? fact.Values[CultureInfo.CurrentUICulture.TwoLetterISOLanguageName]
             : Localizer["Compare.NotEstablishedInReviewedSources"].Value;
+
+    private static Microsoft.AspNetCore.Components.RenderFragment RenderFactPart(ArticleContentInlinePart part) => builder =>
+    {
+        switch (part)
+        {
+            case ArticleContentCode code:
+                builder.OpenElement(0, "code");
+                builder.AddAttribute(1, "class", "article-inline-code");
+                builder.AddContent(2, code.Value);
+                builder.CloseElement();
+                break;
+            case ArticleContentStrong strong:
+                builder.OpenElement(0, "strong");
+                builder.AddContent(1, strong.Value);
+                builder.CloseElement();
+                break;
+            case ArticleContentText text:
+                builder.AddContent(0, text.Value);
+                break;
+        }
+    };
 
     private bool CanRenderFact(CountryComparisonFact fact)
     {

@@ -92,13 +92,13 @@ public sealed class FranceContentIntegrationTests
             });
         }
 
-        Assert.Equal(13, CountryComparisonTopicMap.SupportedCountrySlugs.Count);
+        Assert.Equal(14, CountryComparisonTopicMap.SupportedCountrySlugs.Count);
         Assert.DoesNotContain("france", CountryComparisonTopicMap.SupportedCountrySlugs);
         Assert.DoesNotContain("belgium", CountryComparisonTopicMap.SupportedCountrySlugs);
         Assert.DoesNotContain("ireland", CountryComparisonTopicMap.SupportedCountrySlugs);
-        Assert.All(CountryComparisonTopicMap.All, topic => Assert.Equal(13, topic.EntryIds.Count));
+        Assert.All(CountryComparisonTopicMap.All, topic => Assert.Equal(14, topic.EntryIds.Count));
         var allFacts = (await Facts.Value).Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).ToArray();
-        Assert.Equal(312, allFacts.Length);
+        Assert.Equal(336, allFacts.Length);
         Assert.DoesNotContain(allFacts, fact => fact.CountrySlug == "france");
         Assert.DoesNotContain(allFacts, fact => fact.CountrySlug == "belgium");
         Assert.DoesNotContain(allFacts, fact => fact.CountrySlug == "ireland");
@@ -108,7 +108,7 @@ public sealed class FranceContentIntegrationTests
     public async Task FranceTranslationsAndEightyArticleOwnedSourcesMatchDraftsExactly()
     {
         var catalog = await Catalog.Value;
-        Assert.Equal(1365, catalog.OfficialSources.Count);
+        Assert.Equal(1366, catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         var repositoryRoot = FindRepositoryRoot();
         var draftsRoot = Path.Combine(repositoryRoot, "docs", "content-drafts", "france-v1");

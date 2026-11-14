@@ -12,7 +12,7 @@ public sealed class HungaryContentIntegrationTests
     private static readonly IReadOnlyDictionary<string, (Guid Id, string Category, int Sources)> Articles = new Dictionary<string, (Guid, string, int)>
     {
         ["HU-TP-01"] = (Guid.Parse("1bb2a2b8-cfe0-5595-8155-138443fade17"), "temporary-protection", 8),
-        ["HU-TP-02"] = (Guid.Parse("914418c6-15f8-527c-85dd-be5bda5594fc"), "temporary-protection", 18),
+        ["HU-TP-02"] = (Guid.Parse("914418c6-15f8-527c-85dd-be5bda5594fc"), "temporary-protection", 19),
         ["HU-EMP-01"] = (Guid.Parse("0e65e68f-5c42-58d5-b7b3-e941896bb532"), "employment", 14),
         ["HU-EMP-02"] = (Guid.Parse("4dde28d5-8f4c-5503-926b-eac8789b4e9f"), "employment", 14),
         ["HU-HEALTH-01"] = (Guid.Parse("8cb405ab-c562-5c22-81ad-0fd93ef50202"), "healthcare", 14),
@@ -24,7 +24,7 @@ public sealed class HungaryContentIntegrationTests
         () => new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync());
 
     [Fact]
-    public async Task HungaryIsProductionCoreVisibleAndExcludedFromCompare()
+    public async Task HungaryIsProductionCoreVisibleAndIncludedInCompare()
     {
         var catalog = await Catalog.Value;
         var country = Assert.Single(catalog.Countries, item => item.Slug == "hungary");
@@ -34,8 +34,43 @@ public sealed class HungaryContentIntegrationTests
         var entries = catalog.InformationEntries.Where(item => item.CountryId == CountryId).ToArray();
         Assert.Equal(8, entries.Length);
         Assert.Equal(Articles.Values.Select(item => item.Id).Order().ToArray(), entries.Select(item => item.Id).Order().ToArray());
-        Assert.DoesNotContain("hungary", CountryComparisonTopicMap.SupportedCountrySlugs);
-        Assert.All(CountryComparisonTopicMap.All, topic => Assert.DoesNotContain("hungary", topic.EntryIds.Keys));
+        Assert.Contains("hungary", CountryComparisonTopicMap.SupportedCountrySlugs);
+        var expectedMappings = new Dictionary<string, Guid>
+        {
+            ["Compare.Topic.TemporaryProtectionApplication"] = Articles["HU-TP-01"].Id,
+            ["Compare.Topic.ResidenceAfterProtection"] = Articles["HU-TP-02"].Id,
+            ["Compare.Topic.FindingEmployment"] = Articles["HU-EMP-01"].Id,
+            ["Compare.Topic.WorkAuthorizationRights"] = Articles["HU-EMP-02"].Id,
+            ["Compare.Topic.Healthcare"] = Articles["HU-HEALTH-01"].Id,
+            ["Compare.Topic.Housing"] = Articles["HU-HOUSING-01"].Id,
+            ["Compare.Topic.EducationLanguage"] = Articles["HU-EDU-01"].Id,
+            ["Compare.Topic.SocialAssistance"] = Articles["HU-SOC-01"].Id
+        };
+        Assert.Equal(14, CountryComparisonTopicMap.SupportedCountrySlugs.Count);
+        Assert.All(CountryComparisonTopicMap.All, topic =>
+        {
+            Assert.Equal(14, topic.EntryIds.Count);
+            Assert.Equal(expectedMappings[topic.ResourceKey], CountryComparisonTopicMap.EntryIdFor(topic, "hungary"));
+        });
+        var comparison = await new JsonComparisonFactProvider(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json")).LoadAsync(catalog);
+        var allFacts = comparison.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).ToArray();
+        Assert.Equal(336, allFacts.Length);
+        Assert.Equal(329, allFacts.Count(fact => fact.IsAvailable));
+        Assert.Equal(7, allFacts.Count(fact => !fact.IsAvailable));
+        Assert.Equal(331, allFacts.Count(fact => fact.Status == ComparisonFactStatus.Approved));
+        Assert.Equal(5, allFacts.Count(fact => fact.Status == ComparisonFactStatus.Draft));
+        var hungaryFacts = allFacts.Where(fact => fact.CountrySlug == "hungary").ToArray();
+        Assert.Equal(24, hungaryFacts.Length);
+        Assert.All(hungaryFacts, fact =>
+        {
+            Assert.True(fact.IsAvailable);
+            Assert.Equal(ComparisonFactStatus.Approved, fact.Status);
+            Assert.Equal(expectedMappings[comparison.Topics.Single(topic => topic.Aspects.Any(aspect => aspect.Facts.Contains(fact))).TopicResourceKey], fact.InformationEntryId);
+            Assert.Equal(new[] { "en", "ru", "uk" }, fact.Values.Keys.Order(StringComparer.Ordinal).ToArray());
+            Assert.All(fact.Values.Values, value => Assert.False(string.IsNullOrWhiteSpace(value)));
+            Assert.NotEmpty(fact.OfficialSourceIds);
+            Assert.All(fact.OfficialSourceIds, id => Assert.Equal(fact.InformationEntryId, catalog.OfficialSources.Single(source => source.Id == id).InformationEntryId));
+        });
         Assert.Contains(CountryVisibility.GetVisibleCountries(catalog, false), item => item.Slug == "hungary");
         Assert.Contains(CountryVisibility.GetVisibleCountries(catalog, true), item => item.Slug == "hungary");
 
@@ -48,8 +83,8 @@ public sealed class HungaryContentIntegrationTests
         });
 
         var sources = catalog.OfficialSources.Where(item => entries.Any(entry => entry.Id == item.InformationEntryId)).ToArray();
-        Assert.Equal(105, sources.Length);
-        Assert.Equal(105, sources.Select(item => item.Id).Distinct().Count());
+        Assert.Equal(106, sources.Length);
+        Assert.Equal(106, sources.Select(item => item.Id).Distinct().Count());
         Assert.All(sources, item => Assert.Equal(Uri.UriSchemeHttps, item.Url.Scheme));
         foreach (var (article, expected) in Articles)
         {
@@ -125,6 +160,13 @@ public sealed class HungaryContentIntegrationTests
         }.Order().ToArray(), temporaryProtectionEntries.Select(entry => entry.Id).Order().ToArray());
         Assert.Equal(6, entries.Select(entry => entry.CategoryId).Distinct().Count());
 
+        var duplicatedStatute = Assert.Single(sources, item => item.Id == Guid.Parse("94b90de6-7250-5e47-89d7-22eb085d0ee2"));
+        Assert.Equal(Articles["HU-TP-02"].Id, duplicatedStatute.InformationEntryId);
+        Assert.Equal("https://njt.hu/jogszabaly/2007-80-00-00.33", duplicatedStatute.Url.AbsoluteUri);
+        Assert.Equal("National Legislation Database, Act LXXX of 2007 on the Right of Asylum, §1(3)", duplicatedStatute.Title);
+        var originalStatute = Assert.Single(catalog.OfficialSources, item => item.Id == Guid.Parse("e724b5fb-a79d-54c3-bc21-4444975d0052"));
+        Assert.Equal(Articles["HU-TP-01"].Id, originalStatute.InformationEntryId);
+        Assert.Equal(originalStatute.LastCheckedAt, duplicatedStatute.LastCheckedAt);
         var housingSource = Assert.Single(sources, item => item.Id == Guid.Parse("c7daa0bb-96e5-5d55-a419-8a53613f0608"));
         Assert.Equal("https://www.oif.gov.hu/menedekeseknek-nyujtott-ellatasok-es-tamogatasok", housingSource.Url.AbsoluteUri);
     }

@@ -74,7 +74,7 @@ public sealed class BulgariaContentIntegrationTests
         var entryIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => entryIds.Contains(item.InformationEntryId)).ToArray();
         Assert.Equal(65, sources.Length);
-        Assert.Equal(1365, catalog.OfficialSources.Count);
+        Assert.Equal(1366, catalog.OfficialSources.Count);
         Assert.Equal(65, sources.Select(item => item.Id).Distinct().Count());
         var sourceById = catalog.OfficialSources.ToDictionary(item => item.Id);
         Assert.All(sources, item =>
@@ -130,7 +130,7 @@ public sealed class BulgariaContentIntegrationTests
         var catalog = await Catalog.Value;
         CountryComparisonTopicMap.Validate(catalog);
         Assert.Contains("bulgaria", CountryComparisonTopicMap.SupportedCountrySlugs);
-        Assert.Equal(104, CountryComparisonTopicMap.All.SelectMany(item => item.EntryIds.Values).Distinct().Count());
+        Assert.Equal(112, CountryComparisonTopicMap.All.SelectMany(item => item.EntryIds.Values).Distinct().Count());
         Assert.All(CountryComparisonTopicMap.All, topic => Assert.Equal(Articles[topic.CategorySlug switch
         {
             "temporary-protection" when topic.ResourceKey == "Compare.Topic.TemporaryProtectionApplication" => "BG-TP-01",

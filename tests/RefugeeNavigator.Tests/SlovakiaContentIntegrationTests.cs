@@ -71,7 +71,7 @@ public sealed class SlovakiaContentIntegrationTests
         var ids = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => ids.Contains(item.InformationEntryId)).ToArray();
         Assert.Equal(81, sources.Length);
-        Assert.Equal(1365, catalog.OfficialSources.Count);
+        Assert.Equal(1366, catalog.OfficialSources.Count);
         Assert.All(sources, item =>
         {
             Assert.Contains(item.InformationEntryId, ids);
@@ -114,7 +114,7 @@ public sealed class SlovakiaContentIntegrationTests
         var catalog = await Catalog.Value;
         CountryComparisonTopicMap.Validate(catalog);
         Assert.Contains("slovakia", CountryComparisonTopicMap.SupportedCountrySlugs);
-        Assert.Equal(104, CountryComparisonTopicMap.All.SelectMany(item => item.EntryIds.Values).Distinct().Count());
+        Assert.Equal(112, CountryComparisonTopicMap.All.SelectMany(item => item.EntryIds.Values).Distinct().Count());
         var comparison = await new JsonComparisonFactProvider(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json")).LoadAsync(catalog);
         var facts = comparison.Topics.SelectMany(item => item.Aspects).SelectMany(item => item.Facts).Where(item => item.CountrySlug == "slovakia").ToArray();
         Assert.Equal(24, facts.Length);

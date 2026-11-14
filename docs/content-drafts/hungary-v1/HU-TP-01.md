@@ -5,7 +5,7 @@
 - Article ID: `1bb2a2b8-cfe0-5595-8155-138443fade17`
 - Research package: `docs/content-research/hungary-batch-2026-11-12/temporary-protection-application/SOURCES_AND_CLAIMS.md`
 - Translation status: `NeedsReview` (EN / UK / RU)
-- Comparison aspects: `protection-scheme, protection-application, residence-filing, work-permission`
+- Comparison aspects: `protection-scheme, protection-application, protection-dates, residence-filing, work-permission`
 
 ## EN
 
