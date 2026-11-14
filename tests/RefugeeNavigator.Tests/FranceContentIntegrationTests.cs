@@ -52,7 +52,7 @@ public sealed class FranceContentIntegrationTests
             .LoadAsync(await Catalog.Value));
 
     [Fact]
-    public async Task FranceHasSixDevelopmentOnlyArticlesAndExpectedCatalogCounts()
+    public async Task FranceHasSixProductionPublishedArticlesAndExpectedCatalogCounts()
     {
         var catalog = await Catalog.Value;
         var country = Assert.Single(catalog.Countries, item => item.Slug == "france");
@@ -61,8 +61,8 @@ public sealed class FranceContentIntegrationTests
         Assert.Equal(19, catalog.Countries.Count);
         Assert.Equal(147, catalog.InformationEntries.Count);
         Assert.Equal(441, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(357, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(84, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(375, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(66, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == CountryId).ToArray();
@@ -87,7 +87,7 @@ public sealed class FranceContentIntegrationTests
             Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(item => item.LanguageCode).Order(StringComparer.Ordinal).ToArray());
             Assert.All(translations, item =>
             {
-                Assert.Equal(VerificationStatus.NeedsReview, item.VerificationStatus);
+                Assert.Equal(VerificationStatus.Verified, item.VerificationStatus);
                 Assert.Equal(new DateTimeOffset(2026, 11, 11, 0, 0, 0, TimeSpan.Zero), item.LastUpdatedAt);
             });
         }
@@ -169,36 +169,39 @@ public sealed class FranceContentIntegrationTests
     [InlineData("en")]
     [InlineData("uk")]
     [InlineData("ru")]
-    public async Task FranceIsVisibleInDevelopmentButHiddenFromProductionAndComparison(string language)
+    public async Task FranceIsVisibleInProductionAndDevelopmentButExcludedFromComparison(string language)
     {
         var catalog = await Catalog.Value;
         var productionHome = await RenderAsync<Home>("Production", language);
-        Assert.Equal(15, Regex.Matches(productionHome.Html, "class=\"country-card\"").Count);
-        Assert.DoesNotContain("href=\"/countries/france\"", productionHome.Html);
+        Assert.Equal(16, Regex.Matches(productionHome.Html, "class=\"country-card\"").Count);
+        Assert.Contains("href=\"/countries/france\"", productionHome.Html);
         var productionSearch = await RenderAsync<Search>("Production", language, "/search");
-        Assert.DoesNotContain("france", SelectValues(productionSearch.Html, "country"));
+        Assert.Contains("france", SelectValues(productionSearch.Html, "country"));
         var productionOverview = await RenderAsync<CountryOverview>("Production", language, "/countries/france",
             new() { [nameof(CountryOverview.CountrySlug)] = "france" });
-        Assert.True(productionOverview.NotFound);
-        var productionCategory = await RenderAsync<Category>("Production", language,
-            "/countries/france/categories/employment", new()
-            {
-                [nameof(Category.CountrySlug)] = "france",
-                [nameof(Category.CategorySlug)] = "employment"
-            });
-        Assert.True(productionCategory.NotFound);
-        foreach (var categorySlug in new[] { "temporary-protection", "employment", "healthcare", "housing", "education", "social-assistance" })
+        Assert.False(productionOverview.NotFound);
+        var productionCategoryCounts = new Dictionary<string, int>
         {
-            var result = await RenderAsync<Category>("Production", language,
+            ["temporary-protection"] = 1,
+            ["employment"] = 2,
+            ["healthcare"] = 1,
+            ["housing"] = 0,
+            ["education"] = 1,
+            ["social-assistance"] = 1
+        };
+        foreach (var (categorySlug, expectedCount) in productionCategoryCounts)
+        {
+            var category = await RenderAsync<Category>("Production", language,
                 $"/countries/france/categories/{categorySlug}", new()
                 {
                     [nameof(Category.CountrySlug)] = "france",
                     [nameof(Category.CategorySlug)] = categorySlug
                 });
-            Assert.True(result.NotFound);
+            Assert.False(category.NotFound);
+            Assert.Equal(expectedCount, Regex.Matches(category.Html, "class=\"information-entry\"").Count);
         }
         var productionResults = await RenderAsync<Search>("Production", language, "/search?country=france");
-        Assert.Empty(Regex.Matches(productionResults.Html, "class=\"result-card\"").Cast<Match>());
+        Assert.Equal(6, Regex.Matches(productionResults.Html, "class=\"result-card\"").Count);
         var productionCompare = await RenderAsync<Compare>("Production", language, "/compare");
         Assert.DoesNotContain("france", SelectValues(productionCompare.Html, "country1"));
         Assert.DoesNotContain("belgium", SelectValues(productionCompare.Html, "country1"));
@@ -248,7 +251,7 @@ public sealed class FranceContentIntegrationTests
     }
 
     [Fact]
-    public async Task DevelopmentFranceSearchExcludesOutdatedTranslation()
+    public async Task OutdatedFranceTranslationIsExcludedFromProductionVisibleSearches()
     {
         const string language = "en";
         var catalog = await Catalog.Value;
@@ -257,13 +260,20 @@ public sealed class FranceContentIntegrationTests
         var previewCatalog = WithFranceTranslationStatus(catalog, outdatedTranslation.InformationEntryId,
             language, VerificationStatus.Outdated);
 
-        var search = await RenderAsync<Search>("Development", language, "/search?country=france",
+        var productionSearch = await RenderAsync<Search>("Production", language, "/search?country=france",
+            catalogOverride: previewCatalog);
+        Assert.Equal(5, Regex.Matches(productionSearch.Html, "class=\"result-card\"").Count);
+        Assert.DoesNotContain(outdatedTranslation.Title, productionSearch.Html);
+        Assert.Contains(catalog.InformationEntryTranslations.Single(item =>
+            item.InformationEntryId == Articles["FR-EMP-02"].Id && item.LanguageCode == language).Title, productionSearch.Html);
+
+        var developmentSearch = await RenderAsync<Search>("Development", language, "/search?country=france",
             catalogOverride: previewCatalog);
 
-        Assert.Equal(5, Regex.Matches(search.Html, "class=\"result-card\"").Count);
-        Assert.DoesNotContain(outdatedTranslation.Title, search.Html);
+        Assert.Equal(5, Regex.Matches(developmentSearch.Html, "class=\"result-card\"").Count);
+        Assert.DoesNotContain(outdatedTranslation.Title, developmentSearch.Html);
         Assert.Contains(catalog.InformationEntryTranslations.Single(item =>
-            item.InformationEntryId == Articles["FR-EMP-02"].Id && item.LanguageCode == language).Title, search.Html);
+            item.InformationEntryId == Articles["FR-EMP-02"].Id && item.LanguageCode == language).Title, developmentSearch.Html);
     }
 
     [Fact]

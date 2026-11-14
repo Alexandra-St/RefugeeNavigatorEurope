@@ -32,8 +32,8 @@ public sealed class SlovakiaContentIntegrationTests
         Assert.Equal(19, catalog.Countries.Count);
         Assert.Equal(147, catalog.InformationEntries.Count);
         Assert.Equal(441, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(357, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(84, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(375, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(66, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
         var entries = catalog.InformationEntries.Where(item => item.CountryId == CountryId).ToArray();
         Assert.Equal(8, entries.Length);
@@ -58,7 +58,7 @@ public sealed class SlovakiaContentIntegrationTests
         }
         Assert.Contains(CountryVisibility.GetVisibleCountries(catalog, false), item => item.Slug == "slovakia");
         Assert.Contains(CountryVisibility.GetVisibleCountries(catalog, true), item => item.Slug == "slovakia");
-        Assert.Equal(15, CountryVisibility.GetVisibleCountries(catalog, false).Count);
+        Assert.Equal(16, CountryVisibility.GetVisibleCountries(catalog, false).Count);
         Assert.Equal(19, CountryVisibility.GetVisibleCountries(catalog, true).Count);
     }
 

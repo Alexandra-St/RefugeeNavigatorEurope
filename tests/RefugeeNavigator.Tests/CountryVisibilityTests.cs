@@ -68,7 +68,7 @@ public sealed class CountryVisibilityTests
     }
 
     private static readonly string[] ProductionCoreCountries =
-        ["denmark", "germany", "poland", "czechia", "spain", "sweden", "netherlands", "romania", "slovakia", "bulgaria", "austria", "italy", "lithuania", "hungary", "norway"];
+        ["denmark", "germany", "poland", "czechia", "spain", "sweden", "netherlands", "romania", "slovakia", "bulgaria", "austria", "italy", "lithuania", "france", "hungary", "norway"];
     private static readonly string[] ProductionCompareCountries =
         ["denmark", "germany", "poland", "czechia", "spain", "sweden", "netherlands", "romania", "slovakia", "bulgaria", "austria", "italy", "lithuania", "hungary", "norway"];
     private static readonly Lazy<Task<CatalogData>> Catalog = new(

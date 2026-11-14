@@ -79,8 +79,8 @@ public sealed class ItalyContentIntegrationTests
         Assert.Equal(19, catalog.Countries.Count);
         Assert.Equal(147, catalog.InformationEntries.Count);
         Assert.Equal(441, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(357, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(84, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(375, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(66, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == CountryId).ToArray();
@@ -113,7 +113,7 @@ public sealed class ItalyContentIntegrationTests
         var development = CountryVisibility.GetVisibleCountries(catalog, true);
         Assert.Contains(production, item => item.Slug == "italy");
         Assert.Contains(development, item => item.Slug == "italy");
-        Assert.Equal(15, production.Count);
+        Assert.Equal(16, production.Count);
         Assert.Equal(19, development.Count);
     }
 
@@ -239,8 +239,8 @@ public sealed class ItalyContentIntegrationTests
         Assert.Equal(19, catalog.Countries.Count);
         Assert.Equal(147, catalog.InformationEntries.Count);
         Assert.Equal(441, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(357, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(84, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(375, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(66, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
 
         var netherlandsEntries = catalog.InformationEntries.Where(item => item.CountryId == Guid.Parse("10000000-0000-0000-0000-000000000007"))
             .Select(item => item.Id).ToHashSet();

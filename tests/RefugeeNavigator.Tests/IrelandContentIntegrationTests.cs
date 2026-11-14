@@ -59,8 +59,8 @@ public sealed class IrelandContentIntegrationTests
         Assert.Equal(19, catalog.Countries.Count);
         Assert.Equal(147, catalog.InformationEntries.Count);
         Assert.Equal(441, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(357, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(84, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(375, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(66, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == CountryId).ToArray();
@@ -169,7 +169,7 @@ public sealed class IrelandContentIntegrationTests
     {
         var catalog = await Catalog.Value;
         var productionHome = await RenderAsync<Home>("Production", language);
-        Assert.Equal(15, Regex.Matches(productionHome.Html, "class=\"country-card\"").Count);
+        Assert.Equal(16, Regex.Matches(productionHome.Html, "class=\"country-card\"").Count);
         Assert.DoesNotContain("href=\"/countries/ireland\"", productionHome.Html);
         var productionSearch = await RenderAsync<Search>("Production", language, "/search");
         Assert.DoesNotContain("ireland", SelectValues(productionSearch.Html, "country"));
