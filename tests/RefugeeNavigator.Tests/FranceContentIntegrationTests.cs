@@ -99,14 +99,14 @@ public sealed class FranceContentIntegrationTests
             });
         }
 
-        Assert.Equal(15, CountryComparisonTopicMap.SupportedCountrySlugs.Count);
-        Assert.DoesNotContain("france", CountryComparisonTopicMap.SupportedCountrySlugs);
+        Assert.Equal(16, CountryComparisonTopicMap.SupportedCountrySlugs.Count);
+        Assert.Contains("france", CountryComparisonTopicMap.SupportedCountrySlugs);
         Assert.DoesNotContain("belgium", CountryComparisonTopicMap.SupportedCountrySlugs);
         Assert.DoesNotContain("ireland", CountryComparisonTopicMap.SupportedCountrySlugs);
-        Assert.All(CountryComparisonTopicMap.All, topic => Assert.Equal(15, topic.EntryIds.Count));
+        Assert.All(CountryComparisonTopicMap.All, topic => Assert.Equal(16, topic.EntryIds.Count));
         var allFacts = (await Facts.Value).Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).ToArray();
-        Assert.Equal(360, allFacts.Length);
-        Assert.DoesNotContain(allFacts, fact => fact.CountrySlug == "france");
+        Assert.Equal(384, allFacts.Length);
+        Assert.Equal(24, allFacts.Count(fact => fact.CountrySlug == "france"));
         Assert.DoesNotContain(allFacts, fact => fact.CountrySlug == "belgium");
         Assert.DoesNotContain(allFacts, fact => fact.CountrySlug == "ireland");
     }
@@ -176,7 +176,7 @@ public sealed class FranceContentIntegrationTests
     [InlineData("en")]
     [InlineData("uk")]
     [InlineData("ru")]
-    public async Task FranceIsVisibleInProductionAndDevelopmentButExcludedFromComparison(string language)
+    public async Task FranceIsVisibleInProductionDevelopmentAndCountryComparison(string language)
     {
         var catalog = await Catalog.Value;
         var productionHome = await RenderAsync<Home>("Production", language);
@@ -210,10 +210,13 @@ public sealed class FranceContentIntegrationTests
         var productionResults = await RenderAsync<Search>("Production", language, "/search?country=france");
         Assert.Equal(8, Regex.Matches(productionResults.Html, "class=\"result-card\"").Count);
         var productionCompare = await RenderAsync<Compare>("Production", language, "/compare");
-        Assert.DoesNotContain("france", SelectValues(productionCompare.Html, "country1"));
+        Assert.Contains("france", SelectValues(productionCompare.Html, "country1"));
         Assert.DoesNotContain("belgium", SelectValues(productionCompare.Html, "country1"));
-        Assert.DoesNotContain("france", SelectValues(productionCompare.Html, "country2"));
+        Assert.Contains("france", SelectValues(productionCompare.Html, "country2"));
         Assert.DoesNotContain("belgium", SelectValues(productionCompare.Html, "country2"));
+        var productionFranceComparison = await RenderAsync<Compare>("Production", language,
+            "/compare?country1=france&country2=norway&category=all");
+        await AssertRenderedFranceComparison(productionFranceComparison.Html, language);
 
         var developmentHome = await RenderAsync<Home>("Development", language);
         Assert.Equal(19, Regex.Matches(developmentHome.Html, "class=\"country-card\"").Count);
@@ -249,12 +252,77 @@ public sealed class FranceContentIntegrationTests
         }
 
         var developmentCompare = await RenderAsync<Compare>("Development", language, "/compare");
-        Assert.DoesNotContain("france", SelectValues(developmentCompare.Html, "country1"));
+        Assert.Contains("france", SelectValues(developmentCompare.Html, "country1"));
         Assert.DoesNotContain("belgium", SelectValues(developmentCompare.Html, "country1"));
-        Assert.DoesNotContain("france", SelectValues(developmentCompare.Html, "country2"));
+        Assert.Contains("france", SelectValues(developmentCompare.Html, "country2"));
         Assert.DoesNotContain("belgium", SelectValues(developmentCompare.Html, "country2"));
-        Assert.DoesNotContain("france", CountryComparisonTopicMap.SupportedCountrySlugs);
+        var developmentFranceComparison = await RenderAsync<Compare>("Development", language,
+            "/compare?country1=france&country2=norway&category=all");
+        await AssertRenderedFranceComparison(developmentFranceComparison.Html, language);
+        Assert.Contains("france", CountryComparisonTopicMap.SupportedCountrySlugs);
         Assert.DoesNotContain("ireland", CountryComparisonTopicMap.SupportedCountrySlugs);
+    }
+
+    [Fact]
+    public async Task FranceCompareFactsMatchReviewedDraftAndOwnedProductionSourcesExactly()
+    {
+        var catalog = await Catalog.Value;
+        var facts = await Facts.Value;
+        CountryComparisonTopicMap.Validate(catalog);
+        Assert.Equal(8, facts.Topics.Count);
+        Assert.Equal(24, facts.Topics.Sum(topic => topic.Aspects.Count));
+        var repositoryRoot = FindRepositoryRoot();
+        var draft = await File.ReadAllTextAsync(Path.Combine(repositoryRoot, "docs", "content-drafts", "france-v1", "COMPARE_DRAFT_01.md"));
+        var factBlocks = Regex.Split(draft, @"(?m)(?=^### [a-z0-9-]+\s*$)")
+            .Where(block => Regex.IsMatch(block, @"(?m)^### [a-z0-9-]+\s*$"))
+            .ToArray();
+        Assert.Equal(24, factBlocks.Length);
+
+        var franceFacts = facts.Topics.SelectMany(topic => topic.Aspects
+                .SelectMany(aspect => aspect.Facts.Where(fact => fact.CountrySlug == "france")
+                    .Select(fact => (topic, aspect, fact))))
+            .ToArray();
+        Assert.Equal(24, franceFacts.Length);
+        Assert.Equal(24, franceFacts.Select(item => item.aspect.Id).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(72, franceFacts.Length * 3);
+
+        foreach (var block in factBlocks)
+        {
+            var aspectId = Regex.Match(block, @"(?m)^### (?<id>[a-z0-9-]+)\s*$").Groups["id"].Value;
+            var ownerMatch = Regex.Match(block, @"(?m)^\*\*Owner:\*\* `(?<code>FR-[A-Z]+-\d+)` — `(?<id>[0-9a-f-]{36})`$");
+            var informationEntryId = Guid.Parse(Regex.Match(block, @"(?m)^\*\*InformationEntryId:\*\* `(?<id>[0-9a-f-]{36})`$").Groups["id"].Value);
+            Assert.True(ownerMatch.Success, $"Missing owner for {aspectId}.");
+            Assert.Equal(informationEntryId, Guid.Parse(ownerMatch.Groups["id"].Value));
+            var actual = Assert.Single(franceFacts, item => item.aspect.Id == aspectId);
+            var mappedEntryId = CountryComparisonTopicMap.EntryIdFor(
+                Assert.Single(CountryComparisonTopicMap.All, topic => topic.ResourceKey == actual.topic.TopicResourceKey), "france");
+            Assert.Equal(mappedEntryId, informationEntryId);
+            Assert.Equal(informationEntryId, actual.fact.InformationEntryId);
+            Assert.Equal(ComparisonFactStatus.Approved, actual.fact.Status);
+            Assert.True(actual.fact.IsAvailable);
+            Assert.Equal(new[] { "en", "ru", "uk" }, actual.fact.Values.Keys.Order(StringComparer.Ordinal).ToArray());
+
+            foreach (var language in new[] { "en", "uk", "ru" })
+            {
+                var value = Regex.Match(block, $@"(?m)^\*\*{language.ToUpperInvariant()}:\*\* (?<value>.+)$");
+                Assert.True(value.Success, $"Missing {language} draft value for {aspectId}.");
+                Assert.Equal(value.Groups["value"].Value, actual.fact.Values[language]);
+            }
+
+            var expectedSourceIds = Regex.Matches(
+                    Regex.Match(block, @"(?m)^\*\*OfficialSourceIds:\*\* (?<ids>.+)$").Groups["ids"].Value,
+                    @"`(?<id>[0-9a-f-]{36})`")
+                .Select(match => Guid.Parse(match.Groups["id"].Value))
+                .ToArray();
+            Assert.Equal(expectedSourceIds, actual.fact.OfficialSourceIds);
+            Assert.NotEmpty(actual.fact.OfficialSourceIds);
+            Assert.All(actual.fact.OfficialSourceIds, sourceId =>
+            {
+                var source = Assert.Single(catalog.OfficialSources, item => item.Id == sourceId);
+                Assert.Equal(informationEntryId, source.InformationEntryId);
+                Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
+            });
+        }
     }
 
     [Fact]
@@ -292,6 +360,34 @@ public sealed class FranceContentIntegrationTests
         Assert.Equal("у Франції", Resources.GetString("Country.France.In", CultureInfo.GetCultureInfo("uk")));
         Assert.Equal("Франция", Resources.GetString("Country.France", CultureInfo.GetCultureInfo("ru")));
         Assert.Equal("во Франции", Resources.GetString("Country.France.In", CultureInfo.GetCultureInfo("ru")));
+    }
+
+    private static async Task AssertRenderedFranceComparison(string html, string language)
+    {
+        var visibleHtml = WebUtility.HtmlDecode(html);
+        Assert.Contains("value=\"france\" selected", html);
+        Assert.Contains("value=\"norway\" selected", html);
+        Assert.DoesNotContain("class=\"selection-message\"", html);
+        Assert.Equal(8, Regex.Matches(html, "class=\"structured-topic\"").Count);
+        Assert.Equal(24, Regex.Matches(html, "class=\"structured-aspect\"").Count);
+        Assert.Equal(48, Regex.Matches(html, "class=\"structured-country\"").Count);
+
+        var catalog = await Catalog.Value;
+        var facts = await Facts.Value;
+        var franceFacts = facts.Topics.SelectMany(topic => topic.Aspects)
+            .SelectMany(aspect => aspect.Facts.Where(fact => fact.CountrySlug == "france"))
+            .ToArray();
+        Assert.Equal(24, franceFacts.Length);
+        foreach (var fact in franceFacts)
+        {
+            Assert.Equal(ComparisonFactStatus.Approved, fact.Status);
+            Assert.True(fact.IsAvailable);
+            foreach (var sourceId in fact.OfficialSourceIds)
+            {
+                var source = Assert.Single(catalog.OfficialSources, item => item.Id == sourceId);
+                Assert.Contains(source.Url.AbsoluteUri, visibleHtml);
+            }
+        }
     }
 
     private static string[] SelectValues(string html, string name)
