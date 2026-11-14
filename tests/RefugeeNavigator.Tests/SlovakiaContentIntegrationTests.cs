@@ -114,7 +114,7 @@ public sealed class SlovakiaContentIntegrationTests
         var catalog = await Catalog.Value;
         CountryComparisonTopicMap.Validate(catalog);
         Assert.Contains("slovakia", CountryComparisonTopicMap.SupportedCountrySlugs);
-        Assert.Equal(112, CountryComparisonTopicMap.All.SelectMany(item => item.EntryIds.Values).Distinct().Count());
+        Assert.Equal(120, CountryComparisonTopicMap.All.SelectMany(item => item.EntryIds.Values).Distinct().Count());
         var comparison = await new JsonComparisonFactProvider(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json")).LoadAsync(catalog);
         var facts = comparison.Topics.SelectMany(item => item.Aspects).SelectMany(item => item.Facts).Where(item => item.CountrySlug == "slovakia").ToArray();
         Assert.Equal(24, facts.Length);

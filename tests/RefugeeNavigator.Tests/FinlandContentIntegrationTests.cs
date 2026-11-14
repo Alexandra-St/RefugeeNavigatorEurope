@@ -96,12 +96,12 @@ public sealed class FinlandContentIntegrationTests
             });
         }
 
-        Assert.Equal(14, CountryComparisonTopicMap.SupportedCountrySlugs.Count);
+        Assert.Equal(15, CountryComparisonTopicMap.SupportedCountrySlugs.Count);
         Assert.DoesNotContain("ireland", CountryComparisonTopicMap.SupportedCountrySlugs);
         Assert.DoesNotContain("france", CountryComparisonTopicMap.SupportedCountrySlugs);
-        Assert.All(CountryComparisonTopicMap.All, topic => Assert.Equal(14, topic.EntryIds.Count));
+        Assert.All(CountryComparisonTopicMap.All, topic => Assert.Equal(15, topic.EntryIds.Count));
         var allFacts = (await Facts.Value).Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).ToArray();
-        Assert.Equal(336, allFacts.Length);
+        Assert.Equal(360, allFacts.Length);
         Assert.DoesNotContain(allFacts, fact => fact.CountrySlug == "ireland");
         Assert.DoesNotContain(allFacts, fact => fact.CountrySlug == "france");
     }

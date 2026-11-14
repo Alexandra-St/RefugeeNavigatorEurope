@@ -163,7 +163,7 @@ public sealed class RomaniaContentIntegrationTests
         var comparison = await new JsonComparisonFactProvider(path).LoadAsync(catalog);
         CountryComparisonTopicMap.Validate(catalog);
         Assert.Contains("romania", CountryComparisonTopicMap.SupportedCountrySlugs);
-        Assert.Equal(112, CountryComparisonTopicMap.All.SelectMany(topic => topic.EntryIds.Values).Distinct().Count());
+        Assert.Equal(120, CountryComparisonTopicMap.All.SelectMany(topic => topic.EntryIds.Values).Distinct().Count());
 
         var facts = comparison.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts)
             .Where(fact => fact.CountrySlug == "romania").ToArray();

@@ -46,18 +46,18 @@ public sealed class HungaryContentIntegrationTests
             ["Compare.Topic.EducationLanguage"] = Articles["HU-EDU-01"].Id,
             ["Compare.Topic.SocialAssistance"] = Articles["HU-SOC-01"].Id
         };
-        Assert.Equal(14, CountryComparisonTopicMap.SupportedCountrySlugs.Count);
+        Assert.Equal(15, CountryComparisonTopicMap.SupportedCountrySlugs.Count);
         Assert.All(CountryComparisonTopicMap.All, topic =>
         {
-            Assert.Equal(14, topic.EntryIds.Count);
+            Assert.Equal(15, topic.EntryIds.Count);
             Assert.Equal(expectedMappings[topic.ResourceKey], CountryComparisonTopicMap.EntryIdFor(topic, "hungary"));
         });
         var comparison = await new JsonComparisonFactProvider(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json")).LoadAsync(catalog);
         var allFacts = comparison.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).ToArray();
-        Assert.Equal(336, allFacts.Length);
-        Assert.Equal(329, allFacts.Count(fact => fact.IsAvailable));
+        Assert.Equal(360, allFacts.Length);
+        Assert.Equal(353, allFacts.Count(fact => fact.IsAvailable));
         Assert.Equal(7, allFacts.Count(fact => !fact.IsAvailable));
-        Assert.Equal(331, allFacts.Count(fact => fact.Status == ComparisonFactStatus.Approved));
+        Assert.Equal(355, allFacts.Count(fact => fact.Status == ComparisonFactStatus.Approved));
         Assert.Equal(5, allFacts.Count(fact => fact.Status == ComparisonFactStatus.Draft));
         var hungaryFacts = allFacts.Where(fact => fact.CountrySlug == "hungary").ToArray();
         Assert.Equal(24, hungaryFacts.Length);

@@ -70,7 +70,7 @@ public sealed class CountryVisibilityTests
     private static readonly string[] ProductionCoreCountries =
         ["denmark", "germany", "poland", "czechia", "spain", "sweden", "netherlands", "romania", "slovakia", "bulgaria", "austria", "italy", "lithuania", "hungary", "norway"];
     private static readonly string[] ProductionCompareCountries =
-        ["denmark", "germany", "poland", "czechia", "spain", "sweden", "netherlands", "romania", "slovakia", "bulgaria", "austria", "italy", "lithuania", "hungary"];
+        ["denmark", "germany", "poland", "czechia", "spain", "sweden", "netherlands", "romania", "slovakia", "bulgaria", "austria", "italy", "lithuania", "hungary", "norway"];
     private static readonly Lazy<Task<CatalogData>> Catalog = new(
         () => new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync());
     private static readonly Lazy<Task<ComparisonFactCatalog>> Facts = new(async () =>

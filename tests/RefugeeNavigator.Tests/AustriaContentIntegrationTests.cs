@@ -143,7 +143,7 @@ public sealed class AustriaContentIntegrationTests
         var comparison = await Facts.Value;
         CountryComparisonTopicMap.Validate(catalog);
         Assert.Contains("austria", CountryComparisonTopicMap.SupportedCountrySlugs);
-        Assert.Equal(112, CountryComparisonTopicMap.All.SelectMany(item => item.EntryIds.Values).Distinct().Count());
+        Assert.Equal(120, CountryComparisonTopicMap.All.SelectMany(item => item.EntryIds.Values).Distinct().Count());
         Assert.All(CountryComparisonTopicMap.All, topic => Assert.Equal(Articles[topic.CategorySlug switch
         {
             "temporary-protection" when topic.ResourceKey == "Compare.Topic.TemporaryProtectionApplication" => "AT-TP-01",
