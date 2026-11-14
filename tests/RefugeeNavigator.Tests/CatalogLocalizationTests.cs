@@ -13,6 +13,7 @@ public class CatalogLocalizationTests
     [InlineData("germany", "Country.Germany")]
     [InlineData("poland", "Country.Poland")]
     [InlineData("hungary", "Country.Hungary")]
+    [InlineData("norway", "Country.Norway")]
     public void CountrySlugResolvesToExistingResourceKey(string slug, string expectedKey)
     {
         var country = new Country(Guid.NewGuid(), "Display name", slug);

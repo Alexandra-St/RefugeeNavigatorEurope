@@ -68,7 +68,7 @@ public sealed class CountryVisibilityTests
     }
 
     private static readonly string[] ProductionCoreCountries =
-        ["denmark", "germany", "poland", "czechia", "spain", "sweden", "netherlands", "romania", "slovakia", "bulgaria", "austria", "italy", "lithuania", "hungary"];
+        ["denmark", "germany", "poland", "czechia", "spain", "sweden", "netherlands", "romania", "slovakia", "bulgaria", "austria", "italy", "lithuania", "hungary", "norway"];
     private static readonly string[] ProductionCompareCountries =
         ["denmark", "germany", "poland", "czechia", "spain", "sweden", "netherlands", "romania", "slovakia", "bulgaria", "austria", "italy", "lithuania", "hungary"];
     private static readonly Lazy<Task<CatalogData>> Catalog = new(
@@ -208,7 +208,7 @@ public sealed class CountryVisibilityTests
     {
         var catalog = await Catalog.Value;
         var home = await RenderAsync<Home>("Development", language);
-        Assert.Equal(18, Regex.Matches(home.Html, "class=\"country-card\"").Count);
+        Assert.Equal(19, Regex.Matches(home.Html, "class=\"country-card\"").Count);
         Assert.Contains("href=\"/countries/hungary\"", home.Html);
         Assert.Contains("href=\"/countries/lithuania\"", home.Html);
         Assert.Contains("href=\"/countries/sweden\"", home.Html);

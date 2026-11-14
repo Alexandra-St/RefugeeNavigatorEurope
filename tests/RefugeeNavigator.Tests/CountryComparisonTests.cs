@@ -79,9 +79,9 @@ public sealed class CountryComparisonTests
                 Assert.True(sourcesById.TryGetValue(sourceId, out var source), $"Missing comparison source {sourceId}.");
                 Assert.Equal(fact.InformationEntryId, source!.InformationEntryId);
             }));
-        Assert.Equal(139, catalog.InformationEntries.Count);
-        Assert.Equal(417, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(333, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(147, catalog.InformationEntries.Count);
+        Assert.Equal(441, catalog.InformationEntryTranslations.Count);
+        Assert.Equal(357, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
         Assert.Equal(84, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Outdated));
         var czechiaId = Guid.Parse("10000000-0000-0000-0000-000000000004");

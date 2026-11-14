@@ -29,10 +29,10 @@ public sealed class SlovakiaContentIntegrationTests
         var country = Assert.Single(catalog.Countries, item => item.Slug == "slovakia");
         Assert.Equal(CountryId, country.Id);
         Assert.Equal("Slovakia", country.Name);
-        Assert.Equal(18, catalog.Countries.Count);
-        Assert.Equal(139, catalog.InformationEntries.Count);
-        Assert.Equal(417, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(333, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(19, catalog.Countries.Count);
+        Assert.Equal(147, catalog.InformationEntries.Count);
+        Assert.Equal(441, catalog.InformationEntryTranslations.Count);
+        Assert.Equal(357, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
         Assert.Equal(84, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
         var entries = catalog.InformationEntries.Where(item => item.CountryId == CountryId).ToArray();
@@ -58,8 +58,8 @@ public sealed class SlovakiaContentIntegrationTests
         }
         Assert.Contains(CountryVisibility.GetVisibleCountries(catalog, false), item => item.Slug == "slovakia");
         Assert.Contains(CountryVisibility.GetVisibleCountries(catalog, true), item => item.Slug == "slovakia");
-        Assert.Equal(14, CountryVisibility.GetVisibleCountries(catalog, false).Count);
-        Assert.Equal(18, CountryVisibility.GetVisibleCountries(catalog, true).Count);
+        Assert.Equal(15, CountryVisibility.GetVisibleCountries(catalog, false).Count);
+        Assert.Equal(19, CountryVisibility.GetVisibleCountries(catalog, true).Count);
     }
 
     [Fact]
@@ -71,7 +71,7 @@ public sealed class SlovakiaContentIntegrationTests
         var ids = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => ids.Contains(item.InformationEntryId)).ToArray();
         Assert.Equal(81, sources.Length);
-        Assert.Equal(1366, catalog.OfficialSources.Count);
+        Assert.Equal(1400, catalog.OfficialSources.Count);
         Assert.All(sources, item =>
         {
             Assert.Contains(item.InformationEntryId, ids);
