@@ -70,7 +70,7 @@ public sealed class CountryVisibilityTests
     private static readonly string[] ProductionCoreCountries =
         ["denmark", "germany", "poland", "czechia", "spain", "sweden", "netherlands", "romania", "slovakia", "bulgaria", "austria", "italy", "lithuania", "france", "belgium", "hungary", "norway"];
     private static readonly string[] ProductionCompareCountries =
-        ["denmark", "germany", "poland", "czechia", "spain", "sweden", "netherlands", "romania", "slovakia", "bulgaria", "austria", "italy", "lithuania", "france", "hungary", "norway"];
+        ["denmark", "germany", "poland", "czechia", "spain", "sweden", "netherlands", "romania", "slovakia", "bulgaria", "austria", "italy", "lithuania", "france", "belgium", "hungary", "norway"];
     private static readonly Lazy<Task<CatalogData>> Catalog = new(
         () => new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync());
     private static readonly Lazy<Task<ComparisonFactCatalog>> Facts = new(async () =>
@@ -169,7 +169,7 @@ public sealed class CountryVisibilityTests
     public async Task ProductionSearchPreservesVerifiedResultsAndHeldArticleSuppression(string language)
     {
         var catalog = await Catalog.Value;
-        foreach (var slug in new[] { "czechia", "spain", "netherlands", "sweden", "romania", "bulgaria", "hungary", "belgium" })
+        foreach (var slug in new[] { "czechia", "spain", "netherlands", "sweden", "romania", "bulgaria", "hungary" })
         {
             var result = await RenderAsync<Search>("Production", language, $"/search?country={slug}");
             Assert.Equal(slug == "netherlands" ? 7 : 8,

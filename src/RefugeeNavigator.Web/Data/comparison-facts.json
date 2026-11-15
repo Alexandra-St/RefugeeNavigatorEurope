@@ -251,6 +251,22 @@
                 "uk": "Франція застосовує механізм тимчасового захисту ЄС до визначених досліджених категорій, пов’язаних з Україною. Для нових надань із 5 серпня 2026 року, де це застосовно, діє умова щодо військових обов’язків України та підтвердження; виняток стосується осіб, які безперервно мали захист у тій самій державі-члені станом на 4 серпня 2026 року; універсальний формат доказу не визначено.",
                 "ru": "Франция применяет механизм временной защиты ЕС к исследованным категориям лиц, связанным с Украиной. Для новых предоставлений с 5 августа 2026 года, где это применимо, действует условие о воинских обязанностях Украины и подтверждении; исключение относится к лицам, непрерывно имевшим защиту в том же государстве-члене по состоянию на 4 августа 2026 года; единый формат подтверждения не установлен."
               }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "aef6ec65-f8ed-5054-bafb-c465e790dd57",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "58179a1a-d1b1-5b23-8948-5fe40b5e7552",
+                "07f2aed9-f526-519f-b3d8-a77fbd702beb",
+                "01044ed1-42f4-5d33-bbcd-931f2b1006b7"
+              ],
+              "Values": {
+                "en": "Belgium applies the EU temporary-protection scheme to defined eligible groups, including specified Ukrainian nationals, some people with protection in Ukraine, certain permanent residents of Ukraine who cannot return safely and durably, and qualifying close family members. Nationality or residence in Ukraine alone is not enough; relevant new applications are also subject to the EU military-obligation condition from 5 August 2026.",
+                "uk": "Бельгія застосовує режим тимчасового захисту ЄС до визначених категорій осіб, зокрема окремих громадян України, деяких людей, які мали захист в Україні, певних постійних мешканців України, які не можуть безпечно й надовго повернутися, та близьких членів сім’ї, що відповідають умовам. Самого громадянства або проживання в Україні недостатньо; для відповідних нових заяв із 5 серпня 2026 року також діє умова ЄС щодо військового обов’язку.",
+                "ru": "Бельгия применяет режим временной защиты ЕС к определённым категориям лиц, включая указанные группы граждан Украины, некоторых людей с защитой в Украине, отдельных постоянных жителей Украины, которые не могут безопасно и надолго вернуться, и близких членов семьи, соответствующих условиям. Одного гражданства или проживания в Украине недостаточно; для соответствующих новых заявлений с 5 августа 2026 года также действует условие ЕС о воинской обязанности."
+              }
             }
           ]
         },
@@ -497,6 +513,21 @@
                 "en": "Adults apply at the prefecture for their département of residence, or at the Paris Police Prefecture in Paris. National document categories are set in law, but local intake instructions vary; there is no universal checklist or processing-time guarantee.",
                 "uk": "Повнолітні заявники звертаються до префектури департаменту проживання або до Префектури поліції Парижа в Парижі. Закон визначає загальні категорії документів, але місцеві інструкції щодо прийому різняться; єдиного універсального переліку документів чи гарантованого строку розгляду немає.",
                 "ru": "Совершеннолетние заявители обращаются в префектуру департамента проживания или в Префектуру полиции Парижа в Париже. Закон устанавливает общие категории документов, но местные инструкции по приёму различаются; единого универсального перечня документов или гарантированного срока рассмотрения нет."
+              }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "aef6ec65-f8ed-5054-bafb-c465e790dd57",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "efd6f672-6edb-5eac-bddc-3d56ed6b4d27",
+                "2e8786e8-c502-5853-8ed7-ba5e9c1bc9f3"
+              ],
+              "Values": {
+                "en": "Apply in person at the federal Immigration Office’s Temporary Protection Registration Centre, 68 Rue Belliard, Brussels, bringing identity and eligibility evidence you have, including evidence of residence in Ukraine before 24 February 2022. If the conditions are met, the Office issues a Certificate of Temporary Protection; then present it to your municipality for the Temporary A residence card. Check current intake instructions: the reviewed official pages do not say whether an appointment is required, and capacity may require a return visit.",
+                "uk": "Подайте заяву особисто у Федеральному реєстраційному центрі тимчасового захисту Імміграційної служби за адресою 68 Rue Belliard, Brussels; візьміть наявні документи, що посвідчують особу й підтверджують відповідність умовам, зокрема проживання в Україні до 24 лютого 2022 року. Якщо умови виконані, служба видає Certificate of Temporary Protection; після цього подайте його до свого муніципалітету для оформлення тимчасової картки проживання A. Перевірте актуальні інструкції прийому: перевірені офіційні сторінки не повідомляють, чи потрібен попередній запис, а через обмежену спроможність можуть попросити прийти повторно.",
+                "ru": "Подайте заявление лично в Федеральном регистрационном центре временной защиты Иммиграционной службы по адресу 68 Rue Belliard, Brussels; возьмите имеющиеся документы, удостоверяющие личность и подтверждающие соответствие условиям, в том числе проживание в Украине до 24 февраля 2022 года. Если условия выполнены, служба выдаёт Certificate of Temporary Protection; затем предъявите его в своём муниципалитете для оформления временной карты проживания A. Проверьте актуальные инструкции приёма: изученные официальные страницы не сообщают, нужна ли предварительная запись, а из-за ограниченной пропускной способности могут попросить прийти повторно."
               }
             }
           ]
@@ -751,6 +782,21 @@
                 "en": "If granted, the French APS is valid for six months and may be renewed while temporary protection remains in force. The EU framework currently runs through 4 March 2028, but that is not the printed expiry date of an individual APS; check the document and prefecture instructions.",
                 "uk": "У разі надання захисту французький APS чинний шість місяців і може поновлюватися, поки діє тимчасовий захист. Наразі рамки ЄС установлені до 4 березня 2028 року, але ця дата не є надрукованим строком дії окремого APS; перевіряйте документ та інструкції префектури.",
                 "ru": "Если защита предоставлена, французский APS действует шесть месяцев и может продлеваться, пока действует временная защита. Сейчас рамки ЕС установлены до 4 марта 2028 года, но эта дата не является напечатанным сроком действия конкретного APS; проверяйте документ и инструкции префектуры."
+              }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "aef6ec65-f8ed-5054-bafb-c465e790dd57",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "01044ed1-42f4-5d33-bbcd-931f2b1006b7",
+                "efd6f672-6edb-5eac-bddc-3d56ed6b4d27"
+              ],
+              "Values": {
+                "en": "The EU temporary-protection scheme has been extended until 4 March 2028. Belgian Immigration Office guidance says A-card renewal requests may be made through the municipality from 4 January 2027 and that a renewed card will be valid until 4 March 2028; the EU scheme date does not itself establish the expiry of an individual card.",
+                "uk": "Режим тимчасового захисту ЄС продовжено до 4 березня 2028 року. За інструкціями бельгійської Імміграційної служби, із 4 січня 2027 року можна звертатися до муніципалітету щодо продовження картки A, а продовжена картка буде чинною до 4 березня 2028 року; дата завершення режиму ЄС сама по собі не визначає строк дії індивідуальної картки.",
+                "ru": "Режим временной защиты ЕС продлён до 4 марта 2028 года. По инструкциям бельгийской Иммиграционной службы, с 4 января 2027 года можно обращаться в муниципалитет за продлением карты A, а продлённая карта будет действовать до 4 марта 2028 года; дата окончания режима ЕС сама по себе не определяет срок действия индивидуальной карты."
               }
             }
           ]
@@ -1015,6 +1061,23 @@
                 "uk": "Звичайні маршрути отримання дозволу на проживання можуть охоплювати роботу, навчання, підприємництво чи сімейні підстави, кожна з окремими умовами; тимчасовий захист не переходить автоматично у звичайний дозвіл. Приморська Сена описує одну місцеву процедуру для визначених підстав.",
                 "ru": "Обычные маршруты получения вида на жительство могут предусматривать работу, учёбу, предпринимательство или семейные основания, каждое со своими условиями; временная защита не переходит автоматически в обычный вид на жительство. Приморская Сена описывает одну местную процедуру для указанных оснований."
               }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "54c6f95f-589e-5901-beae-990bed994160",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "3815efea-e59a-510a-8ee1-9f75add885e6",
+                "a53fc39d-261e-5e59-b897-1a5cb8c1fdba",
+                "c826f285-132d-51a2-9088-3085059438e0",
+                "4bb0cb04-562b-5f14-a5d0-c4f982d5e2db"
+              ],
+              "Values": {
+                "en": "Ordinary Belgian residence routes include work or a single permit, study, family reunification and self-employment/professional-card routes, each with separate requirements. Temporary protection does not automatically convert into an ordinary residence permit.",
+                "uk": "Звичайні маршрути проживання в Бельгії включають роботу або єдиний дозвіл, навчання, возз’єднання сім’ї та самозайнятість/професійну картку; кожен має окремі вимоги. Тимчасовий захист автоматично не перетворюється на звичайний дозвіл на проживання.",
+                "ru": "Обычные основания для проживания в Бельгии включают работу или единое разрешение, учёбу, воссоединение семьи и самозанятость/профессиональную карту; у каждого свои требования. Временная защита автоматически не преобразуется в обычный вид на жительство."
+              }
             }
           ]
         },
@@ -1272,6 +1335,23 @@
                 "uk": "Відповідність умовам і візові вимоги залежать від обраного звичайного дозволу; APS-BPT є документом тимчасового захисту, а не звичайною карткою проживання. Маршрут довгострокового резидента ЄС має окремі п’ятирічні та інші умови, а опрацьовані джерела не підтверджують зарахування періоду APS-BPT до цього строку.",
                 "ru": "Соответствие требованиям и визовые условия зависят от выбранного обычного вида на жительство; APS-BPT — документ временной защиты, а не обычная карта резидента. Для статуса долгосрочного резидента ЕС действуют отдельные пятилетние и другие условия, а проверенные источники не подтверждают зачёт срока APS-BPT в этот период."
               }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "54c6f95f-589e-5901-beae-990bed994160",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "3815efea-e59a-510a-8ee1-9f75add885e6",
+                "c826f285-132d-51a2-9088-3085059438e0",
+                "36887fc1-a87d-55f5-9748-d32f0385ba4a",
+                "518183d0-d7ab-5355-a6d4-c89e6858c43e"
+              ],
+              "Values": {
+                "en": "Eligibility depends on the ordinary route: work permits, study admission and family reunification each have their own legal and documentary conditions. Time under temporary protection does not count toward EU long-term-resident qualifying residence under the rule described in the reviewed sources; no automatic permanent or long-term residence follows from TP.",
+                "uk": "Право залежить від обраного звичайного маршруту: дозволи на роботу, вступ на навчання та возз’єднання сім’ї мають власні юридичні вимоги й вимоги до документів. За правилом, описаним у перевірених джерелах, період тимчасового захисту не зараховується до строку проживання для статусу довгострокового резидента ЄС; TP не надає автоматичного постійного чи довгострокового проживання.",
+                "ru": "Право зависит от выбранного обычного основания: разрешения на работу, поступление на учёбу и воссоединение семьи имеют собственные юридические требования и требования к документам. Согласно правилу, описанному в изученных источниках, период временной защиты не засчитывается в срок проживания для статуса долгосрочного резидента ЕС; TP не даёт автоматического постоянного или долгосрочного проживания."
+              }
             }
           ]
         },
@@ -1520,6 +1600,21 @@
                 "en": "Seine-Maritime publishes a local in-France procedure for certain Ukrainian temporary-protection holders applying on listed grounds and tells applicants there to keep renewing their APS during review. Filing channels depend on the permit and prefecture; no nationwide route, automatic status change or pending stay/work-rights bridge is established.",
                 "uk": "Приморська Сена публікує місцеву процедуру подання у Франції для окремих громадян України з тимчасовим захистом за визначеними підставами та вимагає від заявників там і далі поновлювати APS під час розгляду. Канал подання залежить від дозволу та префектури; загальнонаціонального маршруту, автоматичної зміни статусу чи продовження права на перебування/роботу на час розгляду не встановлено.",
                 "ru": "Приморская Сена публикует местную процедуру подачи во Франции для некоторых граждан Украины с временной защитой по указанным основаниям и предписывает заявителям там продолжать продлевать APS на время рассмотрения. Способ подачи зависит от вида разрешения и префектуры; общенациональный маршрут, автоматическая смена статуса или продление права на пребывание/работу на время рассмотрения не установлены."
+              }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "54c6f95f-589e-5901-beae-990bed994160",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "38f01c1d-3688-5be0-b94b-97b5f0d8bdf3",
+                "9e3a433f-f25e-5a8f-8139-22df26c3cb45"
+              ],
+              "Values": {
+                "en": "Belgian federal guidance says a Ukrainian citizen already in Belgium may apply through the municipality of residence for an ordinary permit based on work, study or family reunification, subject to that route’s conditions. It does not establish that every temporary-protection holder can use every in-country route or that a pending application automatically extends residence or work rights.",
+                "uk": "Федеральні інструкції Бельгії зазначають, що громадянин України, який уже перебуває в країні, може подати через муніципалітет за місцем проживання заяву на звичайний дозвіл на підставі роботи, навчання чи возз’єднання сім’ї — з дотриманням умов відповідного маршруту. Вони не підтверджують, що кожен власник тимчасового захисту може скористатися кожним маршрутом подання в Бельгії або що заява на розгляді автоматично продовжує право на проживання чи роботу.",
+                "ru": "Федеральные инструкции Бельгии указывают, что гражданин Украины, уже находящийся в стране, может подать через муниципалитет по месту проживания заявление на обычный вид на жительство по работе, учёбе или воссоединению семьи — при соблюдении условий соответствующего основания. Они не устанавливают, что каждый обладатель временной защиты может воспользоваться любым маршрутом подачи в Бельгии или что заявление на рассмотрении автоматически продлевает право на проживание или работу."
               }
             }
           ]
@@ -1775,6 +1870,24 @@
                 "uk": "France Travail надає публічний пошук вакансій, а EURES додає транскордонні вакансії та інформацію про мобільність. Переліки не є вичерпними, а партнерські пропозиції можуть спрямовувати на інший сайт.",
                 "ru": "France Travail предоставляет публичный поиск вакансий, а EURES дополняет его трансграничными вакансиями и информацией о мобильности. Списки не являются исчерпывающими, а партнёрские вакансии могут вести на другой сайт."
               }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "f2c1526a-a218-5bf0-ab2a-9167dbec0c26",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "f59d27e0-2534-5e9c-863c-98844912ce8b",
+                "0a4683e0-29c4-54a2-b3ab-4cd370a7a508",
+                "95002c1d-f7c7-5b23-9ed5-4097eba69bcf",
+                "05ea266d-60b3-5b6a-85ef-f5a76a3d661b",
+                "58f26033-4c71-5630-b81d-dce3b254ae81"
+              ],
+              "Values": {
+                "en": "Public vacancy channels include VDAB in Flanders, Actiris in Brussels, Le Forem in Wallonia, Arbeitsamt/ADG in the German-speaking Community, and EURES. Listings may use local languages or link to employers; regional residence, language and vacancy-specific requirements still apply.",
+                "uk": "Публічні канали пошуку вакансій включають VDAB у Фландрії, Actiris у Брюсселі, Le Forem у Валлонії, Arbeitsamt/ADG у Німецькомовній спільноті та EURES. Вакансії можуть бути місцевими мовами або вести на сайти роботодавців; діють вимоги відповідного регіону, мови й конкретної вакансії.",
+                "ru": "Государственные каналы поиска вакансий включают VDAB во Фландрии, Actiris в Брюсселе, Le Forem в Валлонии, Arbeitsamt/ADG в Немецкоязычном сообществе и EURES. Объявления могут быть на местных языках или вести на сайты работодателей; сохраняются требования региона, языка и конкретной вакансии."
+              }
             }
           ]
         },
@@ -2022,6 +2135,23 @@
                 "en": "France Travail is part of France’s public employment network; a person with a valid APS-BPT may register as a jobseeker if ordinary registration conditions are met. EURES provides cross-border job-search help, but access to an adviser or Ukraine-specific local service is not guaranteed.",
                 "uk": "France Travail є частиною державної мережі зайнятості Франції; особа з чинним APS-BPT може зареєструватися як шукач роботи за дотримання звичайних умов реєстрації. EURES допомагає з транскордонним пошуком роботи, але консультація фахівця чи місцева послуга для українців не гарантується.",
                 "ru": "France Travail входит в государственную сеть занятости Франции; человек с действующим APS-BPT может зарегистрироваться как соискатель при соблюдении обычных условий регистрации. EURES помогает искать работу за рубежом, но консультация специалиста или местная услуга для украинцев не гарантируется."
+              }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "f2c1526a-a218-5bf0-ab2a-9167dbec0c26",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "e89b64e7-9783-51a9-adaf-fb8cc5f6d9e8",
+                "5aa4a523-2d90-5436-8891-397b32598575",
+                "f5b125d3-c27b-58bd-90b0-3de7805270e8",
+                "9273af9a-276b-5704-8952-f8059d8342d6"
+              ],
+              "Values": {
+                "en": "Belgium’s public employment services are regional: VDAB serves Flanders, Actiris Brussels, Le Forem French-speaking Wallonia, and Arbeitsamt/ADG the German-speaking Community. Residence and the service’s document rules affect where and how a person can register.",
+                "uk": "Державні служби зайнятості Бельгії працюють за регіональним принципом: VDAB обслуговує Фландрію, Actiris — Брюссель, Le Forem — франкомовну Валлонію, Arbeitsamt/ADG — Німецькомовну спільноту. Місце проживання та вимоги служби до документів впливають на те, де і як можна зареєструватися.",
+                "ru": "Государственные службы занятости Бельгии работают по регионам: VDAB обслуживает Фландрию, Actiris — Брюссель, Le Forem — франкоязычную Валлонию, Arbeitsamt/ADG — Немецкоязычное сообщество. Место проживания и требования службы к документам влияют на то, где и как можно зарегистрироваться."
               }
             }
           ]
@@ -2275,6 +2405,22 @@
                 "uk": "France Travail може розглянути AIF для погодженого навчального плану, а POEI може підтримати навчання, пов’язане з потребою роботодавця в наймі. Фінансування, місце на курсі чи робота не гарантуються; мовне навчання залежить від застосовної програми та наявності місць.",
                 "ru": "France Travail может рассмотреть AIF для согласованного плана обучения, а POEI может поддержать обучение, связанное с потребностью работодателя в найме. Финансирование, место на курсе или работа не гарантируются; языковое обучение зависит от применимой программы и наличия мест."
               }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "f2c1526a-a218-5bf0-ab2a-9167dbec0c26",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "c93d8de4-5cf6-5a14-932d-00e9509d9609",
+                "eb4470ee-3120-57ac-a084-f6a19975ac14",
+                "61c78b4d-5a7c-5674-9d6a-92990469fe73"
+              ],
+              "Values": {
+                "en": "Regional services may offer job-search guidance, coaching, language support or vocational training through their own processes. Access, eligibility, available places and any funding depend on the region and the person’s situation.",
+                "uk": "Регіональні служби можуть пропонувати консультації з пошуку роботи, супровід, мовну підтримку або професійне навчання за власними процедурами. Доступ, відповідність умовам, наявність місць і фінансування залежать від регіону та обставин людини.",
+                "ru": "Региональные службы могут предлагать консультации по поиску работы, сопровождение, языковую поддержку или профессиональное обучение по собственным процедурам. Доступ, соответствие условиям, наличие мест и финансирование зависят от региона и обстоятельств человека."
+              }
             }
           ]
         }
@@ -2525,6 +2671,21 @@
                 "en": "A currently valid French APS marked “bénéficiaire de la protection temporaire” authorizes professional activity; for salaried work under this route the employer does not file a separate work-authorization application. Pending or expired APS cases and regulated professions are not covered by that statement.",
                 "uk": "Чинний французький APS із позначкою «bénéficiaire de la protection temporaire» дозволяє працювати; для найманої роботи за цим маршрутом роботодавець не подає окрему заяву на дозвіл на роботу. Це не охоплює випадки очікування чи завершення строку APS та регульовані професії.",
                 "ru": "Действующий французский APS с отметкой «bénéficiaire de la protection temporaire» даёт право работать; при наёмной работе по этому маршруту работодатель не подаёт отдельное заявление на разрешение на работу. Это не относится к ожиданию решения или истёкшему APS и к регулируемым профессиям."
+              }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "55fa79e5-89a2-518b-90b2-85a2735f171b",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "be9f9561-6140-5ca7-9c43-7ec3036d151d",
+                "3913778e-1ce5-5c0f-8ff4-ad97a1a351d9"
+              ],
+              "Values": {
+                "en": "After temporary protection is granted, a person may work as an employee when they hold a valid residence document showing the right to stay, normally an A card or a qualifying TP-related Annex 15 issued while the card is pending. The ordinary regional work/single-permit requirement does not apply to covered employee work while the TP exemption remains in force.",
+                "uk": "Після надання тимчасового захисту людина може працювати за наймом, якщо має чинний документ на проживання, що підтверджує право перебувати в країні, зазвичай картку A або відповідну Annex 15, видану під час очікування картки. До роботи за наймом, охопленої звільненням для TP, не застосовується звичайна регіональна вимога отримувати дозвіл на роботу/єдиний дозвіл, поки це звільнення чинне.",
+                "ru": "После предоставления временной защиты человек может работать по найму при наличии действующего документа на проживание, подтверждающего право находиться в стране: обычно карты A или подходящей Annex 15, выданной на время ожидания карты. К охватываемой найму работе при TP не применяется обычное региональное требование получать разрешение на работу/единое разрешение, пока действует соответствующее освобождение."
               }
             }
           ]
@@ -2781,6 +2942,22 @@
                 "uk": "Роботодавці мають перевірити APS-BPT у префектурі щонайменше за два робочі дні до найму; якщо відповіді за цей час немає, згідно з наведеними вказівками обов’язок перевірки вважається виконаним. Звичайні формальності найму також залишаються чинними, зокрема DPAE до початку роботи для працівників загальної системи соціального страхування.",
                 "ru": "Работодатель должен проверить APS-BPT через префектуру не позднее чем за два рабочих дня до найма; если за этот срок ответа нет, согласно указанным правилам обязанность проверки считается выполненной. Также сохраняются обычные формальности найма, включая DPAE до начала работы для сотрудников общей системы социального страхования."
               }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "55fa79e5-89a2-518b-90b2-85a2735f171b",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "e04b3f9c-0696-5737-9fe6-66454122ed34",
+                "0f6c24cc-542d-5f4b-84ab-1f7de551c727",
+                "5a621d4b-af6f-5b46-9233-ad0476931e2f"
+              ],
+              "Values": {
+                "en": "Before hiring, an employer must check and retain evidence of valid residence authorization and file DIMONA IN before work starts; DIMONA OUT is due no later than the first working day after employment ends. The employer, rather than the worker, files DIMONA.",
+                "uk": "Перед наймом роботодавець має перевірити й зберігати підтвердження чинного дозволу на проживання та подати DIMONA IN до початку роботи; DIMONA OUT потрібно подати не пізніше першого робочого дня після завершення роботи. DIMONA подає роботодавець, а не працівник.",
+                "ru": "Перед наймом работодатель должен проверить и хранить подтверждение действующего разрешения на проживание, а также подать DIMONA IN до начала работы; DIMONA OUT подаётся не позднее первого рабочего дня после её окончания. DIMONA подаёт работодатель, а не работник."
+              }
             }
           ]
         },
@@ -3019,6 +3196,23 @@
                 "en": "From 1 June 2026, the metropolitan-France SMIC is €12.31 gross per hour or €1,867.02 gross per month at the 35-hour weekly reference. Mayotte, age or training-contract rules may differ, and a collective agreement may set a higher minimum.",
                 "uk": "Із 1 червня 2026 року мінімальна зарплата SMIC у метропольній Франції становить €12,31 брутто за годину або €1 867,02 брутто на місяць за базового 35-годинного робочого тижня. У Майотті, для окремих вікових груп або учнівських договорів ставки можуть відрізнятися, а колективна угода може встановлювати вищий мінімум.",
                 "ru": "С 1 июня 2026 года минимальная зарплата SMIC в метропольной Франции составляет €12,31 брутто в час или €1 867,02 брутто в месяц при 35-часовой рабочей неделе. На Майотте, для отдельных возрастных групп или ученических договоров ставки могут отличаться, а коллективный договор может устанавливать более высокий минимум."
+              }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "55fa79e5-89a2-518b-90b2-85a2735f171b",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "5b9b6430-79ba-5aee-9ef6-f6d8f21e47db",
+                "56f4c722-2026-56c5-bbe5-27e7440694d8",
+                "3ebe4be7-0c7e-50bc-8222-183c6d151ede",
+                "f0b4fabc-1e39-554f-a429-07d32e27265a"
+              ],
+              "Values": {
+                "en": "From 1 April 2026, the RMMMG under CCT 43 is €2,189.81 gross per month for covered workers aged 18 and over. This is an average monthly minimum-income guarantee, not one universal hourly rate; the applicable sectoral agreement may set a higher minimum.",
+                "uk": "Із 1 квітня 2026 року RMMMG за CCT 43 становить €2 189,81 брутто на місяць для охоплених працівників віком від 18 років. Це гарантія середнього мінімального місячного доходу, а не єдина універсальна погодинна ставка; відповідна галузева угода може встановлювати вищий мінімум.",
+                "ru": "С 1 апреля 2026 года RMMMG по CCT 43 составляет €2 189,81 брутто в месяц для охватываемых работников в возрасте от 18 лет. Это гарантия среднего минимального месячного дохода, а не единая универсальная почасовая ставка; соответствующее отраслевое соглашение может устанавливать более высокий минимум."
               }
             }
           ]
@@ -3284,6 +3478,22 @@
                 "uk": "За інформацією Assurance Maladie, люди, які прибули з України після 24 січня 2022 року та мають тимчасовий захист, отримують негайний доступ до PUMa і CSS завдяки взаємодії префектури та CPAM, зазвичай без індивідуальної заяви й без попередньої оплати протягом 12 місяців. Цю спеціальну домовленість для українців не можна поширювати на всіх бенефіціарів тимчасового захисту; стандартний доступ до PUMa має окремі умови.",
                 "ru": "Согласно Assurance Maladie, люди, прибывшие из Украины после 24 января 2022 года и получившие временную защиту, сразу подключаются к PUMa и CSS через взаимодействие префектуры и CPAM, обычно без индивидуального заявления и без предварительной оплаты в течение 12 месяцев. Эту специальную схему для украинцев нельзя распространять на всех получателей временной защиты; стандартный доступ к PUMa имеет отдельные условия."
               }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "673316a9-6ee9-50d6-9f66-e19659aeff0e",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "81197d61-1969-5585-93be-a50216ee3216",
+                "f71c6433-3ecd-5b13-abfb-50e1899a902d",
+                "2cd11cd4-3041-5a37-8348-ab27ba897605"
+              ],
+              "Values": {
+                "en": "Temporary protection does not itself enrol a person in Belgian compulsory health insurance; ordinary reimbursement requires affiliation with a mutuality or the public fund CAAMI/HZIV. CPAS medical aid and urgent medical care are separate routes with their own conditions.",
+                "uk": "Сам тимчасовий захист не реєструє людину в бельгійській обов’язковій системі медичного страхування; для звичайного відшкодування витрат потрібно приєднатися до mutualité або державного фонду CAAMI/HZIV. Медична допомога CPAS і невідкладна медична допомога — окремі маршрути зі своїми умовами.",
+                "ru": "Сам статус временной защиты не регистрирует человека в бельгийской системе обязательного медицинского страхования; для обычного возмещения расходов нужно вступить в mutualité или государственный фонд CAAMI/HZIV. Медицинская помощь CPAS и неотложная медицинская помощь — отдельные маршруты со своими условиями."
+              }
             }
           ]
         },
@@ -3537,6 +3747,21 @@
                 "uk": "Після відкриття прав на медичне страхування їх можна підтверджувати довідкою *attestation de droits*, поки людина очікує на Carte Vitale; тимчасовий NIA та постійний NIR — різні ідентифікатори. APS є імміграційним документом, а не підтвердженням відкриття медичних прав у CPAM.",
                 "ru": "После открытия прав на медицинское страхование их можно подтвердить справкой *attestation de droits*, пока человек ожидает Carte Vitale; временный NIA и постоянный NIR — разные идентификаторы. APS — иммиграционный документ, а не подтверждение открытия медицинских прав в CPAM."
               }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "673316a9-6ee9-50d6-9f66-e19659aeff0e",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "4f6016c8-56d4-5bea-9ba7-94f967bbfe69",
+                "88880ea5-61b6-58d6-8846-f1d58e96e487"
+              ],
+              "Values": {
+                "en": "Current INAMI guidance says a federal Attestation of Temporary Protection can support resident-based health-insurance affiliation before the A card is issued; a TP-related Annex 15 may also support the identified route. Contact the chosen mutuality or CAAMI to confirm accepted documents and the effective date.",
+                "uk": "За актуальними інструкціями INAMI, федеральне підтвердження тимчасового захисту може бути підставою для приєднання до медичного страхування за місцем проживання до видачі картки A; відповідна TP Annex 15 також може підтримувати визначений маршрут. Уточніть у вибраній mutualité або CAAMI, які документи приймають і з якої дати діятиме приєднання.",
+                "ru": "Согласно актуальным инструкциям INAMI, федеральное подтверждение временной защиты может служить основанием для присоединения к медицинскому страхованию по месту проживания до выдачи карты A; соответствующая TP Annex 15 также может подтверждать указанный маршрут. Уточните в выбранной mutualité или CAAMI, какие документы принимаются и с какой даты будет действовать членство."
+              }
             }
           ]
         },
@@ -3786,6 +4011,22 @@
                 "en": "Call 15 or 112 for an emergency; 114 offers text/app/internet access for people unable to use voice calls. A hospital must arrange urgent admission even without identity or reimbursement papers, but charges may still apply and urgent access does not mean treatment is free.",
                 "uk": "У разі невідкладної ситуації телефонуйте 15 або 112; номер 114 доступний через текстові повідомлення, застосунок чи інтернет для тих, хто не може телефонувати голосом. Лікарня має організувати невідкладне прийняття навіть без документів, що посвідчують особу чи підтверджують відшкодування, але оплата може стягуватися: невідкладний доступ не означає безоплатне лікування.",
                 "ru": "В экстренной ситуации звоните 15 или 112; номер 114 доступен через текстовые сообщения, приложение или интернет для тех, кто не может говорить по телефону. Больница должна организовать срочную госпитализацию даже без документов, удостоверяющих личность или подтверждающих возмещение расходов, однако плата может взиматься: экстренный доступ не означает бесплатное лечение."
+              }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "673316a9-6ee9-50d6-9f66-e19659aeff0e",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "ba436257-02ee-5bcd-b719-284c3674be1d",
+                "1eabafd9-bd75-59a8-bd40-b3255ec935d7",
+                "2cd11cd4-3041-5a37-8348-ab27ba897605"
+              ],
+              "Values": {
+                "en": "Call 112 for a life-threatening emergency. For an urgent but non-life-threatening problem outside normal GP hours, call 1733 where that service is active; local coverage varies.",
+                "uk": "У разі загрози життю телефонуйте 112. Якщо термінова проблема не загрожує життю та виникла поза звичайними годинами прийому сімейного лікаря, телефонуйте 1733 там, де ця служба працює; місцеве покриття різниться.",
+                "ru": "При угрозе жизни звоните 112. Если срочная проблема не угрожает жизни и возникла вне обычных часов приёма семейного врача, звоните 1733 там, где эта служба действует; местный охват различается."
               }
             }
           ]
@@ -4040,6 +4281,25 @@
                 "uk": "Якщо немає безпечного місця для ночівлі, 115 — це загальний контакт екстреного розміщення, який може оцінити ситуацію чи скерувати, але місце не гарантується. Верхня Гаронна описує один місцевий приклад скерування, пов’язаного з Україною; опрацьовані джерела не встановлюють загальнонаціонального маршруту розміщення для людей із тимчасовим захистом.",
                 "ru": "Если негде безопасно переночевать, 115 — это общий контакт экстренного размещения, который может оценить ситуацию или направить к местным вариантам, но место не гарантируется. Верхняя Гаронна описывает один местный пример помощи украинцам; проверенные источники не устанавливают общенациональный маршрут размещения для людей с временной защитой."
               }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "3646ae19-215c-5f0e-9075-85ef5bae88f7",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "38c8799b-801e-5cfe-85a3-db17c1c4ed88",
+                "7979026e-f481-5fa8-a83a-c1cacfd3492a",
+                "0717f7f4-ab78-58b3-a22c-872a5be2a045",
+                "4aeda6da-7b0c-5e75-ae89-e1dde5202fa8",
+                "1371f734-17f8-5d91-8b7e-c470905ad35c",
+                "cd12674f-4aa0-5fd9-bfce-64669f6c5efa"
+              ],
+              "Values": {
+                "en": "If you have nowhere to stay when registering for temporary protection, tell the Immigration Office service point and ask Fedasil about an accommodation assessment or referral. Regional and local Ukraine arrangements differ; placement depends on assessment and capacity.",
+                "uk": "Якщо під час реєстрації на тимчасовий захист вам ніде зупинитися, повідомте працівників пункту Імміграційної служби та запитайте Fedasil про оцінювання потреби в житлі або направлення. Регіональні й місцеві програми для українців різняться; розміщення залежить від оцінки та наявності місць.",
+                "ru": "Если во время регистрации на временную защиту вам негде остановиться, сообщите сотрудникам пункта Иммиграционной службы и спросите Fedasil об оценке потребности в жилье или направлении. Региональные и местные программы для украинцев различаются; размещение зависит от оценки и наличия мест."
+              }
             }
           ]
         },
@@ -4287,6 +4547,23 @@
                 "en": "A valid foreign passport is expressly listed for a private-rental file, but APS-BPT is not expressly named as a substitute identity document; a rental application does not guarantee a tenancy. Rent controls apply only in designated areas, so check the dwelling’s commune.",
                 "uk": "Чинний іноземний паспорт прямо зазначений серед документів для досьє приватної оренди, але APS-BPT прямо не вказаний як замінний документ, що посвідчує особу; подання заявки на оренду не гарантує укладення договору. Обмеження орендної плати діють лише в окремих зонах, тому перевірте муніципалітет житла.",
                 "ru": "Действующий иностранный паспорт прямо указан среди документов для досье частной аренды, однако APS-BPT прямо не назван документом, который может его заменить; подача заявки на аренду не гарантирует заключение договора. Ограничения арендной платы действуют только в определённых зонах, поэтому проверьте муниципалитет, где находится жильё."
+              }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "3646ae19-215c-5f0e-9075-85ef5bae88f7",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "3ffc736b-e9b7-5124-b9fc-99dfb78a74c0",
+                "896a52f0-1572-530f-a3b7-22c0f6a6d91e",
+                "df234032-d270-54d6-962b-067fd06bd678",
+                "3f00a643-854f-50bd-8684-86abff1fc96f"
+              ],
+              "Values": {
+                "en": "Private rental is governed regionally in Flanders, Brussels, Wallonia and the German-speaking Community, so lease and deposit rules depend on where the home is located. A lease, municipal registration of the main residence and an A card are separate steps.",
+                "uk": "Приватна оренда регулюється на рівні регіонів у Фландрії, Брюсселі, Валлонії та Німецькомовній спільноті, тому правила договору й застави залежать від місця житла. Договір оренди, муніципальна реєстрація основного місця проживання та картка A — окремі етапи.",
+                "ru": "Частная аренда регулируется на региональном уровне во Фландрии, Брюсселе, Валлонии и Немецкоязычном сообществе, поэтому правила договора и залога зависят от места нахождения жилья. Договор аренды, муниципальная регистрация основного места жительства и карта A — отдельные этапы."
               }
             }
           ]
@@ -4539,6 +4816,24 @@
                 "en": "HLM is an application, APL/CAF housing aid and departmental FSL are separately assessed, and Visale is a conditional rent guarantee; none automatically provides housing or payment. Caf des Yvelines says eligible Ukrainian nationals with a valid six-month renewable APS-BPT may receive housing aid, but the reviewed general Visale guidance does not establish APS-BPT eligibility.",
                 "uk": "HLM є заявою, житлова допомога APL/CAF і департаментський FSL оцінюються окремо, а Visale — це умовна гарантія оренди; жоден механізм автоматично не надає житло чи виплату. CAF департаменту Івлін зазначає, що громадяни України з чинним шестимісячним поновлюваним APS-BPT можуть отримати житлову допомогу за відповідності критеріям, але опрацьована загальна інформація про Visale не підтверджує право на неї з APS-BPT.",
                 "ru": "HLM — это заявление, жилищная помощь APL/CAF и департаментский FSL рассматриваются отдельно, а Visale — условная гарантия аренды; ни один механизм автоматически не предоставляет жильё или выплату. CAF департамента Ивелин указывает, что граждане Украины с действующим шестимесячным возобновляемым APS-BPT могут получить жилищную помощь при соответствии критериям, однако проверенная общая информация о Visale не подтверждает право на неё с APS-BPT."
+              }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "3646ae19-215c-5f0e-9075-85ef5bae88f7",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "e145e499-8372-5569-8670-3955186fa7fa",
+                "c72f8669-a2f9-5169-aa0c-028743ff7c80",
+                "8d504f88-5263-5624-a146-58247453e9ab",
+                "9cbfd3be-7f75-5f10-9506-fac985c29579",
+                "8f25d6ec-1878-589f-a63d-e6ce02da48fa"
+              ],
+              "Values": {
+                "en": "CPAS/OCMW/ÖSHZ assessment, regional rent or deposit support, and social housing are separate possible routes. Each has its own regional, residence, income, contract or waiting-list conditions.",
+                "uk": "Оцінювання CPAS/OCMW/ÖSHZ, регіональна допомога з орендою чи заставою та соціальне житло — це окремі можливі маршрути. Кожен має власні регіональні умови щодо проживання, доходу, договору або черги.",
+                "ru": "Оценка CPAS/OCMW/ÖSHZ, региональная помощь с арендой или залогом и социальное жильё — отдельные возможные маршруты. У каждого свои региональные условия проживания, дохода, договора или очереди."
               }
             }
           ]
@@ -4800,6 +5095,23 @@
                 "uk": "Дозвіл на проживання не є умовою доступу до школи; обов’язкове навчання встановлено для дітей віком від 3 до 16 років, а для віку 16–18 років діють окремі визнані шляхи. Зазвичай сім’ї починають зарахування до початкової школи в мерії, а щодо новоприбулого учня середньої школи звертаються до місцевого CASNAV/академії; зарахування залежить від оцінювання та наявності місць.",
                 "ru": "Вид на жительство не является условием доступа ребёнка к школе; обязательное обучение установлено для детей от 3 до 16 лет, а для возраста 16–18 лет действуют отдельные признанные варианты. Обычно оформление в начальную школу начинают в мэрии, а по поводу недавно прибывшего ученика средней школы обращаются в местный CASNAV/академию; зачисление зависит от оценки и наличия мест."
               }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "ac80dcbd-4289-5c77-8340-f9e4226a47f6",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "966a48b9-5806-5fd9-a75b-91f3bc9a7871",
+                "9dc5e4af-2b45-5706-97af-a52dc8e29104",
+                "759e9eb4-8170-56fc-9d2b-81e0d071708a",
+                "374087c8-f1ef-5605-a95f-56bd147cea56"
+              ],
+              "Values": {
+                "en": "School access is governed by the relevant Community system: the Flemish Community, French Community (FWB) or German-speaking Community; in Brussels, families choose the Dutch-language or French-language system. A child whose TP application is pending may request enrolment without waiting for the A card or final TP decision, but placement and timing depend on the school/system.",
+                "uk": "Доступ до школи регулює відповідна система спільноти: Фламандської, Французької (FWB) або Німецькомовної; у Брюсселі родина обирає нідерландськомовну або франкомовну систему. Дитина з заявою на TP, що перебуває на розгляді, може просити про зарахування, не чекаючи картки A або остаточного рішення щодо TP, але місце й строки залежать від школи/системи.",
+                "ru": "Доступ к школе регулирует соответствующая система сообщества: Фламандского, Французского (FWB) или Немецкоязычного; в Брюсселе семья выбирает нидерландоязычную или франкоязычную систему. Ребёнок, чьё заявление на TP ещё рассматривается, может запросить зачисление, не ожидая карту A или окончательное решение по TP, но место и сроки зависят от школы/системы."
+              }
             }
           ]
         },
@@ -5044,6 +5356,23 @@
                 "en": "Newly arrived allophone pupils may receive French-as-a-second-language support, including UPE2A, after assessment. Support is organized locally around the pupil’s needs and school capacity; no fixed number of hours or placement is guaranteed.",
                 "uk": "Новоприбулі учні, для яких французька не є рідною мовою, можуть отримати підтримку з французької як другої мови, зокрема у форматі UPE2A, після оцінювання. Підтримку організовують на місцях з огляду на потреби учня та можливості школи; фіксована кількість годин чи місце не гарантуються.",
                 "ru": "Недавно прибывшие ученики, для которых французский не является родным языком, могут получить поддержку по французскому как второму языку, включая UPE2A, после оценки. Поддержка организуется на местном уровне с учётом потребностей ученика и возможностей школы; фиксированное число часов или место не гарантируются."
+              }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "ac80dcbd-4289-5c77-8340-f9e4226a47f6",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "6524c420-aac2-50ca-9e54-97dd0392deaa",
+                "8aaf36d9-17d9-5ae3-a85e-ea44ea493465",
+                "914453bb-89bf-5ff2-96e8-0174c35a06a5",
+                "b87e0d8e-68cc-5a9e-8f60-4cd69f35341c"
+              ],
+              "Values": {
+                "en": "Newcomer language support is organized differently by Community: Flanders has taalheldklas and OKAN routes, FWB has DASPA, and the German-speaking Community has Sprachlernklassen/Sprachlernkurse. The relevant school/system assesses eligibility and local availability.",
+                "uk": "Мовну підтримку для новоприбулих організовано по-різному в кожній спільноті: у Фландрії діють маршрути taalheldklas і OKAN, у FWB — DASPA, а в Німецькомовній спільноті — Sprachlernklassen/Sprachlernkurse. Відповідна школа/система оцінює умови участі й місцеву наявність місць.",
+                "ru": "Языковая поддержка для недавно прибывших организована по-разному в каждом сообществе: во Фландрии действуют маршруты taalheldklas и OKAN, в FWB — DASPA, а в Немецкоязычном сообществе — Sprachlernklassen/Sprachlernkurse. Соответствующая школа/система оценивает условия участия и местную доступность мест."
               }
             }
           ]
@@ -5312,6 +5641,24 @@
                 "uk": "Маршрут вступу до закладу вищої освіти залежить від заявника й програми: для частини заяв на перший цикл використовують Parcoursup, тоді як окремі вступники з іноземним дипломом на перший курс університету подаються через DAP; спеціальна інформація для українців радить звернутися до обраного закладу. Висновок ENIC-NARIC про відповідність кваліфікації має дорадчий характер і не визначає вступ чи перенесення кредитів; мовні докази, плата за навчання/CVEC і підтримка CROUS є окремими рішеннями, що залежать від маршруту.",
                 "ru": "Маршрут поступления в вуз зависит от абитуриента и программы: для части заявлений на первый цикл используется Parcoursup, тогда как некоторые обладатели иностранного диплома, поступающие на первый курс университета, подаются через DAP; специальная информация для украинцев советует сначала обратиться в выбранный вуз. Заключение ENIC-NARIC о сопоставимости носит рекомендательный характер и не решает вопрос о зачислении или зачёте дисциплин; подтверждение языка, плата за обучение/CVEC и поддержка CROUS рассматриваются отдельно в зависимости от маршрута."
               }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "ac80dcbd-4289-5c77-8340-f9e4226a47f6",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "55527e9d-3d6e-5ba7-8673-017b5c85184f",
+                "9934a200-35bc-531f-9718-7826071b4cd6",
+                "35d94f29-2a00-592f-9f6d-ce34e5021102",
+                "4ae5b359-e5ab-5490-a662-b4dcedce7f79",
+                "9edceacc-c1b6-547f-9e41-c831aeec577d"
+              ],
+              "Values": {
+                "en": "Higher-education admission and foreign-credential recognition are assessed under the relevant Community and institution’s rules. Tuition treatment also differs by Community; temporary protection does not create a Belgium-wide tuition waiver.",
+                "uk": "Вступ до закладів вищої освіти та визнання іноземної кваліфікації оцінюють за правилами відповідної спільноти й закладу. Правила оплати також різняться між спільнотами; тимчасовий захист не створює загальнобельгійського звільнення від оплати навчання.",
+                "ru": "Поступление в учреждения высшего образования и признание иностранной квалификации оцениваются по правилам соответствующего сообщества и учебного заведения. Правила оплаты также различаются между сообществами; временная защита не создаёт общебельгийского освобождения от платы за обучение."
+              }
             }
           ]
         }
@@ -5576,6 +5923,22 @@
                 "uk": "Для осіб із тимчасовим захистом законом передбачено маршрут отримання ADA, якою управляє OFII, але виплата не призначається автоматично, а під час оцінювання враховують вік, ресурси домогосподарства та житлові обставини. ADA відрізняється від RSA, Prime d’activité та ARE; опрацьовані джерела не підтверджують єдину гарантовану суму на 2026 рік для всіх випадків.",
                 "ru": "Для людей с временной защитой законом предусмотрен маршрут получения ADA, которой занимается OFII, однако выплата не назначается автоматически, а при оценке учитываются возраст, ресурсы домохозяйства и жилищные обстоятельства. ADA отличается от RSA, Prime d’activité и ARE; проверенные источники не подтверждают единую гарантированную сумму на 2026 год для всех случаев."
               }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "20eef3c3-fcc7-5b5b-b672-695f29faad61",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "d62396b7-dd77-5b71-9d02-f98d791dbfb8",
+                "7c957ee3-fa6d-5ef4-b673-50d7640dd737",
+                "fe1b60e9-1d79-5bd2-846e-9fe834645037"
+              ],
+              "Values": {
+                "en": "After temporary protection is granted, a person may ask the competent CPAS/OCMW/ÖSHZ to assess financial social assistance equivalent to the integration income. The CPAS assesses need, household and resources; this is not automatic statutory RI/leefloon and no award or amount is guaranteed.",
+                "uk": "Після надання тимчасового захисту людина може попросити компетентний CPAS/OCMW/ÖSHZ оцінити право на фінансову соціальну допомогу, еквівалентну інтеграційному доходу. CPAS оцінює потребу, домогосподарство й ресурси; це не автоматичне право на встановлений законом RI/leefloon, і допомога чи її сума не гарантовані.",
+                "ru": "После предоставления временной защиты человек может попросить компетентный CPAS/OCMW/ÖSHZ оценить право на финансовую социальную помощь, эквивалентную интеграционному доходу. CPAS оценивает нуждаемость, домохозяйство и ресурсы; это не автоматическое право на предусмотренный законом RI/leefloon, помощь и её размер не гарантируются."
+              }
             }
           ]
         },
@@ -5835,6 +6198,22 @@
                 "en": "OFII handles ADA, while CAF/MSA handles relevant ordinary family and housing benefits; applications are assessed under each scheme’s conditions. A new CAF claimant may receive a temporary account identifier after starting a claim, but the identifier itself is not entitlement and the dated ADA continuation form is not a universal first-claim checklist.",
                 "uk": "ADA адмініструє OFII, тоді як відповідні звичайні сімейні та житлові виплати оформлюють через CAF/MSA; кожну заяву оцінюють за умовами відповідної програми. Новий заявник CAF може отримати тимчасовий ідентифікатор облікового запису після початку подання заяви, але сам ідентифікатор не створює права на виплату, а датована форма продовження ADA не є універсальним переліком документів для першої заяви.",
                 "ru": "ADA оформляет OFII, тогда как соответствующие обычные семейные и жилищные выплаты администрируют CAF/MSA; каждое заявление оценивают по условиям конкретной программы. Новый заявитель CAF может получить временный идентификатор учётной записи после начала подачи заявления, но сам идентификатор не даёт права на выплату, а датированная форма продления ADA не является универсальным перечнем документов для первого обращения."
+              }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "20eef3c3-fcc7-5b5b-b672-695f29faad61",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "449be759-c789-5d11-b901-a8c4b3f892d3",
+                "6e21b16b-0405-5c4d-ad00-565185b66fa5",
+                "085020dc-fd7d-58a1-ab3f-faf160153e45"
+              ],
+              "Values": {
+                "en": "Apply to the CPAS/OCMW responsible for your registration and actual residence; the TP attestation together with proof that you presented to the municipality may support an application before the A card arrives. Applications may be oral, written or electronic, and a decision is generally due within 30 days.",
+                "uk": "Подайте заяву до CPAS/OCMW, компетентного за вашою реєстрацією та фактичним місцем проживання; підтвердження TP разом із доказом звернення до муніципалітету може підтримати заяву до отримання картки A. Заяву можна подати усно, письмово або електронно; рішення зазвичай має бути ухвалене протягом 30 днів.",
+                "ru": "Подайте заявление в CPAS/OCMW, компетентный по месту вашей регистрации и фактического проживания; подтверждение TP вместе с доказательством обращения в муниципалитет может служить основанием для заявления до получения карты A. Заявление можно подать устно, письменно или электронно; решение обычно должно быть принято в течение 30 дней."
               }
             }
           ]
@@ -6100,6 +6479,24 @@
                 "en": "Family benefits are assessed separately: allocations familiales generally require at least two dependent children under 20, and temporary-protection derogations are limited and benefit-specific. The reviewed guidance excludes APS-BPT holders from ARS; PAJE components have their own conditions, so confirm eligibility and evidence with CAF/MSA.",
                 "uk": "Сімейні виплати оцінюють окремо: для allocations familiales зазвичай потрібно щонайменше двоє дітей на утриманні віком до 20 років, а винятки для тимчасового захисту обмежені та залежать від виду виплати. Опрацьовані вказівки виключають власників APS-BPT з ARS; компоненти PAJE мають власні умови, тому право на виплату й потрібні докази слід уточнити в CAF/MSA.",
                 "ru": "Семейные пособия рассматриваются отдельно: для allocations familiales обычно требуется не менее двух детей на иждивении младше 20 лет, а исключения для временной защиты ограничены и зависят от конкретного пособия. Проверенные рекомендации исключают владельцев APS-BPT из ARS; у компонентов PAJE свои условия, поэтому право на выплату и подтверждающие документы нужно уточнить в CAF/MSA."
+              }
+            },
+            {
+              "CountrySlug": "belgium",
+              "InformationEntryId": "20eef3c3-fcc7-5b5b-b672-695f29faad61",
+              "Status": "Approved",
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "cab92bae-0b76-56b2-9581-7381ad653d3b",
+                "7e9a47b2-6a01-57e3-ae65-9f64425869a2",
+                "1e087799-5007-5780-9f82-299c88f491b5",
+                "61baf97b-858c-5365-a0b6-deff47b476e2",
+                "864bb2ea-e879-5d6c-9893-c86f28ca1050"
+              ],
+              "Values": {
+                "en": "Family and child benefits are administered through separate regional systems: Flanders (Groeipakket), Brussels, Wallonia and the German-speaking Community. Residence, registration and status requirements differ; contact the payer for the region where the child lives.",
+                "uk": "Сімейні виплати й допомогу на дітей адмініструють окремі регіональні системи: Фландрія (Groeipakket), Брюссель, Валлонія та Німецькомовна спільнота. Вимоги щодо проживання, реєстрації та статусу різняться; звертайтеся до платника у регіоні, де живе дитина.",
+                "ru": "Семейные выплаты и пособия на детей администрируются отдельными региональными системами: Фландрия (Groeipakket), Брюссель, Валлония и Немецкоязычное сообщество. Требования к проживанию, регистрации и статусу различаются; обращайтесь к плательщику в регионе проживания ребёнка."
               }
             }
           ]

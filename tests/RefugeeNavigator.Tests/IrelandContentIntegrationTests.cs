@@ -90,14 +90,12 @@ public sealed class IrelandContentIntegrationTests
             });
         }
 
-        Assert.Equal(16, CountryComparisonTopicMap.SupportedCountrySlugs.Count);
+        Assert.Equal(17, CountryComparisonTopicMap.SupportedCountrySlugs.Count);
         Assert.DoesNotContain("ireland", CountryComparisonTopicMap.SupportedCountrySlugs);
-        Assert.DoesNotContain("belgium", CountryComparisonTopicMap.SupportedCountrySlugs);
-        Assert.All(CountryComparisonTopicMap.All, topic => Assert.Equal(16, topic.EntryIds.Count));
+        Assert.All(CountryComparisonTopicMap.All, topic => Assert.Equal(17, topic.EntryIds.Count));
         var allFacts = (await Facts.Value).Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).ToArray();
-        Assert.Equal(384, allFacts.Length);
+        Assert.Equal(408, allFacts.Length);
         Assert.DoesNotContain(allFacts, fact => fact.CountrySlug == "ireland");
-        Assert.DoesNotContain(allFacts, fact => fact.CountrySlug == "belgium");
     }
 
     [Fact]
@@ -187,7 +185,7 @@ public sealed class IrelandContentIntegrationTests
         Assert.Empty(Regex.Matches(productionResults.Html, "class=\"result-card\"").Cast<Match>());
         var productionCompare = await RenderAsync<Compare>("Production", language, "/compare");
         Assert.DoesNotContain("ireland", SelectValues(productionCompare.Html, "country1"));
-        Assert.DoesNotContain("belgium", SelectValues(productionCompare.Html, "country1"));
+        Assert.Contains("belgium", SelectValues(productionCompare.Html, "country1"));
 
         var developmentHome = await RenderAsync<Home>("Development", language);
         Assert.Equal(19, Regex.Matches(developmentHome.Html, "class=\"country-card\"").Count);
@@ -224,9 +222,7 @@ public sealed class IrelandContentIntegrationTests
 
         var developmentCompare = await RenderAsync<Compare>("Development", language, "/compare");
         Assert.DoesNotContain("ireland", SelectValues(developmentCompare.Html, "country1"));
-        Assert.DoesNotContain("belgium", SelectValues(developmentCompare.Html, "country1"));
         Assert.DoesNotContain("ireland", SelectValues(developmentCompare.Html, "country2"));
-        Assert.DoesNotContain("belgium", SelectValues(developmentCompare.Html, "country2"));
         Assert.DoesNotContain("ireland", CountryComparisonTopicMap.SupportedCountrySlugs);
     }
 
