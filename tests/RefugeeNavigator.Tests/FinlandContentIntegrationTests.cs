@@ -56,7 +56,7 @@ public sealed class FinlandContentIntegrationTests
             .LoadAsync(await Catalog.Value));
 
     [Fact]
-    public async Task FinlandHasEightDevelopmentOnlyArticlesAndExpectedCatalogCounts()
+    public async Task FinlandHasEightArticlesAndExpectedCatalogCounts()
     {
         var catalog = await Catalog.Value;
         var country = Assert.Single(catalog.Countries, item => item.Slug == "finland");
@@ -65,8 +65,8 @@ public sealed class FinlandContentIntegrationTests
         Assert.Equal(19, catalog.Countries.Count);
         Assert.Equal(149, catalog.InformationEntries.Count);
         Assert.Equal(447, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(405, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(42, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(429, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(18, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == CountryId).ToArray();
@@ -91,7 +91,7 @@ public sealed class FinlandContentIntegrationTests
             Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(item => item.LanguageCode).Order(StringComparer.Ordinal).ToArray());
             Assert.All(translations, item =>
             {
-                Assert.Equal(VerificationStatus.NeedsReview, item.VerificationStatus);
+                Assert.Equal(VerificationStatus.Verified, item.VerificationStatus);
                 Assert.Equal(new DateTimeOffset(2026, 11, 11, 0, 0, 0, TimeSpan.Zero), item.LastUpdatedAt);
             });
         }
@@ -172,25 +172,27 @@ public sealed class FinlandContentIntegrationTests
     [InlineData("en")]
     [InlineData("uk")]
     [InlineData("ru")]
-    public async Task FinlandIsVisibleInDevelopmentButHiddenFromProductionAndComparison(string language)
+    public async Task FinlandIsVisibleInProductionAndDevelopmentButExcludedFromComparison(string language)
     {
         var catalog = await Catalog.Value;
+        var categoryCounts = new Dictionary<string, int>
+        {
+            ["employment"] = 2,
+            ["temporary-protection"] = 2,
+            ["healthcare"] = 1,
+            ["education"] = 1,
+            ["social-assistance"] = 1,
+            ["housing"] = 1
+        };
         var productionHome = await RenderAsync<Home>("Production", language);
-        Assert.Equal(17, Regex.Matches(productionHome.Html, "class=\"country-card\"").Count);
-        Assert.DoesNotContain("href=\"/countries/finland\"", productionHome.Html);
+        Assert.Equal(18, Regex.Matches(productionHome.Html, "class=\"country-card\"").Count);
+        Assert.Contains("href=\"/countries/finland\"", productionHome.Html);
         var productionSearch = await RenderAsync<Search>("Production", language, "/search");
-        Assert.DoesNotContain("finland", SelectValues(productionSearch.Html, "country"));
+        Assert.Contains("finland", SelectValues(productionSearch.Html, "country"));
         var productionOverview = await RenderAsync<CountryOverview>("Production", language, "/countries/finland",
             new() { [nameof(CountryOverview.CountrySlug)] = "finland" });
-        Assert.True(productionOverview.NotFound);
-        var productionCategory = await RenderAsync<Category>("Production", language,
-            "/countries/finland/categories/employment", new()
-            {
-                [nameof(Category.CountrySlug)] = "finland",
-                [nameof(Category.CategorySlug)] = "employment"
-            });
-        Assert.True(productionCategory.NotFound);
-        foreach (var categorySlug in new[] { "temporary-protection", "employment", "healthcare", "housing", "education", "social-assistance" })
+        Assert.False(productionOverview.NotFound);
+        foreach (var (categorySlug, expectedCount) in categoryCounts)
         {
             var result = await RenderAsync<Category>("Production", language,
                 $"/countries/finland/categories/{categorySlug}", new()
@@ -198,10 +200,11 @@ public sealed class FinlandContentIntegrationTests
                     [nameof(Category.CountrySlug)] = "finland",
                     [nameof(Category.CategorySlug)] = categorySlug
                 });
-            Assert.True(result.NotFound);
+            Assert.False(result.NotFound);
+            Assert.Equal(expectedCount, Regex.Matches(result.Html, "class=\"information-entry\"").Count);
         }
         var productionResults = await RenderAsync<Search>("Production", language, "/search?country=finland");
-        Assert.Empty(Regex.Matches(productionResults.Html, "class=\"result-card\"").Cast<Match>());
+        Assert.Equal(8, Regex.Matches(productionResults.Html, "class=\"result-card\"").Count);
         var productionCompare = await RenderAsync<Compare>("Production", language, "/compare");
         foreach (var hiddenSlug in new[] { "finland", "ireland" })
         {
@@ -222,15 +225,6 @@ public sealed class FinlandContentIntegrationTests
         Assert.Equal(8, Regex.Matches(finlandSearch.Html, "class=\"result-card\"").Count);
         Assert.Equal(8, ArticleSearch.Search(catalog, null, "finland", null, null, language).Count);
 
-        var categoryCounts = new Dictionary<string, int>
-        {
-            ["employment"] = 2,
-            ["temporary-protection"] = 2,
-            ["healthcare"] = 1,
-            ["education"] = 1,
-            ["social-assistance"] = 1,
-            ["housing"] = 1
-        };
         foreach (var (categorySlug, expectedCount) in categoryCounts)
         {
             var category = await RenderAsync<Category>("Development", language,

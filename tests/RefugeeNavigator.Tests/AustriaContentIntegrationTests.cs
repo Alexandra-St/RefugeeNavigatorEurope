@@ -47,8 +47,8 @@ public sealed class AustriaContentIntegrationTests
         Assert.Equal(19, catalog.Countries.Count);
         Assert.Equal(149, catalog.InformationEntries.Count);
         Assert.Equal(447, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(405, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(42, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(429, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(18, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == CountryId).ToArray();
@@ -72,7 +72,7 @@ public sealed class AustriaContentIntegrationTests
         var development = CountryVisibility.GetVisibleCountries(catalog, true);
         Assert.Contains(production, item => item.Slug == "austria");
         Assert.Contains(development, item => item.Slug == "austria");
-        Assert.Equal(17, production.Count);
+        Assert.Equal(18, production.Count);
         Assert.Equal(19, development.Count);
     }
 
