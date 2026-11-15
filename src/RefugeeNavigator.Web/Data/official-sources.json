@@ -8036,6 +8036,13 @@
     "LastCheckedAt": "2026-11-11T00:00:00+00:00"
   },
   {
+    "Id": "efd6f672-6edb-5eac-bddc-3d56ed6b4d27",
+    "InformationEntryId": "aef6ec65-f8ed-5054-bafb-c465e790dd57",
+    "Title": "Belgian Immigration Office (FPS Home Affairs), “Temporary Protection”",
+    "Url": "https://dofi.ibz.be/en/themes/ukraine/temporary-protection",
+    "LastCheckedAt": "2026-11-14T00:00:00+00:00"
+  },
+  {
     "Id": "f46e562b-6077-5f41-82c0-3339cbbe4f0a",
     "InformationEntryId": "54c6f95f-589e-5901-beae-990bed994160",
     "Title": "EMN Belgium / FPS Interior national contact point, “Application of the Temporary Protection Directive: Challenges and Good Practices (Belgian national report)”",
@@ -8146,6 +8153,13 @@
     "Title": "Council of the EU / EUR-Lex, “Council Implementing Decision (EU) 2026/1912 extending temporary protection (corrected consolidated version)”",
     "Url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02026D1912-20260804",
     "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+  },
+  {
+    "Id": "38f01c1d-3688-5be0-b94b-97b5f0d8bdf3",
+    "InformationEntryId": "54c6f95f-589e-5901-beae-990bed994160",
+    "Title": "Belgian Immigration Office (FPS Home Affairs), “Long stay [more than 90 days]”",
+    "Url": "https://dofi.ibz.be/en/themes/ukraine/long-stay-more-90-days",
+    "LastCheckedAt": "2026-11-14T00:00:00+00:00"
   },
   {
     "Id": "e89b64e7-9783-51a9-adaf-fb8cc5f6d9e8",

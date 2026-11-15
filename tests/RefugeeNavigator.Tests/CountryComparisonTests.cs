@@ -81,8 +81,8 @@ public sealed class CountryComparisonTests
             }));
         Assert.Equal(149, catalog.InformationEntries.Count);
         Assert.Equal(447, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(381, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(66, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(405, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(42, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Outdated));
         var czechiaId = Guid.Parse("10000000-0000-0000-0000-000000000004");
         var czechiaEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == czechiaId).Select(entry => entry.Id).ToHashSet();
@@ -99,6 +99,8 @@ public sealed class CountryComparisonTests
         var franceEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == Guid.Parse("10000000-0000-0000-0000-000000000015")).Select(entry => entry.Id).ToHashSet();
         var finlandEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == Guid.Parse("10000000-0000-0000-0000-000000000016")).Select(entry => entry.Id).ToHashSet();
         var belgiumEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == Guid.Parse("10000000-0000-0000-0000-000000000017")).Select(entry => entry.Id).ToHashSet();
+        Assert.All(catalog.InformationEntryTranslations.Where(translation => belgiumEntryIds.Contains(translation.InformationEntryId)),
+            translation => Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus));
         var hungaryEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == Guid.Parse("10000000-0000-0000-0000-000000000018")).Select(entry => entry.Id).ToHashSet();
         Assert.All(catalog.InformationEntryTranslations.Where(translation => finlandEntryIds.Contains(translation.InformationEntryId)),
             translation => Assert.Equal(VerificationStatus.NeedsReview, translation.VerificationStatus));

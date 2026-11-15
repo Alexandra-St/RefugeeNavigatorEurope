@@ -131,8 +131,8 @@ public sealed class NetherlandsContentIntegrationTests
 
         Assert.Equal(149, catalog.InformationEntries.Count);
         Assert.Equal(447, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(381, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(66, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(405, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(42, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == NetherlandsId).ToArray();
@@ -286,7 +286,7 @@ public sealed class NetherlandsContentIntegrationTests
         var sources = catalog.OfficialSources.Where(item => entryIds.Contains(item.InformationEntryId)).ToArray();
 
         Assert.Equal(56, sources.Length);
-        Assert.Equal(1424, catalog.OfficialSources.Count);
+        Assert.Equal(1426, catalog.OfficialSources.Count);
         Assert.Equal(42, sources.Select(item => item.Url.AbsoluteUri).Distinct(StringComparer.OrdinalIgnoreCase).Count());
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         Assert.All(sources, source =>
