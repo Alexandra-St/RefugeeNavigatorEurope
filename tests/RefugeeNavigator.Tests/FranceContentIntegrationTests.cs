@@ -99,12 +99,12 @@ public sealed class FranceContentIntegrationTests
             });
         }
 
-        Assert.Equal(17, CountryComparisonTopicMap.SupportedCountrySlugs.Count);
+        Assert.Equal(18, CountryComparisonTopicMap.SupportedCountrySlugs.Count);
         Assert.Contains("france", CountryComparisonTopicMap.SupportedCountrySlugs);
         Assert.DoesNotContain("ireland", CountryComparisonTopicMap.SupportedCountrySlugs);
-        Assert.All(CountryComparisonTopicMap.All, topic => Assert.Equal(17, topic.EntryIds.Count));
+        Assert.All(CountryComparisonTopicMap.All, topic => Assert.Equal(18, topic.EntryIds.Count));
         var allFacts = (await Facts.Value).Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).ToArray();
-        Assert.Equal(408, allFacts.Length);
+        Assert.Equal(432, allFacts.Length);
         Assert.Equal(24, allFacts.Count(fact => fact.CountrySlug == "france"));
         Assert.DoesNotContain(allFacts, fact => fact.CountrySlug == "ireland");
     }

@@ -73,9 +73,9 @@ public sealed class NorwayContentIntegrationTests
         var facts = await new JsonComparisonFactProvider(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json")).LoadAsync(catalog);
         JsonComparisonFactProvider.Validate(facts, catalog);
 
-        Assert.Equal(17, CountryComparisonTopicMap.SupportedCountrySlugs.Count);
-        Assert.All(CountryComparisonTopicMap.All, topic => Assert.Equal(17, topic.EntryIds.Count));
-        Assert.Equal(408, facts.Topics.SelectMany(topic => topic.Aspects).Sum(aspect => aspect.Facts.Count));
+        Assert.Equal(18, CountryComparisonTopicMap.SupportedCountrySlugs.Count);
+        Assert.All(CountryComparisonTopicMap.All, topic => Assert.Equal(18, topic.EntryIds.Count));
+        Assert.Equal(432, facts.Topics.SelectMany(topic => topic.Aspects).Sum(aspect => aspect.Facts.Count));
         var norwayFacts = facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts)
             .Where(fact => fact.CountrySlug == "norway").ToArray();
         Assert.Equal(24, norwayFacts.Length);
