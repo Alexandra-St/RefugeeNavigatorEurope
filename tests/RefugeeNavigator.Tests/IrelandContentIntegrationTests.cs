@@ -30,7 +30,10 @@ public sealed class IrelandContentIntegrationTests
         ["IE-EMP-02"] = (Guid.Parse("e6b45fb5-4180-5e57-8e48-30c25ddad0f8"), "employment"),
         ["IE-HEALTH-01"] = (Guid.Parse("864a1ff8-dc63-56bf-ae78-860a452a8f04"), "healthcare"),
         ["IE-EDU-01"] = (Guid.Parse("8dc791b3-5002-59ab-b8fb-2c7ab1dbf43b"), "education"),
-        ["IE-SOC-01"] = (Guid.Parse("682561e1-29db-5332-974b-cf38327a859d"), "social-assistance")
+        ["IE-SOC-01"] = (Guid.Parse("682561e1-29db-5332-974b-cf38327a859d"), "social-assistance"),
+        ["IE-TP-01"] = (Guid.Parse("51fc8ed8-123d-5a6f-b4fa-16cd2e41f3bf"), "temporary-protection"),
+        ["IE-TP-02"] = (Guid.Parse("6bca20f8-b06d-5068-bd45-c78155111354"), "temporary-protection"),
+        ["IE-HOUSING-01"] = (Guid.Parse("d0d74e2e-9a2a-50bc-970f-605997565456"), "housing")
     };
     private static readonly IReadOnlyDictionary<string, int> ExpectedSourceCounts = new Dictionary<string, int>
     {
@@ -38,7 +41,10 @@ public sealed class IrelandContentIntegrationTests
         ["IE-EMP-02"] = 20,
         ["IE-HEALTH-01"] = 10,
         ["IE-EDU-01"] = 15,
-        ["IE-SOC-01"] = 16
+        ["IE-SOC-01"] = 16,
+        ["IE-TP-01"] = 11,
+        ["IE-TP-02"] = 10,
+        ["IE-HOUSING-01"] = 15
     };
     private static readonly ResourceManager Resources = new(
         "RefugeeNavigator.Web.Resources.Localization.SharedResource",
@@ -50,32 +56,37 @@ public sealed class IrelandContentIntegrationTests
             .LoadAsync(await Catalog.Value));
 
     [Fact]
-    public async Task IrelandHasFiveDevelopmentOnlyArticlesAndExpectedCatalogCounts()
+    public async Task IrelandHasEightProductionVisibleArticlesAndExpectedCatalogCounts()
     {
         var catalog = await Catalog.Value;
         var country = Assert.Single(catalog.Countries, item => item.Slug == "ireland");
         Assert.Equal(CountryId, country.Id);
         Assert.Equal("Ireland", country.Name);
         Assert.Equal(19, catalog.Countries.Count);
-        Assert.Equal(149, catalog.InformationEntries.Count);
-        Assert.Equal(447, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(429, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(18, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(152, catalog.InformationEntries.Count);
+        Assert.Equal(456, catalog.InformationEntryTranslations.Count);
+        Assert.Equal(453, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(3, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == CountryId).ToArray();
-        Assert.Equal(5, entries.Length);
-        Assert.Equal(15, catalog.InformationEntryTranslations.Count(item => entries.Any(entry => entry.Id == item.InformationEntryId)));
+        Assert.Equal(8, entries.Length);
+        var irelandTranslations = catalog.InformationEntryTranslations.Where(item => entries.Any(entry => entry.Id == item.InformationEntryId)).ToArray();
+        Assert.Equal(24, irelandTranslations.Length);
+        Assert.All(irelandTranslations, item => Assert.Equal(VerificationStatus.Verified, item.VerificationStatus));
         Assert.Equal(Articles.Values.Select(item => item.Id).Order().ToArray(), entries.Select(item => item.Id).Order().ToArray());
         var categoryCounts = entries
             .GroupBy(item => catalog.Categories.Single(category => category.Id == item.CategoryId).Slug)
             .ToDictionary(group => group.Key, group => group.Count());
-        Assert.Equal(2, categoryCounts["employment"]);
-        Assert.Equal(1, categoryCounts["healthcare"]);
-        Assert.Equal(1, categoryCounts["education"]);
-        Assert.Equal(1, categoryCounts["social-assistance"]);
-        Assert.DoesNotContain("temporary-protection", categoryCounts.Keys);
-        Assert.DoesNotContain("housing", categoryCounts.Keys);
+        Assert.Equal(new Dictionary<string, int>
+        {
+            ["employment"] = 2,
+            ["healthcare"] = 1,
+            ["education"] = 1,
+            ["social-assistance"] = 1,
+            ["temporary-protection"] = 2,
+            ["housing"] = 1
+        }, categoryCounts);
 
         foreach (var (articleCode, expected) in Articles)
         {
@@ -85,8 +96,11 @@ public sealed class IrelandContentIntegrationTests
             Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(item => item.LanguageCode).Order(StringComparer.Ordinal).ToArray());
             Assert.All(translations, item =>
             {
-                Assert.Equal(VerificationStatus.NeedsReview, item.VerificationStatus);
-                Assert.Equal(new DateTimeOffset(2026, 11, 10, 0, 0, 0, TimeSpan.Zero), item.LastUpdatedAt);
+                Assert.Equal(VerificationStatus.Verified, item.VerificationStatus);
+                var expectedDate = articleCode is "IE-TP-01" or "IE-TP-02" or "IE-HOUSING-01"
+                    ? new DateTimeOffset(2026, 11, 15, 0, 0, 0, TimeSpan.Zero)
+                    : new DateTimeOffset(2026, 11, 10, 0, 0, 0, TimeSpan.Zero);
+                Assert.Equal(expectedDate, item.LastUpdatedAt);
             });
         }
 
@@ -99,42 +113,64 @@ public sealed class IrelandContentIntegrationTests
     }
 
     [Fact]
-    public async Task IrelandTranslationsAndSeventyArticleOwnedSourcesMatchDraftsExactly()
+    public async Task IrelandTranslationsAndOneHundredSixArticleOwnedSourcesMatchDraftsExactly()
     {
         var catalog = await Catalog.Value;
-        Assert.Equal(1426, catalog.OfficialSources.Count);
+        Assert.Equal(1462, catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         var repositoryRoot = FindRepositoryRoot();
         var draftsRoot = Path.Combine(repositoryRoot, "docs", "content-drafts", "ireland-v1");
         var articleIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => articleIds.Contains(item.InformationEntryId)).ToArray();
-        Assert.Equal(70, sources.Length);
-        Assert.Equal(70, sources.Select(item => item.Id).Distinct().Count());
+        Assert.Equal(106, sources.Length);
+        Assert.Equal(106, sources.Select(item => item.Id).Distinct().Count());
+        Assert.Equal(96, sources.Select(item => item.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
+        var research = await File.ReadAllTextAsync(Path.Combine(repositoryRoot, "docs", "content-research", "ireland-batch-2026-11-10", "TARGETED_CORE_COMPARE_RESEARCH_02.md"));
+        var retainedInventory = research.Split("### URLs reviewed but not used as current evidence", StringSplitOptions.None)[0];
+        var retainedUrls = Regex.Matches(retainedInventory, @"<(https://[^>]+)>")
+            .Select(match => match.Groups[1].Value).ToHashSet(StringComparer.Ordinal);
+        Assert.Equal(24, retainedUrls.Count);
         Assert.All(sources, source =>
         {
             Assert.Contains(source.InformationEntryId, articleIds);
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
-            Assert.Equal(new DateTimeOffset(2026, 11, 10, 0, 0, 0, TimeSpan.Zero), source.LastCheckedAt);
+            var isNewArticle = source.InformationEntryId == Articles["IE-TP-01"].Id ||
+                source.InformationEntryId == Articles["IE-TP-02"].Id ||
+                source.InformationEntryId == Articles["IE-HOUSING-01"].Id;
+            var expectedDate = isNewArticle && retainedUrls.Contains(source.Url.AbsoluteUri)
+                ? new DateTimeOffset(2026, 11, 15, 0, 0, 0, TimeSpan.Zero)
+                : new DateTimeOffset(2026, 11, 10, 0, 0, 0, TimeSpan.Zero);
+            Assert.Equal(expectedDate, source.LastCheckedAt);
         });
         Assert.All(catalog.OfficialSources.GroupBy(item => (item.InformationEntryId, item.Title, item.Url.AbsoluteUri)), group => Assert.Single(group));
 
         var sourceById = catalog.OfficialSources.ToDictionary(item => item.Id);
+        var totalCitationTokens = 0;
+        var citedSourceIds = new HashSet<Guid>();
         foreach (var (articleCode, expected) in Articles)
         {
             var draft = await File.ReadAllTextAsync(Path.Combine(draftsRoot, articleCode + ".md"));
             Assert.Contains($"Article ID: `{expected.Id}`", draft);
             var sourceMatches = Regex.Matches(draft,
-                @"(?m)^- `(?<key>IE-[^`]+)` → `(?<id>[^`]+)` — (?<title>.*?) \(research source .*?; \[official source\]\((?<url>https://[^)]+)\)\)$");
+                @"(?m)^- `(?<key>IE-[^`]+)` → `(?<id>[^`]+)` — (?<title>.*?) \((?:research source (?:`[^`]+`|[^;]+); (?:\[official source\]\(https://[^)]+\)|official source)|Targeted Research 02; official source)(?:; [^)]*)?\)$");
             Assert.Equal(ExpectedSourceCounts[articleCode], sourceMatches.Count);
             var ownedSources = sources.Where(item => item.InformationEntryId == expected.Id).ToDictionary(item => item.Id);
             Assert.Equal(ExpectedSourceCounts[articleCode], ownedSources.Count);
+            var sourceUrlMatches = Regex.Matches(draft,
+                @"(?m)^- `IE-[^`]+` → `(?<id>[^`]+)` — .*?\[(?<linkTitle>[^]]+)\]\((?<url>https://[^)]+)\).*$");
+            Assert.Equal(ExpectedSourceCounts[articleCode], sourceUrlMatches.Count);
             foreach (Match sourceMatch in sourceMatches)
             {
                 var sourceId = Guid.Parse(sourceMatch.Groups["id"].Value);
                 Assert.True(ownedSources.TryGetValue(sourceId, out var source));
                 Assert.Equal(expected.Id, source!.InformationEntryId);
                 Assert.Equal(sourceMatch.Groups["title"].Value, source.Title);
-                Assert.Equal(sourceMatch.Groups["url"].Value, source.Url.AbsoluteUri);
+            }
+            foreach (Match sourceMatch in sourceUrlMatches)
+            {
+                var sourceId = Guid.Parse(sourceMatch.Groups["id"].Value);
+                Assert.True(ownedSources.TryGetValue(sourceId, out var source));
+                Assert.Equal(sourceMatch.Groups["url"].Value, source!.Url.AbsoluteUri);
             }
 
             foreach (var (language, section) in new[] { ("en", "EN"), ("uk", "UK"), ("ru", "RU") })
@@ -152,37 +188,44 @@ public sealed class IrelandContentIntegrationTests
                 foreach (Match token in tokens)
                 {
                     var sourceId = Guid.Parse(token.Groups[1].Value);
+                    totalCitationTokens++;
+                    citedSourceIds.Add(sourceId);
+                    Assert.True(sourceById.ContainsKey(sourceId), $"{articleCode} {language} cites missing source {sourceId}.");
                     Assert.True(ownedSources.ContainsKey(sourceId), $"{articleCode} {language} cites non-owned source {sourceId}.");
                     Assert.Equal(expected.Id, sourceById[sourceId].InformationEntryId);
                 }
             }
         }
+        Assert.Equal(339, totalCitationTokens);
+        Assert.Equal(sources.Select(item => item.Id).ToHashSet(), citedSourceIds);
     }
 
     [Theory]
     [InlineData("en")]
     [InlineData("uk")]
     [InlineData("ru")]
-    public async Task IrelandIsVisibleInDevelopmentButHiddenFromProductionAndComparison(string language)
+    public async Task IrelandIsVisibleInProductionAndDevelopmentButExcludedFromComparison(string language)
     {
         var catalog = await Catalog.Value;
         var productionHome = await RenderAsync<Home>("Production", language);
-        Assert.Equal(18, Regex.Matches(productionHome.Html, "class=\"country-card\"").Count);
-        Assert.DoesNotContain("href=\"/countries/ireland\"", productionHome.Html);
+        Assert.Equal(19, Regex.Matches(productionHome.Html, "class=\"country-card\"").Count);
+        Assert.Contains("href=\"/countries/ireland\"", productionHome.Html);
         var productionSearch = await RenderAsync<Search>("Production", language, "/search");
-        Assert.DoesNotContain("ireland", SelectValues(productionSearch.Html, "country"));
+        Assert.Contains("ireland", SelectValues(productionSearch.Html, "country"));
         var productionOverview = await RenderAsync<CountryOverview>("Production", language, "/countries/ireland",
             new() { [nameof(CountryOverview.CountrySlug)] = "ireland" });
-        Assert.True(productionOverview.NotFound);
+        Assert.False(productionOverview.NotFound);
+        Assert.Equal(6, Regex.Matches(productionOverview.Html, "class=\"category-card\"").Count);
         var productionCategory = await RenderAsync<Category>("Production", language,
             "/countries/ireland/categories/employment", new()
             {
                 [nameof(Category.CountrySlug)] = "ireland",
                 [nameof(Category.CategorySlug)] = "employment"
             });
-        Assert.True(productionCategory.NotFound);
+        Assert.False(productionCategory.NotFound);
+        Assert.Equal(2, Regex.Matches(productionCategory.Html, "class=\"information-entry\"").Count);
         var productionResults = await RenderAsync<Search>("Production", language, "/search?country=ireland");
-        Assert.Empty(Regex.Matches(productionResults.Html, "class=\"result-card\"").Cast<Match>());
+        Assert.Equal(8, Regex.Matches(productionResults.Html, "class=\"result-card\"").Count);
         var productionCompare = await RenderAsync<Compare>("Production", language, "/compare");
         Assert.DoesNotContain("ireland", SelectValues(productionCompare.Html, "country1"));
         Assert.Contains("belgium", SelectValues(productionCompare.Html, "country1"));
@@ -196,8 +239,8 @@ public sealed class IrelandContentIntegrationTests
         var developmentSearch = await RenderAsync<Search>("Development", language, "/search");
         Assert.Contains("ireland", SelectValues(developmentSearch.Html, "country"));
         var irelandSearch = await RenderAsync<Search>("Development", language, "/search?country=ireland");
-        Assert.Equal(5, Regex.Matches(irelandSearch.Html, "class=\"result-card\"").Count);
-        Assert.Equal(5, ArticleSearch.Search(catalog, null, "ireland", null, null, language).Count);
+        Assert.Equal(8, Regex.Matches(irelandSearch.Html, "class=\"result-card\"").Count);
+        Assert.Equal(8, ArticleSearch.Search(catalog, null, "ireland", null, null, language).Count);
 
         var categoryCounts = new Dictionary<string, int>
         {
@@ -205,11 +248,20 @@ public sealed class IrelandContentIntegrationTests
             ["healthcare"] = 1,
             ["education"] = 1,
             ["social-assistance"] = 1,
-            ["temporary-protection"] = 0,
-            ["housing"] = 0
+            ["temporary-protection"] = 2,
+            ["housing"] = 1
         };
         foreach (var (categorySlug, expectedCount) in categoryCounts)
         {
+            var productionCategoryPage = await RenderAsync<Category>("Production", language,
+                $"/countries/ireland/categories/{categorySlug}", new()
+                {
+                    [nameof(Category.CountrySlug)] = "ireland",
+                    [nameof(Category.CategorySlug)] = categorySlug
+                });
+            Assert.False(productionCategoryPage.NotFound);
+            Assert.Equal(expectedCount, Regex.Matches(productionCategoryPage.Html, "class=\"information-entry\"").Count);
+
             var category = await RenderAsync<Category>("Development", language,
                 $"/countries/ireland/categories/{categorySlug}", new()
                 {
@@ -239,7 +291,7 @@ public sealed class IrelandContentIntegrationTests
         var search = await RenderAsync<Search>("Development", language, "/search?country=ireland",
             catalogOverride: previewCatalog);
 
-        Assert.Equal(4, Regex.Matches(search.Html, "class=\"result-card\"").Count);
+        Assert.Equal(7, Regex.Matches(search.Html, "class=\"result-card\"").Count);
         Assert.DoesNotContain(outdatedTranslation.Title, search.Html);
         Assert.Contains(catalog.InformationEntryTranslations.Single(item =>
             item.InformationEntryId == Articles["IE-EMP-02"].Id && item.LanguageCode == language).Title, search.Html);

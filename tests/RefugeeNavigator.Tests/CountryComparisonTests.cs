@@ -91,10 +91,10 @@ public sealed class CountryComparisonTests
                 Assert.True(sourcesById.TryGetValue(sourceId, out var source), $"Missing comparison source {sourceId}.");
                 Assert.Equal(fact.InformationEntryId, source!.InformationEntryId);
             }));
-        Assert.Equal(149, catalog.InformationEntries.Count);
-        Assert.Equal(447, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(429, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(18, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(152, catalog.InformationEntries.Count);
+        Assert.Equal(456, catalog.InformationEntryTranslations.Count);
+        Assert.Equal(453, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(3, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(translation => translation.VerificationStatus == VerificationStatus.Outdated));
         var czechiaId = Guid.Parse("10000000-0000-0000-0000-000000000004");
         var czechiaEntryIds = catalog.InformationEntries.Where(entry => entry.CountryId == czechiaId).Select(entry => entry.Id).ToHashSet();
