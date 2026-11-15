@@ -99,14 +99,14 @@ public sealed class FranceContentIntegrationTests
             });
         }
 
-        Assert.Equal(18, CountryComparisonTopicMap.SupportedCountrySlugs.Count);
+        Assert.Equal(19, CountryComparisonTopicMap.SupportedCountrySlugs.Count);
         Assert.Contains("france", CountryComparisonTopicMap.SupportedCountrySlugs);
-        Assert.DoesNotContain("ireland", CountryComparisonTopicMap.SupportedCountrySlugs);
-        Assert.All(CountryComparisonTopicMap.All, topic => Assert.Equal(18, topic.EntryIds.Count));
+        Assert.Contains("ireland", CountryComparisonTopicMap.SupportedCountrySlugs);
+        Assert.All(CountryComparisonTopicMap.All, topic => Assert.Equal(19, topic.EntryIds.Count));
         var allFacts = (await Facts.Value).Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).ToArray();
-        Assert.Equal(432, allFacts.Length);
+        Assert.Equal(456, allFacts.Length);
+        Assert.Equal(24, allFacts.Count(fact => fact.CountrySlug == "ireland"));
         Assert.Equal(24, allFacts.Count(fact => fact.CountrySlug == "france"));
-        Assert.DoesNotContain(allFacts, fact => fact.CountrySlug == "ireland");
     }
 
     [Fact]
@@ -255,7 +255,7 @@ public sealed class FranceContentIntegrationTests
             "/compare?country1=france&country2=norway&category=all");
         await AssertRenderedFranceComparison(developmentFranceComparison.Html, language);
         Assert.Contains("france", CountryComparisonTopicMap.SupportedCountrySlugs);
-        Assert.DoesNotContain("ireland", CountryComparisonTopicMap.SupportedCountrySlugs);
+        Assert.Contains("ireland", CountryComparisonTopicMap.SupportedCountrySlugs);
     }
 
     [Fact]

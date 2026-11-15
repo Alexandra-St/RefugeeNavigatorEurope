@@ -57,7 +57,7 @@ public sealed class CountryComparisonTests
     });
 
     [Fact]
-    public async Task StructuredCatalogHasEightTopicsTwentyFourAspectsAndSixteenCountries()
+    public async Task StructuredCatalogHasEightTopicsTwentyFourAspectsAndNineteenCountries()
     {
         var catalog = await LoadCatalogAsync();
         var facts = await FactCatalog.Value;
@@ -66,7 +66,7 @@ public sealed class CountryComparisonTests
         Assert.Equal(8, facts.Topics.Count);
         Assert.Equal(24, facts.Topics.Sum(topic => topic.Aspects.Count));
         Assert.Equal(24, facts.Topics.SelectMany(topic => topic.Aspects).Select(aspect => aspect.QuestionResourceKey).Distinct(StringComparer.Ordinal).Count());
-        Assert.Equal(432, facts.Topics.SelectMany(topic => topic.Aspects).Sum(aspect => aspect.Facts.Count));
+        Assert.Equal(456, facts.Topics.SelectMany(topic => topic.Aspects).Sum(aspect => aspect.Facts.Count));
         var finlandFacts = facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts)
             .Where(fact => fact.CountrySlug == "finland").ToArray();
         Assert.Equal(24, finlandFacts.Length);
@@ -79,9 +79,21 @@ public sealed class CountryComparisonTests
             Assert.True(fact.IsAvailable);
             Assert.Equal(new[] { "en", "ru", "uk" }, fact.Values.Keys.Order(StringComparer.Ordinal).ToArray());
         });
-        Assert.Equal(425, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.IsAvailable));
+        var irelandFacts = facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts)
+            .Where(fact => fact.CountrySlug == "ireland").ToArray();
+        Assert.Equal(24, irelandFacts.Length);
+        Assert.Equal(24, irelandFacts.Select(fact => facts.Topics.SelectMany(topic => topic.Aspects)
+            .Single(aspect => aspect.Facts.Contains(fact)).Id).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(72, irelandFacts.Sum(fact => fact.Values.Count));
+        Assert.All(irelandFacts, fact =>
+        {
+            Assert.Equal(ComparisonFactStatus.Approved, fact.Status);
+            Assert.True(fact.IsAvailable);
+            Assert.Equal(new[] { "en", "ru", "uk" }, fact.Values.Keys.Order(StringComparer.Ordinal).ToArray());
+        });
+        Assert.Equal(449, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.IsAvailable));
         Assert.Equal(7, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => !fact.IsAvailable));
-        Assert.Equal(427, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Approved));
+        Assert.Equal(451, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Approved));
         Assert.Equal(5, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Draft));
         Assert.All(facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Where(fact => fact.CountrySlug is not ("sweden" or "netherlands" or "lithuania")), fact => Assert.Equal(ComparisonFactStatus.Approved, fact.Status));
         var sourcesById = catalog.OfficialSources.ToDictionary(source => source.Id);
@@ -207,7 +219,7 @@ public sealed class CountryComparisonTests
 
         foreach (var topic in facts.Topics)
         {
-            Assert.Equal(18, topic.Aspects.SelectMany(aspect => aspect.Facts).Select(fact => fact.CountrySlug).Distinct().Count());
+            Assert.Equal(19, topic.Aspects.SelectMany(aspect => aspect.Facts).Select(fact => fact.CountrySlug).Distinct().Count());
             Assert.Equal(topic.CategorySlug, Assert.Single(CountryComparisonTopicMap.All, mapped => mapped.ResourceKey == topic.TopicResourceKey).CategorySlug);
             foreach (var aspect in topic.Aspects)
             foreach (var fact in aspect.Facts)
@@ -392,7 +404,7 @@ public sealed class CountryComparisonTests
                 Guid.Parse("249d9618-2212-5251-8f6e-8de0766e0cf3")
             },
             netherlandsFacts.Single(item => item.Id == "residence-routes").fact.OfficialSourceIds);
-        Assert.Equal(408, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts)
+        Assert.Equal(432, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts)
             .Count(fact => fact.CountrySlug != "netherlands"));
         Assert.All(netherlandsFacts, item =>
         {
@@ -1348,13 +1360,13 @@ public sealed class CountryComparisonTests
         Assert.Equal(
             ["temporary-protection", "temporary-protection", "employment", "employment", "healthcare", "housing", "education", "social-assistance"],
             CountryComparisonTopicMap.All.Select(topic => topic.CategorySlug));
-        var expectedCountrySlugs = new[] { "austria", "belgium", "bulgaria", "czechia", "denmark", "finland", "france", "germany", "hungary", "italy", "lithuania", "netherlands", "norway", "poland", "romania", "slovakia", "spain", "sweden" };
+        var expectedCountrySlugs = new[] { "austria", "belgium", "bulgaria", "czechia", "denmark", "finland", "france", "germany", "hungary", "ireland", "italy", "lithuania", "netherlands", "norway", "poland", "romania", "slovakia", "spain", "sweden" };
         Assert.Equal(expectedCountrySlugs, CountryComparisonTopicMap.SupportedCountrySlugs.Order(StringComparer.Ordinal).ToArray());
-        Assert.Equal(144, CountryComparisonTopicMap.All.SelectMany(topic => topic.EntryIds.Values).Distinct().Count());
+        Assert.Equal(152, CountryComparisonTopicMap.All.SelectMany(topic => topic.EntryIds.Values).Distinct().Count());
 
         foreach (var topic in CountryComparisonTopicMap.All)
         {
-            Assert.Equal(18, topic.EntryIds.Count);
+            Assert.Equal(19, topic.EntryIds.Count);
             Assert.Equal(expectedCountrySlugs, topic.EntryIds.Keys.Order(StringComparer.Ordinal).ToArray());
             var category = Assert.Single(catalog.Categories, item => item.Slug == topic.CategorySlug);
             foreach (var (countrySlug, entryId) in topic.EntryIds)
@@ -1410,6 +1422,112 @@ public sealed class CountryComparisonTests
                 }
             }
         }
+    }
+
+    [Theory]
+    [InlineData("uk")]
+    [InlineData("en")]
+    [InlineData("ru")]
+    public async Task IrelandCompareRendersInProductionAndDevelopmentAcrossAllTopics(string language)
+    {
+        var catalog = await LoadCatalogAsync();
+        var facts = await FactCatalog.Value;
+        foreach (var environment in new[] { "Production", "Development" })
+        {
+            var selectorHtml = await RenderAsync(catalog, language, "", environment);
+            Assert.Contains("ireland", SelectValues(selectorHtml, "country1"));
+            Assert.Contains("ireland", SelectValues(selectorHtml, "country2"));
+
+            foreach (var category in new[] { "temporary-protection", "employment", "healthcare", "housing", "education", "social-assistance" })
+            {
+                var html = await RenderAsync(catalog, language,
+                    $"?country1=ireland&country2=denmark&category={category}", environment);
+                var visibleHtml = WebUtility.HtmlDecode(html);
+                Assert.Contains("value=\"ireland\" selected", html);
+                Assert.DoesNotContain("class=\"selection-message\"", html);
+                Assert.Equal(CountryComparisonTopicMap.ForCategory(category).Count,
+                    Regex.Matches(html, "class=\"comparison-topic\"").Count);
+                foreach (var topic in facts.Topics.Where(topic => topic.CategorySlug == category))
+                foreach (var aspect in topic.Aspects)
+                {
+                    var ireland = Assert.Single(aspect.Facts, fact => fact.CountrySlug == "ireland");
+                    var normalizedFact = Regex.Replace(ireland.Values[language], @"`([^`]+)`", "$1");
+                    var panels = StructuredCountryPanels(visibleHtml, aspect.Id);
+                    _ = Assert.Single(panels, panel =>
+                        ReadRenderedText(Regex.Match(panel, "<p\\b[^>]*>(.*?)</p>", RegexOptions.Singleline).Groups[1].Value) == normalizedFact);
+                    Assert.DoesNotContain($"[[source:", visibleHtml);
+                    foreach (var sourceId in ireland.OfficialSourceIds)
+                    {
+                        var source = Assert.Single(catalog.OfficialSources, item => item.Id == sourceId);
+                        Assert.Equal(ireland.InformationEntryId, source.InformationEntryId);
+                        AssertExternalSourceLink(html, source, language);
+                    }
+                }
+            }
+        }
+    }
+
+    [Fact]
+    public async Task IrelandCompareFactsMatchReviewedDraftExactlyAndKeepExistingFactsUnchanged()
+    {
+        var catalog = await LoadCatalogAsync();
+        var facts = await FactCatalog.Value;
+        var repositoryRoot = FindRepositoryRoot();
+        var draft = await File.ReadAllTextAsync(Path.Combine(repositoryRoot, "docs", "content-drafts", "ireland-v1", "COMPARE_DRAFT_01.md"));
+        var draftFacts = new Dictionary<string, (Guid EntryId, string En, string Uk, string Ru, Guid[] Sources)>(StringComparer.Ordinal);
+        foreach (var block in Regex.Split(draft, @"(?m)^### "))
+        {
+            var aspectMatch = Regex.Match(block, @"(?m)^(?<id>[a-z]+(?:-[a-z0-9]+)+)$");
+            if (!aspectMatch.Success) continue;
+            string Field(string name)
+            {
+                var match = Regex.Match(block, $@"(?m)^\*\*{Regex.Escape(name)}:\*\* (?<value>.*)$");
+                Assert.True(match.Success, $"Missing {name} for {aspectMatch.Groups["id"].Value}.");
+                return match.Groups["value"].Value.Trim();
+            }
+
+            var entryId = Guid.Parse(Regex.Match(Field("InformationEntryId"), @"[0-9a-f-]{36}").Value);
+            var values = new[] { Field("EN"), Field("UK"), Field("RU") };
+            var sourceIds = Regex.Matches(Field("OfficialSourceIds"), @"[0-9a-f-]{36}")
+                .Select(match => Guid.Parse(match.Value)).ToArray();
+            draftFacts.Add(aspectMatch.Groups["id"].Value, (entryId, values[0], values[1], values[2], sourceIds));
+        }
+
+        Assert.Equal(24, draftFacts.Count);
+        Assert.Contains("complete universal application route", draftFacts["protection-application"].En);
+        Assert.Contains("individual Irish permission", draftFacts["protection-dates"].En);
+        Assert.Contains("pending decision does not by itself", draftFacts["residence-filing"].En);
+        Assert.Contains("fallback placement", draftFacts["housing-initial"].En);
+        var irelandFacts = facts.Topics.SelectMany(topic => topic.Aspects.SelectMany(aspect =>
+                aspect.Facts.Where(fact => fact.CountrySlug == "ireland").Select(fact => (aspect.Id, Fact: fact))))
+            .ToArray();
+        Assert.Equal(24, irelandFacts.Length);
+        Assert.Equal(77, irelandFacts.Sum(item => item.Fact.OfficialSourceIds.Count));
+        Assert.Equal(72, irelandFacts.SelectMany(item => item.Fact.OfficialSourceIds).Distinct().Count());
+        Assert.Equal(65, irelandFacts.SelectMany(item => item.Fact.OfficialSourceIds)
+            .Select(id => Assert.Single(catalog.OfficialSources, source => source.Id == id).Url.AbsoluteUri)
+            .Distinct(StringComparer.Ordinal).Count());
+        var sourceById = catalog.OfficialSources.ToDictionary(source => source.Id);
+        foreach (var (aspectId, fact) in irelandFacts)
+        {
+            var expected = draftFacts[aspectId];
+            Assert.Equal(expected.EntryId, fact.InformationEntryId);
+            Assert.Equal(expected.En, fact.Values["en"]);
+            Assert.Equal(expected.Uk, fact.Values["uk"]);
+            Assert.Equal(expected.Ru, fact.Values["ru"]);
+            Assert.Equal(expected.Sources, fact.OfficialSourceIds.ToArray());
+            Assert.All(fact.OfficialSourceIds, sourceId =>
+            {
+                Assert.True(sourceById.ContainsKey(sourceId));
+                Assert.Equal(fact.InformationEntryId, sourceById[sourceId].InformationEntryId);
+                Assert.Equal(Uri.UriSchemeHttps, sourceById[sourceId].Url.Scheme);
+            });
+            var entry = Assert.Single(catalog.InformationEntries, item => item.Id == fact.InformationEntryId);
+            Assert.Equal("ireland", Assert.Single(catalog.Countries, country => country.Id == entry.CountryId).Slug);
+        }
+
+        Assert.Equal(432, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts)
+            .Count(fact => fact.CountrySlug != "ireland"));
     }
 
     [Fact]
@@ -1842,6 +1960,25 @@ public sealed class CountryComparisonTests
         Assert.Matches("<span\\b(?=[^>]*aria-hidden=\\\"true\\\")(?=[^>]*class=\\\"external-link-icon\\\")[^>]*>↗</span>", content);
         Assert.Contains($"({GetResource("Common.OpensInNewTab", language)})", visibleContent);
         Assert.DoesNotContain("Common.OpensInNewTab", html);
+    }
+
+    private static string[] SelectValues(string html, string name)
+    {
+        var select = Regex.Match(html, $"<select\\b[^>]*name=\"{name}\"[^>]*>(.*?)</select>", RegexOptions.Singleline);
+        Assert.True(select.Success);
+        return Regex.Matches(select.Groups[1].Value, "<option\\b[^>]*value=\"([^\"]+)\"")
+            .Select(match => match.Groups[1].Value).ToArray();
+    }
+
+    private static string FindRepositoryRoot()
+    {
+        var directory = new DirectoryInfo(AppContext.BaseDirectory);
+        while (directory is not null && !File.Exists(Path.Combine(directory.FullName, "RefugeeNavigatorEurope.slnx")))
+        {
+            directory = directory.Parent;
+        }
+
+        return directory?.FullName ?? throw new DirectoryNotFoundException("Could not find the repository root.");
     }
 
     private static (ComparisonTopicFacts Topic, ComparisonAspect Aspect, CountryComparisonFact Fact) FindFact(

@@ -96,15 +96,15 @@ public sealed class FinlandContentIntegrationTests
             });
         }
 
-        Assert.Equal(18, CountryComparisonTopicMap.SupportedCountrySlugs.Count);
-        Assert.DoesNotContain("ireland", CountryComparisonTopicMap.SupportedCountrySlugs);
+        Assert.Equal(19, CountryComparisonTopicMap.SupportedCountrySlugs.Count);
+        Assert.Contains("ireland", CountryComparisonTopicMap.SupportedCountrySlugs);
         Assert.Contains("france", CountryComparisonTopicMap.SupportedCountrySlugs);
-        Assert.All(CountryComparisonTopicMap.All, topic => Assert.Equal(18, topic.EntryIds.Count));
+        Assert.All(CountryComparisonTopicMap.All, topic => Assert.Equal(19, topic.EntryIds.Count));
         var allFacts = (await Facts.Value).Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).ToArray();
-        Assert.Equal(432, allFacts.Length);
+        Assert.Equal(456, allFacts.Length);
         Assert.Equal(24, allFacts.Count(fact => fact.CountrySlug == "finland"));
         Assert.Equal(72, allFacts.Where(fact => fact.CountrySlug == "finland").Sum(fact => fact.Values.Count));
-        Assert.DoesNotContain(allFacts, fact => fact.CountrySlug == "ireland");
+        Assert.Equal(24, allFacts.Count(fact => fact.CountrySlug == "ireland"));
         Assert.Equal(24, allFacts.Count(fact => fact.CountrySlug == "france"));
     }
 
@@ -242,8 +242,8 @@ public sealed class FinlandContentIntegrationTests
         var productionCompare = await RenderAsync<Compare>("Production", language, "/compare");
         Assert.Contains("finland", SelectValues(productionCompare.Html, "country1"));
         Assert.Contains("finland", SelectValues(productionCompare.Html, "country2"));
-        Assert.DoesNotContain("ireland", SelectValues(productionCompare.Html, "country1"));
-        Assert.DoesNotContain("ireland", SelectValues(productionCompare.Html, "country2"));
+        Assert.Contains("ireland", SelectValues(productionCompare.Html, "country1"));
+        Assert.Contains("ireland", SelectValues(productionCompare.Html, "country2"));
         var finlandCompareFacts = (await Facts.Value).Topics.SelectMany(topic => topic.Aspects)
             .SelectMany(aspect => aspect.Facts.Where(fact => fact.CountrySlug == "finland")).ToArray();
         var productionFinlandCompare = await RenderAsync<Compare>("Production", language,
@@ -289,8 +289,8 @@ public sealed class FinlandContentIntegrationTests
         var developmentCompare = await RenderAsync<Compare>("Development", language, "/compare");
         Assert.Contains("finland", SelectValues(developmentCompare.Html, "country1"));
         Assert.Contains("finland", SelectValues(developmentCompare.Html, "country2"));
-        Assert.DoesNotContain("ireland", SelectValues(developmentCompare.Html, "country1"));
-        Assert.DoesNotContain("ireland", SelectValues(developmentCompare.Html, "country2"));
+        Assert.Contains("ireland", SelectValues(developmentCompare.Html, "country1"));
+        Assert.Contains("ireland", SelectValues(developmentCompare.Html, "country2"));
         var developmentFinlandCompare = await RenderAsync<Compare>("Development", language,
             "/compare?country1=finland&country2=denmark&category=all");
         Assert.Equal(8, Regex.Matches(developmentFinlandCompare.Html, "class=\"comparison-topic\"").Count);
@@ -306,7 +306,7 @@ public sealed class FinlandContentIntegrationTests
             Assert.Contains($"href=\"{url}\"", developmentFinlandCompare.Html);
         }
         Assert.Contains("finland", CountryComparisonTopicMap.SupportedCountrySlugs);
-        Assert.DoesNotContain("ireland", CountryComparisonTopicMap.SupportedCountrySlugs);
+        Assert.Contains("ireland", CountryComparisonTopicMap.SupportedCountrySlugs);
         Assert.Contains("france", CountryComparisonTopicMap.SupportedCountrySlugs);
     }
 

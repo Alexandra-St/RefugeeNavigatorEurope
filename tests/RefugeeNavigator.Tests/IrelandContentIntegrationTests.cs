@@ -104,12 +104,12 @@ public sealed class IrelandContentIntegrationTests
             });
         }
 
-        Assert.Equal(18, CountryComparisonTopicMap.SupportedCountrySlugs.Count);
-        Assert.DoesNotContain("ireland", CountryComparisonTopicMap.SupportedCountrySlugs);
-        Assert.All(CountryComparisonTopicMap.All, topic => Assert.Equal(18, topic.EntryIds.Count));
+        Assert.Equal(19, CountryComparisonTopicMap.SupportedCountrySlugs.Count);
+        Assert.Contains("ireland", CountryComparisonTopicMap.SupportedCountrySlugs);
+        Assert.All(CountryComparisonTopicMap.All, topic => Assert.Equal(19, topic.EntryIds.Count));
         var allFacts = (await Facts.Value).Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).ToArray();
-        Assert.Equal(432, allFacts.Length);
-        Assert.DoesNotContain(allFacts, fact => fact.CountrySlug == "ireland");
+        Assert.Equal(456, allFacts.Length);
+        Assert.Equal(24, allFacts.Count(fact => fact.CountrySlug == "ireland"));
     }
 
     [Fact]
@@ -204,7 +204,7 @@ public sealed class IrelandContentIntegrationTests
     [InlineData("en")]
     [InlineData("uk")]
     [InlineData("ru")]
-    public async Task IrelandIsVisibleInProductionAndDevelopmentButExcludedFromComparison(string language)
+    public async Task IrelandIsVisibleInProductionDevelopmentAndComparison(string language)
     {
         var catalog = await Catalog.Value;
         var productionHome = await RenderAsync<Home>("Production", language);
@@ -227,7 +227,8 @@ public sealed class IrelandContentIntegrationTests
         var productionResults = await RenderAsync<Search>("Production", language, "/search?country=ireland");
         Assert.Equal(8, Regex.Matches(productionResults.Html, "class=\"result-card\"").Count);
         var productionCompare = await RenderAsync<Compare>("Production", language, "/compare");
-        Assert.DoesNotContain("ireland", SelectValues(productionCompare.Html, "country1"));
+        Assert.Contains("ireland", SelectValues(productionCompare.Html, "country1"));
+        Assert.Contains("ireland", SelectValues(productionCompare.Html, "country2"));
         Assert.Contains("belgium", SelectValues(productionCompare.Html, "country1"));
 
         var developmentHome = await RenderAsync<Home>("Development", language);
@@ -273,9 +274,9 @@ public sealed class IrelandContentIntegrationTests
         }
 
         var developmentCompare = await RenderAsync<Compare>("Development", language, "/compare");
-        Assert.DoesNotContain("ireland", SelectValues(developmentCompare.Html, "country1"));
-        Assert.DoesNotContain("ireland", SelectValues(developmentCompare.Html, "country2"));
-        Assert.DoesNotContain("ireland", CountryComparisonTopicMap.SupportedCountrySlugs);
+        Assert.Contains("ireland", SelectValues(developmentCompare.Html, "country1"));
+        Assert.Contains("ireland", SelectValues(developmentCompare.Html, "country2"));
+        Assert.Contains("ireland", CountryComparisonTopicMap.SupportedCountrySlugs);
     }
 
     [Fact]
