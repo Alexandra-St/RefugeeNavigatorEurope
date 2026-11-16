@@ -445,7 +445,9 @@
 
     private IEnumerable<Country> VisibleComparisonCountries =>
         CountryVisibility.GetVisibleCountries(Catalog, HostEnvironment.IsDevelopment())
-            .Where(country => CountryComparisonTopicMap.SupportedCountrySlugs.Contains(country.Slug));
+            .Where(country => CountryComparisonTopicMap.SupportedCountrySlugs.Contains(country.Slug))
+            .OrderBy(country => Localizer[CatalogLocalizationKeyResolver.CountryName(country)].Value,
+                StringComparer.Create(CultureInfo.CurrentUICulture, ignoreCase: false));
 
     private Country? FindCountry(string? slug) => string.IsNullOrWhiteSpace(slug)
         ? null

@@ -108,8 +108,37 @@ public sealed class CountryVisibilityTests
         var search = await RenderAsync<Search>("Production", language, "/search");
         Assert.Equal(ProductionCoreCountries, SelectValues(search.Html, "country"));
         var compare = await RenderAsync<Compare>("Production", language, "/compare");
-        Assert.Equal(ProductionCompareCountries, SelectValues(compare.Html, "country1"));
-        Assert.Equal(ProductionCompareCountries, SelectValues(compare.Html, "country2"));
+        Assert.Equal(ProductionCompareCountries.Order(StringComparer.Ordinal), SelectValues(compare.Html, "country1").Order(StringComparer.Ordinal));
+        Assert.Equal(ProductionCompareCountries.Order(StringComparer.Ordinal), SelectValues(compare.Html, "country2").Order(StringComparer.Ordinal));
+    }
+
+    [Fact]
+    public async Task ProductionHomeRendersFlagsForAllNineteenCountriesIncludingNorway()
+    {
+        var home = await RenderAsync<Home>("Production", "en");
+        Assert.Equal(19, Regex.Matches(home.Html, "class=\"country-card\"").Count);
+        var flags = Regex.Matches(home.Html, "<span[^>]*country-flag[^>]*>([^<]+)</span>")
+            .Select(match => match.Groups[1].Value).ToArray();
+        Assert.Equal(19, flags.Length);
+        Assert.All(flags, flag => Assert.False(string.IsNullOrWhiteSpace(flag)));
+        Assert.Contains("🇳🇴", flags);
+    }
+
+    [Theory]
+    [InlineData("ru")]
+    [InlineData("uk")]
+    [InlineData("en")]
+    public async Task ProductionCompareCountryOptionsAreLocalizedAndAlphabeticallySorted(string language)
+    {
+        var compare = await RenderAsync<Compare>("Production", language, "/compare");
+        var first = SelectOptionLabels(compare.Html, "country1");
+        var second = SelectOptionLabels(compare.Html, "country2");
+        var comparer = StringComparer.Create(CultureInfo.GetCultureInfo(language), ignoreCase: false);
+
+        Assert.Equal(19, first.Length);
+        Assert.Equal(19, second.Length);
+        Assert.Equal(first, second);
+        Assert.Equal(first.OrderBy(name => name, comparer), first);
     }
 
     [Theory]
@@ -233,8 +262,8 @@ public sealed class CountryVisibilityTests
         Assert.Equal(8, ArticleSearch.Search(catalog, null, "romania", null, null, language).Count);
         var compare = await RenderAsync<Compare>("Development", language,
             "/compare?country1=sweden&country2=denmark&category=all");
-        Assert.Equal(ProductionCompareCountries, SelectValues(compare.Html, "country1"));
-        Assert.Equal(ProductionCompareCountries, SelectValues(compare.Html, "country2"));
+        Assert.Equal(ProductionCompareCountries.Order(StringComparer.Ordinal), SelectValues(compare.Html, "country1").Order(StringComparer.Ordinal));
+        Assert.Equal(ProductionCompareCountries.Order(StringComparer.Ordinal), SelectValues(compare.Html, "country2").Order(StringComparer.Ordinal));
         Assert.DoesNotContain("class=\"selection-message\"", compare.Html);
         Assert.Contains("class=\"draft-preview-notice\"", compare.Html);
         Assert.Contains("class=\"draft-label\"", compare.Html);
@@ -346,6 +375,15 @@ public sealed class CountryVisibilityTests
         Assert.True(select.Success);
         return Regex.Matches(select.Groups[1].Value, "<option\\b[^>]*value=\"([^\"]+)\"")
             .Select(match => match.Groups[1].Value).ToArray();
+    }
+
+    private static string[] SelectOptionLabels(string html, string name)
+    {
+        var select = Regex.Match(html, $"<select\\b[^>]*name=\"{name}\"[^>]*>(.*?)</select>", RegexOptions.Singleline);
+        Assert.True(select.Success);
+        return Regex.Matches(select.Groups[1].Value, "<option\\b[^>]*value=\"([^\"]*)\"[^>]*>(.*?)</option>", RegexOptions.Singleline)
+            .Where(match => !string.IsNullOrEmpty(match.Groups[1].Value))
+            .Select(match => Regex.Replace(match.Groups[2].Value, "<[^>]+>", string.Empty).Trim()).ToArray();
     }
 
     private static CatalogData WithSwedenTranslations(CatalogData catalog, HashSet<Guid> swedenEntryIds,
