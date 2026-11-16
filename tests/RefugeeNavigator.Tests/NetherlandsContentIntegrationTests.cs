@@ -44,7 +44,7 @@ public sealed class NetherlandsContentIntegrationTests
     };
     private static readonly IReadOnlyDictionary<string, int> ExpectedSourceCounts = new Dictionary<string, int>
     {
-        ["NL-TP-01"] = 8,
+        ["NL-TP-01"] = 10,
         ["NL-TP-02"] = 8,
         ["NL-EMP-01"] = 3,
         ["NL-EMP-02"] = 6,
@@ -70,6 +70,7 @@ public sealed class NetherlandsContentIntegrationTests
         StableArticleIds["NL-EMP-02"], StableArticleIds["NL-HEALTH-01"],
         StableArticleIds["NL-HOUSING-01"], StableArticleIds["NL-SOC-01"],
         StableArticleIds["NL-TP-02"],
+        StableArticleIds["NL-TP-01"],
         StableArticleIds["NL-EMP-01"],
         StableArticleIds["NL-EDU-01"]
     };
@@ -97,6 +98,8 @@ public sealed class NetherlandsContentIntegrationTests
         Guid.Parse("400b5488-04f8-5492-ae3e-044af4cd25e9"),
         Guid.Parse("18793b2f-bb3f-5dad-9e71-cd0f724dc971"),
         Guid.Parse("cae7f886-063b-5136-a924-270709eabe18"),
+        Guid.Parse("59f03221-ac26-5602-8173-e880102d695b"),
+        Guid.Parse("185885fd-278b-5489-8a2b-a436b6998b99"),
     };
     private static readonly DateTime SourceCheckDate = new(2026, 10, 20);
     private static readonly Lazy<Task<CatalogData>> Catalog = new(() =>
@@ -105,7 +108,7 @@ public sealed class NetherlandsContentIntegrationTests
         "RefugeeNavigator.Web.Resources.Localization.SharedResource", typeof(SharedResource).Assembly);
 
     [Fact]
-    public async Task NetherlandsCatalogHasSeventhCountryAndNeedsReviewTranslations()
+    public async Task NetherlandsCatalogHasNineteenCountriesAndAllTranslationsVerified()
     {
         var catalog = await Catalog.Value;
         var country = Assert.Single(catalog.Countries, item => item.Slug == "netherlands");
@@ -131,8 +134,8 @@ public sealed class NetherlandsContentIntegrationTests
 
         Assert.Equal(152, catalog.InformationEntries.Count);
         Assert.Equal(456, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(453, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(3, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(456, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == NetherlandsId).ToArray();
@@ -285,9 +288,9 @@ public sealed class NetherlandsContentIntegrationTests
         var entryIds = entries.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => entryIds.Contains(item.InformationEntryId)).ToArray();
 
-        Assert.Equal(56, sources.Length);
-        Assert.Equal(1462, catalog.OfficialSources.Count);
-        Assert.Equal(42, sources.Select(item => item.Url.AbsoluteUri).Distinct(StringComparer.OrdinalIgnoreCase).Count());
+        Assert.Equal(58, sources.Length);
+        Assert.Equal(1468, catalog.OfficialSources.Count);
+        Assert.Equal(44, sources.Select(item => item.Url.AbsoluteUri).Distinct(StringComparer.OrdinalIgnoreCase).Count());
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         Assert.All(sources, source =>
         {
@@ -295,10 +298,13 @@ public sealed class NetherlandsContentIntegrationTests
             Assert.True(source.Url.IsAbsoluteUri);
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
             Assert.False(string.IsNullOrWhiteSpace(source.Title));
-            var expectedCheckDate = RecheckedSourceIds.Contains(source.Id)
-                || source.Id == Guid.Parse("e59632da-eb67-5b56-840f-9749cdc9f171")
-                ? new DateTime(2026, 10, 21)
-                : SourceCheckDate;
+            var expectedCheckDate = source.Id == Guid.Parse("59f03221-ac26-5602-8173-e880102d695b")
+                || source.Id == Guid.Parse("185885fd-278b-5489-8a2b-a436b6998b99")
+                ? new DateTime(2026, 11, 15)
+                : RecheckedSourceIds.Contains(source.Id)
+                    || source.Id == Guid.Parse("e59632da-eb67-5b56-840f-9749cdc9f171")
+                    ? new DateTime(2026, 10, 21)
+                    : SourceCheckDate;
             Assert.Equal(expectedCheckDate, source.LastCheckedAt.UtcDateTime.Date);
         });
 
@@ -418,7 +424,7 @@ public sealed class NetherlandsContentIntegrationTests
     [InlineData("en")]
     [InlineData("uk")]
     [InlineData("ru")]
-    public async Task NetherlandsIsSelectableInSearchButNeedsReviewEntriesStayOutsideSearchResults(string language)
+    public async Task NetherlandsSearchIncludesAllVerifiedArticles(string language)
     {
         var catalog = await Catalog.Value;
         var html = WebUtility.HtmlDecode(await RenderAsync<Search>(language,
@@ -437,7 +443,7 @@ public sealed class NetherlandsContentIntegrationTests
     }
 
     [Fact]
-    public async Task CountryComparisonV2HasTwentyApprovedAndFourDraftNetherlandsFacts()
+    public async Task CountryComparisonV2HasTwentyThreeApprovedAndOneDraftNetherlandsFact()
     {
         var json = await File.ReadAllTextAsync(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json"));
         using var document = JsonDocument.Parse(json);
@@ -445,8 +451,8 @@ public sealed class NetherlandsContentIntegrationTests
         Assert.Equal(24, countrySlugs.Count(slug => string.Equals(slug, "netherlands", StringComparison.OrdinalIgnoreCase)));
         var statuses = FindCountryStatuses(document.RootElement, "netherlands").ToArray();
         Assert.Equal(24, statuses.Length);
-        Assert.Equal(20, statuses.Count(status => status == "Approved"));
-        Assert.Equal(4, statuses.Count(status => status == "Draft"));
+        Assert.Equal(23, statuses.Count(status => status == "Approved"));
+        Assert.Equal(1, statuses.Count(status => status == "Draft"));
 
         var vacanciesAspect = document.RootElement.GetProperty("Topics").EnumerateArray()
             .SelectMany(topic => topic.GetProperty("Aspects").EnumerateArray())
@@ -533,6 +539,11 @@ public sealed class NetherlandsContentIntegrationTests
             Assert.True(cells.Length >= 3, $"Source row {id} is malformed.");
             var url = new Uri(cells[2], UriKind.Absolute).AbsoluteUri;
             Assert.True(result.TryAdd(url, cells[1]), $"Duplicate URL {url} in article source set.");
+        }
+        foreach (Match match in Regex.Matches(sourceSet, @"^- ([^:\r\n]+): (https://[^\s]+)$", RegexOptions.Multiline))
+        {
+            var url = new Uri(match.Groups[2].Value, UriKind.Absolute).AbsoluteUri;
+            Assert.True(result.TryAdd(url, match.Groups[1].Value), $"Duplicate URL {url} in article source set.");
         }
         return result;
     }

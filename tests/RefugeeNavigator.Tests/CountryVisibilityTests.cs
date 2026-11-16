@@ -172,7 +172,7 @@ public sealed class CountryVisibilityTests
         foreach (var slug in new[] { "czechia", "spain", "netherlands", "sweden", "romania", "bulgaria", "hungary", "ireland" })
         {
             var result = await RenderAsync<Search>("Production", language, $"/search?country={slug}");
-            Assert.Equal(slug == "netherlands" ? 7 : 8,
+            Assert.Equal(8,
                 Regex.Matches(result.Html, "class=\"result-card\"").Count);
             var countryId = catalog.Countries.Single(country => country.Slug == slug).Id;
             foreach (var entry in catalog.InformationEntries.Where(item => item.CountryId == countryId))

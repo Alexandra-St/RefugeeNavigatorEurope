@@ -10232,5 +10232,47 @@
     "Title": "Department of Social Protection, [Additional Needs Payment](https://www.gov.ie/en/service/80b24c-exceptional-needs-payments-swa/)",
     "Url": "https://www.gov.ie/en/service/80b24c-exceptional-needs-payments-swa/",
     "LastCheckedAt": "2026-11-10T00:00:00+00:00"
+  },
+  {
+    "Id": "59f03221-ac26-5602-8173-e880102d695b",
+    "InformationEntryId": "244b1055-4d8c-55b2-820e-60ff018c3b1f",
+    "Title": "Corrected consolidated Council Implementing Decision (EU) 2026/1912",
+    "Url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02026D1912-20260804",
+    "LastCheckedAt": "2026-11-15T00:00:00+00:00"
+  },
+  {
+    "Id": "185885fd-278b-5489-8a2b-a436b6998b99",
+    "InformationEntryId": "244b1055-4d8c-55b2-820e-60ff018c3b1f",
+    "Title": "IND, object to or appeal a decision",
+    "Url": "https://ind.nl/en/after-your-application/object-to-or-appeal-decision",
+    "LastCheckedAt": "2026-11-15T00:00:00+00:00"
+  },
+  {
+    "Id": "684bf2c7-6817-58bc-9009-03181c7d9be4",
+    "InformationEntryId": "c2356631-3fa2-4553-8fda-50a4419262c0",
+    "Title": "New to Denmark: after a positive decision",
+    "Url": "https://www.nyidanmark.dk/en-GB/You-have-received-an-answer/Ukraine/Ja-Ukraine/?anchor=971832788A114D1A8BAD78CBF5142E22&callbackAnchor=F5EF68CA41B148B4BCDBBD8B4B3C8B9C971832788A114D1A8BAD78CBF5142E22&callbackItem=FE525DC60F8E41D2B12EFD5F3D841817",
+    "LastCheckedAt": "2026-11-15T00:00:00+00:00"
+  },
+  {
+    "Id": "6e178958-1c44-51b2-ba65-2f83e1fd5f4d",
+    "InformationEntryId": "bd08644f-dd27-412c-9bfd-888de1fe304d",
+    "Title": "Royal Decree 326/2026, State Housing Plan 2026–2030",
+    "Url": "https://www.boe.es/eli/es/rd/2026/04/22/326/con/20260423",
+    "LastCheckedAt": "2026-11-15T00:00:00+00:00"
+  },
+  {
+    "Id": "1a7ade55-783f-59ae-97a2-d2b620104d9f",
+    "InformationEntryId": "f5e0f499-0f60-5465-85f8-de6345029b59",
+    "Title": "KMK Ukraine schooling resolution",
+    "Url": "https://www.kmk.org/fileadmin/veroeffentlichungen_beschluesse/2022/2022_06_23-Beschulung-Kinder-Ukraine-SJ-22-23_01.pdf",
+    "LastCheckedAt": "2026-11-15T00:00:00+00:00"
+  },
+  {
+    "Id": "f2bb0f3b-2674-54ea-8d97-5b0244e958cc",
+    "InformationEntryId": "d33628da-cb49-44b5-a7aa-ae6c6ac8f389",
+    "Title": "Social Security family-benefit guidance",
+    "Url": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10967/27924/",
+    "LastCheckedAt": "2026-11-15T00:00:00+00:00"
   }
 ]

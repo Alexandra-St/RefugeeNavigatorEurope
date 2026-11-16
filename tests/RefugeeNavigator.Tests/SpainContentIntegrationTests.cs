@@ -36,9 +36,9 @@ public sealed class SpainContentIntegrationTests
         ["ES-EMP-01"] = 7,
         ["ES-EMP-02"] = 8,
         ["ES-HEALTH-01"] = 3,
-        ["ES-HOUSING-01"] = 5,
+        ["ES-HOUSING-01"] = 6,
         ["ES-EDU-01"] = 6,
-        ["ES-SOC-01"] = 10
+        ["ES-SOC-01"] = 11
     };
     private static readonly IReadOnlyDictionary<string, Guid> StableArticleIds = new Dictionary<string, Guid>
     {
@@ -83,8 +83,8 @@ public sealed class SpainContentIntegrationTests
         Assert.Equal(19, catalog.Countries.Count);
         Assert.Equal(152, catalog.InformationEntries.Count);
         Assert.Equal(456, catalog.InformationEntryTranslations.Count);
-        Assert.Equal(453, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.Equal(3, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
+        Assert.Equal(456, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
         Assert.Equal(0, catalog.InformationEntryTranslations.Count(item => item.VerificationStatus == VerificationStatus.Outdated));
 
         var entries = catalog.InformationEntries.Where(item => item.CountryId == SpainId).ToArray();
@@ -152,7 +152,7 @@ public sealed class SpainContentIntegrationTests
             .Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => entryIds.Contains(item.InformationEntryId)).ToArray();
 
-        Assert.Equal(50, sources.Length);
+        Assert.Equal(52, sources.Length);
         Assert.Equal(sources.Length, sources.Select(item => item.Id).Distinct().Count());
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         Assert.All(sources, source =>

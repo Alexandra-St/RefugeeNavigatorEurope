@@ -46,7 +46,7 @@ public sealed class GermanyContentIntegrationTests
         ["c4895b5a-eacd-53d7-a86f-f504dd615c76"] = 9,
         ["895b79b4-ce0d-5bee-9919-42ce3d76ecdb"] = 12,
         ["fd041e53-7794-5c1f-9ae4-131930fe69ee"] = 9,
-        ["f5e0f499-0f60-5465-85f8-de6345029b59"] = 10,
+        ["f5e0f499-0f60-5465-85f8-de6345029b59"] = 11,
         ["31f5802b-26a0-5cd0-bb24-0a9a4afa706a"] = 15
     };
 
@@ -66,7 +66,7 @@ public sealed class GermanyContentIntegrationTests
         Assert.Equal(24, translations.Select(item => (item.InformationEntryId, item.LanguageCode)).Distinct().Count());
         Assert.Equal(24, translations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
         Assert.Equal(0, translations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
-        Assert.Equal(86, sources.Length);
+        Assert.Equal(87, sources.Length);
         Assert.DoesNotContain(sources, source => source.Url.ToString() == "https://www.germany4ukraine.de/EN/arbeit-und-soziales/ukrainer-arbeiten-in-deutschland/seite_node.html");
         Assert.Equal(GermanyCategoryIds.Order().ToArray(), entries.Select(entry => entry.CategoryId).Distinct().Order().ToArray());
         Assert.All(entries, entry => Assert.Equal(ExpectedCategoryIds[entry.Id.ToString()], entry.CategoryId));
@@ -88,13 +88,16 @@ public sealed class GermanyContentIntegrationTests
             Assert.Contains(source.InformationEntryId, entryIds);
             Assert.Equal("https", source.Url.Scheme);
             Assert.False(string.IsNullOrWhiteSpace(source.Title));
-            Assert.InRange(source.LastCheckedAt,
-                new DateTimeOffset(2026, 10, 15, 23, 22, 10, TimeSpan.Zero),
-                new DateTimeOffset(2026, 10, 16, 0, 21, 41, TimeSpan.Zero));
+            if (source.Url.AbsoluteUri == "https://www.kmk.org/fileadmin/veroeffentlichungen_beschluesse/2022/2022_06_23-Beschulung-Kinder-Ukraine-SJ-22-23_01.pdf")
+                Assert.Equal(new DateTime(2026, 11, 15), source.LastCheckedAt.UtcDateTime.Date);
+            else
+                Assert.InRange(source.LastCheckedAt,
+                    new DateTimeOffset(2026, 10, 15, 23, 22, 10, TimeSpan.Zero),
+                    new DateTimeOffset(2026, 10, 16, 0, 21, 41, TimeSpan.Zero));
         });
 
         Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == DenmarkId));
-        Assert.Equal(101, catalog.OfficialSources.Count(source =>
+        Assert.Equal(102, catalog.OfficialSources.Count(source =>
             catalog.InformationEntries.Any(entry => entry.Id == source.InformationEntryId && entry.CountryId == DenmarkId)));
         Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == PolandId));
     }

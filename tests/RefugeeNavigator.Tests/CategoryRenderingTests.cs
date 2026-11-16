@@ -333,7 +333,7 @@ public sealed class CategoryRenderingTests
     }
 
     [Fact]
-    public async Task NetherlandsProductionCategoryKeepsTp01HiddenWhenTp02IsSeparatelyVerified()
+    public async Task NetherlandsProductionCategoryShowsVerifiedTp01AndHidesItWhenNeedsReview()
     {
         var catalog = await ProductionCatalog.Value;
         var tp01Id = Guid.Parse("244b1055-4d8c-55b2-820e-60ff018c3b1f");
@@ -344,16 +344,16 @@ public sealed class CategoryRenderingTests
         var heldCatalogHtml = WebUtility.HtmlDecode(await RenderAsync(catalog, "en", "netherlands", "temporary-protection", environmentName: "Production"));
         var partiallyVerifiedCatalog = WithTranslationStatuses(catalog, new Dictionary<(Guid, string), VerificationStatus>
         {
-            [(tp02Id, "en")] = VerificationStatus.Verified
+            [(tp01Id, "en")] = VerificationStatus.NeedsReview
         });
         var partiallyVerifiedHtml = WebUtility.HtmlDecode(await RenderAsync(partiallyVerifiedCatalog, "en", "netherlands", "temporary-protection", environmentName: "Production"));
 
-        Assert.DoesNotContain($"entry-{tp01Id:N}", heldCatalogHtml);
+        Assert.Contains(tp01.Title, heldCatalogHtml);
+        Assert.Contains($"id=\"entry-{tp01Id:N}\"", heldCatalogHtml);
         Assert.Contains(tp02.Title, heldCatalogHtml);
         Assert.Contains($"id=\"entry-{tp02Id:N}\"", heldCatalogHtml);
-        Assert.Contains(tp02.Title, partiallyVerifiedHtml);
-        Assert.Contains($"id=\"entry-{tp02Id:N}\"", partiallyVerifiedHtml);
         Assert.DoesNotContain(tp01.Title, partiallyVerifiedHtml);
+        Assert.Contains($"id=\"entry-{tp02Id:N}\"", partiallyVerifiedHtml);
         Assert.DoesNotContain($"id=\"entry-{tp01Id:N}\"", partiallyVerifiedHtml);
         Assert.DoesNotContain($"sources-heading-{tp01Id:N}", partiallyVerifiedHtml);
     }

@@ -23,7 +23,13 @@ IND guidance describes separate routes for Ukrainian nationals, certain non-Ukra
 
 For a clear case, the municipality normally handles registration in the Personal Records Database (BRP). If municipal staff have doubts about identity, nationality or eligibility, they may refer the case to the IND for triage before BRP registration. The referral is made by the municipality or its reception staff; the applicant should not treat it as a direct IND application step.
 
-For a referred case, the 2026 municipal handbook describes triage normally taking place in person in Utrecht. It says a digital interview may be used exceptionally and aims to arrange triage within a week; this is an aim, not a guaranteed appointment or decision. A complete review or appeal route after negative advice was not verified, so this guide cannot give appeal instructions.
+The municipal handbook describes referred triage as normally taking place in person in Utrecht, with a digital interview only in exceptional cases. It says the method began as a six-week pilot with 30 municipalities on 15 June 2026; the sources checked do not confirm whether the pilot continued or became a nationwide procedure after that period. The handbook’s target for arranging an interview is not a guaranteed appointment or decision.
+
+## If triage leads to a negative result
+
+If a municipality uses the triage procedure described in the handbook, a negative result leads IND to issue a written decision (*beschikking*). Under this pre-registration route, the person need not be registered in the BRP and has no right to municipal reception or other municipal Temporary Protection facilities through that route. This preliminary triage is not the same as ending or revoking a permit already held.
+
+IND’s general guidance lists Temporary Protection Directive decisions among those that can be challenged by *bezwaar* (administrative objection). The guidance does not explain specifically how every negative-triage decision is handled, so follow the filing instructions and deadline in your IND decision. That decision also says whether you may remain in the Netherlands while IND considers the objection. If it says you may not, you can ask a court for an urgent interim measure within 24 hours of receiving the decision. If IND rejects the objection, you may appeal to court; the IND decision says whether you may remain during the appeal, and if not, you can request an interim measure within 24 hours. You can ask a legal adviser or the Juridisch Loket for help. The sources checked do not establish a right to work or municipal reception while a challenge is pending. An objection or appeal does not by itself guarantee that you may stay or receive services.
 
 ## Follow IND instructions for your proof document
 
@@ -31,7 +37,7 @@ After registration, follow the IND instructions for the document that applies to
 
 ## Military-obligation screening has limited, evolving guidance
 
-From 5 August 2026, the EU Decision makes compliance with applicable Ukrainian military obligations, with evidence where applicable, a condition for granting temporary protection. The municipal handbook describes screening in referred cases where non-compliance is suspected. Current public IND guidance gives evidence examples for liable persons or registered reservists aged 23–60. IND separately says its requirement does not apply to people who already had temporary protection in the EU before 5 August 2026, and to people joining a family member who already has temporary protection. The Decision’s corrected continuing-holder exception is narrower in wording: it concerns people who held protection in the same Member State before or on 4 August 2026 and continuously retained it there afterwards. The IND wording and the Decision do not use the same scope, and the approved research has not resolved how they align. These source statements do not decide an individual case or provide a complete checklist for every case. Do not assume the examples are exhaustive or that any exception applies identically to every route; check the current detailed IND instructions. The IND bulletin IB 2026/34 is listed publicly, but its text was not accessible in this research and is not used as evidence of its contents.
+From 5 August 2026, Article 2 of the EU Decision makes satisfaction of applicable Ukrainian military obligations, with proof where applicable, a condition for granting temporary protection. IND’s current public guidance says that, for new applications from that date, Ukrainian men aged 23–60 who are liable for military service or registered as reservists must provide accepted proof that they are exempt or have completed service. IND says its requirement does not apply to people who already held temporary protection in an EU country before 5 August 2026, or to people joining a family member who already has temporary protection. The corrected EU Decision states a narrower continuing-holder exception: protection must have been held in the same Member State before or on 4 August 2026 and continuously retained there afterwards. IND and the corrected Decision use different wording for prior protection; the sources checked do not resolve the difference. They do not establish a blanket exclusion of serving or former military personnel, conscripts, or everyone connected with the armed forces. Do not infer exclusion or an exception from service history alone; check IND guidance for your circumstances. The IND bulletin IB 2026/34 is listed publicly, but its text was not accessible and is not used here as evidence.
 
 ## The EU scheme date is not your document date
 
@@ -42,6 +48,7 @@ Council Implementing Decision (EU) 2026/1912 extends the EU temporary-protection
 - Check which applicant route may apply → NL-TP01-01
 - Start with the municipality → NL-TP01-02
 - Referred-case triage and limits → NL-TP01-03
+- Actions after a negative triage result → NL-TP01-03
 - Military-obligation screening has limited, evolving guidance → NL-TP01-04
 - The EU scheme date is not your document date → NL-TP01-05, NL-TP01-06
 
@@ -49,7 +56,8 @@ Council Implementing Decision (EU) 2026/1912 extends the EU temporary-protection
 
 - No individual eligibility decision or promise of temporary protection is made.
 - No exhaustive document list, age band beyond the public IND wording, or exception beyond those separately attributed to the IND and the Decision is inferred.
-- No appeal or review instructions are supplied after negative triage; the route was not verified.
+- The six-week triage pilot is not presented as a current nationwide procedure.
+- No right to remain, work or receive municipal accommodation during an objection or court appeal is promised.
 - The 4 March 2028 EU scheme horizon is not presented as an individual document-validity date.
 - IB 2026/34 metadata is not treated as evidence of its contents; EUR-Lex direct HTML/PDF access was blocked, so the current official indexed full text was used as recorded in the research matrix.
 
@@ -70,7 +78,13 @@ IND описує окремі маршрути для громадян Укра�
 
 У зрозумілих випадках реєстрацію в базі персональних даних (BRP) зазвичай оформлює муніципалітет. Якщо його працівники мають сумніви щодо особи, громадянства або відповідності критеріям, вони можуть передати справу до IND для попередньої перевірки до реєстрації в BRP. Таке звернення робить муніципалітет або персонал місця прийому; заявнику не слід сприймати його як окрему пряму заяву до IND.
 
-Для переданих справ муніципальний посібник 2026 року описує перевірку, яка зазвичай відбувається особисто в Утрехті. У виняткових випадках може бути цифрова співбесіда; посібник вказує цільовий строк організації до тижня, а не гарантовану дату прийому чи рішення. Повний порядок перегляду або оскарження негативної рекомендації не підтверджено, тому цей матеріал не містить інструкцій щодо оскарження.
+Для переданих справ муніципальний посібник описує перевірку, яка зазвичай відбувається особисто в Утрехті; цифрову співбесіду передбачено лише у виняткових випадках. У ньому зазначено, що процедура почалася як шеститижневий пілот у 30 муніципалітетах 15 червня 2026 року. Перевірені джерела не підтверджують, чи продовжився пілот або чи став процес загальнонаціональним після цього періоду. Цільовий строк організації співбесіди не є гарантованою датою прийому чи рішення.
+
+## Якщо triage має негативний результат
+
+Якщо муніципалітет використовує описану в посібнику процедуру triage і результат негативний, IND видає письмове рішення (*beschikking*). За цим маршрутом до реєстрації людина не повинна реєструватися в BRP і не має права на муніципальне житло чи інші муніципальні послуги тимчасового захисту в межах цього маршруту. Така попередня перевірка не є припиненням або відкликанням уже наявного дозволу.
+
+Загальні інструкції IND відносять рішення щодо Директиви про тимчасовий захист до тих, які можна оскаржити через *bezwaar* (адміністративне заперечення до IND). У них окремо не пояснено, як саме оскаржувати кожне негативне рішення після triage, тому дотримуйтеся способу подання та строку, зазначених у рішенні IND. У рішенні також зазначено, чи можете ви залишатися в Нідерландах, поки IND розглядає заперечення. Якщо ні, можна протягом 24 годин після отримання рішення попросити суд про терміновий тимчасовий захід. Якщо IND відхилить заперечення, рішення можна оскаржити в суді; у рішенні IND зазначено, чи можете ви залишатися під час судового розгляду, а якщо ні — можна попросити судовий тимчасовий захід протягом 24 годин. По допомогу можна звернутися до юриста або Juridisch Loket. Перевірені джерела не підтверджують право працювати чи отримувати муніципальне житло під час оскарження. Саме подання заперечення чи апеляції не гарантує права залишитися або отримувати послуги.
 
 ## Дотримуйтеся інструкцій IND щодо документа
 
@@ -78,7 +92,7 @@ IND описує окремі маршрути для громадян Укра�
 
 ## Перевірка військового обов’язку має обмежені й змінні правила
 
-З 5 серпня 2026 року Рішення ЄС передбачає виконання застосовних військових обов’язків України, з підтвердженням у відповідних випадках, як умову надання тимчасового захисту. Муніципальний посібник описує перевірку у переданих справах за наявності підозри щодо невиконання обов’язку. Чинні публічні інструкції IND наводять приклади підтверджень для осіб, на яких поширюється обов’язок, або зареєстрованих резервістів віком 23–60 років. IND окремо зазначає, що його вимога не застосовується до людей, які вже мали тимчасовий захист у ЄС до 5 серпня 2026 року, а також до людей, які приєднуються до члена сім’ї, що вже має тимчасовий захист. Виправлений виняток у Рішенні сформульовано вужче: він стосується людей, які мали захист у тій самій державі-члені до або 4 серпня 2026 року та безперервно зберігали його там після цієї дати. Формулювання IND і Рішення мають різну сферу, і затверджене дослідження не встановлює, як саме вони узгоджуються. Ці джерела не визначають результат індивідуальної справи й не дають повного переліку для кожної ситуації. Не вважайте приклади вичерпними або будь-який виняток однаковим для кожного маршруту; перевіряйте актуальні детальні інструкції IND. Бюлетень IND IB 2026/34 доступний у переліку, але його текст не вдалося отримати під час дослідження, тому його зміст не використовується як доказ.
+З 5 серпня 2026 року стаття 2 Рішення ЄС передбачає виконання застосовних військових обов’язків України, з підтвердженням у відповідних випадках, як умову надання тимчасового захисту. За актуальними публічними інструкціями IND, для нових заяв із цієї дати українські чоловіки віком 23–60 років, на яких поширюється обов’язок проходження військової служби, або зареєстровані резервісти мають надати прийнятне підтвердження звільнення від обов’язку чи його виконання. IND зазначає, що його вимога не застосовується до людей, які вже мали тимчасовий захист у країні ЄС до 5 серпня 2026 року, або приєднуються до члена сім’ї, який уже має тимчасовий захист. У виправленому Рішенні ЄС виняток для осіб із попереднім захистом вужчий: захист мав бути в тій самій державі-члені до або 4 серпня 2026 року та безперервно зберігатися там і після цієї дати. Формулювання IND і виправленого Рішення щодо попереднього захисту різняться; перевірені джерела не узгоджують цю відмінність. Вони не встановлюють загального виключення для чинних чи колишніх військовослужбовців, призовників або всіх людей, пов’язаних зі збройними силами. Не робіть висновків про виключення чи виняток лише з історії служби; уточніть свою ситуацію за інструкціями IND. Бюлетень IND IB 2026/34 є у відкритому переліку, але його текст не вдалося отримати, тому тут він не використовується як доказ.
 
 ## Загальний строк схеми ЄС — не строк вашого документа
 
@@ -89,6 +103,7 @@ IND описує окремі маршрути для громадян Укра�
 - Перевірте, який маршрут може стосуватися заявника → NL-TP01-01
 - Почніть із муніципалітету → NL-TP01-02
 - Перевірка переданої справи та її межі → NL-TP01-03
+- Дії після негативного результату triage → NL-TP01-03
 - Перевірка військового обов’язку має обмежені й змінні правила → NL-TP01-04
 - Загальний строк схеми ЄС — не строк вашого документа → NL-TP01-05, NL-TP01-06
 
@@ -96,7 +111,8 @@ IND описує окремі маршрути для громадян Укра�
 
 - Не ухвалюється індивідуальне рішення про відповідність критеріям і не гарантується тимчасовий захист.
 - Не подається вичерпний перелік документів, вікова межа поза публічними формулюваннями IND або винятки понад ті, що окремо приписані IND і Рішенню.
-- Не надаються інструкції щодо перегляду чи оскарження після негативної перевірки: цей маршрут не підтверджено.
+- Пілот triage не подається як чинний загальнонаціональний процес.
+- Не гарантується право залишатися, працювати чи отримувати муніципальне житло під час заперечення або судового оскарження.
 - Загальний строк схеми ЄС до 4 березня 2028 року не подається як дата чинності індивідуального документа.
 - Метадані IB 2026/34 не використовуються як доказ його змісту; прямий доступ до HTML/PDF EUR-Lex був заблокований, тому використано офіційний проіндексований повний текст, як зазначено в матриці.
 
@@ -117,7 +133,13 @@ IND описывает отдельные маршруты для граждан
 
 В ясных случаях регистрацию в базе персональных данных (BRP) обычно оформляет муниципалитет. Если его сотрудники сомневаются в личности, гражданстве или соответствии требованиям, они могут направить дело в IND для предварительной проверки до регистрации в BRP. Такое обращение делает муниципалитет или персонал места приёма; заявителю не следует считать его отдельным прямым заявлением в IND.
 
-Для направленных дел руководство для муниципалитетов 2026 года описывает проверку, которая обычно проходит лично в Утрехте. В исключительных случаях возможно цифровое собеседование; руководство ставит цель организовать проверку в течение недели, но это не гарантированный срок встречи или решения. Полный порядок пересмотра или обжалования отрицательной рекомендации не подтверждён, поэтому здесь нет инструкций по обжалованию.
+Для направленных дел руководство для муниципалитетов описывает проверку, которая обычно проходит лично в Утрехте; цифровое собеседование предусмотрено лишь в исключительных случаях. В нём сказано, что процедура началась как шестинедельный пилот в 30 муниципалитетах 15 июня 2026 года. Проверенные источники не подтверждают, продолжился ли пилот или стал ли процесс общенациональным после этого периода. Целевой срок организации собеседования не является гарантированной датой приёма или решения.
+
+## Если triage даёт отрицательный результат
+
+Если муниципалитет использует описанную в руководстве процедуру triage и результат отрицательный, IND выдаёт письменное решение (*beschikking*). В рамках этого досудебного маршрута регистрации в BRP не будет, и человек не имеет права на муниципальное жильё или другие муниципальные услуги временной защиты по этому маршруту. Такая предварительная проверка не означает прекращения или отзыва уже имеющегося разрешения.
+
+Общие инструкции IND относят решения по Директиве о временной защите к решениям, которые можно оспорить через *bezwaar* (административное возражение в IND). В них отдельно не объясняется порядок для каждого отрицательного решения после triage, поэтому следуйте способу подачи и сроку, указанным в решении IND. В решении также указано, можете ли вы оставаться в Нидерландах, пока IND рассматривает возражение. Если нет, в течение 24 часов после получения решения можно попросить суд о срочной временной мере. Если IND отклонит возражение, решение можно обжаловать в суде; в решении IND указано, можете ли вы оставаться во время судебного разбирательства, а если нет — можно в течение 24 часов попросить суд о временной мере. За помощью можно обратиться к юристу или в Juridisch Loket. Проверенные источники не подтверждают право работать или получать муниципальное жильё во время обжалования. Само возражение или апелляция не гарантируют право остаться или получать услуги.
 
 ## Следуйте инструкциям IND по документу
 
@@ -125,7 +147,7 @@ IND описывает отдельные маршруты для граждан
 
 ## Проверка воинской обязанности имеет ограниченные и меняющиеся правила
 
-С 5 августа 2026 года Решение ЕС предусматривает выполнение применимых воинских обязанностей Украины, с подтверждением в соответствующих случаях, как условие предоставления временной защиты. Руководство для муниципалитетов описывает проверку в направленных делах при подозрении на невыполнение обязанности. В текущих публичных инструкциях IND приведены примеры подтверждений для лиц, на которых распространяется обязанность, или зарегистрированных резервистов в возрасте 23–60 лет. IND отдельно указывает, что его требование не применяется к людям, которые уже имели временную защиту в ЕС до 5 августа 2026 года, а также к людям, которые присоединяются к члену семьи, уже имеющему временную защиту. Исправленное исключение в Решении сформулировано уже: оно касается людей, которые имели защиту в том же государстве-члене до или 4 августа 2026 года и непрерывно сохраняли её там после этой даты. Формулировки IND и Решения имеют разную сферу, и утверждённое исследование не установило, как именно они соотносятся. Эти источники не определяют результат индивидуального дела и не дают полного перечня для каждой ситуации. Не считайте примеры исчерпывающими или какое-либо исключение одинаковым для любого маршрута; проверяйте актуальные подробные инструкции IND. Бюллетень IND IB 2026/34 указан в открытом реестре, но его текст не удалось получить в ходе исследования, поэтому его содержание не используется как доказательство.
+С 5 августа 2026 года статья 2 Решения ЕС предусматривает выполнение применимых воинских обязанностей Украины, с подтверждением в соответствующих случаях, как условие предоставления временной защиты. Согласно актуальным публичным инструкциям IND, по новым заявлениям с этой даты украинские мужчины в возрасте 23–60 лет, на которых распространяется обязанность военной службы, или зарегистрированные резервисты должны представить приемлемое подтверждение освобождения от обязанности или её выполнения. IND указывает, что его требование не применяется к людям, уже имевшим временную защиту в стране ЕС до 5 августа 2026 года, или присоединяющимся к члену семьи, уже имеющему временную защиту. В исправленном Решении ЕС исключение для лиц с предыдущей защитой сформулировано уже: защита должна была быть в том же государстве-члене до или 4 августа 2026 года и непрерывно сохраняться там после этой даты. Формулировки IND и исправленного Решения о предыдущей защите различаются; проверенные источники не устраняют это расхождение. Они не устанавливают общего исключения для действующих или бывших военнослужащих, призывников или всех лиц, связанных с вооружёнными силами. Не делайте вывод об исключении только на основании истории службы; уточните свою ситуацию по инструкциям IND. Бюллетень IND IB 2026/34 есть в открытом реестре, но его текст получить не удалось, поэтому здесь он не используется как доказательство.
 
 ## Общий срок схемы ЕС — не срок вашего документа
 
@@ -136,6 +158,7 @@ IND описывает отдельные маршруты для граждан
 - Проверьте, какой маршрут может относиться к заявителю → NL-TP01-01
 - Начните с муниципалитета → NL-TP01-02
 - Проверка направленного дела и её пределы → NL-TP01-03
+- Действия после отрицательного результата triage → NL-TP01-03
 - Проверка воинской обязанности имеет ограниченные и меняющиеся правила → NL-TP01-04
 - Общий срок схемы ЕС — не срок вашего документа → NL-TP01-05, NL-TP01-06
 
@@ -143,10 +166,15 @@ IND описывает отдельные маршруты для граждан
 
 - Не выносится индивидуальное решение о соответствии требованиям и не гарантируется временная защита.
 - Не приводится исчерпывающий перечень документов, возрастная граница сверх публичных формулировок IND или исключения сверх тех, которые отдельно приписаны IND и Решению.
-- Не даются инструкции по пересмотру или обжалованию после отрицательной проверки: этот порядок не подтверждён.
+- Пилот triage не представляется как действующая общенациональная процедура.
+- Не гарантируется право оставаться, работать или получать муниципальное жильё во время возражения или судебного обжалования.
 - Общий срок схемы ЕС до 4 марта 2028 года не представляется как срок действия индивидуального документа.
 - Метаданные IB 2026/34 не используются как доказательство его содержания; прямой доступ к HTML/PDF EUR-Lex был заблокирован, поэтому использован официальный индексированный полный текст, как указано в матрице.
 
 ## Editorial source set
 
 TP01-S01, TP01-S02, TP01-S03, TP01-S04, TP01-S05, TP01-S06, TP01-S07, TP01-S08, TP01-S09
+
+Additional official sources reviewed for the revised wording (owner-specific production records still required):
+- Corrected consolidated Council Implementing Decision (EU) 2026/1912: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A02026D1912-20260804
+- IND, object to or appeal a decision: https://ind.nl/en/after-your-application/object-to-or-appeal-decision

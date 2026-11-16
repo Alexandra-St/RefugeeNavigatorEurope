@@ -100,17 +100,17 @@
             {
               "CountrySlug": "netherlands",
               "InformationEntryId": "244b1055-4d8c-55b2-820e-60ff018c3b1f",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "e1f80033-9e6d-5474-916f-f8fc1eb493b5",
                 "4febe797-140e-5c30-a069-e555f9fc0056",
-                "9422da1c-8127-5191-ae4c-7e0a783af1a7"
+                "59f03221-ac26-5602-8173-e880102d695b"
               ],
               "Values": {
-                "en": "The Netherlands applies the EU Temporary Protection Directive through the IND. The IND describes routes for Ukrainian nationals, certain non-Ukrainian holders of permanent Ukrainian residence permits and qualifying family members. Conditions and exclusions apply; the scheme does not make every displaced person automatically eligible.",
-                "uk": "У Нідерландах тимчасовий захист ЄС оформлюється через IND. IND описує маршрути для громадян України, певних громадян інших країн із постійним дозволом на проживання в Україні та членів сімей, які відповідають умовам. Діють умови й винятки: сама схема не означає автоматичної відповідності кожної переміщеної особи.",
-                "ru": "В Нидерландах временная защита ЕС оформляется через IND. IND описывает маршруты для граждан Украины, некоторых граждан других стран с постоянным видом на жительство в Украине и соответствующих условиям членов семей. Действуют условия и исключения: сама схема не означает автоматического права для каждого перемещённого человека."
+                "en": "The Netherlands applies the EU Temporary Protection Directive through the IND to specified eligible groups; Ukrainian nationality or displacement alone does not establish eligibility. For new applications from 5 August 2026, IND says Ukrainian men aged 23–60 who are liable for military service or registered as reservists must provide accepted proof of exemption or completed service. IND’s public wording on prior protection in the EU is broader than the corrected EU Decision’s exception for continuous protection in the same Member State; check the individual case with IND.",
+                "uk": "Нідерланди застосовують Директиву ЄС про тимчасовий захист через IND до визначених категорій осіб; самого українського громадянства чи переміщення недостатньо для підтвердження відповідності критеріям. Для нових заяв із 5 серпня 2026 року, за інформацією IND, українські чоловіки віком 23–60 років, на яких поширюється обов’язок військової служби, або зареєстровані резервісти мають надати прийнятне підтвердження звільнення від обов’язку чи його виконання. Публічне формулювання IND щодо попереднього захисту в ЄС ширше за виняток у виправленому Рішенні ЄС, який стосується безперервного захисту в тій самій державі-члені; уточніть свою ситуацію в IND.",
+                "ru": "Нидерланды применяют Директиву ЕС о временной защите через IND к установленным категориям лиц; одного украинского гражданства или факта перемещения недостаточно для подтверждения соответствия критериям. Для новых заявлений с 5 августа 2026 года, согласно IND, украинские мужчины в возрасте 23–60 лет, на которых распространяется обязанность военной службы, или зарегистрированные резервисты должны представить приемлемое подтверждение освобождения от обязанности или её выполнения. Публичная формулировка IND о прежней защите в ЕС шире исключения в исправленном Решении ЕС, которое касается непрерывной защиты в том же государстве-члене; уточните свою ситуацию в IND."
               }
             },
             {
@@ -400,16 +400,17 @@
             {
               "CountrySlug": "netherlands",
               "InformationEntryId": "244b1055-4d8c-55b2-820e-60ff018c3b1f",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "e1f80033-9e6d-5474-916f-f8fc1eb493b5",
-                "be301190-7369-5366-a209-465f437270f6"
+                "be301190-7369-5366-a209-465f437270f6",
+                "185885fd-278b-5489-8a2b-a436b6998b99"
               ],
               "Values": {
-                "en": "In a clear case, the usual first step is municipal registration in the BRP. If identity, nationality or eligibility is uncertain, the municipality may refer the case to IND for triage before registration. Referred triage is normally in person in Utrecht; a digital interview is described for exceptional cases. Neither an appointment nor an outcome is guaranteed. The EU military-obligation condition from 5 August 2026 applies only to people within its defined scope; check current IND guidance for applicable proof and exceptions rather than inferring a rule from nationality or sex.",
-                "uk": "У зрозумілому випадку зазвичай спершу звертаються до муніципалітету для реєстрації в BRP. Якщо є сумніви щодо особи, громадянства чи відповідності умовам, муніципалітет може перед реєстрацією направити справу до IND на первинне оцінювання. Таке оцінювання зазвичай проходить особисто в Утрехті; цифрову співбесіду описано для виняткових випадків. Ні зустріч, ні її результат не гарантовані. Умова ЄС щодо військових обов’язків, чинна з 5 серпня 2026 року, стосується лише людей у визначеній сфері її дії; перевіряйте в актуальних рекомендаціях IND вимоги до доказів і винятки, а не робіть висновок лише з громадянства чи статі.",
-                "ru": "В понятном случае обычный первый шаг — обратиться в муниципалитет для регистрации в BRP. Если есть сомнения в личности, гражданстве или соответствии условиям, муниципалитет может до регистрации направить дело в IND для первичной оценки. Такая оценка обычно проходит лично в Утрехте; цифровое собеседование предусмотрено для исключительных случаев. Ни встреча, ни её результат не гарантированы. Условие ЕС о воинских обязанностях, действующее с 5 августа 2026 года, касается только лиц в пределах установленной сферы его применения; проверяйте в актуальных рекомендациях IND требования к доказательствам и исключения, а не делайте вывод только по гражданству или полу."
+                "en": "A clear case normally starts with municipal registration in the BRP. If staff doubt eligibility, they may refer the person to the IND for pre-registration triage. Where that procedure is used, a negative result leads to a written IND decision and does not provide BRP registration or municipal temporary-protection reception through that route. IND decisions may be challenged, but follow the individual decision for the filing deadline and whether you may remain. The checked sources establish no automatic right to work or reception while a challenge is pending. The handbook describes a six-week pilot; its continuation is unconfirmed.",
+                "uk": "У простому випадку процедура зазвичай починається з муніципальної реєстрації в BRP. Якщо працівники мають сумніви щодо відповідності критеріям, вони можуть направити людину до IND для попередньої перевірки до реєстрації. Якщо застосовано цю процедуру і результат негативний, IND ухвалює письмове рішення; цей маршрут не надає реєстрації в BRP чи муніципального розміщення в межах тимчасового захисту. Рішення IND можна оскаржити, але дотримуйтеся строку подання та вказівок щодо права залишатися, наведених саме у вашому рішенні. Перевірені джерела не підтверджують автоматичного права на роботу чи розміщення під час оскарження. У посібнику йдеться про шеститижневий пілот; його продовження не підтверджене.",
+                "ru": "В обычном случае процедура обычно начинается с муниципальной регистрации в BRP. Если у сотрудников есть сомнения в соответствии критериям, они могут направить человека в IND на предварительную проверку до регистрации. Если применяется эта процедура и результат отрицательный, IND выносит письменное решение; этот маршрут не даёт регистрации в BRP или муниципального размещения в рамках временной защиты. Решения IND можно оспорить, но соблюдайте срок подачи и указания о праве оставаться, приведённые именно в вашем решении. Проверенные источники не подтверждают автоматического права на работу или размещение во время обжалования. В руководстве описан шестинедельный пилот; его продолжение не подтверждено."
               }
             },
             {
@@ -668,12 +669,16 @@
               "CountrySlug": "spain",
               "InformationEntryId": "b278c1d6-1add-4e65-8af1-e16431eaffb3",
               "Status": "Approved",
-              "IsAvailable": false,
-              "OfficialSourceIds": [],
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "95ed393e-e278-4318-9eb7-8d22c6166ed4",
+                "14177822-e5a0-4964-a887-449afb1c497f",
+                "17889d1f-ec25-4a67-a64e-ca80ffdc7191"
+              ],
               "Values": {
-                "en": "Not established in the reviewed sources.",
-                "uk": "Не встановлено за перевіреними джерелами.",
-                "ru": "Не установлено по проверенным источникам."
+                "en": "The EU temporary-protection scheme runs through 4 March 2028. Spain’s Order INT/96/2026 extends covered TIE cards through 4 March 2027. These are different dates; check your card and the instructions for your document group.",
+                "uk": "Схема тимчасового захисту ЄС діє до 4 березня 2028 року. Наказ Іспанії INT/96/2026 продовжує строк дії охоплених ним карт TIE до 4 березня 2027 року. Це різні дати; перевірте свою картку та інструкції для вашої групи документів.",
+                "ru": "Схема временной защиты ЕС действует до 4 марта 2028 года. Приказ Испании INT/96/2026 продлевает срок действия охватываемых им карт TIE до 4 марта 2027 года. Это разные даты; проверьте свою карту и инструкции для вашей группы документов."
               }
             },
             {
@@ -695,7 +700,7 @@
             {
               "CountrySlug": "netherlands",
               "InformationEntryId": "244b1055-4d8c-55b2-820e-60ff018c3b1f",
-              "Status": "Draft",
+              "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "9422da1c-8127-5191-ae4c-7e0a783af1a7",
@@ -703,9 +708,9 @@
                 "5da562ac-2956-51c5-8d0e-c2f553979d93"
               ],
               "Values": {
-                "en": "The EU temporary-protection scheme runs through 4 March 2028; the extension applies from 5 March 2027. The English Government.nl long-term page still states 4 March 2027, while the current EU decision establishes the later scheme date. The scheme date is not the validity date of an individual IND document: check the person’s own proof and extension letter.",
-                "uk": "Схема тимчасового захисту ЄС діє до 4 березня 2028 року; продовження застосовується з 5 березня 2027 року. На англомовній сторінці Government.nl про довгострокову політику досі зазначено 4 березня 2027 року, на відміну від чинного рішення ЄС і актуальних нідерландськомовних урядових матеріалів. Строк дії схеми не є строком дії індивідуального документа IND: перевіряйте власне підтвердження та лист про продовження.",
-                "ru": "Схема временной защиты ЕС действует до 4 марта 2028 года; продление применяется с 5 марта 2027 года. На англоязычной странице Government.nl о долгосрочной политике всё ещё указано 4 марта 2027 года, в отличие от действующего решения ЕС и актуальных нидерландоязычных правительственных материалов. Срок схемы не является сроком действия индивидуального документа IND: проверяйте своё подтверждение и письмо о продлении."
+                "en": "The EU temporary-protection scheme runs through 4 March 2028. Spain’s Order INT/96/2026 extends covered TIE cards through 4 March 2027. These are different dates; check your card and the instructions for your document group.",
+                "uk": "Схема тимчасового захисту ЄС діє до 4 березня 2028 року. Наказ Іспанії INT/96/2026 продовжує строк дії охоплених ним карт TIE до 4 березня 2027 року. Це різні дати; перевірте свою картку та інструкції для вашої групи документів.",
+                "ru": "Схема временной защиты ЕС действует до 4 марта 2028 года. Приказ Испании INT/96/2026 продлевает срок действия охватываемых им карт TIE до 4 марта 2027 года. Это разные даты; проверьте свою карту и инструкции для вашей группы документов."
               }
             },
             {
@@ -2428,12 +2433,15 @@
               "CountrySlug": "denmark",
               "InformationEntryId": "c2356631-3fa2-4553-8fda-50a4419262c0",
               "Status": "Approved",
-              "IsAvailable": false,
-              "OfficialSourceIds": [],
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "bb31ad0e-05cb-4e57-8164-c40d22e1d27f",
+                "684bf2c7-6817-58bc-9009-03181c7d9be4"
+              ],
               "Values": {
-                "uk": "Не встановлено за перевіреними джерелами.",
-                "en": "Not established in the reviewed sources.",
-                "ru": "Не установлено по проверенным источникам."
+                "en": "Workindenmark provides international jobseekers with access to English-language vacancies, job-search information and guidance, and contact with specialists. After a Ukraine Special Act residence permit is granted, the assigned municipality is responsible for integration, including employment efforts. Local measures depend on the person’s circumstances; no job or particular service outcome is guaranteed.",
+                "uk": "Workindenmark надає міжнародним шукачам роботи доступ до вакансій англійською мовою, інформацію та поради щодо пошуку роботи, а також контакт зі спеціалістами. Після надання дозволу на проживання за Спеціальним законом про Україну призначений муніципалітет відповідає за інтеграцію, зокрема заходи у сфері зайнятості. Місцеві заходи залежать від обставин людини; робота чи конкретний результат послуг не гарантуються.",
+                "ru": "Workindenmark предоставляет международным соискателям доступ к вакансиям на английском языке, информацию и рекомендации по поиску работы, а также связь со специалистами. После выдачи разрешения на проживание по Специальному закону об Украине назначенный муниципалитет отвечает за интеграцию, включая меры в сфере занятости. Местные меры зависят от обстоятельств человека; работа или конкретный результат услуг не гарантируются."
               }
             },
             {
@@ -5198,12 +5206,14 @@
               "CountrySlug": "spain",
               "InformationEntryId": "bd08644f-dd27-412c-9bfd-888de1fe304d",
               "Status": "Approved",
-              "IsAvailable": false,
-              "OfficialSourceIds": [],
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "6e178958-1c44-51b2-ba65-2f83e1fd5f4d"
+              ],
               "Values": {
-                "en": "Not established in the reviewed sources.",
-                "uk": "Не встановлено за перевіреними джерелами.",
-                "ru": "Не установлено по проверенным источникам."
+                "en": "Spain’s State Housing Plan 2026–2030 provides rental assistance through calls run by the Autonomous Communities and Ceuta and Melilla. Applicants generally need legal residence (for non-EU nationals), an eligible rental arrangement, habitual and registered residence, and must meet income, rent and other conditions that may vary by region. Temporary-protection status or an application alone does not guarantee payment.",
+                "uk": "Державний житловий план Іспанії на 2026–2030 роки передбачає допомогу з орендою через конкурси, які проводять автономні спільноти, а також Сеута й Мелілья. Заявникам зазвичай потрібні законне проживання (для громадян країн поза ЄС), відповідна орендна угода, фактичне й зареєстроване місце проживання та відповідність вимогам щодо доходу, орендної плати й іншим умовам, які можуть відрізнятися за регіонами. Сам статус тимчасового захисту або подання заяви не гарантує виплати.",
+                "ru": "Государственный жилищный план Испании на 2026–2030 годы предусматривает помощь с арендой через конкурсы, проводимые автономными сообществами, а также Сеутой и Мелильей. Заявителям обычно нужны законное проживание (для граждан стран вне ЕС), подходящий договор аренды, фактическое и зарегистрированное место жительства, а также соответствие требованиям по доходу, арендной плате и другим условиям, которые могут различаться по регионам. Сам статус временной защиты или подача заявления не гарантируют выплату."
               }
             },
             {
@@ -5768,12 +5778,16 @@
               "CountrySlug": "germany",
               "InformationEntryId": "f5e0f499-0f60-5465-85f8-de6345029b59",
               "Status": "Approved",
-              "IsAvailable": false,
-              "OfficialSourceIds": [],
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "a9192f33-66b2-56fc-b24f-ade0c3d2c6f0",
+                "6ab0d347-e98f-5243-84ac-d06e9b3377bd",
+                "1a7ade55-783f-59ae-97a2-d2b620104d9f"
+              ],
               "Values": {
-                "uk": "Не встановлено за перевіреними джерелами.",
-                "en": "Not established in the reviewed sources.",
-                "ru": "Не установлено по проверенным источникам."
+                "en": "School policy and pupil-language support are handled by each of Germany’s 16 Länder; the federal portal directs families to their Land’s school contacts. The KMK’s 2022/23 framework described Land-specific support and German-as-a-second-language for newly arrived pupils. Check current courses and support with the relevant Land; no single nationwide course or model is guaranteed.",
+                "uk": "Освітню політику та мовну підтримку учнів визначає кожна з 16 федеральних земель Німеччини; федеральний портал спрямовує родини до шкільних контактів їхньої землі. У рамковому документі KMK на 2022/23 навчальний рік описувалися підтримка на рівні земель і німецька як друга мова для новоприбулих учнів. Перевірте актуальні курси й підтримку у відповідній землі; єдиний загальнонаціональний курс або модель не гарантуються.",
+                "ru": "Образовательную политику и языковую поддержку учеников определяет каждая из 16 федеральных земель Германии; федеральный портал направляет семьи к школьным контактам их земли. В рамочном документе KMK на 2022/23 учебный год описывались поддержка на уровне земель и немецкий как второй язык для недавно прибывших учеников. Уточните актуальные курсы и поддержку в соответствующей земле; единый общенациональный курс или модель не гарантируются."
               }
             },
             {
@@ -7053,12 +7067,16 @@
               "CountrySlug": "spain",
               "InformationEntryId": "d33628da-cb49-44b5-a7aa-ae6c6ac8f389",
               "Status": "Approved",
-              "IsAvailable": false,
-              "OfficialSourceIds": [],
+              "IsAvailable": true,
+              "OfficialSourceIds": [
+                "f87e7ade-a2cc-42fc-a8f9-764476219a67",
+                "eaa069f9-9bec-407f-86d8-7d7966b082fc",
+                "f2bb0f3b-2674-54ea-8d97-5b0244e958cc"
+              ],
               "Values": {
-                "en": "Not established in the reviewed sources.",
-                "uk": "Не встановлено за перевіреними джерелами.",
-                "ru": "Не установлено по проверенным источникам."
+                "en": "Families with children may apply to the INSS for the Minimum Vital Income (IMV) and its child supplement (CAPI), including a possible CAPI-only award, if they meet the applicable residence, household, income and asset rules. The general residence rule is one year of legal and effective residence in Spain for beneficiaries and household members, subject to statutory exceptions. Temporary protection alone does not guarantee an award. A separate dependent-child family benefit is limited to qualifying disability cases (under 18 with disability of at least 33%, or age 18 and over with disability of at least 65%); new general claims for non-disabled children closed on 1 June 2020.",
+                "uk": "Сім’ї з дітьми можуть подати до INSS заяву на мінімальний життєвий дохід (IMV) і дитячу доплату до нього (CAPI), зокрема окрему виплату CAPI, якщо відповідають застосовним вимогам щодо проживання, складу сім’ї, доходів і майна. Загальне правило вимагає одного року законного та фактичного проживання в Іспанії для заявників і членів сім’ї, з урахуванням передбачених законом винятків. Сам тимчасовий захист не гарантує виплати. Окрема сімейна допомога на дитину на утриманні обмежена випадками відповідної інвалідності (до 18 років — щонайменше 33%, від 18 років — щонайменше 65%); подання нових загальних заяв на дітей без інвалідності припинилося 1 червня 2020 року.",
+                "ru": "Семьи с детьми могут подать в INSS заявление на минимальный жизненный доход (IMV) и детскую надбавку к нему (CAPI), в том числе на отдельную выплату CAPI, если они соответствуют применимым требованиям к проживанию, составу семьи, доходам и имуществу. Общее правило требует одного года законного и фактического проживания в Испании для заявителей и членов семьи с учётом предусмотренных законом исключений. Сам временный статус не гарантирует выплату. Отдельное семейное пособие на ребёнка на иждивении ограничено случаями соответствующей инвалидности (до 18 лет — не менее 33%, с 18 лет — не менее 65%); приём новых обычных заявлений на детей без инвалидности прекратился 1 июня 2020 года."
               }
             },
             {
