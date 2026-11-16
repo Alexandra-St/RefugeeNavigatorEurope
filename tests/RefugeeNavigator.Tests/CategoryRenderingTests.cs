@@ -374,7 +374,7 @@ public sealed class CategoryRenderingTests
         var html = await RenderAsync(catalog, "en");
         var visibleHtml = WebUtility.HtmlDecode(html);
 
-        Assert.Contains("Translation last updated", visibleHtml);
+        Assert.Contains("Information last updated", visibleHtml);
         Assert.Contains("Source last checked", visibleHtml);
         Assert.Contains("datetime=\"2024-02-03T04:05:00", visibleHtml);
         Assert.Contains("datetime=\"2024-04-05T06:07:00", visibleHtml);
