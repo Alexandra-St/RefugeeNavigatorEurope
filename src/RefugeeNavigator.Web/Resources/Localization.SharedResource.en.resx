@@ -181,7 +181,7 @@
     <value>May be outdated</value>
   </data>
   <data name="Category.LastUpdated" xml:space="preserve">
-    <value>Translation last updated</value>
+    <value>Information last updated</value>
   </data>
   <data name="Category.SourceLastChecked" xml:space="preserve">
     <value>Source last checked</value>

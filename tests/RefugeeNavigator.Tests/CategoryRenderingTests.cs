@@ -143,12 +143,12 @@ public sealed class CategoryRenderingTests
     }
 
     [Theory]
-    [InlineData("uk", "Title uk")]
-    [InlineData("en", "Title en")]
-    [InlineData("ru", "Title ru")]
-    public async Task RendersTranslationAndOnlyUsefulDateMetadataForCurrentUiCulture(string language, string title)
+    [InlineData("uk", "Title uk", "Інформацію оновлено")]
+    [InlineData("en", "Title en", "Information last updated")]
+    [InlineData("ru", "Title ru", "Информация обновлена")]
+    public async Task RendersTranslationAndOnlyUsefulDateMetadataForCurrentUiCulture(string language, string title, string updateLabel)
     {
-        var entry = FixtureEntry(Guid.NewGuid());
+        var entry = FixtureEntry(Guid.NewGuid(), status: VerificationStatus.Verified);
         var catalog = await CreateCatalogAsync(new[] { entry });
 
         var html = await RenderAsync(catalog, language);
@@ -157,7 +157,9 @@ public sealed class CategoryRenderingTests
         Assert.Contains(title, visibleHtml);
         Assert.Contains($"Summary {language}", visibleHtml);
         Assert.Contains($"Body {language}", visibleHtml);
-        Assert.Contains(Resources.GetString("Category.LastUpdated", CultureInfo.GetCultureInfo(language))!, visibleHtml);
+        Assert.Equal(updateLabel, Resources.GetString("Category.LastUpdated", CultureInfo.GetCultureInfo(language)));
+        Assert.Contains(updateLabel, visibleHtml);
+        Assert.Matches($"<dt\\b[^>]*>{Regex.Escape(updateLabel)}</dt>\\s*<dd\\b[^>]*><time\\b[^>]*datetime=\"2024-02-03T04:05:00", visibleHtml);
         Assert.Contains("datetime=\"2024-02-03T04:05:00", html);
     }
 
