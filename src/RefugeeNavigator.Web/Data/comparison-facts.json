@@ -215,12 +215,13 @@
                 "e6b30e67-8181-532b-bee0-bae30e65bd62",
                 "ac550c02-2fdb-5e01-91e5-945170662589",
                 "e3a5bbad-8e12-555f-8623-ae16d9b02c76",
-                "3e2865ba-34e0-5ac8-887e-2bb66c904564"
+                "3e2865ba-34e0-5ac8-887e-2bb66c904564",
+                "8a079563-a515-4f54-badb-9cb85a812171"
               ],
               "Values": {
-                "en": "Hungary’s temporary-protection scheme covers Ukrainian nationals resident in Ukraine before 24 February 2022 who were displaced on or after that date; people who, before that date, had been recognized as refugees or stateless in Ukraine or granted equivalent national protection there; and qualifying family members. OIF/UNHCR guidance says eligible men of military age may still qualify under the earlier rules; separately, EU Decision 2026/1912 adds military-obligation conditions for new grants from 5 August 2026. Affected cases require individual assessment by OIF; eligibility is not automatic.",
-                "uk": "Схема тимчасового захисту Угорщини охоплює громадян України, які проживали в Україні до 24 лютого 2022 року та були переміщені 24 лютого 2022 року або пізніше; осіб, яких до цієї дати визнали біженцями чи особами без громадянства в Україні або яким до цієї дати надали еквівалентний національний захист; а також членів їхніх сімей, які відповідають умовам. За роз’ясненнями OIF/UNHCR, чоловіки призовного віку, які відповідають умовам, усе ще можуть мати право за попередніми правилами; окремо Рішення ЄС 2026/1912 запроваджує умови щодо військового обов’язку для нових надань захисту з 5 серпня 2026 року. Такі справи потребують індивідуальної оцінки OIF; право не є автоматичним.",
-                "ru": "Схема временной защиты Венгрии охватывает граждан Украины, проживавших в Украине до 24 февраля 2022 года и перемещённых 24 февраля 2022 года или позднее; лиц, которых до этой даты признали беженцами или лицами без гражданства в Украине либо которым до этой даты предоставили эквивалентную национальную защиту; а также отвечающих условиям членов их семей. Согласно разъяснениям OIF/UNHCR, отвечающие условиям мужчины призывного возраста всё ещё могут иметь право по прежним правилам; отдельно Решение ЕС 2026/1912 вводит условия о воинских обязанностях для новых предоставлений защиты с 5 августа 2026 года. Такие дела требуют индивидуальной оценки OIF; право не предоставляется автоматически."
+                "en": "Hungary’s national rules cover specified displaced Ukrainians, people with qualifying protection in Ukraine, and qualifying family members; Ukrainian residence alone is insufficient. From 5 August 2026, corrected Decision 2026/1912 sets a military-obligation condition for new grants, with proof where applicable; the exception is continuous protection in the same Member State from before or on 4 August 2026. OIF and Decree 145/2026 say Hungary maintains its prior approach. This conflicts with the EU rule; affected applicants should ask OIF about their case.",
+                "uk": "Національні правила Угорщини охоплюють визначених переміщених громадян України, осіб із відповідним захистом в Україні та членів сімей, які відповідають умовам; самого проживання в Україні недостатньо. З 5 серпня 2026 року виправлене Рішення 2026/1912 встановлює умову виконання військових обов’язків для нових рішень із підтвердженням, якщо воно потрібне; виняток — безперервний захист у тій самій державі-члені до або з 4 серпня 2026 року. OIF та Указ 145/2026 кажуть, що Угорщина зберігає попередній підхід. Це суперечить правилу ЄС; заявникам слід уточнити свою справу в OIF.",
+                "ru": "Национальные правила Венгрии охватывают определённые категории перемещённых граждан Украины, лиц с соответствующей защитой в Украине и членов семей, отвечающих условиям; одного проживания в Украине недостаточно. С 5 августа 2026 года исправленное Решение 2026/1912 устанавливает условие выполнения воинских обязанностей для новых решений с подтверждением, если оно требуется; исключение — непрерывная защита в том же государстве-члене до или с 4 августа 2026 года. OIF и Указ 145/2026 заявляют, что Венгрия сохраняет прежний подход. Это противоречит правилу ЕС; заявителям следует уточнить своё дело в OIF."
               }
             },
             {
@@ -511,9 +512,9 @@
                 "ac550c02-2fdb-5e01-91e5-945170662589"
               ],
               "Values": {
-                "en": "Apply in person through OIF. Optional Enter Hungary data entry is only preparation: filing occurs after personal appearance and identity-data checking/recording, with a facial image and fingerprints for applicants aged 14 or older. OIF lists passports and other available identity documents, but no exhaustive document checklist or complete route for applicants with no documents is established.",
-                "uk": "Подайте заяву особисто через OIF. Необов’язкове внесення даних через Enter Hungary є лише підготовкою: заяву подано після особистої явки та перевірки/реєстрації персональних даних; для заявників віком від 14 років також знімають фото обличчя та відбитки пальців. OIF перелічує паспорти та інші наявні документи, що посвідчують особу, але вичерпний перелік документів і повний порядок для заявників без жодних документів не встановлені.",
-                "ru": "Подайте заявление лично через OIF. Необязательное внесение данных через Enter Hungary — только подготовительный этап: заявление считается поданным после личной явки и проверки/регистрации персональных данных; у заявителей в возрасте от 14 лет также делают фотографию лица и снимают отпечатки пальцев. OIF перечисляет паспорта и другие имеющиеся документы, удостоверяющие личность, однако исчерпывающий перечень документов и полный порядок для заявителей без каких-либо документов не установлены."
+                "en": "Apply in person to OIF/NDGAP. Optional Enter Hungary entry is preparation, not filing. Bring the completed form and available identity documents; OIF lists passport alternatives but not a complete no-document procedure. Confirm the competent office and service arrangements before travel.",
+                "uk": "Подайте заяву особисто до OIF/NDGAP. Необов’язкове внесення даних через Enter Hungary є підготовкою, а не поданням заяви. Візьміть заповнену форму та наявні документи; OIF наводить альтернативи паспорту, але не повну процедуру для людей без документів. Перед поїздкою уточніть компетентний підрозділ і порядок прийому.",
+                "ru": "Подайте заявление лично в OIF/NDGAP. Необязательный ввод данных через Enter Hungary — подготовка, а не подача заявления. Возьмите заполненную форму и имеющиеся документы; OIF перечисляет альтернативы паспорту, но не полную процедуру для людей без документов. Перед поездкой уточните компетентное отделение и порядок приёма."
               }
             },
             {
@@ -817,12 +818,13 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "3e2865ba-34e0-5ac8-887e-2bb66c904564",
-                "e3a5bbad-8e12-555f-8623-ae16d9b02c76"
+                "e3a5bbad-8e12-555f-8623-ae16d9b02c76",
+                "00b903f1-1bf2-44ad-b105-63936eaa5d42"
               ],
               "Values": {
-                "en": "The EU temporary-protection scheme is extended through 4 March 2028. Current Hungarian rules and OIF guidance state that a Hungarian beneficiary document remains valid through that date even if it shows an earlier expiry; holders need not replace or endorse it solely because of this extension. This date does not itself establish eligibility for a new grant.",
-                "uk": "Строк дії тимчасового захисту в ЄС продовжено до 4 березня 2028 року. За чинними угорськими правилами та роз’ясненнями OIF документ угорського бенефіціара залишається чинним до цієї дати, навіть якщо в ньому зазначено раніший строк; лише через це продовження його не потрібно замінювати чи переоформлювати. Ця дата сама по собі не підтверджує право на нове надання захисту.",
-                "ru": "Срок действия временной защиты в ЕС продлён до 4 марта 2028 года. Согласно действующим правилам Венгрии и разъяснениям OIF, венгерский документ бенефициара остаётся действительным до этой даты, даже если в нём указан более ранний срок; только из-за этого продления его не нужно заменять или переоформлять. Эта дата сама по себе не подтверждает право на новое предоставление защиты."
+                "en": "EU temporary protection and Hungary’s current legal extension for recognized beneficiaries run through 4 March 2028. OIF says existing documents remain valid by law through that date despite an earlier printed expiry; no replacement is needed solely because of the extension.",
+                "uk": "Період тимчасового захисту ЄС і чинне угорське продовження для визнаних бенефіціарів діють до 4 березня 2028 року. За даними OIF, документи чинні за законом до цієї дати, навіть якщо на картці зазначено раніший строк; лише через продовження замінювати документ не потрібно.",
+                "ru": "Период временной защиты ЕС и действующее венгерское продление для признанных бенефициаров действуют до 4 марта 2028 года. По данным OIF, документы действуют по закону до этой даты, даже если на карте указан более ранний срок; заменять документ только из-за продления не нужно."
               }
             },
             {
@@ -1438,12 +1440,18 @@
                 "5891ba29-363f-5fdc-86b6-130584026f3f",
                 "b2bcbafc-9a8b-5255-8e6f-d9c131f8a854",
                 "ad6bb10c-c503-5f29-977a-95bdf059e4f7",
-                "1893750c-8ed3-578d-af9d-1f3b55a0223d"
+                "1893750c-8ed3-578d-af9d-1f3b55a0223d",
+                "48554f60-77d5-5d5e-86c1-992db2bf312a",
+                "dd7ff4c1-dbbb-5285-86fe-91eff50e8810",
+                "d244fc9f-a449-5d66-8fe1-b818ed2b4a5b",
+                "516458e9-91fa-5f95-a179-01bd4a205473",
+                "8f317b2b-3b86-566f-95c8-00c89c27f6e6",
+                "30a9abc4-f823-5b3d-83fd-dc2a2c866cd6"
               ],
               "Values": {
-                "en": "Residence conditions depend on the specific permit, including nationality, employment or qualification, and family criteria. Active temporary-protection beneficiaries are excluded from some routes, including the EU Blue Card and study residence permit; residence-time rules also differ between the EU and National Residence Cards.",
-                "uk": "Умови проживання залежать від конкретного дозволу, зокрема від громадянства, роботи чи кваліфікації та сімейних критеріїв. Бенефіціарам із чинним тимчасовим захистом недоступні деякі маршрути, зокрема Блакитна карта ЄС і дозвіл на проживання для навчання; правила зарахування строку проживання також різняться для картки резидента ЄС і Національної карти резидента.",
-                "ru": "Условия проживания зависят от конкретного разрешения, включая гражданство, работу или квалификацию и семейные критерии. Бенефициарам с действующей временной защитой недоступны некоторые маршруты, включая Голубую карту ЕС и вид на жительство для учёбы; правила зачёта срока проживания также различаются для карты резидента ЕС и Национальной карты резидента."
+                "en": "Ukraine is on the National Card nationality list, subject to qualifying work or business conditions. Ukrainian nationals are excluded from the current employment-purpose list, and new guest-worker applications are suspended. Other work, study, family and long-term routes have separate rules. Eligibility alone does not establish the right to apply during active TP.",
+                "uk": "Україна є в переліку громадянств National Card за умови відповідної роботи чи бізнесу. Громадян України немає в чинному переліку для дозволу з метою працевлаштування, а нові заяви на дозвіл запрошеного працівника призупинені. Для інших робочих, навчальних, сімейних і довгострокових маршрутів діють окремі правила. Відповідність умовам сама по собі не підтверджує право подати заяву під час активного TP.",
+                "ru": "Украина включена в перечень гражданств National Card при условии подходящей работы или бизнеса. Граждан Украины нет в действующем перечне для разрешения с целью трудоустройства, а новые заявления для приглашённых работников приостановлены. Для других рабочих, учебных, семейных маршрутов и долгосрочного проживания действуют отдельные правила. Соответствие условиям само по себе не подтверждает право подать заявление при активной временной защите."
               }
             },
             {
@@ -1743,12 +1751,13 @@
               "OfficialSourceIds": [
                 "76ed8a96-5871-51b9-904c-860602adf0e9",
                 "6d959a58-99a9-56ab-af89-6796db4a1767",
-                "94b90de6-7250-5e47-89d7-22eb085d0ee2"
+                "94b90de6-7250-5e47-89d7-22eb085d0ee2",
+                "c9223718-edaf-5674-9834-dbdb33ad59c1"
               ],
               "Values": {
-                "en": "Filing an application for another Hungarian residence permit does not itself terminate an existing temporary-protection title. Under Act LXXX of 2007, §1(3), that title ends when the new permit is granted; filing channels and conditions remain specific to each permit, and no general post-expiry bridge is established.",
-                "uk": "Подання заяви на інший угорський дозвіл на проживання саме по собі не припиняє чинну підставу перебування за тимчасовим захистом. Відповідно до §1(3) Закону LXXX 2007 року, ця підстава припиняється одночасно з наданням нового дозволу; канали й умови подання залежать від конкретного дозволу, а загального перехідного механізму після завершення строку захисту не встановлено.",
-                "ru": "Подача заявления на другой венгерский вид на жительство сама по себе не прекращает действующее основание пребывания по временной защите. Согласно §1(3) Закона LXXX 2007 года, это основание прекращается при выдаче нового разрешения; каналы и условия подачи зависят от конкретного разрешения, а общий переходный механизм после окончания срока защиты не установлен."
+                "en": "Permit eligibility, domestic filing, pending stay/work rights and the effect on TP are separate. No universal rule allows every active beneficiary to file an ordinary permit in Hungary or guarantees a stay/work bridge after TP expiry. Under §1(3), an existing Asylum-Act title is withdrawn when a new permit is granted, not merely on filing. Confirm the exact route and consequences with OIF.",
+                "uk": "Відповідність умовам дозволу, подання в Угорщині, права перебування й роботи під час розгляду та вплив на TP — окремі питання. Немає загального правила, яке дозволяло б кожному активному бенефіціару подати заяву на звичайний дозвіл в Угорщині або гарантувало перебування чи роботу після завершення TP. За §1(3) статус за Законом про притулок відкликають після надання нового дозволу, а не лише через подання заяви. Уточніть конкретний маршрут і наслідки в OIF.",
+                "ru": "Соответствие условиям разрешения, подача заявления в Венгрии, право пребывать и работать во время рассмотрения и влияние на TP — отдельные вопросы. Нет общего правила, позволяющего каждому действующему бенефициару подать заявление на обычный вид на жительство в Венгрии или гарантирующего пребывание либо работу после окончания TP. По §1(3) статус по Закону об убежище прекращается при выдаче нового разрешения, а не только из-за подачи заявления. Уточните конкретный маршрут и последствия в OIF."
               }
             },
             {
@@ -2652,9 +2661,9 @@
                 "ee3cc613-a716-5ee7-8ae7-cb5994fc564e"
               ],
               "Values": {
-                "en": "A recognized `menedékes` aged 16 or older may register with the competent district employment office as a `szolgáltatást kérő`, based on the person’s accommodation or designated residence. This is distinct from ordinary jobseeker registration and does not itself establish unemployment-benefit eligibility or work authorization; the full TP-specific registration process is not established.",
-                "uk": "Визнаний бенефіціар `menedékes` віком від 16 років може зареєструватися у компетентному районному відділі зайнятості як `szolgáltatást kérő` відповідно до місця проживання чи визначеного місця перебування. Це не є звичайною реєстрацією шукача роботи й саме по собі не підтверджує право на допомогу з безробіття або право працювати; повний порядок TP-реєстрації не встановлений.",
-                "ru": "Признанный бенефициар `menedékes` в возрасте от 16 лет может зарегистрироваться в компетентном районном отделе занятости как `szolgáltatást kérő` по месту проживания или указанному месту пребывания. Это отличается от обычной регистрации соискателя и само по себе не подтверждает право на пособие по безработице или право работать; полный порядок регистрации в рамках TP не установлен."
+                "en": "A recognized Hungarian temporary-protection beneficiary aged 16 or older may register with the district employment office as a `szolgáltatást kérő` (employment-service requester). This is not the same as ordinary `álláskereső` registration or unemployment allowance. The special route does not expressly cover a pending TP applicant. Anyone may ask for general public employment-service help, but registration, training and funded support depend on the applicable rules and programme.",
+                "uk": "Визнаний бенефіціар тимчасового захисту в Угорщині віком від 16 років може зареєструватися в районному відділі зайнятості як `szolgáltatást kérő` (заявник на послуги служби зайнятості). Це не те саме, що звичайна реєстрація `álláskereső` або допомога з безробіття. Спеціальний маршрут прямо не охоплює заявників із незавершеним розглядом TP. Будь-хто може звернутися по загальну допомогу державної служби зайнятості, але реєстрація, навчання й фінансування залежать від правил і програми.",
+                "ru": "Признанный бенефициар временной защиты в Венгрии в возрасте от 16 лет может зарегистрироваться в районном отделе занятости как `szolgáltatást kérő` (заявитель на услуги службы занятости). Это не то же самое, что обычная регистрация `álláskereső` или пособие по безработице. Специальный маршрут прямо не распространяется на заявителей, чьё дело о TP ещё рассматривается. Любой человек может попросить общую помощь государственной службы занятости, но регистрация, обучение и финансирование зависят от правил и программы."
               }
             },
             {
@@ -3255,9 +3264,9 @@
                 "7135ea05-c72e-5f8c-8d7a-b991dbc37a87"
               ],
               "Values": {
-                "en": "Employers must notify the competent government office of a recognized `menedékes` employee’s start by the first workday and of the end by the following day; insured-person reporting to NAV uses form 08E by the start of insured work. Contract, wage and other ordinary employment duties still apply. For a pending TP applicant, the exact interaction of the immigration-reporting rules is not established and should be confirmed with the competent authority.",
-                "uk": "Роботодавець має повідомити компетентний державний орган про початок роботи працівника — визнаного бенефіціара `menedékes` — не пізніше першого робочого дня, а про її припинення — не пізніше наступного дня; повідомлення NAV про застраховану особу подається за формою 08E до початку застрахованої роботи. Також діють звичайні обов’язки щодо договору, оплати та інших умов праці. Точне застосування імміграційних правил повідомлення до заявника TP не встановлено; порядок слід уточнити в компетентного органу.",
-                "ru": "Работодатель должен уведомить компетентный государственный орган о начале работы сотрудника — признанного бенефициара `menedékes` — не позднее первого рабочего дня, а о её прекращении — не позднее следующего дня; уведомление NAV о застрахованном лице подаётся по форме 08E до начала застрахованной работы. Также действуют обычные обязанности по договору, оплате и другим условиям труда. Точное применение иммиграционных правил уведомления к заявителю TP не установлено; порядок следует уточнить в компетентном органе."
+                "en": "Employers must report the employment of a recognized TP beneficiary to the competent government office by the start day and report its end by the following day. A formally filed applicant also has a reporting duty under Act L §20(2), which applies Act XC/2023 subtitle 88 correspondingly; the exact adapted deadline/channel for permit-free applicants is not stated in a dedicated public checklist. NAV insured-employment reporting and ordinary contract, payroll, safety and record duties are separate.",
+                "uk": "Роботодавець має повідомити компетентний державний орган про працевлаштування визнаного бенефіціара TP не пізніше дня початку роботи, а про завершення — не пізніше наступного дня. Для заявника, який формально подав заяву, також діє обов’язок повідомлення за §20(2) Закону L, який відповідно застосовує підрозділ 88 Закону XC/2023; окремої публічної інструкції з адаптованим строком/каналом для осіб, яким не потрібен дозвіл, не знайдено. Повідомлення NAV про застраховану роботу та звичайні договірні, зарплатні, безпекові й облікові обов’язки є окремими.",
+                "ru": "Работодатель должен сообщить компетентному государственному органу о найме признанного бенефициара TP не позднее дня начала работы, а о её прекращении — не позднее следующего дня. Для формально подавшего заявление заявителя также действует обязанность уведомления по §20(2) Закона L, который соответственно применяет подраздел 88 Закона XC/2023; отдельная публичная инструкция с адаптированным сроком/каналом для лиц без требования разрешения не опубликована. Уведомление NAV о застрахованной работе и обычные договорные, зарплатные, охранные и учётные обязанности — отдельные требования."
               }
             },
             {
@@ -3544,12 +3553,13 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "40ccdf60-cf64-59ea-9bfd-85bbfa292a2a",
-                "9f6cfad3-2fcd-5ddf-b760-b041af8a8ec4"
+                "9f6cfad3-2fcd-5ddf-b760-b041af8a8ec4",
+                "2aa27e45-129b-4fdc-af16-93b27506caa7"
               ],
               "Values": {
-                "en": "From 1 January 2026, Hungary’s full-time gross monthly minimum wage is HUF 322,800; the guaranteed wage minimum is HUF 373,200 for jobs requiring at least secondary education or a secondary vocational qualification. Statutory amounts are prorated for part-time work.",
-                "uk": "З 1 січня 2026 року мінімальна місячна брутто-зарплата в Угорщині за повної зайнятості становить 322 800 HUF; гарантований мінімум — 373 200 HUF для посад, що потребують щонайменше середньої освіти або середньої професійної кваліфікації. Законодавчі суми пропорційно зменшуються для неповного робочого часу.",
-                "ru": "С 1 января 2026 года минимальная месячная зарплата брутто в Венгрии при полной занятости составляет 322 800 HUF; гарантированный минимум — 373 200 HUF для должностей, требующих как минимум среднего образования или среднего профессионального образования. Установленные суммы пропорционально уменьшаются при неполном рабочем времени."
+                "en": "On 16 November 2026, the full-time gross base minimum is HUF 322,800 per month (HUF 74,210 weekly, HUF 14,850 daily, HUF 1,856 hourly). The guaranteed minimum for jobs requiring at least secondary education or a secondary vocational qualification is HUF 373,200 monthly (HUF 85,800 weekly, HUF 17,160 daily, HUF 2,145 hourly). Part-time amounts are prorated. These are gross, not net. No 2027 rate has been adopted in the reviewed law; negotiations were ongoing on 11 November.",
+                "uk": "Станом на 16 листопада 2026 року повна зайнятість має мінімальну базову ставку брутто HUF 322 800 на місяць (HUF 74 210 на тиждень, HUF 14 850 на день, HUF 1 856 на годину). Гарантований мінімум для посад, що вимагають щонайменше середньої освіти або професійної кваліфікації середнього рівня, становить HUF 373 200 на місяць (HUF 85 800 на тиждень, HUF 17 160 на день, HUF 2 145 на годину). Для неповного робочого часу суми пропорційні. Це суми брутто, не нетто. Чинним законом ставку на 2027 рік не встановлено; 11 листопада переговори ще тривали.",
+                "ru": "На 16 ноября 2026 года минимальная базовая ставка брутто при полной занятости составляет HUF 322 800 в месяц (HUF 74 210 в неделю, HUF 14 850 в день, HUF 1 856 в час). Гарантированный минимум для должностей, требующих как минимум среднего образования или профессиональной квалификации среднего уровня, составляет HUF 373 200 в месяц (HUF 85 800 в неделю, HUF 17 160 в день, HUF 2 145 в час). При неполном рабочем времени суммы пропорциональны. Это суммы брутто, не нетто. Законодательная ставка на 2027 год в изученных актах не принята; переговоры продолжались 11 ноября."
               }
             },
             {
@@ -3860,9 +3870,9 @@
                 "0f170c46-d260-50a4-acc1-477d875404b9"
               ],
               "Values": {
-                "en": "Hungary provides a defined statutory healthcare package to both formally filed temporary-protection applicants and recognized beneficiaries who are not insured through ordinary social insurance. The listed package includes primary and urgent care and specified maternity, chronic-care, medicine and dental services; it is not a promise that all healthcare or medicines are free.",
-                "uk": "Угорщина надає визначений законом пакет медичної допомоги як особам, які офіційно подали заяву на тимчасовий захист, так і визнаним бенефіціарам, які не охоплені звичайним соціальним страхуванням. До визначеного пакета належать первинна та невідкладна допомога, а також окремі послуги у зв’язку з вагітністю, хронічними захворюваннями, ліками й стоматологічною допомогою; це не означає, що вся медична допомога чи всі ліки безкоштовні.",
-                "ru": "Венгрия предоставляет установленный законом пакет медицинской помощи как официально подавшим заявление на временную защиту, так и признанным бенефициарам, не охваченным обычным социальным страхованием. В установленный пакет входят первичная и неотложная помощь, а также отдельные услуги по беременности, хроническим заболеваниям, лекарствам и стоматологической помощи; это не означает, что вся медицинская помощь или все лекарства бесплатны."
+                "en": "A defined package is available to recognized beneficiaries and formally filed applicants, subject to statutory service limits and ordinary-insurance status.",
+                "uk": "Визначений пакет доступний визнаним бенефіціарам і заявникам з офіційно поданою заявою, з урахуванням законодавчих меж послуг і статусу звичайного страхування.",
+                "ru": "Определённый пакет доступен признанным бенефициарам и заявителям с официально поданным заявлением с учётом законодательных ограничений услуг и обычного страхового статуса."
               }
             },
             {
@@ -4158,9 +4168,9 @@
                 "49fd38fd-30a3-5de4-8f2d-ce28223c71da"
               ],
               "Values": {
-                "en": "OIF tells recognized beneficiaries to present their temporary-protection/status document and official evidence of their Hungarian accommodation; applicants should present their OIF-issued applicant/status and accommodation evidence. A TAJ number or physical TAJ card is not itself the source of TP entitlement, and the current technical identification process for people without a TAJ is not fully established.",
-                "uk": "OIF радить визнаним бенефіціарам пред’являти документ про тимчасовий захист/статус і офіційне підтвердження місця проживання в Угорщині; заявникам слід пред’явити видані OIF документи про заяву/статус і місце проживання. Номер TAJ або фізична картка TAJ самі по собі не є підставою права на допомогу за TP, а чинний технічний порядок ідентифікації людей без TAJ повністю не встановлений.",
-                "ru": "OIF рекомендует признанным бенефициарам предъявлять документ о временной защите/статусе и официальное подтверждение места проживания в Венгрии; заявителям следует предъявлять выданные OIF документы о заявлении/статусе и месте проживания. Номер TAJ или физическая карта TAJ сами по себе не являются основанием права на помощь по TP, а действующий технический порядок идентификации людей без TAJ установлен не полностью."
+                "en": "Bring current TP/applicant status and accommodation evidence; show TAJ if you have it. A TAJ card is not stated as a condition, but the provider workflow without TAJ is not fully established.",
+                "uk": "Візьміть чинний документ TP/заявника та підтвердження адреси; покажіть TAJ, якщо він є. Картка TAJ не встановлена як умова, але процедуру для пацієнта без TAJ визначено не повністю.",
+                "ru": "Возьмите действующий документ TP/заявителя и подтверждение адреса; предъявите TAJ, если он есть. Карта TAJ не установлена как условие, но процедура для пациента без TAJ определена не полностью."
               }
             },
             {
@@ -4455,9 +4465,9 @@
                 "84212082-dff3-5c33-81d8-b98156c1bc12"
               ],
               "Values": {
-                "en": "Call 112 for a life-threatening emergency. For an urgent health problem outside GP hours that is not immediately life-threatening, call 1830, Hungary’s nationwide out-of-hours service.",
-                "uk": "У разі загрози життю телефонуйте 112. Якщо термінова проблема зі здоров’ям виникла поза годинами роботи сімейного лікаря й не становить безпосередньої загрози життю, телефонуйте 1830 — загальнонаціональній угорській службі невідкладної допомоги поза робочим часом.",
-                "ru": "При угрозе жизни звоните 112. При срочной проблеме со здоровьем вне часов работы семейного врача, если она не представляет непосредственной угрозы жизни, звоните 1830 — общенациональной венгерской службе неотложной помощи в нерабочее время."
+                "en": "Call 112 for life-threatening emergencies; call 1830 for urgent, non-life-threatening problems outside GP hours (weekdays 16:00–08:00; weekends and public holidays 24 hours).",
+                "uk": "Телефонуйте 112 за загрози життю; 1830 — щодо термінової проблеми без загрози життю поза годинами сімейного лікаря (будні 16:00–08:00; вихідні/свята цілодобово).",
+                "ru": "Звоните 112 при угрозе жизни; 1830 — при срочной проблеме без угрозы жизни вне часов семейного врача (будни 16:00–08:00; выходные/праздники круглосуточно)."
               }
             },
             {
@@ -4751,17 +4761,13 @@
             {
               "CountrySlug": "hungary",
               "InformationEntryId": "bbdf7f5c-da1d-59ad-9515-5bd8499e2332",
-              "Status": "Approved",
-              "IsAvailable": true,
-              "OfficialSourceIds": [
-                "5614950d-6ab4-5686-a53a-8c632bc3d488",
-                "c0234d97-e7fa-50a6-b038-b988c0ee1907",
-                "c3fbfdbe-37d5-588b-9ed4-5b515d35e97a"
-              ],
+              "Status": "Draft",
+              "IsAvailable": false,
+              "OfficialSourceIds": [],
               "Values": {
-                "en": "In Budapest, BMSZKI’s general night shelters offer an overnight help point for people who meet the facility rules, and staff can refer people onward. This is not a temporary-protection placement route and does not guarantee a first-night bed; eligibility and availability must be checked.",
-                "uk": "У Будапешті загальні нічні притулки BMSZKI є пунктом допомоги на ніч для людей, які відповідають правилам закладу; працівники можуть скерувати їх далі. Це не маршрут поселення для осіб із тимчасовим захистом і не гарантія місця на першу ніч; відповідність умовам і наявність місць потрібно уточнювати.",
-                "ru": "В Будапеште общие ночные приюты BMSZKI служат пунктом помощи на ночь для людей, соответствующих правилам учреждения; сотрудники могут направить их за дальнейшей помощью. Это не маршрут размещения для лиц с временной защитой и не гарантия места на первую ночь; соответствие условиям и наличие мест нужно уточнять."
+                "en": "Not established in the reviewed sources.",
+                "uk": "Не встановлено за перевіреними джерелами.",
+                "ru": "Не установлено по проверенным источникам."
               }
             },
             {
@@ -5056,9 +5062,9 @@
                 "c7daa0bb-96e5-5d55-a419-8a53613f0608"
               ],
               "Values": {
-                "en": "A private residential lease must be in writing. `Óvadék` is contractual security, not advance rent; there is no fixed three-month statutory cap, although a court may reduce security above three months’ rent if it is grossly disproportionate. A lease does not replace separate OIF accommodation-address reporting.",
-                "uk": "Договір приватної оренди житла має бути письмовим. `Óvadék` — це договірне забезпечення, а не передоплата оренди; закон не встановлює жорсткої межі у три місячні орендні плати, хоча суд може зменшити забезпечення понад цей поріг, якщо воно явно непропорційне. Договір оренди не замінює окремого повідомлення OIF про адресу проживання.",
-                "ru": "Договор частной аренды жилья должен быть письменным. `Óvadék` — договорное обеспечение, а не предоплата аренды; закон не устанавливает жёсткий предел в три месячные арендные платы, хотя суд может уменьшить обеспечение сверх этого порога, если оно явно несоразмерно. Договор аренды не заменяет отдельное уведомление OIF об адресе проживания."
+                "en": "Use a written lease and report an accommodation-address change to OIF; a lease does not update the OIF record. Three months' rent is not an absolute deposit cap.",
+                "uk": "Оформіть письмовий договір і повідомте OIF про зміну адреси; договір не оновлює запис OIF. Три місяці оренди — не абсолютна межа застави.",
+                "ru": "Заключите письменный договор и сообщите OIF об изменении адреса; договор не обновляет запись OIF. Три месячные платы — не абсолютный предел залога."
               }
             },
             {
@@ -5360,9 +5366,9 @@
                 "c0234d97-e7fa-50a6-b038-b988c0ee1907"
               ],
               "Values": {
-                "en": "Current schemes can support eligible accommodation providers or employers arranging housing for temporary-protection beneficiaries. The reviewed sources establish no universal national direct payment of rent, deposit or utilities to the beneficiary; municipal housing-cost support varies by local rules and eligibility.",
-                "uk": "Чинні програми можуть підтримувати відповідних надавачів житла або роботодавців, які організовують житло для бенефіціарів тимчасового захисту. Перевірені джерела не встановлюють універсальної загальнонаціональної прямої виплати бенефіціару на оренду, заставу чи комунальні послуги; муніципальна допомога на житло залежить від місцевих правил і відповідності умовам.",
-                "ru": "Действующие программы могут поддерживать отвечающих условиям поставщиков жилья или работодателей, организующих жильё для бенефициаров временной защиты. Изученные источники не устанавливают универсальную общенациональную прямую выплату бенефициару на аренду, залог или коммунальные услуги; муниципальная жилищная помощь зависит от местных правил и соответствия условиям."
+                "en": "Employer and provider funding is paid to the eligible employer/provider, not as a universal cash entitlement; municipal aid depends on local rules.",
+                "uk": "Підтримку отримує відповідний роботодавець/надавач, а не кожна особа як грошову виплату; місцева допомога залежить від локальних правил.",
+                "ru": "Поддержку получает отвечающий условиям работодатель/поставщик, а не каждый человек в виде денежного пособия; муниципальная помощь зависит от местных правил."
               }
             },
             {
@@ -5674,9 +5680,9 @@
                 "d9cdf1bd-7792-535f-9cf2-bcadad67762b"
               ],
               "Values": {
-                "en": "Eligible foreign children may access Hungarian public education from the date a temporary-protection application is filed; recognition need not be complete first. OIF directs families to the school serving their recorded accommodation, and compulsory-age children have catchment-school protections. Present available status/address evidence; missing records, no recorded address and capacity at a preferred non-catchment school require local handling.",
-                "uk": "Діти-іноземці, які відповідають умовам, можуть отримати доступ до державної освіти Угорщини з дати подання заяви на тимчасовий захист; чекати на остаточне визнання не потрібно. OIF скеровує сім’ї до школи за зареєстрованим місцем проживання, а для дітей обов’язкового шкільного віку діють правила школи за місцем проживання. Надайте наявні документи про статус і адресу; питання відсутніх документів, незареєстрованої адреси чи місць у бажаній школі поза районом вирішуються на місцевому рівні.",
-                "ru": "Дети-иностранцы, отвечающие условиям, могут получить доступ к государственному образованию Венгрии с даты подачи заявления на временную защиту; ждать окончательного признания не требуется. OIF направляет семьи в школу по зарегистрированному месту проживания, а для детей обязательного школьного возраста действуют правила школы по месту проживания. Предъявите имеющиеся документы о статусе и адресе; вопросы отсутствующих документов, незарегистрированного адреса или мест в желаемой школе вне района решаются на местном уровне."
+                "en": "A child may use public education from the date a temporary-protection application is formally filed; contact the school serving the accommodation and bring available status and address evidence.",
+                "uk": "Дитина може користуватися державною освітою з дня офіційного подання заяви на TP; зверніться до школи за місцем проживання й візьміть наявні документи про статус та адресу.",
+                "ru": "Ребёнок может пользоваться государственным образованием с даты официальной подачи заявления на TP; обратитесь в школу по месту проживания и возьмите имеющиеся документы о статусе и адресе."
               }
             },
             {
@@ -5970,13 +5976,14 @@
               "OfficialSourceIds": [
                 "1ad2baec-8bff-5786-af4a-0f79a7a2893e",
                 "0338ca9e-0bc5-5a1c-bc3c-099be181b65e",
-                "bcfb5db8-70ad-5f7e-aac6-24ae1605062d",
-                "a7acb298-2bfc-540b-9561-5dce6ff792e6"
+                "bdb8391b-f3df-4650-9566-6b120ab901fa",
+                "7116c189-cad4-4157-83d9-3e1018efea82",
+                "1e6e377c-36f7-45ed-90d1-a0e973b217bb"
               ],
               "Values": {
-                "en": "Eligible pupils can access general public education and pedagogical services under the applicable school rules. The reviewed sources do not establish a universal Ukrainian-language programme, fixed number of support hours or nationwide schedule; ask the receiving school what language and catch-up support it currently offers.",
-                "uk": "Учні, які відповідають умовам, мають доступ до загальної державної освіти та педагогічних послуг за чинними шкільними правилами. Перевірені джерела не встановлюють універсальної програми української мови, фіксованої кількості годин підтримки чи загальнонаціонального розкладу; уточніть у школі, які мовні заняття та допомогу з навчанням вона пропонує зараз.",
-                "ru": "Учащиеся, отвечающие условиям, имеют доступ к общему государственному образованию и педагогическим услугам по действующим школьным правилам. Изученные источники не устанавливают универсальную программу украинского языка, фиксированное число часов поддержки или общенациональное расписание; уточните в принимающей школе, какие языковые занятия и помощь в освоении программы она предлагает сейчас."
+                "en": "Schools may provide support. Eligible maintainers can receive HUF 130,000 per pupil/month when they deliver five additional individual-preparation hours weekly; this is conditional provider funding, not a guaranteed family entitlement.",
+                "uk": "Школи можуть надавати підтримку. Відповідні надавачі можуть отримати 130 000 форинтів на учня/місяць, якщо забезпечують п’ять додаткових годин індивідуальної підготовки щотижня; це умовне фінансування закладу, а не гарантоване право сім’ї.",
+                "ru": "Школы могут предоставлять поддержку. Подходящие учреждения могут получить 130 000 форинтов на ученика в месяц при проведении пяти дополнительных часов индивидуальной подготовки в неделю; это условное финансирование учреждения, а не гарантированное право семьи."
               }
             },
             {
@@ -6288,9 +6295,9 @@
                 "2c1a4d2e-9db3-53fc-8519-7dc9dcc4a64b"
               ],
               "Values": {
-                "en": "Recognized temporary-protection beneficiaries may apply to Hungarian higher education under the statutory rules, including for state-funded or fee-paying places. Admission and foreign-qualification decisions depend on the institution and programme; the tuition category for pending applicants is not established.",
-                "uk": "Визнані бенефіціари тимчасового захисту можуть подавати заяви на вступ до закладів вищої освіти Угорщини за законодавчими правилами, зокрема на місця з державним фінансуванням або на платне навчання. Рішення про вступ і визнання іноземної кваліфікації залежать від закладу та програми; категорію оплати для заявників, чиї справи ще розглядаються, не встановлено.",
-                "ru": "Признанные бенефициары временной защиты могут подавать заявления на поступление в венгерские вузы по установленным законом правилам, включая места с государственным финансированием или платное обучение. Решения о зачислении и признании иностранной квалификации зависят от вуза и программы; категория оплаты для заявителей, чьи дела ещё рассматриваются, не установлена."
+                "en": "Recognized beneficiaries may apply for state-funded, partially funded or fee-paying higher education under the statutory and programme rules; admission and scholarships are separate decisions. Pending-applicant tuition status is not established.",
+                "uk": "Визнані бенефіціари можуть вступати на державні, частково державні або платні програми за законом і правилами програми; вступ і стипендія — окремі рішення. Статус заявника щодо оплати не встановлено.",
+                "ru": "Признанные бенефициары могут поступать на государственные, частично финансируемые или платные программы по закону и правилам программы; поступление и стипендия — разные решения. Статус заявителя по оплате не установлен."
               }
             },
             {
@@ -6613,12 +6620,13 @@
                 "5763a821-b36f-5049-b47e-0df43cf1d4de",
                 "30cf615c-4141-53b4-b123-e01c225bfb30",
                 "822d8a19-7e19-545b-8068-a814eab2c03b",
-                "1205ed96-21f4-5d7e-8f77-cb5bb35a8c6d"
+                "1205ed96-21f4-5d7e-8f77-cb5bb35a8c6d",
+                "8da7fb17-d293-43af-a546-d24675c9d581"
               ],
               "Values": {
-                "en": "Recognized `menedékes` may receive monthly subsistence support of HUF 22,800 for an adult or HUF 13,700 for a minor under the 2026 statutory references; a pending applicant is not covered by this allowance. Payment has monthly appearance and, for relevant beneficiaries aged 16 or older, employment-service cooperation/suitable-work conditions; this is not a household-size entitlement.",
-                "uk": "Визнані бенефіціари `menedékes` можуть отримувати щомісячну допомогу на проживання за законодавчими показниками 2026 року: 22 800 HUF для дорослого або 13 700 HUF для неповнолітнього; ця допомога не охоплює заявників, чиї справи ще розглядаються. Виплата залежить від щомісячної явки та, для відповідних бенефіціарів віком від 16 років, співпраці зі службою зайнятості й виконання умов щодо прийнятної роботи; це не допомога, розрахована на розмір домогосподарства.",
-                "ru": "Признанные бенефициары `menedékes` могут получать ежемесячную помощь на проживание по установленным на 2026 год суммам: 22 800 HUF для взрослого или 13 700 HUF для несовершеннолетнего; эта выплата не распространяется на заявителей, чьи дела ещё рассматриваются. Выплата зависит от ежемесячной явки и, для соответствующих бенефициаров в возрасте от 16 лет, сотрудничества со службой занятости и выполнения условий о подходящей работе; это не пособие, рассчитываемое исходя из размера домохозяйства."
+                "en": "Recognized beneficiaries may receive HUF 22,800/month per adult or HUF 13,700/month per minor in 2026, subject to appearance, employment-service cooperation, income and pension rules; pending applicants are not covered.",
+                "uk": "Визнані бенефіціари можуть отримувати у 2026 році 22 800 форинтів на дорослого або 13 700 на неповнолітнього на місяць за умов явки, співпраці зі службою зайнятості та правил щодо доходу/пенсії; заявники не охоплені.",
+                "ru": "Признанные бенефициары могут получать в 2026 году 22 800 форинтов на взрослого или 13 700 на несовершеннолетнего в месяц при соблюдении правил явки, сотрудничества со службой занятости, дохода и пенсии; заявители не охвачены."
               }
             },
             {
@@ -6921,12 +6929,13 @@
               "OfficialSourceIds": [
                 "5763a821-b36f-5049-b47e-0df43cf1d4de",
                 "30cf615c-4141-53b4-b123-e01c225bfb30",
-                "822d8a19-7e19-545b-8068-a814eab2c03b"
+                "822d8a19-7e19-545b-8068-a814eab2c03b",
+                "8da7fb17-d293-43af-a546-d24675c9d581"
               ],
               "Values": {
-                "en": "OIF/NDGAP decides and pays the recognized-beneficiary subsistence claim; the district employment office handles separate registration and appearance duties. The reviewed sources do not establish a complete current application channel, universal document list, payment method without a bank account or decision deadline.",
-                "uk": "OIF/NDGAP розглядає заяву визнаного бенефіціара на допомогу на проживання та здійснює виплату; районний відділ зайнятості виконує окремі функції реєстрації та обліку явки. Перевірені джерела не встановлюють повного чинного каналу подання заяви, універсального переліку документів, способу виплати без банківського рахунку чи строку ухвалення рішення.",
-                "ru": "OIF/NDGAP рассматривает заявление признанного бенефициара на помощь на проживание и выплачивает её; районный отдел занятости выполняет отдельные функции регистрации и учёта явки. Изученные источники не устанавливают полный действующий канал подачи заявления, универсальный перечень документов, способ выплаты без банковского счёта или срок принятия решения."
+                "en": "Apply to OIF/NDGAP for the recognized-beneficiary allowance; the district employment office handles separate appearance and employment-service duties. Confirm the current filing channel and documents with OIF.",
+                "uk": "Подайте заяву на допомогу визнаного бенефіціара до OIF/NDGAP; районна служба зайнятості окремо відповідає за явку та реєстрацію. Уточніть канал подання й документи в OIF.",
+                "ru": "Подайте заявление на пособие признанного бенефициара в OIF/NDGAP; районная служба занятости отдельно отвечает за явку и регистрацию. Уточните канал подачи и документы в OIF."
               }
             },
             {
@@ -7242,9 +7251,9 @@
                 "4537851a-67d7-53fd-ae36-d67ae9abdab2"
               ],
               "Values": {
-                "en": "Temporary-protection status alone does not establish entitlement to Hungary’s ordinary family cash benefits. A person may qualify only through another covered legal basis and the conditions of the specific benefit; TP does not create automatic family-benefit entitlement.",
-                "uk": "Сам статус тимчасового захисту не підтверджує право на звичайні угорські сімейні грошові виплати. Право може виникнути лише на іншій передбаченій законом підставі та за умовами конкретної виплати; TP не створює автоматичного права на сімейні виплати.",
-                "ru": "Сам статус временной защиты не подтверждает право на обычные венгерские денежные семейные пособия. Право может возникнуть только на другом предусмотренном законом основании и при соблюдении условий конкретной выплаты; TP не создаёт автоматического права на семейные пособия."
+                "en": "TP status alone does not establish ordinary family-benefit eligibility. Each cash benefit has separate status, residence, household or insurance conditions; ask MÁK/the competent government office to assess your case.",
+                "uk": "Сам статус TP не встановлює права на звичайні сімейні виплати. Для кожної виплати окремо діють умови щодо статусу, проживання, сім’ї чи страхування; зверніться до MÁK/компетентного урядового офісу.",
+                "ru": "Один статус TP не устанавливает право на обычные семейные пособия. Для каждой выплаты отдельно действуют условия по статусу, проживанию, семье или страхованию; обратитесь в MÁK/компетентное управление."
               }
             },
             {

@@ -244,3 +244,8 @@ All sources below are official Hungarian government/OIF, Hungarian legislation, 
 ## 14. Scope limits
 
 No research here on employment, job search, healthcare, housing eligibility, education, social benefits, ordinary post-TP residence routes, citizenship, or detailed travel rights. Border, other-member-state protection, address, and document references are limited to what is needed to explain application and status boundaries.
+
+## Task 59 integration source additions
+
+- Government Decree 145/2026 (https://njt.jog.gov.hu/jogszabaly/2026-145-20-22): historical context only. Relevant provisions ceased to be in force on 7 September 2026; do not use as current operative law.
+- Government Decree 196/2025 §2(4) (https://njt.jog.gov.hu/jogszabaly/2025-196-20-22.2): current consolidated legal support for the beneficiary-document extension.

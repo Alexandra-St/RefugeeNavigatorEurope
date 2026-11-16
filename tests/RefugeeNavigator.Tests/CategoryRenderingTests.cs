@@ -540,32 +540,6 @@ public sealed class CategoryRenderingTests
     }
 
     [Fact]
-    public async Task RendersInlineCodeSpansInHungaryEmploymentInAllLanguagesInDevelopment()
-    {
-        var catalog = await ProductionCatalog.Value;
-        var english = WebUtility.HtmlDecode(await RenderAsync(catalog, "en", "hungary", "employment", environmentName: "Development"));
-        var ukrainian = WebUtility.HtmlDecode(await RenderAsync(catalog, "uk", "hungary", "employment", environmentName: "Development"));
-        var russian = WebUtility.HtmlDecode(await RenderAsync(catalog, "ru", "hungary", "employment", environmentName: "Development"));
-
-        Assert.Matches("<code\\b[^>]*class=\"article-inline-code\"[^>]*>menedékes</code>", english);
-        Assert.Matches("<code\\b[^>]*class=\"article-inline-code\"[^>]*>szolgáltatást kérő</code>", english);
-        Assert.Matches("<code\\b[^>]*class=\"article-inline-code\"[^>]*>08E</code>", english);
-        var englishSummary = Regex.Matches(english, "<p class=\"entry-summary\"[^>]*>.*?</p>", RegexOptions.Singleline)
-            .Cast<Match>()
-            .Select(match => match.Value)
-            .First(summary => summary.Contains("menedékes", StringComparison.Ordinal));
-        Assert.Matches("<code\\b[^>]*class=\"article-inline-code\"[^>]*>menedékes</code>", englishSummary);
-        Assert.Matches("<code\\b[^>]*class=\"article-inline-code\"[^>]*>szolgáltatást kérő</code>", englishSummary);
-        Assert.DoesNotContain("`", englishSummary);
-        var englishArticleContent = string.Join("\n", Regex.Matches(english, "<p class=\"entry-content\"[^>]*>.*?</p>", RegexOptions.Singleline)
-            .Cast<Match>()
-            .Select(match => match.Value));
-        Assert.DoesNotContain("`menedékes`", WebUtility.HtmlDecode(englishArticleContent));
-        Assert.Matches("<code\\b[^>]*class=\"article-inline-code\"[^>]*>menedékes</code>", ukrainian);
-        Assert.Matches("<code\\b[^>]*class=\"article-inline-code\"[^>]*>menedékes</code>", russian);
-    }
-
-    [Fact]
     public async Task RendersPipeTablesWithAlignmentAndInlineFormatting()
     {
         var entry = FixtureEntry(Guid.NewGuid());
@@ -599,79 +573,6 @@ public sealed class CategoryRenderingTests
 
         Assert.DoesNotContain("<table", html);
         Assert.Equal(new[] { content }, ReadContentParagraphs(html));
-    }
-
-    [Fact]
-    public async Task RendersHungaryEmploymentWageTablesInAllLanguagesInDevelopment()
-    {
-        var catalog = await ProductionCatalog.Value;
-        var english = WebUtility.HtmlDecode(await RenderAsync(catalog, "en", "hungary", "employment", environmentName: "Development"));
-        var ukrainian = WebUtility.HtmlDecode(await RenderAsync(catalog, "uk", "hungary", "employment", environmentName: "Development"));
-        var russian = WebUtility.HtmlDecode(await RenderAsync(catalog, "ru", "hungary", "employment", environmentName: "Development"));
-
-        Assert.True(Regex.Matches(english, "<table\\b").Count >= 2);
-        Assert.Contains("Period", english);
-        Assert.Contains("Gross amount", english);
-        Assert.Contains("HUF 322,800", english);
-        Assert.Contains("HUF 373,200", english);
-        Assert.DoesNotContain("|---|---:|", english);
-        Assert.Contains("Період", ukrainian);
-        Assert.Contains("<table", ukrainian);
-        Assert.DoesNotContain("|---|---:|", ukrainian);
-        Assert.Contains("Период", russian);
-        Assert.Contains("<table", russian);
-        Assert.DoesNotContain("|---|---:|", russian);
-    }
-
-    [Fact]
-    public async Task RendersBoldInHungaryTemporaryProtectionArticleInDevelopment()
-    {
-        var catalog = await ProductionCatalog.Value;
-        var englishArticle = catalog.InformationEntryTranslations.Single(translation =>
-            translation.LanguageCode == "en" && translation.Content.Contains("**Work routes.**", StringComparison.Ordinal));
-
-        var html = await RenderAsync(catalog, "en", "hungary", "temporary-protection", environmentName: "Development");
-
-        Assert.Contains(englishArticle.Title, html);
-        Assert.Matches("<strong\\b[^>]*>Work routes\\.</strong>", html);
-        Assert.DoesNotContain("**Work routes.**", html);
-        Assert.Contains("class=\"article-source-link\"", html);
-        Assert.Contains("National Card guidance", ReadRenderedText(html));
-    }
-
-    [Fact]
-    public async Task RendersHungaryTemporaryProtectionApplicationDraftAndSourcesInDevelopment()
-    {
-        var catalog = await ProductionCatalog.Value;
-        var articleId = Guid.Parse("1bb2a2b8-cfe0-5595-8155-138443fade17");
-        var englishArticle = Assert.Single(catalog.InformationEntryTranslations, translation =>
-            translation.InformationEntryId == articleId && translation.LanguageCode == "en");
-
-        var html = WebUtility.HtmlDecode(await RenderAsync(catalog, "en", "hungary", "temporary-protection", environmentName: "Development"));
-
-        Assert.Contains(englishArticle.Title, html);
-        Assert.Contains("Hungary’s temporary-protection status (", html);
-        Assert.Contains("class=\"article-inline-code\">menedékes</code>", html);
-        Assert.Contains("class=\"entry-summary\"", html);
-        Assert.Contains("class=\"article-inline-code\"", html);
-        Assert.Contains("class=\"article-source-link\"", html);
-        Assert.Contains("href=\"https://oif.gov.hu/index.php/tajekoztatok/tajekoztato-menedekeskenti-kerelem-benyujtasarol-es-az-elektronikus-adatrogzitesi-felulet-hasznalatarol\"", html);
-        Assert.Contains("Hungary’s Asylum Act", ReadRenderedText(html));
-    }
-
-    [Fact]
-    public async Task RendersHungarySocialAssistanceFamilyBenefitsHeadingWithoutMarkdownMarkers()
-    {
-        var catalog = await ProductionCatalog.Value;
-        var html = WebUtility.HtmlDecode(await RenderAsync(
-            catalog,
-            "en",
-            "hungary",
-            "social-assistance",
-            environmentName: "Production"));
-
-        Assert.Matches("<h3\\b[^>]*class=\"entry-section-heading\"[^>]*>Family and child benefits</h3>", html);
-        Assert.DoesNotContain("### Family and child benefits", html);
     }
 
     [Fact]

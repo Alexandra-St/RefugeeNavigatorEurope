@@ -241,3 +241,7 @@ This research does not cover jobseeker registration in depth, unemployment allow
 | HU-WORK-S16 | NJT | 100/2021. (II. 27.) Korm. rendelet a foglalkoztatást elősegítő szolgáltatásokról és támogatásokról | https://njt.jog.gov.hu/jogszabaly/2021-100-20-22 | 2021, consolidated | 2026-11-12 | Topic 3 service-seeker category distinction | Current consolidated text |
 
 **Source count:** 16. All URLs are HTTPS and source IDs are contiguous and unique. Claims cite IDs listed above.
+
+## Task 59 integration source addition
+
+- Government notice of 11 November 2026 on 2027 minimum-wage negotiations (https://kormany.hu/en/government/szocialis-es-csaladugyi-miniszterium/news/kozeledtek-az-allaspontok-a-2027-es-minimalber-es-garantalt-berminimum-ugyeben): negotiations were continuing; this is not an adopted 2027 rate.

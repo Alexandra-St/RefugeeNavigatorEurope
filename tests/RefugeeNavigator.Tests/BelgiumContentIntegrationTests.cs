@@ -185,7 +185,7 @@ public sealed class BelgiumContentIntegrationTests
     public async Task BelgiumTranslationsAndOneHundredFortyEightArticleOwnedSourcesMatchDraftsExactly()
     {
         var catalog = await Catalog.Value;
-        Assert.Equal(1479, catalog.OfficialSources.Count);
+        Assert.Equal(1486, catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         var repositoryRoot = FindRepositoryRoot();
         var draftsRoot = Path.Combine(repositoryRoot, "docs", "content-drafts", "belgium-v1");

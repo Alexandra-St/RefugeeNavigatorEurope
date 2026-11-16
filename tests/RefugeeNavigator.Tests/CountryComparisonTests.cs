@@ -58,15 +58,15 @@ public sealed class CountryComparisonTests
         Assert.Equal(24, facts.Topics.SelectMany(topic => topic.Aspects).Select(aspect => aspect.QuestionResourceKey).Distinct(StringComparer.Ordinal).Count());
         Assert.Equal(456, facts.Topics.SelectMany(topic => topic.Aspects).Sum(aspect => aspect.Facts.Count));
         var allFacts = facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).ToArray();
-        Assert.Equal(454, allFacts.Count(fact => fact.Status == ComparisonFactStatus.Approved));
-        Assert.Equal(2, allFacts.Count(fact => fact.Status == ComparisonFactStatus.Draft));
-        Assert.Equal(454, allFacts.Count(fact => fact.IsAvailable));
-        Assert.Equal(2, allFacts.Count(fact => !fact.IsAvailable));
+        Assert.Equal(453, allFacts.Count(fact => fact.Status == ComparisonFactStatus.Approved));
+        Assert.Equal(3, allFacts.Count(fact => fact.Status == ComparisonFactStatus.Draft));
+        Assert.Equal(453, allFacts.Count(fact => fact.IsAvailable));
+        Assert.Equal(3, allFacts.Count(fact => !fact.IsAvailable));
         var exactHolds = facts.Topics.SelectMany(topic => topic.Aspects)
             .SelectMany(aspect => aspect.Facts.Select(fact => $"{fact.CountrySlug}/{aspect.Id}"))
-            .Where(identity => identity is "netherlands/residence-filing" or "sweden/social-child-benefits")
+            .Where(identity => identity is "hungary/housing-initial" or "netherlands/residence-filing" or "sweden/social-child-benefits")
             .Order(StringComparer.Ordinal).ToArray();
-        Assert.Equal(new[] { "netherlands/residence-filing", "sweden/social-child-benefits" }, exactHolds);
+        Assert.Equal(new[] { "hungary/housing-initial", "netherlands/residence-filing", "sweden/social-child-benefits" }, exactHolds);
         var finlandFacts = facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts)
             .Where(fact => fact.CountrySlug == "finland").ToArray();
         Assert.Equal(24, finlandFacts.Length);
@@ -91,17 +91,17 @@ public sealed class CountryComparisonTests
             Assert.True(fact.IsAvailable);
             Assert.Equal(new[] { "en", "ru", "uk" }, fact.Values.Keys.Order(StringComparer.Ordinal).ToArray());
         });
-        Assert.Equal(454, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.IsAvailable));
-        Assert.Equal(2, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => !fact.IsAvailable));
-        Assert.Equal(454, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Approved));
-        Assert.Equal(2, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Draft));
+        Assert.Equal(453, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.IsAvailable));
+        Assert.Equal(3, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => !fact.IsAvailable));
+        Assert.Equal(453, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Approved));
+        Assert.Equal(3, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Count(fact => fact.Status == ComparisonFactStatus.Draft));
         var intentionalHolds = facts.Topics.SelectMany(topic => topic.Aspects)
             .SelectMany(aspect => aspect.Facts.Select(fact => (AspectId: aspect.Id, Fact: fact)))
             .Where(item => item.Fact.Status == ComparisonFactStatus.Draft || !item.Fact.IsAvailable)
             .Select(item => $"{item.Fact.CountrySlug}/{item.AspectId}")
             .Order(StringComparer.Ordinal).ToArray();
-        Assert.Equal(new[] { "netherlands/residence-filing", "sweden/social-child-benefits" }, intentionalHolds);
-        Assert.All(facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Where(fact => fact.CountrySlug is not ("sweden" or "netherlands" or "lithuania")), fact => Assert.Equal(ComparisonFactStatus.Approved, fact.Status));
+        Assert.Equal(new[] { "hungary/housing-initial", "netherlands/residence-filing", "sweden/social-child-benefits" }, intentionalHolds);
+        Assert.All(facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).Where(fact => fact.CountrySlug is not ("sweden" or "netherlands" or "lithuania" or "hungary")), fact => Assert.Equal(ComparisonFactStatus.Approved, fact.Status));
         Assert.All(facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts), fact =>
         {
             if (fact.Status == ComparisonFactStatus.Draft)
@@ -203,6 +203,7 @@ public sealed class CountryComparisonTests
                 .Select(fact => (aspect.Id, fact.CountrySlug, fact))).ToArray();
         Assert.Equal(new[]
         {
+            ("housing-initial", "hungary"),
             ("residence-filing", "netherlands"),
             ("social-child-benefits", "sweden")
         }, unavailableFacts.Select(item => (item.Id, item.CountrySlug)).OrderBy(item => item.Id).ToArray());
@@ -238,6 +239,7 @@ public sealed class CountryComparisonTests
             foreach (var fact in aspect.Facts)
             {
                 var expectedStatus = fact.CountrySlug == "sweden" && !fact.IsAvailable ||
+                    fact.CountrySlug == "hungary" && !fact.IsAvailable ||
                     fact.CountrySlug == "netherlands" && !NetherlandsApprovedAspects.Contains(aspect.Id)
                     ? ComparisonFactStatus.Draft
                     : ComparisonFactStatus.Approved;
@@ -1456,6 +1458,13 @@ public sealed class CountryComparisonTests
             foreach (var aspect in topic.Aspects)
             {
                 var hungary = Assert.Single(aspect.Facts, fact => fact.CountrySlug == "hungary");
+                if (aspect.Id == "housing-initial")
+                {
+                    Assert.Equal(ComparisonFactStatus.Draft, hungary.Status);
+                    Assert.False(hungary.IsAvailable);
+                    Assert.Empty(hungary.OfficialSourceIds);
+                    continue;
+                }
                 Assert.Equal(ComparisonFactStatus.Approved, hungary.Status);
                 Assert.True(hungary.IsAvailable);
                 var normalizedFact = Regex.Replace(hungary.Values[language], @"`([^`]+)`", "$1");

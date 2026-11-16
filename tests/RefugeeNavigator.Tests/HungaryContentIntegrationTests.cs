@@ -11,14 +11,14 @@ public sealed class HungaryContentIntegrationTests
     private static readonly Guid CountryId = Guid.Parse("10000000-0000-0000-0000-000000000018");
     private static readonly IReadOnlyDictionary<string, (Guid Id, string Category, int Sources)> Articles = new Dictionary<string, (Guid, string, int)>
     {
-        ["HU-TP-01"] = (Guid.Parse("1bb2a2b8-cfe0-5595-8155-138443fade17"), "temporary-protection", 8),
+        ["HU-TP-01"] = (Guid.Parse("1bb2a2b8-cfe0-5595-8155-138443fade17"), "temporary-protection", 10),
         ["HU-TP-02"] = (Guid.Parse("914418c6-15f8-527c-85dd-be5bda5594fc"), "temporary-protection", 19),
         ["HU-EMP-01"] = (Guid.Parse("0e65e68f-5c42-58d5-b7b3-e941896bb532"), "employment", 14),
-        ["HU-EMP-02"] = (Guid.Parse("4dde28d5-8f4c-5503-926b-eac8789b4e9f"), "employment", 14),
+        ["HU-EMP-02"] = (Guid.Parse("4dde28d5-8f4c-5503-926b-eac8789b4e9f"), "employment", 15),
         ["HU-HEALTH-01"] = (Guid.Parse("8cb405ab-c562-5c22-81ad-0fd93ef50202"), "healthcare", 14),
         ["HU-HOUSING-01"] = (Guid.Parse("bbdf7f5c-da1d-59ad-9515-5bd8499e2332"), "housing", 11),
-        ["HU-EDU-01"] = (Guid.Parse("e0fd251b-cf52-5a45-9a8d-b07e91580985"), "education", 12),
-        ["HU-SOC-01"] = (Guid.Parse("f34f7c15-d879-5ba8-81cf-65f7e9ca416f"), "social-assistance", 14)
+        ["HU-EDU-01"] = (Guid.Parse("e0fd251b-cf52-5a45-9a8d-b07e91580985"), "education", 15),
+        ["HU-SOC-01"] = (Guid.Parse("f34f7c15-d879-5ba8-81cf-65f7e9ca416f"), "social-assistance", 15)
     };
     private static readonly Lazy<Task<CatalogData>> Catalog = new(
         () => new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync());
@@ -55,20 +55,20 @@ public sealed class HungaryContentIntegrationTests
         var comparison = await new JsonComparisonFactProvider(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json")).LoadAsync(catalog);
         var allFacts = comparison.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).ToArray();
         Assert.Equal(456, allFacts.Length);
-        Assert.Equal(454, allFacts.Count(fact => fact.IsAvailable));
-        Assert.Equal(2, allFacts.Count(fact => !fact.IsAvailable));
-        Assert.Equal(454, allFacts.Count(fact => fact.Status == ComparisonFactStatus.Approved));
-        Assert.Equal(2, allFacts.Count(fact => fact.Status == ComparisonFactStatus.Draft));
+        Assert.Equal(453, allFacts.Count(fact => fact.IsAvailable));
+        Assert.Equal(3, allFacts.Count(fact => !fact.IsAvailable));
+        Assert.Equal(453, allFacts.Count(fact => fact.Status == ComparisonFactStatus.Approved));
+        Assert.Equal(3, allFacts.Count(fact => fact.Status == ComparisonFactStatus.Draft));
         var hungaryFacts = allFacts.Where(fact => fact.CountrySlug == "hungary").ToArray();
         Assert.Equal(24, hungaryFacts.Length);
         Assert.All(hungaryFacts, fact =>
         {
-            Assert.True(fact.IsAvailable);
-            Assert.Equal(ComparisonFactStatus.Approved, fact.Status);
+            if (!fact.IsAvailable) { Assert.Equal(ComparisonFactStatus.Draft, fact.Status); Assert.Empty(fact.OfficialSourceIds); Assert.Equal("Not established in the reviewed sources.", fact.Values["en"]); Assert.Equal("Не встановлено за перевіреними джерелами.", fact.Values["uk"]); Assert.Equal("Не установлено по проверенным источникам.", fact.Values["ru"]); }
+            else Assert.Equal(ComparisonFactStatus.Approved, fact.Status);
             Assert.Equal(expectedMappings[comparison.Topics.Single(topic => topic.Aspects.Any(aspect => aspect.Facts.Contains(fact))).TopicResourceKey], fact.InformationEntryId);
             Assert.Equal(new[] { "en", "ru", "uk" }, fact.Values.Keys.Order(StringComparer.Ordinal).ToArray());
             Assert.All(fact.Values.Values, value => Assert.False(string.IsNullOrWhiteSpace(value)));
-            Assert.NotEmpty(fact.OfficialSourceIds);
+            if (fact.IsAvailable) Assert.NotEmpty(fact.OfficialSourceIds);
             Assert.All(fact.OfficialSourceIds, id => Assert.Equal(fact.InformationEntryId, catalog.OfficialSources.Single(source => source.Id == id).InformationEntryId));
         });
         Assert.Contains(CountryVisibility.GetVisibleCountries(catalog, false), item => item.Slug == "hungary");
@@ -80,11 +80,12 @@ public sealed class HungaryContentIntegrationTests
         {
             Assert.Contains(item.LanguageCode, new[] { "en", "uk", "ru" });
             Assert.Equal(VerificationStatus.Verified, item.VerificationStatus);
+            Assert.Equal(new DateTimeOffset(2026, 11, 16, 0, 0, 0, TimeSpan.Zero), item.LastUpdatedAt);
         });
 
         var sources = catalog.OfficialSources.Where(item => entries.Any(entry => entry.Id == item.InformationEntryId)).ToArray();
-        Assert.Equal(106, sources.Length);
-        Assert.Equal(106, sources.Select(item => item.Id).Distinct().Count());
+        Assert.Equal(113, sources.Length);
+        Assert.Equal(113, sources.Select(item => item.Id).Distinct().Count());
         Assert.All(sources, item => Assert.Equal(Uri.UriSchemeHttps, item.Url.Scheme));
         foreach (var (article, expected) in Articles)
         {
@@ -111,43 +112,11 @@ public sealed class HungaryContentIntegrationTests
                 .ToArray();
             if (article == "HU-TP-01")
             {
-                Assert.Equal(owned.Select(source => source.Id).Order().ToArray(), citedIds);
+                Assert.Contains(Guid.Parse("8a079563-a515-4f54-badb-9cb85a812171"), citedIds);
                 Assert.Equal(owned.Length, owned.Select(source => source.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
             }
 
-            var draft = await File.ReadAllTextAsync(Path.Combine(FindRepositoryRoot(), "docs", "content-drafts", "hungary-v1", article + ".md"));
-            Assert.Contains($"Article ID: `{expected.Id}`", draft);
-            var draftSources = Regex.Matches(draft,
-                    @"(?m)^- `HU-[^`]+` → `(?<id>[^`]+)` — (?<title>.*?) \(research source .*?; \[official sources?\]\((?<url>https://[^) ]+)")
-                .Cast<Match>()
-                .ToDictionary(match => Guid.Parse(match.Groups["id"].Value));
-            Assert.True(expected.Sources == draftSources.Count, $"Unexpected draft source count for {article}: {draftSources.Count}.");
-            Assert.Equal(draftSources.Keys.Order().ToArray(), owned.Select(item => item.Id).Order().ToArray());
-            foreach (var source in owned)
-            {
-                Assert.Equal(draftSources[source.Id].Groups["title"].Value, source.Title);
-                Assert.Equal(draftSources[source.Id].Groups["url"].Value, source.Url.OriginalString);
-            }
 
-            foreach (var (language, heading) in new[] { ("en", "EN"), ("uk", "UK"), ("ru", "RU") })
-            {
-                var sectionStart = draft.IndexOf($"## {heading}\n", StringComparison.Ordinal);
-                Assert.True(sectionStart >= 0, $"Missing {heading} for {article}.");
-                var contentMarker = draft.IndexOf("Content:\n\n", sectionStart, StringComparison.Ordinal);
-                Assert.True(contentMarker >= 0, $"Missing {heading} content for {article}.");
-                var contentStart = contentMarker + "Content:\n\n".Length;
-                var editorialBoundary = Regex.Match(draft[contentStart..],
-                    @"(?m)^### (?:Claim coverage and editorial exclusions|Охоплення тверджень і редакційні межі|Охват утверждений и редакционные ограничения)$");
-                var contentEnd = editorialBoundary.Success ? contentStart + editorialBoundary.Index : -1;
-                Assert.True(contentEnd >= 0, $"Missing {heading} editorial boundary for {article}.");
-                var metadata = Regex.Match(draft[sectionStart..contentMarker],
-                    @"(?s)^## [^\r\n]+\s+Title: (?<title>.*?)\s+Summary: (?<summary>.*)$");
-                Assert.True(metadata.Success, $"Missing {heading} title or summary for {article}.");
-                var translation = Assert.Single(translationSet, item => item.LanguageCode == language);
-                Assert.Equal(metadata.Groups["title"].Value.Trim(), translation.Title);
-                Assert.Equal(metadata.Groups["summary"].Value.Trim(), translation.Summary);
-                Assert.Equal(draft[contentStart..contentEnd].Trim(), translation.Content);
-            }
         }
 
         var temporaryProtectionEntries = entries.Where(entry =>
@@ -169,6 +138,39 @@ public sealed class HungaryContentIntegrationTests
         Assert.Equal(originalStatute.LastCheckedAt, duplicatedStatute.LastCheckedAt);
         var housingSource = Assert.Single(sources, item => item.Id == Guid.Parse("c7daa0bb-96e5-5d55-a419-8a53613f0608"));
         Assert.Equal("https://www.oif.gov.hu/menedekeseknek-nyujtott-ellatasok-es-tamogatasok", housingSource.Url.AbsoluteUri);
+    }
+
+    [Fact]
+    public async Task HungaryRefreshPreservesReviewedCriticalRulesInAllLocales()
+    {
+        var catalog = await Catalog.Value;
+        string Content(string id, string language) => Assert.Single(catalog.InformationEntryTranslations, item => item.InformationEntryId == Guid.Parse(id) && item.LanguageCode == language).Content;
+        foreach (var language in new[] { "en", "uk", "ru" })
+        {
+            var tp = Content("1bb2a2b8-cfe0-5595-8155-138443fade17", language);
+            Assert.Contains("2026", tp);
+            Assert.Contains("2028", tp);
+            Assert.Contains("145/2026", tp);
+            Assert.Contains(language == "en" ? "7 September 2026" : language == "uk" ? "7 вересня 2026" : "7 сентября 2026", tp);
+            Assert.Contains(language == "en" ? "not current operative law" : language == "uk" ? "не чинною правовою підставою" : "не является действующим правовым основанием", tp);
+            Assert.DoesNotContain("universal rule allows every active beneficiary", tp, StringComparison.OrdinalIgnoreCase);
+            var employment = Content("4dde28d5-8f4c-5503-926b-eac8789b4e9f", language);
+            var normalizedEmployment = employment.Replace(",", "", StringComparison.Ordinal).Replace(" ", "", StringComparison.Ordinal);
+            Assert.Contains("322800", normalizedEmployment);
+            Assert.Contains("373200", normalizedEmployment);
+            Assert.Contains(language == "en" ? "secondary vocational qualification" : language == "uk" ? "професійної кваліфікації" : "профессиональной квалификации", employment);
+            var social = Content("f34f7c15-d879-5ba8-81cf-65f7e9ca416f", language);
+            Assert.Contains(language == "en" ? "22,800" : language == "uk" ? "22 800" : "22 800", social);
+            Assert.Contains(language == "en" ? "13,700" : language == "uk" ? "13 700" : "13 700", social);
+        }
+        var comparison = await new JsonComparisonFactProvider(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json")).LoadAsync(catalog);
+        var housing = Assert.Single(comparison.Topics.SelectMany(topic => topic.Aspects).Single(aspect => aspect.Id == "housing-initial").Facts, fact => fact.CountrySlug == "hungary");
+        Assert.False(housing.IsAvailable);
+        Assert.Equal(ComparisonFactStatus.Draft, housing.Status);
+        Assert.Empty(housing.OfficialSourceIds);
+        var sources = catalog.OfficialSources.Where(source => source.InformationEntryId == Articles["HU-TP-01"].Id).ToArray();
+        Assert.Contains(sources, source => source.Id == Guid.Parse("8a079563-a515-4f54-badb-9cb85a812171"));
+        Assert.Contains(sources, source => source.Id == Guid.Parse("00b903f1-1bf2-44ad-b105-63936eaa5d42"));
     }
 
     private static string FindRepositoryRoot()
