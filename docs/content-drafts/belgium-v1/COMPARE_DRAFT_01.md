@@ -16,13 +16,13 @@
 
 **InformationEntryId:** `aef6ec65-f8ed-5054-bafb-c465e790dd57`
 
-**EN:** Belgium applies the EU temporary-protection scheme to defined eligible groups, including specified Ukrainian nationals, some people with protection in Ukraine, certain permanent residents of Ukraine who cannot return safely and durably, and qualifying close family members. Nationality or residence in Ukraine alone is not enough; relevant new applications are also subject to the EU military-obligation condition from 5 August 2026.
+**EN:** Belgium applies EU temporary protection to defined groups, including specified Ukrainian nationals, some people protected in Ukraine, certain permanent residents unable to return safely and durably, and qualifying close family members. For relevant new grants, the corrected EU military-obligation rule applies from 5 August 2026. It does not apply to a person who continuously held protection in the same Member State on or before 4 August 2026. Belgian public guidance does not yet state the corrected rule or a complete national evidence checklist.
 
-**UK:** Бельгія застосовує режим тимчасового захисту ЄС до визначених категорій осіб, зокрема окремих громадян України, деяких людей, які мали захист в Україні, певних постійних мешканців України, які не можуть безпечно й надовго повернутися, та близьких членів сім’ї, що відповідають умовам. Самого громадянства або проживання в Україні недостатньо; для відповідних нових заяв із 5 серпня 2026 року також діє умова ЄС щодо військового обов’язку.
+**UK:** Бельгія застосовує тимчасовий захист ЄС до визначених категорій, зокрема окремих громадян України, деяких осіб із захистом в Україні, певних постійних мешканців України, які не можуть безпечно й надовго повернутися, та членів сім’ї, що відповідають умовам. Для відповідних нових рішень виправлене правило ЄС щодо військового обов’язку діє з 5 серпня 2026 року. Воно не застосовується до людини, яка безперервно мала захист у тій самій державі-члені до 4 серпня 2026 року включно. Публічні інструкції Бельгії ще не описують виправлене правило або повний національний перелік доказів.
 
-**RU:** Бельгия применяет режим временной защиты ЕС к определённым категориям лиц, включая указанные группы граждан Украины, некоторых людей с защитой в Украине, отдельных постоянных жителей Украины, которые не могут безопасно и надолго вернуться, и близких членов семьи, соответствующих условиям. Одного гражданства или проживания в Украине недостаточно; для соответствующих новых заявлений с 5 августа 2026 года также действует условие ЕС о воинской обязанности.
+**RU:** Бельгия применяет временную защиту ЕС к определённым категориям, включая указанные группы граждан Украины, некоторых лиц с защитой в Украине, отдельных постоянных жителей Украины, которые не могут безопасно и надолго вернуться, и членов семьи, отвечающих условиям. Для соответствующих новых решений исправленное правило ЕС о воинской обязанности действует с 5 августа 2026 года. Оно не применяется к человеку, который непрерывно пользовался защитой в том же государстве-члене по состоянию на 4 августа 2026 года. В открытых инструкциях Бельгии пока не описаны исправленное правило или полный национальный перечень документов.
 
-**OfficialSourceIds:** `58179a1a-d1b1-5b23-8948-5fe40b5e7552`, `07f2aed9-f526-519f-b3d8-a77fbd702beb`, `01044ed1-42f4-5d33-bbcd-931f2b1006b7`
+**OfficialSourceIds:** 58179a1a-d1b1-5b23-8948-5fe40b5e7552, 07f2aed9-f526-519f-b3d8-a77fbd702beb, 01044ed1-42f4-5d33-bbcd-931f2b1006b7, fc4518bf-9ef4-5f9d-8699-74c9201f59b3, efd6f672-6edb-5eac-bddc-3d56ed6b4d27
 
 **Qualification:** Eligibility depends on the defined EU categories, family and residence conditions, and relevant evidence. Do not imply that every Ukrainian citizen qualifies automatically.
 
@@ -34,13 +34,13 @@
 
 **InformationEntryId:** `aef6ec65-f8ed-5054-bafb-c465e790dd57`
 
-**EN:** Apply in person at the federal Immigration Office’s Temporary Protection Registration Centre, 68 Rue Belliard, Brussels, bringing identity and eligibility evidence you have, including evidence of residence in Ukraine before 24 February 2022. If the conditions are met, the Office issues a Certificate of Temporary Protection; then present it to your municipality for the Temporary A residence card. Check current intake instructions: the reviewed official pages do not say whether an appointment is required, and capacity may require a return visit.
+**EN:** Apply in person through the federal Immigration Office at Rue Belliard 68, Brussels, on a weekday at 08:30. Bring available identity and eligibility evidence. If protection is granted, the Office issues a federal Attestation of Temporary Protection; then register with the municipality where you live for the Belgian residence card. Current guidance does not say whether an appointment is required or walk-ins are accepted.
 
-**UK:** Подайте заяву особисто у Федеральному реєстраційному центрі тимчасового захисту Імміграційної служби за адресою 68 Rue Belliard, Brussels; візьміть наявні документи, що посвідчують особу й підтверджують відповідність умовам, зокрема проживання в Україні до 24 лютого 2022 року. Якщо умови виконані, служба видає Certificate of Temporary Protection; після цього подайте його до свого муніципалітету для оформлення тимчасової картки проживання A. Перевірте актуальні інструкції прийому: перевірені офіційні сторінки не повідомляють, чи потрібен попередній запис, а через обмежену спроможність можуть попросити прийти повторно.
+**UK:** Подайте заяву особисто до Федеральної імміграційної служби за адресою Rue Belliard 68, Brussels, у будній день о 08:30. Візьміть наявні документи, що посвідчують особу та підтверджують відповідність умовам. У разі надання захисту служба видає федеральне підтвердження тимчасового захисту; потім зареєструйтеся в муніципалітеті за місцем проживання для оформлення бельгійської картки проживання. Актуальні інструкції не уточнюють, чи потрібен запис і чи приймають без нього.
 
-**RU:** Подайте заявление лично в Федеральном регистрационном центре временной защиты Иммиграционной службы по адресу 68 Rue Belliard, Brussels; возьмите имеющиеся документы, удостоверяющие личность и подтверждающие соответствие условиям, в том числе проживание в Украине до 24 февраля 2022 года. Если условия выполнены, служба выдаёт Certificate of Temporary Protection; затем предъявите его в своём муниципалитете для оформления временной карты проживания A. Проверьте актуальные инструкции приёма: изученные официальные страницы не сообщают, нужна ли предварительная запись, а из-за ограниченной пропускной способности могут попросить прийти повторно.
+**RU:** Подайте заявление лично в Федеральную иммиграционную службу по адресу Rue Belliard 68, Brussels, в будний день в 08:30. Возьмите имеющиеся документы, удостоверяющие личность и подтверждающие соответствие условиям. При предоставлении защиты служба выдаёт федеральное подтверждение временной защиты; затем зарегистрируйтесь в муниципалитете по месту проживания для оформления бельгийской карты проживания. В актуальных инструкциях не указано, нужна ли запись и принимают ли без неё.
 
-**OfficialSourceIds:** `efd6f672-6edb-5eac-bddc-3d56ed6b4d27`, `2e8786e8-c502-5853-8ed7-ba5e9c1bc9f3`
+**OfficialSourceIds:** efd6f672-6edb-5eac-bddc-3d56ed6b4d27, 2e8786e8-c502-5853-8ed7-ba5e9c1bc9f3, 921c7f23-b71c-5904-9d3c-83e49bee0935
 
 **Qualification:** Do not present an exhaustive document list, promise same-day processing or imply appointment/walk-in rules that the official pages do not state. The federal Office decides protection; the municipality handles the later residence-card step.
 
@@ -52,13 +52,13 @@
 
 **InformationEntryId:** `aef6ec65-f8ed-5054-bafb-c465e790dd57`
 
-**EN:** The EU temporary-protection scheme has been extended until 4 March 2028. Belgian Immigration Office guidance says A-card renewal requests may be made through the municipality from 4 January 2027 and that a renewed card will be valid until 4 March 2028; the EU scheme date does not itself establish the expiry of an individual card.
+**EN:** EU temporary protection runs through 4 March 2028. Belgian A-card renewal requests may be made through the municipality from 4 January 2027; a renewed card is valid through 4 March 2028. If a replacement cannot be issued before 4 March 2027, the Immigration Office says it will issue a register-attestation. The EU scheme date does not itself change an individual card’s expiry.
 
-**UK:** Режим тимчасового захисту ЄС продовжено до 4 березня 2028 року. За інструкціями бельгійської Імміграційної служби, із 4 січня 2027 року можна звертатися до муніципалітету щодо продовження картки A, а продовжена картка буде чинною до 4 березня 2028 року; дата завершення режиму ЄС сама по собі не визначає строк дії індивідуальної картки.
+**UK:** Тимчасовий захист ЄС діє до 4 березня 2028 року. Із 4 січня 2027 року можна звернутися до муніципалітету щодо продовження картки A; продовжена картка діятиме до 4 березня 2028 року. Якщо нову картку не встигнуть видати до 4 березня 2027 року, Імміграційна служба зазначає, що видасть підтвердження реєстрації. Дата завершення режиму ЄС сама по собі не змінює строк дії індивідуальної картки.
 
-**RU:** Режим временной защиты ЕС продлён до 4 марта 2028 года. По инструкциям бельгийской Иммиграционной службы, с 4 января 2027 года можно обращаться в муниципалитет за продлением карты A, а продлённая карта будет действовать до 4 марта 2028 года; дата окончания режима ЕС сама по себе не определяет срок действия индивидуальной карты.
+**RU:** Временная защита ЕС действует до 4 марта 2028 года. С 4 января 2027 года можно обратиться в муниципалитет за продлением карты A; продлённая карта будет действовать до 4 марта 2028 года. Если новую карту не успеют выдать до 4 марта 2027 года, Иммиграционная служба сообщает, что выдаст подтверждение регистрации. Дата окончания режима ЕС сама по себе не меняет срок действия индивидуальной карты.
 
-**OfficialSourceIds:** `01044ed1-42f4-5d33-bbcd-931f2b1006b7`, `efd6f672-6edb-5eac-bddc-3d56ed6b4d27`
+**OfficialSourceIds:** 01044ed1-42f4-5d33-bbcd-931f2b1006b7, efd6f672-6edb-5eac-bddc-3d56ed6b4d27
 
 **Qualification:** Keep the EU scheme endpoint separate from an individual Belgian card’s printed expiry. The official page retains a conflicting legacy 2025 reference; holders should check their document and confirm renewal steps with their municipality.
 
@@ -72,13 +72,13 @@
 
 **InformationEntryId:** `54c6f95f-589e-5901-beae-990bed994160`
 
-**EN:** Ordinary Belgian residence routes include work or a single permit, study, family reunification and self-employment/professional-card routes, each with separate requirements. Temporary protection does not automatically convert into an ordinary residence permit.
+**EN:** Belgian routes include employment/single permit, study, family reunification, self-employment and the Blue Card, each with separate conditions and authorities. Temporary protection does not convert automatically, and the reviewed sources do not establish a Blue Card transition process for active TP holders.
 
-**UK:** Звичайні маршрути проживання в Бельгії включають роботу або єдиний дозвіл, навчання, возз’єднання сім’ї та самозайнятість/професійну картку; кожен має окремі вимоги. Тимчасовий захист автоматично не перетворюється на звичайний дозвіл на проживання.
+**UK:** Маршрути проживання в Бельгії включають роботу/єдиний дозвіл, навчання, возз’єднання сім’ї, самозайнятість і Блакитну карту; для кожного діють окремі умови та компетентні органи. Тимчасовий захист автоматично не переходить в інший статус, а перевірені джерела не встановлюють процедуру переходу на Блакитну карту для людей із чинним TP.
 
-**RU:** Обычные основания для проживания в Бельгии включают работу или единое разрешение, учёбу, воссоединение семьи и самозанятость/профессиональную карту; у каждого свои требования. Временная защита автоматически не преобразуется в обычный вид на жительство.
+**RU:** Маршруты проживания в Бельгии включают работу/единое разрешение, учёбу, воссоединение семьи, самозанятость и Голубую карту; для каждого действуют отдельные условия и компетентные органы. Временная защита автоматически не переходит в другой статус, а изученные источники не устанавливают процедуру перехода на Голубую карту для людей с действующей TP.
 
-**OfficialSourceIds:** `3815efea-e59a-510a-8ee1-9f75add885e6`, `a53fc39d-261e-5e59-b897-1a5cb8c1fdba`, `c826f285-132d-51a2-9088-3085059438e0`, `4bb0cb04-562b-5f14-a5d0-c4f982d5e2db`
+**OfficialSourceIds:** 3815efea-e59a-510a-8ee1-9f75add885e6, 9e3a433f-f25e-5a8f-8139-22df26c3cb45, c826f285-132d-51a2-9088-3085059438e0, 4bb0cb04-562b-5f14-a5d0-c4f982d5e2db, 71d39cfb-146a-54b3-9be8-9f7a23c1c093
 
 **Qualification:** These are distinct route examples, not automatic conversions or guaranteed entitlements. Work, study, family and self-employment conditions and authorities differ.
 
@@ -90,13 +90,13 @@
 
 **InformationEntryId:** `54c6f95f-589e-5901-beae-990bed994160`
 
-**EN:** Eligibility depends on the ordinary route: work permits, study admission and family reunification each have their own legal and documentary conditions. Time under temporary protection does not count toward EU long-term-resident qualifying residence under the rule described in the reviewed sources; no automatic permanent or long-term residence follows from TP.
+**EN:** Each ordinary route has its own eligibility and document rules. Temporary-protection time is excluded from EU long-term-resident qualifying residence. The reviewed sources do not determine whether it counts toward Belgium’s separate national establishment status; no permanent residence follows automatically.
 
-**UK:** Право залежить від обраного звичайного маршруту: дозволи на роботу, вступ на навчання та возз’єднання сім’ї мають власні юридичні вимоги й вимоги до документів. За правилом, описаним у перевірених джерелах, період тимчасового захисту не зараховується до строку проживання для статусу довгострокового резидента ЄС; TP не надає автоматичного постійного чи довгострокового проживання.
+**UK:** Кожен звичайний маршрут має власні умови та вимоги до документів. Період тимчасового захисту не зараховується до строку проживання для статусу довгострокового резидента ЄС. Перевірені джерела не визначають, чи зараховується він для окремого бельгійського статусу безстрокового проживання; автоматичне постійне проживання не надається.
 
-**RU:** Право зависит от выбранного обычного основания: разрешения на работу, поступление на учёбу и воссоединение семьи имеют собственные юридические требования и требования к документам. Согласно правилу, описанному в изученных источниках, период временной защиты не засчитывается в срок проживания для статуса долгосрочного резидента ЕС; TP не даёт автоматического постоянного или долгосрочного проживания.
+**RU:** У каждого обычного маршрута свои условия и требования к документам. Период временной защиты не засчитывается в срок проживания для статуса долгосрочного резидента ЕС. Изученные источники не определяют, засчитывается ли он для отдельного бельгийского статуса бессрочного проживания; автоматическое постоянное проживание не предоставляется.
 
-**OfficialSourceIds:** `3815efea-e59a-510a-8ee1-9f75add885e6`, `c826f285-132d-51a2-9088-3085059438e0`, `36887fc1-a87d-55f5-9748-d32f0385ba4a`, `518183d0-d7ab-5355-a6d4-c89e6858c43e`
+**OfficialSourceIds:** 3815efea-e59a-510a-8ee1-9f75add885e6, c826f285-132d-51a2-9088-3085059438e0, 36887fc1-a87d-55f5-9748-d32f0385ba4a, 518183d0-d7ab-5355-a6d4-c89e6858c43e
 
 **Qualification:** Do not generalize the EU long-term-resident counting rule to every national Belgian permanent/limited residence status; the reviewed sources do not settle all national residence-time counting.
 
@@ -108,13 +108,13 @@
 
 **InformationEntryId:** `54c6f95f-589e-5901-beae-990bed994160`
 
-**EN:** Belgian federal guidance says a Ukrainian citizen already in Belgium may apply through the municipality of residence for an ordinary permit based on work, study or family reunification, subject to that route’s conditions. It does not establish that every temporary-protection holder can use every in-country route or that a pending application automatically extends residence or work rights.
+**EN:** Federal Ukraine guidance lets Ukrainian citizens already in Belgium apply through their municipality for specified long-stay routes, subject to each route’s conditions. This is not a blanket in-country filing right for every TP holder. A pending ordinary application does not generally extend residence or work rights.
 
-**UK:** Федеральні інструкції Бельгії зазначають, що громадянин України, який уже перебуває в країні, може подати через муніципалітет за місцем проживання заяву на звичайний дозвіл на підставі роботи, навчання чи возз’єднання сім’ї — з дотриманням умов відповідного маршруту. Вони не підтверджують, що кожен власник тимчасового захисту може скористатися кожним маршрутом подання в Бельгії або що заява на розгляді автоматично продовжує право на проживання чи роботу.
+**UK:** Федеральні інструкції для громадян України дозволяють тим, хто вже перебуває в Бельгії, подавати через муніципалітет заяви на визначені довгострокові дозволи за умови виконання вимог відповідного маршруту. Це не є загальним правом кожного власника TP подаватися в Бельгії. Звичайна заява на розгляді загалом не продовжує права на проживання чи роботу.
 
-**RU:** Федеральные инструкции Бельгии указывают, что гражданин Украины, уже находящийся в стране, может подать через муниципалитет по месту проживания заявление на обычный вид на жительство по работе, учёбе или воссоединению семьи — при соблюдении условий соответствующего основания. Они не устанавливают, что каждый обладатель временной защиты может воспользоваться любым маршрутом подачи в Бельгии или что заявление на рассмотрении автоматически продлевает право на проживание или работу.
+**RU:** Федеральные инструкции для граждан Украины позволяют тем, кто уже находится в Бельгии, подавать через муниципалитет заявления на определённые долгосрочные разрешения при соблюдении требований выбранного основания. Это не является общим правом каждого обладателя TP подаваться в Бельгии. Обычное заявление на рассмотрении в общем случае не продлевает право на проживание или работу.
 
-**OfficialSourceIds:** `38f01c1d-3688-5be0-b94b-97b5f0d8bdf3`, `9e3a433f-f25e-5a8f-8139-22df26c3cb45`
+**OfficialSourceIds:** 38f01c1d-3688-5be0-b94b-97b5f0d8bdf3, 3815efea-e59a-510a-8ee1-9f75add885e6, 9e3a433f-f25e-5a8f-8139-22df26c3cb45
 
 **Qualification:** This is route-specific guidance for Ukrainian citizens already in Belgium, not a universal TP-holder filing right. No automatic conversion or general pending residence/work bridge is established; confirm the procedure with the competent authority for the chosen route.
 
@@ -146,13 +146,13 @@
 
 **InformationEntryId:** `f2c1526a-a218-5bf0-ab2a-9167dbec0c26`
 
-**EN:** Belgium’s public employment services are regional: VDAB serves Flanders, Actiris Brussels, Le Forem French-speaking Wallonia, and Arbeitsamt/ADG the German-speaking Community. Residence and the service’s document rules affect where and how a person can register.
+**EN:** Belgium’s public employment services are regional: VDAB serves Flanders, Actiris Brussels-Capital, Le Forem French-speaking Wallonia, and Arbeitsamt (ADG) the German-speaking Community. Temporarily displaced people in Flanders must register with VDAB and bring their residence documents; ADG says Ukraine registration is voluntary. Actiris and Forem apply their own valid-stay/document conditions. Jobseeker registration is separate from permission to work.
 
-**UK:** Державні служби зайнятості Бельгії працюють за регіональним принципом: VDAB обслуговує Фландрію, Actiris — Брюссель, Le Forem — франкомовну Валлонію, Arbeitsamt/ADG — Німецькомовну спільноту. Місце проживання та вимоги служби до документів впливають на те, де і як можна зареєструватися.
+**UK:** Державні служби зайнятості Бельгії працюють за регіональним принципом: VDAB обслуговує Фландрію, Actiris — Брюссель-Столицю, Le Forem — франкомовну Валлонію, Arbeitsamt (ADG) — Німецькомовну спільноту. Тимчасово переміщені люди у Фландрії мають зареєструватися у VDAB і принести документи на проживання; ADG зазначає, що реєстрація українців добровільна. Actiris і Forem застосовують власні вимоги до чинного проживання та документів. Реєстрація шукача роботи окрема від права на роботу.
 
-**RU:** Государственные службы занятости Бельгии работают по регионам: VDAB обслуживает Фландрию, Actiris — Брюссель, Le Forem — франкоязычную Валлонию, Arbeitsamt/ADG — Немецкоязычное сообщество. Место проживания и требования службы к документам влияют на то, где и как можно зарегистрироваться.
+**RU:** Государственные службы занятости Бельгии работают по регионам: VDAB обслуживает Фландрию, Actiris — Брюссель-Столицу, Le Forem — франкоязычную Валлонию, Arbeitsamt (ADG) — Немецкоязычное сообщество. Временно перемещённые лица во Фландрии должны зарегистрироваться в VDAB и принести документы на проживание; ADG указывает, что регистрация украинцев добровольная. Actiris и Forem применяют собственные требования к действующему проживанию и документам. Регистрация соискателя отделена от права на работу.
 
-**OfficialSourceIds:** `e89b64e7-9783-51a9-adaf-fb8cc5f6d9e8`, `5aa4a523-2d90-5436-8891-397b32598575`, `f5b125d3-c27b-58bd-90b0-3de7805270e8`, `9273af9a-276b-5704-8952-f8059d8342d6`
+**OfficialSourceIds:** 9bcc9e44-c601-5096-aeca-d6d3eb770e65, 9273af9a-276b-5704-8952-f8059d8342d6, 5aa4a523-2d90-5436-8891-397b32598575, f5b125d3-c27b-58bd-90b0-3de7805270e8
 
 **Qualification:** Do not present one service as responsible nationwide. Formal registration and accepted residence/work documents differ by regional service.
 
@@ -184,13 +184,13 @@
 
 **InformationEntryId:** `55fa79e5-89a2-518b-90b2-85a2735f171b`
 
-**EN:** After temporary protection is granted, a person may work as an employee when they hold a valid residence document showing the right to stay, normally an A card or a qualifying TP-related Annex 15 issued while the card is pending. The ordinary regional work/single-permit requirement does not apply to covered employee work while the TP exemption remains in force.
+**EN:** A person granted Belgian temporary protection may work as an employee when they hold the A card or a qualifying Annex 15 issued while that card is pending. A pending TP application, pre-decision Annex 3, or the federal TP attestation alone is not established as work authorization. Covered employee work is exempt from the ordinary regional work-permit/single-permit requirement while the TP exemption applies.
 
-**UK:** Після надання тимчасового захисту людина може працювати за наймом, якщо має чинний документ на проживання, що підтверджує право перебувати в країні, зазвичай картку A або відповідну Annex 15, видану під час очікування картки. До роботи за наймом, охопленої звільненням для TP, не застосовується звичайна регіональна вимога отримувати дозвіл на роботу/єдиний дозвіл, поки це звільнення чинне.
+**UK:** Людина, якій надано тимчасовий захист у Бельгії, може працювати за наймом за наявності картки A або відповідної Annex 15, виданої на час очікування картки. Заява TP на розгляді, Annex 3 до рішення або лише федеральне підтвердження TP не встановлюють права на роботу. На охоплену роботу за наймом не поширюється звичайна регіональна вимога дозволу на роботу/єдиного дозволу, поки діє звільнення для TP.
 
-**RU:** После предоставления временной защиты человек может работать по найму при наличии действующего документа на проживание, подтверждающего право находиться в стране: обычно карты A или подходящей Annex 15, выданной на время ожидания карты. К охватываемой найму работе при TP не применяется обычное региональное требование получать разрешение на работу/единое разрешение, пока действует соответствующее освобождение.
+**RU:** Человек, которому предоставлена временная защита в Бельгии, может работать по найму при наличии карты A или подходящей Annex 15, выданной на время ожидания карты. Заявление TP на рассмотрении, Annex 3 до решения или только федеральное подтверждение TP не устанавливают права на работу. На охватываемую работу по найму не распространяется обычное региональное требование разрешения на работу/единого разрешения, пока действует освобождение для TP.
 
-**OfficialSourceIds:** `be9f9561-6140-5ca7-9c43-7ec3036d151d`, `3913778e-1ce5-5c0f-8ff4-ad97a1a351d9`
+**OfficialSourceIds:** be9f9561-6140-5ca7-9c43-7ec3036d151d, 3913778e-1ce5-5c0f-8ff4-ad97a1a351d9, cd2fcc40-e951-5a5e-8db7-ff1e7f0cf315
 
 **Qualification:** A pending TP application or federal TP attestation alone is not established as sufficient work proof; not every Annex 15 qualifies. Self-employment is a separate route.
 
@@ -202,13 +202,13 @@
 
 **InformationEntryId:** `55fa79e5-89a2-518b-90b2-85a2735f171b`
 
-**EN:** Before hiring, an employer must check and retain evidence of valid residence authorization and file DIMONA IN before work starts; DIMONA OUT is due no later than the first working day after employment ends. The employer, rather than the worker, files DIMONA.
+**EN:** Before hiring, the employer must check the worker’s valid residence/work document and keep its copy or data available for inspection at least during employment. The employer files DIMONA IN before work starts and DIMONA OUT by the next working day after it ends; quarterly DmfA is separate. The employer, not the worker, files DIMONA.
 
-**UK:** Перед наймом роботодавець має перевірити й зберігати підтвердження чинного дозволу на проживання та подати DIMONA IN до початку роботи; DIMONA OUT потрібно подати не пізніше першого робочого дня після завершення роботи. DIMONA подає роботодавець, а не працівник.
+**UK:** До найму роботодавець має перевірити чинний документ працівника на проживання/право на роботу та зберігати його копію або дані для перевірки щонайменше протягом роботи. Роботодавець подає DIMONA IN до початку роботи, а DIMONA OUT — не пізніше наступного робочого дня після її завершення; квартальна DmfA подається окремо. DIMONA подає роботодавець, а не працівник.
 
-**RU:** Перед наймом работодатель должен проверить и хранить подтверждение действующего разрешения на проживание, а также подать DIMONA IN до начала работы; DIMONA OUT подаётся не позднее первого рабочего дня после её окончания. DIMONA подаёт работодатель, а не работник.
+**RU:** До найма работодатель должен проверить действующий документ работника на проживание/право на работу и хранить его копию или данные для проверки как минимум в течение работы. Работодатель подаёт DIMONA IN до начала работы, а DIMONA OUT — не позднее следующего рабочего дня после её окончания; квартальная DmfA подаётся отдельно. DIMONA подаёт работодатель, а не работник.
 
-**OfficialSourceIds:** `e04b3f9c-0696-5737-9fe6-66454122ed34`, `0f6c24cc-542d-5f4b-84ab-1f7de551c727`, `5a621d4b-af6f-5b46-9233-ad0476931e2f`
+**OfficialSourceIds:** e04b3f9c-0696-5737-9fe6-66454122ed34, 0f6c24cc-542d-5f4b-84ab-1f7de551c727, 5a621d4b-af6f-5b46-9233-ad0476931e2f
 
 **Qualification:** These statements concern employee hiring and employer social-security declarations; they do not establish immigration permission for self-employment.
 
@@ -226,7 +226,7 @@
 
 **RU:** С 1 апреля 2026 года RMMMG по CCT 43 составляет €2 189,81 брутто в месяц для охватываемых работников в возрасте от 18 лет. Это гарантия среднего минимального месячного дохода, а не единая универсальная почасовая ставка; соответствующее отраслевое соглашение может устанавливать более высокий минимум.
 
-**OfficialSourceIds:** `5b9b6430-79ba-5aee-9ef6-f6d8f21e47db`, `56f4c722-2026-56c5-bbe5-27e7440694d8`, `3ebe4be7-0c7e-50bc-8222-183c6d151ede`, `f0b4fabc-1e39-554f-a429-07d32e27265a`
+**OfficialSourceIds:** `5b9b6430-79ba-5aee-9ef6-f6d8f21e47db`, `56f4c722-2026-56c5-bbe5-27e7440694d8`, `3ebe4be7-0c7e-50bc-8222-183c6d151ede`, `f0b4fabc-1e39-554f-a429-07d32e27265a`, 0e853ef8-2b3b-5592-833b-6d1ce463c196
 
 **Qualification:** The amount applies within the stated CCT 43 coverage and is not necessarily the simple base wage paid each month. Check the applicable joint committee and job classification.
 
@@ -264,7 +264,7 @@
 
 **RU:** Согласно актуальным инструкциям INAMI, федеральное подтверждение временной защиты может служить основанием для присоединения к медицинскому страхованию по месту проживания до выдачи карты A; соответствующая TP Annex 15 также может подтверждать указанный маршрут. Уточните в выбранной mutualité или CAAMI, какие документы принимаются и с какой даты будет действовать членство.
 
-**OfficialSourceIds:** `4f6016c8-56d4-5bea-9ba7-94f967bbfe69`, `88880ea5-61b6-58d6-8846-f1d58e96e487`
+**OfficialSourceIds:** 4f6016c8-56d4-5bea-9ba7-94f967bbfe69, 88880ea5-61b6-58d6-8846-f1d58e96e487, f922c941-8ff1-535c-8d69-d8d10f83b779
 
 **Qualification:** CAAMI’s public Ukraine checklist and INAMI guidance are not fully aligned. The A card alone is not proof of health-fund affiliation; confirm the current document set and effective date directly.
 
@@ -450,7 +450,7 @@
 
 **RU:** Семейные выплаты и пособия на детей администрируются отдельными региональными системами: Фландрия (Groeipakket), Брюссель, Валлония и Немецкоязычное сообщество. Требования к проживанию, регистрации и статусу различаются; обращайтесь к плательщику в регионе проживания ребёнка.
 
-**OfficialSourceIds:** `cab92bae-0b76-56b2-9581-7381ad653d3b`, `7e9a47b2-6a01-57e3-ae65-9f64425869a2`, `1e087799-5007-5780-9f82-299c88f491b5`, `61baf97b-858c-5365-a0b6-deff47b476e2`, `864bb2ea-e879-5d6c-9893-c86f28ca1050`
+**OfficialSourceIds:** cab92bae-0b76-56b2-9581-7381ad653d3b, 7e9a47b2-6a01-57e3-ae65-9f64425869a2, 6b97ac43-6e68-5d54-912a-6e8aa2f97f46, 61baf97b-858c-5365-a0b6-deff47b476e2, 864bb2ea-e879-5d6c-9893-c86f28ca1050
 
 **Qualification:** Do not infer entitlement from TP alone, school attendance or a child’s residence abroad. Preserve the region-specific rules and registration conditions.
 

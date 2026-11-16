@@ -37,13 +37,13 @@ public sealed class BelgiumContentIntegrationTests
     };
     private static readonly IReadOnlyDictionary<string, int> ExpectedSourceCounts = new Dictionary<string, int>
     {
-        ["BE-TP-01"] = 11,
-        ["BE-TP-02"] = 17,
-        ["BE-EMP-01"] = 17,
-        ["BE-EMP-02"] = 22,
+        ["BE-TP-01"] = 8,
+        ["BE-TP-02"] = 15,
+        ["BE-EMP-01"] = 16,
+        ["BE-EMP-02"] = 23,
         ["BE-HEALTH-01"] = 13,
         ["BE-HOUSING-01"] = 23,
-        ["BE-EDU-01"] = 25,
+        ["BE-EDU-01"] = 24,
         ["BE-SOC-01"] = 20
     };
     private static readonly ResourceManager Resources = new(
@@ -92,7 +92,16 @@ public sealed class BelgiumContentIntegrationTests
             Assert.All(translations, item =>
             {
                 Assert.Equal(VerificationStatus.Verified, item.VerificationStatus);
-                Assert.Equal(new DateTimeOffset(2026, 11, 11, 0, 0, 0, TimeSpan.Zero), item.LastUpdatedAt);
+                var updated = new HashSet<Guid>
+                {
+                    Guid.Parse("aef6ec65-f8ed-5054-bafb-c465e790dd57"),
+                    Guid.Parse("f2c1526a-a218-5bf0-ab2a-9167dbec0c26"),
+                    Guid.Parse("55fa79e5-89a2-518b-90b2-85a2735f171b"),
+                    Guid.Parse("20eef3c3-fcc7-5b5b-b672-695f29faad61")
+                };
+                Assert.Equal(updated.Contains(item.InformationEntryId)
+                    ? new DateTimeOffset(2026, 11, 16, 0, 0, 0, TimeSpan.Zero)
+                    : new DateTimeOffset(2026, 11, 11, 0, 0, 0, TimeSpan.Zero), item.LastUpdatedAt);
             });
         }
 
@@ -176,41 +185,55 @@ public sealed class BelgiumContentIntegrationTests
             }
         }
 
-        Assert.Equal(85, totalBindings);
-        Assert.Equal(80, sourceIds.Count);
-        Assert.Equal(76, sourceUrls.Count);
+        Assert.Equal(93, totalBindings);
+        Assert.Equal(85, sourceIds.Count);
+        Assert.Equal(81, sourceUrls.Count);
     }
 
     [Fact]
-    public async Task BelgiumTranslationsAndOneHundredFortyEightArticleOwnedSourcesMatchDraftsExactly()
+    public async Task BelgiumTranslationsAndOneHundredFortyTwoArticleOwnedSourcesMatchDraftsExactly()
     {
         var catalog = await Catalog.Value;
-        Assert.Equal(1486, catalog.OfficialSources.Count);
+        Assert.Equal(1480, catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         var repositoryRoot = FindRepositoryRoot();
         var draftsRoot = Path.Combine(repositoryRoot, "docs", "content-drafts", "belgium-v1");
         var articleIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => articleIds.Contains(item.InformationEntryId)).ToArray();
-        Assert.Equal(148, sources.Length);
-        Assert.Equal(148, sources.Select(item => item.Id).Distinct().Count());
-        Assert.Equal(134, sources.Select(item => item.Url.AbsoluteUri).Distinct().Count());
-        var newlyCheckedSourceIds = new HashSet<Guid>
+        Assert.Equal(142, sources.Length);
+        Assert.Equal(142, sources.Select(item => item.Id).Distinct().Count());
+        Assert.Equal(132, sources.Select(item => item.Url.AbsoluteUri).Distinct().Count());
+        var refreshedOnReleaseDate = new HashSet<Guid>
         {
+            Guid.Parse("01044ed1-42f4-5d33-bbcd-931f2b1006b7"),
             Guid.Parse("efd6f672-6edb-5eac-bddc-3d56ed6b4d27"),
-            Guid.Parse("38f01c1d-3688-5be0-b94b-97b5f0d8bdf3")
+            Guid.Parse("2e8786e8-c502-5853-8ed7-ba5e9c1bc9f3"),
+            Guid.Parse("d12c3b88-ba4a-55b4-9a41-5be3f35a97ab"),
+            Guid.Parse("56f4c722-2026-56c5-bbe5-27e7440694d8"),
+            Guid.Parse("3ebe4be7-0c7e-50bc-8222-183c6d151ede"),
+            Guid.Parse("cab92bae-0b76-56b2-9581-7381ad653d3b"),
+            Guid.Parse("7e9a47b2-6a01-57e3-ae65-9f64425869a2"),
+            Guid.Parse("5b9b6430-79ba-5aee-9ef6-f6d8f21e47db"),
+            Guid.Parse("a12e3080-07a0-5320-99de-631048c72889"),
+            Guid.Parse("0e853ef8-2b3b-5592-833b-6d1ce463c196")
         };
+        var checkedOnNov14 = Guid.Parse("38f01c1d-3688-5be0-b94b-97b5f0d8bdf3");
         Assert.All(sources, source =>
         {
             Assert.Contains(source.InformationEntryId, articleIds);
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
             Assert.Equal(
-                newlyCheckedSourceIds.Contains(source.Id)
-                    ? new DateTimeOffset(2026, 11, 14, 0, 0, 0, TimeSpan.Zero)
-                    : new DateTimeOffset(2026, 11, 11, 0, 0, 0, TimeSpan.Zero),
+                refreshedOnReleaseDate.Contains(source.Id)
+                    ? new DateTimeOffset(2026, 11, 16, 0, 0, 0, TimeSpan.Zero)
+                    : source.Id == checkedOnNov14
+                        ? new DateTimeOffset(2026, 11, 14, 0, 0, 0, TimeSpan.Zero)
+                        : new DateTimeOffset(2026, 11, 11, 0, 0, 0, TimeSpan.Zero),
                 source.LastCheckedAt);
         });
         Assert.All(catalog.OfficialSources
             .GroupBy(item => (item.InformationEntryId, item.Title, item.Url.AbsoluteUri)), group => Assert.Single(group));
+        Assert.All(sources.GroupBy(item => (item.InformationEntryId, item.Url.AbsoluteUri)), group => Assert.Single(group));
+        Assert.Equal(11, sources.Count(item => item.LastCheckedAt == new DateTimeOffset(2026, 11, 16, 0, 0, 0, TimeSpan.Zero)));
 
         var sourceById = catalog.OfficialSources.ToDictionary(item => item.Id);
         foreach (var (articleCode, expected) in Articles)
@@ -252,6 +275,66 @@ public sealed class BelgiumContentIntegrationTests
                 }
             }
         }
+    }
+
+    [Fact]
+    public async Task BelgiumRefreshKeepsReviewedSafetyBoundariesAndReferenceAmounts()
+    {
+        var catalog = await Catalog.Value;
+        var translations = catalog.InformationEntryTranslations.ToDictionary(item => (item.InformationEntryId, item.LanguageCode));
+        string Content(string id, string lang) => translations[(Guid.Parse(id), lang)].Content;
+        var tp = Content("aef6ec65-f8ed-5054-bafb-c465e790dd57", "en");
+        Assert.Contains("5 August 2026", tp);
+        Assert.Contains("4 August 2026", tp);
+        Assert.Contains("Rue Belliard 68", tp);
+        Assert.Contains("4 January 2027", tp);
+        Assert.Contains("4 March 2028", tp);
+        Assert.Contains("inconsistent legacy reference", tp, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("valid until 4 March 2025", tp, StringComparison.Ordinal);
+
+        var employment = Content("55fa79e5-89a2-518b-90b2-85a2735f171b", "en");
+        Assert.Contains("€2,189.81", employment);
+        Assert.Contains("CCT 50", employment);
+        Assert.Contains("student workers aged 18–20", employment);
+        Assert.Contains("Annex 3", employment);
+        Assert.Contains("pre-decision Annex 3 does not establish a right to start work", employment, StringComparison.OrdinalIgnoreCase);
+
+        var health = Content("673316a9-6ee9-50d6-9f66-e19659aeff0e", "en");
+        Assert.Contains("CAAMI", health);
+        Assert.Contains("INAMI", health);
+        Assert.Contains("confirm", health, StringComparison.OrdinalIgnoreCase);
+        var facts = await Facts.Value;
+        var belgiumFacts = facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts.Where(fact => fact.CountrySlug == "belgium")
+            .Select(fact => (aspect.Id, Fact: fact))).ToDictionary(item => item.Id, item => item.Fact, StringComparer.Ordinal);
+        Assert.Contains("capacity", belgiumFacts["housing-initial"].Values["en"], StringComparison.OrdinalIgnoreCase);
+        Assert.True(belgiumFacts["housing-initial"].IsAvailable);
+        Assert.Contains("Community", belgiumFacts["education-higher-admission"].Values["en"]);
+        Assert.Contains("no award or amount is guaranteed", belgiumFacts["social-subsistence"].Values["en"], StringComparison.OrdinalIgnoreCase);
+        Assert.DoesNotContain("guaranteed", belgiumFacts["social-application"].Values["en"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("where that service is active", belgiumFacts["healthcare-urgent"].Values["en"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("Annex 15", belgiumFacts["work-permission"].Values["en"]);
+        Assert.Contains("pre-decision Annex 3", belgiumFacts["work-permission"].Values["en"]);
+        var education = Content("ac80dcbd-4289-5c77-8340-f9e4226a47f6", "en");
+        Assert.Contains("€1,194", education);
+        Assert.Contains("FWB", education);
+        var social = Content("20eef3c3-fcc7-5b5b-b672-695f29faad61", "en");
+        foreach (var rate in new[] { "€911.56", "€1,367.34", "€1,847.89" })
+            Assert.Contains(rate, social);
+        Assert.Contains("not guaranteed payments", social, StringComparison.OrdinalIgnoreCase);
+        foreach (var language in new[] { "en", "uk", "ru" })
+        {
+            Assert.Contains("CCT 50", Content("55fa79e5-89a2-518b-90b2-85a2735f171b", language));
+            Assert.Contains("911", Content("20eef3c3-fcc7-5b5b-b672-695f29faad61", language));
+            Assert.Contains("1 194", Content("ac80dcbd-4289-5c77-8340-f9e4226a47f6", language).Replace(",", " "));
+        }
+
+        var belgium = catalog.InformationEntries.Where(item => item.CountryId == CountryId).Select(item => item.Id).ToHashSet();
+        var updatedCount = catalog.InformationEntryTranslations.Count(item => belgium.Contains(item.InformationEntryId)
+            && item.LastUpdatedAt == new DateTimeOffset(2026, 11, 16, 0, 0, 0, TimeSpan.Zero));
+        Assert.Equal(12, updatedCount);
+        Assert.Equal(1480, catalog.OfficialSources.Count);
+        Assert.All(catalog.OfficialSources.Where(source => belgium.Contains(source.InformationEntryId)), source =>
+            Assert.Contains(source.InformationEntryId, belgium));
     }
 
     [Theory]

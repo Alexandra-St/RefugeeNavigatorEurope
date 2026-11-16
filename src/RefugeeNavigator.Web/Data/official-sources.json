@@ -7872,7 +7872,7 @@
     "InformationEntryId": "aef6ec65-f8ed-5054-bafb-c465e790dd57",
     "Title": "Council of the European Union / EUR-Lex, “Council Implementing Decision (EU) 2026/1912 of 30 July 2026 extending the temporary protection introduced by Implementing Decision (EU) 2022/382 (current consolidated text)”",
     "Url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02026D1912-20260804",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
   },
   {
     "Id": "fc4518bf-9ef4-5f9d-8699-74c9201f59b3",
@@ -7886,21 +7886,7 @@
     "InformationEntryId": "aef6ec65-f8ed-5054-bafb-c465e790dd57",
     "Title": "Belgian Immigration Office (FPS Home Affairs), “Registration Centre”",
     "Url": "https://dofi.ibz.be/en/themes/ukraine/registration-centre",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
-  },
-  {
-    "Id": "bfba6cf3-9235-5373-9475-663dbf309800",
-    "InformationEntryId": "aef6ec65-f8ed-5054-bafb-c465e790dd57",
-    "Title": "Wallonia public-service portal, “Je suis ukrainien”",
-    "Url": "https://www.wallonie.be/fr/ukraine/je-suis-ukrainien",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
-  },
-  {
-    "Id": "e99de5f6-c988-5957-8b20-5e2540d0ca6e",
-    "InformationEntryId": "aef6ec65-f8ed-5054-bafb-c465e790dd57",
-    "Title": "European Migration Network, Belgium National Contact Point (coordinated by FPS Interior), “Annual report on migration and asylum in Belgium 2022”",
-    "Url": "https://home-affairs.ec.europa.eu/system/files/2023-07/arm2022_Belgium_Part%20II_final.pdf",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
   },
   {
     "Id": "921c7f23-b71c-5904-9d3c-83e49bee0935",
@@ -7910,18 +7896,11 @@
     "LastCheckedAt": "2026-11-11T00:00:00+00:00"
   },
   {
-    "Id": "7739ee90-7172-5a62-b729-be68b81561bf",
-    "InformationEntryId": "aef6ec65-f8ed-5054-bafb-c465e790dd57",
-    "Title": "Government of Flanders, “EU verlengt tijdelijke bescherming tot maart 2028”",
-    "Url": "https://www.vlaanderen.be/vlaanderen-helpt-oekraine/eu-verlengt-tijdelijke-bescherming-tot-maart-2028",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
-  },
-  {
     "Id": "efd6f672-6edb-5eac-bddc-3d56ed6b4d27",
     "InformationEntryId": "aef6ec65-f8ed-5054-bafb-c465e790dd57",
     "Title": "Belgian Immigration Office (FPS Home Affairs), “Temporary Protection”",
     "Url": "https://dofi.ibz.be/en/themes/ukraine/temporary-protection",
-    "LastCheckedAt": "2026-11-14T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
   },
   {
     "Id": "f46e562b-6077-5f41-82c0-3339cbbe4f0a",
@@ -7959,24 +7938,10 @@
     "LastCheckedAt": "2026-11-11T00:00:00+00:00"
   },
   {
-    "Id": "a53fc39d-261e-5e59-b897-1a5cb8c1fdba",
-    "InformationEntryId": "54c6f95f-589e-5901-beae-990bed994160",
-    "Title": "Belgian Official Gazette / Justel (FPS Justice), “Law of 15 December 1980, Articles 59–61/1 (student residence)”",
-    "Url": "https://www.ejustice.just.fgov.be/eli/loi/1980/12/15/1980121550/justel",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
-  },
-  {
     "Id": "c826f285-132d-51a2-9088-3085059438e0",
     "InformationEntryId": "54c6f95f-589e-5901-beae-990bed994160",
     "Title": "Belgian Immigration Office (FPS Home Affairs), “Family reunification”",
     "Url": "https://dofi.ibz.be/en/themes/third-country-nationals/family-reunification",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
-  },
-  {
-    "Id": "004e2e07-df4a-5dd2-8b08-6615118b61d1",
-    "InformationEntryId": "54c6f95f-589e-5901-beae-990bed994160",
-    "Title": "Belgian Official Gazette / Justel (FPS Justice), “Law of 15 December 1980, Article 12bis (family reunification filing)”",
-    "Url": "https://www.ejustice.just.fgov.be/eli/loi/1980/12/15/1980121550/justel",
     "LastCheckedAt": "2026-11-11T00:00:00+00:00"
   },
   {
@@ -8134,13 +8099,6 @@
     "LastCheckedAt": "2026-11-11T00:00:00+00:00"
   },
   {
-    "Id": "e26c4de9-358d-5edf-b2fc-93b8e946deec",
-    "InformationEntryId": "f2c1526a-a218-5bf0-ab2a-9167dbec0c26",
-    "Title": "Le Forem, “Inscription et accompagnement des ressortissants étrangers (conditions/access to employment market)”",
-    "Url": "https://www.leforem.be/citoyens/inscription-accompagnement/accompagnement-ressortissants-etrangers.html",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
-  },
-  {
     "Id": "c93d8de4-5cf6-5a14-932d-00e9509d9609",
     "InformationEntryId": "f2c1526a-a218-5bf0-ab2a-9167dbec0c26",
     "Title": "VDAB, “Werken als nieuwkomer”",
@@ -8292,21 +8250,21 @@
     "InformationEntryId": "55fa79e5-89a2-518b-90b2-85a2735f171b",
     "Title": "National Labour Council (CNT/NAR), “Salaire minimum”",
     "Url": "https://cnt-nar.be/fr/dossiers-thematiques/salaire-minimum",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
   },
   {
     "Id": "56f4c722-2026-56c5-bbe5-27e7440694d8",
     "InformationEntryId": "55fa79e5-89a2-518b-90b2-85a2735f171b",
     "Title": "National Labour Council (CNT/NAR), “Communiqué de presse (24 mars 2026)”",
     "Url": "https://cnt-nar.be/sites/default/files/press_releases/fr/2026-03-24-F.pdf",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
   },
   {
     "Id": "3ebe4be7-0c7e-50bc-8222-183c6d151ede",
     "InformationEntryId": "55fa79e5-89a2-518b-90b2-85a2735f171b",
     "Title": "National Labour Council (CNT/NAR), “Convention collective de travail n° 43/18 du 24 mars 2026 modifiant la CCT n° 43”",
     "Url": "https://cnt-nar.be/sites/default/files/documents/fr/cao-cct-43-18.pdf",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
   },
   {
     "Id": "f0b4fabc-1e39-554f-a429-07d32e27265a",
@@ -8614,7 +8572,7 @@
     "InformationEntryId": "ac80dcbd-4289-5c77-8340-f9e4226a47f6",
     "Title": "Fédération Wallonie-Bruxelles / enseignement.be, “Integration of newcomer learners (DASPA flyer)”",
     "Url": "https://www.enseignement.be/public/docs/daspa-flyer.pdf",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
   },
   {
     "Id": "6524c420-aac2-50ca-9e54-97dd0392deaa",
@@ -8715,13 +8673,6 @@
     "LastCheckedAt": "2026-11-11T00:00:00+00:00"
   },
   {
-    "Id": "757cd1e2-91e3-521a-9677-1bd011ca04f4",
-    "InformationEntryId": "ac80dcbd-4289-5c77-8340-f9e4226a47f6",
-    "Title": "Study in Flanders / Flemish Government, “Tuition fees” — temporary-protection fee category",
-    "Url": "https://www.studyinflanders.be/practical-information/tuition-fees",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
-  },
-  {
     "Id": "af739589-319e-5f1a-a4c4-8ab7cdb494e1",
     "InformationEntryId": "ac80dcbd-4289-5c77-8340-f9e4226a47f6",
     "Title": "Flemish Codex / Flemish Government, “Codex Hoger Onderwijs, Article II.215”",
@@ -8803,7 +8754,7 @@
     "InformationEntryId": "20eef3c3-fcc7-5b5b-b672-695f29faad61",
     "Title": "SPP Intégration sociale / Primabook, “Montants RIS”",
     "Url": "https://primabook.mi-is.be/fr/droit-lintegration-sociale/montants-ris",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
   },
   {
     "Id": "6121f97a-fd76-584e-b0fc-0103a0f29914",
@@ -8831,7 +8782,7 @@
     "InformationEntryId": "20eef3c3-fcc7-5b5b-b672-695f29faad61",
     "Title": "Agentschap Uitbetaling Groeipakket / GPedia, “A/33 van 28 mei 2026 — Ontheemden met het tijdelijke beschermingsstatuut”",
     "Url": "https://gpedia.groeipakket.be/nl/richtlijnen/mededelingen-van-het-vutg/mededelingen-van-het-vutg/regelgeving-pagina/a33-van-28-mei-2026",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
   },
   {
     "Id": "da7ce59f-9468-5455-b548-6a879c954b28",
@@ -8845,7 +8796,7 @@
     "InformationEntryId": "20eef3c3-fcc7-5b5b-b672-695f29faad61",
     "Title": "Famiris / Brussels-Capital public family-benefit payer, “Allocations familiales pour les réfugiés d’Ukraine”",
     "Url": "https://famiris.brussels/fr/faq/autres/refugies-dukraine/",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
   },
   {
     "Id": "3ec5a565-96aa-57f8-88d9-dcb0bd951387",
@@ -10399,6 +10350,13 @@
     "InformationEntryId": "f34f7c15-d879-5ba8-81cf-65f7e9ca416f",
     "Title": "OIF/NDGAP: benefits and support for beneficiaries",
     "Url": "https://oif.gov.hu/menedekeseknek-nyujtott-ellatasok-es-tamogatasok",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "0e853ef8-2b3b-5592-833b-6d1ce463c196",
+    "InformationEntryId": "55fa79e5-89a2-518b-90b2-85a2735f171b",
+    "Title": "National Labour Council (CNT/NAR), “CCT No. 50 (coordinated version)”",
+    "Url": "https://cnt-nar.be/sites/default/files/documents/fr/Cct%20n%C2%B0%2050%20%28Version%20coordonn%C3%A9e%29.pdf",
     "LastCheckedAt": "2026-11-16T00:00:00+00:00"
   }
 ]
