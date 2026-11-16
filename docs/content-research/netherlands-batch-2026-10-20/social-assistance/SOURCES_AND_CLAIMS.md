@@ -15,6 +15,7 @@ Leefgeld under municipal reception, household/income conditions, application nav
 | SOC-S03 | Government.nl, Ukrainian refugees: personal contribution | https://www.government.nl/themes/migration-and-travel/reception-of-refugees-from-ukraine/ukrainian-refugees-personal-contribution | English overview; no date displayed. |
 | SOC-S04 | SVB, Insurance under the child benefit scheme | https://www.svb.nl/en/child-benefit/what-is-child-benefit/insurance-under-the-child-benefit-scheme | Version date 1 May 2026; general insurance rules and exceptions. |
 | SOC-S05 | Dienst Toeslagen, I have children up to the age of 18 | https://www.belastingdienst.nl/wps/wcm/connect/bldcontenten/belastingdienst/individuals/benefits/moving_to_the_netherlands/i_have_children_up_to_the_age_of_18/ | No date displayed; income/capital/residence conditions. |
+| SOC-S06 | Dienst Toeslagen, Maximum assets for child-related budget (kindgebonden budget) | https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/toeslagen/kindgebonden-budget/maximaal-vermogen-kindgebonden-budget/ | Opened 16 Nov 2026; 2026 asset caps by toeslagpartner status. |
 
 ## Atomic claims
 

@@ -85,7 +85,7 @@ public sealed class AustriaContentIntegrationTests
         var entryIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => entryIds.Contains(item.InformationEntryId)).ToArray();
         Assert.Equal(57, sources.Length);
-        Assert.Equal(1468, catalog.OfficialSources.Count);
+        Assert.Equal(1473, catalog.OfficialSources.Count);
         Assert.Equal(57, sources.Select(item => item.Id).Distinct().Count());
         var sourceById = catalog.OfficialSources.ToDictionary(item => item.Id);
         Assert.All(sources, item =>

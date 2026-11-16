@@ -17,7 +17,7 @@ Learn how municipal reception, private renting, rent benefit and a possible pers
 Content:
 ## Ask about municipal reception
 
-Municipal reception is linked to temporary-protection eligibility and the applicable intake route. In cases referred for triage, the 2026 municipal handbook describes a process involving municipal intake and IND advice. A municipality’s decision, local procedure and available capacity matter. Ask the municipality or the reception contact handling your case about the current route. The research does not establish a right to a particular place, region, facility or duration; historical occupancy figures are not current availability.
+If you qualify for temporary protection, national law makes municipalities responsible for municipal reception. The usual route starts with BRP registration. The 2026 triage handbook describes municipal intake and IND advice for specified cases; where triage is required before BRP registration, the municipality provides interim reception at least until IND's advice. This does not guarantee a particular facility, region, place or duration after that point. Assignment decisions, local procedure and actual capacity remain municipal. Ask the municipality handling your case about the current route; historical occupancy figures do not show current availability.
 
 ## Understand a private rental agreement
 
@@ -25,11 +25,11 @@ If you find a private rental, check that the written agreement, rent, deposit an
 
 ## Check whether huurtoeslag may apply
 
-Huurtoeslag is a rent benefit, separate from municipal reception. A person with temporary protection may be able to apply through Mijn toeslagen if the applicant and household meet the current conditions. These can include age, lawful residence and registration, a self-contained rented home, a lease, rent-payment evidence and household income and assets. Temporary protection alone does not establish eligibility or an amount. Use the official eligibility information and application route for your circumstances.
+Huurtoeslag is separate from municipal reception. A person with temporary protection may apply through Mijn toeslagen if the applicant and household meet the conditions, including age, lawful residence and registration, a self-contained rented home, a lease, rent-payment evidence, and income and asset limits. Since 2026 there is no maximum rent that by itself prevents an application, but the benefit calculation is capped: €932.93 for people aged 21 or over and €498.20 for ages 18–20; service costs are no longer counted. A Ukrainian guest with temporary protection is excluded from the host's co-resident calculation until 1 January 2027 and counts from that date. Temporary protection alone does not establish eligibility or an amount. Check the official rules for your household.
 
 ## A personal contribution may be assessed separately
 
-Some adults aged 18 or over in municipal reception who work or receive specified benefits may have to contribute to reception costs. The municipality assesses the household income under the applicable threshold and rules; some circumstances may allow a reduction or waiver. Rates shown by the government have applied since 1 August 2026 and depend on household and reception details. This contribution is not huurtoeslag or rent, and it does not apply to every displaced person. Ask the municipality how it applies the current rules to your household.
+Some adults aged 18 or over in municipal reception who work or receive specified benefits, including WW or long-term sickness/disability benefits, must contribute. Since 1 August 2026, the maximum operating-cost contribution is €244.22 per adult per month and the maximum meal contribution is €260.97 per adult where meals are provided; for two adults, the household meal cap is €1,010.38 monthly. A 115% threshold applies: living allowance is fully withdrawn only above 115% of that allowance, and the full contribution is charged only above 115% of the (withdrawn) allowance plus the contribution. Municipalities may reduce or waive amounts where disproportionate hardship would result. Report income and household size to the municipality, including changes. This is separate from rent and huurtoeslag and does not apply to everyone; ask the municipality how it applies to your household.
 
 ### Claim coverage
 
@@ -40,9 +40,9 @@ Some adults aged 18 or over in municipal reception who work or receive specified
 
 ## Editorial exclusions
 
-- No municipal reception place, chosen location, duration or current capacity is promised.
+- National municipal reception responsibility for eligible people is distinct from local placement and capacity; no specific place, location, duration or current capacity is promised.
 - No rent, deposit or benefit amount is calculated for an individual.
-- Huurtoeslag is not guaranteed by temporary protection. No host-household co-resident calculation rule is included in this draft because it has no approved claim mapping.
+- Huurtoeslag is not guaranteed by temporary protection. A Ukrainian guest with temporary protection is excluded from the host's co-resident calculation until 1 January 2027 and counts from that date.
 - A personal reception contribution is separate from rent and rent benefit; no universal exemption or payment obligation is asserted.
 
 ## UK
@@ -56,7 +56,7 @@ Summary:
 Content:
 ## Запитайте про муніципальне розміщення
 
-Муніципальне розміщення пов’язане з правом на тимчасовий захист і відповідним маршрутом прийому. Для справ, переданих на перевірку, муніципальний посібник 2026 року описує процес із первинним розглядом муніципалітетом і рекомендацією IND. Важливі рішення муніципалітету, місцева процедура та наявність місць. Запитайте муніципалітет або контактну службу, яка веде вашу справу, про чинний порядок. Дослідження не підтверджує права на конкретне місце, регіон, заклад чи тривалість розміщення; історичні показники заповненості не відображають поточну наявність місць.
+Якщо ви відповідаєте умовам тимчасового захисту, національний закон покладає на муніципалітети відповідальність за розміщення. Зазвичай маршрут починається з реєстрації в BRP. Посібник із сортування 2026 року передбачає для визначених справ муніципальний прийом і рекомендацію IND; якщо перевірка потрібна до реєстрації в BRP, муніципалітет надає тимчасове місце щонайменше до рекомендації IND. Після цього конкретний заклад, регіон, місце чи тривалість не гарантуються. Розподіл, місцева процедура та фактична наявність залежать від муніципалітету. Уточніть чинний маршрут у муніципалітеті; історичні дані не показують поточну наявність місць.
 
 ## Перевірте умови приватної оренди
 
@@ -64,11 +64,11 @@ Content:
 
 ## Перевірте, чи може застосовуватися huurtoeslag
 
-Huurtoeslag — це допомога на оренду, окрема від муніципального розміщення. Людина під тимчасовим захистом може подати заяву через Mijn toeslagen, якщо заявник і домогосподарство відповідають чинним умовам. Вони можуть охоплювати вік, законне перебування та реєстрацію, окреме орендоване житло, договір, підтвердження сплати оренди, доходи й активи домогосподарства. Сам тимчасовий захист не визначає право на допомогу чи її розмір. Перевірте офіційну інформацію та порядок подання з урахуванням своїх обставин.
+Huurtoeslag — це допомога на оренду, окрема від муніципального розміщення. Людина під тимчасовим захистом може подати заяву через Mijn toeslagen, якщо заявник і домогосподарство відповідають умовам, зокрема щодо віку, законного перебування та реєстрації, окремого орендованого житла, договору, підтвердження оплати, доходів і майна. З 2026 року немає максимальної орендної плати, яка сама по собі забороняє подати заяву, але розрахунок обмежено: €932,93 для осіб від 21 року та €498,20 для 18–20 років; витрати на послуги більше не враховуються. Гість з України під тимчасовим захистом не враховується в домогосподарстві господаря до 1 січня 2027 року, після чого враховується. Сам захист не гарантує права чи суми; перевірте умови для свого домогосподарства.
 
 ## Особистий внесок оцінюється окремо
 
-Деяким повнолітнім від 18 років у муніципальному розміщенні, які працюють або отримують визначені виплати, може бути призначено внесок за витрати на розміщення. Муніципалітет оцінює доходи домогосподарства за застосовними порогами й правилами; за певних обставин можливе зменшення або звільнення від внеску. Наведені урядом ставки діють з 1 серпня 2026 року й залежать від складу домогосподарства та умов розміщення. Це не huurtoeslag і не орендна плата; внесок не стосується кожної переміщеної особи. Запитайте муніципалітет, як чинні правила застосовуються до вашого домогосподарства.
+Деякі дорослі від 18 років у муніципальному розміщенні, які працюють або отримують визначені виплати, зокрема WW чи виплату через тривалу хворобу/інвалідність, мають сплачувати внесок. З 1 серпня 2026 року максимум на експлуатаційні витрати — €244,22 на дорослого щомісяця, за харчування — до €260,97 на дорослого, якщо його готують у закладі; для двох дорослих сімейний максимум за харчування — €1 010,38 на місяць. Діє поріг 115%: виплату на проживання повністю припиняють лише понад 115% її суми, а повний внесок стягують лише понад 115% (припиненої) виплати плюс внесок. Муніципалітет може зменшити чи скасувати суми за непропорційної шкоди. Повідомляйте про доходи, склад сім’ї та зміни. Це окремо від оренди й huurtoeslag і стосується не всіх; уточніть порядок у муніципалітеті.
 
 ### Claim coverage
 
@@ -81,7 +81,7 @@ Huurtoeslag — це допомога на оренду, окрема від м�
 
 - Не гарантується місце, обране розташування, строк муніципального розміщення чи поточна наявність місць.
 - Не розраховується індивідуальна сума оренди, депозиту чи допомоги.
-- Тимчасовий захист не гарантує huurtoeslag. Правило про врахування гостя в домогосподарстві не включене до цього матеріалу, оскільки для нього немає затвердженого claim mapping.
+- Тимчасовий захист не гарантує huurtoeslag; гість з України не враховується в розрахунку домогосподарства господаря до 1 січня 2027 року, після чого враховується.
 - Особистий внесок за розміщення відокремлено від оренди й допомоги; не стверджується універсальне звільнення чи обов’язок платити.
 
 ## RU
@@ -95,7 +95,7 @@ Summary:
 Content:
 ## Узнайте о муниципальном размещении
 
-Муниципальное размещение связано с правом на временную защиту и применимым порядком приёма. Для дел, направленных на проверку, муниципальное руководство 2026 года описывает процесс с первичным рассмотрением муниципалитетом и рекомендацией IND. Имеют значение решение муниципалитета, местная процедура и наличие мест. Уточните действующий порядок в муниципалитете или у службы, которая ведёт ваше дело. Исследование не подтверждает право на конкретное место, регион, учреждение или срок размещения; историческая заполненность не показывает текущую доступность.
+Если вы соответствуете условиям временной защиты, национальный закон возлагает на муниципалитеты ответственность за размещение. Обычно процедура начинается с регистрации в BRP. Руководство по триажу 2026 года предусматривает муниципальный приём и рекомендацию IND для определённых дел; если проверка нужна до регистрации в BRP, муниципалитет предоставляет временное место как минимум до рекомендации IND. После этого конкретное учреждение, регион, место или срок не гарантируются. Распределение, местная процедура и фактическая вместимость зависят от муниципалитета. Уточните действующую процедуру в муниципалитете; историческая заполненность не показывает текущую доступность.
 
 ## Проверьте условия частной аренды
 
@@ -103,11 +103,11 @@ Content:
 
 ## Проверьте, может ли применяться huurtoeslag
 
-Huurtoeslag — пособие на аренду, отдельное от муниципального размещения. Человек под временной защитой может подать заявление через Mijn toeslagen, если заявитель и домохозяйство соответствуют действующим условиям. Среди них могут быть возраст, законное пребывание и регистрация, отдельное арендуемое жильё, договор, подтверждение оплаты аренды, доходы и имущество домохозяйства. Одна лишь временная защита не устанавливает право на пособие или его размер. Изучите официальные условия и порядок подачи с учётом своих обстоятельств.
+Huurtoeslag — пособие на аренду, отдельное от муниципального размещения. Человек под временной защитой может подать заявление через Mijn toeslagen, если заявитель и семья соответствуют условиям, включая возраст, законное пребывание и регистрацию, отдельное арендуемое жильё, договор, подтверждение оплаты, а также лимиты дохода и имущества. С 2026 года нет максимальной аренды, которая сама по себе запрещает подачу заявления, но расчёт ограничен: €932,93 для людей от 21 года и €498,20 для 18–20 лет; расходы на услуги больше не учитываются. Гость из Украины под временной защитой не учитывается в расчёте домохозяйства принимающей стороны до 1 января 2027 года, после чего учитывается. Временная защита сама по себе не устанавливает право или сумму; проверьте правила для своей семьи.
 
 ## Личный взнос оценивается отдельно
 
-Некоторым взрослым от 18 лет в муниципальном размещении, которые работают или получают определённые выплаты, может быть назначен взнос за расходы на размещение. Муниципалитет оценивает доход домохозяйства по применимым порогам и правилам; в некоторых обстоятельствах возможны снижение или освобождение от взноса. Указанные правительством ставки действуют с 1 августа 2026 года и зависят от состава семьи и условий размещения. Это не huurtoeslag и не арендная плата; взнос не касается каждого перемещённого лица. Узнайте в муниципалитете, как действующие правила применяются к вашему домохозяйству.
+Некоторые взрослые от 18 лет в муниципальном размещении, которые работают или получают определённые выплаты, включая WW или пособие из-за длительной болезни/инвалидности, должны платить взнос. С 1 августа 2026 года максимум на эксплуатационные расходы — €244,22 на взрослого в месяц, за питание — до €260,97 на взрослого, если еду готовят в учреждении; для двух взрослых семейный максимум за питание — €1 010,38 в месяц. Действует порог 115%: пособие на проживание полностью прекращают только при доходе выше 115% его суммы, а полный взнос взимают только выше 115% (прекращённого) пособия плюс взнос. Муниципалитет может уменьшить или отменить суммы при несоразмерном ущербе. Сообщайте о доходах, составе семьи и изменениях. Это отдельно от аренды и huurtoeslag и касается не всех; уточните правила в муниципалитете.
 
 ### Claim coverage
 
@@ -120,9 +120,9 @@ Huurtoeslag — пособие на аренду, отдельное от мун
 
 - Не гарантируются место, выбранное расположение, срок муниципального размещения или наличие мест на текущую дату.
 - Индивидуальные суммы аренды, депозита или пособия не рассчитываются.
-- Временная защита не гарантирует huurtoeslag. Правило об учёте гостя в домохозяйстве не включено в этот материал, поскольку для него нет утверждённого claim mapping.
+- Временная защита не гарантирует huurtoeslag; гость из Украины не учитывается в расчёте домохозяйства принимающей стороны до 1 января 2027 года, после чего учитывается.
 - Личный взнос за размещение отделён от аренды и пособия; универсальное освобождение или обязанность платить не утверждаются.
 
 ## Editorial source set
 
-HOUSING-S01, HOUSING-S02, HOUSING-S03, HOUSING-S04, HOUSING-S06, HOUSING-S07, HOUSING-S08
+HOUSING-S01, HOUSING-S02, HOUSING-S03, HOUSING-S04, HOUSING-S06, HOUSING-S07, HOUSING-S08, HOUSING-S09, HOUSING-S10, HOUSING-S11

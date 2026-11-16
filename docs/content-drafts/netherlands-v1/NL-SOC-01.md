@@ -17,7 +17,7 @@ Understand the limited purpose of leefgeld, how to ask your municipality about i
 Content:
 ## What leefgeld covers
 
-Leefgeld is support described for people in the municipal Ukraine reception system. Government guidance says it can cover clothing and personal expenses, and food when meals are not provided at the reception location. An additional amount may apply to people living with a host family. The amount depends on factors such as age and household composition; the government table in the research was effective from 1 August 2026. Leefgeld is not a universal allowance and is not ordinary municipal social assistance.
+Leefgeld is support for eligible people in the municipal Ukraine reception arrangements, including qualifying host-family stays. Municipalities administer it. It covers clothing and personal expenses; food money is paid when meals are not provided. People living with a host family also receive the €77.16 monthly housing component. Rates effective 1 August 2026 are: clothing €65.77 per person; food €260.97 per adult alone/in a two-person family, €221.83 for adults in a three-person family, or €195.72 in a family of four or more; for children under 18, food is €216.41, €183.94 or €162.33 respectively. Food money is not paid when meals are provided at municipal reception. Household composition follows the scheme definition; adult children and some relatives count as separate persons/families. Leefgeld is not ordinary municipal social assistance or a universal allowance.
 
 ## Ask your municipality about the application
 
@@ -25,11 +25,11 @@ The municipality where you are registered administers leefgeld. Government guida
 
 ## Income and the separate reception contribution
 
-For adults aged 18 or over staying in municipal reception who have a job, a WW benefit, or a benefit because they are long-term ill or unable to work, a personal reception contribution may apply. Leefgeld is not automatically stopped just because an adult works: full withdrawal is required only when income exceeds 115% of the applicable leefgeld amount. Municipalities may partially withdraw leefgeld or collect the contribution within this norm, and may decide not to withdraw leefgeld or to waive the contribution if collection would cause disproportionate harm. A full personal contribution is due only when income exceeds 115% of the withdrawn leefgeld plus the contribution. The published rates in the reviewed guidance apply from 1 August 2026 and depend on the household and reception arrangement. Ask your municipality how it applies the current rules to your household. The contribution is not rent or rent benefit.
+The official Ukraine work-and-income page says that when a member of a leefgeld household aged 18 or over starts work or receives a specified Dutch benefit, the household leefgeld stops. The separate municipal-reception contribution rules use a 115% income norm: leefgeld is fully withdrawn only above 115% of the applicable amount, and the full contribution is due only above 115% of the (withdrawn) leefgeld plus contribution. Municipalities may partly withdraw leefgeld/collect the contribution and may waive either where collection causes disproportionate harm. Because the official pages describe overlapping income rules, ask the municipality how the current RooO calculation applies to your household; do not assume work alone or the 115% norm determines every individual result. From 1 August 2026, the maximum contribution is €244.22 per adult monthly for operating costs and €260.97 per adult for meals where catering is provided; the two-adult catering cap is €1,010.38 monthly. Report income and household size and changes as required. This is separate from rent and rent benefit.
 
 ## Child benefit has separate conditions
 
-Child benefit and the supplementary child-related budget are separate schemes, not automatic parts of leefgeld. Government guidance describes child benefit for Ukrainian refugees in the context of working as an employee in the Netherlands. The supplementary budget has additional conditions, including rules about child benefit or contributing to child expenses, income, assets and residence. Check current SVB and tax-benefit guidance for the relevant scheme; having a child or being registered does not by itself guarantee payment.
+Kinderbijslag (child benefit) and kindgebonden budget (child budget) are separate from leefgeld. A parent generally must be insured under the child-benefit scheme; Ukrainian-specific guidance describes access in the context of employment in the Netherlands, while SVB assesses the individual insurance position. Kindgebonden budget is for children under 18 and generally requires child benefit plus income, asset and household conditions; for 2026, the asset ceiling is €146,011 without a toeslagpartner or €184,633 with one. A temporary-protection holder does not need a residence permit for the child budget if otherwise eligible. Apply through Mijn toeslagen; it may be automatic if you already receive another allowance. Having a child or BRP registration alone does not establish entitlement. Zorgtoeslag is separate and requires an ordinary Dutch health-insurance policy; RMO coverage alone does not qualify.
 
 ### Claim coverage
 
@@ -41,7 +41,7 @@ Child benefit and the supplementary child-related budget are separate schemes, n
 ## Editorial exclusions
 
 - NL-SOC01-05 remains UNRESOLVED and is not used to make a reader-facing eligibility claim about ordinary bijstand or MOP.
-- No current leefgeld or contribution amount is stated; the date-specific official tables must be checked before publication.
+- Leefgeld rates and contribution caps are dated 1 August 2026 and must be checked again before publication or for later periods.
 - No universal child-benefit or child-budget entitlement is implied.
 - Leefgeld, rent benefit, personal reception contribution and ordinary municipal assistance are not treated as interchangeable.
 
@@ -56,7 +56,7 @@ Summary:
 Content:
 ## Для чого призначене leefgeld
 
-Leefgeld — це підтримка, описана для людей у муніципальній системі прийому українців. За урядовими рекомендаціями, вона може покривати одяг і особисті витрати, а також харчування, якщо у місці розміщення не надають їжу. Для людей, які живуть у приймаючій родині, може передбачатися додаткова сума. Розмір залежить, зокрема, від віку та складу домогосподарства; досліджена урядова таблиця діяла з 1 серпня 2026 року. Leefgeld не є універсальною виплатою чи звичайною муніципальною соціальною допомогою.
+Leefgeld — це допомога особам, які відповідають умовам муніципальних механізмів прийому українців, зокрема проживання у приймаючій родині. Її адмініструють муніципалітети. Вона покриває одяг і особисті витрати; кошти на їжу виплачують, якщо в закладі не надають харчування. Люди, які живуть у приймаючій родині, також отримують житлову складову €77,16 на місяць. Ставки з 1 серпня 2026 року: на одяг — €65,77 на особу; на їжу — €260,97 для дорослого, який живе сам або в сім’ї з двох осіб, €221,83 для дорослих у сім’ї з трьох осіб, €195,72 у сім’ї з чотирьох або більше осіб; для дітей до 18 років відповідно €216,41, €183,94 або €162,33. Кошти на їжу не виплачують, якщо муніципальний заклад забезпечує харчування. Склад сім’ї визначається правилами схеми; повнолітні діти та деякі родичі рахуються окремо. Це не звичайна муніципальна соціальна допомога й не універсальна виплата.
 
 ## Запитайте муніципалітет про подання заяви
 
@@ -64,11 +64,11 @@ Leefgeld адмініструє муніципалітет, у якому ви �
 
 ## Доходи та окремий внесок за розміщення
 
-Для дорослих віком від 18 років, які перебувають у муніципальному розміщенні та працюють, отримують допомогу WW або виплату через тривалу хворобу чи непрацездатність, може застосовуватися особистий внесок за розміщення. Leefgeld не припиняється автоматично лише через те, що дорослий працює: повністю припинити його виплату потрібно лише тоді, коли дохід перевищує 115% відповідного розміру leefgeld. Муніципалітет може частково припинити виплату leefgeld або частково стягнути внесок у межах цієї норми; він також має право не припиняти виплату чи звільнити від внеску, якщо стягнення спричинило б непропорційну шкоду. Повний особистий внесок стягується лише тоді, коли дохід перевищує 115% суми leefgeld після його припинення плюс цей внесок. Ставки, наведені в перевірених рекомендаціях, діють з 1 серпня 2026 року та залежать від домогосподарства й умов розміщення. Запитайте муніципалітет, як чинні правила застосовуються до вашого домогосподарства. Цей внесок не є орендною платою чи допомогою на оренду.
+Офіційна сторінка про роботу й доходи каже, що якщо член домогосподарства, яке отримує leefgeld, від 18 років починає працювати або отримує визначену нідерландську виплату, leefgeld домогосподарства припиняється. Окремі правила внеску за муніципальне розміщення застосовують поріг 115%: leefgeld повністю припиняють лише понад 115% відповідної суми, а повний внесок стягують лише понад 115% (припиненого) leefgeld плюс внесок. Муніципалітет може частково припинити leefgeld/стягнути внесок і звільнити від них, якщо стягнення завдасть непропорційної шкоди. Оскільки офіційні сторінки описують правила доходів, що перетинаються, запитайте муніципалітет, як чинний розрахунок RooO застосовується до вашої сім’ї; не припускайте, що лише робота або поріг 115% визначає кожен випадок. З 1 серпня 2026 року максимум внеску — €244,22 на дорослого щомісяця за експлуатаційні витрати та €260,97 за харчування, якщо заклад надає його; максимум для двох дорослих у закладі з харчуванням — €1 010,38 на місяць. Повідомляйте про доходи, склад сім’ї та зміни відповідно до правил. Внесок окремий від оренди й допомоги на оренду.
 
 ## Виплати на дітей мають окремі умови
 
-Допомога на дитину та додатковий бюджет, пов’язаний із дітьми, — окремі програми, а не автоматична частина leefgeld. Урядові рекомендації описують допомогу на дитину для українців у контексті роботи за наймом у Нідерландах. Для додаткового бюджету діють інші умови, зокрема щодо отримання допомоги на дитину або участі у витратах на дитину, доходів, майна та проживання. Перевірте актуальні правила відповідної програми в SVB і податковій службі; наявність дитини чи реєстрації сама по собі не гарантує виплату.
+Kinderbijslag (допомога на дитину) та kindgebonden budget (дитячий бюджет) окремі від leefgeld. Батько або мати зазвичай мають бути застраховані за схемою допомоги на дитину; спеціальні рекомендації для українців описують доступ у контексті роботи в Нідерландах, а SVB оцінює індивідуальне страхування. Kindgebonden budget призначений для дітей до 18 років і зазвичай потребує отримання kinderbijslag та відповідності умовам щодо доходу, майна й домогосподарства; у 2026 році межа активів — €146 011 без toeslagpartner або €184 633 з ним. Особі під тимчасовим захистом не потрібен дозвіл на проживання для цієї виплати, якщо виконано інші умови. Подайте заяву через Mijn toeslagen; виплата може бути автоматичною, якщо ви вже отримуєте іншу допомогу. Наявність дитини чи реєстрації BRP сама по собі не встановлює право. Zorgtoeslag окрема й потребує звичайного нідерландського медичного поліса; самого покриття RMO недостатньо.
 
 ### Claim coverage
 
@@ -80,7 +80,7 @@ Leefgeld адмініструє муніципалітет, у якому ви �
 ## Editorial exclusions
 
 - NL-SOC01-05 залишається UNRESOLVED і не використовується для тверджень про право на звичайну bijstand чи MOP.
-- Актуальні суми leefgeld або внеску не наведено; перед публікацією треба перевірити офіційні таблиці з датами чинності.
+- Ставки leefgeld і максимуми внеску датовані 1 серпня 2026 року; їх слід перепровірити перед публікацією або для наступних періодів.
 - Не стверджується універсальне право на допомогу на дитину чи додатковий бюджет.
 - Leefgeld, допомогу на оренду, особистий внесок за розміщення та звичайну муніципальну допомогу не ототожнено.
 
@@ -95,7 +95,7 @@ Summary:
 Content:
 ## Для чего предназначено leefgeld
 
-Leefgeld — это поддержка, описанная для людей в муниципальной системе приёма украинцев. Согласно правительственным рекомендациям, она может покрывать одежду и личные расходы, а также питание, если в месте размещения не предоставляют еду. Для людей, живущих у принимающей семьи, может предусматриваться дополнительная сумма. Размер зависит, в частности, от возраста и состава домохозяйства; исследованная правительственная таблица действовала с 1 августа 2026 года. Leefgeld не является универсальной выплатой или обычной муниципальной социальной помощью.
+Leefgeld — это помощь лицам, отвечающим условиям муниципальных механизмов приёма украинцев, в том числе проживанию у принимающей семьи. Её администрируют муниципалитеты. Она покрывает одежду и личные расходы; деньги на питание выплачиваются, если в месте размещения не предоставляют еду. Живущие у принимающей семьи также получают жилищную составляющую €77,16 в месяц. Ставки с 1 августа 2026 года: на одежду — €65,77 на человека; на питание — €260,97 для взрослого, живущего одного или в семье из двух человек, €221,83 для взрослых в семье из трёх человек, €195,72 в семье из четырёх и более; для детей до 18 лет соответственно €216,41, €183,94 или €162,33. Деньги на питание не выплачивают, если муниципальное место размещения предоставляет питание. Состав семьи определяется правилами схемы; взрослые дети и некоторые родственники считаются отдельно. Leefgeld не является обычной муниципальной социальной помощью или универсальной выплатой.
 
 ## Спросите муниципалитет о подаче заявления
 
@@ -103,11 +103,11 @@ Leefgeld администрирует муниципалитет, в котор�
 
 ## Доходы и отдельный взнос за размещение
 
-Для взрослых от 18 лет, которые проживают в муниципальном приёме и работают, получают пособие WW либо пособие из-за длительной болезни или невозможности работать, может применяться личный взнос за размещение. Leefgeld не прекращается автоматически только потому, что взрослый работает: полностью прекратить его выплату нужно лишь тогда, когда доход превышает 115% соответствующей суммы leefgeld. Муниципалитет может частично прекратить выплату leefgeld или частично взыскать взнос в пределах этой нормы; он также вправе не прекращать выплату или списать взнос, если взыскание привело бы к несоразмерному ущербу. Полный личный взнос взимается только тогда, когда доход превышает 115% суммы leefgeld после прекращения выплаты плюс этот взнос. Ставки, указанные в проверенных рекомендациях, действуют с 1 августа 2026 года и зависят от домохозяйства и условий размещения. Уточните в муниципалитете, как действующие правила применяются к вашему домохозяйству. Этот взнос не является арендной платой или пособием на аренду.
+Официальная страница о работе и доходах говорит, что если член домохозяйства, получающего leefgeld, в возрасте от 18 лет начинает работать или получает определённую нидерландскую выплату, leefgeld домохозяйства прекращается. Отдельные правила взноса за муниципальное размещение используют порог 115%: leefgeld полностью прекращают только при доходе выше 115% соответствующей суммы, а полный взнос взимают только выше 115% (прекращённого) leefgeld плюс взнос. Муниципалитет может частично прекратить leefgeld/взимать взнос и освободить от них, если взыскание причинит несоразмерный ущерб. Поскольку официальные страницы описывают пересекающиеся правила доходов, уточните в муниципалитете, как действующий расчёт RooO применяется к вашей семье; не предполагайте, что только работа или порог 115% определяет каждый случай. С 1 августа 2026 года максимум взноса — €244,22 на взрослого в месяц за эксплуатационные расходы и €260,97 за питание, если его предоставляет учреждение; для двух взрослых в месте с питанием максимум составляет €1 010,38 в месяц. Сообщайте о доходах, составе семьи и изменениях по правилам. Взнос отдельно от аренды и пособия на аренду.
 
 ## Выплаты на детей имеют отдельные условия
 
-Пособие на ребёнка и дополнительный бюджет, связанный с детьми, — отдельные программы, а не автоматическая часть leefgeld. Правительственные рекомендации описывают пособие на ребёнка для украинцев в контексте работы по найму в Нидерландах. Для дополнительного бюджета действуют другие условия, в том числе правила о пособии на ребёнка или участии в расходах на ребёнка, доходах, имуществе и проживании. Проверьте актуальные правила соответствующей программы в SVB и налоговой службе; наличие ребёнка или регистрации само по себе не гарантирует выплату.
+Kinderbijslag (пособие на ребёнка) и kindgebonden budget (детский бюджет) — отдельные от leefgeld программы. Родитель обычно должен быть застрахован по схеме пособия на ребёнка; специальные рекомендации для украинцев описывают доступ в контексте работы в Нидерландах, а SVB оценивает индивидуальную страховку. Kindgebonden budget предназначен для детей младше 18 лет и обычно требует получения kinderbijslag и соблюдения условий по доходу, имуществу и составу семьи; в 2026 году лимит имущества — €146 011 без toeslagpartner или €184 633 с ним. Лицу под временной защитой не требуется вид на жительство для этой выплаты, если выполнены прочие условия. Подайте заявление через Mijn toeslagen; выплата может назначаться автоматически, если вы уже получаете другую выплату. Наличие ребёнка или регистрации BRP само по себе не даёт права на выплату. Zorgtoeslag — отдельная выплата, для которой требуется обычный нидерландский медицинский полис; одного покрытия RMO недостаточно.
 
 ### Claim coverage
 
@@ -119,10 +119,10 @@ Leefgeld администрирует муниципалитет, в котор�
 ## Editorial exclusions
 
 - NL-SOC01-05 остаётся UNRESOLVED и не используется для утверждений о праве на обычную bijstand или MOP.
-- Актуальные суммы leefgeld или взноса не приводятся; перед публикацией нужно проверить официальные таблицы и даты их действия.
+- Ставки leefgeld и максимумы взноса датированы 1 августа 2026 года; их следует перепроверить перед публикацией или для следующих периодов.
 - Не подразумевается универсальное право на пособие на ребёнка или дополнительный бюджет.
 - Leefgeld, пособие на аренду, личный взнос за размещение и обычная муниципальная помощь не смешиваются.
 
 ## Editorial source set
 
-SOC-S01, SOC-S02, SOC-S04, SOC-S05
+SOC-S01, SOC-S02, SOC-S04, SOC-S05, SOC-S06

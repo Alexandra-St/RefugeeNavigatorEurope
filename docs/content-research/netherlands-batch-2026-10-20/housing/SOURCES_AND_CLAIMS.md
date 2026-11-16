@@ -19,6 +19,8 @@ Municipal reception navigation, private rental basics and rent-benefit/personal-
 | HOUSING-S07 | Dienst Toeslagen, Can I receive benefits as a refugee from Ukraine? | https://www.belastingdienst.nl/wps/wcm/connect/nl/toeslagen/content/toeslagen-voor-vluchtelingen-oekraine | Opened 20 Oct 2026; TPD-specific conditional route to huurtoeslag and Mijn toeslagen application. |
 | HOUSING-S08 | Dienst Toeslagen, Conditions for rent benefit | https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/toeslagen/huurtoeslag/voorwaarden/ | Opened 20 Oct 2026; criteria include self-contained home, lease, income/assets, residence/registration, age and rent payment/evidence. |
 | HOUSING-S09 | Dienst Toeslagen, Who counts as a co-resident for rent benefit? | https://www.belastingdienst.nl/wps/wcm/connect/nl/huurtoeslag/content/wie-telt-als-medebewoner | Opened 20 Oct 2026; hosted TPD refugee excluded from co-resident count through 31 Dec 2026; the page says from 2027 they count. |
+| HOUSING-S10 | Dienst Toeslagen, Rent benefit changes from 2026 | https://www.belastingdienst.nl/wps/wcm/connect/nl/huurtoeslag/content/huurtoeslag-verandert-vanaf-2026 | Opened 16 Nov 2026; 2026 application threshold and calculation caps/service-cost treatment. |
+| HOUSING-S11 | Ministry of Justice and Security, Temporary Displaced Persons from Ukraine Reception Act (Tijdelijke wet opvang ontheemden Oekraïne, Stb. 2024, 190) | https://zoek.officielebekendmakingen.nl/stb-2024-190.html | Opened 16 Nov 2026; statutory national framework for municipal reception. |
 
 ## Atomic claims
 

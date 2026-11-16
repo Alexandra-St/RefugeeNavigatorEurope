@@ -21,7 +21,7 @@ If you are covered by Dutch temporary protection and have valid IND proof showin
 
 ## Employer checks and notification
 
-For the covered Ukrainian employee route, the employer must check the relevant status and documents and notify UWV at least two working days before the work begins. The employer must also report specified changes through the stated process. These requirements concern the described cohort and do not replace the rules for other foreign-worker categories. Check current IND and UWV instructions for the documents and procedure.
+For the covered Ukrainian employee route, the employer must check the worker’s status and proof of the right to work. UWV lists an IND sticker without an expiry date, or an expiry-dated sticker/card accompanied by an IND extension letter; permanent Ukrainian residence permit holders covered by temporary protection can show an IND sticker or O-document. The employer must submit the UWV hiring notification through its employer portal at least two working days before work starts. Work may start two working days after submission. The employer must also check that the worker has a BSN and valid, current and authentic identity document, and report specified changes through the same form. These requirements concern the described cohort and do not replace the rules for other foreign-worker categories. Check current IND and UWV instructions for the documents and procedure.
 
 ## Contract and basic employee protections
 
@@ -65,7 +65,7 @@ Content:
 
 ## Перевірка документів і повідомлення роботодавця
 
-Для описаного маршруту працевлаштування українців роботодавець має перевірити відповідний статус і документи та повідомити UWV щонайменше за два робочі дні до початку роботи. Про визначені зміни роботодавець також має повідомляти за встановленою процедурою. Ці вимоги стосуються зазначеної групи й не замінюють правил для інших категорій іноземних працівників. Перевіряйте актуальні інструкції IND і UWV щодо документів і процедури.
+Для описаного маршруту працевлаштування українців роботодавець має перевірити статус працівника та документи, що підтверджують право на роботу. UWV вказує на наклейку IND без дати закінчення строку дії або на наклейку чи картку з датою закінчення строку дії разом із листом IND про продовження; власники постійного дозволу на проживання в Україні, охоплені тимчасовим захистом, можуть пред’явити наклейку IND або O-документ. Роботодавець має подати повідомлення про найм до UWV через портал роботодавця щонайменше за два робочі дні до початку роботи. Почати роботу можна через два робочі дні після подання. Роботодавець також має перевірити наявність у працівника BSN і чинного, актуального та справжнього документа, що посвідчує особу, а про визначені зміни повідомляти тією самою формою. Ці вимоги стосуються зазначеної групи й не замінюють правил для інших категорій іноземних працівників. Перевіряйте актуальні інструкції IND і UWV щодо документів і процедури.
 
 ## Трудовий договір і базові права працівника
 
@@ -109,7 +109,7 @@ Content:
 
 ## Проверка документов и уведомление работодателя
 
-Для описанного маршрута найма украинцев работодатель должен проверить соответствующий статус и документы и уведомить UWV не менее чем за два рабочих дня до начала работы. О некоторых изменениях работодатель также должен сообщить по установленной процедуре. Эти требования относятся к указанной группе и не заменяют правила для других категорий иностранных работников. Проверяйте актуальные инструкции IND и UWV о документах и порядке действий.
+Для описанного маршрута найма украинцев работодатель должен проверить статус работника и документы, подтверждающие право на работу. UWV указывает на наклейку IND без срока действия либо на наклейку или карточку с датой окончания срока действия вместе с письмом IND о продлении; владельцы постоянного украинского вида на жительство, охваченные временной защитой, могут предъявить наклейку IND или O-документ. Работодатель должен подать уведомление о найме в UWV через портал работодателя не менее чем за два рабочих дня до начала работы. Приступить к работе можно через два рабочих дня после подачи. Работодатель также должен проверить наличие у работника BSN и действительного, актуального и подлинного удостоверения личности, а об определённых изменениях сообщать через ту же форму. Эти требования относятся к указанной группе и не заменяют правила для других категорий иностранных работников. Проверяйте актуальные инструкции IND и UWV о документах и порядке действий.
 
 ## Трудовой договор и основные права работника
 

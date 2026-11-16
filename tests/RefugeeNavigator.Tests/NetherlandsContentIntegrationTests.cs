@@ -44,14 +44,14 @@ public sealed class NetherlandsContentIntegrationTests
     };
     private static readonly IReadOnlyDictionary<string, int> ExpectedSourceCounts = new Dictionary<string, int>
     {
-        ["NL-TP-01"] = 10,
+        ["NL-TP-01"] = 11,
         ["NL-TP-02"] = 8,
         ["NL-EMP-01"] = 3,
         ["NL-EMP-02"] = 6,
         ["NL-HEALTH-01"] = 11,
-        ["NL-HOUSING-01"] = 7,
+        ["NL-HOUSING-01"] = 10,
         ["NL-EDU-01"] = 9,
-        ["NL-SOC-01"] = 4
+        ["NL-SOC-01"] = 5
     };
     private static readonly IReadOnlyDictionary<string, string> DraftFolders = new Dictionary<string, string>
     {
@@ -78,30 +78,6 @@ public sealed class NetherlandsContentIntegrationTests
     [
         "temporary-protection", "employment", "healthcare", "housing", "education", "social-assistance"
     ];
-    private static readonly HashSet<Guid> RecheckedSourceIds = new()
-    {
-        Guid.Parse("8d4d5cf3-b0da-54fc-8de4-bd43d1e39a14"),
-        Guid.Parse("e6c393e9-1f3a-5913-9134-0a58e750160c"),
-        Guid.Parse("4c08e6cf-6914-5d97-b06f-8747c2d6dbc8"),
-        Guid.Parse("9c54de3d-0b37-5ecc-b879-b39f35082d4f"),
-        Guid.Parse("979a64e2-7a45-5c2b-8151-9ad7f57d61d8"),
-        Guid.Parse("9170db80-3955-5a77-a6fc-1334293d1a23"),
-        Guid.Parse("fda6d123-58d8-5858-9e91-311f5266f5ee"),
-        Guid.Parse("249d9618-2212-5251-8f6e-8de0766e0cf3"),
-        Guid.Parse("1690f9d6-0721-5005-b9de-fda56864ed70"),
-        Guid.Parse("6cbd665c-2c9b-5adf-af7c-f93aa0073d7c"),
-        Guid.Parse("6dae1849-408f-5504-a344-b88a1b3832dd"),
-        Guid.Parse("4b84ead2-52e5-5810-ac8c-cad22c7145d2"),
-        Guid.Parse("7ec8ae01-c6cc-5df9-901c-b0addeaa316b"),
-        Guid.Parse("c917869f-703b-5f62-99ff-9bb23bfe6443"),
-        Guid.Parse("82c68617-079f-55ad-b652-2cd30daec7e1"),
-        Guid.Parse("400b5488-04f8-5492-ae3e-044af4cd25e9"),
-        Guid.Parse("18793b2f-bb3f-5dad-9e71-cd0f724dc971"),
-        Guid.Parse("cae7f886-063b-5136-a924-270709eabe18"),
-        Guid.Parse("59f03221-ac26-5602-8173-e880102d695b"),
-        Guid.Parse("185885fd-278b-5489-8a2b-a436b6998b99"),
-    };
-    private static readonly DateTime SourceCheckDate = new(2026, 10, 20);
     private static readonly Lazy<Task<CatalogData>> Catalog = new(() =>
         new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync());
     private static readonly ResourceManager Resources = new(
@@ -231,9 +207,9 @@ public sealed class NetherlandsContentIntegrationTests
         var entryId = StableArticleIds["NL-EMP-01"];
         var expectedArticlePhrases = new Dictionary<string, string[]>
         {
-            ["en"] = ["EURES for vacancy search", "Europass for sharing a profile", "register in person at a local UWV office"],
-            ["uk"] = ["через EURES", "Europass для представлення профілю", "особисту реєстрацію у місцевому офісі UWV"],
-            ["ru"] = ["через EURES", "Europass для представления профиля", "личную регистрацию в местном офисе UWV"]
+            ["en"] = ["Work.nl is an official vacancy-search channel", "EURES vacancy search", "profile through the EU Talent Pool pilot", "register in person at a local UWV office"],
+            ["uk"] = ["Work.nl — офіційний канал пошуку вакансій", "пошук вакансій через EURES", "профіль Europass у межах пілотного проєкту EU Talent Pool", "особисту реєстрацію у місцевому офісі UWV"],
+            ["ru"] = ["Work.nl — официальный канал поиска вакансий", "поиск через EURES", "профиль Europass в рамках пилотного проекта EU Talent Pool", "личную регистрацию в местном офисе UWV"]
         };
 
         foreach (var (language, phrases) in expectedArticlePhrases)
@@ -241,7 +217,6 @@ public sealed class NetherlandsContentIntegrationTests
             var translation = Assert.Single(catalog.InformationEntryTranslations,
                 item => item.InformationEntryId == entryId && item.LanguageCode == language);
             Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
-            Assert.DoesNotContain("Work.nl", translation.Content, StringComparison.OrdinalIgnoreCase);
             foreach (var phrase in phrases)
                 Assert.Contains(phrase, translation.Content, StringComparison.OrdinalIgnoreCase);
         }
@@ -271,10 +246,7 @@ public sealed class NetherlandsContentIntegrationTests
                     item => item.InformationEntryId == entry.Id && item.LanguageCode == languageCode);
                 Assert.Equal(expected.Title, actual.Title);
                 Assert.Equal(expected.Summary, actual.Summary);
-                var expectedContent = key == "NL-EMP-01"
-                    ? ApplyEmploymentVacancyCorrection(expected.Content, languageCode)
-                    : expected.Content;
-                Assert.Equal(NormalizeLines(expectedContent), NormalizeLines(actual.Content));
+                Assert.Equal(NormalizeLines(expected.Content), NormalizeLines(actual.Content));
             }
         }
     }
@@ -288,9 +260,9 @@ public sealed class NetherlandsContentIntegrationTests
         var entryIds = entries.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => entryIds.Contains(item.InformationEntryId)).ToArray();
 
-        Assert.Equal(58, sources.Length);
-        Assert.Equal(1468, catalog.OfficialSources.Count);
-        Assert.Equal(44, sources.Select(item => item.Url.AbsoluteUri).Distinct(StringComparer.OrdinalIgnoreCase).Count());
+        Assert.Equal(63, sources.Length);
+        Assert.Equal(1473, catalog.OfficialSources.Count);
+        Assert.Equal(48, sources.Select(item => item.Url.AbsoluteUri).Distinct(StringComparer.OrdinalIgnoreCase).Count());
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         Assert.All(sources, source =>
         {
@@ -298,14 +270,7 @@ public sealed class NetherlandsContentIntegrationTests
             Assert.True(source.Url.IsAbsoluteUri);
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
             Assert.False(string.IsNullOrWhiteSpace(source.Title));
-            var expectedCheckDate = source.Id == Guid.Parse("59f03221-ac26-5602-8173-e880102d695b")
-                || source.Id == Guid.Parse("185885fd-278b-5489-8a2b-a436b6998b99")
-                ? new DateTime(2026, 11, 15)
-                : RecheckedSourceIds.Contains(source.Id)
-                    || source.Id == Guid.Parse("e59632da-eb67-5b56-840f-9749cdc9f171")
-                    ? new DateTime(2026, 10, 21)
-                    : SourceCheckDate;
-            Assert.Equal(expectedCheckDate, source.LastCheckedAt.UtcDateTime.Date);
+            Assert.Equal(new DateTime(2026, 11, 16), source.LastCheckedAt.UtcDateTime.Date);
         });
 
         foreach (var (key, expectedCount) in ExpectedSourceCounts)
@@ -323,7 +288,8 @@ public sealed class NetherlandsContentIntegrationTests
                     "https://www.rijksoverheid.nl/documenten/vraag-en-antwoord/eerstelijnszorg/wat-moet-ik-doen-als-iemand-dringend-medische-hulp-nodig-heeft",
                     urgentCareTitle);
             }
-            Assert.Equal(expectedCount, expected.Count);
+            Assert.True(expectedCount == expected.Count, $"Editorial source count mismatch for {key}: expected {expectedCount}, actual {expected.Count}.");
+            Assert.True(expectedCount == ownedSources.Length, $"Owned source count mismatch for {key}: expected {expectedCount}, actual {ownedSources.Length}.");
             Assert.Equal(expected.Keys.Order(StringComparer.OrdinalIgnoreCase).ToArray(),
                 ownedSources.Select(item => item.Url.AbsoluteUri).Order(StringComparer.OrdinalIgnoreCase).ToArray());
             Assert.All(ownedSources, source =>
@@ -466,9 +432,9 @@ public sealed class NetherlandsContentIntegrationTests
                 .Select(sourceId => sourceId.GetString()).ToArray());
         var expectedComparisonPhrases = new Dictionary<string, string[]>
         {
-            ["en"] = ["jobseekers covered by temporary protection", "EURES for vacancy search", "Europass for sharing a profile"],
-            ["uk"] = ["на яких поширюється тимчасовий захист", "через EURES", "Europass для представлення профілю"],
-            ["ru"] = ["на которых распространяется временная защита", "через EURES", "Europass для представления профиля"]
+            ["en"] = ["jobseekers covered by temporary protection", "EURES for vacancies", "Europass for a profile through the EU Talent Pool pilot"],
+            ["uk"] = ["на яких поширюється тимчасовий захист", "до вакансій EURES", "профілю Europass у межах пілотного проєкту EU Talent Pool"],
+            ["ru"] = ["на которых распространяется временная защита", "к вакансиям EURES", "профилю Europass в рамках пилотного проекта EU Talent Pool"]
         };
         var values = vacanciesFact.GetProperty("Values");
         foreach (var (language, phrases) in expectedComparisonPhrases)
@@ -478,6 +444,75 @@ public sealed class NetherlandsContentIntegrationTests
             foreach (var phrase in phrases)
                 Assert.Contains(phrase, value, StringComparison.OrdinalIgnoreCase);
         }
+    }
+
+    [Fact]
+    public async Task NetherlandsRefreshHasSafeDatesOwnedCompareSourcesAndUnavailableFiling()
+    {
+        var catalog = await Catalog.Value;
+        var refreshedIds = StableArticleIds.Where(pair => pair.Key != "NL-TP-02")
+            .Select(pair => pair.Value).ToHashSet();
+        foreach (var translation in catalog.InformationEntryTranslations
+                     .Where(item => refreshedIds.Contains(item.InformationEntryId)))
+            Assert.Equal(new DateTimeOffset(2026, 11, 16, 0, 0, 0, TimeSpan.Zero), translation.LastUpdatedAt);
+
+        var tp02Id = StableArticleIds["NL-TP-02"];
+        foreach (var translation in catalog.InformationEntryTranslations.Where(item => item.InformationEntryId == tp02Id))
+            Assert.Equal(new DateTimeOffset(2026, 10, 21, 22, 1, 22, TimeSpan.Zero), translation.LastUpdatedAt);
+
+        using var document = JsonDocument.Parse(await File.ReadAllTextAsync(
+            Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json")));
+        JsonElement Fact(string aspectId) => document.RootElement.GetProperty("Topics").EnumerateArray()
+            .SelectMany(topic => topic.GetProperty("Aspects").EnumerateArray())
+            .Single(aspect => aspect.GetProperty("Id").GetString() == aspectId)
+            .GetProperty("Facts").EnumerateArray()
+            .Single(fact => fact.GetProperty("CountrySlug").GetString() == "netherlands");
+
+        var protectionDates = Fact("protection-dates");
+        var protectionText = protectionDates.GetProperty("Values").ToString();
+        Assert.Contains("4 March 2028", protectionText, StringComparison.Ordinal);
+        Assert.Contains("4 March 2027", protectionText, StringComparison.Ordinal);
+        Assert.Contains("January 2027", protectionText, StringComparison.Ordinal);
+        Assert.DoesNotContain("Spain", protectionText, StringComparison.OrdinalIgnoreCase);
+        Assert.DoesNotContain("TIE", protectionText, StringComparison.OrdinalIgnoreCase);
+        Assert.DoesNotContain("Order INT/96/2026", protectionText, StringComparison.OrdinalIgnoreCase);
+        Assert.DoesNotContain("1b41070c-31a5-50d2-8ef9-a2c2becbbc3d",
+            protectionDates.GetProperty("OfficialSourceIds").ToString(), StringComparison.OrdinalIgnoreCase);
+
+        var filing = Fact("residence-filing");
+        Assert.Equal("Draft", filing.GetProperty("Status").GetString());
+        Assert.False(filing.GetProperty("IsAvailable").GetBoolean());
+        Assert.Empty(filing.GetProperty("OfficialSourceIds").EnumerateArray());
+
+        var sourceById = catalog.OfficialSources.ToDictionary(source => source.Id);
+        var allNetherlandsFacts = document.RootElement.GetProperty("Topics").EnumerateArray()
+            .SelectMany(topic => topic.GetProperty("Aspects").EnumerateArray())
+            .SelectMany(aspect => aspect.GetProperty("Facts").EnumerateArray())
+            .Where(fact => fact.GetProperty("CountrySlug").GetString() == "netherlands");
+        foreach (var fact in allNetherlandsFacts)
+        {
+            var ownerId = Guid.Parse(fact.GetProperty("InformationEntryId").GetString()!);
+            foreach (var sourceIdElement in fact.GetProperty("OfficialSourceIds").EnumerateArray())
+            {
+                var sourceId = Guid.Parse(sourceIdElement.GetString()!);
+                Assert.True(sourceById.TryGetValue(sourceId, out var source), $"Missing Compare source {sourceId}.");
+                Assert.Equal(ownerId, source!.InformationEntryId);
+            }
+        }
+
+        var revisedSourceBindings = new Dictionary<string, string[]>
+        {
+            ["protection-dates"] = ["e1f80033-9e6d-5474-916f-f8fc1eb493b5", "5da562ac-2956-51c5-8d0e-c2f553979d93", "9422da1c-8127-5191-ae4c-7e0a783af1a7", "59f03221-ac26-5602-8173-e880102d695b"],
+            ["employment-institutions"] = ["1690f9d6-0721-5005-b9de-fda56864ed70"],
+            ["employment-vacancies"] = ["1690f9d6-0721-5005-b9de-fda56864ed70"],
+            ["healthcare-access"] = ["41f41389-0c07-5012-bd42-88a4f166ad53", "bba4ed15-6a60-5016-9d6e-7183cfdeedfc", "98234e00-11a6-5562-915f-3194e57e1091", "35ba0b19-cbf5-5f63-ae6d-233d079978df", "5f8e832a-1ff0-5cd6-a4e2-0c7565cb9688"],
+            ["housing-initial"] = ["5171139a-2b85-537b-96bb-87bdbc519960", "39581114-469f-546f-b52d-ae3906235e34", "f61d03f2-265c-5d60-bec6-4e0a07615034"],
+            ["housing-financial-support"] = ["870388b4-4e7a-5412-84a3-3627fd43344d", "6290793b-f3f9-5b9b-a7ab-f71847e8b6b0", "d53fa054-87d5-5582-9ba4-664e351df3f0", "8909a224-ed90-5f8a-a9fd-ac2dfcaa854f", "31aafe74-9abc-51d5-8f34-ff02b8b2b6df"],
+            ["social-child-benefits"] = ["b4d671c9-8e01-578b-b54a-1f1e822df022", "9cec202a-d2ed-5e07-901b-bb6fa400a291", "69aa017b-c57e-5f6e-bc99-20b12047c162", "1aed58a4-b9a4-513d-93cc-5efdff100645"]
+        };
+        foreach (var (aspectId, expectedIds) in revisedSourceBindings)
+            Assert.Equal(expectedIds, Fact(aspectId).GetProperty("OfficialSourceIds").EnumerateArray()
+                .Select(sourceId => sourceId.GetString()).ToArray());
     }
 
     private static IEnumerable<string> FindCountrySlugs(JsonElement element)
@@ -566,26 +601,6 @@ public sealed class NetherlandsContentIntegrationTests
     }
 
     private static string NormalizeLines(string value) => value.Replace("\r\n", "\n").Trim();
-
-    private static string ApplyEmploymentVacancyCorrection(string content, string language)
-    {
-        var (oldParagraph, correctedParagraph) = language switch
-        {
-            "en" => (
-                "Work.nl is an official vacancy-search channel. UWV’s guidance for people covered by temporary protection also points jobseekers to EURES vacancy search and Europass for sharing a profile. These tools help you look for opportunities; a listing is not a job offer, and using a portal does not guarantee employment.",
-                "UWV’s guidance for people covered by temporary protection points jobseekers to EURES for vacancy search and Europass for sharing a profile. These tools help you look for opportunities; a listing is not a job offer, and using a portal does not guarantee employment."),
-            "uk" => (
-                "Work.nl — офіційний канал пошуку вакансій. У своїх рекомендаціях для людей, на яких поширюється тимчасовий захист, UWV також вказує на пошук вакансій через EURES і профіль Europass. Ці інструменти допомагають шукати можливості, але оголошення не є пропозицією роботи, а користування порталом не гарантує працевлаштування.",
-                "У своїх рекомендаціях для людей, на яких поширюється тимчасовий захист, UWV вказує на пошук вакансій через EURES і використання Europass для представлення профілю. Ці інструменти допомагають шукати можливості, але оголошення не є пропозицією роботи, а користування порталом не гарантує працевлаштування."),
-            "ru" => (
-                "Work.nl — официальный канал поиска вакансий. В рекомендациях для людей, на которых распространяется временная защита, UWV также указывает поиск через EURES и профиль Europass. Эти инструменты помогают искать возможности, но объявление не является предложением работы, а использование портала не гарантирует трудоустройство.",
-                "В рекомендациях для людей, на которых распространяется временная защита, UWV указывает на поиск вакансий через EURES и использование Europass для представления профиля. Эти инструменты помогают искать возможности, но объявление не является предложением работы, а использование портала не гарантирует трудоустройство."),
-            _ => throw new ArgumentOutOfRangeException(nameof(language))
-        };
-
-        Assert.Single(Regex.Matches(content, Regex.Escape(oldParagraph)).Cast<Match>());
-        return content.Replace(oldParagraph, correctedParagraph, StringComparison.Ordinal);
-    }
 
     private static string FindRepositoryRoot()
     {

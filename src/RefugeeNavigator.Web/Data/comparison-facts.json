@@ -703,14 +703,15 @@
               "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
+                "e1f80033-9e6d-5474-916f-f8fc1eb493b5",
+                "5da562ac-2956-51c5-8d0e-c2f553979d93",
                 "9422da1c-8127-5191-ae4c-7e0a783af1a7",
-                "1b41070c-31a5-50d2-8ef9-a2c2becbbc3d",
-                "5da562ac-2956-51c5-8d0e-c2f553979d93"
+                "59f03221-ac26-5602-8173-e880102d695b"
               ],
               "Values": {
-                "en": "The EU temporary-protection scheme runs through 4 March 2028. Spain’s Order INT/96/2026 extends covered TIE cards through 4 March 2027. These are different dates; check your card and the instructions for your document group.",
-                "uk": "Схема тимчасового захисту ЄС діє до 4 березня 2028 року. Наказ Іспанії INT/96/2026 продовжує строк дії охоплених ним карт TIE до 4 березня 2027 року. Це різні дати; перевірте свою картку та інструкції для вашої групи документів.",
-                "ru": "Схема временной защиты ЕС действует до 4 марта 2028 года. Приказ Испании INT/96/2026 продлевает срок действия охватываемых им карт TIE до 4 марта 2027 года. Это разные даты; проверьте свою карту и инструкции для вашей группы документов."
+                "en": "The EU temporary-protection scheme runs through 4 March 2028. IND says the required proof depends on your document group: specified Ukrainian stickers/cards need the personal IND extension letter with the sticker/card; covered non-Ukrainian card holders have an O-document dated 4 March 2027 and will receive an IND letter in January 2027 explaining what to do. Check your own document and current IND instructions; the EU scheme date is not the expiry date printed on every document.",
+                "uk": "Схема тимчасового захисту ЄС діє до 4 березня 2028 року. За інформацією IND, потрібне підтвердження залежить від групи документів: для визначених наклейок і карток громадян України потрібен особистий лист IND про продовження разом із наклейкою чи карткою; власники карток не з України, охоплені відповідними умовами, мають O-документ із датою 4 березня 2027 року й отримають у січні 2027 року лист IND із поясненням подальших дій. Перевірте свій документ і актуальні інструкції IND; дата завершення схеми ЄС не є датою закінчення, надрукованою на кожному документі.",
+                "ru": "Схема временной защиты ЕС действует до 4 марта 2028 года. По информации IND, подтверждение зависит от группы документов: для указанных наклеек и карточек граждан Украины требуется персональное письмо IND о продлении вместе с наклейкой или карточкой; владельцы карточек не из Украины, подпадающие под соответствующие условия, имеют O-документ с датой 4 марта 2027 года и получат в январе 2027 года письмо IND с объяснением дальнейших действий. Проверьте свой документ и актуальные инструкции IND; дата окончания схемы ЕС не является датой окончания, напечатанной на каждом документе."
               }
             },
             {
@@ -1929,9 +1930,9 @@
                 "1690f9d6-0721-5005-b9de-fda56864ed70"
               ],
               "Values": {
-                "en": "UWV’s guidance points jobseekers covered by temporary protection to EURES for vacancy search and Europass for sharing a profile. These tools do not guarantee a vacancy, offer or placement; check the conditions for each route.",
-                "uk": "За рекомендаціями UWV, шукачі роботи, на яких поширюється тимчасовий захист, можуть шукати вакансії через EURES і використовувати Europass для представлення профілю. Ці інструменти не гарантують наявності вакансії, пропозиції роботи чи працевлаштування; перевіряйте умови кожного маршруту.",
-                "ru": "Согласно рекомендациям UWV, соискатели, на которых распространяется временная защита, могут искать вакансии через EURES и использовать Europass для представления профиля. Эти инструменты не гарантируют наличие вакансии, предложение работы или трудоустройство; проверяйте условия каждого маршрута."
+                "en": "UWV’s guidance points jobseekers covered by temporary protection to EURES for vacancies and Europass for a profile through the EU Talent Pool pilot. Eligible jobseekers may publish their Europass profile so EURES advisers and registered employers in participating countries can see it. Check the pilot’s current eligibility conditions; a listing or profile does not guarantee a job.",
+                "uk": "Рекомендації UWV спрямовують шукачів роботи, на яких поширюється тимчасовий захист, до вакансій EURES і профілю Europass у межах пілотного проєкту EU Talent Pool. Особи, які відповідають умовам, можуть опублікувати профіль Europass, щоб його бачили консультанти EURES і зареєстровані роботодавці в країнах-учасницях. Перевірте актуальні умови участі; оголошення чи профіль не гарантують роботу.",
+                "ru": "Рекомендации UWV направляют соискателей, на которых распространяется временная защита, к вакансиям EURES и профилю Europass в рамках пилотного проекта EU Talent Pool. Те, кто соответствует условиям, могут опубликовать профиль Europass, чтобы его видели консультанты EURES и зарегистрированные работодатели в участвующих странах. Проверьте актуальные условия участия; объявление или профиль не гарантируют работу."
               }
             },
             {
@@ -2230,9 +2231,9 @@
                 "1690f9d6-0721-5005-b9de-fda56864ed70"
               ],
               "Values": {
-                "en": "A person covered by temporary protection who seeks UWV job-search assistance is directed to register in person at a local UWV office, bringing identity evidence and a BSN. The guidance says local-council registration comes first. Access depends on status and required documents.",
-                "uk": "Людині, на яку поширюється тимчасовий захист і яка звертається по допомогу UWV з пошуком роботи, вказано зареєструватися особисто в місцевому офісі UWV та взяти документ, що посвідчує особу, і BSN. У рекомендаціях зазначено, що спершу потрібна реєстрація в муніципалітеті. Доступ залежить від статусу й необхідних документів.",
-                "ru": "Человеку, на которого распространяется временная защита и который обращается за помощью UWV в поиске работы, предлагается зарегистрироваться лично в местном офисе UWV и взять документ, удостоверяющий личность, и BSN. В рекомендациях указано, что сначала нужна регистрация в муниципалитете. Доступ зависит от статуса и необходимых документов."
+                "en": "After registering in person at your local UWV office as a jobseeker, bring ID and your BSN. UWV issues a registration certificate that you must renew every three months; UWV sends renewal instructions. Register with your municipality first and check UWV’s current conditions.",
+                "uk": "Після особистої реєстрації в місцевому офісі UWV як шукача роботи з документом, що посвідчує особу, та BSN UWV видає свідоцтво про реєстрацію. Його потрібно поновлювати кожні три місяці; UWV надсилає інструкції щодо поновлення. Спочатку зареєструйтеся у муніципалітеті та перевірте актуальні умови UWV.",
+                "ru": "После личной регистрации в местном отделении UWV в качестве соискателя с документом, удостоверяющим личность, и BSN UWV выдаёт свидетельство о регистрации. Его нужно продлевать каждые три месяца; UWV присылает инструкции по продлению. Сначала зарегистрируйтесь в муниципалитете и проверьте актуальные условия UWV."
               }
             },
             {
@@ -3732,15 +3733,16 @@
               "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "9b608d08-de8a-58a4-8d19-0d2b4bd63eda",
-                "acc9e0c2-50c4-595a-9872-2eccbccbec7d",
                 "41f41389-0c07-5012-bd42-88a4f166ad53",
-                "e1edd80d-2530-57e4-8e55-637382f1dfd1"
+                "bba4ed15-6a60-5016-9d6e-7183cfdeedfc",
+                "98234e00-11a6-5562-915f-3194e57e1091",
+                "35ba0b19-cbf5-5f63-ae6d-233d079978df",
+                "5f8e832a-1ff0-5cd6-a4e2-0c7565cb9688"
               ],
               "Values": {
-                "en": "RMO is a healthcare route for the defined temporary-protection cohort registered in the BRP with title code 46, subject to current scheme terms; eligible patients can use the RMO provider information for GP care. Official pages conflict on whether employed people in this cohort must take out ordinary Dutch insurance. This comparison does not resolve an individual insurance obligation—check current official guidance for the person’s case.",
-                "uk": "RMO — маршрут медичної допомоги для визначеної групи під тимчасовим захистом, зареєстрованої в BRP з кодом документа 46; застосовуються чинні умови програми. Пацієнти, які відповідають умовам, можуть скористатися інформацією RMO щодо сімейних лікарів. Офіційні сторінки суперечать одна одній щодо того, чи мають працевлаштовані люди з цієї групи оформлювати звичайне нідерландське страхування. Це порівняння не визначає індивідуальний обов’язок страхування — перевірте актуальні офіційні рекомендації для конкретної ситуації.",
-                "ru": "RMO — маршрут медицинской помощи для определённой группы под временной защитой, зарегистрированной в BRP с кодом документа 46; применяются действующие условия программы. Пациенты, отвечающие условиям, могут воспользоваться информацией RMO о семейных врачах. Официальные страницы противоречат друг другу в вопросе, должны ли работающие люди из этой группы оформлять обычную нидерландскую страховку. Это сравнение не определяет индивидуальную обязанность страхования — проверьте актуальные официальные рекомендации для конкретной ситуации."
+                "en": "People registered in the BRP with code 46 may be covered by RMO after provider verification. If covered, current Ukraine-specific guidance says they do not need an ordinary Dutch policy, including when working. Employed people may remain formally liable under the Zvw and pay an income-related contribution; the government does not enforce policy purchase during RMO. Individual self-employment and status-change cases remain fact-specific.",
+                "uk": "Особи, зареєстровані в BRP з code 46, можуть бути охоплені RMO після перевірки надавачем. Для тих, хто охоплений схемою, чинні спеціальні рекомендації для України кажуть, що звичайний нідерландський поліс не потрібен, зокрема й у разі роботи. Працівники можуть формально підпадати під Zvw і сплачувати внесок із доходу; уряд не застосовує вимогу придбати поліс під час RMO. Індивідуальні випадки самозайнятості та зміни статусу залежать від обставин.",
+                "ru": "Лица, зарегистрированные в BRP с code 46, могут быть охвачены RMO после проверки поставщиком. Для охваченных схемой действующие специальные рекомендации для Украины говорят, что обычный нидерландский полис не нужен, в том числе при работе. Работающие лица могут формально подпадать под Zvw и платить взнос с дохода; правительство не применяет требование приобрести полис во время RMO. Индивидуальные случаи самозанятости и изменения статуса зависят от обстоятельств."
               }
             },
             {
@@ -4639,13 +4641,14 @@
               "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
+                "5171139a-2b85-537b-96bb-87bdbc519960",
                 "39581114-469f-546f-b52d-ae3906235e34",
                 "f61d03f2-265c-5d60-bec6-4e0a07615034"
               ],
               "Values": {
-                "en": "Municipal reception depends on temporary-protection eligibility, local routing and capacity. In cases referred for IND triage, the municipality offers a place in reception at least until the IND's triage advice. The handbook does not promise a chosen region or facility, reception after that advice, or current availability.",
-                "uk": "Муніципальне розміщення залежить від відповідності умовам тимчасового захисту, місцевого маршруту та наявності місць. У випадках, направлених на оцінювання IND, муніципалітет пропонує місце у прийомі щонайменше до отримання рекомендації IND. Посібник не гарантує вибір регіону чи закладу, розміщення після цієї рекомендації або наявність місць зараз.",
-                "ru": "Муниципальное размещение зависит от соответствия условиям временной защиты, местного маршрута и наличия мест. В случаях, направленных на оценку IND, муниципалитет предлагает место в приёме как минимум до получения рекомендации IND. Руководство не обещает выбранный регион или учреждение, размещение после этой рекомендации либо наличие мест сейчас."
+                "en": "If you qualify for temporary protection, municipalities are responsible under national law for municipal reception. The usual route starts with BRP registration; specified pre-registration triage cases receive interim reception at least until IND advice. Eligibility does not guarantee a particular place, facility, region or duration: municipal assignment and capacity are local.",
+                "uk": "Якщо ви відповідаєте умовам тимчасового захисту, за національним законом муніципалітети відповідають за розміщення. Зазвичай маршрут починається з реєстрації в BRP; у визначених випадках сортування до реєстрації надається тимчасове місце щонайменше до рекомендації IND. Право не гарантує конкретного місця, закладу, регіону чи тривалості: розподіл і наявність залежать від муніципалітету.",
+                "ru": "Если вы соответствуете условиям временной защиты, по национальному закону муниципалитеты отвечают за размещение. Обычно процедура начинается с регистрации в BRP; в определённых случаях триажа до регистрации предоставляется временное место как минимум до рекомендации IND. Право не гарантирует конкретное место, учреждение, регион или срок: распределение и наличие зависят от муниципалитета."
               }
             },
             {
@@ -5236,14 +5239,16 @@
               "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
+                "870388b4-4e7a-5412-84a3-3627fd43344d",
                 "6290793b-f3f9-5b9b-a7ab-f71847e8b6b0",
                 "d53fa054-87d5-5582-9ba4-664e351df3f0",
-                "870388b4-4e7a-5412-84a3-3627fd43344d"
+                "8909a224-ed90-5f8a-a9fd-ac2dfcaa854f",
+                "31aafe74-9abc-51d5-8f34-ff02b8b2b6df"
               ],
               "Values": {
-                "en": "A person under temporary protection may possibly qualify for huurtoeslag only if the current general conditions are met, including an eligible self-contained rented home, registration/residence, household income and asset limits, adult-household-member rules and rent-payment proof; apply through Mijn toeslagen. A separate personal contribution may apply to some adults in municipal reception with earnings or specified benefits, subject to thresholds and municipal discretion. Neither is a guaranteed refugee rent payment.",
-                "uk": "Людина під тимчасовим захистом може мати право на huurtoeslag лише за виконання чинних загальних умов: зокрема, відповідне окреме орендоване житло, реєстрація й проживання, ліміти доходу та активів домогосподарства, правила щодо повнолітніх членів домогосподарства й підтвердження сплати оренди. Заяву подають через Mijn toeslagen. Для деяких повнолітніх у муніципальному розміщенні з доходом або визначеними виплатами може діяти окремий особистий внесок — з урахуванням порогів і рішення муніципалітету. Жодна з цих схем не є гарантованою виплатою на оренду для всіх біженців.",
-                "ru": "Человек под временной защитой может иметь право на huurtoeslag только при соблюдении действующих общих условий: в частности, подходящее отдельное арендованное жильё, регистрация и проживание, ограничения по доходу и имуществу домохозяйства, правила для совершеннолетних членов семьи и подтверждение оплаты аренды. Заявление подают через Mijn toeslagen. Для некоторых совершеннолетних в муниципальном размещении с доходом или определёнными выплатами может действовать отдельный личный взнос — с учётом порогов и усмотрения муниципалитета. Ни одна из этих схем не является гарантированной выплатой на аренду для всех беженцев."
+                "en": "Huurtoeslag is separate from municipal reception and depends on household eligibility. From 2026 there is no maximum rent threshold to apply, but calculation caps are €932.93 (age 21+) and €498.20 (ages 18–20); service costs are excluded. A Ukrainian temporary-protection guest is excluded from the host’s co-resident calculation until 1 January 2027, then counts. Municipal reception contributions are separate: from 1 August 2026, caps are €244.22 per adult for operating costs and €260.97 per adult for meals (two-adult meal cap €1,010.38); the 115% income rule and municipal hardship reductions apply.",
+                "uk": "Huurtoeslag окрема від муніципального розміщення й залежить від права домогосподарства. З 2026 року немає граничної орендної плати для подання заяви, але суми для розрахунку обмежені: €932,93 (від 21 року) та €498,20 (18–20 років); витрати на послуги не враховуються. Гість з України під тимчасовим захистом не враховується в домогосподарстві господаря до 1 січня 2027 року, після чого враховується. Внесок за муніципальне розміщення окремий: з 1 серпня 2026 року максимум €244,22 на дорослого за експлуатаційні витрати та €260,97 за харчування (для двох дорослих максимум за харчування €1 010,38); застосовуються поріг 115% і муніципальне зменшення у разі скрути.",
+                "ru": "Huurtoeslag отдельно от муниципального размещения и зависит от права домохозяйства. С 2026 года нет максимальной аренды для подачи заявления, но расчётные пределы составляют €932,93 (от 21 года) и €498,20 (18–20 лет); расходы на услуги не учитываются. Гость из Украины под временной защитой не учитывается в домохозяйстве принимающей стороны до 1 января 2027 года, после чего учитывается. Взнос за муниципальное размещение отдельный: с 1 августа 2026 года максимум €244,22 на взрослого за эксплуатационные расходы и €260,97 за питание (для двух взрослых максимум за питание €1 010,38); применяются порог 115% и муниципальное снижение при чрезмерной тяжести."
               }
             },
             {
@@ -5551,9 +5556,9 @@
                 "82c68617-079f-55ad-b652-2cd30daec7e1"
               ],
               "Values": {
-                "en": "Ukraine-specific government guidance describes the same compulsory-education rules as for Dutch children: attendance through the school year a child turns 16, then a qualification duty for 16–17-year-olds without a start qualification. Families can contact a nearby school; municipalities sometimes help. Placement and individual exceptions must be checked locally.",
-                "uk": "Спеціальні урядові рекомендації щодо України описують ті самі правила обов’язкового навчання, що й для дітей у Нідерландах: відвідування школи до кінця навчального року, у якому дитині виповнюється 16 років, а потім — обов’язок здобути кваліфікацію для 16–17-річних без початкової кваліфікації. Родина може звернутися до найближчої школи; муніципалітет іноді допомагає. Зарахування та індивідуальні винятки слід уточнювати на місці.",
-                "ru": "Специальные правительственные рекомендации для Украины описывают те же правила обязательного обучения, что и для детей в Нидерландах: посещение школы до конца учебного года, в котором ребёнку исполняется 16 лет, а затем — обязанность получить квалификацию для 16–17-летних без начальной квалификации. Семья может обратиться в ближайшую школу; муниципалитет иногда помогает. Зачисление и индивидуальные исключения следует уточнять на месте."
+                "en": "Ukrainian children have a right to education and are subject to the same compulsory-school rules. Parents should register at a nearby school; families in municipal reception may receive help but may choose a school. A Ukrainian pupil can be registered without BRP registration or proof of residence status. Placement depends on local options.",
+                "uk": "Діти з України мають право на освіту й підпадають під ті самі правила обов’язкового навчання. Батьки мають зареєструвати дитину в найближчій школі; родинам у муніципальному розміщенні можуть допомогти, але вони можуть обрати школу. Українського учня можна зареєструвати без BRP чи підтвердження статусу проживання. Місце залежить від місцевих можливостей.",
+                "ru": "Дети из Украины имеют право на образование и подпадают под те же правила обязательного обучения. Родители должны зарегистрировать ребёнка в ближайшей школе; семьям в муниципальном размещении могут помочь, но они могут выбрать школу. Украинского ученика можно зарегистрировать без BRP или подтверждения статуса проживания. Место зависит от местных возможностей."
               }
             },
             {
@@ -6156,9 +6161,9 @@
                 "c917869f-703b-5f62-99ff-9bb23bfe6443"
               ],
               "Values": {
-                "en": "The institution decides admission and sets course and language requirements. For 2026–27, a person under temporary protection may apply to DUO for MBO course-fee remission only if all criteria are met, including age 18 to under 31 on 1 August, inability to pay and no sponsor, and no eligibility for student finance or a secondary-education student grant because the nationality criteria are not met; apply by 31 July 2027. This is not free education or guaranteed admission.",
-                "uk": "Рішення про вступ ухвалює заклад і він визначає вимоги до курсу та мови. У 2026–2027 навчальному році людина під тимчасовим захистом може подати до DUO заяву про звільнення від плати за MBO лише за виконання всіх критеріїв, зокрема віку від 18 до 31 року (не включно) на 1 серпня, неможливості сплатити й відсутності спонсора, а також відсутності права на студентське фінансування чи грант для учнів закладів середньої освіти через невідповідність критеріям громадянства; подати до 31 липня 2027 року. Це не означає безоплатної освіти чи гарантованого вступу.",
-                "ru": "Решение о зачислении принимает учебное заведение, оно же устанавливает требования к курсу и языку. В 2026–2027 учебном году человек под временной защитой может подать в DUO заявление об освобождении от платы за MBO только при выполнении всех критериев, включая возраст от 18 до 31 года (не включая) на 1 августа, невозможность оплатить обучение и отсутствие спонсора, а также отсутствие права на студенческое финансирование или грант для учащихся среднего образования из-за несоответствия критериям гражданства; подать до 31 июля 2027 года. Это не означает бесплатного образования или гарантированного поступления."
+                "en": "The institution decides admission and course/language requirements. For 2026–27, statutory higher-education tuition is €2,694 for eligible students; institutional fees are set by the institution and may be higher. Ukraine-specific guidance says non-EEA students usually pay institutional fees and TPD students do not receive Dutch student finance. For MBO, adults need lawful residence; conditional DUO course-fee remission requires all criteria and application by 31 July 2027.",
+                "uk": "Заклад визначає вступ і вимоги до програми та мови. У 2026–27 році встановлена законом плата за вищу освіту становить €2 694 для тих, хто має право на цю ставку; інституційну плату встановлює сам заклад, і вона може бути вищою. Спеціальні рекомендації для України кажуть, що студенти з країн поза ЄЕЗ зазвичай сплачують інституційну плату, а студенти під тимчасовим захистом не отримують нідерландського фінансування. Для MBO повнолітнім потрібне законне перебування; умовне звільнення DUO потребує виконання всіх критеріїв і заяви до 31 липня 2027 року.",
+                "ru": "Учреждение определяет приём и требования к программе и языку. В 2026–27 году установленная законом плата за высшее образование составляет €2 694 для тех, кому положена эта ставка; институциональную плату устанавливает само учреждение, и она может быть выше. Специальные рекомендации для Украины говорят, что студенты из стран вне ЕЭЗ обычно платят институциональную плату, а студенты под временной защитой не получают нидерландского студенческого финансирования. Для MBO взрослым требуется законное пребывание; условное освобождение DUO требует соблюдения всех критериев и подачи заявления до 31 июля 2027 года."
               }
             },
             {
@@ -6490,9 +6495,9 @@
                 "e5c28f7f-5578-50bd-b3fe-0678e1efb9d0"
               ],
               "Values": {
-                "en": "Leefgeld supports clothing and personal spending, and food when municipal reception does not provide meals; amounts depend on age and household composition, with an extra amount only for host-family residents. For adults aged 18 or over in municipal reception who have a job, a WW benefit, or a benefit because they are long-term ill or unable to work, a personal reception contribution may apply. Work does not automatically end leefgeld: full withdrawal is required only when income exceeds 115% of the applicable leefgeld amount. Municipalities may partially withdraw leefgeld or collect the contribution within this norm, and may decide not to withdraw leefgeld or to waive the contribution if collection would cause disproportionate harm. A full contribution is due only when income exceeds 115% of the withdrawn leefgeld plus the contribution. Ask the municipality how it applies the rules to your household. The contribution is separate from rent and rent benefit.",
-                "uk": "Leefgeld призначене для одягу й особистих витрат, а також харчування, якщо муніципальне розміщення не забезпечує їжею; суми залежать від віку й складу домогосподарства, а додаткова сума передбачена лише для тих, хто живе у приймаючій сім’ї. Для дорослих від 18 років у муніципальному розміщенні, які працюють, отримують допомогу WW або виплату через тривалу хворобу чи непрацездатність, може застосовуватися особистий внесок за розміщення. Робота не припиняє leefgeld автоматично: повністю припинити виплату потрібно лише тоді, коли дохід перевищує 115% відповідного розміру leefgeld. Муніципалітет може частково припинити виплату leefgeld або частково стягнути внесок у межах цієї норми, а також не припиняти виплату чи звільнити від внеску, якщо стягнення спричинило б непропорційну шкоду. Повний внесок стягується лише тоді, коли дохід перевищує 115% суми leefgeld після припинення виплати разом із внеском. Уточніть правила для свого домогосподарства в муніципалітеті. Цей внесок є окремим від оренди й допомоги на оренду.",
-                "ru": "Leefgeld предназначено для одежды и личных расходов, а также питания, если муниципальный приём не обеспечивает едой; суммы зависят от возраста и состава домохозяйства, а дополнительная сумма предусмотрена только для живущих в принимающей семье. Для взрослых от 18 лет в муниципальном приёме, которые работают, получают пособие WW либо пособие из-за длительной болезни или невозможности работать, может применяться личный взнос за размещение. Работа не прекращает leefgeld автоматически: полностью прекратить выплату нужно лишь тогда, когда доход превышает 115% соответствующей суммы leefgeld. Муниципалитет может частично прекратить выплату leefgeld или частично взыскать взнос в пределах этой нормы, а также не прекращать выплату или списать взнос, если взыскание привело бы к несоразмерному ущербу. Полный взнос взимается только тогда, когда доход превышает 115% суммы leefgeld после прекращения выплаты вместе с взносом. Уточните правила для своего домохозяйства в муниципалитете. Этот взнос отдельно от арендной платы и пособия на аренду."
+                "en": "Leefgeld rates from 1 August 2026 depend on age, household and meals; clothing is €65.77/person, host-family housing component €77.16/person, with food rates from €162.33 to €260.97/person. Work/specified benefits affect household leefgeld; municipal contribution rules separately use the 115% norm and hardship discretion. Contribution caps are €244.22/adult for operating costs and €260.97/adult for catered meals. Ask the municipality to calculate the household case.",
+                "uk": "Ставки leefgeld з 1 серпня 2026 року залежать від віку, сім’ї та харчування; одяг — €65,77 на особу, житлова складова в приймаючій родині — €77,16 на особу, харчування — від €162,33 до €260,97 на особу. Робота/визначені виплати впливають на leefgeld сім’ї; окремі правила муніципального внеску застосовують поріг 115% і дискрецію у разі скрути. Максимум внеску — €244,22 на дорослого за експлуатаційні витрати та €260,97 за харчування в закладі. Попросіть муніципалітет розрахувати ваш випадок.",
+                "ru": "Ставки leefgeld с 1 августа 2026 года зависят от возраста, семьи и питания; одежда — €65,77 на человека, жилищная составляющая у принимающей семьи — €77,16 на человека, питание — от €162,33 до €260,97 на человека. Работа/определённые выплаты влияют на leefgeld семьи; отдельные правила муниципального взноса используют порог 115% и усмотрение при чрезмерной тяжести. Максимум взноса — €244,22 на взрослого за эксплуатационные расходы и €260,97 за питание в учреждении. Попросите муниципалитет рассчитать ваш случай."
               }
             },
             {
@@ -7099,12 +7104,13 @@
               "OfficialSourceIds": [
                 "b4d671c9-8e01-578b-b54a-1f1e822df022",
                 "9cec202a-d2ed-5e07-901b-bb6fa400a291",
-                "69aa017b-c57e-5f6e-bc99-20b12047c162"
+                "69aa017b-c57e-5f6e-bc99-20b12047c162",
+                "1aed58a4-b9a4-513d-93cc-5efdff100645"
               ],
               "Values": {
-                "en": "Official guidance says Ukrainian refugees may receive child benefit if they work as an employee in the Netherlands. A supplementary child-related budget has separate conditions, including child benefit or contribution to child expenses and income, assets and residence rules. Parenthood or temporary protection alone does not establish automatic entitlement.",
-                "uk": "В офіційних рекомендаціях зазначено, що українські біженці можуть отримувати допомогу на дитину, якщо працюють у Нідерландах за наймом. Для додаткового бюджету на дитину діють окремі умови, зокрема отримання допомоги на дитину або внесок у витрати на дитину, а також правила щодо доходу, активів і проживання. Сам факт батьківства чи тимчасового захисту не означає автоматичного права на виплату.",
-                "ru": "В официальных рекомендациях указано, что украинские беженцы могут получать пособие на ребёнка, если работают в Нидерландах по найму. Для дополнительного бюджета на ребёнка действуют отдельные условия, включая получение пособия на ребёнка или участие в расходах на ребёнка, а также правила по доходу, имуществу и проживанию. Сам факт родительства или временной защиты не означает автоматического права на выплату."
+                "en": "Child benefit requires insurance under the child-benefit scheme and SVB assesses the individual case. Kindgebonden budget is separate, for children under 18, and has income, asset and household conditions; temporary protection removes the residence-permit prerequisite only. Apply via Mijn toeslagen (or it may be automatic with another allowance).",
+                "uk": "Допомога kinderbijslag потребує страхування за відповідною схемою; SVB оцінює індивідуальний випадок. Kindgebonden budget — окрема виплата для дітей до 18 років з умовами щодо доходів, майна й домогосподарства; тимчасовий захист скасовує лише вимогу дозволу на проживання. Подайте заяву через Mijn toeslagen (або виплату можуть призначити автоматично разом з іншою допомогою).",
+                "ru": "Пособие kinderbijslag требует страхования по соответствующей схеме; SVB оценивает индивидуальный случай. Kindgebonden budget — отдельная выплата детям до 18 лет с условиями по доходу, имуществу и домохозяйству; временная защита отменяет только требование вида на жительство. Подайте заявление через Mijn toeslagen (либо выплата может назначаться автоматически вместе с другой)."
               }
             },
             {

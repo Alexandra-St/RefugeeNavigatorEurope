@@ -17,11 +17,11 @@ Where to search for vacancies, follow UWV’s specified registration route and a
 Content:
 ## Search for vacancies
 
-Work.nl is an official vacancy-search channel. UWV’s guidance for people covered by temporary protection also points jobseekers to EURES vacancy search and Europass for sharing a profile. These tools help you look for opportunities; a listing is not a job offer, and using a portal does not guarantee employment.
+Work.nl is an official vacancy-search channel. UWV’s guidance for people covered by temporary protection also points jobseekers to EURES vacancy search and Europass for sharing a profile through the EU Talent Pool pilot. Eligible jobseekers can publish a Europass profile on EURES so it is visible to EURES advisers and registered employers in participating countries. Check the pilot’s current eligibility conditions; a listing or published profile does not guarantee employment.
 
 ## Ask UWV about its job-search route
 
-UWV’s guidance says to register with your municipality first. For the described temporary-protection route, it then directs jobseekers to register in person at a local UWV office and bring identity documents and their BSN. Check UWV’s current instructions before travelling. This is a specific service route, not a promise that every person can use the same services or receive individual support.
+UWV’s guidance says to register with your municipality first. For the described temporary-protection route, it then directs jobseekers to register in person at a local UWV office and bring identity documents and their BSN. After registration, UWV issues a registration certificate that must be renewed every three months; UWV sends instructions for renewing it. Check UWV’s current instructions before travelling. This is a specific service route, not a promise that every person can use the same services or receive individual support.
 
 ## Ask about local work and development options
 
@@ -44,11 +44,11 @@ Summary:
 Content:
 ## Пошук вакансій
 
-Work.nl — офіційний канал пошуку вакансій. У своїх рекомендаціях для людей, на яких поширюється тимчасовий захист, UWV також вказує на пошук вакансій через EURES і профіль Europass. Ці інструменти допомагають шукати можливості, але оголошення не є пропозицією роботи, а користування порталом не гарантує працевлаштування.
+Work.nl — офіційний канал пошуку вакансій. У своїх рекомендаціях для людей, на яких поширюється тимчасовий захист, UWV також вказує на пошук вакансій через EURES і профіль Europass у межах пілотного проєкту EU Talent Pool. Особи, які відповідають умовам, можуть опублікувати профіль Europass на EURES, щоб його бачили консультанти EURES і зареєстровані роботодавці в країнах-учасницях. Перевірте актуальні умови участі; оголошення чи опублікований профіль не гарантують працевлаштування.
 
 ## Дізнайтеся про маршрут звернення до UWV
 
-За рекомендаціями UWV, спочатку потрібно зареєструватися у своєму муніципалітеті. Для описаного маршруту тимчасового захисту служба далі вказує на особисту реєстрацію у місцевому офісі UWV з документом, що посвідчує особу, та BSN. Перед візитом перевірте актуальні інструкції UWV. Це окремий маршрут послуги, а не гарантія, що кожна людина може користуватися однаковою підтримкою.
+За рекомендаціями UWV, спочатку потрібно зареєструватися у своєму муніципалітеті. Для описаного маршруту тимчасового захисту служба далі вказує на особисту реєстрацію у місцевому офісі UWV з документом, що посвідчує особу, та BSN. Після реєстрації UWV видає свідоцтво про реєстрацію, яке потрібно поновлювати кожні три місяці; UWV надсилає інструкції щодо поновлення. Перед візитом перевірте актуальні інструкції UWV. Це окремий маршрут послуги, а не гарантія, що кожна людина може користуватися однаковою підтримкою.
 
 ## Запитайте про місцеві можливості роботи й розвитку
 
@@ -71,11 +71,11 @@ Summary:
 Content:
 ## Поиск вакансий
 
-Work.nl — официальный канал поиска вакансий. В рекомендациях для людей, на которых распространяется временная защита, UWV также указывает поиск через EURES и профиль Europass. Эти инструменты помогают искать возможности, но объявление не является предложением работы, а использование портала не гарантирует трудоустройство.
+Work.nl — официальный канал поиска вакансий. В рекомендациях для людей, на которых распространяется временная защита, UWV также указывает поиск через EURES и профиль Europass в рамках пилотного проекта EU Talent Pool. Те, кто соответствует условиям, могут опубликовать профиль Europass на EURES, чтобы он был виден консультантам EURES и зарегистрированным работодателям в участвующих странах. Проверьте актуальные условия участия; объявление или опубликованный профиль не гарантируют трудоустройство.
 
 ## Узнайте о маршруте обращения в UWV
 
-Согласно рекомендациям UWV, сначала нужно зарегистрироваться в своём муниципалитете. Для описанного маршрута временной защиты служба далее указывает на личную регистрацию в местном офисе UWV с документом, удостоверяющим личность, и BSN. Перед визитом проверьте актуальные инструкции UWV. Это отдельный маршрут услуги, а не обещание одинаковой поддержки для каждого человека.
+Согласно рекомендациям UWV, сначала нужно зарегистрироваться в своём муниципалитете. Для описанного маршрута временной защиты служба далее указывает на личную регистрацию в местном офисе UWV с документом, удостоверяющим личность, и BSN. После регистрации UWV выдаёт свидетельство о регистрации, которое нужно продлевать каждые три месяца; UWV присылает инструкции по продлению. Перед визитом проверьте актуальные инструкции UWV. Это отдельный маршрут услуги, а не обещание одинаковой поддержки для каждого человека.
 
 ## Спросите о местных возможностях работы и развития
 

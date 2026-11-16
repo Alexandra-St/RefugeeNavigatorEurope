@@ -17,7 +17,7 @@ School access, adult Dutch learning, higher education and a conditional MBO fee-
 Content:
 ## School access and attendance
 
-Current Ukraine-specific government guidance says children and young people from Ukraine follow the same compulsory-education rules as Dutch children. Families can contact a nearby school to discuss registration and available options; a municipality may help, especially for a family in reception, but a particular placement is not guaranteed. The published summary says school attendance is compulsory through the school year in which a child turns 16. At 16–17, a young person without a start qualification has a qualification duty. The reviewed sources do not establish every exception or resolve an individual late-arrival or exemption case; ask the school or competent authority about the child’s circumstances.
+Children in the Netherlands, including children from Ukraine, have a right to education and are subject to the same compulsory-attendance rules. Parents should register a child at a nearby school; families in municipal reception may receive help with an offer but may also contact a school they prefer. Schools can register Ukrainian pupils without BRP registration or proof of residence status. Attendance is compulsory through the school year in which the child turns 16; at 16–17, a young person without a start qualification has a qualification duty, subject to statutory exceptions. Ask the school or municipality about individual exemptions or late-arrival circumstances.
 
 ## Newcomer language support for children
 
@@ -31,7 +31,7 @@ The government says people in the described temporary-protection arrangement do 
 
 ## MBO and higher education
 
-Adults who are lawfully resident may explore MBO or higher education, but the course and institution set admission and language requirements. Ask the institution about the programme and its own decision process.
+People under 18 may follow MBO; adults need lawful residence. The MBO or higher-education institution decides admission and course/language requirements, and may assess foreign diplomas or request advice from SBB or Nuffic. For higher education in 2026–27, statutory tuition is €2,694 for students who qualify for that rate; students charged institutional tuition pay the institution’s higher rate. Ukraine-specific guidance says students from outside the EEA usually pay institutional fees (often €10,000–€30,000) and people under temporary protection do not receive Dutch student finance. Confirm your fee type and any waiver with the institution and DUO.
 
 ## Conditional DUO MBO course-fee remission for 2026–27
 
@@ -64,7 +64,7 @@ Summary:
 Content:
 ## Доступ до школи та обов’язкове навчання
 
-Актуальні урядові рекомендації для людей з України зазначають, що на дітей і молодь з України поширюються ті самі правила обов’язкового навчання, що й на нідерландських дітей. Родина може звернутися до найближчої школи, щоб обговорити реєстрацію та доступні варіанти; муніципалітет іноді допомагає, особливо родинам у місцях прийому, але конкретне місце не гарантується. Опублікований огляд зазначає, що навчання є обов’язковим до завершення навчального року, у якому дитині виповнюється 16 років. У 16–17 років молода людина без стартової кваліфікації має обов’язок здобути кваліфікацію. Перевірені джерела не визначають усіх винятків і не вирішують індивідуальні випадки пізнього прибуття чи звільнення від навчання; запитайте школу або компетентний орган про конкретну ситуацію дитини.
+Діти в Нідерландах, зокрема з України, мають право на освіту та підпадають під ті самі правила обов’язкового навчання. Батьки мають зареєструвати дитину в найближчій школі; родинам у муніципальному розміщенні можуть допомогти з пропозицією, але вони також можуть звернутися до обраної школи. Школа може зареєструвати учня з України без реєстрації BRP чи підтвердження статусу проживання. Навчання обов’язкове до завершення навчального року, у якому дитині виповнюється 16 років; у 16–17 років без стартової кваліфікації діє обов’язок здобути кваліфікацію з урахуванням законних винятків. Щодо індивідуального звільнення чи пізнього прибуття зверніться до школи або муніципалітету.
 
 ## Мовна підтримка для дітей у newcomer-класах
 
@@ -78,7 +78,7 @@ Content:
 
 ## MBO та вища освіта
 
-Повнолітні, які законно проживають у країні, можуть розглянути MBO або вищу освіту, але вимоги до вступу й мови визначає конкретна програма та заклад. Запитайте заклад про програму та його процедуру ухвалення рішення.
+Молодь до 18 років може навчатися в MBO; повнолітнім потрібне законне перебування. Заклад MBO або вищої освіти ухвалює рішення про вступ і визначає вимоги до програми та мови; він може оцінити іноземний диплом або запросити висновок SBB чи Nuffic. У 2026–27 навчальному році встановлена законом плата за вищу освіту становить €2 694 для тих, хто має право на цю ставку; студенти, яким призначено інституційну плату, сплачують вищу суму, визначену закладом. Спеціальні рекомендації для України зазначають, що студенти з країн поза ЄЕЗ зазвичай сплачують інституційну плату (часто €10 000–€30 000), а особи під тимчасовим захистом не отримують нідерландського студентського фінансування. Уточніть тип плати й можливе звільнення у закладі та DUO.
 
 ## Умовне звільнення DUO від плати за MBO у 2026–27 роках
 
@@ -111,7 +111,7 @@ Summary:
 Content:
 ## Доступ к школе и обязательное обучение
 
-Актуальные правительственные рекомендации для людей из Украины говорят, что на детей и подростков из Украины распространяются те же правила обязательного обучения, что и на детей в Нидерландах. Семья может обратиться в ближайшую школу, чтобы обсудить регистрацию и доступные варианты; муниципалитет иногда помогает, особенно семьям в местах приёма, но конкретное место не гарантируется. В опубликованном обзоре сказано, что обучение обязательно до конца учебного года, в котором ребёнку исполняется 16 лет. В 16–17 лет молодой человек без стартовой квалификации обязан её получить. Проверенные источники не устанавливают все исключения и не решают индивидуальные случаи позднего прибытия или освобождения от учёбы; уточните обстоятельства ребёнка в школе или компетентном органе.
+Дети в Нидерландах, включая детей из Украины, имеют право на образование и подпадают под те же правила обязательного обучения. Родители должны зарегистрировать ребёнка в ближайшей школе; семьям в муниципальном размещении могут помочь с предложением, но они также могут обратиться в выбранную школу. Школа может зарегистрировать украинского ученика без регистрации BRP или подтверждения статуса проживания. Обучение обязательно до конца учебного года, в котором ребёнку исполняется 16 лет; в 16–17 лет без стартовой квалификации действует обязанность получить её с учётом предусмотренных законом исключений. По индивидуальным освобождениям или позднему прибытию обратитесь в школу или муниципалитет.
 
 ## Языковая поддержка детей в newcomer-классах
 
@@ -125,7 +125,7 @@ Content:
 
 ## MBO и высшее образование
 
-Совершеннолетние, законно проживающие в стране, могут рассмотреть обучение MBO или в вузе, но требования к поступлению и языку устанавливают конкретная программа и учебное заведение. Узнайте у учебного заведения о программе и его порядке принятия решения.
+Лица младше 18 лет могут учиться в MBO; взрослым требуется законное пребывание. Учреждение MBO или высшего образования решает вопрос о приёме и устанавливает требования к программе и языку; оно может оценить иностранный диплом или запросить заключение SBB либо Nuffic. В 2026–27 учебном году установленная законом плата за высшее образование составляет €2 694 для тех, кто имеет право на эту ставку; студенты, которым назначена институциональная плата, платят более высокую сумму, установленную учреждением. Специальные рекомендации для Украины указывают, что студенты из стран вне ЕЭЗ обычно платят институциональную плату (часто €10 000–€30 000), а лица под временной защитой не получают нидерландского студенческого финансирования. Уточните тип платы и возможное освобождение в учреждении и DUO.
 
 ## Условное освобождение DUO от платы за MBO в 2026–27 учебном году
 

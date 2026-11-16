@@ -434,7 +434,14 @@ public sealed class CountryComparisonTests
             });
             if (fact.IsAvailable)
             {
-                var maxSources = item.Id == "healthcare-access" && fact.CountrySlug == "netherlands" ? 4 : 3;
+                var maxSources = item.Id switch
+                {
+                    "protection-dates" when fact.CountrySlug == "netherlands" => 4,
+                    "healthcare-access" when fact.CountrySlug == "netherlands" => 5,
+                    "housing-financial-support" when fact.CountrySlug == "netherlands" => 5,
+                    "social-child-benefits" when fact.CountrySlug == "netherlands" => 4,
+                    _ => 3
+                };
                 Assert.InRange(fact.OfficialSourceIds.Count, 1, maxSources);
                 Assert.All(fact.OfficialSourceIds, sourceId =>
                 {
@@ -459,27 +466,28 @@ public sealed class CountryComparisonTests
 
         var healthcare = netherlandsFacts.Single(item => item.Id == "healthcare-access").fact;
         Assert.True(healthcare.IsAvailable);
-        Assert.Contains("Official pages conflict", healthcare.Values["en"]);
-        Assert.Contains("does not resolve", healthcare.Values["en"]);
-        Assert.Contains("суперечать", healthcare.Values["uk"]);
-        Assert.Contains("не определяет", healthcare.Values["ru"]);
+        Assert.Contains("do not need an ordinary Dutch policy", healthcare.Values["en"]);
+        Assert.Contains("does not enforce policy purchase during RMO", healthcare.Values["en"]);
+        Assert.Contains("звичайний нідерландський поліс не потрібен", healthcare.Values["uk"]);
+        Assert.Contains("не застосовує вимогу придбати поліс під час RMO", healthcare.Values["uk"]);
+        Assert.Contains("обычный нидерландский полис не нужен", healthcare.Values["ru"]);
+        Assert.Contains("не применяет требование приобрести полис во время RMO", healthcare.Values["ru"]);
     }
 
     [Fact]
-    public async Task NetherlandsDuoCourseFeeConditionRequiresNationalityReasonAndAllOtherCriteriaInAllLanguages()
+    public async Task NetherlandsDuoCourseFeeCompareKeepsScopeAndDeadlineInAllLanguages()
     {
         var fact = (await FactCatalog.Value).Topics.SelectMany(topic => topic.Aspects)
             .Single(aspect => aspect.Id == "education-higher-admission").Facts
             .Single(item => item.CountrySlug == "netherlands");
 
         Assert.Equal(ComparisonFactStatus.Approved, fact.Status);
-        Assert.Contains("no eligibility for student finance or a secondary-education student grant because the nationality criteria are not met", fact.Values["en"], StringComparison.OrdinalIgnoreCase);
-        Assert.Contains("відсутності права на студентське фінансування чи грант для учнів закладів середньої освіти через невідповідність критеріям громадянства", fact.Values["uk"], StringComparison.OrdinalIgnoreCase);
-        Assert.DoesNotContain("та права на студентське фінансування чи грант", fact.Values["uk"], StringComparison.OrdinalIgnoreCase);
-        Assert.Contains("отсутствие права на студенческое финансирование или грант для учащихся среднего образования из-за несоответствия критериям гражданства", fact.Values["ru"], StringComparison.OrdinalIgnoreCase);
-        Assert.Contains("not free education or guaranteed admission", fact.Values["en"], StringComparison.OrdinalIgnoreCase);
-        Assert.Contains("не означає безоплатної освіти чи гарантованого вступу", fact.Values["uk"], StringComparison.OrdinalIgnoreCase);
-        Assert.Contains("не означает бесплатного образования или гарантированного поступления", fact.Values["ru"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("conditional DUO course-fee remission requires all criteria", fact.Values["en"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("application by 31 July 2027", fact.Values["en"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("умовне звільнення DUO потребує виконання всіх критеріїв", fact.Values["uk"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("заяви до 31 липня 2027 року", fact.Values["uk"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("условное освобождение DUO требует соблюдения всех критериев", fact.Values["ru"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("подачи заявления до 31 июля 2027 года", fact.Values["ru"], StringComparison.OrdinalIgnoreCase);
 
         var nationalityReasons = new Dictionary<string, string>
         {
@@ -499,16 +507,15 @@ public sealed class CountryComparisonTests
             .ToDictionary(item => item.LanguageCode);
         var preservedConditions = new Dictionary<string, string[]>
         {
-            ["en"] = ["only if all criteria are met", "person under temporary protection", "age 18 to under 31 on 1 August", "inability to pay and no sponsor", "31 July 2027", "2026–27"],
-            ["uk"] = ["лише за виконання всіх критеріїв", "людина під тимчасовим захистом", "віку від 18 до 31 року (не включно) на 1 серпня", "неможливості сплатити й відсутності спонсора", "31 липня 2027 року", "2026–2027"],
-            ["ru"] = ["только при выполнении всех критериев", "человек под временной защитой", "возраст от 18 до 31 года (не включая) на 1 августа", "невозможность оплатить обучение и отсутствие спонсора", "31 июля 2027 года", "2026–2027"]
+            ["en"] = ["only when all listed conditions are met", "specified MBO applicants under temporary protection", "aged 18 to under 31 on 1 August", "being unable to pay and having no sponsor", "31 July 2027", "2026–27"],
+            ["uk"] = ["лише за виконання всіх перелічених умов", "заявників MBO під тимчасовим захистом", "від 18 років до досягнення 31 року станом на 1 серпня", "неможливість сплатити й відсутність спонсора", "31 липня 2027 року", "2026–27"],
+            ["ru"] = ["только при выполнении всех перечисленных условий", "заявителей MBO под временной защитой", "возраст от 18 лет до достижения 31 года на 1 августа", "отсутствие возможности оплатить обучение и спонсора", "31 июля 2027 года", "2026–27"]
         };
-        foreach (var (language, reason) in nationalityReasons)
+        foreach (var language in nationalityReasons.Keys)
         {
-            Assert.Contains(reason, fact.Values[language], StringComparison.OrdinalIgnoreCase);
             Assert.Contains(articleNationalityReasons[language], articleTranslations[language].Content, StringComparison.OrdinalIgnoreCase);
             foreach (var condition in preservedConditions[language])
-                Assert.Contains(condition, fact.Values[language], StringComparison.OrdinalIgnoreCase);
+                Assert.Contains(condition, articleTranslations[language].Content, StringComparison.OrdinalIgnoreCase);
         }
     }
 
