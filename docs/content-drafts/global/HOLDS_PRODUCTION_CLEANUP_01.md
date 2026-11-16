@@ -34,4 +34,7 @@ The mandatory release gate completed on 2026-11-16:
 - JSON validity, UUID uniqueness, HTTPS source records, source ownership/bindings, 19/152/456 Core inventory, 456 Verified translations, 454/2 Compare status/availability counts, and exact hold identities: PASS.
 - NL-TP-01 draft/catalog parity and Production visibility: PASS in the .NET integration suite.
 - Docker production image and integration smoke: **NOT RUN — daemon unavailable** (`/Users/alexandra/.docker/run/docker.sock` is absent).
-- Commit, push to `main`, exact-SHA CI, and final `HEAD == origin/main` / clean worktree verification: record results after publication.
+- Commit `985ebc662af3352405c6579edb819130c820d5bf` (`chore: resolve final production content holds`) was pushed to `main`.
+- Exact-SHA GitHub Actions CI for that commit: PASS, including build, tests, deployment verification, production Docker image build, and Docker integration smoke.
+- Netherlands visual evidence workflow for that commit: PASS.
+- After recording this report update, repeat the commit/push and branch-tip CI check for the final report revision.
