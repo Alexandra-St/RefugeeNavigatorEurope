@@ -22,9 +22,11 @@ The BA is a national starting point for vacancies and employment advice. If you 
 
 ## NEXT STEPS
 
-Before accepting a start date, confirm the work permission printed on your own document. Save the contract, job description and qualification correspondence. If the current benefit reform proposal becomes law, routes between SGB II/SGB XII and AsylbLG for specified §24 groups may change. The proposal uses document-issuance criteria and exceptions, not only a blanket arrival date; as checked on 16 October 2026 it remained in parliamentary process. That does not prevent using the general BA job-search service, but it means Jobcenter or benefit-linked support should be rechecked before publication.
+Before accepting a start date, confirm the work permission printed on your own document. Save the contract, job description and qualification correspondence. As checked on 16 November 2026, the Leistungsrechtsanpassungsgesetz is still a government bill referred for parliamentary consideration; it has not been promulgated, has no effective date and does not yet change benefit routes. The bill proposes route changes for specified §24 groups using document-issue criteria and exceptions. Separately, the 13th SGB II Amendment Act was promulgated and its main changes took effect on 1 July 2026, changing the current Grundsicherung/Jobcenter framework. General BA job-search services remain distinct; check your current benefit decision and responsible office for case-specific support.
 
 ## SOURCES
+
+- [BMAS — 13th SGB II Amendment Act / Grundsicherung reform status](https://www.bmas.de/DE/Service/Gesetze-und-Gesetzesvorhaben/13-gesetz-zur-aenderung-zweiten-buch-sozialgesetzbuch-und-anderer-gesetze.html)
 
 - [Federal Employment Agency — job search](https://www.arbeitsagentur.de/en/working-in-germany/how-to-find-a-job)
 - [BA — advice and support](https://www.arbeitsagentur.de/arbeiten-in-deutschland/beratung-unterstuetzung)

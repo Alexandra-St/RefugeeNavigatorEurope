@@ -765,6 +765,42 @@ public sealed class CountryComparisonTests
     }
 
     [Fact]
+    public async Task GermanyRefreshCompareBindingsResolveAndReplaceBrokenEvidence()
+    {
+        var catalog = await LoadCatalogAsync();
+        var facts = (await FactCatalog.Value).Topics.SelectMany(topic => topic.Aspects)
+            .SelectMany(aspect => aspect.Facts.Where(fact => fact.CountrySlug == "germany")
+                .Select(fact => (aspect.Id, Fact: fact))).ToArray();
+        var byAspect = facts.ToDictionary(item => item.Id, item => item.Fact, StringComparer.Ordinal);
+        var brokenIds = new[]
+        {
+            "e4bb8ae0-6e0a-573b-8ab9-c6ea8fffb30a", "e77a12f7-8f60-5e76-a485-99f0fc69be9f",
+            "d99613b7-b59a-5a93-a443-2d4d2eb48d14", "1d9ec59d-0aed-5574-b70a-b9cbd54d45e8",
+            "2c177ebd-53e0-5641-8bae-6f08f1df20de", "8e121eb3-d156-53b9-a76f-283f35e83d43",
+            "41b9dbd1-241b-5c36-9a58-728a98b5ca85", "d77b1eaf-1396-5dfe-ac10-6f148d43cbeb",
+            "74aadb89-3efe-5bec-bc79-28d2a097de27", "6f604127-6636-5674-b7a7-fdaa20a379dc",
+            "ceab5bb5-83bf-5ae8-9020-a031e67383c1", "01fd1631-d7da-5154-9883-79acf42b8b01",
+            "a9192f33-66b2-56fc-b24f-ade0c3d2c6f0", "85164038-1935-52a7-a1cb-2e05f4066329",
+            "02f7d48e-e06b-5a7e-9fc7-7b17f2bde2be", "bbb43319-2619-50d6-9e08-6f4ead298bd2",
+            "d075064c-0110-59a3-9fd7-1164ebd2faa1"
+        }.Select(Guid.Parse).ToHashSet();
+
+        Assert.Equal(24, facts.Length);
+        Assert.All(facts, item => Assert.All(item.Fact.OfficialSourceIds, sourceId =>
+            Assert.Contains(catalog.OfficialSources, source => source.Id == sourceId && source.InformationEntryId == item.Fact.InformationEntryId)));
+        Assert.DoesNotContain(facts.SelectMany(item => item.Fact.OfficialSourceIds), brokenIds.Contains);
+        Assert.Contains(Guid.Parse("71b930ae-07df-43ce-98d1-3e318024e9ec"), byAspect["protection-dates"].OfficialSourceIds);
+        Assert.Contains(Guid.Parse("cd204676-aad5-4b2a-85c0-6458a7a4f878"), byAspect["residence-filing"].OfficialSourceIds);
+        Assert.Contains(Guid.Parse("61c55ab9-e112-4d40-b9ac-4fd7e79cbff3"), byAspect["healthcare-access"].OfficialSourceIds);
+        Assert.Contains(Guid.Parse("5b2f0558-a269-43ef-9f8c-3b880ba92ec5"), byAspect["healthcare-access"].OfficialSourceIds);
+        Assert.Contains(Guid.Parse("f7d628fd-2492-44c9-99ec-935e3b0b9a94"), byAspect["education-higher-admission"].OfficialSourceIds);
+        Assert.Contains(Guid.Parse("6ab0d347-e98f-5243-84ac-d06e9b3377bd"), byAspect["education-pupil-language"].OfficialSourceIds);
+        Assert.DoesNotContain(Guid.Parse("1a7ade55-783f-59ae-97a2-d2b620104d9f"), byAspect["education-pupil-language"].OfficialSourceIds);
+        Assert.Contains(Guid.Parse("5f731bf8-642a-49e6-a34e-0a40399f289d"), byAspect["social-subsistence"].OfficialSourceIds);
+        Assert.Contains(Guid.Parse("56eeb4db-8e18-4306-9888-6427c4103f29"), byAspect["social-subsistence"].OfficialSourceIds);
+    }
+
+    [Fact]
     public async Task CzechiaHighRiskComparisonAnswersPreserveDatesCohortsAndConditionsAcrossLanguages()
     {
         var facts = await FactCatalog.Value;
@@ -1611,7 +1647,14 @@ public sealed class CountryComparisonTests
                 Assert.Contains(translation.Summary, visibleHtml);
                 var sources = catalog.OfficialSources.Where(source => source.InformationEntryId == entryId).ToArray();
                 Assert.NotEmpty(sources);
-                AssertFullContentIsRendered(translation.Content, visibleHtml, sources);
+                try
+                {
+                    AssertFullContentIsRendered(translation.Content, visibleHtml, sources);
+                }
+                catch (Exception exception)
+                {
+                    throw new Xunit.Sdk.XunitException($"Inline source rendering failed for {countrySlug}/{categorySlug}/{language}: {exception.Message}");
+                }
                 Assert.Contains($"href=\"/countries/{countrySlug}/categories/{categorySlug}#entry-{entryId:N}\"", html);
 
                 foreach (var source in sources)
@@ -1944,8 +1987,8 @@ public sealed class CountryComparisonTests
             var source = Assert.Single(sources, item => item.Id == sourceId);
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
             var label = match.Groups["label"].Value;
-            var linkPattern = $"<a\\b(?=[^>]*class=\\\"article-source-link\\\")(?=[^>]*href=\\\"{Regex.Escape(WebUtility.HtmlEncode(source.Url.AbsoluteUri))}\\\")[^>]*>{Regex.Escape(label)}(?:<span\\b|</a>)";
-            Assert.Matches(linkPattern, renderedHtml);
+            var linkPattern = $"<a\\b(?=[^>]*class=\\\"article-source-link\\\")(?=[^>]*href=\\\"{Regex.Escape(source.Url.AbsoluteUri)}\\\")[^>]*>{Regex.Escape(label)}(?:<span\\b|</a>)";
+            Assert.True(Regex.IsMatch(renderedHtml, linkPattern), $"Source link did not render: {sourceId} — {label} ({source.Url}).");
             cursor = match.Index + match.Length;
         }
 
@@ -1971,6 +2014,7 @@ public sealed class CountryComparisonTests
                 return attributes.Contains($"href=\"{encodedUrl}\"", StringComparison.Ordinal) &&
                     attributes.Contains("target=\"_blank\"", StringComparison.Ordinal) &&
                     attributes.Contains("rel=\"noopener noreferrer\"", StringComparison.Ordinal) &&
+                    Regex.IsMatch(content, "<span\\b(?=[^>]*aria-hidden=\\\"true\\\")(?=[^>]*class=\\\"external-link-icon\\\")[^>]*>↗</span>") &&
                     ReadRenderedText(content).Contains(source.Title, StringComparison.Ordinal);
             });
 

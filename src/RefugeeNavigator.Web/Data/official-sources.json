@@ -714,13 +714,6 @@
     "LastCheckedAt": "2026-10-15T23:22:15+00:00"
   },
   {
-    "Id": "e4bb8ae0-6e0a-573b-8ab9-c6ea8fffb30a",
-    "InformationEntryId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e",
-    "Title": "Germany4Ukraine — Entry",
-    "Url": "https://www.germany4ukraine.de/EN/einreise-aufenthalt-und-rueckkehr/einreise-aus-der-ukraine-nach-deutschland/seite.html",
-    "LastCheckedAt": "2026-10-15T23:22:14+00:00"
-  },
-  {
     "Id": "1d973c40-5d66-5b6a-ae13-78f667576a0a",
     "InformationEntryId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e",
     "Title": "Germany4Ukraine — Registration, residence permit and asylum",
@@ -868,20 +861,6 @@
     "LastCheckedAt": "2026-10-15T23:22:12+00:00"
   },
   {
-    "Id": "e77a12f7-8f60-5e76-a485-99f0fc69be9f",
-    "InformationEntryId": "283d4519-21f5-5be2-a534-1bd2606d95fc",
-    "Title": "Germany4Ukraine — Integration courses",
-    "Url": "https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/integrationskurse/seite_node.html",
-    "LastCheckedAt": "2026-10-15T23:22:11+00:00"
-  },
-  {
-    "Id": "d99613b7-b59a-5a93-a443-2d4d2eb48d14",
-    "InformationEntryId": "283d4519-21f5-5be2-a534-1bd2606d95fc",
-    "Title": "Germany4Ukraine — Learning German / vocational-language courses",
-    "Url": "https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/deutsch-lernen/seite.html?nn=734948",
-    "LastCheckedAt": "2026-10-15T23:22:11+00:00"
-  },
-  {
     "Id": "2bd949c9-f82e-5a93-82c1-3a70bfd5b0e1",
     "InformationEntryId": "283d4519-21f5-5be2-a534-1bd2606d95fc",
     "Title": "BMAS — Leistungsrechtsanpassungsgesetz",
@@ -949,20 +928,13 @@
     "InformationEntryId": "c4895b5a-eacd-53d7-a86f-f504dd615c76",
     "Title": "BMAS — Employee protection rights",
     "Url": "https://www.bmas.de/DE/Arbeit/Migration-und-Arbeit/Rechtliches-zu-Einreise-Arbeitsmarktzugang-und-Absicherung/Schutzrechte-fuer-Arbeitnehmerinnen/schutzrechte-fuer-arbeitnehmerinnen-art.html",
-    "LastCheckedAt": "2026-10-15T23:22:15+00:00"
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
   },
   {
     "Id": "18ea85eb-9d66-54a8-a885-6b6ca86f31ae",
     "InformationEntryId": "c4895b5a-eacd-53d7-a86f-f504dd615c76",
     "Title": "Fair Integration — advice service",
     "Url": "https://www.faire-integration.de/en/",
-    "LastCheckedAt": "2026-10-15T23:22:15+00:00"
-  },
-  {
-    "Id": "1d9ec59d-0aed-5574-b70a-b9cbd54d45e8",
-    "InformationEntryId": "c4895b5a-eacd-53d7-a86f-f504dd615c76",
-    "Title": "German Customs — reporting suspected undeclared work/wage violations",
-    "Url": "https://www.zoll.de/DE/Privatpersonen/Arbeit/Fragen-Antworten/_akkordeon/frage_4.html",
     "LastCheckedAt": "2026-10-15T23:22:15+00:00"
   },
   {
@@ -980,20 +952,6 @@
     "LastCheckedAt": "2026-10-15T23:26:59+00:00"
   },
   {
-    "Id": "2c177ebd-53e0-5641-8bae-6f08f1df20de",
-    "InformationEntryId": "895b79b4-ce0d-5bee-9919-42ce3d76ecdb",
-    "Title": "Germany4Ukraine — Statutory health insurance",
-    "Url": "https://www.germany4ukraine.de/EN/medizinische-versorgung/krankenversicherung-ukrainer/seite_node.html",
-    "LastCheckedAt": "2026-10-15T23:22:13+00:00"
-  },
-  {
-    "Id": "8e121eb3-d156-53b9-a76f-283f35e83d43",
-    "InformationEntryId": "895b79b4-ce0d-5bee-9919-42ce3d76ecdb",
-    "Title": "Germany4Ukraine — Medical treatment",
-    "Url": "https://www.germany4ukraine.de/EN/medizinische-versorgung/medizinische-hilfe-fluechtlinge/seite.html?nn=717526",
-    "LastCheckedAt": "2026-10-15T23:22:13+00:00"
-  },
-  {
     "Id": "e273f820-0f99-5003-95ce-ff3b110a6b44",
     "InformationEntryId": "895b79b4-ce0d-5bee-9919-42ce3d76ecdb",
     "Title": "Federal Ministry of Health — Medical help for people from Ukraine",
@@ -1001,24 +959,10 @@
     "LastCheckedAt": "2026-10-15T23:22:13+00:00"
   },
   {
-    "Id": "41b9dbd1-241b-5c36-9a58-728a98b5ca85",
-    "InformationEntryId": "895b79b4-ce0d-5bee-9919-42ce3d76ecdb",
-    "Title": "Germany4Ukraine — Rapid assistance in an emergency",
-    "Url": "https://www.germany4ukraine.de/EN/schnelle-hilfe-im-notfall/seite_node.html",
-    "LastCheckedAt": "2026-10-15T23:22:13+00:00"
-  },
-  {
     "Id": "45a3c454-6c68-58bf-ae29-6016670c392b",
     "InformationEntryId": "895b79b4-ce0d-5bee-9919-42ce3d76ecdb",
     "Title": "116117 — English medical help",
     "Url": "https://www.116117.de/de/englisch.php",
-    "LastCheckedAt": "2026-10-15T23:22:13+00:00"
-  },
-  {
-    "Id": "d77b1eaf-1396-5dfe-ac10-6f148d43cbeb",
-    "InformationEntryId": "895b79b4-ce0d-5bee-9919-42ce3d76ecdb",
-    "Title": "Germany4Ukraine — Psychosocial support",
-    "Url": "https://www.germany4ukraine.de/EN/medizinische-versorgung/psycho-therapie-fluechtlinge/seite_node.html",
     "LastCheckedAt": "2026-10-15T23:22:13+00:00"
   },
   {
@@ -1064,38 +1008,10 @@
     "LastCheckedAt": "2026-10-15T23:22:15+00:00"
   },
   {
-    "Id": "74aadb89-3efe-5bec-bc79-28d2a097de27",
-    "InformationEntryId": "fd041e53-7794-5c1f-9ae4-131930fe69ee",
-    "Title": "Germany4Ukraine — Entry",
-    "Url": "https://www.germany4ukraine.de/EN/einreise-aufenthalt-und-rueckkehr/einreise-aus-der-ukraine-nach-deutschland/seite.html",
-    "LastCheckedAt": "2026-10-15T23:22:14+00:00"
-  },
-  {
-    "Id": "6f604127-6636-5674-b7a7-fdaa20a379dc",
-    "InformationEntryId": "fd041e53-7794-5c1f-9ae4-131930fe69ee",
-    "Title": "Germany4Ukraine — Accommodation and housing for refugees",
-    "Url": "https://www.germany4ukraine.de/EN/unterkunft-fuer-ukrainer/unterbringung-und-wohnraum-fuer-gefluechtete/seite.html?nn=719634",
-    "LastCheckedAt": "2026-10-15T23:22:14+00:00"
-  },
-  {
     "Id": "56f0308c-e82d-5c06-a492-ffcbbe820325",
     "InformationEntryId": "fd041e53-7794-5c1f-9ae4-131930fe69ee",
     "Title": "Federal Registration Act (BMG), §17",
     "Url": "https://www.gesetze-im-internet.de/bmg/__17.html",
-    "LastCheckedAt": "2026-10-15T23:22:14+00:00"
-  },
-  {
-    "Id": "ceab5bb5-83bf-5ae8-9020-a031e67383c1",
-    "InformationEntryId": "fd041e53-7794-5c1f-9ae4-131930fe69ee",
-    "Title": "Germany4Ukraine — state housing support overview",
-    "Url": "https://www.germany4ukraine.de/EN/unterkunft-fuer-ukrainer/seite_node.html",
-    "LastCheckedAt": "2026-10-15T23:22:14+00:00"
-  },
-  {
-    "Id": "01fd1631-d7da-5154-9883-79acf42b8b01",
-    "InformationEntryId": "fd041e53-7794-5c1f-9ae4-131930fe69ee",
-    "Title": "Germany4Ukraine — Social benefits",
-    "Url": "https://www.germany4ukraine.de/EN/arbeit-und-soziales/ukrainer-sozialleistungen/seite.html?nn=722332",
     "LastCheckedAt": "2026-10-15T23:22:14+00:00"
   },
   {
@@ -1127,39 +1043,11 @@
     "LastCheckedAt": "2026-10-15T23:22:14+00:00"
   },
   {
-    "Id": "a9192f33-66b2-56fc-b24f-ade0c3d2c6f0",
-    "InformationEntryId": "f5e0f499-0f60-5465-85f8-de6345029b59",
-    "Title": "Germany4Ukraine — School",
-    "Url": "https://www.germany4ukraine.de/EN/bildung-und-forschung/schule/seite_node.html",
-    "LastCheckedAt": "2026-10-15T23:22:11+00:00"
-  },
-  {
     "Id": "6ab0d347-e98f-5243-84ac-d06e9b3377bd",
     "InformationEntryId": "f5e0f499-0f60-5465-85f8-de6345029b59",
-    "Title": "KMK — Refugee children and young people from Ukraine",
-    "Url": "https://www.kmk.org/en/downloads-dokumente/statistik/schulstatistik/gefluechtete-kinder/jugendliche-aus-der-ukraine.html",
-    "LastCheckedAt": "2026-10-15T23:22:11+00:00"
-  },
-  {
-    "Id": "85164038-1935-52a7-a1cb-2e05f4066329",
-    "InformationEntryId": "f5e0f499-0f60-5465-85f8-de6345029b59",
-    "Title": "Germany4Ukraine — Integration courses",
-    "Url": "https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/integrationskurse/seite_node.html",
-    "LastCheckedAt": "2026-10-15T23:22:11+00:00"
-  },
-  {
-    "Id": "02f7d48e-e06b-5a7e-9fc7-7b17f2bde2be",
-    "InformationEntryId": "f5e0f499-0f60-5465-85f8-de6345029b59",
-    "Title": "Germany4Ukraine — Learning German / vocational-language support",
-    "Url": "https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/deutsch-lernen/seite.html?nn=734948",
-    "LastCheckedAt": "2026-10-15T23:22:11+00:00"
-  },
-  {
-    "Id": "bbb43319-2619-50d6-9e08-6f4ead298bd2",
-    "InformationEntryId": "f5e0f499-0f60-5465-85f8-de6345029b59",
-    "Title": "Germany4Ukraine — Vocational training",
-    "Url": "https://www.germany4ukraine.de/EN/bildung-und-forschung/ausbildung/seite_node.html",
-    "LastCheckedAt": "2026-10-15T23:22:11+00:00"
+    "Title": "KMK — Ukraine refugee education and current Länder information",
+    "Url": "https://www.kmk.org/bildungsministerkonferenz/vertiefende-bildungsinhalte/individuelle-foerderung/gefluechtete-aus-der-ukraine.html",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
   },
   {
     "Id": "34e99df7-6990-5a44-91b8-c4cb9f7b168c",
@@ -1202,13 +1090,6 @@
     "Title": "BMAS — Leistungsrechtsanpassungsgesetz status and text",
     "Url": "https://www.bmas.de/DE/Service/Gesetze-und-Gesetzesvorhaben/leistungsrechtsanpassungsgesetz.html",
     "LastCheckedAt": "2026-10-15T23:22:12+00:00"
-  },
-  {
-    "Id": "d075064c-0110-59a3-9fd7-1164ebd2faa1",
-    "InformationEntryId": "31f5802b-26a0-5cd0-bb24-0a9a4afa706a",
-    "Title": "Germany4Ukraine — Social benefits",
-    "Url": "https://www.germany4ukraine.de/EN/arbeit-und-soziales/ukrainer-sozialleistungen/seite.html?nn=722332",
-    "LastCheckedAt": "2026-10-15T23:22:14+00:00"
   },
   {
     "Id": "346200f4-e8dc-5be8-949f-d9748e0575fe",
@@ -10308,6 +10189,167 @@
     "InformationEntryId": "244b1055-4d8c-55b2-820e-60ff018c3b1f",
     "Title": "Raad van State, CJEU ruling on asylum decision periods during temporary protection (1 October 2026)",
     "Url": "https://www.raadvanstate.nl/actueel/nieuws/september/europees-hof-beantwoordt-prejudiciele/",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "71b930ae-07df-43ce-98d1-3e318024e9ec",
+    "InformationEntryId": "1a6b97c4-eb9e-5590-8715-c95f5f95677e",
+    "Title": "Council Implementing Decision (EU) 2025/1460 — current EU period through 4 March 2027",
+    "Url": "https://eur-lex.europa.eu/eli/dec_impl/2025/1460/oj/eng",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "b8841c5a-0cf9-4d14-8ee6-6e6763b7ef1d",
+    "InformationEntryId": "33106e71-115f-5809-9066-7e3d3e5c57a3",
+    "Title": "AufenthG §18g — EU Blue Card",
+    "Url": "https://www.gesetze-im-internet.de/aufenthg_2004/__18g.html",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "cd204676-aad5-4b2a-85c0-6458a7a4f878",
+    "InformationEntryId": "33106e71-115f-5809-9066-7e3d3e5c57a3",
+    "Title": "AufenthG §20a — Chancenkarte and in-country limitation",
+    "Url": "https://www.gesetze-im-internet.de/aufenthg_2004/__20a.html",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "f9c976fe-55de-445d-8ff3-2c4494d14a35",
+    "InformationEntryId": "33106e71-115f-5809-9066-7e3d3e5c57a3",
+    "Title": "AufenthG §26 — humanitarian settlement routes",
+    "Url": "https://www.gesetze-im-internet.de/aufenthg_2004/__26.html",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "b479b1ca-5ace-48e5-a19b-f54ba60c1a07",
+    "InformationEntryId": "33106e71-115f-5809-9066-7e3d3e5c57a3",
+    "Title": "AufenthG §9a — EU long-term residence",
+    "Url": "https://www.gesetze-im-internet.de/aufenthg_2004/__9a.html",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "08b1e9d9-2a4c-4b3b-9218-145ccf931c1c",
+    "InformationEntryId": "33106e71-115f-5809-9066-7e3d3e5c57a3",
+    "Title": "AufenthG §9b — residence periods",
+    "Url": "https://www.gesetze-im-internet.de/aufenthg_2004/__9b.html",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "22a566e9-1765-4f01-9160-3a18b3a08e60",
+    "InformationEntryId": "283d4519-21f5-5be2-a534-1bd2606d95fc",
+    "Title": "BAMF — Ukraine integration-course admission and fee",
+    "Url": "https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Integrationskurse/Kurstraeger/Traegerrundschreiben/Anlagen/2022/traegerrundschreiben-20220318-04-anlage1.pdf?__blob=publicationFile&v=5",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "9d2807d2-c7d6-4c76-9298-a744848503ce",
+    "InformationEntryId": "283d4519-21f5-5be2-a534-1bd2606d95fc",
+    "Title": "BA — integration and vocational-language courses",
+    "Url": "https://www.arbeitsagentur.de/arbeitslos-arbeit-finden/sprachkurse",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "fb3ea379-c49c-43dc-9426-0ab2ae6c7168",
+    "InformationEntryId": "c4895b5a-eacd-53d7-a86f-f504dd615c76",
+    "Title": "Federal Ministry of Finance — FKS and reporting suspected minimum-wage violations",
+    "Url": "https://www.bundesfinanzministerium.de/Content/DE/Standardartikel/Themen/Zoll/Gerechtigkeit-faire-Arbeit/fks-im-einsatz-fuer-mindestlohn.html",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "61c55ab9-e112-4d40-b9ac-4fd7e79cbff3",
+    "InformationEntryId": "895b79b4-ce0d-5bee-9919-42ce3d76ecdb",
+    "Title": "SGB V §264 — treatment for certain non-members",
+    "Url": "https://www.gesetze-im-internet.de/sgb_5/__264.html",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "5b2f0558-a269-43ef-9f8c-3b880ba92ec5",
+    "InformationEntryId": "895b79b4-ce0d-5bee-9919-42ce3d76ecdb",
+    "Title": "SGB V §417 — voluntary insurance for qualifying §24 holders",
+    "Url": "https://www.gesetze-im-internet.de/sgb_5/__417.html",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "5e8ba693-47df-4ab2-bce7-176a59117401",
+    "InformationEntryId": "895b79b4-ce0d-5bee-9919-42ce3d76ecdb",
+    "Title": "Federal Association of Psychosocial Centres — regional service directory",
+    "Url": "https://www.baff-zentren.org/hilfe-vor-ort/psychosoziale-zentren/",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "fd6064f4-cac4-47bf-aa79-18ab75bd522c",
+    "InformationEntryId": "fd041e53-7794-5c1f-9ae4-131930fe69ee",
+    "Title": "AufenthG §24 — temporary protection distribution and assignment",
+    "Url": "https://www.gesetze-im-internet.de/aufenthg_2004/__24.html",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "c1944f9d-c7aa-497a-9738-18e7cc5888a5",
+    "InformationEntryId": "fd041e53-7794-5c1f-9ae4-131930fe69ee",
+    "Title": "AsylG §44 — reception centres for asylum applicants",
+    "Url": "https://www.gesetze-im-internet.de/asylg/__44.html",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "17759f6a-a6d7-43ba-b898-cac488377239",
+    "InformationEntryId": "f5e0f499-0f60-5465-85f8-de6345029b59",
+    "Title": "BAMF — Ukraine integration-course admission and fee",
+    "Url": "https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Integrationskurse/Kurstraeger/Traegerrundschreiben/Anlagen/2022/traegerrundschreiben-20220318-04-anlage1.pdf?__blob=publicationFile&v=5",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "0430b5f8-ad92-4748-be98-9e1fc02ecafa",
+    "InformationEntryId": "f5e0f499-0f60-5465-85f8-de6345029b59",
+    "Title": "BA — integration and vocational-language courses",
+    "Url": "https://www.arbeitsagentur.de/arbeitslos-arbeit-finden/sprachkurse",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "6c977aa9-8be5-4670-9255-0c1562422809",
+    "InformationEntryId": "f5e0f499-0f60-5465-85f8-de6345029b59",
+    "Title": "Make it in Germany — vocational training",
+    "Url": "https://www.make-it-in-germany.com/en/visa-residence/types/training",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "f7d628fd-2492-44c9-99ec-935e3b0b9a94",
+    "InformationEntryId": "f5e0f499-0f60-5465-85f8-de6345029b59",
+    "Title": "uni-assist — Ukraine school certificate documents",
+    "Url": "https://www.uni-assist.de/en/tools/info-country-by-country/details-country/country/ua/",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "76c2d717-0134-4766-96d3-91a987da74ca",
+    "InformationEntryId": "f5e0f499-0f60-5465-85f8-de6345029b59",
+    "Title": "DAAD — university admission requirements",
+    "Url": "https://www.daad.de/en/studying-in-germany/requirements/overview/",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "e06b4f58-5576-4368-ae88-f9a1c8852483",
+    "InformationEntryId": "f5e0f499-0f60-5465-85f8-de6345029b59",
+    "Title": "DAAD — tuition and semester contributions",
+    "Url": "https://www.daad.de/en/studying-in-germany/living-in-germany/finances/",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "8d53addb-7f0c-423c-9aa3-e876447b8dad",
+    "InformationEntryId": "f5e0f499-0f60-5465-85f8-de6345029b59",
+    "Title": "BAföG §61 — qualifying §24 applicants",
+    "Url": "https://www.gesetze-im-internet.de/baf_g/__61.html",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "5f731bf8-642a-49e6-a34e-0a40399f289d",
+    "InformationEntryId": "31f5802b-26a0-5cd0-bb24-0a9a4afa706a",
+    "Title": "BMAS — 2026 SGB II/SGB XII standard rates",
+    "Url": "https://www.bmas.de/DE/Arbeit/Grundsicherung-fuer-Arbeitsuchende/Leistungen-und-Bedarfe-in-der-Grundsicherung-fuer-Arbeitsuchende/leistungen-und-bedarfe-in-der-grundsicherung-fuer-arbeitsuchende.html",
+    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+  },
+  {
+    "Id": "56eeb4db-8e18-4306-9888-6427c4103f29",
+    "InformationEntryId": "31f5802b-26a0-5cd0-bb24-0a9a4afa706a",
+    "Title": "BMAS — 2026 AsylbLG rates",
+    "Url": "https://www.bmas.de/DE/Soziales/Sozialhilfe/LeistungenAsylbewerberleistungsgesetz/leistungssaetze-asylbewerberleistungsgesetz.html",
     "LastCheckedAt": "2026-11-16T00:00:00+00:00"
   }
 ]

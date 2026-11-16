@@ -14,7 +14,7 @@ From 9 October 2026, §2(3) also removes that exemption for people entering Germ
 
 Separately, EU Decision 2026/1912 makes compliance with military obligations, with proof where applicable, a condition for new grants of temporary protection from 5 August 2026. The EU exception covers people who held protection in the same Member State by 4 August and continuously retain it there.
 
-A Germany4Ukraine notice describes the exception more broadly, for people already living in the EU; that wording is not the same as the corrected Decision. If you previously held protection in another Member State or moved between states, ask the Ausländerbehörde how the rule applies before relying on the exception; physical presence somewhere in the EU is not the same as continuous protection in one state. The cited official guidance does not set out one universal evidence checklist.
+A Germany4Ukraine notice describes the exception more broadly, for people already living in the EU; that wording is not the same as the corrected Decision. [[source:76e5e3d9-9248-5a85-9b9e-f699b314d4f8|Germany4Ukraine notice]] [[source:d817d9ac-37ce-5d8e-afe3-82bbf9e06058|EU corrigendum]] If you previously held protection in another Member State or moved between states, ask the Ausländerbehörde how the rule applies before relying on the exception; physical presence somewhere in the EU is not the same as continuous protection in one state. The cited official guidance does not set out one universal evidence checklist.
 
 ## TASKS
 
@@ -26,11 +26,13 @@ Germany4Ukraine’s Entry page says to check with the local immigration authorit
 
 ## PLACES
 
-The competent Ausländerbehörde (immigration authority) decides the §24 application and issues the German residence permit. Keep the application receipt and every written decision. If the authority issues a Fiktionsbescheinigung (provisional certificate), read its legal basis and work entry; submitting an application does not give everyone identical rights. Under §81 AufenthG, the effect while a case is pending depends on whether the person was lawfully present and whether an existing title was renewed or changed before expiry.
+The competent Ausländerbehörde (immigration authority) decides the §24 application and issues the German residence permit. Keep the application receipt and every written decision. If your application is refused, read the legal-remedy instructions and deadline in the written notice promptly; do not assume a challenge automatically preserves your stay or work rights. If the authority issues a Fiktionsbescheinigung (provisional certificate), read its legal basis and work entry; submitting an application does not give everyone identical rights. Under §81 AufenthG, the effect while a case is pending depends on whether the person was lawfully present and whether an existing title was renewed or changed before expiry. Where identity must be established biometrically, §81(7) requires completion of that process and storage of the data in the Central Register of Foreigners before a Fiktionsbescheinigung or title can be issued. A valid §81(4) certificate continues the existing title and its conditions, and official Berlin guidance says it permits travel and re-entry; a §81(3) certificate permits stay while the case is pending but not re-entry. Check which subsection is written on your certificate and confirm with your local authority before travelling.
+
+Some applicants who have applied under §24 may qualify for SGB II benefits under §74 after the specified identity checks and issuance of the appropriate Fiktionsbescheinigung. This is not automatic; ask the Jobcenter to assess your individual eligibility.
 
 ## NEXT STEPS
 
-The EU extended temporary protection through 4 March 2028. Separately, the current UkraineAufenthFGV §2 continues specified §24 residence permits valid on 1 February 2026 through 4 March 2027, subject to the regulation’s conditions.
+The EU has adopted a further extension of temporary protection from 5 March 2027 through 4 March 2028; the current period runs through 4 March 2027. Separately, the current UkraineAufenthFGV §2 continues specified §24 residence permits valid on 1 February 2026 through 4 March 2027, subject to the regulation’s conditions.
 
 These dates concern different legal statuses. The EU protection period does not itself determine the validity of an individual German residence permit or work authorization. Check your own document and ask the competent Ausländerbehörde for written clarification if the applicable date is unclear.
 
@@ -45,3 +47,5 @@ These dates concern different legal statuses. The EU protection period does not 
 - [Germany4Ukraine — Registration and residence permit](https://www.germany4ukraine.de/EN/einreise-aufenthalt-und-rueckkehr/ukraine-aufenthaltserlaubnis/seite_node.html)
 - [Germany4Ukraine — 2026 temporary-protection notice](https://www.germany4ukraine.de/SharedDocs/Meldungen/EN/2026/verlaengerung-schutz.html)
 - [Residence Act §81](https://www.gesetze-im-internet.de/aufenthg_2004/__81.html)
+- [Council Implementing Decision (EU) 2025/1460 — temporary protection through 4 March 2027](https://eur-lex.europa.eu/eli/dec_impl/2025/1460/oj/eng)
+- [AufenthG §49 — identity checks](https://www.gesetze-im-internet.de/aufenthg_2004/__49.html)

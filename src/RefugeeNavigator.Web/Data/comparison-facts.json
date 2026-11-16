@@ -327,9 +327,9 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "5c1ef33d-3718-571e-b629-04d45282c9c4",
-                "e4bb8ae0-6e0a-573b-8ab9-c6ea8fffb30a",
                 "1d973c40-5d66-5b6a-ae13-78f667576a0a",
-                "8a620e3a-0f27-4ce4-8b16-47f8c022f171"
+                "8a620e3a-0f27-4ce4-8b16-47f8c022f171",
+                "a71ea73c-f2db-5545-81c8-1a4c5016c361"
               ],
               "Values": {
                 "en": "The competent Ausländerbehörde decides the §24 application. Follow its local registration and appointment or online instructions. The linked online service names a Brandenburg ministry; nationwide availability is not established.",
@@ -623,12 +623,13 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "44ce6030-635a-5dd4-bf37-b1729e464399",
-                "995812d6-001c-53e3-9067-d294940375a4"
+                "995812d6-001c-53e3-9067-d294940375a4",
+                "71b930ae-07df-43ce-98d1-3e318024e9ec"
               ],
               "Values": {
-                "en": "EU temporary protection runs through 4 March 2028. UkraineAufenthFGV §2 separately continues specified §24 permits valid on 1 February 2026 through 4 March 2027, subject to its conditions. Neither general date establishes an individual permit or work right.",
-                "uk": "Тимчасовий захист ЄС діє до 4 березня 2028 року. Окремо §2 UkraineAufenthFGV продовжує визначені дозволи за §24, чинні 1 лютого 2026 року, до 4 березня 2027 року за встановлених умов. Жодна загальна дата не визначає особистий дозвіл чи право на роботу.",
-                "ru": "Временная защита ЕС действует до 4 марта 2028 года. Отдельно §2 UkraineAufenthFGV продлевает определённые разрешения по §24, действовавшие 1 февраля 2026 года, до 4 марта 2027 года при установленных условиях. Ни одна общая дата не определяет личное разрешение или право на работу."
+                "en": "The current EU temporary-protection period runs through 4 March 2027. The EU has adopted a further period from 5 March 2027 to 4 March 2028. Separately, UkraineAufenthFGV §2 automatically continues specified §24 permits that were valid on 1 February 2026 through 4 March 2027, subject to its conditions. These dates do not establish an individual document’s validity or work right.",
+                "uk": "Чинний період тимчасового захисту ЄС триває до 4 березня 2027 року. ЄС ухвалив подальший період з 5 березня 2027 року до 4 березня 2028 року. Окремо §2 UkraineAufenthFGV автоматично продовжує визначені дозволи §24, чинні 1 лютого 2026 року, до 4 березня 2027 року за умовами постанови. Ці дати не визначають строк дії особистого документа чи право на роботу.",
+                "ru": "Действующий период временной защиты ЕС продолжается до 4 марта 2027 года. ЕС принял решение о следующем периоде с 5 марта 2027 года по 4 марта 2028 года. Отдельно §2 UkraineAufenthFGV автоматически продлевает определённые разрешения §24, действовавшие 1 февраля 2026 года, до 4 марта 2027 года при соблюдении условий постановления. Эти даты не определяют срок действия личного документа или право на работу."
               }
             },
             {
@@ -939,12 +940,17 @@
                 "28b63a52-ee56-58e7-a2a9-c0731bb88547",
                 "52ae54a2-8722-5126-be29-2f0b21317e9a",
                 "6e58a584-7b8e-5eb3-8052-8c7a1c2298f1",
-                "d44b936e-4beb-517c-941d-6402745f304d"
+                "d44b936e-4beb-517c-941d-6402745f304d",
+                "b8841c5a-0cf9-4d14-8ee6-6e6763b7ef1d",
+                "cd204676-aad5-4b2a-85c0-6458a7a4f878",
+                "f9c976fe-55de-445d-8ff3-2c4494d14a35",
+                "b479b1ca-5ace-48e5-a19b-f54ba60c1a07",
+                "08b1e9d9-2a4c-4b3b-9218-145ccf931c1c"
               ],
               "Values": {
-                "en": "Separate titles exist for vocational training (§16a), study (§16b), recognition measures (§16d) and qualified work (§§18a/18b AufenthG). Each requires its own qualifying purpose and evidence.",
-                "uk": "Існують окремі дозволи для професійного навчання (§16a), вищої освіти (§16b), заходів визнання (§16d) і кваліфікованої роботи (§§18a/18b AufenthG). Кожен вимагає відповідної мети й доказів.",
-                "ru": "Существуют отдельные разрешения для профессионального обучения (§16a), учёбы (§16b), мер признания (§16d) и квалифицированной работы (§§18a/18b AufenthG). Каждое требует соответствующей цели и доказательств."
+                "en": "Separate titles include vocational training (§16a), study (§16b), recognition measures (§16d), skilled work (§§18a/18b), the EU Blue Card (§18g) and the Opportunity Card (§20a). Each has its own criteria; the in-country Chancenkarte restriction is explained under residence-filing. A §24 holder may be granted settlement under §26(4) if the requirements in §9(2) are met; EU long-term residence under §9a is separate and subject to §9a–§9b eligibility and counting rules. No route is automatic.",
+                "uk": "Окремі дозволи передбачені для професійного навчання (§16a), навчання (§16b), заходів із визнання кваліфікації (§16d), кваліфікованої роботи (§§18a/18b), Блакитної карти ЄС (§18g) і Chancenkarte (§20a). Для кожного діють власні умови; обмеження щодо оформлення Chancenkarte всередині Німеччини наведено в розділі residence-filing. Власнику §24 може бути видано дозвіл на постійне проживання за §26(4), якщо виконані умови §9(2); дозвіл на довгострокове проживання в ЄС за §9a є окремим і підпадає під правила §§9a–9b щодо права та обчислення строків. Автоматичного переходу немає.",
+                "ru": "Отдельные разрешения предусмотрены для профессионального обучения (§16a), учёбы (§16b), мер по признанию квалификации (§16d), квалифицированной работы (§§18a/18b), Голубой карты ЕС (§18g) и Chancenkarte (§20a). У каждого маршрута свои требования; ограничение на оформление Chancenkarte внутри Германии указано в разделе residence-filing. Обладателю §24 может быть выдан постоянный вид на жительство по §26(4) при выполнении требований §9(2); разрешение на долгосрочное проживание в ЕС по §9a — отдельный статус, к которому применяются правила §§9a–9b о праве и зачёте сроков. Автоматического перехода нет."
               }
             },
             {
@@ -1551,12 +1557,13 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "6e93b253-17e8-52e1-b409-856eec6c93f7",
-                "b223d9dd-b2a0-5691-b86f-f7c1f768b6ac"
+                "b223d9dd-b2a0-5691-b86f-f7c1f768b6ac",
+                "cd204676-aad5-4b2a-85c0-6458a7a4f878"
               ],
               "Values": {
-                "en": "A current §24 permit holder may apply for another title in Germany under §39(1) AufenthV; the Ausländerbehörde decides the substantive conditions. A timely filing before expiry generally continues the old title under §81(4); late filings do not automatically do so.",
-                "uk": "Власник чинного дозволу за §24 може подати на інший дозвіл у Німеччині за §39(1) AufenthV; відповідність умовам оцінює Ausländerbehörde. Своєчасне подання до закінчення дозволу, як правило, зберігає попередній дозвіл за §81(4); запізніле — не автоматично.",
-                "ru": "Обладатель действующего разрешения по §24 может подать на другое разрешение в Германии по §39(1) AufenthV; соответствие условиям оценивает Ausländerbehörde. Своевременная подача до окончания разрешения, как правило, сохраняет прежнее разрешение по §81(4); поздняя — не автоматически."
+                "en": "A current §24 permit holder may apply for another title in Germany under §39(1) AufenthV, but in-country filing and grant remain route-specific. Under §20a(4), a Chancenkarte may be granted to someone already in Germany only if they hold a title under Division 3 or 4; §24 is in Division 5. Do not assume an in-country switch to a Chancenkarte. A timely application before expiry generally continues the existing title under §81(4), subject to the route and document.",
+                "uk": "Власник чинного дозволу за §24 може подати заяву на інший дозвіл у Німеччині за §39(1) AufenthV, але можливість подання та видачі всередині країни залежить від конкретного маршруту. За §20a(4) Chancenkarte можна видати людині, яка вже перебуває в Німеччині, лише якщо вона має дозвіл за розділом 3 або 4; §24 належить до розділу 5. Не припускайте, що можна перейти на Chancenkarte в Німеччині. Своєчасна заява до завершення дозволу зазвичай зберігає його дію за §81(4), з урахуванням конкретного маршруту й документа.",
+                "ru": "Обладатель действующего разрешения по §24 может подать заявление на другой вид на жительство в Германии по §39(1) AufenthV, однако возможность подачи и выдачи внутри страны зависит от конкретного маршрута. По §20a(4) Chancenkarte можно выдать уже находящемуся в Германии человеку только при наличии разрешения по разделу 3 или 4; §24 относится к разделу 5. Не считайте, что можно перейти на Chancenkarte в Германии. Своевременное заявление до окончания разрешения обычно сохраняет его действие по §81(4) с учётом конкретного маршрута и документа."
               }
             },
             {
@@ -2768,9 +2775,9 @@
                 "dabe7e22-2c34-5c78-b0a2-3d29c9677d14"
               ],
               "Values": {
-                "en": "The residence title and supplementary sheet show work permission and restrictions under §4a AufenthG. In a pending case, check the Fiktionsbescheinigung and §81 conditions; an application or Ukrainian nationality alone does not establish permission.",
-                "uk": "Дозвіл на проживання й додатковий аркуш указують право на роботу та обмеження за §4a AufenthG. Під час розгляду перевіряйте Fiktionsbescheinigung та умови §81; сама заява чи українське громадянство не встановлює дозволу.",
-                "ru": "Разрешение на проживание и дополнительный лист указывают право на работу и ограничения по §4a AufenthG. Во время рассмотрения проверяйте Fiktionsbescheinigung и условия §81; само заявление или украинское гражданство не устанавливает разрешения."
+                "en": "Your residence title and supplementary sheet show work permission and restrictions under §4a AufenthG. In a pending case, check the exact Fiktionsbescheinigung entry and which §81 provision applies. Section 81(5a) covers specified employment titles in Chapter 2, Sections 3 and 4; it is not a blanket work permission for a §24 application in Section 5. An application or Ukrainian nationality alone does not establish permission.",
+                "uk": "У дозволі на проживання та додатковому аркуші зазначено право на роботу й обмеження за §4a AufenthG. Під час розгляду заяви перевірте точний запис у Fiktionsbescheinigung і застосовну норму §81. §81(5a) охоплює визначені дозволи для працевлаштування за главою 2, розділами 3 і 4; це не загальний дозвіл працювати під час розгляду заяви за §24 у розділі 5. Сама заява чи громадянство України не встановлює дозволу.",
+                "ru": "В разрешении на проживание и дополнительном листе указаны право на работу и ограничения по §4a AufenthG. Если заявление рассматривается, проверьте точную запись в Fiktionsbescheinigung и применимую норму §81. §81(5a) охватывает определённые разрешения на работу по главе 2, разделам 3 и 4; это не общее разрешение работать при рассмотрении заявления по §24 из раздела 5. Само заявление или гражданство Украины не устанавливает разрешения."
               }
             },
             {
@@ -3365,9 +3372,9 @@
                 "a8f6a845-d29b-57dd-b873-73fd15b498c8"
               ],
               "Values": {
-                "en": "The reviewed 2026 general minimum wage is €13.90 gross per hour from 1 January 2026. Statutory exceptions apply and a sector may set a higher floor; recheck the current amount before relying on it.",
-                "uk": "Перевірена загальна мінімальна оплата на 2026 рік — 13,90 євро брутто за годину з 1 січня 2026 року. Є законодавчі винятки, а галузь може встановлювати вищий мінімум; перед використанням перевірте актуальну суму.",
-                "ru": "Проверенная общая минимальная оплата на 2026 год — 13,90 евро брутто в час с 1 января 2026 года. Есть законодательные исключения, а отрасль может устанавливать более высокий минимум; перед использованием проверьте актуальную сумму."
+                "en": "The general statutory minimum wage is €13.90 gross per hour from 1 January 2026. The adopted rate rises to €14.60 from 1 January 2027. Statutory exceptions apply, and sectoral minima may be higher; check the rate that applies to your work period.",
+                "uk": "Загальна законодавча мінімальна зарплата становить €13,90 брутто за годину з 1 січня 2026 року. Ухвалена ставка зросте до €14,60 з 1 січня 2027 року. Діють законодавчі винятки, а галузеві мінімуми можуть бути вищими; перевірте ставку для свого періоду роботи.",
+                "ru": "Общая установленная законом минимальная зарплата составляет €13,90 брутто в час с 1 января 2026 года. Утверждённая ставка вырастет до €14,60 с 1 января 2027 года. Действуют законные исключения, а отраслевые минимумы могут быть выше; проверьте ставку для периода вашей работы."
               }
             },
             {
@@ -3658,12 +3665,14 @@
               "OfficialSourceIds": [
                 "c4de5dcd-311c-541f-8444-8829c5be3923",
                 "79f1bd04-1d45-5170-9f54-ccdf448a8a74",
-                "ec0c23f7-1858-5025-8c5d-67200f6e5d8a"
+                "ec0c23f7-1858-5025-8c5d-67200f6e5d8a",
+                "61c55ab9-e112-4d40-b9ac-4fd7e79cbff3",
+                "5b2f0558-a269-43ef-9f8c-3b880ba92ec5"
               ],
               "Values": {
-                "en": "SGB V covers specified insured groups, including certain employees and qualifying SGB II recipients. AsylbLG §§4 and 6 provide a separate, conditional benefits route. A §24 permit alone does not determine coverage or its scope.",
-                "uk": "SGB V охоплює визначені застраховані групи, зокрема деяких працівників та отримувачів відповідних виплат SGB II. §§4 і 6 AsylbLG передбачають окремий умовний шлях допомоги. Сам дозвіл за §24 не визначає покриття чи його обсяг.",
-                "ru": "SGB V охватывает определённые застрахованные группы, в том числе некоторых работников и получателей соответствующих выплат SGB II. §§4 и 6 AsylbLG предусматривают отдельный условный путь помощи. Само разрешение по §24 не определяет покрытие или его объём."
+                "en": "Coverage depends on the actual route, not §24 alone. Employment may establish statutory or private insurance. Qualifying SGB II recipients are generally in GKV during benefit receipt; SGB XII recipients receive treatment through the Sozialamt, often administered by a Krankenkasse under §264 SGB V. AsylbLG §§4/6 provide a separate local route. Eligible §24 holders not needy under SGB II/XII may qualify for voluntary GKV entry within six months under §417 SGB V, subject to document and identity conditions.",
+                "uk": "Покриття залежить від фактичного маршруту, а не лише від §24. Робота може передбачати державне чи приватне страхування. Отримувачі відповідних виплат SGB II зазвичай застраховані в GKV на період виплат; отримувачі SGB XII отримують лікування через Sozialamt, часто через Krankenkasse за §264 SGB V. §§4/6 AsylbLG передбачають окремий маршрут через місцевий орган. Особи з §24, які не є нужденними за SGB II/XII, можуть відповідати умовам добровільного вступу до GKV протягом шести місяців за §417 SGB V за наявності потрібних документів і перевірки особи.",
+                "ru": "Покрытие зависит от фактического маршрута, а не только от §24. Работа может предусматривать государственное или частное страхование. Получатели соответствующих выплат SGB II обычно застрахованы в GKV на период выплат; получатели SGB XII получают лечение через Sozialamt, часто через Krankenkasse по §264 SGB V. §§4/6 AsylbLG предусматривают отдельный маршрут через местный орган. Лица с §24, не нуждающиеся в помощи по SGB II/XII, могут соответствовать условиям добровольного вступления в GKV в течение шести месяцев по §417 SGB V при наличии нужных документов и проверке личности."
               }
             },
             {
@@ -3962,8 +3971,6 @@
               "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "2c177ebd-53e0-5641-8bae-6f08f1df20de",
-                "8e121eb3-d156-53b9-a76f-283f35e83d43",
                 "e273f820-0f99-5003-95ce-ff3b110a6b44"
               ],
               "Values": {
@@ -4260,7 +4267,6 @@
               "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "41b9dbd1-241b-5c36-9a58-728a98b5ca85",
                 "45a3c454-6c68-58bf-ae29-6016670c392b"
               ],
               "Values": {
@@ -4568,13 +4574,13 @@
               "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "74aadb89-3efe-5bec-bc79-28d2a097de27",
-                "6f604127-6636-5674-b7a7-fdaa20a379dc"
+                "fd6064f4-cac4-47bf-aa79-18ab75bd522c",
+                "c1944f9d-c7aa-497a-9738-18e7cc5888a5"
               ],
               "Values": {
-                "en": "Initial reception and temporary accommodation follow Land and municipal reception/allocation routes. The route depends on location and the person’s situation; it does not guarantee a particular dwelling.",
-                "uk": "Первинний прийом і тимчасове розміщення відбуваються через системи федеральної землі та муніципалітету. Шлях залежить від місця й обставин людини; конкретне житло не гарантується.",
-                "ru": "Первичный приём и временное размещение проходят через системы федеральной земли и муниципалитета. Путь зависит от места и обстоятельств человека; конкретное жильё не гарантируется."
+                "en": "Asylum applicants use the Asylum Act reception route. Temporary protection has a separate §24 AufenthG route: authorities may distribute people among Länder and a Land may assign a place. There is no entitlement to choose the Land/place; follow any assignment and check with the immigration authority before moving while it applies. The §24 assignment ends when the residence permit is issued. Local shelter availability still varies, and no particular dwelling is guaranteed.",
+                "uk": "Шукачі притулку користуються маршрутом прийому за Asylgesetz. Тимчасовий захист має окремий маршрут за §24 AufenthG: органи можуть розподіляти людей між землями, а земля може призначити місце. Права обрати землю/місце немає; дотримуйтеся призначення та до переїзду, поки воно діє, уточніть питання в міграційному органі. Призначення за §24 припиняється після видачі дозволу на проживання. Наявність місць у притулках залишається місцевою; конкретне житло не гарантується.",
+                "ru": "Лица, ищущие убежище, используют маршрут размещения по Asylgesetz. Для временной защиты действует отдельный маршрут §24 AufenthG: органы могут распределять людей между землями, а земля может назначить место. Права выбрать землю/место нет; соблюдайте назначение и до переезда, пока оно действует, уточните вопрос в миграционном ведомстве. Назначение по §24 прекращается после выдачи вида на жительство. Наличие мест в приютах определяется на местах; конкретное жильё не гарантируется."
               }
             },
             {
@@ -4865,7 +4871,6 @@
               "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "6f604127-6636-5674-b7a7-fdaa20a379dc",
                 "469e84d9-6769-5fa1-8137-dea153b2f2c6",
                 "ec4a811e-06af-5ed2-9a45-20ec6f17c0bb"
               ],
@@ -5171,9 +5176,9 @@
                 "39e9b8cf-22f8-5a51-9bd2-b57f13cc67e7"
               ],
               "Values": {
-                "en": "Housing costs are assessed under the applicable scheme: SGB II §22, SGB XII §35 or AsylbLG §3. Use the Jobcenter, Sozialamt or AsylbLG authority named in the decision. Applicable cost limits and local checks remain; a permit alone does not promise rent or deposit payment.",
-                "uk": "Витрати на житло оцінюють за відповідною системою: §22 SGB II, §35 SGB XII або §3 AsylbLG. Звертайтеся до Jobcenter, Sozialamt чи органу AsylbLG, указаного в рішенні. Діють ліміти витрат і місцеві перевірки; сам дозвіл не гарантує оплату оренди чи депозиту.",
-                "ru": "Расходы на жильё оценивают по соответствующей системе: §22 SGB II, §35 SGB XII или §3 AsylbLG. Обращайтесь в Jobcenter, Sozialamt или орган AsylbLG, указанный в решении. Действуют лимиты расходов и местные проверки; само разрешение не гарантирует оплату аренды или депозита."
+                "en": "SGB II §22 and SGB XII §35 assess actual reasonable accommodation and heating costs under local rules. From 1 July 2026, accommodation costs during the one-year waiting period are capped at 1.5 times the local abstract reasonableness limit, subject to hardship exceptions; heating is assessed separately. AsylbLG §3 has a separate necessary-cost route. Local limits apply, and prior written assurance may be needed for a new tenancy, deposit or moving costs. A §24 permit alone does not promise payment.",
+                "uk": "§22 SGB II та §35 SGB XII оцінюють фактичні розумні витрати на житло й опалення за місцевими правилами. Із 1 липня 2026 року витрати на житло протягом однорічного пільгового періоду обмежені 1,5 місцевого абстрактного ліміту розумності, з винятками для складних випадків; опалення оцінюється окремо. §3 AsylbLG має окремий маршрут необхідних витрат. Діють місцеві ліміти, а для нового договору оренди, депозиту чи витрат на переїзд може знадобитися попереднє письмове погодження. Сам дозвіл за §24 не гарантує оплату.",
+                "ru": "§22 SGB II и §35 SGB XII оценивают фактические разумные расходы на жильё и отопление по местным правилам. С 1 июля 2026 года расходы на жильё в течение годового льготного периода ограничены 1,5 местного абстрактного лимита разумности, с исключениями для трудных случаев; отопление оценивается отдельно. §3 AsylbLG имеет отдельный маршрут необходимых расходов. Действуют местные лимиты, а для нового договора аренды, депозита или расходов на переезд может потребоваться предварительное письменное согласование. Само разрешение по §24 не гарантирует оплату."
               }
             },
             {
@@ -5479,7 +5484,6 @@
               "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "a9192f33-66b2-56fc-b24f-ade0c3d2c6f0",
                 "6ab0d347-e98f-5243-84ac-d06e9b3377bd"
               ],
               "Values": {
@@ -5785,14 +5789,12 @@
               "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "a9192f33-66b2-56fc-b24f-ade0c3d2c6f0",
-                "6ab0d347-e98f-5243-84ac-d06e9b3377bd",
-                "1a7ade55-783f-59ae-97a2-d2b620104d9f"
+                "6ab0d347-e98f-5243-84ac-d06e9b3377bd"
               ],
               "Values": {
-                "en": "School policy and pupil-language support are handled by each of Germany’s 16 Länder; the federal portal directs families to their Land’s school contacts. The KMK’s 2022/23 framework described Land-specific support and German-as-a-second-language for newly arrived pupils. Check current courses and support with the relevant Land; no single nationwide course or model is guaranteed.",
-                "uk": "Освітню політику та мовну підтримку учнів визначає кожна з 16 федеральних земель Німеччини; федеральний портал спрямовує родини до шкільних контактів їхньої землі. У рамковому документі KMK на 2022/23 навчальний рік описувалися підтримка на рівні земель і німецька як друга мова для новоприбулих учнів. Перевірте актуальні курси й підтримку у відповідній землі; єдиний загальнонаціональний курс або модель не гарантуються.",
-                "ru": "Образовательную политику и языковую поддержку учеников определяет каждая из 16 федеральных земель Германии; федеральный портал направляет семьи к школьным контактам их земли. В рамочном документе KMK на 2022/23 учебный год описывались поддержка на уровне земель и немецкий как второй язык для недавно прибывших учеников. Уточните актуальные курсы и поддержку в соответствующей земле; единый общенациональный курс или модель не гарантируются."
+                "en": "Each Land handles school placement and German-language support for newly arrived pupils; ask the local education authority about current preparatory classes and support. Availability and format vary locally.",
+                "uk": "Кожна земля організовує зарахування до школи й підтримку німецької мови для новоприбулих учнів; запитайте місцевий орган освіти про актуальні підготовчі класи та допомогу. Формат і наявність різняться на місцях.",
+                "ru": "Каждая земля организует зачисление в школу и поддержку немецкого языка для недавно прибывших учеников; уточните в местном органе образования актуальные подготовительные классы и поддержку. Формат и доступность различаются по месту."
               }
             },
             {
@@ -6082,12 +6084,16 @@
               "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "34e99df7-6990-5a44-91b8-c4cb9f7b168c"
+                "34e99df7-6990-5a44-91b8-c4cb9f7b168c",
+                "f7d628fd-2492-44c9-99ec-935e3b0b9a94",
+                "76c2d717-0134-4766-96d3-91a987da74ca",
+                "e06b4f58-5576-4368-ae88-f9a1c8852483",
+                "8d53addb-7f0c-423c-9aa3-e876447b8dad"
               ],
               "Values": {
-                "en": "Universities decide admission and language requirements. DAAD’s National Academic Contact Point Ukraine provides orientation, not an admission decision.",
-                "uk": "Університети визначають вимоги вступу й мови. National Academic Contact Point Ukraine від DAAD надає орієнтаційну інформацію, а не рішення про зарахування.",
-                "ru": "Университеты определяют требования поступления и языка. National Academic Contact Point Ukraine от DAAD предоставляет ориентирующую информацию, а не решение о зачислении."
+                "en": "Admission depends on your university-entrance qualification and programme requirements; the university decides, sometimes using uni-assist. Ukrainian school certificates issued from 2026 need an additional curriculum statement for uni-assist review. Public-university tuition is often absent for first degrees, but semester contributions apply and Land/institution tuition exceptions exist. A §24 permit alone does not guarantee admission or BAföG.",
+                "uk": "Вступ залежить від документа, що дає право на вступ до вишу, та вимог програми; рішення ухвалює університет, іноді з попередньою перевіркою uni-assist. Для українських свідоцтв, виданих із 2026 року, uni-assist вимагає додаткову довідку про навчальну програму. У багатьох державних вишах плати за першу освіту немає, але є семестровий внесок та винятки за землею/закладом. §24 сам по собі не гарантує вступ чи BAföG.",
+                "ru": "Поступление зависит от документа, дающего право на обучение в вузе, и требований программы; решение принимает университет, иногда с предварительной проверкой uni-assist. Для украинских аттестатов, выданных с 2026 года, uni-assist требует дополнительную справку об учебной программе. Во многих государственных вузах плата за первую ступень отсутствует, но есть семестровый взнос и исключения по земле/учреждению. §24 сам по себе не гарантирует поступление или BAföG."
               }
             },
             {
@@ -6415,12 +6421,14 @@
                 "346200f4-e8dc-5be8-949f-d9748e0575fe",
                 "e9187aab-591c-5a86-895c-52d89e73a436",
                 "48566923-6113-5583-bb40-2937fb8874aa",
-                "cedffb49-4e83-5e1c-aba3-b109bdf4d0e4"
+                "cedffb49-4e83-5e1c-aba3-b109bdf4d0e4",
+                "5f731bf8-642a-49e6-a34e-0a40399f289d",
+                "56eeb4db-8e18-4306-9888-6427c4103f29"
               ],
               "Values": {
-                "en": "SGB II depends on age, ability to work, need and residence conditions; §74 covers only specified §24 applicants with a qualifying provisional certificate and identity registration. Other cases may fall under AsylbLG or SGB XII. Nationality alone does not assign a scheme.",
-                "uk": "SGB II залежить від віку, працездатності, потреби й умов проживання; §74 охоплює лише визначених заявників за §24 із відповідним тимчасовим посвідченням і реєстрацією особи. Інші випадки можуть належати до AsylbLG чи SGB XII. Саме громадянство не визначає систему.",
-                "ru": "SGB II зависит от возраста, трудоспособности, нуждаемости и условий проживания; §74 охватывает только определённых заявителей по §24 с соответствующим временным свидетельством и регистрацией личности. Другие случаи могут относиться к AsylbLG или SGB XII. Само гражданство не определяет систему."
+                "en": "Current route depends on individual SGB II, SGB XII or AsylbLG category and decision. SGB II §74 is limited to qualifying §24 applicants with the required §81 provisional certificate and identity processing. SGB II is called Grundsicherungsgeld from 1 July 2026. 2026 rates remain €563/€506/€451/€471/€390/€357 under SGB II/XII; AsylbLG basic totals are €455/€409/€365/€405/€337/€309 by the categories described in the article. These are not guaranteed total awards. The Ukraine-specific bill is not current law.",
+                "uk": "Чинний маршрут залежить від індивідуальної категорії та рішення за SGB II, SGB XII або AsylbLG. §74 SGB II стосується лише визначених заявників §24 з відповідним тимчасовим документом §81 та реєстрацією особи. Із 1 липня 2026 року SGB II офіційно називається Grundsicherungsgeld. Ставки SGB II/XII у 2026 році: €563/€506/€451/€471/€390/€357; базові загальні суми AsylbLG: €455/€409/€365/€405/€337/€309 за відповідними категоріями. Це не гарантований розмір усіх виплат. Український законопроєкт не є чинним правом.",
+                "ru": "Действующий маршрут зависит от индивидуальной категории и решения по SGB II, SGB XII или AsylbLG. §74 SGB II распространяется только на определённых заявителей §24 с подходящим временным документом §81 и регистрацией личности. С 1 июля 2026 года SGB II официально называется Grundsicherungsgeld. Ставки SGB II/XII в 2026 году: €563/€506/€451/€471/€390/€357; базовые общие суммы AsylbLG: €455/€409/€365/€405/€337/€309 по соответствующим категориям. Это не гарантированный размер всех выплат. Украинский законопроект не является действующим правом."
               }
             },
             {
@@ -6720,7 +6728,6 @@
               "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "d075064c-0110-59a3-9fd7-1164ebd2faa1",
                 "346200f4-e8dc-5be8-949f-d9748e0575fe",
                 "48566923-6113-5583-bb40-2937fb8874aa",
                 "cedffb49-4e83-5e1c-aba3-b109bdf4d0e4"
@@ -7033,9 +7040,9 @@
                 "261f2bd0-1cf1-55e2-9193-55a946d094e2"
               ],
               "Values": {
-                "en": "BA’s simplified Kindergeld route requires a parent from Ukraine living in Germany with a §24 permit allowing work for at least six months, and a child living in Germany, the EU, EEA or Switzerland. Actual employment is not required under that rule; apply to Familienkasse, which decides entitlement.",
-                "uk": "Спрощений шлях Kindergeld від BA вимагає, щоб батько чи мати з України жили в Німеччині з дозволом за §24, який дозволяє працювати щонайменше шість місяців, а дитина — у Німеччині, ЄС, ЄЕЗ або Швейцарії. За цим правилом фактична робота не потрібна; заяву оцінює Familienkasse.",
-                "ru": "Упрощённый путь Kindergeld от BA требует, чтобы родитель из Украины жил в Германии с разрешением по §24, позволяющим работать не менее шести месяцев, а ребёнок — в Германии, ЕС, ЕЭЗ или Швейцарии. По этому правилу фактическая работа не требуется; заявление оценивает Familienkasse."
+                "en": "A parent from Ukraine may apply for Kindergeld if they live in Germany and hold a §24 permit allowing work for at least six months, and the child lives in Germany/EU/EEA/Switzerland. Actual employment is not required under the BA’s simplified route. The 2026 amount is €259 monthly per eligible child; Familienkasse decides.",
+                "uk": "Один із батьків з України може подати заяву на Kindergeld, якщо живе в Німеччині й має дозвіл §24 із правом на роботу щонайменше шість місяців, а дитина живе в Німеччині/ЄС/ЄЕЗ/Швейцарії. За спрощеним маршрутом BA фактична робота не потрібна. У 2026 році сума становить €259 на місяць на кожну дитину, яка відповідає умовам; рішення ухвалює Familienkasse.",
+                "ru": "Родитель из Украины может подать заявление на Kindergeld, если живёт в Германии, имеет разрешение §24 с правом на работу не менее шести месяцев, а ребёнок живёт в Германии/ЕС/ЕЭЗ/Швейцарии. По упрощённому маршруту BA фактическая работа не требуется. В 2026 году выплата составляет €259 в месяц на каждого подходящего ребёнка; решение принимает Familienkasse."
               }
             },
             {

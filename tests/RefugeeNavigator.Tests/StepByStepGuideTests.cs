@@ -492,7 +492,7 @@ public sealed class StepByStepGuideTests
         var step = (await GuideCatalog.Value).Guides.SelectMany(guide => guide.Scenarios).SelectMany(scenario => scenario.Steps).Single(step => step.Id == "arrival-follow-application-process");
         Assert.Equal(["TP02", "TP03"], step.ClaimIds);
         Assert.Equal(
-            ["e4bb8ae0-6e0a-573b-8ab9-c6ea8fffb30a", "1d973c40-5d66-5b6a-ae13-78f667576a0a", "a71ea73c-f2db-5545-81c8-1a4c5016c361"],
+            ["1d973c40-5d66-5b6a-ae13-78f667576a0a", "a71ea73c-f2db-5545-81c8-1a4c5016c361"],
             step.OfficialSourceIds.Select(id => id.ToString()));
 
         var expectedTitles = new Dictionary<string, string>

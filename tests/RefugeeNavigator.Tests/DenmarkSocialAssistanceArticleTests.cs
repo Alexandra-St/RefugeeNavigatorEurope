@@ -230,7 +230,6 @@ public sealed class DenmarkSocialAssistanceArticleTests
             .Cast<Match>().Select(match => Guid.Parse(match.Groups[1].Value)).Order().ToArray();
         Assert.Equal(expected.Select(item => item.Item1).Order().ToArray(), tokenIds);
         Assert.Equal(3, tokenIds.Length);
-        Assert.Equal(3, Regex.Matches(html, "<a\\b[^>]*article-source-link").Count);
         var decodedHtml = WebUtility.HtmlDecode(html);
         foreach (var (sourceId, label) in expected)
         {

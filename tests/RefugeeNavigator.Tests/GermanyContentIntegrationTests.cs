@@ -41,13 +41,13 @@ public sealed class GermanyContentIntegrationTests
     private static readonly IReadOnlyDictionary<string, int> SourceCounts = new Dictionary<string, int>
     {
         ["1a6b97c4-eb9e-5590-8715-c95f5f95677e"] = 10,
-        ["33106e71-115f-5809-9066-7e3d3e5c57a3"] = 10,
+        ["33106e71-115f-5809-9066-7e3d3e5c57a3"] = 15,
         ["283d4519-21f5-5be2-a534-1bd2606d95fc"] = 11,
         ["c4895b5a-eacd-53d7-a86f-f504dd615c76"] = 9,
-        ["895b79b4-ce0d-5bee-9919-42ce3d76ecdb"] = 12,
-        ["fd041e53-7794-5c1f-9ae4-131930fe69ee"] = 9,
-        ["f5e0f499-0f60-5465-85f8-de6345029b59"] = 11,
-        ["31f5802b-26a0-5cd0-bb24-0a9a4afa706a"] = 15
+        ["895b79b4-ce0d-5bee-9919-42ce3d76ecdb"] = 11,
+        ["fd041e53-7794-5c1f-9ae4-131930fe69ee"] = 7,
+        ["f5e0f499-0f60-5465-85f8-de6345029b59"] = 14,
+        ["31f5802b-26a0-5cd0-bb24-0a9a4afa706a"] = 16
     };
 
     [Fact]
@@ -66,7 +66,7 @@ public sealed class GermanyContentIntegrationTests
         Assert.Equal(24, translations.Select(item => (item.InformationEntryId, item.LanguageCode)).Distinct().Count());
         Assert.Equal(24, translations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
         Assert.Equal(0, translations.Count(item => item.VerificationStatus == VerificationStatus.NeedsReview));
-        Assert.Equal(87, sources.Length);
+        Assert.Equal(93, sources.Length);
         Assert.DoesNotContain(sources, source => source.Url.ToString() == "https://www.germany4ukraine.de/EN/arbeit-und-soziales/ukrainer-arbeiten-in-deutschland/seite_node.html");
         Assert.Equal(GermanyCategoryIds.Order().ToArray(), entries.Select(entry => entry.CategoryId).Distinct().Order().ToArray());
         Assert.All(entries, entry => Assert.Equal(ExpectedCategoryIds[entry.Id.ToString()], entry.CategoryId));
@@ -74,6 +74,7 @@ public sealed class GermanyContentIntegrationTests
         {
             Assert.Contains(translation.LanguageCode, Languages);
             Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
+            Assert.Equal(new DateTimeOffset(2026, 11, 16, 0, 0, 0, TimeSpan.Zero), translation.LastUpdatedAt);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
@@ -93,7 +94,7 @@ public sealed class GermanyContentIntegrationTests
             else
                 Assert.InRange(source.LastCheckedAt,
                     new DateTimeOffset(2026, 10, 15, 23, 22, 10, TimeSpan.Zero),
-                    new DateTimeOffset(2026, 10, 16, 0, 21, 41, TimeSpan.Zero));
+                    new DateTimeOffset(2026, 11, 16, 0, 0, 0, TimeSpan.Zero));
         });
 
         Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == DenmarkId));
@@ -121,8 +122,10 @@ public sealed class GermanyContentIntegrationTests
             Assert.Equal(expectedEntries.Length, Regex.Matches(categoryHtml, "<article class=\"information-entry\"").Count);
             Assert.Equal(expectedEntries.Sum(entry => catalog.OfficialSources.Count(source => source.InformationEntryId == entry.Id)),
                 Regex.Matches(categoryHtml, "<a href=\"https://").Count);
-            Assert.Equal(expectedTranslations.Sum(item => Regex.Matches(item.Content, "(?m)^## ").Count),
-                Regex.Matches(categoryHtml, "<h3 class=\"entry-section-heading\"").Count);
+            Assert.True(
+                expectedTranslations.Sum(item => Regex.Matches(item.Content, "(?m)^## ").Count) ==
+                Regex.Matches(categoryHtml, "<h3 class=\"entry-section-heading\"").Count,
+                $"Rendered section headings should match Germany {category.Slug}/{language} content.");
             Assert.DoesNotContain("## ", visibleCategoryHtml, StringComparison.Ordinal);
             var renderedEntryLists = Regex.Matches(categoryHtml, "<ul\\b[^>]*class=\"entry-list\"[^>]*>(.*?)</ul>", RegexOptions.Singleline)
                 .Cast<Match>().ToArray();
@@ -210,7 +213,7 @@ public sealed class GermanyContentIntegrationTests
         Assert.Contains("through 4 March 2027", protection["en"]);
         Assert.Contains("до 4 березня 2028 року", protection["uk"]);
         Assert.Contains("до 4 березня 2027 року", protection["uk"]);
-        Assert.Contains("до 4 марта 2028 года", protection["ru"]);
+        Assert.Contains("по 4 марта 2028 года", protection["ru"]);
         Assert.Contains("до 4 марта 2027 года", protection["ru"]);
         foreach (var language in Languages)
         {
@@ -242,9 +245,37 @@ public sealed class GermanyContentIntegrationTests
         Assert.DoesNotContain("inconsistent", workRights["en"], StringComparison.OrdinalIgnoreCase);
         Assert.Contains("в том же государстве-члене", protection["ru"]);
         Assert.Contains("тій самій державі-члені", protection["uk"]);
-        Assert.Contains("Treatment, insurance and interpretation are not universally free.", healthcare["en"]);
+        Assert.Contains("Coverage, co-payments and interpreter costs depend on your scheme and circumstances", healthcare["en"]);
         Assert.Contains("Land", education["en"]);
         Assert.Contains("bill", social["en"], StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Fact]
+    public async Task GermanyRefreshKeepsProtectionWageAndPendingBillDatesDistinct()
+    {
+        var catalog = await LoadCatalogAsync();
+        string Content(string entryId) => catalog.InformationEntryTranslations.Single(item =>
+            item.InformationEntryId == Guid.Parse(entryId) && item.LanguageCode == "en").Content;
+
+        var protection = Content("1a6b97c4-eb9e-5590-8715-c95f5f95677e");
+        Assert.Contains("through 4 March 2027", protection);
+        Assert.Contains("from 5 March 2027 through 4 March 2028", protection);
+        Assert.Contains("permits valid on 1 February 2026 through 4 March 2027", protection);
+        Assert.Contains("from 5 August 2026", protection);
+        Assert.Contains("by 4 August", protection);
+
+        var work = Content("c4895b5a-eacd-53d7-a86f-f504dd615c76");
+        Assert.Contains("€13.90 gross per hour", work);
+        Assert.Contains("€14.60 from 1 January 2027", work);
+        Assert.Contains("Section 81(5a)", work);
+        Assert.Contains("not a blanket work permission", work);
+        var employment = Content("283d4519-21f5-5be2-a534-1bd2606d95fc");
+        Assert.Contains("has not been promulgated", employment);
+        Assert.Contains("has no effective date", employment);
+
+        var social = Content("31f5802b-26a0-5cd0-bb24-0a9a4afa706a");
+        Assert.Contains("still-pending Ukraine-specific bill", social);
+        Assert.Contains("proposals, not current duties", social);
     }
 
     private static async Task<CatalogData> LoadCatalogAsync() =>

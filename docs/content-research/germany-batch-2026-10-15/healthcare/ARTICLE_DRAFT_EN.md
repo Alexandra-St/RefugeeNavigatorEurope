@@ -6,35 +6,37 @@
 
 ## RULES
 
-There is no single health-cover route for everyone displaced from Ukraine. Coverage can depend on employment, the applicable benefit scheme, residence documents and local administration. For example, SGB V provides statutory insurance for certain employees and people receiving qualifying SGB II subsistence benefits; AsylbLG §§4 and 6 provide health-related benefits for people within that law. A §24 residence permit by itself does not tell you which card, provider or scope applies.
+There is no single health-cover route for everyone displaced from Ukraine, and a §24 residence permit alone does not select one. If your job makes you compulsorily insured, statutory or private insurance depends on the job and applicable insurance rules. People receiving qualifying SGB II subsistence benefits are generally insured in the statutory health system (GKV) for the benefit period, subject to exceptions such as some people previously privately insured. People receiving qualifying SGB XII assistance receive medical treatment through the Sozialamt; under §264 SGB V a Krankenkasse may administer it and issue an electronic card, but this does not necessarily make the person a GKV member.
 
-The Leistungsrechtsanpassungsgesetz proposal would change benefit routes and related health provisions for specified §24 groups, using document-issuance criteria and exceptions rather than a blanket arrival date. On 16 October 2026 BMAS and Bundestag records still showed a bill in progress, not enacted law. Do not present its proposed transition as current law.
+People covered by the Asylbewerberleistungsgesetz (AsylbLG) use a separate, authority-administered route. Section 4 covers necessary treatment for acute illness and pain, medicines and bandages, vaccinations and preventive checks, plus pregnancy and maternity care; §6 allows other health support where it is essential in the individual case and names additional support for certain §24 holders with special needs. Whether a health card is used depends on the local implementation. Eligible §24 holders who are not needy under SGB II or SGB XII may have a right to join GKV voluntarily within six months, subject to the statutory residence-document and identity-check conditions. Ask which route and proof apply to you.
+
+The Leistungsrechtsanpassungsgesetz is still a bill as checked on 16 November 2026, not current law. It proposes moving specified people who first received or applied for §24 protection after 31 March 2025 from SGB II/SGB XII to AsylbLG, with existing SGB II/XII benefit periods continuing until their individual end date, but no later than three months after the proposed law takes effect. The bill also proposes completing qualifying treatment that began on an SGB II/XII GKV-equivalent basis, and clarifying that an AsylbLG §4 health entitlement counts as other health coverage for certain GKV continuation rules. These changes are not in force. Separately, the main changes under the 13th SGB II Amendment Act took effect on 1 July 2026; check the actual benefit decision and insurer notice.
 
 ## TASKS
 
-First read your benefit decision, insurer letter or treatment certificate. Keep your residence document, insurance card or proof of cover, benefit decision, medication list and relevant medical records. Before a routine appointment, ask the practice whether it accepts your cover and whether any cost or referral is needed. If you have no card yet, ask the insurer or the authority responsible for your benefits how to obtain proof; procedures differ by scheme and locality.
+First read your benefit decision, insurer letter or treatment certificate. Keep your residence document, insurance card or proof of cover, benefit decision, medication list and relevant medical records. Before a routine appointment, ask the practice whether it accepts your cover and whether a referral or statutory co-payment is needed. If you need an interpreter, ask the insurer or benefits authority in advance whether it can arrange or cover that cost. If you have no card yet, ask the insurer or the authority responsible for your benefits how to obtain proof; procedures differ by scheme and locality.
 
 For a life-threatening emergency, call 112. For urgent problems outside normal practice hours that are not life-threatening, 116117 can direct you to medical on-call care. Its phone service is in German; communication support varies. Do not use 112 as a routine appointment service.
 
 ## PLACES
 
-For routine care, contact a general practitioner (Hausarzt) or a relevant specialist and bring your card or treatment certificate. If you are covered through an insurer, contact its service line for doctors and claims. If your route is administered by a Sozialamt or AsylbLG authority, use the local health card or treatment process they issued. Psychosocial support centres and language availability are regional; the Germany4Ukraine directory is a starting point, not a promise of free or immediate therapy.
+For routine care, contact a general practitioner (Hausarzt) or relevant specialist and bring your insurance card or treatment certificate. If you are covered through an insurer, contact its service line for doctors and claims. If your route is administered by the Sozialamt or an AsylbLG authority, follow the local health-card or treatment process it issued. For psychosocial support, the [nationwide directory from the Federal Association of Psychosocial Centres](https://www.baff-zentren.org/hilfe-vor-ort/psychosoziale-zentren/) can help locate a regional service; language, eligibility, capacity and waiting times vary, and a listing does not promise free or immediate therapy.
 
 ## NEXT STEPS
 
-Keep written decisions and ask which office handles a gap or refused treatment: Krankenkasse, Jobcenter, Sozialamt or AsylbLG authority, depending on your scheme. SGB II and health-insurance rules changed in 2026, and the proposed Leistungsrechtsanpassungsgesetz includes further health-related provisions. Before publication, verify the bill’s final status, commencement and transition rules and align this article with the social-assistance article. No statement here promises universal free care, interpretation or insurance.
+Keep written decisions and ask which office handles a gap in cover or a refused treatment: your Krankenkasse, Jobcenter, Sozialamt or AsylbLG authority, depending on your scheme. The Ukraine-specific Leistungsrechtsanpassungsgesetz remains a proposal as of 16 November 2026, so use current rules and the route named in your own decision. Coverage, co-payments and interpreter costs depend on your scheme and circumstances; ask the insurer or responsible authority before incurring a cost.
 
 ## SOURCES
 
 - [BMG — medical help for people from Ukraine](https://www.bundesgesundheitsministerium.de/faq-medizinische-hilfe-ukraine)
-- [Germany4Ukraine — medical treatment](https://www.germany4ukraine.de/EN/medizinische-versorgung/medizinische-hilfe-fluechtlinge/seite.html?nn=717526)
-- [Germany4Ukraine — health insurance](https://www.germany4ukraine.de/EN/medizinische-versorgung/krankenversicherung-ukrainer/seite_node.html)
+- [SGB V §5]
+- [SGB V §264 — medical treatment through a health insurer for certain non-members](https://www.gesetze-im-internet.de/sgb_5/__264.html)
+- [SGB V §417 — voluntary insurance for qualifying §24 holders](https://www.gesetze-im-internet.de/sgb_5/__417.html)
 - [SGB V §5](https://www.gesetze-im-internet.de/sgb_5/__5.html)
 - [SGB II §7](https://www.gesetze-im-internet.de/sgb_2/__7.html)
 - [AsylbLG §4](https://www.gesetze-im-internet.de/asylblg/__4.html)
 - [AsylbLG §6](https://www.gesetze-im-internet.de/asylblg/__6.html)
-- [Germany4Ukraine — rapid emergency help](https://www.germany4ukraine.de/EN/schnelle-hilfe-im-notfall/seite_node.html)
 - [116117 — English medical help](https://www.116117.de/de/englisch.php)
-- [Germany4Ukraine — psychosocial support](https://www.germany4ukraine.de/EN/medizinische-versorgung/psycho-therapie-fluechtlinge/seite_node.html)
+- [Federal Association of Psychosocial Centres — local services directory](https://www.baff-zentren.org/hilfe-vor-ort/psychosoziale-zentren/)
 - [BMAS — Leistungsrechtsanpassungsgesetz](https://www.bmas.de/DE/Service/Gesetze-und-Gesetzesvorhaben/leistungsrechtsanpassungsgesetz.html)
-- [Bundestag DIP — legislative file](https://dip.bundestag.de/vorgang/g/329468)
+- [Bundestag DIP — legislative file](https://dip.bundestag.de/vorgang/_/329468)

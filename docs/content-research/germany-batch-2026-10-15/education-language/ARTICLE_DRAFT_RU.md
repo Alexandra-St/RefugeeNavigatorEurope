@@ -18,6 +18,8 @@
 
 Время уроков и программ полного дня в начальной школе, включая открытые программы полного дня, засчитывается в исполнение этого права; на школьных каникулах право считается выполненным, если государственный орган или признанная независимая организация в сфере помощи детям и молодёжи предлагает мероприятия молодёжной работы по §11. Закон земли может разрешать учреждению закрываться на школьные каникулы не более чем на четыре недели в год. Законное право не заменяет местный поиск и распределение; оно не гарантирует конкретное учреждение или немедленно свободное место.
 
+
+В Германии нет единого возраста начала и продолжительности обязательного обучения или единой модели подготовительных классов: каждая земля устанавливает правила, а местный орган или школа определяет порядок зачисления. Спросите местный орган, что делать, если нет документов о проживании, предыдущем обучении или переводов; не исходите из наличия одного федерального списка документов. Поддержка немецкого языка и подготовительные классы также зависят от земли и школы. Резолюция KMK о школьном обучении детей из Украины на 2022/23 учебный год имеет только историческое значение и не показывает, какие места языковой поддержки доступны сейчас. [[source:1a7ade55-783f-59ae-97a2-d2b620104d9f|резолюция KMK на 2022/23 учебный год (исторический источник)]]
 ## ДЕЙСТВИЯ
 
 Для школы выберите землю, где живёт ребёнок, и следуйте указаниям министерства образования, Schulamt или школы. Сохраните документы личности, подтверждение адреса и прежние школьные документы; местный орган сообщит, что ещё и в каком переводе потребуется.
@@ -28,20 +30,28 @@
 
 Germany4Ukraine и Конференция министров образования (KMK) дают ссылки на сведения земель о школах. Для поиска ухода за ребёнком Familienportal ведёт к службам каждой земли. Университеты сами решают вопросы поступления и языковых требований; National Academic Contact Point Ukraine при DAAD помогает с ориентацией, но не принимает решение о зачислении. Признание профессии зависит от специальности и может регулироваться федеральным законом или законом земли.
 
+
+Для поступления в вуз проверьте, дают ли ваши документы Hochschulzugangsberechtigung (HZB). Решение о приёме принимает университет; он может использовать uni-assist для подачи заявления или предварительной проверки документов. Для украинских аттестатов о полном среднем образовании, выданных в 2026 году или позднее, uni-assist требует дополнительную справку школы о том, проходил ли ученик специальную программу с украинским компонентом. Во многих государственных вузах за первую ступень обучения плата не взимается, но оплачивается семестровый взнос; есть исключения, в том числе в Баден-Вюртемберге и некоторых вузах Баварии. Разрешение §24 само по себе не гарантирует приём или финансирование; лица со статусом §24 могут обратиться за BAföG по §61 при соблюдении требований к обучению и иных установленных законом условий.
 ## ЧТО ДАЛЬШЕ
 
 Перед записью на интеграционный курс уточните допуск в BAMF: право, оплата, обязанность и наличие мест зависят от ситуации. У профессионального обучения отдельные требования к договору, языку и разрешению на проживание; поступление в вуз — самостоятельная процедура. Если ваша цель — регулируемая профессия, начните с компетентного органа признания. Сохраняйте решения школы, курса или ведомства о признании и уточняйте следующий шаг у соответствующей организации. Этот обзор не гарантирует место на курсе, в детском учреждении, школе или вузе.
 
+
+Лицо с временной защитой по §24 может подать в BAMF заявление о допуске к интеграционному курсу по §44(4) AufenthG; согласно разъяснению BAMF, это не создаёт законного права на место, а украинские участники после допуска освобождаются от платы за курс. Профессиональные языковые курсы имеют отдельные критерии; может требоваться предварительное прохождение интеграционного курса или уровень немецкого B1. Уточните в BAMF, Jobcenter или Agentur für Arbeit, какой маршрут и правила оплаты применимы, и проверьте наличие курса до планирования даты начала.
+- [BAMF — Ukraine integration-course access and fee guidance](https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Integrationskurse/Kurstraeger/Traegerrundschreiben/Anlagen/2022/traegerrundschreiben-20220318-04-anlage1.pdf?__blob=publicationFile&v=5)
+- [BAMF — vocational-language course eligibility](https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Berufsbezsprachf-ESF-BAMF/BSK-Rechtsgrundlagen/merkblatt-tn.pdf?__blob=publicationFile&v=22)
+- [uni-assist — Ukraine documents](https://www.uni-assist.de/en/tools/info-country-by-country/details-country/country/ua/)
+- [uni-assist — university entrance qualification](https://www.uni-assist.de/en/tools/glossary-of-terms/description/term/university-entrance-qualification-hochschulzugangsberechtigung/)
+- [DAAD — admission requirements](https://www.daad.de/en/studying-in-germany/requirements/overview/)
+- [DAAD — tuition and semester contributions](https://www.daad.de/en/studying-in-germany/living-in-germany/finances/)
+- [BAföG §61 — qualifying §24 applicants](https://www.gesetze-im-internet.de/baf_g/__61.html)
+
 ## SOURCES
 
-- [Germany4Ukraine — schools](https://www.germany4ukraine.de/EN/bildung-und-forschung/schule/seite_node.html)
 - [KMK — information and contacts for Länder](https://www.kmk.org/en/downloads-dokumente/statistik/schulstatistik/gefluechtete-kinder/jugendliche-aus-der-ukraine.html)
 - [SGB VIII §24 — childcare rights by age](https://www.gesetze-im-internet.de/sgb_8/__24.html)
 - [SGB VIII §6 — scope for non-German residents](https://www.gesetze-im-internet.de/sgb_8/__6.html)
 - [Federal Family Portal — finding a Kita place and local Jugendamt](https://familienportal.de/familienportal/lebenslagen/ausbildung-beruf/kinderbetreuung/wie-finde-ich-einen-kita-platz--155596)
-- [Germany4Ukraine — integration courses](https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/integrationskurse/seite_node.html)
-- [Germany4Ukraine — German learning and vocational language](https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/deutsch-lernen/seite.html?nn=734948)
-- [Germany4Ukraine — vocational training](https://www.germany4ukraine.de/EN/bildung-und-forschung/ausbildung/seite_node.html)
 - [Make it in Germany — vocational training](https://www.make-it-in-germany.com/en/visa-residence/types/training)
 - [DAAD — National Academic Contact Point Ukraine](https://www.daad.de/en/the-daad/national-academic-contact-point-ukraine/)
 - [Recognition in Germany — federal and Land rules](https://www.anerkennung-in-deutschland.de/html/en/pro/federal-state-laws.php)

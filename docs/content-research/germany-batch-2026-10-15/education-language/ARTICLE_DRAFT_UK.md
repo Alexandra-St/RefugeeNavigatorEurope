@@ -8,6 +8,8 @@
 
 Школами, обов’язковим навчанням і зарахуванням займаються 16 федеральних земель. Використовуйте актуальні інструкції школи чи органу освіти за місцем проживання дитини; єдиної загальнонаціональної заяви немає.
 
+У Німеччині немає єдиного віку початку та тривалості обов’язкового навчання чи єдиної моделі підготовчого класу: кожна земля встановлює правила, а місцевий орган або школа визначає зарахування. Запитайте місцевий орган, що робити, якщо бракує документів про проживання, попереднього навчання чи перекладів; не припускайте, що діє один федеральний перелік документів. Підтримка німецької мови й підготовчі класи також залежать від землі та школи. Резолюція KMK про навчання дітей з України на 2022/23 навчальний рік є лише історичним контекстом і не показує, які місця мовної підтримки доступні зараз. [[source:1a7ade55-783f-59ae-97a2-d2b620104d9f|резолюція KMK на 2022/23 навчальний рік (історичне джерело)]]
+
 Догляд за дітьми — не лише питання місцевого розсуду. За §6(2) SGB VIII іноземні родини можуть претендувати на ці послуги, якщо їхнє звичайне місце проживання в Німеччині є законним або охоплене Duldung; якщо неясно, який доказ потрібен, уточніть це в місцевому Jugendamt.
 
 За §24(1) дитина до одного року може мати право на догляд, якщо цього вимагає її розвиток або якщо один із батьків працює, активно шукає роботу, навчається чи проходить професійне навчання або отримує виплати SGB II для інтеграції в роботу.
@@ -26,22 +28,25 @@
 
 ## ДЕ ЗВЕРТАТИСЯ
 
-Germany4Ukraine та Конференція міністрів освіти (KMK) дають посилання на інформацію земель про школи. Для пошуку дитячого догляду Familienportal веде до служб кожної землі. Університети самостійно вирішують питання вступу й мовних вимог; National Academic Contact Point Ukraine при DAAD надає орієнтацію, а не рішення про зарахування. Професійне визнання залежить від професії та може регулюватися федеральним або земельним правом.
+Germany4Ukraine та Конференція міністрів освіти (KMK) дають посилання на інформацію земель про школи. Для пошуку дитячого догляду Familienportal веде до служб кожної землі. Університети самостійно вирішують питання вступу й мовних вимог; National Academic Contact Point Ukraine при DAAD надає орієнтацію, а не рішення про зарахування. Професійне визнання залежить від професії та може регулюватися федеральним або земельним правом. Для вступу до вишу перевірте, чи дають ваші документи Hochschulzugangsberechtigung (HZB). Рішення про вступ ухвалює університет; він може використовувати uni-assist для подання або попередньої перевірки документів. Для українських свідоцтв про повну середню освіту, виданих у 2026 році або пізніше, uni-assist вимагає додаткову довідку школи про навчання за спеціальною програмою з українознавчим компонентом. У багатьох державних вишах за першу освіту плати за навчання немає, але сплачується семестровий внесок; існують винятки, зокрема в Баден-Вюртемберзі та деяких закладах Баварії. Дозвіл §24 сам по собі не гарантує вступ або фінансування; особи з §24 можуть подати заяву на BAföG за §61 за умови відповідності вимогам до навчання та іншим законним умовам.
 
 ## НАСТУПНІ КРОКИ
 
-Перед записом на інтеграційний курс перевірте допуск у BAMF: право, оплата, обов’язок і наявність місць залежать від ситуації. Для професійного навчання потрібні окремий договір, мовні умови та дозвіл на проживання; вступ до вишу — окрема процедура. Якщо ваша мета — регульована професія, почніть із компетентного органу визнання. Зберігайте рішення школи, курсу чи органу визнання й уточнюйте наступний крок у відповідної установи. Цей огляд не гарантує місце в курсі, садку, школі чи університеті.
+Перед записом на інтеграційний курс перевірте допуск у BAMF: право, оплата, обов’язок і наявність місць залежать від ситуації. Для професійного навчання потрібні окремий договір, мовні умови та дозвіл на проживання; вступ до вишу — окрема процедура. Особа під тимчасовим захистом за §24 може подати до BAMF заяву на допуск до інтеграційного курсу за §44(4) AufenthG; за роз’ясненням BAMF це не створює законного права на місце, а українські учасники після допуску звільняються від плати за курс. Професійні мовні курси мають окремі критерії; може вимагатися попередній інтеграційний курс або рівень німецької B1. Запитайте BAMF, Jobcenter або Agentur für Arbeit, який маршрут і правила оплати застосовуються, і перевірте наявність курсу до планування дати початку. Якщо ваша мета — регульована професія, почніть із компетентного органу визнання. Зберігайте рішення школи, курсу чи органу визнання й уточнюйте наступний крок у відповідної установи. Цей огляд не гарантує місце в курсі, садку, школі чи університеті.
 
 ## SOURCES
 
-- [Germany4Ukraine — schools](https://www.germany4ukraine.de/EN/bildung-und-forschung/schule/seite_node.html)
 - [KMK — information and contacts for Länder](https://www.kmk.org/en/downloads-dokumente/statistik/schulstatistik/gefluechtete-kinder/jugendliche-aus-der-ukraine.html)
 - [SGB VIII §24 — childcare rights by age](https://www.gesetze-im-internet.de/sgb_8/__24.html)
 - [SGB VIII §6 — scope for non-German residents](https://www.gesetze-im-internet.de/sgb_8/__6.html)
 - [Federal Family Portal — finding a Kita place and local Jugendamt](https://familienportal.de/familienportal/lebenslagen/ausbildung-beruf/kinderbetreuung/wie-finde-ich-einen-kita-platz--155596)
-- [Germany4Ukraine — integration courses](https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/integrationskurse/seite_node.html)
-- [Germany4Ukraine — German learning and vocational language](https://www.germany4ukraine.de/EN/deutschkurs-fuer-ukrainer/deutsch-lernen/seite.html?nn=734948)
-- [Germany4Ukraine — vocational training](https://www.germany4ukraine.de/EN/bildung-und-forschung/ausbildung/seite_node.html)
 - [Make it in Germany — vocational training](https://www.make-it-in-germany.com/en/visa-residence/types/training)
+- [BAMF — Ukraine integration-course access and fee guidance](https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Integrationskurse/Kurstraeger/Traegerrundschreiben/Anlagen/2022/traegerrundschreiben-20220318-04-anlage1.pdf?__blob=publicationFile&v=5)
+- [BAMF — vocational-language course eligibility](https://www.bamf.de/SharedDocs/Anlagen/DE/Integration/Berufsbezsprachf-ESF-BAMF/BSK-Rechtsgrundlagen/merkblatt-tn.pdf?__blob=publicationFile&v=22)
+- [uni-assist — Ukraine documents](https://www.uni-assist.de/en/tools/info-country-by-country/details-country/country/ua/)
+- [uni-assist — university entrance qualification](https://www.uni-assist.de/en/tools/glossary-of-terms/description/term/university-entrance-qualification-hochschulzugangsberechtigung/)
+- [DAAD — admission requirements](https://www.daad.de/en/studying-in-germany/requirements/overview/)
+- [DAAD — tuition and semester contributions](https://www.daad.de/en/studying-in-germany/living-in-germany/finances/)
+- [BAföG §61 — qualifying §24 applicants](https://www.gesetze-im-internet.de/baf_g/__61.html)
 - [DAAD — National Academic Contact Point Ukraine](https://www.daad.de/en/the-daad/national-academic-contact-point-ukraine/)
 - [Recognition in Germany — federal and Land rules](https://www.anerkennung-in-deutschland.de/html/en/pro/federal-state-laws.php)
