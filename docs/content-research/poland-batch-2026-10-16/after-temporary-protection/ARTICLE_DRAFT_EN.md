@@ -1,9 +1,6 @@
 # Residence Options After Temporary Protection
 
-> Research draft — unpublished; pending human editorial review. No content in this draft is approved or marked Verified.
-
 **Summary:** A CUKR card is a separate three-year temporary residence permit with specific conditions. Other permits follow their own rules; no change is automatic.
-
 
 ## RULES
 
@@ -11,11 +8,11 @@ PESEL UKR records temporary-protection status in Poland; it is not itself a temp
 
 ## TASKS
 
-UdSC lists four cumulative CUKR conditions: valid PESEL UKR when applying; valid UKR status on 4 June 2025; valid UKR status when the card is issued; and at least 365 uninterrupted days with UKR status. Children born in Poland have separate conditions. Applications may be filed until 4 March 2027. Check the full requirements, fees and consequences in the UdSC procedure before starting.
+UdSC lists the main CUKR conditions for the eligible group: valid UKR status when applying and when the permit is granted, UKR status on 4 June 2025, and at least 365 uninterrupted days with UKR status. Children born in Poland have separate conditions. Applications have been accepted electronically through MOS since 4 May 2026 and may be filed through 4 March 2027. CUKR is issued for three years; when the card is collected, UKR status ends and certain UKR-specific assistance ends. Check the official procedure, current fees and individual consequences before applying.
 
 ## PLACES
 
-A CUKR application is filed only online through MOS (Moduł Obsługi Spraw). Since 27 April 2026, applications for ordinary temporary residence, permanent residence and EU long-term-resident permits are filed electronically through MOS. UdSC lists paper-filing exceptions for specified temporary-residence cases, including certain intra-corporate transfers and family applications where the applicant is outside Poland. Check the current MOS instructions for your exact permit type. From 5 March 2026, the special basis for certain simplified permits under the Ukraine assistance law ended; UdSC says the general Foreigners Act requirements apply again.
+A CUKR application is filed only online through MOS (Moduł Obsługi Spraw). A timely CUKR application filed by 4 March 2027 can make the applicant’s stay lawful until the card is collected, it is invalidated for failure to collect it within 60 days, or a refusal/discontinuance becomes final. Filing does not itself grant a residence permit; UKR status and associated rights continue until the card is collected, subject to other loss events. Since 27 April 2026, ordinary temporary, permanent and EU long-term-resident applications are generally filed electronically through MOS, with statutory exceptions for specified cases. From 5 March 2026, the special basis for certain simplified Ukraine-law permits ended; general Foreigners Act requirements apply again.
 
 ## NEXT STEPS
 
@@ -23,8 +20,9 @@ Before choosing a procedure, check your document, basis of stay, work, study, fa
 
 ## OFFICIAL SOURCES
 
-- [Office for Foreigners (UdSC) — CUKR residence-card procedure](https://www.gov.pl/web/udsc/CUKR-procedura)
-- [Office for Foreigners (UdSC) — Information about MOS](https://www.gov.pl/web/udsc/info-mos)
-- [Office for Foreigners (UdSC) — Changes to special rules on Ukrainian citizens’ stay](https://www.gov.pl/web/udsc/zmiany-w-szczegolnych-zasadach-dotyczacych-legalnosci-pobytu-obywateli-ukrainy-na-terytorium-rzeczypospolitej-polskiej)
-- [Office for Foreigners (UdSC) — Discontinuation of certificates confirming temporary protection](https://www.gov.pl/web/udsc/zaprzestanie-wydawania-zaswiadczen-potwierdzajacych-korzystanie-z-ochrony-czasowej)
-- [Republic of Poland — Act of 23 January 2026, Journal of Laws 2026 item 203](https://dziennikustaw.gov.pl/DU/2026/203/D2026000020301.pdf)
+- [`41dea3fa-8ffc-5d2e-a476-aaf2cf07b109` — Office for Foreigners (UdSC) — CUKR residence-card procedure](https://www.gov.pl/web/udsc/CUKR-procedura)
+- [`50dddaa7-ff1f-5c77-b4f7-2cf1254adda6` — Office for Foreigners (UdSC) — Information about MOS](https://www.gov.pl/web/udsc/info-mos)
+- [`599f4d31-e4d8-5ebf-82ed-149d5d677dd9` — Republic of Poland — Act of 23 January 2026, Journal of Laws 2026 item 203](https://dziennikustaw.gov.pl/DU/2026/203/D2026000020301.pdf)
+- [`ddffc1ab-c2e0-5f7a-b89f-9fafb794e4b5` — Office for Foreigners (UdSC) — Changes to special rules on Ukrainian citizens’ stay](https://www.gov.pl/web/udsc/zmiany-w-szczegolnych-zasadach-dotyczacych-legalnosci-pobytu-obywateli-ukrainy-na-terytorium-rzeczypospolitej-polskiej)
+- [`1cc08213-ec62-5f77-b688-89e3c7474a28` — Office for Foreigners (UdSC) — Discontinuation of certificates confirming temporary protection](https://www.gov.pl/web/udsc/zaprzestanie-wydawania-zaswiadczen-potwierdzajacych-korzystanie-z-ochrony-czasowej)
+- [`8097a634-318b-5375-930b-c82f4f72df26` — Office for Foreigners (UdSC) — CUKR questions and answers](https://www.gov.pl/web/udsc/cukr-QA)

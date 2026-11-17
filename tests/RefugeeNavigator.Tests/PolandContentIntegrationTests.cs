@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using RefugeeNavigator.Data;
 using RefugeeNavigator.Domain;
+using RefugeeNavigator.Web.Comparison;
 using RefugeeNavigator.Web.Components.Pages;
 using RefugeeNavigator.Web.Search;
 
@@ -27,33 +28,17 @@ public sealed class PolandContentIntegrationTests
         Guid.Parse("20000000-0000-0000-0000-000000000006")
     ];
     private static readonly string[] Languages = ["uk", "en", "ru"];
-    private static readonly HashSet<Guid> RecheckedSourceIds =
-    [
-        Guid.Parse("e4aa407d-df53-58ab-b10a-6fc2b22d91d3"),
-        Guid.Parse("0dfc274b-f02d-5acb-913e-51dee3c7fa24"),
-        Guid.Parse("433faca8-dcb6-59a1-8d32-5e38d16049b0"),
-        Guid.Parse("4eba2e3a-fa21-5803-929c-c39d0e19a7a2"),
-        Guid.Parse("0a989122-f3d4-5afd-a7ce-e10c4566cebe"),
-        Guid.Parse("d0fc2583-ea0d-5289-b9c7-de3e97417529"),
-        Guid.Parse("6a544d55-b307-5747-bddd-df1c57f678a6"),
-        Guid.Parse("5259d868-4cfb-5b58-97a5-a26975b7c283"),
-        Guid.Parse("66d98c8a-b567-5864-806b-120408bb3a93"),
-        Guid.Parse("41dea3fa-8ffc-5d2e-a476-aaf2cf07b109"),
-        Guid.Parse("50dddaa7-ff1f-5c77-b4f7-2cf1254adda6"),
-        Guid.Parse("599f4d31-e4d8-5ebf-82ed-149d5d677dd9"),
-        Guid.Parse("ddffc1ab-c2e0-5f7a-b89f-9fafb794e4b5")
-    ];
-    private static readonly DateTimeOffset SourceRecheckAt = new(2026, 10, 18, 22, 13, 56, TimeSpan.Zero);
+    private static readonly DateTimeOffset RefreshAt = new(2026, 11, 17, 0, 0, 0, TimeSpan.Zero);
     private static readonly IReadOnlyDictionary<string, int> ExpectedSourceCounts = new Dictionary<string, int>
     {
-        ["218207bd-2a85-59e1-a945-eedb0604392e"] = 10,
-        ["c230d45f-9c76-5912-8c97-dc7d0689baa6"] = 5,
+        ["218207bd-2a85-59e1-a945-eedb0604392e"] = 11,
+        ["c230d45f-9c76-5912-8c97-dc7d0689baa6"] = 6,
         ["a323701f-367e-52bb-9c33-45c4156a1350"] = 5,
-        ["7797d03c-6873-50cd-aef6-0d94a2f5fcab"] = 5,
+        ["7797d03c-6873-50cd-aef6-0d94a2f5fcab"] = 7,
         ["d7e0716b-154d-5db3-8790-f73684c07271"] = 4,
         ["1f310b3c-dceb-5e3a-90d0-d3a705ca5c53"] = 5,
         ["32ca34e9-22d9-5f59-88a9-bbd7ffd7b5cd"] = 3,
-        ["a5892591-d082-57ce-acf9-5c39ab4f9b84"] = 8
+        ["a5892591-d082-57ce-acf9-5c39ab4f9b84"] = 9
     };
     private static readonly IReadOnlyDictionary<string, Guid> ArticleIds = new Dictionary<string, Guid>
     {
@@ -78,6 +63,7 @@ public sealed class PolandContentIntegrationTests
         var sources = catalog.OfficialSources.Where(source => entryIds.Contains(source.InformationEntryId)).ToArray();
 
         Assert.Equal(152, catalog.InformationEntries.Count);
+        Assert.Equal(1492, catalog.OfficialSources.Count);
         Assert.Equal(8, entries.Length);
         Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == DenmarkId));
         Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == GermanyId));
@@ -112,7 +98,7 @@ public sealed class PolandContentIntegrationTests
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
-            Assert.Equal(new DateOnly(2026, 10, 16), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
+            Assert.Equal(RefreshAt, translation.LastUpdatedAt);
             Assert.DoesNotContain("Research draft", translation.Content, StringComparison.OrdinalIgnoreCase);
             Assert.DoesNotContain("OFFICIAL SOURCES", translation.Content, StringComparison.OrdinalIgnoreCase);
             Assert.DoesNotContain("SUPPORTED", translation.Content, StringComparison.OrdinalIgnoreCase);
@@ -125,28 +111,21 @@ public sealed class PolandContentIntegrationTests
         var correctedTemporaryProtectionTranslations = translations
             .Where(translation => translation.InformationEntryId == ArticleIds["temporary-protection-application"])
             .ToDictionary(translation => translation.LanguageCode);
-        Assert.Equal(new DateTimeOffset(2026, 10, 16, 2, 17, 2, TimeSpan.Zero),
-            correctedTemporaryProtectionTranslations["uk"].LastUpdatedAt);
-        Assert.Equal(new DateTimeOffset(2026, 10, 16, 2, 17, 2, TimeSpan.Zero),
-            correctedTemporaryProtectionTranslations["ru"].LastUpdatedAt);
-        Assert.Equal(new DateTimeOffset(2026, 10, 16, 1, 56, 53, TimeSpan.Zero),
-            correctedTemporaryProtectionTranslations["en"].LastUpdatedAt);
-        Assert.Equal(2, translations.Select(translation => translation.LastUpdatedAt).Distinct().Count());
+        Assert.All(correctedTemporaryProtectionTranslations.Values, translation =>
+            Assert.Equal(RefreshAt, translation.LastUpdatedAt));
+        Assert.Single(translations.Select(translation => translation.LastUpdatedAt).Distinct());
 
-        Assert.Equal(45, sources.Length);
-        Assert.Equal(45, sources.Select(source => source.Id).Distinct().Count());
+        Assert.Equal(50, sources.Length);
+        Assert.Equal(50, sources.Select(source => source.Id).Distinct().Count());
         Assert.All(entries, entry => Assert.Equal(ExpectedSourceCounts[entry.Id.ToString()], sources.Count(source => source.InformationEntryId == entry.Id)));
         Assert.All(sources, source =>
         {
             Assert.Contains(source.InformationEntryId, entryIds);
             Assert.Equal("https", source.Url.Scheme);
             Assert.False(string.IsNullOrWhiteSpace(source.Title));
-            var expectedCheckedAt = RecheckedSourceIds.Contains(source.Id)
-                ? SourceRecheckAt
-                : new DateTimeOffset(2026, 10, 16, 0, 0, 0, TimeSpan.Zero);
-            Assert.Equal(expectedCheckedAt, source.LastCheckedAt);
+            Assert.Equal(RefreshAt, source.LastCheckedAt);
         });
-        Assert.Equal(34, sources.Select(source => source.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(39, sources.Select(source => source.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
         Assert.Equal(2, entries.Count(entry => entry.CategoryId == CategoryIds[0]));
         Assert.Equal(2, entries.Count(entry => entry.CategoryId == CategoryIds[1]));
         Assert.Equal(1, entries.Count(entry => entry.CategoryId == CategoryIds[2]));
@@ -184,7 +163,7 @@ public sealed class PolandContentIntegrationTests
             {
                 Assert.Contains(translation.Title, visibleHtml);
                 Assert.Contains(translation.Summary, visibleHtml);
-                Assert.Contains("datetime=\"2026-10-16T", html);
+                Assert.Contains("datetime=\"2026-11-17T", html);
                 Assert.DoesNotContain("<script", html, StringComparison.OrdinalIgnoreCase);
                 Assert.DoesNotContain("**", visibleHtml, StringComparison.Ordinal);
                 foreach (var source in catalog.OfficialSources.Where(source => source.InformationEntryId == translation.InformationEntryId))
@@ -253,11 +232,11 @@ public sealed class PolandContentIntegrationTests
             var (euExpiry, correctedStart, correctedException, sameMemberState, staleKsiDates, identityDeadline, declarationCohort) = language switch
             {
                 "uk" => ("до 4 березня 2028 року", "5 серпня 2026 року", "до 4 серпня включно",
-                    "саме в цій державі", "31/30 липня", "31 серпня 2026 року", "лише на підставі декларації"),
+                    "саме в цій державі", "31/30 липня", "31 серпня 2026 року", "послуга допускає декларацію"),
                 "en" => ("to 4 March 2028", "5 August 2026", "by 4 August", "same Member State",
-                    "31/30 July", "31 August 2026", "only on the basis of a declaration"),
+                    "31/30 July", "31 August 2026", "service allows a declaration"),
                 "ru" => ("до 4 марта 2028 года", "5 августа 2026 года", "до 4 августа включительно",
-                    "именно в этом государстве", "31/30 июля", "31 августа 2026 года", "только на основании декларации"),
+                    "именно в этом государстве", "31/30 июля", "31 августа 2026 года", "услуга допускает декларацию"),
                 _ => throw new ArgumentOutOfRangeException(nameof(language))
             };
             Assert.Contains(euExpiry, protection);
@@ -308,14 +287,17 @@ public sealed class PolandContentIntegrationTests
         var residenceText = Content("after-temporary-protection", "en");
         Assert.Contains("365 uninterrupted days", residenceText);
         Assert.Contains("4 March 2027", residenceText);
-        Assert.Contains("paper-filing exceptions", residenceText);
+        Assert.Contains("statutory exceptions for specified cases", residenceText);
         Assert.Contains("365 днів", Content("after-temporary-protection", "uk"));
         Assert.Contains("винятки з електронного подання", Content("after-temporary-protection", "uk"));
-        Assert.Contains("365 дней", Content("after-temporary-protection", "ru"));
+        Assert.Contains("365 непрерывных дней", Content("after-temporary-protection", "ru"));
         Assert.Contains("исключения из электронного способа", Content("after-temporary-protection", "ru"));
 
         var work = Content("work-authorization-rights", "en");
         Assert.Contains("PLN 4,806", work);
+        Assert.Contains("PLN 31.40", work);
+        Assert.Contains("FUTURE rates are PLN 4,950 per month and PLN 32.30 per hour", work);
+        Assert.Contains("From 1 January 2027", work);
         Assert.Contains("7 days", work);
         var health = Content("healthcare", "en");
         Assert.Contains("under 18", health);
@@ -323,9 +305,11 @@ public sealed class PolandContentIntegrationTests
         Assert.Contains("not access to every public healthcare service", health);
         var housing = Content("housing", "en");
         Assert.Contains("not guaranteed", housing);
-        Assert.Contains("local implementation", housing);
+        Assert.Contains("local administration", housing);
+        Assert.Contains("30 June 2026", housing);
+        Assert.Contains("statutory vulnerable group", housing);
         Assert.Contains("Do not assume that address registration", housing);
-        Assert.Contains("не гарантія місця або житла", Content("housing", "uk"));
+        Assert.Contains("Це не гарантія місця", Content("housing", "uk"));
         Assert.Contains("не гарантируется каждому", Content("housing", "ru"));
         var educationContent = Content("education-language", "en");
         Assert.Contains("turn six", educationContent);
@@ -335,11 +319,75 @@ public sealed class PolandContentIntegrationTests
         var socialContent = Content("social-assistance", "en");
         Assert.Contains("work-activity condition", socialContent);
         Assert.Contains("school-age child must attend", socialContent);
+        Assert.Contains("PLN 300 once per school year", socialContent);
+        Assert.Contains("2026/2027", socialContent);
         Assert.Contains("does not guarantee a payment", socialContent);
         Assert.Contains("професійної активності", Content("social-assistance", "uk"));
         Assert.Contains("шкільного віку — навчатися", Content("social-assistance", "uk"));
         Assert.Contains("профессиональной активности", Content("social-assistance", "ru"));
         Assert.Contains("школьного возраста — учиться", Content("social-assistance", "ru"));
+
+        Assert.Contains("more than 30 days", Content("temporary-protection-application", "en"));
+        Assert.Contains("can be restored", Content("temporary-protection-application", "en"));
+        Assert.Contains("Filing an application alone is not the same event", Content("after-temporary-protection", "en"));
+    }
+
+    [Fact]
+    public async Task PolandRefreshAddsAndCompareBindingsMatchReviewedPlan()
+    {
+        var catalog = await LoadCatalogAsync();
+        var entryIds = ArticleIds.Values.ToHashSet();
+        var polandSources = catalog.OfficialSources.Where(source => entryIds.Contains(source.InformationEntryId)).ToArray();
+        Assert.Equal(50, polandSources.Length);
+        Assert.Equal(50, polandSources.Select(source => source.Id).Distinct().Count());
+        Assert.Equal(1492, catalog.OfficialSources.Count);
+
+        var expectedAdds = new Dictionary<Guid, (Guid Owner, string Url)>
+        {
+            [Guid.Parse("451eb915-ff9b-5b88-8b12-ca173399213d")] = (ArticleIds["work-authorization-rights"], "https://eli.gov.pl/eli/DU/2025/1242/ogl/pol/pdf"),
+            [Guid.Parse("3b1d42d4-1a47-5b88-80ae-09aae7cfe912")] = (ArticleIds["work-authorization-rights"], "https://eli.gov.pl/eli/DU/2026/1213/ogl/pol/pdf"),
+            [Guid.Parse("8a675a8f-75b8-5da4-a1c0-034ba1eb7c86")] = (ArticleIds["social-assistance"], "https://www.gov.pl/web/rodzina/zmiany-w-programie-dobry-start-obowiazujace-od-1-lipca-2026-r"),
+            [Guid.Parse("e5d81209-42dd-5dd0-aabc-a8cfb338224c")] = (ArticleIds["temporary-protection-application"], "https://eli.gov.pl/eli/DU/2026/862/ogl"),
+            [Guid.Parse("8097a634-318b-5375-930b-c82f4f72df26")] = (ArticleIds["after-temporary-protection"], "https://www.gov.pl/web/udsc/cukr-QA")
+        };
+        foreach (var (sourceId, expected) in expectedAdds)
+        {
+            var source = Assert.Single(polandSources, item => item.Id == sourceId);
+            Assert.Equal(expected.Owner, source.InformationEntryId);
+            Assert.Equal(expected.Url, source.Url.AbsoluteUri);
+            Assert.Equal(RefreshAt, source.LastCheckedAt);
+        }
+
+        var tenantRights = Assert.Single(polandSources, source => source.Id == Guid.Parse("a5ebb19b-f5d4-5e72-9107-5e4f84445286"));
+        Assert.Equal("https://eli.gov.pl/eli/DU/2023/725/ogl", tenantRights.Url.AbsoluteUri);
+        var ksiId = Guid.Parse("5259d868-4cfb-5b58-97a5-a26975b7c283");
+
+        var facts = await new JsonComparisonFactProvider(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json"))
+            .LoadAsync(catalog);
+        var polandFacts = facts.Topics.SelectMany(topic => topic.Aspects)
+            .Select(aspect => (aspect.Id, Fact: Assert.Single(aspect.Facts, fact => fact.CountrySlug == "poland")))
+            .ToDictionary(item => item.Id, item => item.Fact);
+        Assert.Equal(24, polandFacts.Count);
+        Assert.All(polandFacts.Values, fact =>
+        {
+            Assert.Equal(ComparisonFactStatus.Approved, fact.Status);
+            Assert.True(fact.IsAvailable);
+            Assert.NotEmpty(fact.OfficialSourceIds);
+            Assert.All(fact.OfficialSourceIds, sourceId => Assert.Contains(polandSources,
+                source => source.Id == sourceId && source.InformationEntryId == fact.InformationEntryId));
+        });
+
+        Assert.Contains(Guid.Parse("e5d81209-42dd-5dd0-aabc-a8cfb338224c"), polandFacts["protection-dates"].OfficialSourceIds);
+        Assert.DoesNotContain(ksiId, polandFacts["protection-dates"].OfficialSourceIds);
+        Assert.Contains(Guid.Parse("8097a634-318b-5375-930b-c82f4f72df26"), polandFacts["residence-filing"].OfficialSourceIds);
+        Assert.Contains(Guid.Parse("451eb915-ff9b-5b88-8b12-ca173399213d"), polandFacts["work-minimum-pay"].OfficialSourceIds);
+        Assert.Contains(Guid.Parse("3b1d42d4-1a47-5b88-80ae-09aae7cfe912"), polandFacts["work-minimum-pay"].OfficialSourceIds);
+        Assert.Contains("4,806", polandFacts["work-minimum-pay"].Values["en"]);
+        Assert.Contains("31.40", polandFacts["work-minimum-pay"].Values["en"]);
+        Assert.Contains("FUTURE", polandFacts["work-minimum-pay"].Values["en"]);
+        Assert.Contains("4,950", polandFacts["work-minimum-pay"].Values["en"]);
+        Assert.Contains("32.30", polandFacts["work-minimum-pay"].Values["en"]);
+        Assert.Contains("800", polandFacts["social-child-benefits"].Values["en"]);
     }
 
     private static async Task<CatalogData> LoadCatalogAsync() =>

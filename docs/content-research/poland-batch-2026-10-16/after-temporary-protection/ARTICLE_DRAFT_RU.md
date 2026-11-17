@@ -1,9 +1,6 @@
 # Варианты пребывания после временной защиты
 
-> Research draft — unpublished; pending human editorial review. No content in this draft is approved or marked Verified.
-
 **Summary:** Карта CUKR — отдельный трёхлетний вид на временное пребывание с конкретными условиями. Другие разрешения оформляются по собственным правилам; автоматического перехода нет.
-
 
 ## ПРАВИЛА
 
@@ -11,7 +8,7 @@ PESEL UKR фиксирует статус временной защиты в П�
 
 ## ДЕЙСТВИЯ
 
-UdSC перечисляет четыре одновременных условия CUKR: действующий PESEL UKR при подаче; действующий статус UKR 4 июня 2025 года; действующий UKR в день выдачи карты; не менее 365 дней непрерывного статуса UKR. Для детей, родившихся в Польше, действуют отдельные условия. Подать заявление можно до 4 марта 2027 года. До начала проверьте полный перечень условий, сборы и последствия в процедуре UdSC.
+UdSC указывает основные условия CUKR для определённой группы: действующий статус UKR при подаче заявления и предоставлении разрешения, статус UKR 4 июня 2025 года и не менее 365 непрерывных дней со статусом UKR. Для детей, родившихся в Польше, действуют отдельные условия. Заявления принимаются электронно через MOS с 4 мая 2026 года по 4 марта 2027 года. CUKR выдают на три года; при получении карты статус UKR прекращается, как и некоторые виды помощи, связанные со статусом UKR. Перед подачей проверьте официальную процедуру, актуальные сборы и последствия для вашей ситуации.
 
 ## КУДА ОБРАТИТЬСЯ
 
@@ -23,8 +20,9 @@ UdSC перечисляет четыре одновременных услови
 
 ## OFFICIAL SOURCES
 
-- [Управление по делам иностранцев (UdSC) — Процедура получения карты CUKR](https://www.gov.pl/web/udsc/CUKR-procedura)
-- [Управление по делам иностранцев (UdSC) — Информация о MOS](https://www.gov.pl/web/udsc/info-mos)
-- [Управление по делам иностранцев (UdSC) — Изменения специальных правил пребывания граждан Украины](https://www.gov.pl/web/udsc/zmiany-w-szczegolnych-zasadach-dotyczacych-legalnosci-pobytu-obywateli-ukrainy-na-terytorium-rzeczypospolitej-polskiej)
-- [Управление по делам иностранцев (UdSC) — Прекращение выдачи справок о временной защите](https://www.gov.pl/web/udsc/zaprzestanie-wydawania-zaswiadczen-potwierdzajacych-korzystanie-z-ochrony-czasowej)
-- [Республика Польша — Закон от 23 января 2026 года, Вестник законов 2026, поз. 203](https://dziennikustaw.gov.pl/DU/2026/203/D2026000020301.pdf)
+- [`41dea3fa-8ffc-5d2e-a476-aaf2cf07b109` — Office for Foreigners (UdSC) — CUKR residence-card procedure](https://www.gov.pl/web/udsc/CUKR-procedura)
+- [`50dddaa7-ff1f-5c77-b4f7-2cf1254adda6` — Office for Foreigners (UdSC) — Information about MOS](https://www.gov.pl/web/udsc/info-mos)
+- [`599f4d31-e4d8-5ebf-82ed-149d5d677dd9` — Republic of Poland — Act of 23 January 2026, Journal of Laws 2026 item 203](https://dziennikustaw.gov.pl/DU/2026/203/D2026000020301.pdf)
+- [`ddffc1ab-c2e0-5f7a-b89f-9fafb794e4b5` — Office for Foreigners (UdSC) — Changes to special rules on Ukrainian citizens’ stay](https://www.gov.pl/web/udsc/zmiany-w-szczegolnych-zasadach-dotyczacych-legalnosci-pobytu-obywateli-ukrainy-na-terytorium-rzeczypospolitej-polskiej)
+- [`1cc08213-ec62-5f77-b688-89e3c7474a28` — Office for Foreigners (UdSC) — Discontinuation of certificates confirming temporary protection](https://www.gov.pl/web/udsc/zaprzestanie-wydawania-zaswiadczen-potwierdzajacych-korzystanie-z-ochrony-czasowej)
+- [`8097a634-318b-5375-930b-c82f4f72df26` — Office for Foreigners (UdSC) — CUKR questions and answers](https://www.gov.pl/web/udsc/cukr-QA)

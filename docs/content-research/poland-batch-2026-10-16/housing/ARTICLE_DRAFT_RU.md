@@ -1,13 +1,10 @@
 # Поиск жилья в Польше
 
-> Research draft — unpublished; pending human editorial review. No content in this draft is approved or marked Verified.
-
 **Summary:** Временное размещение и поддержка зависят от категории, места и доступного финансирования. Частная аренда оформляется отдельно; проверьте договор и местную помощь.
-
 
 ## ПРАВИЛА
 
-С 5 марта 2026 года правила государственной помощи с размещением изменились. Закон предусматривает краткосрочную кризисную поддержку и отдельные механизмы для определённых уязвимых групп. Их применение зависит от условий закона, доступного финансирования и местной реализации; место или жильё не гарантируется каждому владельцу PESEL UKR.
+С 5 марта 2026 года правила государственной помощи с размещением изменились. Переходное продолжение прежней специальной программы коллективного проживания для людей из Украины завершилось 30 июня 2026 года. Для перемещённых из Украины новая интервенционная помощь с проживанием и питанием уже недоступна, поскольку установленный законом срок в 12 месяцев от события массового притока ЕС в 2022 году истёк. Коллективное проживание с питанием при наличии финансирования может предоставляться человеку со статусом UKR, который относится к установленной законом уязвимой группе и не может самостоятельно обеспечить себе жильё. Место не гарантируется каждому владельцу PESEL UKR.
 
 ## ДЕЙСТВИЯ
 
@@ -23,8 +20,8 @@
 
 ## OFFICIAL SOURCES
 
-- [Mazowieckie Voivodeship Office — Assistance to Ukrainian citizens](https://www.gov.pl/web/uw-mazowiecki/pomoc-obywatelom-ukrainy)
-- [Gov.pl — Apply for a housing allowance](https://www.gov.pl/web/gov/uzyskaj-dodatek-mieszkaniowy)
-- [Ministry of Development and Technology — Tenant Protection Act questions and answers](https://www.gov.pl/web/rozwoj-technologia/pytania-i-odpowiedzi-w-sprawie-stosowania-przepisow-ustawy-z-dnia-21-czerwca-2001-r-o-ochronie-praw-lokatorow-mieszkaniowym-zasobie-gminy-i-o-zmianie-kodeksu-cywilnego2)
-- [Republic of Poland — Act of 23 January 2026, Journal of Laws 2026 item 203](https://dziennikustaw.gov.pl/DU/2026/203/D2026000020301.pdf)
-- [Republic of Poland — Tenant Rights Protection Act, consolidated text (Journal of Laws 2023 item 725)](https://eli.gov.pl/eli/DU/2023/725/ogl)
+- [`defe4b60-7464-524e-90f6-9f23a0ec5464` — Mazowieckie Voivodeship Office — Assistance to Ukrainian citizens (regional information for Mazowieckie only)](https://www.gov.pl/web/uw-mazowiecki/pomoc-obywatelom-ukrainy)
+- [`768aa9b7-06de-5926-9235-69fb3e537b8b` — Gov.pl — Apply for a housing allowance](https://www.gov.pl/web/gov/uzyskaj-dodatek-mieszkaniowy)
+- [`09cc8513-104c-5ced-b017-b64cf0e3ee9c` — Ministry of Development and Technology — Tenant Protection Act questions and answers (general information; no specific remedy relied on)](https://www.gov.pl/web/rozwoj-technologia/pytania-i-odpowiedzi-w-sprawie-stosowania-przepisow-ustawy-z-dnia-21-czerwca-2001-r-o-ochronie-praw-lokatorow-mieszkaniowym-zasobie-gminy-i-o-zmianie-kodeksu-cywilnego2)
+- [`80348417-6bc3-5c3b-90ec-f5a75b9092cd` — Republic of Poland — Act of 23 January 2026, Journal of Laws 2026 item 203](https://dziennikustaw.gov.pl/DU/2026/203/D2026000020301.pdf)
+- [`a5ebb19b-f5d4-5e72-9107-5e4f84445286` — Republic of Poland — Tenant Rights Protection Act, consolidated text (Journal of Laws 2023 item 725)](https://eli.gov.pl/eli/DU/2023/725/ogl)

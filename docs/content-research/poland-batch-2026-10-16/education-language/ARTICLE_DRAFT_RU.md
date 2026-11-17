@@ -1,13 +1,10 @@
 # Образование и изучение польского языка
 
-> Research draft — unpublished; pending human editorial review. No content in this draft is approved or marked Verified.
-
 **Summary:** Дети, прибывшие из-за рубежа, могут поступить в польскую государственную школу по документам о предыдущем обучении; класс определяет школа. Обязательность обучения и поддержка зависят от возраста и действующих правил.
-
 
 ## ПРАВИЛА
 
-Обязательная дошкольная подготовка распространяется на детей, которым в соответствующем календарном году исполняется шесть лет. Обязательное школьное обучение начинается в учебном году, в котором ребёнку исполняется семь лет, и продолжается до окончания начальной школы, но не дольше чем до 18 лет; обязанность учиться действует до 18 лет. С сентября 2024 года на детей из Украины распространяются польские правила образования. Уточните порядок, применимый к ребёнку, в школе или гмине.
+Обязательная дошкольная подготовка распространяется на детей, которым в соответствующем календарном году исполняется шесть лет. Обязательное школьное обучение начинается в учебном году, в котором ребёнку исполняется семь лет, и продолжается до окончания начальной школы, но не дольше чем до 18 лет; обязанность учиться действует до 18 лет. С сентября 2024 года на детей из Украины распространяются польские правила образования. Одно лишь дистанционное обучение в украинской системе не выполняет обязанность учиться в Польше; узкое исключение для выпускного класса в 2024/2025 учебном году является историческим и уже завершилось. Уточните порядок для ребёнка в школе или гмине.
 
 ## ДЕЙСТВИЯ
 
@@ -23,7 +20,6 @@
 
 ## OFFICIAL SOURCES
 
-- [Ministry of National Education — Education for people arriving from abroad](https://www.gov.pl/web/edukacja/informacja-o-ksztalceniu-w-polskim-systemie-oswiaty-osob-przybywajacych-z-zagranicy)
-- [Office for Foreigners (UdSC) — Education under temporary protection](https://www.gov.pl/web/ochrona/edukacja)
-- [Polish National Agency for Academic Exchange (NAWA) — Secondary school certificates](https://www.nawa.gov.pl/uznawalnosc/wydawanie-informacji-o-zagranicznych-dyplomach/swiadectwo-szkoly-sredniej)
-- [Republic of Poland — Education Law, codified text prepared 16 September 2026](https://eli.gov.pl/eli/DU/2026/820/ogl)
+- [`a646d0ee-81ba-5b10-b179-e09ca4ac3453` — Ministry of National Education — Education for people arriving from abroad](https://www.gov.pl/web/edukacja/informacja-o-ksztalceniu-w-polskim-systemie-oswiaty-osob-przybywajacych-z-zagranicy)
+- [`7b72e7d2-6359-5eae-b2c9-68f2e9da7c80` — Polish National Agency for Academic Exchange (NAWA) — Secondary school certificates](https://www.nawa.gov.pl/uznawalnosc/wydawanie-informacji-o-zagranicznych-dyplomach/swiadectwo-szkoly-sredniej)
+- [`1cf8737c-cef9-56ac-8c57-8984169ba13d` — Republic of Poland — Education Law, codified text prepared 16 September 2026 (Journal of Laws item 820, incorporating later items 904, 982, 1036 and 1123)](https://eli.gov.pl/eli/DU/2026/820/ogl)

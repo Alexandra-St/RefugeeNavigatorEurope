@@ -1,9 +1,6 @@
 # Доступ к медицинской помощи в Польше
 
-> Research draft — unpublished; pending human editorial review. No content in this draft is approved or marked Verified.
-
 **Summary:** С 5 марта 2026 года доступ к помощи NFZ зависит от страхового статуса или конкретной категории временной защиты. Перед плановым лечением проверьте покрытие.
-
 
 ## ПРАВИЛА
 
@@ -23,7 +20,7 @@
 
 ## OFFICIAL SOURCES
 
-- [National Health Fund (NFZ) — Patient from Ukraine: what changed from 5 March 2026?](https://www.nfz.gov.pl/aktualnosci/aktualnosci-centrali/pacjent-z-ukrainy-co-sie-zmienilo-od-5-marca-2026-r-,8907.html)
-- [Patient.gov.pl — Emergency care and out-of-hours options](https://pacjent.gov.pl/na-ratunek)
-- [National Health Fund — Find a healthcare provider](https://gsl.nfz.gov.pl/)
-- [Republic of Poland — Act of 23 January 2026, Journal of Laws 2026 item 203](https://dziennikustaw.gov.pl/DU/2026/203/D2026000020301.pdf)
+- [`6dbd3c8d-ac7f-5211-8609-eea9edfecbce` — National Health Fund (NFZ) — Patient from Ukraine: what changed from 5 March 2026?](https://www.nfz.gov.pl/aktualnosci/aktualnosci-centrali/pacjent-z-ukrainy-co-sie-zmienilo-od-5-marca-2026-r-,8907.html)
+- [`7813be17-01bf-5f2a-86aa-ac013ea36b81` — Patient.gov.pl — Emergency care and out-of-hours options](https://pacjent.gov.pl/na-ratunek)
+- [`07c5096b-5adf-5883-ad09-a6986794cbc7` — National Health Fund — Find a healthcare provider](https://gsl.nfz.gov.pl/)
+- [`10831751-821e-5615-993d-d0b29f693361` — Republic of Poland — Act of 23 January 2026, Journal of Laws 2026 item 203](https://dziennikustaw.gov.pl/DU/2026/203/D2026000020301.pdf)

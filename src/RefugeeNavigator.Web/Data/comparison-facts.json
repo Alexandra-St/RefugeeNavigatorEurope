@@ -349,9 +349,9 @@
                 "0dfc274b-f02d-5acb-913e-51dee3c7fa24"
               ],
               "Values": {
-                "en": "Apply in person for PESEL UKR at any gmina office within 30 days after crossing the Polish border. The service lists a form, photograph and identity document; children or missing documents require current local instructions.",
-                "uk": "Для отримання PESEL UKR зверніться особисто до будь-якого офісу gmina протягом 30 днів після перетину польського кордону. Сервіс указує заяву, фото й документ особи; для дітей або за відсутності документів уточніть чинну місцеву процедуру.",
-                "ru": "Для получения PESEL UKR обратитесь лично в любой офис gmina в течение 30 дней после пересечения польской границы. Сервис указывает заявление, фото и документ личности; для детей или при отсутствии документов уточните действующую местную процедуру."
+                "uk": "Для отримання PESEL UKR подайте заяву особисто до будь-якого органу ґміни протягом 30 днів після в’їзду до Польщі. Сервіс указує форму й фотографію 35 × 45 мм; у заявників від 12 років беруть відбитки пальців. Якщо документа, що посвідчує особу, немає, послуга допускає декларацію з урахуванням чинних правил підтвердження особи.",
+                "en": "Apply in person for PESEL UKR at any gmina office within 30 days after entering Poland. The service lists a form and 35 × 45 mm photograph; fingerprints are taken from applicants aged 12 or older. If no identity document is available, the service permits a declaration, subject to applicable identity-confirmation rules.",
+                "ru": "Чтобы получить PESEL UKR, подайте заявление лично в любой орган гмины в течение 30 дней после въезда в Польшу. Сервис указывает форму и фотографию 35 × 45 мм; у заявителей от 12 лет берут отпечатки пальцев. Если документа, удостоверяющего личность, нет, услуга допускает декларацию с учётом действующих правил подтверждения личности."
               }
             },
             {
@@ -644,7 +644,8 @@
                 "e4aa407d-df53-58ab-b10a-6fc2b22d91d3",
                 "7418e8ea-bc3d-561b-ba05-2f09ed29cdc0",
                 "0a989122-f3d4-5afd-a7ce-e10c4566cebe",
-                "d0fc2583-ea0d-5289-b9c7-de3e97417529"
+                "d0fc2583-ea0d-5289-b9c7-de3e97417529",
+                "e5d81209-42dd-5dd0-aabc-a8cfb338224c"
               ],
               "Values": {
                 "en": "EU protection extends through 4 March 2028; Article 106 links lawful stay of its defined group to that decision, subject to exclusions and ending events. Older certificates are separately stated valid through 4 March 2027 unless an earlier ending event applies. Do not infer personal document validity.",
@@ -1582,12 +1583,13 @@
               "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "41dea3fa-8ffc-5d2e-a476-aaf2cf07b109"
+                "41dea3fa-8ffc-5d2e-a476-aaf2cf07b109",
+                "8097a634-318b-5375-930b-c82f4f72df26"
               ],
               "Values": {
-                "en": "CUKR applications are submitted only online through MOS, until 4 March 2027. This deadline and procedure concern CUKR, not every residence route.",
-                "uk": "Заяви на CUKR подають лише онлайн через MOS до 4 березня 2027 року. Цей строк і процедура стосуються CUKR, а не всіх підстав проживання.",
-                "ru": "Заявления на CUKR подают только онлайн через MOS до 4 марта 2027 года. Этот срок и процедура относятся к CUKR, а не ко всем основаниям проживания."
+                "uk": "Заяви на CUKR приймають онлайн через MOS з 4 травня 2026 року до 4 березня 2027 року. Своєчасна заява може забезпечити законність перебування до отримання картки або остаточного рішення про відмову/припинення; сама подача не надає дозволу на перебування. Ця спеціальна процедура стосується CUKR, а не всіх підстав проживання.",
+                "en": "CUKR applications have been accepted online through MOS since 4 May 2026 and may be filed through 4 March 2027. A timely application can keep the applicant’s stay lawful until card collection or a final refusal/discontinuance; it does not itself grant a residence permit. This special procedure concerns CUKR, not every residence route.",
+                "ru": "Заявления на CUKR принимают онлайн через MOS с 4 мая 2026 года по 4 марта 2027 года. Своевременное заявление может обеспечивать законность пребывания до получения карты или окончательного решения об отказе/прекращении; сама подача не предоставляет разрешение на пребывание. Эта специальная процедура относится к CUKR, а не ко всем основаниям проживания."
               }
             },
             {
@@ -3393,12 +3395,14 @@
               "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "b93d9eab-8905-5847-9c80-2a3cbc5eca73"
+                "b93d9eab-8905-5847-9c80-2a3cbc5eca73",
+                "451eb915-ff9b-5b88-8b12-ca173399213d",
+                "3b1d42d4-1a47-5b88-80ae-09aae7cfe912"
               ],
               "Values": {
-                "en": "The 2026 national monthly minimum wage is PLN 4,806. Part-month work and some contract types follow separate rules; compare gross pay and applicable hours, not only take-home pay.",
-                "uk": "Загальнодержавна місячна мінімальна зарплата у 2026 році — 4 806 злотих. Для неповного місяця й деяких видів договорів діють окремі правила; порівнюйте брутто та відповідні години, а не лише суму на руки.",
-                "ru": "Общегосударственная месячная минимальная зарплата в 2026 году — 4 806 злотых. Для неполного месяца и некоторых видов договоров действуют отдельные правила; сравнивайте брутто и соответствующие часы, а не только сумму на руки."
+                "uk": "Загальнодержавна мінімальна зарплата у 2026 році — 4 806 злотих на місяць і 31,40 злотого за годину для охоплених цивільно-правових договорів. Ухвалені МАЙБУТНІ ставки з 1 січня 2027 року — 4 950 злотих на місяць і 32,30 злотого за годину для охоплених договорів. Для неповного місяця та деяких договорів діють окремі правила.",
+                "en": "The 2026 national minimum is PLN 4,806 per month and PLN 31.40 per hour for covered civil-law contracts. Enacted FUTURE rates from 1 January 2027 are PLN 4,950 per month and PLN 32.30 per hour for covered contracts. Part-month work and some contract types follow separate rules; compare gross pay and applicable hours, not only take-home pay.",
+                "ru": "Общегосударственная минимальная зарплата в 2026 году — 4 806 злотых в месяц и 31,40 злотого в час для охватываемых гражданско-правовых договоров. Принятые БУДУЩИЕ ставки с 1 января 2027 года — 4 950 злотых в месяц и 32,30 злотого в час для охватываемых договоров. Для неполного месяца и некоторых договоров действуют отдельные правила."
               }
             },
             {
@@ -4608,9 +4612,9 @@
                 "80348417-6bc3-5c3b-90ec-f5a75b9092cd"
               ],
               "Values": {
-                "en": "The 2026 rules provide short-term crisis support and a separate accommodation route for defined vulnerable groups. Statutory conditions, funding and local implementation apply; PESEL UKR does not guarantee a place for everyone.",
-                "uk": "Правила 2026 року передбачають короткострокову кризову підтримку й окремий шлях розміщення для визначених вразливих груп. Діють законодавчі умови, фінансування й місцева реалізація; PESEL UKR не гарантує місце кожному.",
-                "ru": "Правила 2026 года предусматривают краткосрочную кризисную поддержку и отдельный путь размещения для определённых уязвимых групп. Действуют законодательные условия, финансирование и местная реализация; PESEL UKR не гарантирует место каждому."
+                "uk": "Перехідне продовження колишньої спеціальної програми колективного проживання для людей з України завершилося 30 червня 2026 року. Нова інтервенційна допомога з проживанням і харчуванням для переміщених з України вже недоступна, оскільки законодавчий строк у 12 місяців від події масового напливу ЄС у 2022 році минув. За наявності фінансування колективне проживання з харчуванням може надаватися людям зі статусом UKR, які належать до законодавчо визначеної вразливої групи та не можуть самостійно забезпечити собі житло. Сам PESEL UKR не гарантує місце.",
+                "en": "The transitional extension of the former Ukraine-specific collective-accommodation scheme ended on 30 June 2026. The new interventional stay-and-meal measure is no longer available for the Ukraine displacement because its 12-month statutory period from the 2022 EU mass-influx event has expired. Funded collective accommodation with meals may still be provided to people with UKR status who belong to a statutory vulnerable group and cannot house themselves. Eligibility and funding apply; PESEL UKR alone does not guarantee a place.",
+                "ru": "Переходное продление прежней специальной программы коллективного проживания для людей из Украины завершилось 30 июня 2026 года. Новая интервенционная помощь с проживанием и питанием для перемещённых из Украины уже недоступна, поскольку установленный законом срок в 12 месяцев от события массового притока ЕС в 2022 году истёк. При наличии финансирования коллективное проживание с питанием может предоставляться людям со статусом UKR, которые относятся к установленной законом уязвимой группе и не могут самостоятельно обеспечить жильё. Сам PESEL UKR не гарантирует место."
               }
             },
             {
@@ -7075,9 +7079,9 @@
                 "33354082-99fb-5d3a-97af-92c825f960e3"
               ],
               "Values": {
-                "en": "800+ requires the applicable residence/status conditions and the child living with a parent in Poland; school-age children must attend Polish education. For Ukrainian citizens with UKR status, a work-activity condition applies from 1 February 2026, with exceptions including some disability/Polish-child cases and limited support for some registered unemployed parents. ZUS checks the individual case.",
-                "uk": "800+ вимагає відповідних умов проживання/статусу та проживання дитини з батьком чи матір’ю в Польщі; діти шкільного віку мають навчатися в польській системі. Для громадян України зі статусом UKR з 1 лютого 2026 року діє умова трудової активності з винятками, зокрема для деяких випадків інвалідності/дитини-громадянина Польщі та обмеженою допомогою деяким зареєстрованим безробітним батькам. Справу перевіряє ZUS.",
-                "ru": "800+ требует соответствующих условий проживания/статуса и проживания ребёнка с родителем в Польше; дети школьного возраста должны учиться в польской системе. Для граждан Украины со статусом UKR с 1 февраля 2026 года действует условие трудовой активности с исключениями, в том числе для некоторых случаев инвалидности/ребёнка-гражданина Польши и ограниченной помощью некоторым зарегистрированным безработным родителям. Дело проверяет ZUS."
+                "uk": "800+ становить 800 злотих на місяць на дитину, яка відповідає умовам, і вимагає відповідних умов проживання/статусу та проживання дитини з одним із батьків у Польщі; діти шкільного віку мають навчатися в польській системі. З 1 лютого 2026 року для громадян України зі статусом UKR діє умова професійної активності з винятками, встановленими законом. Зареєстрований безробітний з батьків із медичним страхуванням через реєстрацію може отримувати виплату протягом 3 місяців або 6 місяців, якщо виховує щонайменше трьох дітей. Справу перевіряє ZUS.",
+                "en": "800+ is PLN 800 per eligible child per month and requires the applicable residence/status conditions and the child living with a parent in Poland; school-age children must attend Polish education. For Ukrainian citizens with UKR status, a work-activity condition applies from 1 February 2026 with statutory exceptions. A registered unemployed parent with health insurance through registration may qualify for 3 months, or 6 months when raising at least three children. ZUS checks the individual case.",
+                "ru": "800+ составляет 800 злотых в месяц на ребёнка, отвечающего условиям, и требует соответствующих условий проживания/статуса и проживания ребёнка с одним из родителей в Польше; дети школьного возраста должны учиться в польской системе. С 1 февраля 2026 года для граждан Украины со статусом UKR действует условие профессиональной активности с установленными законом исключениями. Зарегистрированный безработный родитель с медицинской страховкой через регистрацию может получать выплату 3 месяца или 6 месяцев, если воспитывает не менее трёх детей. Дело проверяет ZUS."
               }
             },
             {

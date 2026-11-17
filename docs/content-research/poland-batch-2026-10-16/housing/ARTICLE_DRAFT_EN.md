@@ -1,13 +1,10 @@
 # Finding Accommodation in Poland
 
-> Research draft — unpublished; pending human editorial review. No content in this draft is approved or marked Verified.
-
 **Summary:** Temporary accommodation and support depend on the group, location and available funding. Private renting is separate; check the agreement and local assistance.
-
 
 ## RULES
 
-From 5 March 2026, public accommodation assistance rules changed. The law provides for short-term crisis support and separate arrangements for defined vulnerable groups. Delivery depends on statutory conditions, available funding and local implementation; a place or housing is not guaranteed to every PESEL UKR holder.
+From 5 March 2026, public accommodation rules changed. The transitional continuation of the former Ukraine-specific collective-accommodation scheme ended on 30 June 2026. For the Ukraine displacement, the new interventional stay-and-meal measure is no longer available because its 12-month statutory period ran from the 2022 EU mass-influx event. Funded collective accommodation with meals may still be provided to a person with UKR status who belongs to a statutory vulnerable group and cannot provide accommodation independently. Eligibility, funding and local administration apply; a place is not guaranteed to every PESEL UKR holder.
 
 ## TASKS
 
@@ -23,8 +20,8 @@ Keep the rental agreement, payment records, handover report and correspondence. 
 
 ## OFFICIAL SOURCES
 
-- [Mazowieckie Voivodeship Office — Assistance to Ukrainian citizens](https://www.gov.pl/web/uw-mazowiecki/pomoc-obywatelom-ukrainy)
-- [Gov.pl — Apply for a housing allowance](https://www.gov.pl/web/gov/uzyskaj-dodatek-mieszkaniowy)
-- [Ministry of Development and Technology — Tenant Protection Act questions and answers](https://www.gov.pl/web/rozwoj-technologia/pytania-i-odpowiedzi-w-sprawie-stosowania-przepisow-ustawy-z-dnia-21-czerwca-2001-r-o-ochronie-praw-lokatorow-mieszkaniowym-zasobie-gminy-i-o-zmianie-kodeksu-cywilnego2)
-- [Republic of Poland — Act of 23 January 2026, Journal of Laws 2026 item 203](https://dziennikustaw.gov.pl/DU/2026/203/D2026000020301.pdf)
-- [Republic of Poland — Tenant Rights Protection Act, consolidated text (Journal of Laws 2023 item 725)](https://eli.gov.pl/eli/DU/2023/725/ogl)
+- [`defe4b60-7464-524e-90f6-9f23a0ec5464` — Mazowieckie Voivodeship Office — Assistance to Ukrainian citizens (regional information for Mazowieckie only)](https://www.gov.pl/web/uw-mazowiecki/pomoc-obywatelom-ukrainy)
+- [`768aa9b7-06de-5926-9235-69fb3e537b8b` — Gov.pl — Apply for a housing allowance](https://www.gov.pl/web/gov/uzyskaj-dodatek-mieszkaniowy)
+- [`09cc8513-104c-5ced-b017-b64cf0e3ee9c` — Ministry of Development and Technology — Tenant Protection Act questions and answers (general information; no specific remedy relied on)](https://www.gov.pl/web/rozwoj-technologia/pytania-i-odpowiedzi-w-sprawie-stosowania-przepisow-ustawy-z-dnia-21-czerwca-2001-r-o-ochronie-praw-lokatorow-mieszkaniowym-zasobie-gminy-i-o-zmianie-kodeksu-cywilnego2)
+- [`80348417-6bc3-5c3b-90ec-f5a75b9092cd` — Republic of Poland — Act of 23 January 2026, Journal of Laws 2026 item 203](https://dziennikustaw.gov.pl/DU/2026/203/D2026000020301.pdf)
+- [`a5ebb19b-f5d4-5e72-9107-5e4f84445286` — Republic of Poland — Tenant Rights Protection Act, consolidated text (Journal of Laws 2023 item 725)](https://eli.gov.pl/eli/DU/2023/725/ogl)
