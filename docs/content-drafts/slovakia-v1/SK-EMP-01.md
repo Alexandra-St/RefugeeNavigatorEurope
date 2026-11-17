@@ -4,7 +4,7 @@
 - Category: `employment`
 - Article ID: `c26f0cc5-6316-5051-8ea8-8aa53d5d8742`
 - Research package: `docs/content-research/slovakia-batch-2026-11-06/finding-a-job/SOURCES_AND_CLAIMS.md`
-- Translation status: `NeedsReview` (EN / UK / RU)
+- Translation status: `Verified` (EN / UK / RU)
 - Comparison aspects: `employment-vacancies, employment-institutions, employment-assistance-conditions`
 
 ## EN

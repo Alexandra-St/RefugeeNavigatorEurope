@@ -3179,7 +3179,8 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "c4015793-bfba-529b-b9c3-fbda351a68d6",
-                "28c61de2-1ddb-5984-8020-b9e19bb986e8"
+                "28c61de2-1ddb-5984-8020-b9e19bb986e8",
+                "78949412-f5b0-5e28-b106-d1b85fc62cc7"
               ],
               "Values": {
                 "en": "For covered temporary-refuge employment, the employer electronically files the prescribed information card for both commencement and termination within seven working days of each event, using the required qualified electronic signature and attaching employment-relationship and status evidence; retain required eligibility records. §72bc residence-card updates are separate.",
@@ -3485,12 +3486,13 @@
                 "0ee76a27-1a5b-55c6-94cd-f7ce78a0f0b3",
                 "ec5c2ea1-fd6e-564f-825e-73fd0a5c7429",
                 "6ab4517b-bc98-5890-aef1-ff0bb9c6f227",
-                "ae4b6e26-5c1f-598e-ba51-8f67451bc621"
+                "ae4b6e26-5c1f-598e-ba51-8f67451bc621",
+                "7be4136e-5c35-5491-99d2-39de492cea0b"
               ],
               "Values": {
-                "en": "2026 gross monthly grade floors are €915, €1,031, €1,147, €1,263, €1,379 and €1,495; hourly floors are €5.259, €5.925, €6.592, €7.259, €7.925 and €8.592 respectively. Grade depends on job complexity and the applicable collective-agreement rules; dated figures require refresh.",
-                "uk": "Місячні мінімуми брутто за шістьма рівнями складності у 2026 році: €915, €1 031, €1 147, €1 263, €1 379 і €1 495; погодинні мінімуми відповідно: €5,259, €5,925, €6,592, €7,259, €7,925 і €8,592. Рівень залежить від складності роботи та застосовних правил колективного договору; суми датовані й потребують оновлення.",
-                "ru": "Месячные минимумы брутто по шести уровням сложности в 2026 году: €915, €1 031, €1 147, €1 263, €1 379 и €1 495; почасовые минимумы соответственно: €5,259, €5,925, €6,592, €7,259, €7,925 и €8,592. Уровень зависит от сложности работы и применимых правил коллективного договора; суммы датированы и требуют обновления."
+                "en": "2026 gross monthly grade floors are €915, €1,031, €1,147, €1,263, €1,379 and €1,495; hourly floors are €5.259, €5.925, €6.592, €7.259, €7.925 and €8.592 respectively. Grade depends on job complexity and the applicable collective-agreement rules; dated figures require refresh. FUTURE from 1 January 2027: enacted monthly floors for grades 1–6 are €972, €1,088, €1,204, €1,320, €1,436 and €1,552; hourly floors are €5.586, €6.253, €6.920, €7.586, €8.253 and €8.920.",
+                "uk": "Місячні мінімуми брутто за шістьма рівнями складності у 2026 році: €915, €1 031, €1 147, €1 263, €1 379 і €1 495; погодинні мінімуми відповідно: €5,259, €5,925, €6,592, €7,259, €7,925 і €8,592. Рівень залежить від складності роботи та застосовних правил колективного договору; суми датовані й потребують оновлення. МАЙБУТНІ з 1 січня 2027 року: встановлені місячні мінімуми для рівнів 1–6 становитимуть €972, €1 088, €1 204, €1 320, €1 436 і €1 552; погодинні — €5,586, €6,253, €6,920, €7,586, €8,253 і €8,920.",
+                "ru": "Месячные минимумы брутто по шести уровням сложности в 2026 году: €915, €1 031, €1 147, €1 263, €1 379 и €1 495; почасовые минимумы соответственно: €5,259, €5,925, €6,592, €7,259, €7,925 и €8,592. Уровень зависит от сложности работы и применимых правил коллективного договора; суммы датированы и требуют обновления. БУДУЩИЕ с 1 января 2027 года: установленные месячные минимумы для уровней 1–6 составят €972, €1 088, €1 204, €1 320, €1 436 и €1 552; почасовые — €5,586, €6,253, €6,920, €7,586, €8,253 и €8,920."
               }
             },
             {
@@ -5605,7 +5607,9 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "14b260fe-bc1c-577e-9d27-d48e3dbad0b0",
-                "612f910b-a524-5f64-b063-60af5cc5cb63"
+                "612f910b-a524-5f64-b063-60af5cc5cb63",
+                "95c86398-0d16-5306-be5e-39410dec7fa3",
+                "c002430c-08aa-518c-acf0-fc12d4131944"
               ],
               "Values": {
                 "en": "From September 2025, statutory compulsory-school rules apply to specified Ukrainian-citizen temporary-protection/asylum cohorts and ages (five for pre-primary; six to under 16 for primary/secondary). Transition deadlines: proceedings started after 31 Aug 2025—within 3 months; proceedings started Jan–Aug 2025—within 3 months after 1 Sep 2025; pre-2025 proceedings/status—required steps by 1 Sep 2025. These are cohort-specific transition rules, not a universal fresh-enrolment deadline. Chosen school is not guaranteed; capacity fallback applies.",
@@ -5909,7 +5913,9 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "14b260fe-bc1c-577e-9d27-d48e3dbad0b0",
-                "612f910b-a524-5f64-b063-60af5cc5cb63"
+                "612f910b-a524-5f64-b063-60af5cc5cb63",
+                "5c72a6de-3351-508c-abb9-7354e15f2f0b",
+                "1d2f2827-8bf3-5974-ac5c-3792c2d078d6"
               ],
               "Values": {
                 "en": "Language and adaptation supports depend on needs, consent, school capacity and availability; Ukrainian online schooling is not automatically a substitute for Slovak attendance.",

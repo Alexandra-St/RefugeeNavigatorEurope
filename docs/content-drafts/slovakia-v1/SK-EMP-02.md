@@ -4,7 +4,7 @@
 - Category: `employment`
 - Article ID: `7e043916-46d8-5767-b00e-0ddc38c6c24e`
 - Research package: `docs/content-research/slovakia-batch-2026-11-06/employment-rights/SOURCES_AND_CLAIMS.md`
-- Translation status: `NeedsReview` (EN / UK / RU)
+- Translation status: `Verified` (EN / UK / RU)
 - Comparison aspects: `work-permission, work-employer-duties, work-minimum-pay`
 
 ## EN
@@ -19,7 +19,9 @@ A person with temporary refuge may work as an employee without a work permit or 
 
 For a temporary-refuge employee, the employer must electronically file the prescribed information card for both the start and termination of employment within seven working days of each event, using the qualified electronic signature required by the current procedure. [[source:78949412-f5b0-5e28-b106-d1b85fc62cc7|current electronic filing guidance]] Include a copy of the employment contract or applicable work agreement and proof of the employee’s temporary-refuge status; retain the required eligibility documents during employment under the Act. This duty is distinct from any later residence-card update under §72bc. [[source:c4015793-bfba-529b-b9c3-fbda351a68d6|statutory reporting and record duties]] Employees retain Labour Code, safety and anti-discrimination protections. [[source:c4015793-bfba-529b-b9c3-fbda351a68d6|reporting rules]] [[source:9e6bd179-3ba9-5282-b0da-11fd9ef4e43a|Labour Code]] [[source:8c8a8d56-e19e-5b37-99bd-d48eee741c26|workplace safety law]] [[source:32388c5e-e375-5bdc-99ea-6f897a4e3b00|equal treatment law]]
 
-For 2026, the general minimum wage is €915 per month or €5.259 per hour gross. The six difficulty-grade monthly/hourly floors are €915/€5.259, €1,031/€5.925, €1,147/€6.592, €1,263/€7.259, €1,379/€7.925 and €1,495/€8.592. The applicable grade depends on job complexity and the governing collective agreement; refresh these dated figures before later use. [[source:0ee76a27-1a5b-55c6-94cd-f7ce78a0f0b3|2026 wage notice]] [[source:ec5c2ea1-fd6e-564f-825e-73fd0a5c7429|difficulty-grade notice]] [[source:ae4b6e26-5c1f-598e-ba51-8f67451bc621|grade guidance]]
+For 2026, the general minimum wage is €915 per month or €5.259 per hour gross. The six difficulty-grade monthly/hourly floors are €915/€5.259, €1,031/€5.925, €1,147/€6.592, €1,263/€7.259, €1,379/€7.925 and €1,495/€8.592. The applicable grade depends on job complexity and the governing collective agreement; refresh these dated figures before later use. [[source:0ee76a27-1a5b-55c6-94cd-f7ce78a0f0b3|2026 wage notice]] [[source:ec5c2ea1-fd6e-564f-825e-73fd0a5c7429|difficulty-grade notice]] [[source:ae4b6e26-5c1f-598e-ba51-8f67451bc621|grade guidance]] [[source:fa412bbd-d859-5d02-81c8-f961aafc82dd|Act 663/2007]]
+
+From 1 January 2027, the enacted minimum monthly wage floors for difficulty grades 1–6 are €972, €1,088, €1,204, €1,320, €1,436 and €1,552; the corresponding hourly floors at a 40-hour work week are €5.586, €6.253, €6.920, €7.586, €8.253 and €8.920. These are FUTURE 2027 gross floors, distinct from the current 2026 amounts above. [[source:7be4136e-5c35-5491-99d2-39de492cea0b|Slov-Lex, Notice 233/2026]]
 
 ### Claim coverage and editorial exclusions
 
@@ -39,6 +41,8 @@ Content:
 
 У 2026 році загальна мінімальна зарплата становить €915 на місяць або €5,259 за годину брутто. Шість мінімумів за рівнями складності на місяць/годину: €915/€5,259, €1 031/€5,925, €1 147/€6,592, €1 263/€7,259, €1 379/€7,925 і €1 495/€8,592. Рівень залежить від складності роботи та застосовного колективного договору; перед подальшим використанням оновіть ці датовані суми. [[source:0ee76a27-1a5b-55c6-94cd-f7ce78a0f0b3|Повідомлення про зарплату 2026 року]] [[source:ec5c2ea1-fd6e-564f-825e-73fd0a5c7429|Повідомлення про рівні складності]] [[source:ae4b6e26-5c1f-598e-ba51-8f67451bc621|Інструкція щодо рівнів]]
 
+Із 1 січня 2027 року набудуть чинності встановлені законом місячні мінімальні вимоги до оплати за ступенями складності 1–6: €972, €1 088, €1 204, €1 320, €1 436 і €1 552; відповідні погодинні суми за 40-годинного робочого тижня — €5,586, €6,253, €6,920, €7,586, €8,253 і €8,920. Це МАЙБУТНІ суми брутто на 2027 рік, окремі від чинних сум на 2026 рік вище. [[source:7be4136e-5c35-5491-99d2-39de492cea0b|Slov-Lex, повідомлення 233/2026]]
+
 ### Claim coverage and editorial exclusions
 
 The employee exemption does not establish self-employment permission; wage values are dated 2026 gross floors.
@@ -56,6 +60,8 @@ Content:
 Для работника с временным убежищем работодатель должен электронно подать установленную информационную карточку как о начале, так и о прекращении работы — в течение семи рабочих дней после каждого события — с квалифицированной электронной подписью, требуемой действующей процедурой. [[source:78949412-f5b0-5e28-b106-d1b85fc62cc7|Актуальная инструкция по электронной подаче]] Нужно приложить копию трудового договора или соответствующего соглашения о работе и подтверждение статуса временного убежища работника; предусмотренные документы о праве на работу следует хранить в течение трудовых отношений. Эта обязанность отличается от возможного обновления карты проживания по §72bc. [[source:c4015793-bfba-529b-b9c3-fbda351a68d6|Законодательные обязанности по уведомлению и документам]] Работники защищены Трудовым кодексом, правилами безопасности и недискриминации. [[source:c4015793-bfba-529b-b9c3-fbda351a68d6|Правила уведомления]] [[source:9e6bd179-3ba9-5282-b0da-11fd9ef4e43a|Трудовой кодекс]] [[source:8c8a8d56-e19e-5b37-99bd-d48eee741c26|Охрана труда]] [[source:32388c5e-e375-5bdc-99ea-6f897a4e3b00|Равное обращение]]
 
 В 2026 году общая минимальная зарплата составляет €915 в месяц или €5,259 в час до вычета налогов. Шесть минимумов по степени сложности в месяц/час: €915/€5,259, €1 031/€5,925, €1 147/€6,592, €1 263/€7,259, €1 379/€7,925 и €1 495/€8,592. Уровень зависит от сложности работы и применимого коллективного договора; перед дальнейшим использованием обновите эти датированные суммы. [[source:0ee76a27-1a5b-55c6-94cd-f7ce78a0f0b3|Уведомление о зарплате 2026 года]] [[source:ec5c2ea1-fd6e-564f-825e-73fd0a5c7429|Уведомление о степенях сложности]] [[source:ae4b6e26-5c1f-598e-ba51-8f67451bc621|Информация о уровнях]]
+
+С 1 января 2027 года вступят в силу установленные законом месячные минимальные требования к оплате по степеням сложности 1–6: €972, €1 088, €1 204, €1 320, €1 436 и €1 552; соответствующие почасовые суммы при 40-часовой рабочей неделе — €5,586, €6,253, €6,920, €7,586, €8,253 и €8,920. Это БУДУЩИЕ суммы брутто на 2027 год, отдельно от действующих сумм на 2026 год выше. [[source:7be4136e-5c35-5491-99d2-39de492cea0b|Slov-Lex, уведомление 233/2026]]
 
 ### Claim coverage and editorial exclusions
 

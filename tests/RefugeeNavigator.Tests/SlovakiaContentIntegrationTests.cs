@@ -49,7 +49,7 @@ public sealed class SlovakiaContentIntegrationTests
             Assert.All(translations, item =>
             {
                 Assert.Equal(VerificationStatus.Verified, item.VerificationStatus);
-                Assert.Equal(new DateTimeOffset(2026, 11, 6, 12, 0, 0, TimeSpan.Zero), item.LastUpdatedAt);
+                Assert.Equal(new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero), item.LastUpdatedAt);
                 Assert.False(string.IsNullOrWhiteSpace(item.Title));
                 Assert.False(string.IsNullOrWhiteSpace(item.Summary));
                 Assert.False(string.IsNullOrWhiteSpace(item.Content));
@@ -70,14 +70,29 @@ public sealed class SlovakiaContentIntegrationTests
         Assert.Equal(8, Directory.GetFiles(root, "SK-*.md").Length);
         var ids = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => ids.Contains(item.InformationEntryId)).ToArray();
-        Assert.Equal(81, sources.Length);
-        Assert.Equal(1492, catalog.OfficialSources.Count);
+        Assert.Equal(78, sources.Length);
+        Assert.Equal(1489, catalog.OfficialSources.Count);
+        var removedIds = new[]
+        {
+            Guid.Parse("97ffc889-36c7-51f1-b119-e6b5afdf1aa1"),
+            Guid.Parse("a62d82be-4684-598d-922d-5dbedcbc6f72"),
+            Guid.Parse("4abe8f4e-1475-5bb9-9350-fac230852d89"),
+            Guid.Parse("47492e68-2add-5f49-b54a-5a71ecf9f6d2")
+        };
+        Assert.DoesNotContain(catalog.OfficialSources, source => removedIds.Contains(source.Id));
+        var notice = Assert.Single(catalog.OfficialSources, source => source.Id == Guid.Parse("7be4136e-5c35-5491-99d2-39de492cea0b"));
+        Assert.Equal(Articles["SK-EMP-02"].Id, notice.InformationEntryId);
+        Assert.Equal("https://static.slov-lex.sk/static/SK/ZZ/2026/233/20260923.print.html", notice.Url.ToString());
+        var act663 = Assert.Single(catalog.OfficialSources, source => source.Id == Guid.Parse("fa412bbd-d859-5d02-81c8-f961aafc82dd"));
+        Assert.Equal("https://static.slov-lex.sk/static/SK/ZZ/2007/663/20250101.print.html", act663.Url.ToString());
+        var legacy = Assert.Single(catalog.OfficialSources, source => source.Id == Guid.Parse("47be309d-df73-563f-9833-5dbe138239f0"));
+        Assert.Equal(Articles["SK-HEALTH-01"].Id, legacy.InformationEntryId);
         Assert.All(sources, item =>
         {
             Assert.Contains(item.InformationEntryId, ids);
             Assert.Equal(Uri.UriSchemeHttps, item.Url.Scheme);
             Assert.False(string.IsNullOrWhiteSpace(item.Title));
-            Assert.Equal(new DateTimeOffset(2026, 11, 6, 0, 0, 0, TimeSpan.Zero), item.LastCheckedAt);
+            Assert.Equal(new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero), item.LastCheckedAt);
         });
         var sourceById = catalog.OfficialSources.ToDictionary(item => item.Id);
         foreach (var (code, expected) in Articles)
@@ -191,7 +206,7 @@ public sealed class SlovakiaContentIntegrationTests
             ["residence-filing"] = ["764171d4-60e3-52a1-818c-d893f6388d68", "0ad1bc01-1675-5d83-86d5-a410cdcda966", "f37818da-31fc-57c8-9406-379be23970be"],
             ["employment-institutions"] = ["3efe28b7-6ffd-5510-b00f-317f84c1176d", "273c5aad-7526-5161-884b-72d93b43a8bb"],
             ["employment-assistance-conditions"] = ["3efe28b7-6ffd-5510-b00f-317f84c1176d", "3ea86fc1-1e8a-51e6-bc3e-820e241f465b", "a0f81409-3a9d-5d0e-acca-4ae5618f92c0"],
-            ["work-minimum-pay"] = ["0ee76a27-1a5b-55c6-94cd-f7ce78a0f0b3", "ec5c2ea1-fd6e-564f-825e-73fd0a5c7429", "6ab4517b-bc98-5890-aef1-ff0bb9c6f227", "ae4b6e26-5c1f-598e-ba51-8f67451bc621"],
+            ["work-minimum-pay"] = ["0ee76a27-1a5b-55c6-94cd-f7ce78a0f0b3", "ec5c2ea1-fd6e-564f-825e-73fd0a5c7429", "6ab4517b-bc98-5890-aef1-ff0bb9c6f227", "ae4b6e26-5c1f-598e-ba51-8f67451bc621", "7be4136e-5c35-5491-99d2-39de492cea0b"],
             ["healthcare-access"] = ["88261d23-1430-5fda-bd4c-666ba5bc0ac9", "ab4942bd-3d65-56d0-bac6-fa3a247a9a65", "5604f5aa-f855-56a1-a76a-05e0bc267711", "84ac063a-2b96-5676-b97c-ab372f94fd75"],
             ["healthcare-proof"] = ["ab4942bd-3d65-56d0-bac6-fa3a247a9a65", "5604f5aa-f855-56a1-a76a-05e0bc267711", "47be309d-df73-563f-9833-5dbe138239f0", "88261d23-1430-5fda-bd4c-666ba5bc0ac9"],
             ["healthcare-urgent"] = ["88261d23-1430-5fda-bd4c-666ba5bc0ac9", "8b5b3ce8-2067-5ebc-abde-1d66f6ccd0cf", "84ac063a-2b96-5676-b97c-ab372f94fd75", "40dc0568-def5-51d8-9ca3-848ca71ec70e", "2586fa5d-8fc5-5387-a15f-97570efbcd2f", "88dc09a3-92be-5b0e-aaa3-0b7186ee3d9c"],
@@ -226,6 +241,77 @@ public sealed class SlovakiaContentIntegrationTests
         Assert.Contains("трансграничная координация", childBenefits.Values["ru"], StringComparison.OrdinalIgnoreCase);
         Assert.DoesNotContain("инвалидност", childBenefits.Values["ru"], StringComparison.OrdinalIgnoreCase);
         Assert.DoesNotContain("гуманитар", childBenefits.Values["ru"], StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Fact]
+    public async Task SlovakiaRefreshPreservesReviewedStatusAndEligibilityBoundaries()
+    {
+        var catalog = await Catalog.Value;
+        string Article(string code) => Assert.Single(catalog.InformationEntryTranslations,
+            item => item.InformationEntryId == Articles[code].Id && item.LanguageCode == "en").Content;
+
+        var protection = Article("SK-TP-01");
+        Assert.Contains("5 August 2026", protection);
+        Assert.Contains("on or before 4 August 2026 and continuously retained it there afterward", protection);
+        Assert.Contains("through 4 March 2028", protection);
+        Assert.Contains("different from the date printed on an individual paper or card", protection);
+        Assert.Contains("within 24 hours", protection);
+        Assert.Contains("not general proof of every work, healthcare, housing or benefit entitlement", protection);
+
+        var residence = Article("SK-TP-02");
+        Assert.Contains("Section 131o is a limited transition route", residence);
+        Assert.Contains("not automatic conversion", residence);
+        Assert.Contains("six months immediately before filing", residence);
+        Assert.Contains("six months immediately before refuge ends", residence);
+        Assert.Contains("continue without interruption through filing", residence);
+
+        var work = Article("SK-EMP-02");
+        Assert.Contains("does not itself authorize self-employment or business", work);
+        Assert.Contains("within seven working days", work);
+        Assert.Contains("€915 per month", work);
+        Assert.Contains("€5.259 per hour", work);
+
+        var healthcare = Article("SK-HEALTH-01");
+        Assert.Contains("does not create Slovak public health-insurance membership", healthcare);
+        Assert.Contains("§9h", healthcare);
+        var housing = Article("SK-HOUSING-01");
+        Assert.Contains("Section 68 facility accommodation and the §69 host contribution are separate schemes", housing);
+        Assert.Contains("A private rental is a separate contract", housing);
+        var education = Article("SK-EDU-01");
+        Assert.Contains("cohort-specific transition rules", education);
+        Assert.Contains("No particular course, location or permanent exemption is guaranteed", education);
+        var social = Article("SK-SOC-01");
+        Assert.Contains("not a flat-rate award", social);
+        Assert.Contains("different decision makers and conditions", social);
+        Assert.Contains("does not establish ordinary child allowance or parental allowance", social);
+    }
+
+    [Fact]
+    public async Task SlovakiaFinalWageAndCompareBindingsKeepCurrentAndFutureEvidenceSeparate()
+    {
+        var catalog = await Catalog.Value;
+        var employment = Assert.Single(catalog.InformationEntryTranslations, item => item.InformationEntryId == Articles["SK-EMP-02"].Id && item.LanguageCode == "en").Content;
+        Assert.Contains("€915 per month", employment);
+        Assert.Contains("€5.259 per hour", employment);
+        Assert.Contains("From 1 January 2027", employment);
+        Assert.Contains("€972", employment);
+        Assert.Contains("€1,552", employment);
+        Assert.Contains("€5.586", employment);
+        Assert.Contains("€8.920", employment);
+        Assert.Contains("7be4136e-5c35-5491-99d2-39de492cea0b", employment);
+        Assert.Contains("fa412bbd-d859-5d02-81c8-f961aafc82dd", employment);
+
+        var comparison = await new JsonComparisonFactProvider(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json")).LoadAsync(catalog);
+        var byAspect = comparison.Topics.SelectMany(topic => topic.Aspects)
+            .SelectMany(aspect => aspect.Facts.Where(fact => fact.CountrySlug == "slovakia").Select(fact => (aspect.Id, Fact: fact)))
+            .ToDictionary(item => item.Id, item => item.Fact, StringComparer.Ordinal);
+        Assert.Equal(24, byAspect.Count);
+        Assert.Contains(Guid.Parse("78949412-f5b0-5e28-b106-d1b85fc62cc7"), byAspect["work-employer-duties"].OfficialSourceIds);
+        Assert.Contains(Guid.Parse("7be4136e-5c35-5491-99d2-39de492cea0b"), byAspect["work-minimum-pay"].OfficialSourceIds);
+        Assert.Contains(Guid.Parse("95c86398-0d16-5306-be5e-39410dec7fa3"), byAspect["education-school-enrolment"].OfficialSourceIds);
+        Assert.Contains(Guid.Parse("c002430c-08aa-518c-acf0-fc12d4131944"), byAspect["education-school-enrolment"].OfficialSourceIds);
+        Assert.Contains(Guid.Parse("5c72a6de-3351-508c-abb9-7354e15f2f0b"), byAspect["education-pupil-language"].OfficialSourceIds);
+        Assert.Contains(Guid.Parse("1d2f2827-8bf3-5974-ac5c-3792c2d078d6"), byAspect["education-pupil-language"].OfficialSourceIds);
     }
 
     private static string Normalize(string value) => value.Replace("\r\n", "\n", StringComparison.Ordinal).Trim();

@@ -4,7 +4,7 @@
 - Category: `temporary-protection`
 - Article ID: `53272a98-60f0-507d-be15-eea36295bdf2`
 - Research package: `docs/content-research/slovakia-batch-2026-11-06/after-temporary-protection/SOURCES_AND_CLAIMS.md`
-- Translation status: `NeedsReview` (EN / UK / RU)
+- Translation status: `Verified` (EN / UK / RU)
 - Comparison aspects: `residence-routes, residence-conditions, residence-filing`
 
 ## EN

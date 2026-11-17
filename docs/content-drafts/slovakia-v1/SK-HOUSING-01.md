@@ -4,7 +4,7 @@
 - Category: `housing`
 - Article ID: `47762263-5800-578e-964b-13806a059f7f`
 - Research package: `docs/content-research/slovakia-batch-2026-11-06/housing/SOURCES_AND_CLAIMS.md`
-- Translation status: `NeedsReview` (EN / UK / RU)
+- Translation status: `Verified` (EN / UK / RU)
 - Comparison aspects: `housing-initial, housing-private-rental, housing-financial-support`
 
 ## EN

@@ -4,7 +4,7 @@
 - Category: `healthcare`
 - Article ID: `88047ea9-f8a9-5e74-9af7-9b8aeb684a24`
 - Research package: `docs/content-research/slovakia-batch-2026-11-06/healthcare/SOURCES_AND_CLAIMS.md`
-- Translation status: `NeedsReview` (EN / UK / RU)
+- Translation status: `Verified` (EN / UK / RU)
 - Comparison aspects: `healthcare-access, healthcare-proof, healthcare-urgent`
 
 ## EN
