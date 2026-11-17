@@ -62,7 +62,7 @@ public sealed class DenmarkHousingArticleTests
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
-            Assert.Equal(new DateOnly(2026, 10, 23), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
+            Assert.Equal(new DateOnly(2026, 11, 17), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
         });
         var unsupportedEmphasisMarkers = new[]
         {
@@ -82,7 +82,7 @@ public sealed class DenmarkHousingArticleTests
         Assert.All(sources, source =>
         {
             Assert.Equal(ArticleId, source.InformationEntryId);
-            Assert.Equal(new DateOnly(2026, 10, 15), DateOnly.FromDateTime(source.LastCheckedAt.UtcDateTime));
+            Assert.Equal(new DateOnly(2026, 11, 17), DateOnly.FromDateTime(source.LastCheckedAt.UtcDateTime));
         });
 
         Assert.All(ExistingDenmarkArticleIds, id =>

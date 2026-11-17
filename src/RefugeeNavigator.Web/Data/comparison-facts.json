@@ -610,13 +610,12 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "886dfd95-7713-4c69-9b3f-a2d3be8ad323",
-                "486ee6fc-fc67-4d04-891b-acb967e5477b",
-                "a17d9700-bcc4-4978-b9f8-0687c42ef038"
+                "e1d08534-e55b-5025-ac23-75a2d7cdc5dd"
               ],
               "Values": {
-                "en": "BEK 828/2026 permits extension to 17 March 2028 unless §10 revocation grounds apply. The Immigration Service’s application/family pages still state 17 March 2027. This unresolved discrepancy does not determine an individual permit’s validity.",
-                "uk": "BEK 828/2026 допускає продовження до 17 березня 2028 року, якщо немає підстав для відкликання за §10. Сторінки Immigration Service для основних і сімейних заяв досі вказують 17 березня 2027 року. Ця невирішена розбіжність не визначає строк особистого дозволу.",
-                "ru": "BEK 828/2026 допускает продление до 17 марта 2028 года, если нет оснований для отзыва по §10. Страницы Immigration Service для основных и семейных заявлений всё ещё указывают 17 марта 2027 года. Это неразрешённое расхождение не определяет срок личного разрешения."
+                "en": "BEK 828/2026 provides for qualifying Ukraine Special Act permits to be extended through 17 March 2028, subject to section 10 revocation grounds. The Danish Immigration Service assesses extensions on its own initiative; holders do not normally apply individually. Current cards may show 17 March 2027 while cases are processed. If no decision has been made by then, the holder may remain in Denmark with the same rights until processing is complete.",
+                "uk": "BEK 828/2026 передбачає продовження відповідних дозволів за Спеціальним законом щодо України до 17 березня 2028 року за відсутності підстав для відкликання за § 10. Імміграційна служба розглядає продовження з власної ініціативи; зазвичай подавати окрему заяву не потрібно. На чинних картках може бути зазначено 17 березня 2027 року, поки справи розглядають. Якщо до цієї дати рішення ще немає, власник може залишатися в Данії з тими самими правами до завершення розгляду.",
+                "ru": "BEK 828/2026 предусматривает продление соответствующих разрешений по Специальному закону об Украине до 17 марта 2028 года при отсутствии оснований для отзыва по § 10. Иммиграционная служба рассматривает продление по собственной инициативе; обычно подавать отдельное заявление не нужно. На действующих картах может быть указано 17 марта 2027 года, пока рассматриваются дела. Если к этой дате решения ещё нет, владелец может оставаться в Дании с теми же правами до завершения рассмотрения."
               }
             },
             {
@@ -3665,7 +3664,6 @@
               "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "d3520d2c-2fc2-4cdf-89dc-eb192aa9b64a",
                 "0163c42d-cc40-4f65-b06e-6535d23ea740",
                 "5b9eaffd-59e9-4d59-9280-8abb5af7ef02"
               ],

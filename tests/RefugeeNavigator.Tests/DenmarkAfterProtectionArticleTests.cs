@@ -28,7 +28,8 @@ public sealed class DenmarkAfterProtectionArticleTests
         "https://nyidanmark.dk/en-GB/You-want-to-apply/Work/Labout-Market-Attachment",
         "https://nyidanmark.dk/en-GB/You-want-to-apply/Study/Educational-attachment-and-change-of-education/Educational-Attachment",
         "https://nyidanmark.dk/en-GB/You-want-to-apply/Work/Pay-limit-scheme",
-        "https://nyidanmark.dk/en-GB/You-want-to-apply/Study/Higher-Education"
+        "https://nyidanmark.dk/en-GB/You-want-to-apply/Study/Higher-Education",
+        "https://nyidanmark.dk/en-GB/You-want-to-apply/Permanent-residence-permit/Permanent-residence"
     ];
     private static readonly string[] RequiredHealthcareSources =
     [
@@ -58,7 +59,7 @@ public sealed class DenmarkAfterProtectionArticleTests
         Assert.All(translations, translation =>
         {
             Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
-            Assert.Equal(new DateOnly(2026, 10, 23), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
+            Assert.Equal(new DateOnly(2026, 11, 17), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
         });
 
         Assert.Contains(catalog.InformationEntries, entry =>
@@ -67,12 +68,13 @@ public sealed class DenmarkAfterProtectionArticleTests
 
         var sources = catalog.OfficialSources.Where(source => source.InformationEntryId == ArticleId).ToArray();
         Assert.Equal(RequiredSources.OrderBy(url => url), sources.Select(source => source.Url.AbsoluteUri).OrderBy(url => url));
+        Assert.Equal(7, sources.Length);
         Assert.All(sources, source =>
-            Assert.Equal(new DateOnly(2026, 10, 15), DateOnly.FromDateTime(source.LastCheckedAt.UtcDateTime)));
+            Assert.Equal(new DateOnly(2026, 11, 17), DateOnly.FromDateTime(source.LastCheckedAt.UtcDateTime)));
     }
 
     [Theory]
-    [InlineData("uk", "Які є варіанти проживання після тимчасового захисту в Данії?", "BEK nr. 828/2026", "17 березня 2028 року", "17 березня 2027 року", "Джерело востаннє перевірено", "Тимчасове проживання та строки продовження|Варіанти проживання, пов’язані з роботою|Варіанти проживання, пов’язані з навчанням|Інші дозволи на проживання|Постійне проживання|Де знайти офіційну інформацію")]
+    [InlineData("uk", "Які є варіанти проживання після тимчасового захисту в Данії?", "BEK № 828/2026", "17 березня 2028 року", "17 березня 2027 року", "Джерело востаннє перевірено", "Тимчасове проживання та строки продовження|Варіанти проживання, пов’язані з роботою|Варіанти проживання, пов’язані з навчанням|Інші дозволи на проживання|Постійне проживання|Де знайти офіційну інформацію")]
     [InlineData("en", "Residence options after temporary protection in Denmark", "BEK no. 828/2026", "17 March 2028", "17 March 2027", "Source last checked", "Temporary residence and extension dates|Employment-related residence options|Education-related residence options|Other residence permits|Permanent residence|Where to find official information")]
     [InlineData("ru", "Какие есть варианты проживания после временной защиты в Дании?", "BEK № 828/2026", "17 марта 2028 года", "17 марта 2027 года", "Источник проверен", "Временное проживание и сроки продления|Варианты проживания, связанные с работой|Варианты проживания, связанные с обучением|Другие разрешения на проживание|Постоянное проживание|Где найти официальную информацию")]
     public async Task LocalizedCategoryRendersArticleStatusDatesAndOfficialSources(
@@ -116,12 +118,12 @@ public sealed class DenmarkAfterProtectionArticleTests
         Assert.Contains("<details class=\"entry-sources\"", existingArticleHtml);
         Assert.DoesNotContain("<details class=\"entry-sources\" open", existingArticleHtml);
         Assert.Equal(3, System.Text.RegularExpressions.Regex.Matches(existingArticleHtml, "<ul\\b").Count);
-        Assert.Equal(18, System.Text.RegularExpressions.Regex.Matches(existingArticleHtml, "<li\\b").Count);
+        Assert.Equal(19, System.Text.RegularExpressions.Regex.Matches(existingArticleHtml, "<li\\b").Count);
         Assert.Equal(6, System.Text.RegularExpressions.Regex.Matches(
             existingArticleHtml,
             $"<a href=\"/countries/denmark/categories/temporary-protection#article-section-{ArticleId:N}-").Count);
-        Assert.Equal(4, System.Text.RegularExpressions.Regex.Matches(existingArticleHtml, "class=\"article-source-link\"").Count);
-        AssertFourInlineSources(catalog, language, existingArticleHtml);
+        Assert.Equal(3, System.Text.RegularExpressions.Regex.Matches(existingArticleHtml, "class=\"article-source-link\"").Count);
+        AssertThreeInlineSources(catalog, language, existingArticleHtml);
         Assert.All(expectedHeadings.Split('|'), heading =>
             Assert.Matches($"<h3\\b[^>]*class=\"entry-section-heading\"[^>]*>{System.Text.RegularExpressions.Regex.Escape(heading)}</h3>", existingArticleHtml));
     }
@@ -159,20 +161,18 @@ public sealed class DenmarkAfterProtectionArticleTests
     [InlineData("en", "Residence options after temporary protection in Denmark")]
     [InlineData("uk", "Які є варіанти проживання після тимчасового захисту в Данії?")]
     [InlineData("ru", "Какие есть варианты проживания после временной защиты в Дании?")]
-    public async Task VerifiedArticleAppearsInComparisonWithInlineLinks(string language, string expectedTitle)
+    public async Task VerifiedArticleAppearsInComparison(string language, string expectedTitle)
     {
         var catalog = await LoadProductionCatalogAsync();
         var compareHtml = await RenderAsync<Compare>(catalog, language,
             "/compare?country1=denmark&country2=germany&category=temporary-protection");
         Assert.Contains(expectedTitle, WebUtility.HtmlDecode(compareHtml));
-        AssertFourInlineSources(catalog, language, compareHtml);
     }
 
-    private static void AssertFourInlineSources(CatalogData catalog, string language, string html)
+    private static void AssertThreeInlineSources(CatalogData catalog, string language, string html)
     {
         var articleSources = new[]
         {
-            Guid.Parse("f947d1e6-c475-4676-844b-dff215001a87"),
             Guid.Parse("4b278bd5-dcc7-4a9d-96eb-ecf20719d9d3"),
             Guid.Parse("adac4bdc-17cb-459f-b675-b6581995c1f3"),
             Guid.Parse("6dd24d38-f2a3-4703-b864-5caf4db2baef")
@@ -188,9 +188,9 @@ public sealed class DenmarkAfterProtectionArticleTests
 
         var labels = language switch
         {
-            "uk" => new[] { "BEK nr. 828/2026", "Labour Market Attachment Scheme", "Educational Attachment Scheme", "Pay Limit Scheme" },
-            "ru" => new[] { "BEK № 828/2026", "Labour Market Attachment Scheme", "Educational Attachment Scheme", "Pay Limit Scheme" },
-            _ => new[] { "BEK no. 828/2026", "Labour Market Attachment Scheme", "Educational Attachment Scheme", "Pay Limit Scheme" }
+            "uk" => new[] { "Labour Market Attachment Scheme", "Educational Attachment Scheme", "Pay Limit Scheme" },
+            "ru" => new[] { "Labour Market Attachment Scheme", "Educational Attachment Scheme", "Pay Limit Scheme" },
+            _ => new[] { "Labour Market Attachment Scheme", "Educational Attachment Scheme", "Pay Limit Scheme" }
         };
         foreach (var label in labels)
         {
@@ -216,7 +216,7 @@ public sealed class DenmarkAfterProtectionArticleTests
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
-            Assert.Equal(new DateOnly(2026, 10, 25), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
+            Assert.Equal(new DateOnly(2026, 11, 17), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
             Assert.Equal(4, System.Text.RegularExpressions.Regex.Matches(translation.Content, @"\[\[source:").Count);
         });
 
@@ -225,7 +225,7 @@ public sealed class DenmarkAfterProtectionArticleTests
         Assert.All(sources, source =>
         {
             Assert.Equal(HealthcareArticleId, source.InformationEntryId);
-            Assert.Equal(new DateOnly(2026, 10, 15), DateOnly.FromDateTime(source.LastCheckedAt.UtcDateTime));
+            Assert.Equal(source.Id == Guid.Parse("d3520d2c-2fc2-4cdf-89dc-eb192aa9b64a") ? new DateOnly(2026, 10, 15) : new DateOnly(2026, 11, 17), DateOnly.FromDateTime(source.LastCheckedAt.UtcDateTime));
         });
     }
 

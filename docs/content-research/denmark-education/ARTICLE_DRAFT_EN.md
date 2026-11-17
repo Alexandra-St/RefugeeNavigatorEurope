@@ -1,6 +1,12 @@
-# Education in Denmark: schools, childcare and adult learning
+# DRAFT — NOT PUBLISHED
 
-**Draft status: Needs human content review — not published.**
+## Title
+Education in Denmark: schools, childcare and adult learning
+
+## Summary
+A practical overview of schools, childcare, youth and adult learning, Danish courses and higher education in Denmark. Conditions and costs depend on residence circumstances, municipality and institution; check individual requirements with the responsible authority.
+
+## Content
 
 ## Education options in Denmark
 
@@ -10,7 +16,7 @@ Denmark has municipal schools, childcare, youth and vocational programmes, adult
 
 Children usually start municipal primary and lower-secondary school (folkeskole) in August in the calendar year they turn six. Compulsory education normally covers ten years, including grade 0 (børnehaveklasse) and grades 1–9; the obligation is to receive education, not necessarily to attend a municipal school. Municipal school education is free. Private schools set their own admission process and may charge fees.
 
-For children displaced from Ukraine, the municipality decides in an individual case whether the child is subject to compulsory education, including when the expected length of stay is unclear. Most displaced children are covered. The special temporary municipal flexibility rules for children holding a permit under the Ukraine Special Act expired on 17 March 2026. The separate law permitting virtual instruction and teaching in English or Ukrainian remains in force. Whether school teaching is delivered in English or Ukrainian is decided locally on pedagogical grounds, not automatically for every family. The Ministry also describes home education as a separate option: parents must notify the municipality in writing before it begins, and the municipality supervises it. Children accommodated at an asylum centre may fall under a different legal arrangement. If an application is pending, ask the municipality or the responsible asylum-centre authority which rules apply to the child.
+For [[source:fcb08b16-c39a-4e68-9a7e-25ce55571450|children displaced from Ukraine]], the municipality decides in an individual case whether the child is subject to compulsory education, including when the expected length of stay is unclear. Most displaced children are covered. The special temporary municipal flexibility rules for children holding a permit under the Ukraine Special Act expired on 17 March 2026. The separate law permitting virtual instruction and teaching in English or Ukrainian remains in force. Whether school teaching is delivered in English or Ukrainian is decided locally on pedagogical grounds, not automatically for every family. The Ministry also describes home education as a separate option: parents must notify the municipality in writing before it begins, and the municipality supervises it. Children accommodated at an asylum centre may fall under a different legal arrangement. If an application is pending, ask the municipality or the responsible asylum-centre authority which rules apply to the child.
 
 Contact the municipality where you live or plan to live to enrol a child who arrives outside the usual school registration period. It can explain the school placement, class level and language support. Support may include Danish as a second language, a reception class or support in a regular class; the options depend on the child’s needs and local provision. For a school starting at the usual age, the municipality normally sends information through Digital Post during the year before the child turns six.
 
@@ -18,17 +24,17 @@ Contact the municipality where you live or plan to live to enrol a child who arr
 
 Municipalities offer childcare through family daycare (dagpleje), nurseries (vuggestue, commonly ages 0–3), kindergartens (børnehave, commonly ages 3–6) and combined facilities. Children whose parents have legal residence in Denmark are covered by the childcare guarantee from 26 weeks of age until school starts. This means the municipality must offer an age-appropriate place under the rules; it does not promise a place at a particular facility or immediate admission. Waiting-list and registration procedures are local, so apply through your municipality and check its dates.
 
-Parents pay a contribution, and the municipality sets local fees. You can ask the municipality about an income-based subsidy, sibling subsidy or other support. Each has its own conditions; an application or residence permit alone does not guarantee a reduced fee. The Ministry of Education says children with a permit under the Ukraine Special Act are covered by the current childcare rules, including the guarantee, on the same terms as other children.
+Parents pay a contribution, and the municipality sets local fees. You can ask the municipality about an income-based subsidy, sibling subsidy or other support. Each has its own conditions; an application or residence permit alone does not guarantee a reduced fee. The Ministry of Education says children with a permit under the Ukraine Special Act are covered by the current childcare rules, including [[source:55c3e79d-1c9f-43fe-b01f-b0c0787571a4|the guarantee]], on the same terms as other children.
 
 ## Education for teenagers
 
-After compulsory schooling, young people may consider general upper-secondary education, such as the STX programme, or vocational education and training (EUD/VET). These routes have different admission requirements. For example, VET normally requires the relevant lower-secondary level in Danish and mathematics or a training agreement; the school assesses whether a student’s Danish is sufficient to complete the course. Some programmes have limited places or require a work-placement agreement.
+After compulsory schooling, young people may consider general upper-secondary education, such as the STX programme, or vocational education and training (EUD/VET). These routes have different admission requirements. For example, VET normally requires the relevant lower-secondary level in Danish and mathematics or a training agreement. UVM’s Ukraine guidance says that some displaced applicants who completed Ukrainian schooling and passed the relevant subject at an equivalent level do not need to meet the Danish-subject admission requirement; if the programme is taught in Danish, they still need enough Danish to complete it. If they lack documents proving the usual requirements, a vocational school may offer an admission test and interview. The school assesses admission and whether Danish is sufficient for the course. Some programmes have limited places or require a work-placement agreement.
 
 Contact the school or a youth guidance service to discuss previous schooling, language needs, admission and application dates. An assessment by a school is not an automatic admission decision.
 
 ## Danish language and adult learning
 
-Municipalities refer eligible adults to Danish language education at a language centre. The residence basis affects which course route the municipality offers. Some participants, including some on the S-course route, may need to pay a deposit; exceptions and refund conditions apply. Ask your municipality to confirm whether you are in the target group, which course route applies, and whether a fee or deposit is due before enrolling.
+Municipalities [[source:12b2a6e7-a5c4-45e3-aa7b-31771977b602|refer eligible adults to Danish language education]] at a language centre. The residence basis affects which course route the municipality offers. Some participants, including some on the S-course route, may need to pay a deposit; exceptions and refund conditions apply. Ask your municipality to confirm whether you are in the target group, which course route applies, and whether a fee or deposit is due before enrolling.
 
 Adults over 25 can ask a VUC adult education centre about general adult education (avu), which offers subjects at levels corresponding to grades 9 and 10. Admission follows an assessment of educational aims and prior learning, and participation fees apply. Contact a VUC for current subjects, assessment and prices.
 
@@ -52,4 +58,4 @@ Where to start:
 - Contact a VUC about AVU assessment, subjects and current fees.
 - Contact the chosen institution about admission, programme requirements and tuition. Many undergraduate applications use Optagelse.dk. The Danish Agency for Higher Education and Science can assess completed foreign qualifications, but the institution decides admission.
 
-SU (the Danish State Educational Grant) is not automatic for foreign citizens or Ukraine Special Act permit holders. A person covered by the Special Act may apply for equal status under section 2(2) of the Integration Act, but must also meet the general SU conditions, including admission to an SU-approved programme. Contact the educational institution about an application and the relevant status assessment. Confirm current rules before relying on financial support.
+SU (the Danish State Educational Grant) is not automatic for foreign citizens or Ukraine Special Act permit holders. A person covered by the Special Act [[source:186153a2-5805-43d8-b615-85eb0c64a256|may apply for equal status under section 2(2) of the Integration Act]], but must also meet the general SU conditions, including admission to an SU-approved programme. Contact the educational institution about an application and the relevant status assessment. Confirm current rules before relying on financial support.

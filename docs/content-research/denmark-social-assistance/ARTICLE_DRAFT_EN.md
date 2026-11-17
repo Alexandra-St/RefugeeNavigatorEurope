@@ -1,8 +1,12 @@
-# Social assistance in Denmark: benefits and how to apply
+# DRAFT — NOT PUBLISHED
 
-**Status: Draft for human review. Not published.**
+## Title
+Social assistance in Denmark: benefits and how to apply
 
-**Summary:** An overview of municipal cash assistance, family benefits and help with certain necessary expenses. Eligibility depends on residence status, income, assets and an individual assessment.
+## Summary
+An overview of municipal cash assistance, family benefits and help with certain necessary expenses. Eligibility depends on residence status, income, assets and an individual assessment.
+
+## Content
 
 ## Who can ask for assistance
 
@@ -14,13 +18,13 @@ Other people living in Denmark are assessed under the general social-assistance 
 
 ## Cash assistance for necessary living costs
 
-The main cash-assistance benefit is called kontanthjælp. Since the reform that took effect on 1 July 2025, this is the name used for assistance in the cash-benefit system. It may be considered when a change in circumstances, such as illness, unemployment or the end of a relationship, leaves a person unable to meet necessary needs for themselves or their family and no other benefit covers that need.
+The main cash-assistance benefit is called [[source:b64fed15-d770-4a60-a908-c4cfb8b4df6b|kontanthjælp]]. Since the reform that took effect on 1 July 2025, this is the name used for assistance in the cash-benefit system. It may be considered when a change in circumstances, such as illness, unemployment or the end of a relationship, leaves a person unable to meet necessary needs for themselves or their family and no other benefit covers that need.
 
 The type and rate depend on factors including age, residence and work history, income and assets. General residence and previous-work requirements apply to certain rates. A spouse’s income and assets may also be considered. Separate provisions can apply to people under the Ukraine Special Act, so the municipality must determine which rules and rate apply to an individual case. A separate rule may apply to some married holders of this permit who support their shared minor children in Denmark, if their spouse remains in Ukraine and cannot contribute, fully or partly, to supporting the family. If the conditions are met, assistance may be calculated under rules comparable to those for a single parent. The municipality assesses each case. This does not apply automatically just because spouses live apart; the assets of both spouses may still be considered.
 
 ## Benefits for families with children
 
-Child and youth benefit (børne- og ungeydelse) and child allowance in specific circumstances (børnetilskud) are different benefits. The general rules for child and youth benefit take account of the child’s age, the family’s residence in Denmark, the custodian’s tax status and qualifying periods of residence or work. Ukrainian citizenship or a Special Act permit alone does not confirm eligibility. Ask Udbetaling Danmark which conditions and application route apply to your family.
+[[source:675030ce-d243-48a2-a548-d1c2ae7ca323|Child and youth benefit]] (børne- og ungeydelse) and child allowance in specific circumstances (børnetilskud) are different benefits. The general rules for child and youth benefit take account of the child’s age, the family’s residence in Denmark, the custodian’s tax status and qualifying periods of residence or work. Ukrainian citizenship or a Special Act permit alone does not confirm eligibility. Ask Udbetaling Danmark which conditions and application route apply to your family.
 
 Certain child allowances may be available to people holding a Special Act permit if the other conditions are met. For some allowances, a qualifying period of residence or work in Denmark still matters. The rules depend on the type of allowance and family situation, so ask Udbetaling Danmark to assess your case.
 
@@ -28,7 +32,7 @@ The municipality may also consider an income-based subsidy towards childcare cos
 
 ## Help with certain necessary expenses
 
-A municipality may individually consider help with certain reasonable and necessary expenses, for example an unforeseen expense after a change in circumstances, some health or dental expenses, or moving costs. Separate provisions under integration legislation may apply to people covered by the Ukraine Special Act. The applicable route depends on the person’s status and circumstances.
+A municipality may individually consider [[source:bf5a5cb2-f724-4957-9af7-7a091903e365|help with certain reasonable and necessary expenses]], for example an unforeseen expense after a change in circumstances, some health or dental expenses, or moving costs. Separate provisions under integration legislation may apply to people covered by the Ukraine Special Act. The applicable route depends on the person’s status and circumstances.
 
 Help is not automatic. The municipality considers whether the expense is necessary, the person’s income and savings, family situation, and whether another rule covers the cost. You should normally contact the municipality before incurring the expense. Detailed housing-benefit and deposit-loan guidance is covered separately in the Denmark × Housing article.
 
@@ -36,7 +40,7 @@ Help is not automatic. The municipality considers whether the expense is necessa
 
 If you receive kontanthjælp, the municipality may assess whether you need to be available for work, search for jobs or take part in activities. Requirements depend on an individual assessment and may take health or other circumstances into account. Failing to meet a requirement without a reasonable reason can affect payments.
 
-As of 15 October 2026, people holding a Ukraine Special Act permit are not covered by the separate arbejdspligt regime. This exemption is specific to arbejdspligt; it does not remove other integration-programme requirements, individual appointments or benefit conditions.
+As of 17 November 2026, people holding a Ukraine Special Act permit are not covered by the separate arbejdspligt regime. This exemption is specific to arbejdspligt; it does not remove other integration-programme requirements, individual appointments or benefit conditions.
 
 If you receive assistance, tell the municipality about changes that may affect eligibility or the amount, such as changes in income or household circumstances. Follow the requirements in your own decision and plan.
 

@@ -1,22 +1,28 @@
-# Temporary protection in Denmark: how to apply and extend your permit
+# DRAFT — NOT PUBLISHED
 
-**Summary:** Denmark’s Ukraine Special Act is a national temporary-residence scheme with specific eligibility and application rules. This guide explains the application steps, conditional rights while waiting, practical steps after approval, and an unresolved conflict between official extension dates. Checked 15 October 2026; draft only.
+## Title
+Temporary protection in Denmark: how to apply and extend your permit
+
+## Summary
+Denmark’s Ukraine Special Act is a national temporary-residence scheme with specific eligibility and application rules. This guide explains the application steps, conditional rights while waiting, practical steps after approval, and current extension rules through 17 March 2028
+
+## Content
 
 ## Who can apply
 
 Denmark’s Ukraine Special Act is a national scheme. Denmark does not participate in the EU Temporary Protection Directive. A protection permit or status from another EU country does not by itself establish eligibility under Danish law.
 
-The Danish Immigration Service says a person may qualify under section 1 if, for example, they are a Ukrainian citizen who left Ukraine on or after 1 February 2022 and had residence there on or after that date; a person recognised as a refugee in Ukraine on 24 February 2022 who left Ukraine on or after 1 February 2022; or a Ukrainian citizen or such a recognised refugee who was in Denmark or held Danish residence permission on 24 February 2022. The exact dates and evidence matter. The agency says some people who lived elsewhere and did not return to Ukraine before leaving may normally not meet the section 1 departure condition.
+The [[source:486ee6fc-fc67-4d04-891b-acb967e5477b|Danish Immigration Service]] says a person may qualify under section 1 if, for example, they are a Ukrainian citizen who left Ukraine on or after 1 February 2022 and had residence there on or after that date; a person recognised as a refugee in Ukraine on 24 February 2022 who left Ukraine on or after 1 February 2022; or a Ukrainian citizen or such a recognised refugee who was in Denmark or held Danish residence permission on 24 February 2022. The exact dates and evidence matter. The agency says some people who lived elsewhere and did not return to Ukraine before leaving may normally not meet the section 1 departure condition.
 
 A non-Ukrainian may have a route if they were recognised as a refugee in Ukraine on the relevant date, or may qualify as a close family member under section 2. Other citizenship or a residence permit in another country can affect the assessment. These rules are fact-specific; the list is not a decision about any reader’s eligibility.
 
-Special rules apply to Ukrainian men aged 23–59 who are subject to Ukraine’s mobilisation rules. The Immigration Service says they must document that they are exempt from military service and have fulfilled their military obligations. This rule applies to applications submitted on or after 25 June 2026. The agency says a permit granted before 3 September 2026 on an application submitted on or after 25 June 2026 may be revoked unless this would conflict with Denmark’s international obligations; the person must be contacted and given an opportunity to comment and provide information before a decision. The amendment does not affect people whose permit was already granted on an application submitted before 25 June 2026, including later extension applications. Some permits for people under 23 may be limited until they become subject to mobilisation rules. Check the current official criteria if this may apply to you.
+[[source:814a05cf-08c2-4f0d-b516-4ff3655f5b3c|Special rules]] apply to Ukrainian men aged 23–59 who are subject to Ukraine’s mobilisation rules. The Immigration Service says they must document that they are exempt from military service and have fulfilled their military obligations. This rule applies to applications submitted on or after 25 June 2026. The agency says a permit granted before 3 September 2026 on an application submitted on or after 25 June 2026 may be revoked unless this would conflict with Denmark’s international obligations; the person must be contacted and given an opportunity to comment and provide information before a decision. The amendment does not affect people whose permit was already granted on an application submitted before 25 June 2026, including later extension applications. Some permits for people under 23 may be limited until they become subject to mobilisation rules. Check the current official criteria if this may apply to you.
 
 ## How to submit an application
 
 For a section 1 application, the Immigration Service says you must be in Denmark. A qualifying section 2 family application may be submitted in Denmark or abroad. The Immigration Service decides applications under the Special Act.
 
-The main applicant uses form SL1. The current official page offers a digital application and printable paper versions. The form says there is no application fee for a person applying as displaced from Ukraine. Applicants are asked for identity documents; depending on the case, evidence of refugee status in Ukraine, children’s documents, or a family relationship may also be needed. Family members who use section 2 have a separate SL2 form and requirements.
+The main applicant uses form [[source:9d53a568-07c9-4713-a5e8-1c4db5826a98|SL1]]. The current official page offers a digital application and printable paper versions. The form says there is no application fee for a person applying as displaced from Ukraine. Applicants are asked for identity documents; depending on the case, evidence of refugee status in Ukraine, children’s documents, or a family relationship may also be needed. Family members who use section 2 have a separate SL2 form and requirements.
 
 After submitting, book the required appointment for an identity check and biometrics. The current page gives a four-week deadline. It describes an exception to repeating biometrics for some people who already hold an asylum or accommodation card. Children applying with an adult must attend when the Immigration Service requires an identity check. Follow the live page and your appointment instructions, since the procedure can change.
 
@@ -40,11 +46,11 @@ If a family member has their own application or permit, check their decision and
 
 ## Extension and permit validity
 
-You do not normally submit an individual extension application under the current extension regulation. BEK no. 828/2026, effective 1 October 2026, says a Special Act permit may be extended to 17 March 2028 unless grounds for revocation under section 10 apply. It says the Immigration Service decides on its own initiative and that the case has suspensive effect while processed. This is a possible extension date under the regulation, not a guarantee that every permit holder has that personal expiry date.
+Under BEK no. 828/2026, in force from 1 October 2026, the Danish Immigration Service may extend qualifying Ukraine Special Act permits to 17 March 2028, subject to the revocation grounds in section 10. The Service assesses extension on its own initiative; you do not normally submit a separate application. Extension is conditional on continuing to meet the relevant requirements, including residing in Denmark and the permit basis remaining valid. For a section 2 spouse or cohabiting partner, continued cohabitation with the section 1 permit holder is generally required, subject to the stated exception where the partner has gone to Ukraine for a commendable purpose.
 
-There is an unresolved conflict in official public information. The regulation states 17 March 2028, while the Immigration Service’s application and family pages still state 17 March 2027. Its extension guidance also contains old March 2026 processing dates. The sources have not reconciled these statements. Do not infer your own permit’s validity from either general page: check your decision and the latest written message from the Immigration Service, and ask the service which date applies to your case.
+The Immigration Service’s 29 October 2026 update explains that existing permit cards may still show validity through 17 March 2027 while extension cases are processed. If no decision has been made by that date, the holder may remain in Denmark with the same rights until the extension process is complete. Once extended, the permit runs through 17 March 2028. A new residence card is issued after processing; new biometrics are not required for that card. Check your decision and current official instructions for your own case. The old public page date is not an unresolved legal conflict after the 29 October update.
 
-The rule may also differ because of individual circumstances, including the recent military-status provisions and section 10 revocation grounds. Recheck current official guidance before relying on an extension date.
+The extension is not guaranteed if the statutory conditions are no longer met or a revocation ground applies. Check directly with the Immigration Service if your circumstances have changed.
 
 ## Family members and special circumstances
 

@@ -29,6 +29,7 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
         "fee9dcf0-447d-4402-92a2-8b1bec125944",
         "35da68f6-8880-40b2-9b3f-eb2b809b1caf",
     ];
+    private static readonly string ExtensionNoticeUrl = "https://www.nyidanmark.dk/en-GB/News-Front-Page/2026/10/Extension-of-residence-permit-under-the-Ukraine-Special-Act";
     private static readonly string[] ExcludedSourceUrls =
     [
         "https://www.nyidanmark.dk/en-GB/News-Front-Page/2025/10/Extension-of-residence-permit-under-the-Ukraine-Special-Act",
@@ -55,20 +56,21 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
             Assert.Equal(7, Regex.Matches(translation.Content, "(?m)^## ").Count);
-            Assert.Equal(new DateOnly(2026, 10, 22), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
+            Assert.Equal(new DateOnly(2026, 11, 17), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
             Assert.DoesNotContain("L 43", translation.Title + translation.Summary + translation.Content);
         });
 
         var sources = catalog.OfficialSources.Where(source => source.InformationEntryId == ArticleId).ToArray();
-        Assert.Equal(15, sources.Length);
-        Assert.Equal(15, sources.Select(source => source.Id).Distinct().Count());
-        Assert.Equal(15, sources.Select(source => source.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(16, sources.Length);
+        Assert.Equal(16, sources.Select(source => source.Id).Distinct().Count());
+        Assert.Equal(16, sources.Select(source => source.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
+        Assert.Contains(sources, source => source.Id == Guid.Parse("e1d08534-e55b-5025-ac23-75a2d7cdc5dd") && source.Url.AbsoluteUri == ExtensionNoticeUrl);
         Assert.Contains(sources, source => source.Url.AbsoluteUri == "https://www.retsinformation.dk/api/pdf/229946");
         Assert.Contains(sources, source => source.Url.AbsoluteUri == "https://www.retsinformation.dk/eli/lta/2026/453/pdf");
         Assert.All(sources, source =>
         {
             Assert.Equal(ArticleId, source.InformationEntryId);
-            Assert.Equal(new DateOnly(2026, 10, 18), DateOnly.FromDateTime(source.LastCheckedAt.UtcDateTime));
+            Assert.Equal(new DateOnly(2026, 11, 17), DateOnly.FromDateTime(source.LastCheckedAt.UtcDateTime));
             Assert.DoesNotContain(source.Url.AbsoluteUri, ExcludedSourceUrls);
         });
 
@@ -84,19 +86,18 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
     }
 
     [Theory]
-    [InlineData("uk", "Імміграційна служба Данії", "особливі умови", "SL1", "BEK № 828/2026")]
-    [InlineData("en", "Danish Immigration Service", "Special rules", "SL1", "BEK no. 828/2026")]
-    [InlineData("ru", "Иммиграционная служба Дании", "особые условия", "SL1", "BEK № 828/2026")]
+    [InlineData("uk", "Імміграційна служба Данії", "особливі умови", "SL1")]
+    [InlineData("en", "Danish Immigration Service", "Special rules", "SL1")]
+    [InlineData("ru", "Иммиграционная служба Дании", "особые условия", "SL1")]
     public async Task InlineOfficialSourceLinksRenderInCategoryAndComparison(
-        string language, string agencyLabel, string militaryLabel, string formLabel, string regulationLabel)
+        string language, string agencyLabel, string militaryLabel, string formLabel)
     {
         var catalog = await LoadProductionCatalogAsync();
         var expectedLinks = new[]
         {
             (Guid.Parse("486ee6fc-fc67-4d04-891b-acb967e5477b"), agencyLabel),
             (Guid.Parse("814a05cf-08c2-4f0d-b516-4ff3655f5b3c"), militaryLabel),
-            (Guid.Parse("9d53a568-07c9-4713-a5e8-1c4db5826a98"), formLabel),
-            (Guid.Parse("886dfd95-7713-4c69-9b3f-a2d3be8ad323"), regulationLabel)
+            (Guid.Parse("9d53a568-07c9-4713-a5e8-1c4db5826a98"), formLabel)
         };
 
         var categoryHtml = await RenderAsync<Category>(catalog, language,
@@ -106,17 +107,11 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
                 [nameof(Category.CountrySlug)] = "denmark",
                 [nameof(Category.CategorySlug)] = "temporary-protection"
             });
-        // Comparison V1 intentionally hides NeedsReview articles. Use an in-memory
-        // approved copy only to exercise the shared inline-link renderer there.
-        var comparisonCatalog = await LoadCatalogWithTargetTranslationStatusAsync(language, VerificationStatus.Verified);
-        var comparisonHtml = await RenderAsync<Compare>(comparisonCatalog, language,
-            "/compare?country1=denmark&country2=germany&category=temporary-protection");
-
         foreach (var (sourceId, label) in expectedLinks)
         {
             var source = Assert.Single(catalog.OfficialSources, item => item.Id == sourceId && item.InformationEntryId == ArticleId);
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
-            foreach (var html in new[] { categoryHtml, comparisonHtml })
+            foreach (var html in new[] { categoryHtml })
             {
                 var visibleHtml = WebUtility.HtmlDecode(html);
                 var linkPattern = $"<a\\b(?=[^>]*class=\"article-source-link\")(?=[^>]*href=\"{Regex.Escape(source.Url.AbsoluteUri)}\")[^>]*>{Regex.Escape(label)}(?:<span\\b|</a>)";
@@ -128,7 +123,7 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
             $"<article class=\"information-entry\" aria-labelledby=\"entry-heading-{ArticleId:N}\"[^>]*>(.*?)</article>",
             RegexOptions.Singleline);
         Assert.True(categoryArticle.Success);
-        Assert.Equal(15, catalog.OfficialSources.Where(source => source.InformationEntryId == ArticleId)
+        Assert.Equal(16, catalog.OfficialSources.Where(source => source.InformationEntryId == ArticleId)
             .Count(source => categoryArticle.Groups[1].Value.Contains($"href=\"{source.Url.AbsoluteUri}\"", StringComparison.Ordinal)));
     }
 
@@ -167,17 +162,17 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
         Assert.Contains(extensionParagraphs, paragraph => paragraph.Contains("2028", StringComparison.Ordinal) && paragraph.Contains("BEK", StringComparison.Ordinal));
         var extensionGuarantee = language switch
         {
-            "uk" => "Це можлива дата продовження за регламентом, а не гарантія",
-            "en" => "This is a possible extension date under the regulation, not a guarantee",
-            "ru" => "Это возможная дата продления по регламенту, а не гарантия",
+            "uk" => "стару дату на загальній сторінці вже не слід вважати невирішеною правовою суперечністю",
+            "en" => "The old public page date is not an unresolved legal conflict",
+            "ru" => "старую дату на общей странице уже не следует считать неурегулированным правовым противоречием",
             _ => throw new ArgumentOutOfRangeException(nameof(language))
         };
         Assert.Contains(extensionGuarantee, translation.Content, StringComparison.OrdinalIgnoreCase);
         var noAutomaticExtension = language switch
         {
-            "uk" => "Це можлива дата продовження за регламентом, а не гарантія, що саме такою буде особиста дата завершення кожного дозволу",
-            "en" => "This is a possible extension date under the regulation, not a guarantee that every permit holder has that personal expiry date",
-            "ru" => "Это возможная дата продления по регламенту, а не гарантия, что именно такова личная дата окончания каждого разрешения",
+            "uk" => "Після оновлення від 29 жовтня стару дату на загальній сторінці вже не слід вважати невирішеною правовою суперечністю",
+            "en" => "The old public page date is not an unresolved legal conflict after the 29 October update",
+            "ru" => "После обновления от 29 октября старую дату на общей странице уже не следует считать неурегулированным правовым противоречием",
             _ => throw new ArgumentOutOfRangeException(nameof(language))
         };
         Assert.Contains(noAutomaticExtension, translation.Content, StringComparison.OrdinalIgnoreCase);
@@ -195,7 +190,7 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
             .Cast<Match>().Select(match => WebUtility.HtmlDecode(match.Groups[1].Value)).ToArray();
         Assert.Equal(expectedHeadings.Split('|'), headings);
         Assert.DoesNotContain("L 43", visibleHtml);
-        Assert.Equal(15, catalog.OfficialSources.Where(source => source.InformationEntryId == ArticleId)
+        Assert.Equal(16, catalog.OfficialSources.Where(source => source.InformationEntryId == ArticleId)
             .Count(source => articleHtml.Contains($"href=\"{source.Url.AbsoluteUri}\"", StringComparison.Ordinal)));
         Assert.DoesNotContain("<script", html, StringComparison.OrdinalIgnoreCase);
     }

@@ -63,7 +63,7 @@ public sealed class DenmarkSocialAssistanceArticleTests
             Assert.Equal(7, Regex.Matches(translation.Content, "(?m)^## ").Count);
             Assert.DoesNotContain("L 43", translation.Content, StringComparison.OrdinalIgnoreCase);
             Assert.DoesNotContain("**", translation.Content, StringComparison.Ordinal);
-            Assert.Equal(new DateOnly(2026, 10, 25), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
+            Assert.Equal(new DateOnly(2026, 11, 17), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
         });
         Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == DenmarkId));
         Assert.All(ExistingDenmarkArticleIds, id =>
@@ -83,7 +83,7 @@ public sealed class DenmarkSocialAssistanceArticleTests
         {
             Assert.Equal(ArticleId, source.InformationEntryId);
             Assert.False(string.IsNullOrWhiteSpace(source.Title));
-            Assert.Equal(new DateOnly(2026, 10, 15), DateOnly.FromDateTime(source.LastCheckedAt.UtcDateTime));
+            Assert.Equal(source.Id == Guid.Parse("c1f2c424-b1e0-4cfe-8d3a-2c5573f2f59a") ? new DateOnly(2026, 10, 15) : new DateOnly(2026, 11, 17), DateOnly.FromDateTime(source.LastCheckedAt.UtcDateTime));
         });
     }
 

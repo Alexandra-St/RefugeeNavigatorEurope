@@ -10,7 +10,7 @@ For people living in Denmark under a residence permit from the Ukraine Special A
 
 ## Start with CPR registration and your healthcare card
 
-For people granted a residence permit under Denmark’s Ukraine Special Act, the Ministry of the Interior and Health says access to all services under the Health Act applies when the person is registered in CPR and has been issued the yellow health card. Borger.dk also explains that people resident in Denmark and registered in the population register have access to public healthcare, with the card documenting those rights.
+For people granted a residence permit under Denmark’s Ukraine Special Act, the Ministry of the Interior and Health says access to all services under the Health Act applies when the person is registered in CPR and has been issued the yellow health card. Borger.dk also explains that people resident in Denmark and registered in the population register have access to [[source:0163c42d-cc40-4f65-b06e-6535d23ea740|public healthcare, with the card documenting those rights]].
 
 A residence permit, CPR registration and the health card are different things. If you are unsure whether your CPR registration or healthcare coverage is in place, contact the Citizen Service office (Borgerservice) in your municipality. The information above does not cover people whose application for a permit is still pending.
 
@@ -22,18 +22,18 @@ After CPR registration, the card is ordered and sent to your Danish address. Del
 
 ## Find and contact your GP
 
-Your family doctor is called your egen læge or praktiserende læge. The GP’s details are on your health card. Contact the practice using those details and make an appointment before you go. If you need to check which doctors are available in your area, Borger.dk points to the “Find behandler” directory on sundhed.dk. Its information about whether a doctor accepts new patients is indicative; availability can change.
+Your family doctor is called your egen læge or praktiserende læge. The GP’s details are on your health card. Contact the practice using those details and make an appointment before you go. If you need to check which doctors are available in your area, [[source:0f49ae88-21f1-478b-8c88-36f459088a6e|Borger.dk points to the “Find behandler” directory on sundhed.dk]]. Its information about whether a doctor accepts new patients is indicative; availability can change.
 
 ## Urgent and emergency care
 
 - Life-threatening illness or injury: call 112. This is Denmark’s emergency number.
-- Urgent problem outside your GP’s opening hours: if it cannot wait until the GP is available, contact the out-of-hours medical service for your region. Numbers and arrangements differ by region; use the official regional finder rather than assuming one national medical helpline number.
+- Urgent problem outside your GP’s opening hours: if it cannot wait until the GP is available, [[source:1b63eb37-84ce-46c2-a6aa-51405800bc02|contact the out-of-hours medical service for your region]]. Numbers and arrangements differ by region; use the official regional finder rather than assuming one national medical helpline number.
 - Emergency department: some regions require you to call before going. Check the instructions for your region or call the relevant service first.
 - Non-urgent concern: contact your own GP during the practice’s opening hours and arrange an appointment.
 
 ## Interpretation and language support
 
-Official guidance describes interpreter assistance for consultations or treatment with a GP, specialist or hospital when a patient’s Danish is not sufficient, or when another stated condition applies. The clinician assesses whether interpretation is needed and arranges a professional interpreter. A fee may apply for language-related interpretation if you have lived in Denmark for more than three years; exceptions are listed in the official guidance. Ask the clinic about interpretation when arranging care. It is not automatically free in every situation.
+Official guidance describes [[source:b59c0064-9d1e-4e6c-8e8a-a37f7007e88d|interpreter assistance]] for consultations or treatment with a GP, specialist or hospital when a patient’s Danish is not sufficient, or when another stated condition applies. The clinician assesses whether interpretation is needed and arranges a professional interpreter. A fee may apply for language-related interpretation if you have lived in Denmark for more than three years; exceptions are listed in the official guidance. Ask the clinic about interpretation when arranging care. It is not automatically free in every situation.
 
 ## Costs and coverage
 

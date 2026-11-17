@@ -46,13 +46,16 @@ public sealed class DenmarkEducationArticleTests
         "https://lifeindenmark.borger.dk/school-and-education/education-for-adults/general-adult-education",
         "https://lifeindenmark.borger.dk/school-and-education/higher-education/admission-to-higher-education-in-denmark",
         "https://lifeindenmark.borger.dk/working/finding-a-job/recognition-of-foreign-qualifications",
-        "https://www.ku.dk/studies/admission/application-deposit-fee-and-tuition-fees",
+        "https://www.ku.dk/studies/admission/application-and-tuition-fees",
         "https://www.su.dk/english/refugees-from-ukraine",
-        "https://lifeindenmark.borger.dk/school-and-education/student-finance/su---state-educational-grant"
+        "https://lifeindenmark.borger.dk/school-and-education/student-finance/su---state-educational-grant",
+        "https://uvm.dk/aktuelt/i-fokus/ukraine/vejledning/grundskolen/fjernundervisning/",
+        "https://uvm.dk/grundskole/frie-grundskoler/indhold-og-rammer/hjemmeundervisning/",
+        "https://uvm.dk/aktuelt/i-fokus/ukraine/vejledning/erhvervsuddannelser/optag/"
     ];
 
     [Fact]
-    public async Task CatalogContainsVerifiedArticleWithTwentySourcesAndPreservesExistingDenmarkArticles()
+    public async Task CatalogContainsVerifiedArticleWithTwentyThreeSourcesAndPreservesExistingDenmarkArticles()
     {
         var catalog = await LoadProductionCatalogAsync();
         var article = Assert.Single(catalog.InformationEntries, entry => entry.Id == ArticleId);
@@ -71,7 +74,7 @@ public sealed class DenmarkEducationArticleTests
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
             Assert.Equal(7, Regex.Matches(translation.Content, "(?m)^## ").Count);
             Assert.Contains("- ", translation.Content);
-            Assert.Equal(new DateOnly(2026, 10, 25), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
+            Assert.Equal(new DateOnly(2026, 11, 17), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
         });
 
         var sources = catalog.OfficialSources.Where(source => source.InformationEntryId == ArticleId).ToArray();
@@ -79,7 +82,7 @@ public sealed class DenmarkEducationArticleTests
         Assert.All(sources, source =>
         {
             Assert.Equal(ArticleId, source.InformationEntryId);
-            Assert.Equal(new DateOnly(2026, 10, 15), DateOnly.FromDateTime(source.LastCheckedAt.UtcDateTime));
+            Assert.Equal(new DateOnly(2026, 11, 17), DateOnly.FromDateTime(source.LastCheckedAt.UtcDateTime));
         });
         Assert.DoesNotContain(catalog.OfficialSources, source => source.InformationEntryId == ArticleId && source.Url.AbsoluteUri.Contains("202612L00043", StringComparison.Ordinal));
 

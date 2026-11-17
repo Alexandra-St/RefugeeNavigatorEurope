@@ -1,6 +1,12 @@
-# How to find housing in Denmark
+# DRAFT — NOT PUBLISHED
 
-**Draft status: Needs human content review — not published.**
+## Title
+How to find housing in Denmark
+
+## Summary
+Practical housing navigation in Denmark, including the difference between people awaiting a decision and permit holders, ways to search for a rental, and where to check available support.
+
+## Content
 
 ## Where to start
 
@@ -23,17 +29,17 @@ Before agreeing to rent:
 - Read the lease carefully and make sure the rent, utilities and other terms are clear.
 - Check how any deposit and prepaid rent are described; they serve different purposes.
 - Do not pay a deposit before you have a lease.
-- Inspect the home before signing, and follow the official guidance and lease for reporting defects after moving in.
+- Inspect the home before signing, and follow the [[source:771e221f-dbe5-423b-995c-196ef247f361|official guidance]] and lease for reporting defects after moving in.
 
 A standard private rental contract is available in Danish and English. Keep a copy of the signed agreement and records of payments and messages with the landlord.
 
 ## Housing-related financial support
 
-Housing benefit (boligstøtte) is separate from municipal accommodation. It is administered by Udbetaling Danmark. In general, the home must have its own kitchen and be your permanent residence. The amount depends on factors such as rent, home size, household members, income and assets. You must apply; payment is not automatic.
+Housing benefit (boligstøtte) is separate from municipal accommodation. It is administered by [[source:ee40a28c-8be0-4471-8336-aab8ce453f0d|Udbetaling Danmark]]. In general, the home must have its own kitchen and be your permanent residence. The amount depends on factors such as rent, home size, household members, income and assets. You must apply; payment is not automatic.
 
-Official guidance says that a person with a residence permit under the Ukraine Special Act may apply if they have fixed residence in Denmark and meet the other conditions. This does not guarantee an award. The guidance reviewed does not treat an application alone as fixed residence for housing-benefit purposes. Check your situation and application with Udbetaling Danmark.
+Official guidance says that a person with a residence permit under the Ukraine Special Act may apply if they have fixed residence in Denmark and meet the other conditions. This does not guarantee an award. An application alone does not guarantee that the fixed-residence condition for housing benefit is met. Udbetaling Danmark, as the competent authority, assesses the individual circumstances and entitlement to payment. Check your situation and application with Udbetaling Danmark.
 
-A deposit loan is a separate municipal scheme for certain homes and circumstances. The rules include people with permits under sections 1 and 2 of the Ukraine Special Act who apply within the first three years after receiving the permit, subject to conditions. Ask your municipality whether the scheme applies to the home you are considering and what documents are needed.
+[[source:ce1d50d7-9177-4e11-ada4-7475053a7c2f|A deposit loan]] is a separate municipal scheme for certain homes and circumstances. The rules include [[source:4d779e3b-6659-417c-91ab-6e2dcacd9c05|people with permits under sections 1 and 2 of the Ukraine Special Act who apply within the first three years after receiving the permit]], subject to conditions. Ask your municipality whether the scheme applies to the home you are considering and what documents are needed.
 
 Municipalities also assess some requests for help with specific expenses, such as certain moving costs or short-term rent support in an eviction-risk situation. These are not the same as housing benefit or accommodation under the Special Act. Eligibility is assessed individually; contact your municipality before incurring an expense.
 

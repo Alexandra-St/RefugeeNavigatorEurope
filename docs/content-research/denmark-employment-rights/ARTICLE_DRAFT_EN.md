@@ -1,14 +1,16 @@
-# Working in Denmark: work authorization and employee rights
+# DRAFT — NOT PUBLISHED
 
-**Summary**
+## Title
+Working in Denmark: work authorization and employee rights
 
+## Summary
 An overview of work authorization under Denmark’s Ukraine Special Act and practical points to check in an employment contract, at work and with the Danish authorities. The right to work depends on your current residence basis and personal situation.
 
-**Content**
+## Content
 
 ## Who can work in Denmark
 
-If you have been granted a residence permit under the Ukraine Special Act, the Danish Immigration Service says you are entitled to work while that permit is valid. Section 1 and section 2 have different eligibility conditions. Check the decision and your current status; having an application, CPR number or tax card is not the same as having a residence permit.
+If you have been granted a residence permit under the Ukraine Special Act, [[source:b0ceabf9-2608-4748-86f7-e5e826eb6641|the Danish Immigration Service]] says you are entitled to work while that permit is valid. Section 1 and section 2 have different eligibility conditions. Check the decision and your current status; having an application, CPR number or tax card is not the same as having a residence permit.
 
 If you are waiting for a decision, the Immigration Service says you may work after it has recorded your fingerprints and facial image. This does not apply if you obviously cannot qualify under section 1 or 2. If you or a potential employer is unsure whether this exception applies, the authority says you should not start work before receiving a decision. An application by itself is not an unconditional right to work.
 
@@ -16,7 +18,7 @@ Employers must check a foreign employee’s right to work. Show your actual resi
 
 ## Employment contracts
 
-The written-information rules generally cover employees whose predetermined or actual working time averages more than 3 hours a week over 4 consecutive weeks. Hours worked for employers in the same company, group or entity are combined. The rules also cover employment where no guaranteed amount of paid hours was set before work began. Seafarers are covered by separate legislation. A qualifying collective agreement may replace some statutory requirements if it provides equivalent protection or meets the law’s specific conditions. Whether an exception applies depends on the agreement and the law.
+The [[source:2acf95dd-1fea-45bc-9478-fda84be4496d|written-information rules]] generally cover employees whose predetermined or actual working time averages more than 3 hours a week over 4 consecutive weeks. Hours worked for employers in the same company, group or entity are combined. The rules also cover employment where no guaranteed amount of paid hours was set before work began. Seafarers are covered by separate legislation. A qualifying collective agreement may replace some statutory requirements if it provides equivalent protection or meets the law’s specific conditions. Whether an exception applies depends on the agreement and the law.
 
 Where these rules apply, essential employment terms must be provided in writing. Some specified information is due within 7 calendar days after employment starts; other information is due within one month. These are information-delivery deadlines, not a minimum job duration or the threshold for legal coverage.
 
@@ -40,7 +42,7 @@ Sick-pay rules also differ. Salaried employees covered by the Salaried Employees
 
 ## Taxes and registration
 
-If you start a job, contact the Danish Tax Agency (SKAT) about a tax card and the personal tax-number process. The documents and registration route depend on your situation. If you do not yet have a CPR number, do not assume that the tax process is impossible or that the same steps apply to every person; ask SKAT what applies to you.
+If you start a job, contact the Danish Tax Agency (SKAT) about [[source:dd5b7430-e9ae-4f48-9e14-3a511ae5fc96|a tax card]] and the personal tax-number process. The documents and registration route depend on your situation. If you do not yet have a CPR number, do not assume that the tax process is impossible or that the same steps apply to every person; ask SKAT what applies to you.
 
 Keep your expected income and relevant deductions updated in your preliminary income assessment (forskudsopgørelse) so monthly tax withholding can reflect your circumstances. Which deductions apply depends on your situation.
 
@@ -48,7 +50,7 @@ A CPR number, a personal tax number where relevant, and a tax card are used for 
 
 ## Workplace rights and where to raise a concern
 
-Employers must provide a safe and healthy working environment, including assessing risks and giving workers appropriate instruction. Workers also have responsibilities to follow safety instructions and raise problems. The Danish Working Environment Authority, Arbejdstilsynet, handles work-environment and safety concerns. It accepts anonymous complaints about suspected violations and certain abusive behaviour.
+Employers must provide a safe and healthy working environment, including assessing risks and giving workers appropriate instruction. Workers also have responsibilities to follow safety instructions and raise problems. The Danish Working Environment Authority, Arbejdstilsynet, handles work-environment and safety concerns. It accepts [[source:25cfdf97-36ca-4f82-8b61-85089d022079|anonymous complaints about suspected violations]] and certain abusive behaviour.
 
 If you experience discrimination at work, Danish equality laws may apply. Depending on the facts, a complaint may be made to the Board on Equal Treatment or you may seek help through a trade union or the courts. The route and possible outcome depend on the case.
 

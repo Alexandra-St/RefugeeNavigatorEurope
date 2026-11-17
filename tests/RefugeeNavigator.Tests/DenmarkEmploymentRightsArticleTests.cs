@@ -41,7 +41,7 @@ public sealed class DenmarkEmploymentRightsArticleTests
         "https://star.dk/digital-service/borger-it/find-job-og-joblog",
         "https://lifeindenmark.borger.dk/working/work-rights/unemployment-benefits",
         "https://lifeindenmark.borger.dk/working/the-danish-tax-system/deductions-and-allowances",
-        "https://www.retsinformation.dk/eli/lta/2023/501/pdf",
+        "https://www.retsinformation.dk/eli/lta/2023/501",
         "https://at.dk/kend-din-rolle/arbejdsgiver/arbejdsgivere-har-pligt-til-at-anmelde-ulykker-naar-de-er-anmeldepligtige/",
         "https://www.aes.dk/nye-regler-anmeldelse-af-arbejdsulykker",
         "https://www.retsinformation.dk/eli/lta/2026/667/pdf",
@@ -81,7 +81,7 @@ public sealed class DenmarkEmploymentRightsArticleTests
             Assert.DoesNotContain("http://", translation.Content, StringComparison.OrdinalIgnoreCase);
             Assert.DoesNotContain("https://", translation.Content, StringComparison.OrdinalIgnoreCase);
             Assert.DoesNotContain("**", translation.Content, StringComparison.Ordinal);
-            Assert.Equal(new DateOnly(2026, 10, 25), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
+            Assert.Equal(new DateOnly(2026, 11, 17), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
         });
 
         var sources = catalog.OfficialSources.Where(source => source.InformationEntryId == ArticleId).ToArray();
@@ -92,7 +92,7 @@ public sealed class DenmarkEmploymentRightsArticleTests
         Assert.All(sources, source =>
         {
             Assert.Equal(ArticleId, source.InformationEntryId);
-            Assert.Equal(new DateOnly(2026, 10, 15), DateOnly.FromDateTime(source.LastCheckedAt.UtcDateTime));
+            Assert.Equal(new DateOnly(2026, 11, 17), DateOnly.FromDateTime(source.LastCheckedAt.UtcDateTime));
         });
         Assert.DoesNotContain(sources, source => ExcludedSources.Contains(source.Url.AbsoluteUri, StringComparer.Ordinal));
 
