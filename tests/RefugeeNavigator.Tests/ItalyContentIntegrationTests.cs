@@ -65,6 +65,17 @@ public sealed class ItalyContentIntegrationTests
         ["social-child-benefits"] = Articles["IT-SOC-01"].Id
     };
 
+    private static readonly HashSet<string> ItalyRevisedAspects = new(StringComparer.Ordinal)
+    {
+        "protection-scheme", "protection-dates", "residence-routes", "residence-filing",
+        "employment-institutions", "work-employer-duties", "work-minimum-pay",
+        "healthcare-access", "healthcare-proof", "healthcare-urgent",
+        "education-school-enrolment", "social-child-benefits", "social-subsistence"
+    };
+
+    private static string AspectFor(ComparisonFactCatalog catalog, CountryComparisonFact fact) =>
+        catalog.Topics.SelectMany(topic => topic.Aspects).Single(aspect => aspect.Facts.Contains(fact)).Id;
+
     private static readonly Lazy<Task<CatalogData>> Catalog = new(() => new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync());
     private static readonly Lazy<Task<ComparisonFactCatalog>> Facts = new(async () =>
         await new JsonComparisonFactProvider(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json")).LoadAsync(await Catalog.Value));
@@ -105,7 +116,7 @@ public sealed class ItalyContentIntegrationTests
             Assert.All(translations, item =>
             {
                 Assert.Equal(VerificationStatus.Verified, item.VerificationStatus);
-                Assert.Equal(new DateTimeOffset(2026, 11, 8, 0, 0, 0, TimeSpan.Zero), item.LastUpdatedAt);
+                Assert.Equal(new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero), item.LastUpdatedAt);
             });
         }
 
@@ -118,16 +129,16 @@ public sealed class ItalyContentIntegrationTests
     }
 
     [Fact]
-    public async Task ItalyTranslationsAndSeventyArticleOwnedSourcesMatchExactly()
+    public async Task ItalyTranslationsAndSeventySixArticleOwnedSourcesMatchExactly()
     {
         var catalog = await Catalog.Value;
         var root = Path.Combine(FindRepositoryRoot(), "docs", "content-drafts", "italy-v1");
         Assert.Equal(8, Directory.GetFiles(root, "IT-*.md").Length);
         var entryIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => entryIds.Contains(item.InformationEntryId)).ToArray();
-        Assert.Equal(70, sources.Length);
-        Assert.Equal(1480, catalog.OfficialSources.Count);
-        Assert.Equal(70, sources.Select(item => item.Id).Distinct().Count());
+        Assert.Equal(76, sources.Length);
+        Assert.Equal(1486, catalog.OfficialSources.Count);
+        Assert.Equal(76, sources.Select(item => item.Id).Distinct().Count());
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         var sourceById = catalog.OfficialSources.ToDictionary(item => item.Id);
         Assert.All(sources, item =>
@@ -135,7 +146,7 @@ public sealed class ItalyContentIntegrationTests
             Assert.Contains(item.InformationEntryId, entryIds);
             Assert.Equal(Uri.UriSchemeHttps, item.Url.Scheme);
             Assert.False(string.IsNullOrWhiteSpace(item.Title));
-            Assert.Equal(new DateTimeOffset(2026, 11, 8, 0, 0, 0, TimeSpan.Zero), item.LastCheckedAt);
+            Assert.Equal(new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero), item.LastCheckedAt);
         });
         Assert.All(sources.GroupBy(item => item.Url.AbsoluteUri).Where(group => group.Select(item => item.InformationEntryId).Distinct().Count() > 1), group =>
             Assert.Equal(group.Count(), group.Select(item => item.Id).Distinct().Count()));
@@ -214,6 +225,25 @@ public sealed class ItalyContentIntegrationTests
         Assert.Equal(24, italyFacts.Length);
         Assert.Equal(24, italyFacts.Count(item => item.Status == ComparisonFactStatus.Approved));
         Assert.All(italyFacts, item => Assert.True(item.IsAvailable));
+        Assert.Equal(11, italyFacts.Count(item => !ItalyRevisedAspects.Contains(AspectFor(comparison, item))));
+        Assert.Equal(13, italyFacts.Count(item => ItalyRevisedAspects.Contains(AspectFor(comparison, item))));
+        var revisedFacts = italyFacts.Where(item => ItalyRevisedAspects.Contains(AspectFor(comparison, item))).ToArray();
+        Assert.All(revisedFacts, item =>
+        {
+            Assert.Equal(ComparisonFactStatus.Approved, item.Status);
+            Assert.True(item.IsAvailable);
+        });
+        var byAspect = comparison.Topics.SelectMany(topic => topic.Aspects).ToDictionary(aspect => aspect.Id);
+        var dates = Assert.Single(byAspect["protection-dates"].Facts, item => item.CountrySlug == "italy");
+        Assert.Contains("4 March 2028", dates.Values["en"]);
+        Assert.Contains("4 March 2027", dates.Values["en"]);
+        Assert.Contains("5 August 2026", byAspect["protection-scheme"].Facts.Single(item => item.CountrySlug == "italy").Values["en"]);
+        Assert.Contains("4 August 2026", byAspect["protection-scheme"].Facts.Single(item => item.CountrySlug == "italy").Values["en"]);
+        Assert.Contains("31 December 2026", byAspect["healthcare-access"].Facts.Single(item => item.CountrySlug == "italy").Values["en"]);
+        Assert.Contains("116117", byAspect["healthcare-urgent"].Facts.Single(item => item.CountrySlug == "italy").Values["en"]);
+        Assert.Contains("through age 18", byAspect["education-school-enrolment"].Facts.Single(item => item.CountrySlug == "italy").Values["en"]);
+        Assert.Contains("20 April 2025", byAspect["social-subsistence"].Facts.Single(item => item.CountrySlug == "italy").Values["en"]);
+        Assert.Contains("€3,600", byAspect["social-child-benefits"].Facts.Single(item => item.CountrySlug == "italy").Values["en"]);
         var italyAspectIds = comparison.Topics.SelectMany(topic => topic.Aspects)
             .Where(aspect => aspect.Facts.Any(fact => fact.CountrySlug == "italy"))
             .Select(aspect => aspect.Id).ToArray();
@@ -271,6 +301,37 @@ public sealed class ItalyContentIntegrationTests
         Assert.Equal(ComparisonFactStatus.Draft, swedenChildBenefits.Status);
         Assert.False(swedenChildBenefits.IsAvailable);
         Assert.Empty(swedenChildBenefits.OfficialSourceIds);
+    }
+
+    [Fact]
+    public async Task ItalyCompareRevisionLedgerTracksThirteenEditsWithoutChangingProductionStatus()
+    {
+        var root = FindRepositoryRoot();
+        using var ledger = System.Text.Json.JsonDocument.Parse(await File.ReadAllTextAsync(
+            Path.Combine(root, "docs", "content-refresh", "2026-11", "italy", "ITALY_COMPARE_REVISIONS_01.json")));
+        var rows = ledger.RootElement.GetProperty("revisedFacts").EnumerateArray().ToArray();
+        Assert.Equal(13, rows.Length);
+        Assert.Equal(13, rows.Select(item => item.GetProperty("aspectId").GetString()).Distinct().Count());
+        var catalog = await Facts.Value;
+        var facts = catalog.Topics.SelectMany(topic => topic.Aspects)
+            .SelectMany(aspect => aspect.Facts.Select(fact => (aspect.Id, Fact: fact)))
+            .Where(item => item.Fact.CountrySlug == "italy")
+            .ToDictionary(item => item.Id, item => item.Fact, StringComparer.Ordinal);
+        foreach (var row in rows)
+        {
+            Assert.Equal("REVISE", row.GetProperty("decision").GetString());
+            Assert.Equal("Approved", row.GetProperty("productionStatus").GetString());
+            Assert.True(row.GetProperty("isAvailable").GetBoolean());
+            var aspectId = row.GetProperty("aspectId").GetString()!;
+            var fact = facts[aspectId];
+            Assert.Equal(ComparisonFactStatus.Approved, fact.Status);
+            Assert.True(fact.IsAvailable);
+            Assert.Equal(fact.InformationEntryId.ToString(), row.GetProperty("informationEntryId").GetString());
+            Assert.Equal(fact.OfficialSourceIds.Select(id => id.ToString()).ToArray(),
+                row.GetProperty("sourceIds").EnumerateArray().Select(value => value.GetString()).ToArray());
+            foreach (var language in new[] { "en", "uk", "ru" })
+                Assert.Equal(fact.Values[language], row.GetProperty("values").GetProperty(language).GetString());
+        }
     }
 
     [Fact]

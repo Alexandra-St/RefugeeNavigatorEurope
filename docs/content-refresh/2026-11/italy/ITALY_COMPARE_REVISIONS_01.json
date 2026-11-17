@@ -1,0 +1,223 @@
+{
+  "countrySlug": "italy",
+  "asOf": "2026-11-17",
+  "productionStatusUnchanged": true,
+  "revisedFacts": [
+    {
+      "aspectId": "protection-scheme",
+      "decision": "REVISE",
+      "productionStatus": "Approved",
+      "isAvailable": true,
+      "informationEntryId": "c8c06066-d3cd-55ce-88b0-3499384eece7",
+      "sourceIds": [
+        "dde016b4-2f2d-5322-9d21-0269318f8456"
+      ],
+      "values": {
+        "en": "EU temporary protection in Italy covers defined displaced groups and specified family members, including certain stateless persons and third-country nationals with specified Ukrainian protection or permanent residence who cannot safely return. From 5 August 2026, new grants are subject to the EU military-obligation condition where applicable. The corrected exception covers people protected in the same Member State by 4 August 2026 and continuously thereafter. Italian-wide evidence instructions are not established.",
+        "uk": "Тимчасовий захист ЄС в Італії охоплює визначені групи переміщених осіб і членів їхніх сімей, зокрема окремих осіб без громадянства та громадян третіх країн із визначеним захистом або постійним проживанням в Україні, які не можуть безпечно повернутися. Із 5 серпня 2026 року нові рішення про надання захисту підпадають під умову ЄС щодо військових обов’язків, якщо вона застосовна. Виправлений виняток стосується людей, які мали захист у тій самій державі-члені до або 4 серпня 2026 року включно та безперервно зберігають його там. Загальноіталійські інструкції щодо доказів не встановлені.",
+        "ru": "Временная защита ЕС в Италии охватывает определённые группы перемещённых лиц и членов их семей, включая некоторых лиц без гражданства и граждан третьих стран с установленной защитой или постоянным проживанием в Украине, которые не могут безопасно вернуться. С 5 августа 2026 года новые решения о предоставлении защиты подпадают под условие ЕС о военных обязанностях, если оно применимо. Исправленное исключение касается людей, имевших защиту в том же государстве-члене до или 4 августа 2026 года включительно и непрерывно сохраняющих её там. Общенациональные инструкции Италии по доказательствам не установлены."
+      }
+    },
+    {
+      "aspectId": "protection-dates",
+      "decision": "REVISE",
+      "productionStatus": "Approved",
+      "isAvailable": true,
+      "informationEntryId": "c8c06066-d3cd-55ce-88b0-3499384eece7",
+      "sourceIds": [
+        "a73b7d5b-720e-5d02-8014-32cc416c5b5d"
+      ],
+      "values": {
+        "en": "The EU temporary-protection scheme runs through 4 March 2028. Italy’s latest identified national measure allows covered existing TP permits to be renewed on request through 4 March 2027. The EU date does not establish Italian permit validity, printed-card expiry or renewal procedure through 2028.",
+        "uk": "Схема тимчасового захисту ЄС діє до 4 березня 2028 року. За останнім виявленим національним заходом Італії наявні охоплені посвідки TP можна поновити на прохання до 4 березня 2027 року. Дата ЄС не встановлює строк дії італійської посвідки, дату на картці чи процедуру поновлення до 2028 року.",
+        "ru": "Схема временной защиты ЕС действует до 4 марта 2028 года. Согласно последней найденной национальной мере Италии, имеющиеся разрешения TP, подпадающие под её действие, можно продлить по заявлению до 4 марта 2027 года. Дата ЕС не устанавливает срок действия итальянского разрешения, дату на карте или порядок продления до 2028 года."
+      }
+    },
+    {
+      "aspectId": "residence-routes",
+      "decision": "REVISE",
+      "productionStatus": "Approved",
+      "isAvailable": true,
+      "informationEntryId": "28aee635-27ff-525c-9cd3-8673b5ba2be3",
+      "sourceIds": [
+        "4cd09057-d389-5bf3-bcbc-5e4853bff7fa",
+        "5ce3f0f1-ec54-5bbd-b73a-af43d87c119e"
+      ],
+      "values": {
+        "en": "Italy provides a work-permit conversion route on request for the TP permits covered by Law 213/2023, paragraph 396, for the activity actually performed and subject to legal requirements. This is not automatic. The expired 4 March 2026 renewal deadline under DL 202/2024 does not establish that this separate conversion rule ended. No general TP conversion into study, ordinary family or Blue Card status is established.",
+        "uk": "Закон Італії 213/2023, пункт 396, передбачає на прохання конверсію охоплених посвідок TP у дозвіл на роботу за фактично виконуваною діяльністю та за умови виконання законодавчих вимог. Це не автоматично. Строк поновлення до 4 березня 2026 року за DL 202/2024 завершився, але сам по собі не доводить припинення окремого правила конверсії. Загальну конверсію TP у навчальний, звичайний сімейний дозвіл або Blue Card не встановлено.",
+        "ru": "Пункт 396 Закона Италии 213/2023 предусматривает по заявлению конверсию охваченных разрешений TP в рабочий ВНЖ для фактически выполняемой деятельности при соблюдении законных требований. Это не происходит автоматически. Истёкший срок продления до 4 марта 2026 года по DL 202/2024 сам по себе не доказывает прекращение отдельного правила конверсии. Общая конверсия TP в учебный, обычный семейный ВНЖ или Blue Card не установлена."
+      }
+    },
+    {
+      "aspectId": "residence-filing",
+      "decision": "REVISE",
+      "productionStatus": "Approved",
+      "isAvailable": true,
+      "informationEntryId": "28aee635-27ff-525c-9cd3-8673b5ba2be3",
+      "sourceIds": [
+        "d6453609-a10e-5141-a854-e692cb7b7a26"
+      ],
+      "values": {
+        "en": "Filing channels depend on the permit route; TP alone does not establish a right to file an ordinary route from Italy. Under TUI Article 5(9-bis), as amended in 2026, lawful stay and temporary work while issuance, renewal or conversion is pending require the competent office’s receipt and all other legal conditions; the rule does not create a universal in-country route.",
+        "uk": "Спосіб подання залежить від типу дозволу; сам TP не встановлює права оформити звичайний маршрут з Італії. За статтею 5(9-bis) TUI у редакції 2026 року законне перебування й тимчасова робота під час очікування на видачу, поновлення чи конверсію потребують підтвердження від компетентного органу та виконання інших вимог закону; це не створює універсального маршруту подання з Італії.",
+        "ru": "Способ подачи зависит от вида разрешения; сам статус TP не устанавливает право оформить обычный маршрут из Италии. По статье 5(9-bis) TUI в редакции 2026 года законное пребывание и временная работа в ожидании выдачи, продления или конверсии требуют подтверждения компетентного органа и соблюдения остальных требований закона; это не создаёт универсального маршрута подачи из Италии."
+      }
+    },
+    {
+      "aspectId": "employment-institutions",
+      "decision": "REVISE",
+      "productionStatus": "Approved",
+      "isAvailable": true,
+      "informationEntryId": "39091eb7-04c7-5b45-83b7-585f5f1ce719",
+      "sourceIds": [
+        "506705f0-38ff-5f0b-a952-ff01d6839763",
+        "3dde8424-7871-5ea0-aa29-e0b9b029b207",
+        "f6a5d695-3b24-534e-b307-27684464e973"
+      ],
+      "values": {
+        "en": "Centri per l’Impiego (CPI) provide orientation, counselling, short training and job matching. File a DID at a CPI, through a regional portal where available, or through the national employment-services portal; the national online route requires an Italian tax code and SPID or CIE, with identity checked by a CPI at first contact. Regional CPI support is tied to having at least a domicile in that region. Services, appointments and places vary; registration does not guarantee a job or course.",
+        "uk": "Centri per l’Impiego (CPI) надають профорієнтацію, консультації, коротке навчання та допомогу з підбором роботи. DID можна подати в CPI, на регіональному порталі, якщо він доступний, або на національному порталі служб зайнятості; для онлайн-подання через національний портал потрібні італійський податковий номер та SPID або CIE, а CPI перевіряє особу під час першого контакту. Регіональна підтримка CPI доступна за наявності щонайменше місця проживання (domicilio) у відповідному регіоні. Послуги, записи та місця різняться; реєстрація не гарантує роботу чи курс.",
+        "ru": "Centri per l’Impiego (CPI) предоставляют профориентацию, консультации, краткосрочное обучение и помощь в подборе работы. DID можно подать в CPI, на региональном портале, если он доступен, или на национальном портале служб занятости; для подачи онлайн через национальный портал нужны итальянский налоговый номер и SPID или CIE, а CPI проверяет личность при первом контакте. Региональная поддержка CPI доступна при наличии как минимум места проживания (domicilio) в соответствующем регионе. Услуги, запись и количество мест различаются; регистрация не гарантирует работу или курс."
+      }
+    },
+    {
+      "aspectId": "work-employer-duties",
+      "decision": "REVISE",
+      "productionStatus": "Approved",
+      "isAvailable": true,
+      "informationEntryId": "d988941a-e709-53ba-a2bf-47f1ac2f9956",
+      "sourceIds": [
+        "d10ee8f0-2ecd-5ae7-9b6a-b11299c906a9",
+        "b7dd3838-344c-512c-8aa5-06ccd37bb170",
+        "9a90b8d1-4fe9-5330-9929-dff6c65e2c1a",
+        "43281ca0-91bc-5cd5-9f98-e0aa3d3c2333",
+        "68944a2e-e956-5367-835e-70e9ef31de64"
+      ],
+      "values": {
+        "en": "For subordinate employment, the employer generally files the mandatory hiring communication before work begins and provides the written employment information required by law; vacancy publication is a separate obligation. Applicable duties also include payroll/tax withholding, INPS contributions, INAIL insurance where covered, and workplace safety. Authorized employers/intermediaries can use SIISL as an alternative mandatory-communications channel from 1 April 2026.",
+        "uk": "Для найманої праці роботодавець зазвичай подає обов’язкове повідомлення про найм до початку роботи та надає передбачену законом письмову інформацію; публікація вакансії є окремим обов’язком. Застосовні обов’язки також охоплюють зарплатний облік/податки, внески INPS, страхування INAIL у відповідних випадках і безпеку праці. Із 1 квітня 2026 року уповноважені роботодавці/посередники можуть використовувати SIISL як альтернативний канал обов’язкових повідомлень.",
+        "ru": "При наёмной работе работодатель обычно подаёт обязательное уведомление о найме до начала работы и предоставляет предусмотренную законом письменную информацию; публикация вакансии — отдельная обязанность. Применимые обязанности также включают расчёт зарплаты/налоги, взносы INPS, страхование INAIL в предусмотренных случаях и охрану труда. С 1 апреля 2026 года уполномоченные работодатели/посредники могут использовать SIISL как альтернативный канал обязательных уведомлений."
+      }
+    },
+    {
+      "aspectId": "work-minimum-pay",
+      "decision": "REVISE",
+      "productionStatus": "Approved",
+      "isAvailable": true,
+      "informationEntryId": "d988941a-e709-53ba-a2bf-47f1ac2f9956",
+      "sourceIds": [
+        "037214ac-ab9a-539c-a76a-bf123bdf3a24",
+        "b2a55a1b-5371-5137-8067-f579049322f0"
+      ],
+      "values": {
+        "en": "Italy has no single statutory minimum wage amount for every job. Under the reviewed 2026 framework, private-sector pay references the applicable representative CCNL treatment by sector, employer activity, worker category/level and contractual minimum; this is not one universal hourly rate.",
+        "uk": "В Італії немає єдиної законодавчої мінімальної суми оплати для всіх робіт. За перевіреними правилами 2026 року оплата в приватному секторі орієнтується на застосовний репрезентативний CCNL з урахуванням сектору, діяльності роботодавця, категорії/рівня працівника та договірного мінімуму; єдиної погодинної ставки немає.",
+        "ru": "В Италии нет единой установленной законом минимальной суммы оплаты для всех работ. По проверенным правилам 2026 года оплата в частном секторе ориентируется на применимый репрезентативный CCNL с учётом сектора, деятельности работодателя, категории/уровня работника и договорного минимума; единой почасовой ставки нет."
+      }
+    },
+    {
+      "aspectId": "healthcare-access",
+      "decision": "REVISE",
+      "productionStatus": "Approved",
+      "isAvailable": true,
+      "informationEntryId": "462ace7d-8deb-5cd7-a530-548c79a8e144",
+      "sourceIds": [
+        "a51bc867-e348-51f3-aa86-9a853bb56e7b",
+        "4195c68d-304c-57a4-9d32-bc78d32840a7"
+      ],
+      "values": {
+        "en": "Ukrainian TP permit holders and people who have filed a TP request can register for compulsory SSN coverage through 31 December 2026. Registration is with the local health authority for the domicile in the TP application; employment is not required. No continuation after that date was established.",
+        "uk": "Власники посвідки TP та люди, які подали заяву TP, можуть зареєструватися в SSN на обов’язковій основі до 31 грудня 2026 року. Реєстрація відбувається в місцевому органі охорони здоров’я за domicile із заяви TP; працевлаштування не потрібне. Продовження після цієї дати не встановлено.",
+        "ru": "Владельцы разрешения TP и лица, подавшие заявление TP, могут зарегистрироваться в SSN на обязательной основе до 31 декабря 2026 года. Регистрация проводится в местном органе здравоохранения по domicile из заявления TP; трудоустройство не требуется. Продление после этой даты не установлено."
+      }
+    },
+    {
+      "aspectId": "healthcare-proof",
+      "decision": "REVISE",
+      "productionStatus": "Approved",
+      "isAvailable": true,
+      "informationEntryId": "462ace7d-8deb-5cd7-a530-548c79a8e144",
+      "sourceIds": [
+        "a51bc867-e348-51f3-aa86-9a853bb56e7b",
+        "d1375712-1a31-5862-a6de-b1525f62c643",
+        "d16850c8-af12-57de-b209-a1bbed836180",
+        "e069d1a3-4f69-5478-8621-95d0bc9447b2"
+      ],
+      "values": {
+        "en": "The TP permit or qualifying TP filing/renewal receipt, together with the codice fiscale, supports SSN registration at the local health authority for the domicile in the TP application. The Tessera Sanitaria follows enrollment; it is not a prerequisite or the source of the underlying TP healthcare right. Check the local ASL’s document list.",
+        "uk": "Посвідка TP або відповідна квитанція про подання/поновлення заяви TP разом із codice fiscale є підставою для реєстрації в SSN за domicile із заяви TP. Tessera Sanitaria видається після реєстрації; картка не є передумовою чи джерелом самого права TP на медичну допомогу. Перевірте перелік документів місцевої ASL.",
+        "ru": "Разрешение TP или соответствующая квитанция о подаче/продлении заявления TP вместе с codice fiscale служат основанием для регистрации в SSN по domicile из заявления TP. Tessera Sanitaria выдаётся после регистрации; карта не является предварительным условием или источником самого права TP на медицинскую помощь. Уточните список документов в местной ASL."
+      }
+    },
+    {
+      "aspectId": "healthcare-urgent",
+      "decision": "REVISE",
+      "productionStatus": "Approved",
+      "isAvailable": true,
+      "informationEntryId": "462ace7d-8deb-5cd7-a530-548c79a8e144",
+      "sourceIds": [
+        "a19d1117-94ab-5bbc-a087-f5bf752f932b",
+        "b334d68e-72e8-5f53-9c82-f9a61b22a459",
+        "243251d9-30b5-5366-bb0a-99a3ec39538e"
+      ],
+      "values": {
+        "en": "For emergencies call 112 or 118, or go to Pronto Soccorso. 116117 is a non-urgent healthcare route only in regions and local areas where activated; check local availability and do not use it instead of emergency services.",
+        "uk": "У невідкладній ситуації телефонуйте 112 або 118 чи звертайтеся до Pronto Soccorso. Номер 116117 призначений для неургентної медичної допомоги лише в регіонах і місцевостях, де його запровадили; перевірте місцеву доступність і не використовуйте його замість екстреної допомоги.",
+        "ru": "В экстренной ситуации звоните 112 или 118 либо обращайтесь в Pronto Soccorso. Номер 116117 предназначен для неэкстренной медицинской помощи только в регионах и местностях, где он введён; проверьте местную доступность и не используйте его вместо экстренной помощи."
+      }
+    },
+    {
+      "aspectId": "education-school-enrolment",
+      "decision": "REVISE",
+      "productionStatus": "Approved",
+      "isAvailable": true,
+      "informationEntryId": "ba3d3110-730d-5340-a89a-2b6722430bdd",
+      "sourceIds": [
+        "7438de87-d5e2-533a-bc14-700916f7a5fc",
+        "6ebe5a94-c0e8-5372-9e7a-69a6316c2835",
+        "d2d06713-0ddc-5959-ba9d-3dd7fbb23c91",
+        "74e204a8-e4c7-544d-982d-5d1b9b07f8af"
+      ],
+      "values": {
+        "en": "Foreign children in Italy, including children with TP, have the right to attend school regardless of residence status. Apply directly to a local school; a TP card or complete prior-school records are not prerequisites for initial enrolment. The school assesses prior learning and assigns a class; a preferred place is not guaranteed. Compulsory education lasts ten years, generally ages 6–16, with the education/training completion duty through age 18 as applicable.",
+        "uk": "Іноземні діти в Італії, зокрема діти з TP, мають право відвідувати школу незалежно від статусу проживання. Зверніться безпосередньо до місцевої школи; посвідка TP чи повний комплект попередніх шкільних документів не є передумовою первинного зарахування. Школа оцінює попереднє навчання та визначає клас; місце у вибраній школі не гарантується. Обов’язкова освіта триває десять років, зазвичай від 6 до 16 років, із виконанням освітнього/професійного обов’язку до 18 років у передбачених законом випадках.",
+        "ru": "Иностранные дети в Италии, включая детей с TP, имеют право посещать школу независимо от статуса проживания. Обратитесь непосредственно в местную школу; карта TP или полный комплект прежних школьных документов не являются предварительным условием первичного зачисления. Школа оценивает предыдущее обучение и определяет класс; место в выбранной школе не гарантируется. Обязательное обучение длится десять лет, обычно с 6 до 16 лет, с выполнением образовательной/профессиональной обязанности до 18 лет в предусмотренных законом случаях."
+      }
+    },
+    {
+      "aspectId": "social-subsistence",
+      "decision": "REVISE",
+      "productionStatus": "Approved",
+      "isAvailable": true,
+      "informationEntryId": "55696570-3337-5e2f-8a24-71e256e869e9",
+      "sourceIds": [
+        "d807b816-6a74-5390-8090-673cd1a3e3bf",
+        "0373fa9c-9b6e-504d-8e90-dbc65a81e492",
+        "878dcf50-6b86-5941-b29b-c22b0a029440"
+      ],
+      "values": {
+        "en": "No current national TP-specific subsistence cash scheme was found. The former Civil Protection Ukraine contribution is closed; the final request deadline was 20 April 2025. ADI and SFL have separate requirements and are not automatic TP benefits.",
+        "uk": "Чинної національної грошової допомоги TP на проживання не виявлено. Попередню виплату Цивільного захисту для України закрито; кінцевий строк подання запиту був 20 квітня 2025 року. ADI та SFL мають окремі вимоги й не є автоматичними виплатами TP.",
+        "ru": "Действующей национальной денежной помощи TP на проживание не выявлено. Прежняя выплата Гражданской защиты для Украины закрыта; крайний срок подачи запроса был 20 апреля 2025 года. ADI и SFL имеют отдельные условия и не являются автоматическими выплатами TP."
+      }
+    },
+    {
+      "aspectId": "social-child-benefits",
+      "decision": "REVISE",
+      "productionStatus": "Approved",
+      "isAvailable": true,
+      "informationEntryId": "55696570-3337-5e2f-8a24-71e256e869e9",
+      "sourceIds": [
+        "fc1804f9-10b7-5244-aaeb-54567bef91ec",
+        "70970455-9332-5216-a73e-5253d3cfd362",
+        "ea041685-d9c5-5128-9b09-013da85a8418"
+      ],
+      "values": {
+        "en": "INPS guidance lists the Ukrainian TP permit for AUU subject to general child and residence/work conditions; a TP application receipt alone is not established as sufficient. AUU varies with ISEE and family circumstances. Bonus nido may reach €3,600 in 2026 only subject to eligibility and documented eligible costs; it is not a fixed payment.",
+        "uk": "Вказівки INPS визнають посвідку TP для AUU за загальних вимог щодо дитини та проживання/роботи; однієї квитанції про подання TP недостатньо за наявними доказами. AUU залежить від ISEE та обставин сім’ї. Bonus nido у 2026 році може сягати €3 600 лише за умови відповідності критеріям і підтверджених прийнятних витрат; це не фіксована виплата.",
+        "ru": "Указания INPS признают разрешение TP для AUU при соблюдении общих требований к ребёнку и проживанию/работе; одной квитанции о подаче TP по имеющимся данным недостаточно. AUU зависит от ISEE и обстоятельств семьи. Bonus nido в 2026 году может достигать €3 600 только при соблюдении условий и подтверждённых допустимых расходах; это не фиксированная выплата."
+      }
+    }
+  ]
+}
