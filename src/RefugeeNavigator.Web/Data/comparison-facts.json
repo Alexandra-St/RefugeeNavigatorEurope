@@ -361,12 +361,13 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "867c5784-1021-5dee-ac1d-f986a22d80d1",
-                "8de946a6-0246-5953-86ee-c28536a94800"
+                "8de946a6-0246-5953-86ee-c28536a94800",
+                "0a11c164-3360-5e41-b784-cd3b56eb4555"
               ],
               "Values": {
-                "en": "For applications submitted from 5 August 2026, people subject to Ukrainian military obligations need different evidence: ages 18–22 must show Reserv+ registration and paper eVOD; ages 23–60 must show paper eVOD confirming full removal or exemption. This applies to first, repeat and family-reunification applications, not ordinary extensions for people continuously holding valid Czech protection.",
-                "uk": "Для заяв, поданих із 5 серпня 2026 року, для осіб, на яких поширюються військові обов’язки України, потрібні різні докази: у віці 18–22 років — реєстрація в Reserv+ і паперовий eVOD; у віці 23–60 років — паперовий eVOD про повне зняття з військового обліку або звільнення від обов’язків. Це стосується первинних, повторних заяв і заяв для возз’єднання сім’ї, але не звичайного продовження безперервно чинного чеського захисту.",
-                "ru": "Для заяв, поданных с 5 августа 2026 года, для лиц, на которых распространяются воинские обязанности Украины, нужны разные подтверждения: в возрасте 18–22 лет — регистрация в Reserv+ и бумажный eVOD; в возрасте 23–60 лет — бумажный eVOD о полном снятии с воинского учёта или освобождении от обязанностей. Это касается первичных, повторных заявлений и заявлений для воссоединения семьи, но не обычного продления непрерывно действующей чешской защиты."
+                "en": "For applications submitted from 5 August 2026, Ukrainian citizens aged 18–59 inclusive who are subject to military obligations must provide the required military-status evidence. Ages 18–22: Reserv+ registration and printed eVOD; ages 23–59: printed eVOD recording removal from performance of military obligations. The eVOD must be current and verified in Reserv+; official alternatives include a Ukrainian consulate-certified eVOD no more than three working days old, or a valid passport exit stamp after the decision together with eVOD. Applies to first, repeat and family-cohabitation applications, not ordinary extension. The exception is for people holding valid TP in the same Member State on 4 August 2026 and continuously maintaining it there.",
+                "uk": "Для заяв від 5 серпня 2026 року громадяни України віком 18–59 років включно, на яких поширюються військові обов’язки, мають надати відповідні докази. Вік 18–22: реєстрація Reserv+ і роздрукований eVOD; вік 23–59: роздрукований eVOD із записом про зняття з виконання військових обов’язків. Документ має бути актуальним і перевіряється в Reserv+; офіційні альтернативи — засвідчений консульством України eVOD не старший за три робочі дні або чинний паспорт зі штампом про виїзд після рішення разом з eVOD. Правило діє для первинних, повторних заяв і заяв для спільного проживання сім’ї, але не для звичайного продовження. Виняток стосується осіб, які мали чинний TP у тій самій державі-члені 4 серпня 2026 року й безперервно зберігали його там.",
+                "ru": "Для заявлений с 5 августа 2026 года граждане Украины в возрасте 18–59 лет включительно, на которых распространяются воинские обязанности, должны представить необходимые доказательства. Возраст 18–22: регистрация Reserv+ и распечатанный eVOD; возраст 23–59: распечатанный eVOD с записью о снятии с исполнения воинских обязанностей. Документ должен быть актуальным и проверяется в Reserv+; официальные альтернативы — заверенный консульством Украины eVOD не старше трёх рабочих дней либо действительный паспорт со штампом о выезде после решения вместе с eVOD. Правило применяется к первичным, повторным заявлениям и заявлениям для совместного проживания семьи, но не к обычному продлению. Исключение касается лиц, имевших действующую TP в том же государстве-члене 4 августа 2026 года и непрерывно сохранявших её там."
               }
             },
             {
@@ -664,9 +665,9 @@
                 "b087b0f1-2960-5d54-87cd-c74aa87d0c6e"
               ],
               "Values": {
-                "en": "The completed 2026 Czech extension cycle runs through 31 March 2027. The next two-stage cycle is intended to lead to 31 March 2028, with statutory registration by 15 March and an in-person sticker stage by 30 September 2027; its operational opening date has not been announced, so check the official portal. EU protection separately runs through 4 March 2028.",
-                "uk": "Завершений цикл продовження в Чехії на 2026 рік забезпечує захист до 31 березня 2027 року. Наступний двоетапний цикл має продовжити його до 31 березня 2028 року: за законом реєстрація — до 15 березня, особисте вклеювання наліпки — до 30 вересня 2027 року; дату відкриття процедури ще не оголошено, тож перевіряйте офіційний портал. Окремо захист ЄС діє до 4 березня 2028 року.",
-                "ru": "Завершённый цикл продления в Чехии на 2026 год обеспечивает защиту до 31 марта 2027 года. Следующий двухэтапный цикл должен продлить её до 31 марта 2028 года: по закону регистрация — до 15 марта, личное вклеивание стикера — до 30 сентября 2027 года; дату открытия процедуры ещё не объявили, поэтому проверяйте официальный портал. Отдельно защита ЕС действует до 4 марта 2028 года."
+                "en": "The completed 2026 Czech extension cycle runs through 31 March 2027. Czech guidance says successful completion of the next online-registration and in-person visa-sticker stages will extend Czech TP through 31 March 2028. As of 17 November 2026, the next cycle’s opening date and operational deadlines had not been announced; check the official portal. EU temporary protection separately runs through 4 March 2028.",
+                "uk": "Завершений чеський цикл продовження на 2026 рік діє до 31 березня 2027 року. За чеськими інструкціями успішне проходження наступних онлайн-реєстрації та особистого вклеювання візової наклейки продовжить чеський TP до 31 березня 2028 року. Станом на 17 листопада 2026 року дату відкриття й операційні строки наступного циклу ще не оголосили; перевіряйте офіційний портал. Окремо режим TP ЄС діє до 4 березня 2028 року.",
+                "ru": "Завершённый чешский цикл продления на 2026 год действует до 31 марта 2027 года. Согласно чешским инструкциям успешное прохождение следующих этапов онлайн-регистрации и личного вклеивания визовой наклейки продлит чешскую TP до 31 марта 2028 года. По состоянию на 17 ноября 2026 года дату открытия и операционные сроки следующего цикла ещё не объявили; проверяйте официальный портал. Отдельно режим TP ЕС действует до 4 марта 2028 года."
               }
             },
             {
@@ -3101,12 +3102,13 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "a3068749-e0d6-5ffb-aef9-8b261fe051fb",
-                "f4f235e4-f298-555a-ad9c-e74e4bce8a28"
+                "f4f235e4-f298-555a-ad9c-e74e4bce8a28",
+                "29de22e4-5a36-5b4b-bd1b-befeba9a970e"
               ],
               "Values": {
-                "en": "From 1 April 2026, employers report foreign workers through REGZEC and must retain a copy of the relevant residence document during employment and for three years afterward. These are employer duties, not a separate work permit for a worker with applicable free access.",
-                "uk": "З 1 квітня 2026 року роботодавці повідомляють про іноземних працівників через REGZEC і мають зберігати копію відповідного документа про проживання під час роботи та три роки після її завершення. Це обов’язки роботодавця, а не окремий дозвіл на роботу для працівника з відповідним вільним доступом.",
-                "ru": "С 1 апреля 2026 года работодатели сообщают об иностранных работниках через REGZEC и должны хранить копию соответствующего документа о проживании во время работы и три года после её окончания. Это обязанности работодателя, а не отдельное разрешение на работу для работника с применимым свободным доступом."
+                "en": "From 1 April 2026, employers register foreign workers through REGZEC/JMHZ before work begins. They report changes in the required employee data within 8 calendar days and employment end within 8 calendar days. Employers retain copies of residence documents during employment and for 3 years after it ends. These reporting duties are separate from the employee’s work authorization.",
+                "uk": "З 1 квітня 2026 року роботодавці реєструють іноземних працівників через REGZEC/JMHZ до початку роботи. Зміни потрібних відомостей про працівника повідомляють протягом 8 календарних днів, а про припинення роботи — протягом 8 календарних днів. Копії документів про проживання зберігають під час роботи та 3 роки після її завершення. Це окремо від права працівника на роботу.",
+                "ru": "С 1 апреля 2026 года работодатели регистрируют иностранных работников через REGZEC/JMHZ до начала работы. Об изменениях необходимых сведений о работнике сообщают в течение 8 календарных дней, а о прекращении работы — в течение 8 календарных дней. Копии документов о пребывании хранят во время работы и 3 года после её завершения. Это отдельно от права работника на работу."
               }
             },
             {
@@ -3414,9 +3416,9 @@
                 "33a7783a-d12f-5e4e-a80a-a53dd847088e"
               ],
               "Values": {
-                "en": "For 2026 only, the gross minimum wage is CZK 22,400 per month or CZK 134.40 per hour for a 40-hour reference week. Adjustments apply to part-time work and shorter statutory weekly hours; these figures are not a 2027 rate.",
-                "uk": "Лише на 2026 рік валова мінімальна зарплата становить 22 400 CZK на місяць або 134,40 CZK за годину для нормативного 40-годинного тижня. Для неповного робочого часу та коротшої законодавчої тривалості тижня застосовують коригування; це не ставка на 2027 рік.",
-                "ru": "Только на 2026 год валовая минимальная зарплата составляет 22 400 CZK в месяц или 134,40 CZK в час при нормативной 40-часовой неделе. Для неполного рабочего времени и сокращённой законом недельной нормы применяются корректировки; это не ставка на 2027 год."
+                "en": "For 2026, the gross minimum wage is CZK 22,400/month or CZK 134.40/hour for the reference 40-hour week. From 1 January 2027, the announced future minimum wage is CZK 24,900/month or CZK 148.30/hour. Guaranteed salary is a separate public-services and administration pay floor; it is not a universal private-sector minimum wage.",
+                "uk": "У 2026 році валова мінімальна зарплата становить 22 400 CZK на місяць або 134,40 CZK за годину для стандартного 40-годинного тижня. З 1 січня 2027 року оголошена майбутня мінімальна зарплата становитиме 24 900 CZK на місяць або 148,30 CZK за годину. Гарантована зарплата — окремий рівень оплати у державних послугах і управлінні; це не універсальна мінімальна зарплата приватного сектору.",
+                "ru": "В 2026 году валовая минимальная зарплата составляет 22 400 CZK в месяц или 134,40 CZK в час при стандартной 40-часовой неделе. С 1 января 2027 года объявленная будущая минимальная зарплата составит 24 900 CZK в месяц или 148,30 CZK в час. Гарантированная зарплата — отдельный уровень оплаты в государственных службах и управлении; это не универсальная минимальная зарплата частного сектора."
               }
             },
             {
@@ -5218,7 +5220,8 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "e0d20dd8-5340-59d2-b091-eb919fc244c7",
-                "54790931-2d68-5609-8323-603b69b19eb0"
+                "54790931-2d68-5609-8323-603b69b19eb0",
+                "05c7d02b-8cc8-51ed-8f2f-02a69cbe04d7"
               ],
               "Values": {
                 "en": "Eligible housing costs may be assessed as one part of means-tested HuD when the legal housing basis and applicable activity or vulnerability conditions are met; this is not guaranteed rent reimbursement. If you may lose accommodation, the Labour Office or municipal social workers can discuss an assessment, but no particular housing or payment is guaranteed.",

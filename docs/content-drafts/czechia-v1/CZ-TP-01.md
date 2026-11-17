@@ -3,8 +3,8 @@
 - Article ID: CZ-TP-01
 - Category: `temporary-protection`
 - Working English title: Temporary Protection in Czechia: Applying and Extending Your Status
-- Source matrix: [temporary-protection-application/SOURCES_AND_CLAIMS.md](../../content-research/czechia-batch-2026-10-19/temporary-protection-application/SOURCES_AND_CLAIMS.md)
-- Editorial status: DRAFT — NOT APPROVED FOR PUBLICATION
+- Source matrix: [claim/source coverage](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv)
+- Editorial status: APPROVED FOR PUBLICATION — integrated 17 November 2026
 
 ## EN
 
@@ -27,18 +27,18 @@ Applications are made in person through the competent KACPU or Ministry office. 
 
 ## Evidence for applications from 5 August 2026
 
-For applications submitted from 5 August 2026, a specific Czech evidence rule applies to people who are subject to Ukrainian military obligations. It covers first and repeat applications and applications for family reunification; it is not a routine extension rule.
+For applications submitted from 5 August 2026, Czech guidance requires proof of military-obligation compliance from Ukrainian citizens aged 18–59 inclusive who are subject to those obligations. The rule covers first and repeat temporary-protection applications and applications for protection for family cohabitation; it is not required for ordinary extension.
 
-- Ages 18–22: show registration in Reserv+ and present paper eVOD.
-- Ages 23–60: present paper eVOD showing the required full removal or exemption from military obligations.
+- Ages 18–22: show registration in Reserv+ and submit a printed paper eVOD.
+- Ages 23–59: submit a printed paper eVOD recording removal from performance of military obligations.
 
-A Reserv+ screenshot alone does not replace the paper eVOD. This rule does not apply to people who already held valid protection before or on 4 August 2026 and have retained it continuously in the same Member State, or to an ordinary extension. The age split follows the Ministry’s specific dated and detailed instructions. Check those instructions for document validity and any case-specific alternatives.
+The eVOD must be current and its validity must be verified by showing the Reserv+ profile directly to the OAMP official; a screenshot alone is not accepted. Official guidance also describes two alternatives: a paper eVOD certified by a Ukrainian diplomatic mission no more than three working days before the application, or a valid Ukrainian passport with an exit stamp made after the relevant decision together with the eVOD. The rule does not apply to people who held valid temporary protection in the same Member State on 4 August 2026 and continuously retained it there, or to ordinary extension. Check the current Ministry instructions for the documents required in your case.
 
 ## The extension process and important dates
 
-The Czech 2026 cycle is closed: registration was due by 15 March 2026 and the personal visit for the extension sticker by 30 September 2026. Completing those stages extended protection to 31 March 2027. The EU-level extension to 4 March 2028 is a separate measure.
+The Czech 2026 cycle is closed: online registration was due by 15 March 2026 and the personal visit for the extension sticker by 30 September 2026. Completing both stages extended protection to 31 March 2027. These dates are historical and are no longer available steps.
 
-The next Czech process has two stages: online registration, followed by a personal visit for the sticker. The statutory framework sets 15 March 2027 for registration and 30 September 2027 for the sticker stage, leading to 31 March 2028 after successful completion, subject to any lawful special adjustment. Do not assume that the portal or appointments are currently open. Check the official portal for operational opening and booking information.
+The EU temporary-protection measure runs through 4 March 2028. Czech Ministry guidance says successful completion of the next online-registration and in-person visa-sticker stages will extend Czech temporary protection through 31 March 2028. As of 17 November 2026, public Czech guidance had not announced the next cycle’s opening date or operational deadlines. Do not assume registration or appointments are open; check the official portal for current instructions.
 
 A repeat grant does not restore uninterrupted residence or restart time-limited benefits. Missing an applicable extension stage can end protection at the relevant statutory cut-off; ask the Ministry about the effect on your own case before acting.
 
@@ -46,14 +46,11 @@ A repeat grant does not restore uninterrupted residence or restart time-limited 
 
 If you plan to stay at a new address for more than 15 days, report the change within three working days after moving, using the official procedure. Protection can also end after specified residence or protection events, or after more than 90 days registered at an administrative-office address. The result depends on the event and exceptions. Check with the Ministry before relying on an assumption that a new status or foreign document automatically ends or preserves Czech protection.
 
+Official sources: [[source:867c5784-1021-5dee-ac1d-f986a22d80d1|Dočasná ochrana]] [[source:8de946a6-0246-5953-86ee-c28536a94800|AKTUALIZOVÁNO 4. 8. 2026]] [[source:e47bb7a3-b6e2-5bd2-a968-c3c82ea35b8a|EU Council Decision 2026/1912]] [[source:0a11c164-3360-5e41-b784-cd3b56eb4555|EU Decision 2026/1912 corrigendum]] [[source:b087b0f1-2960-5d54-87cd-c74aa87d0c6e|Act 65/2022 (Lex Ukraine)]]
 
 ### Claim coverage
 
-- What temporary protection means → CZ-TP01-01
-- Who may apply and where → CZ-TP01-02, CZ-TP01-03, CZ-TP01-04, CZ-TP01-05, CZ-TP01-06
-- Evidence for applications from 5 August 2026 → CZ-TP01-07, CZ-TP01-08, CZ-TP01-09, CZ-TP01-10
-- The extension process and important dates → CZ-TP01-11, CZ-TP01-12, CZ-TP01-13, CZ-TP01-14
-- Changes to your address or protection → CZ-TP01-15, CZ-TP01-16
+See the shared [claim/source coverage matrix](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv).
 
 ## UK
 
@@ -76,18 +73,18 @@ Content:
 
 ## Докази для заяв від 5 серпня 2026 року
 
-Для заяв, поданих від 5 серпня 2026 року, діє окрема чеська вимога до доказів для осіб, на яких поширюються українські військові обов’язки. Вона охоплює первинні й повторні заяви та заяви для возз’єднання сім’ї, але не звичайне продовження статусу.
+Для заяв, поданих від 5 серпня 2026 року, чеські правила вимагають від громадян України віком 18–59 років включно, на яких поширюються військові обов’язки, підтвердити їх виконання. Правило охоплює первинні й повторні заяви на тимчасовий захист та заяви для спільного проживання сім’ї; воно не застосовується до звичайного продовження.
 
-- Вік 18–22 роки: підтвердження реєстрації в Reserv+ і паперова форма eVOD.
-- Вік 23–60 років: паперова eVOD із підтвердженням необхідного повного зняття з військового обліку або звільнення від військових обов’язків.
+- Вік 18–22 роки: підтвердити реєстрацію в Reserv+ і подати роздрукований паперовий eVOD.
+- Вік 23–59 років: подати роздрукований паперовий eVOD із записом про зняття з виконання військових обов’язків.
 
-Самого знімка екрана Reserv+ недостатньо замість паперової eVOD. Правило не стосується людей, які мали чинний захист до або 4 серпня 2026 року включно та безперервно зберігали його в тій самій державі-члені, а також звичайного продовження. Віковий поділ наведено за конкретними датованими й докладними інструкціями Міністерства. Перевірте їх щодо строку дії документів і можливих індивідуальних альтернатив.
+Документ eVOD має бути актуальним; його чинність перевіряють, попросивши показати профіль Reserv+ безпосередньо працівнику OAMP. Самого знімка екрана недостатньо. Офіційні інструкції також описують два альтернативні способи: паперовий eVOD, засвідчений дипломатичною установою України не раніше ніж за три робочі дні до подання заяви, або чинний український паспорт зі штампом про виїзд після відповідного рішення разом з eVOD. Правило не стосується осіб, які мали чинний тимчасовий захист у тій самій державі-члені 4 серпня 2026 року та безперервно зберігали його там, а також звичайного продовження. Перевірте актуальні інструкції Міністерства щодо документів саме для вашої справи.
 
 ## Етапи продовження та важливі дати
 
-Чеський цикл 2026 року завершено: зареєструватися потрібно було до 15 березня 2026 року, а особисто звернутися для вклеювання наклейки — до 30 вересня 2026 року. Після виконання обох етапів захист продовжено до 31 березня 2027 року. Продовження ЄС до 4 березня 2028 року є окремим рішенням.
+Чеський цикл 2026 року завершено: онлайн-реєстрація мала відбутися до 15 березня 2026 року, а особистий візит для вклеювання наклейки — до 30 вересня 2026 року. Після виконання обох етапів захист продовжено до 31 березня 2027 року. Ці строки вже минули й не є доступними зараз етапами.
 
-Наступний чеський процес має два етапи: онлайн-реєстрацію, а потім особисте відвідування для наклейки. Законодавчий механізм встановлює строк реєстрації до 15 березня 2027 року та особистого етапу до 30 вересня 2027 року; після успішного завершення строк захисту продовжується до 31 березня 2028 року, з урахуванням можливих законних спеціальних змін. Не вважайте, що портал або запис уже відкриті. Перевіряйте офіційний портал щодо початку операційної реєстрації та запису.
+Режим тимчасового захисту ЄС діє до 4 березня 2028 року. Міністерство Чехії повідомляє, що успішне проходження наступних етапів онлайн-реєстрації та особистого вклеювання візової наклейки продовжить чеський тимчасовий захист до 31 березня 2028 року. Станом на 17 листопада 2026 року в публічних чеських інструкціях ще не оголошено дату відкриття наступного циклу чи його операційні строки. Не вважайте, що реєстрація або запис уже доступні; перевіряйте офіційний портал.
 
 Повторне надання статусу не відновлює безперервність проживання й не запускає заново строки обмежених виплат. Якщо пропустити потрібний етап продовження, захист може припинитися у відповідну встановлену законом дату. Перед діями щодо власної справи уточніть наслідки в Міністерства.
 
@@ -95,14 +92,11 @@ Content:
 
 Якщо плануєте перебувати за новою адресою понад 15 днів, повідомте про зміну протягом трьох робочих днів після переїзду за офіційною процедурою. Захист також може припинитися через визначені події, пов’язані з іншим місцем проживання чи іншим захистом, або після понад 90 днів реєстрації за адресою адміністративного органу. Наслідок залежить від події та винятків. Перш ніж вважати, що новий статус чи іноземний документ автоматично припиняє або зберігає чеський захист, уточніть це в Міністерства.
 
+Official sources: [[source:867c5784-1021-5dee-ac1d-f986a22d80d1|Dočasná ochrana]] [[source:8de946a6-0246-5953-86ee-c28536a94800|AKTUALIZOVÁNO 4. 8. 2026]] [[source:e47bb7a3-b6e2-5bd2-a968-c3c82ea35b8a|EU Council Decision 2026/1912]] [[source:0a11c164-3360-5e41-b784-cd3b56eb4555|EU Decision 2026/1912 corrigendum]] [[source:b087b0f1-2960-5d54-87cd-c74aa87d0c6e|Act 65/2022 (Lex Ukraine)]]
 
 ### Claim coverage
 
-- What temporary protection means → CZ-TP01-01
-- Who may apply and where → CZ-TP01-02, CZ-TP01-03, CZ-TP01-04, CZ-TP01-05, CZ-TP01-06
-- Evidence for applications from 5 August 2026 → CZ-TP01-07, CZ-TP01-08, CZ-TP01-09, CZ-TP01-10
-- The extension process and important dates → CZ-TP01-11, CZ-TP01-12, CZ-TP01-13, CZ-TP01-14
-- Changes to your address or protection → CZ-TP01-15, CZ-TP01-16
+See the shared [claim/source coverage matrix](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv).
 
 ## RU
 
@@ -125,38 +119,27 @@ Content:
 
 ## Доказательства для заявлений с 5 августа 2026 года
 
-Для заявлений, поданных с 5 августа 2026 года, действует отдельное чешское требование к доказательствам для лиц, на которых распространяются украинские воинские обязанности. Оно относится к первичным и повторным заявлениям, а также заявлениям для воссоединения семьи, но не к обычному продлению статуса.
+Для заявлений, поданных с 5 августа 2026 года, чешские правила требуют от граждан Украины в возрасте 18–59 лет включительно, на которых распространяются воинские обязанности, подтвердить их исполнение. Правило касается первичных и повторных заявлений на временную защиту, а также заявлений для совместного проживания семьи; оно не применяется к обычному продлению.
 
-- Возраст 18–22 года: подтверждение регистрации в Reserv+ и бумажный вариант eVOD.
-- Возраст 23–60 лет: бумажная eVOD с подтверждением требуемого полного снятия с воинского учёта или освобождения от воинских обязанностей.
+- Возраст 18–22 года: подтвердить регистрацию в Reserv+ и подать распечатанный бумажный eVOD.
+- Возраст 23–59 лет: подать распечатанный бумажный eVOD с записью о снятии с исполнения воинских обязанностей.
 
-Один снимок экрана Reserv+ не заменяет бумажную eVOD. Правило не применяется к людям, которые имели действующую защиту до или на 4 августа 2026 года и непрерывно сохраняли её в том же государстве-члене, а также к обычному продлению. Возрастное разделение основано на конкретных датированных и подробных инструкциях Министерства. Проверьте их требования к сроку действия документов и возможным индивидуальным альтернативам.
+Документ eVOD должен быть актуальным; его действительность проверяют, попросив показать профиль Reserv+ непосредственно сотруднику OAMP. Одного снимка экрана недостаточно. Официальные инструкции также описывают два альтернативных способа: бумажный eVOD, заверенный дипломатическим представительством Украины не ранее чем за три рабочих дня до подачи заявления, либо действительный украинский паспорт со штампом о выезде после соответствующего решения вместе с eVOD. Правило не касается лиц, имевших действующую временную защиту в том же государстве-члене 4 августа 2026 года и непрерывно сохранявших её там, а также обычного продления. Проверьте актуальные инструкции Министерства о документах для вашей ситуации.
 
 ## Этапы продления и важные даты
 
-Чешский цикл 2026 года завершён: зарегистрироваться нужно было до 15 марта 2026 года, а лично обратиться для вклеивания наклейки — до 30 сентября 2026 года. После прохождения обоих этапов защита продлена до 31 марта 2027 года. Продление ЕС до 4 марта 2028 года — отдельное решение.
+Чешский цикл 2026 года завершён: онлайн-регистрация должна была пройти до 15 марта 2026 года, а личный визит для вклеивания наклейки — до 30 сентября 2026 года. После выполнения обоих этапов защита продлена до 31 марта 2027 года. Эти сроки уже прошли и сейчас не являются доступными этапами.
 
-Следующий чешский процесс состоит из двух этапов: онлайн-регистрации, а затем личного визита для наклейки. Законодательный механизм устанавливает срок регистрации до 15 марта 2027 года и личного этапа до 30 сентября 2027 года; после успешного завершения срок защиты продлевается до 31 марта 2028 года. Не считайте, что портал или запись уже открыты. Проверяйте официальный портал, чтобы узнать об операционном открытии и записи.
+Режим временной защиты ЕС действует до 4 марта 2028 года. Министерство Чехии сообщает, что успешное прохождение следующих этапов онлайн-регистрации и личного вклеивания визовой наклейки продлит чешскую временную защиту до 31 марта 2028 года. По состоянию на 17 ноября 2026 года в публичных чешских инструкциях ещё не объявлены дата открытия следующего цикла или его операционные сроки. Не считайте, что регистрация или запись уже доступны; проверяйте официальный портал.
 
-Повторное предоставление статуса не восстанавливает непрерывность проживания и не запускает заново сроки ограниченных выплат. Пропуск необходимого этапа продления может привести к прекращению защиты в соответствующую установленную законом дату. Перед действиями в своей ситуации уточните последствия в Министерстве.
+Повторное предоставление статуса не восстанавливает непрерывность проживания и не запускает заново сроки ограниченных выплат. Если пропустить необходимый этап продления, защита может прекратиться в соответствующую установленную законом дату. Перед действиями по своему делу уточните последствия в Министерстве.
 
 ## Изменение адреса или статуса
 
 Если вы планируете находиться по новому адресу более 15 дней, сообщите об изменении в течение трёх рабочих дней после переезда по официальной процедуре. Защита также может прекратиться из-за определённых событий, связанных с другим местом проживания или другой защитой, либо после более чем 90 дней регистрации по адресу административного органа. Последствия зависят от события и исключений. Прежде чем считать, что новый статус или иностранный документ автоматически прекращает или сохраняет чешскую защиту, уточните это в Министерстве.
 
+Official sources: [[source:867c5784-1021-5dee-ac1d-f986a22d80d1|Dočasná ochrana]] [[source:8de946a6-0246-5953-86ee-c28536a94800|AKTUALIZOVÁNO 4. 8. 2026]] [[source:e47bb7a3-b6e2-5bd2-a968-c3c82ea35b8a|EU Council Decision 2026/1912]] [[source:0a11c164-3360-5e41-b784-cd3b56eb4555|EU Decision 2026/1912 corrigendum]] [[source:b087b0f1-2960-5d54-87cd-c74aa87d0c6e|Act 65/2022 (Lex Ukraine)]]
 
 ### Claim coverage
 
-- What temporary protection means → CZ-TP01-01
-- Who may apply and where → CZ-TP01-02, CZ-TP01-03, CZ-TP01-04, CZ-TP01-05, CZ-TP01-06
-- Evidence for applications from 5 August 2026 → CZ-TP01-07, CZ-TP01-08, CZ-TP01-09, CZ-TP01-10
-- The extension process and important dates → CZ-TP01-11, CZ-TP01-12, CZ-TP01-13, CZ-TP01-14
-- Changes to your address or protection → CZ-TP01-15, CZ-TP01-16
-
-## Editorial note for review — not production copy
-
-The main Ministry page's broad eligibility summary contains overbroad wording that conflicts with its specific dated guidance and detailed document requirements. This draft follows the specific age split for covered applicants; it does not present the inconsistent summary as an alternative instruction. See claims CZ-TP01-07 and CZ-TP01-08 and the research matrix.
-
-## Editorial source set
-
-TP-S01, TP-S02, TP-S03, TP-S04, TP-S05
+See the shared [claim/source coverage matrix](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv).

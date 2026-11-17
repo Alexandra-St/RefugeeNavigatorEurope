@@ -3,8 +3,8 @@
 - Article ID: CZ-TP-02
 - Category: `temporary-protection`
 - Working English title: Residence Options Beyond Temporary Protection in Czechia
-- Source matrix: [after-temporary-protection/SOURCES_AND_CLAIMS.md](../../content-research/czechia-batch-2026-10-19/after-temporary-protection/SOURCES_AND_CLAIMS.md)
-- Editorial status: DRAFT — NOT APPROVED FOR PUBLICATION
+- Source matrix: [claim/source coverage](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv)
+- Editorial status: APPROVED FOR PUBLICATION — integrated 17 November 2026
 
 ## EN
 
@@ -51,14 +51,11 @@ The five-year period starts on acquisition at card collection. ZDP retains free 
 
 For the ordinary five-year permanent-residence calculation described by the Ministry, time under TP counts as half and time under ZDP as full. Other residence, continuity and eligibility conditions still apply. This calculation is not a promise of permanent residence, and future applications are assessed under the rules then in force.
 
+Official sources: [[source:7a5b4d7c-7492-50d4-bedf-c7ef0ff5b8e3|Zvláštní dlouhodobý pobyt]] [[source:d577b271-db4d-5866-9ee8-f27514323112|Kdo může získat zvláštní dlouhodobý pobyt?]] [[source:d2e63104-4a25-55cf-9c60-952f374f8d30|Obecné informace ke zvláštnímu dlouhodobému pobytu]] [[source:0e4e4dee-260a-5f0a-a7dd-cabc6bc35f25|Vyjádření zájmu o zvláštní dlouhodobý pobyt]] [[source:4ecbda89-cbbd-58da-ab39-339f37996973|Registrace k získání zvláštního dlouhodobého…]] [[source:03aed13a-d2be-5930-bc57-87fa93d4ac65|Spuštění registrace ke zvláštnímu dlouhodobému…]] [[source:b105ba13-8e85-5020-a9aa-d1b4861ba59f|ZDP registration regulation]] [[source:a3363d61-99d7-5258-b529-075d611b050b|Act 65/2022 (Lex Ukraine)]] [[source:8cf7b190-8dcc-5ab6-b874-a8f356caf780|Dočasná ochrana]]
 
 ### Claim coverage
 
-- An optional residence route, not a TP extension → CZ-TP02-01, CZ-TP02-02, CZ-TP02-19
-- Which 2026 stage applies now → CZ-TP02-03, CZ-TP02-04
-- Conditions are cumulative and date-specific → CZ-TP02-05, CZ-TP02-06, CZ-TP02-07, CZ-TP02-08, CZ-TP02-09, CZ-TP02-17, CZ-TP02-18
-- Household registration and in-person steps → CZ-TP02-10, CZ-TP02-11, CZ-TP02-12, CZ-TP02-13
-- What ZDP changes, and what it does not → CZ-TP02-14, CZ-TP02-15, CZ-TP02-16
+See the shared [claim/source coverage matrix](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv).
 
 ## UK
 
@@ -105,14 +102,11 @@ Zvláštní dlouhodobý pobyt (ZDP) — це окремий добровільн
 
 За описаним Міністерством звичайним розрахунком п’ятирічного періоду для постійного проживання час із TP зараховується наполовину, а час із ZDP — повністю. Інші вимоги щодо проживання, безперервності та права на статус залишаються чинними. Це не обіцянка постійного проживання; майбутню заяву оцінюватимуть за правилами на той час.
 
+Official sources: [[source:7a5b4d7c-7492-50d4-bedf-c7ef0ff5b8e3|Zvláštní dlouhodobý pobyt]] [[source:d577b271-db4d-5866-9ee8-f27514323112|Kdo může získat zvláštní dlouhodobý pobyt?]] [[source:d2e63104-4a25-55cf-9c60-952f374f8d30|Obecné informace ke zvláštnímu dlouhodobému pobytu]] [[source:0e4e4dee-260a-5f0a-a7dd-cabc6bc35f25|Vyjádření zájmu o zvláštní dlouhodobý pobyt]] [[source:4ecbda89-cbbd-58da-ab39-339f37996973|Registrace k získání zvláštního dlouhodobého…]] [[source:03aed13a-d2be-5930-bc57-87fa93d4ac65|Spuštění registrace ke zvláštnímu dlouhodobému…]] [[source:b105ba13-8e85-5020-a9aa-d1b4861ba59f|ZDP registration regulation]] [[source:a3363d61-99d7-5258-b529-075d611b050b|Act 65/2022 (Lex Ukraine)]] [[source:8cf7b190-8dcc-5ab6-b874-a8f356caf780|Dočasná ochrana]]
 
 ### Claim coverage
 
-- An optional residence route, not a TP extension → CZ-TP02-01, CZ-TP02-02, CZ-TP02-19
-- Which 2026 stage applies now → CZ-TP02-03, CZ-TP02-04
-- Conditions are cumulative and date-specific → CZ-TP02-05, CZ-TP02-06, CZ-TP02-07, CZ-TP02-08, CZ-TP02-09, CZ-TP02-17, CZ-TP02-18
-- Household registration and in-person steps → CZ-TP02-10, CZ-TP02-11, CZ-TP02-12, CZ-TP02-13
-- What ZDP changes, and what it does not → CZ-TP02-14, CZ-TP02-15, CZ-TP02-16
+See the shared [claim/source coverage matrix](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv).
 
 ## RU
 
@@ -159,15 +153,8 @@ Zvláštní dlouhodobý pobyt (ZDP) — это отдельный доброво
 
 По описанному Министерством обычному расчёту пятилетнего срока для постоянного проживания время с TP учитывается наполовину, а с ZDP — полностью. Другие условия проживания, непрерывности и права на статус сохраняются. Это не обещание постоянного проживания; будущее заявление будет оцениваться по действующим на тот момент правилам.
 
+Official sources: [[source:7a5b4d7c-7492-50d4-bedf-c7ef0ff5b8e3|Zvláštní dlouhodobý pobyt]] [[source:d577b271-db4d-5866-9ee8-f27514323112|Kdo může získat zvláštní dlouhodobý pobyt?]] [[source:d2e63104-4a25-55cf-9c60-952f374f8d30|Obecné informace ke zvláštnímu dlouhodobému pobytu]] [[source:0e4e4dee-260a-5f0a-a7dd-cabc6bc35f25|Vyjádření zájmu o zvláštní dlouhodobý pobyt]] [[source:4ecbda89-cbbd-58da-ab39-339f37996973|Registrace k získání zvláštního dlouhodobého…]] [[source:03aed13a-d2be-5930-bc57-87fa93d4ac65|Spuštění registrace ke zvláštnímu dlouhodobému…]] [[source:b105ba13-8e85-5020-a9aa-d1b4861ba59f|ZDP registration regulation]] [[source:a3363d61-99d7-5258-b529-075d611b050b|Act 65/2022 (Lex Ukraine)]] [[source:8cf7b190-8dcc-5ab6-b874-a8f356caf780|Dočasná ochrana]]
 
 ### Claim coverage
 
-- An optional residence route, not a TP extension → CZ-TP02-01, CZ-TP02-02, CZ-TP02-19
-- Which 2026 stage applies now → CZ-TP02-03, CZ-TP02-04
-- Conditions are cumulative and date-specific → CZ-TP02-05, CZ-TP02-06, CZ-TP02-07, CZ-TP02-08, CZ-TP02-09, CZ-TP02-17, CZ-TP02-18
-- Household registration and in-person steps → CZ-TP02-10, CZ-TP02-11, CZ-TP02-12, CZ-TP02-13
-- What ZDP changes, and what it does not → CZ-TP02-14, CZ-TP02-15, CZ-TP02-16
-
-## Editorial source set
-
-RES-S01, RES-S02, RES-S03, RES-S04, RES-S05, RES-S06, RES-S07, TP-S01, TP-S05, SOC-S01
+See the shared [claim/source coverage matrix](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv).

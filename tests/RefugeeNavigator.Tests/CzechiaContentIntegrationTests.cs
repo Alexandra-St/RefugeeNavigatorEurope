@@ -42,12 +42,12 @@ public sealed class CzechiaContentIntegrationTests
     private static readonly IReadOnlyDictionary<string, int> ExpectedSourceCounts = new Dictionary<string, int>
     {
         ["CZ-TP-01"] = 5,
-        ["CZ-TP-02"] = 10,
+        ["CZ-TP-02"] = 9,
         ["CZ-EMP-01"] = 7,
-        ["CZ-EMP-02"] = 9,
+        ["CZ-EMP-02"] = 12,
         ["CZ-HEALTH-01"] = 10,
-        ["CZ-HOUSING-01"] = 6,
-        ["CZ-EDU-01"] = 4,
+        ["CZ-HOUSING-01"] = 7,
+        ["CZ-EDU-01"] = 5,
         ["CZ-SOC-01"] = 6
     };
     private static readonly string[] Languages = ["uk", "en", "ru"];
@@ -95,6 +95,7 @@ public sealed class CzechiaContentIntegrationTests
         Assert.All(translations, translation =>
         {
             Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
+            Assert.Equal(new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero), translation.LastUpdatedAt);
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
@@ -144,7 +145,7 @@ public sealed class CzechiaContentIntegrationTests
         var entryIds = entries.Select(entry => entry.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(source => entryIds.Contains(source.InformationEntryId)).ToArray();
 
-        Assert.Equal(57, sources.Length);
+        Assert.Equal(61, sources.Length);
         Assert.Equal(sources.Length, sources.Select(source => source.Id).Distinct().Count());
         Assert.All(sources, source =>
         {
@@ -159,7 +160,48 @@ public sealed class CzechiaContentIntegrationTests
         foreach (var (key, expectedCount) in ExpectedSourceCounts)
         {
             var entry = Assert.Single(entries, item => item.Id == Guid.Parse(StableArticleIds[key]));
-            Assert.Equal(expectedCount, sources.Count(source => source.InformationEntryId == entry.Id));
+            var owned = sources.Where(source => source.InformationEntryId == entry.Id).ToArray();
+            Assert.Equal(expectedCount, owned.Length);
+            foreach (var translation in entry.Translations(catalog))
+            {
+                var cited = Regex.Matches(translation.Content, @"\[\[source:([0-9a-f-]{36})\|")
+                    .Select(match => Guid.Parse(match.Groups[1].Value)).ToArray();
+                Assert.Equal(expectedCount, cited.Length);
+                Assert.Equal(owned.Select(source => source.Id).Order().ToArray(), cited.Order().ToArray());
+            }
+        }
+        Assert.DoesNotContain(Guid.Parse("75e6cf90-215f-5076-8c38-a33f661d2693"), sources.Select(source => source.Id));
+        Assert.DoesNotContain(Guid.Parse("4e1ad1d9-223c-56f0-9d4d-66f6a2f874a8"), sources.Select(source => source.Id));
+        var requiredAddIds = new[]
+        {
+            "7e94f20d-e105-5d6b-948d-836a4495f4a2", "7be3be92-b487-54fb-8cf8-fd9c9ebbc434",
+            "f8d78155-7717-5555-a202-7e84fdaa5659", "29de22e4-5a36-5b4b-bd1b-befeba9a970e",
+            "04e0683d-e5ac-50da-8301-e7dabc9cd330", "05c7d02b-8cc8-51ed-8f2f-02a69cbe04d7"
+        }.Select(Guid.Parse).ToHashSet();
+        Assert.All(requiredAddIds, id => Assert.Contains(sources, source => source.Id == id));
+        var corrigendum = Assert.Single(sources, source => source.Id == Guid.Parse("0a11c164-3360-5e41-b784-cd3b56eb4555"));
+        Assert.Equal("https://eur-lex.europa.eu/eli/dec_impl/2026/1912/corrigendum/2026-08-05/eng/pdf", corrigendum.Url.AbsoluteUri);
+        var vacancies = Assert.Single(sources, source => source.Id == Guid.Parse("19dfdd6c-765e-5a8e-a2a8-d090b1320105"));
+        Assert.Equal("Volná pracovní místa | MPSV", vacancies.Title);
+        Assert.Equal("https://mpsv.gov.cz/volna-pracovni-mista", vacancies.Url.AbsoluteUri);
+    }
+
+    [Theory]
+    [InlineData("en", "The general criteria list up to two retraining courses per person", "currently support only one Czech-language course per person", "completed a Czech-language course before the new criteria took effect")]
+    [InlineData("uk", "Загальні критерії передбачають до двох перекваліфікаційних курсів на людину", "наразі може оплачувати лише один курс чеської мови на людину", "пройшла курс чеської мови до набрання чинності новими критеріями")]
+    [InlineData("ru", "Общие критерии предусматривают до двух курсов переквалификации на человека", "сейчас может оплатить только один курс чешского языка на человека", "прошёл курс чешского языка до вступления новых критериев в силу")]
+    public async Task CzechLanguageCourseRulesKeepGeneralLimitCurrentFundingAndPriorCourseRestrictionDistinct(
+        string language, string generalLimit, string currentCourseLimit, string priorCourseRestriction)
+    {
+        var catalog = await Catalog.Value;
+        var education = Assert.Single(catalog.InformationEntries, entry => entry.Id == Guid.Parse(StableArticleIds["CZ-EDU-01"]));
+        var employment = Assert.Single(catalog.InformationEntries, entry => entry.Id == Guid.Parse(StableArticleIds["CZ-EMP-01"]));
+        foreach (var entry in new[] { education, employment })
+        {
+            var content = Assert.Single(entry.Translations(catalog), translation => translation.LanguageCode == language).Content;
+            Assert.Contains(generalLimit, content, StringComparison.Ordinal);
+            Assert.Contains(currentCourseLimit, content, StringComparison.Ordinal);
+            Assert.Contains(priorCourseRestriction, content, StringComparison.Ordinal);
         }
     }
 

@@ -3,8 +3,8 @@
 - Article ID: CZ-EMP-01
 - Category: `employment`
 - Working English title: Finding a Job in Czechia
-- Source matrix: [finding-a-job/SOURCES_AND_CLAIMS.md](../../content-research/czechia-batch-2026-10-19/finding-a-job/SOURCES_AND_CLAIMS.md)
-- Editorial status: DRAFT — NOT APPROVED FOR PUBLICATION
+- Source matrix: [claim/source coverage](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv)
+- Editorial status: APPROVED FOR PUBLICATION — integrated 17 November 2026
 
 ## EN
 
@@ -27,16 +27,15 @@ The Labour Office’s vacancy service lets you search current job offers. Vacanc
 
 ## Language learning, retraining and qualifications
 
-Czech-language retraining through the Labour Office is assessed and approved under the 2026 rules. The scheme limits a person to one approved course and prioritises labour-market need; funding, approval and course availability are not guaranteed for everyone. Ask about eligibility and current registration before relying on a course.
+Czech-language retraining through the Labour Office is assessed under the 2026 rules. The general criteria list up to two retraining courses per person, but the Labour Office’s current FAQ says that, because of demand and limited funding, it can currently support only one Czech-language course per person. A course is not an entitlement; labour-market relevance and individual assessment still apply. Ask about current availability before relying on a course. The FAQ also says that a person who completed a Czech-language course before the new criteria took effect cannot be offered another one.
 
 CzechUp is a project for eligible participants combining language, qualifications and employment support, scheduled through 30 November 2028. The Labour Office can advise whether assessed participation is available. Recognition of foreign academic education is a separate procedure and does not itself authorize practice in a regulated profession. For profession-specific requirements, check the competent recognition authority.
 
+Official sources: [[source:78900b2b-5ce7-5257-b447-c27f8313d70d|Pomoc pro občany Ukrajiny a jejich zaměstnavatele]] [[source:e0d09db6-311d-5780-8573-b0b975248cea|Služby pro cizince ze třetích zemí]] [[source:e70a38c9-eda0-5c8f-a31b-e34e1e339b3d|Labour Office Czech-course rules]] [[source:4888d6a7-e06f-5c55-8980-15e85ced78d5|CzechUp]] [[source:1d9670e6-8a38-5c4c-b9c9-6bc71384e5e5|Hledáte novou práci? Zaregistrujte se na Úřad…]] [[source:19dfdd6c-765e-5a8e-a2a8-d090b1320105|MPSV vacancy search]] [[source:71b61e09-6eff-5aee-88d9-b00f940830e8|Nostrifikace]]
 
 ### Claim coverage
 
-- Start with the Labour Office → CZ-EMP01-01, CZ-EMP01-02, CZ-EMP01-03
-- Search official vacancies and ask for counselling → CZ-EMP01-04, CZ-EMP01-08
-- Language learning, retraining and qualifications → CZ-EMP01-05, CZ-EMP01-06, CZ-EMP01-07
+See the shared [claim/source coverage matrix](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv).
 
 ## UK
 
@@ -59,16 +58,15 @@ Content:
 
 ## Мова, перекваліфікація та кваліфікації
 
-Перекваліфікаційні курси чеської мови через Управління праці оцінюються й погоджуються за правилами 2026 року. Для однієї людини передбачено не більше одного погодженого курсу, а пріоритет має потреба ринку праці. Фінансування, погодження та наявність курсу не гарантовані всім. Перед розрахунком на курс уточніть умови та поточний запис.
+Перекваліфікаційні курси чеської мови через Управління праці оцінюються за правилами 2026 року. Загальні критерії передбачають до двох перекваліфікаційних курсів на людину, але в актуальних відповідях на запитання Управління праці зазначає, що через попит і обмежене фінансування наразі може оплачувати лише один курс чеської мови на людину. Курс не є гарантованим правом: враховують його зв’язок із працевлаштуванням та індивідуальну оцінку. Перед тим як розраховувати на курс, уточніть поточну наявність місць. За FAQ, якщо людина пройшла курс чеської мови до набрання чинності новими критеріями, додатковий курс їй запропонувати не можуть.
 
 Проєкт CzechUp для відповідних учасників поєднує мовну, кваліфікаційну та трудову підтримку й запланований до 30 листопада 2028 року. Управління праці може порадити, чи доступна участь після оцінки. Визнання іноземної академічної освіти є окремою процедурою і саме по собі не дає права працювати в регульованій професії. Вимоги до конкретної професії уточнюйте в компетентному органі.
 
+Official sources: [[source:78900b2b-5ce7-5257-b447-c27f8313d70d|Pomoc pro občany Ukrajiny a jejich zaměstnavatele]] [[source:e0d09db6-311d-5780-8573-b0b975248cea|Služby pro cizince ze třetích zemí]] [[source:e70a38c9-eda0-5c8f-a31b-e34e1e339b3d|Labour Office Czech-course rules]] [[source:4888d6a7-e06f-5c55-8980-15e85ced78d5|CzechUp]] [[source:1d9670e6-8a38-5c4c-b9c9-6bc71384e5e5|Hledáte novou práci? Zaregistrujte se na Úřad…]] [[source:19dfdd6c-765e-5a8e-a2a8-d090b1320105|MPSV vacancy search]] [[source:71b61e09-6eff-5aee-88d9-b00f940830e8|Nostrifikace]]
 
 ### Claim coverage
 
-- Start with the Labour Office → CZ-EMP01-01, CZ-EMP01-02, CZ-EMP01-03
-- Search official vacancies and ask for counselling → CZ-EMP01-04, CZ-EMP01-08
-- Language learning, retraining and qualifications → CZ-EMP01-05, CZ-EMP01-06, CZ-EMP01-07
+See the shared [claim/source coverage matrix](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv).
 
 ## RU
 
@@ -91,17 +89,12 @@ Content:
 
 ## Язык, переквалификация и квалификации
 
-Курсы переквалификации по чешскому языку через Управление труда оцениваются и утверждаются по правилам 2026 года. Для одного человека предусмотрен не более чем один утверждённый курс, приоритет отдаётся потребности рынка труда. Финансирование, одобрение и наличие курса не гарантированы всем. Прежде чем рассчитывать на курс, уточните условия и текущую запись.
+Курсы переквалификации по чешскому языку через Управление труда оцениваются по правилам 2026 года. Общие критерии предусматривают до двух курсов переквалификации на человека, но в актуальном FAQ Управление труда указывает, что из-за спроса и ограниченного финансирования сейчас может оплатить только один курс чешского языка на человека. Курс не гарантирован: учитываются его связь с трудоустройством и индивидуальная оценка. Прежде чем рассчитывать на курс, уточните текущую доступность. Согласно FAQ, если человек прошёл курс чешского языка до вступления новых критериев в силу, предложить ему дополнительный такой курс не могут.
 
 Проект CzechUp для соответствующих участников объединяет языковую, квалификационную и трудовую поддержку и запланирован до 30 ноября 2028 года. Управление труда может сообщить, доступно ли участие после оценки. Признание иностранного академического образования — отдельная процедура, которая сама по себе не даёт права работать в регулируемой профессии. Требования к конкретной профессии уточняйте в компетентном органе.
 
+Official sources: [[source:78900b2b-5ce7-5257-b447-c27f8313d70d|Pomoc pro občany Ukrajiny a jejich zaměstnavatele]] [[source:e0d09db6-311d-5780-8573-b0b975248cea|Služby pro cizince ze třetích zemí]] [[source:e70a38c9-eda0-5c8f-a31b-e34e1e339b3d|Labour Office Czech-course rules]] [[source:4888d6a7-e06f-5c55-8980-15e85ced78d5|CzechUp]] [[source:1d9670e6-8a38-5c4c-b9c9-6bc71384e5e5|Hledáte novou práci? Zaregistrujte se na Úřad…]] [[source:19dfdd6c-765e-5a8e-a2a8-d090b1320105|MPSV vacancy search]] [[source:71b61e09-6eff-5aee-88d9-b00f940830e8|Nostrifikace]]
 
 ### Claim coverage
 
-- Start with the Labour Office → CZ-EMP01-01, CZ-EMP01-02, CZ-EMP01-03
-- Search official vacancies and ask for counselling → CZ-EMP01-04, CZ-EMP01-08
-- Language learning, retraining and qualifications → CZ-EMP01-05, CZ-EMP01-06, CZ-EMP01-07
-
-## Editorial source set
-
-EMP-S01, EMP-S02, EMP-S03, EMP-S04, EMP-S05, EMP-S06, EDU-S02
+See the shared [claim/source coverage matrix](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv).

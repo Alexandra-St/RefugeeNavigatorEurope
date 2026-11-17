@@ -3,8 +3,8 @@
 - Article ID: CZ-HOUSING-01
 - Category: `housing`
 - Working English title: Finding Accommodation in Czechia
-- Source matrix: [housing/SOURCES_AND_CLAIMS.md](../../content-research/czechia-batch-2026-10-19/housing/SOURCES_AND_CLAIMS.md)
-- Editorial status: DRAFT — NOT APPROVED FOR PUBLICATION
+- Source matrix: [claim/source coverage](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv)
+- Editorial status: APPROVED FOR PUBLICATION — integrated 17 November 2026
 
 ## EN
 
@@ -33,12 +33,11 @@ If your planned stay at a new address is longer than 15 days, report the address
 
 Eligible housing costs may be considered as part of the means-tested humanitarian benefit (HuD), subject to a legal housing basis and the relevant activity or vulnerability conditions. This is not guaranteed rent reimbursement. If you may lose accommodation, contact the Labour Office or municipal social workers for an individual assessment; this does not create a general right to municipal housing.
 
+Official sources: [[source:28ae9265-1d80-5843-99f7-1eae992595f3|Státní humanitární ubytování]] [[source:c22981bd-1abc-5801-9bb8-8e70c47f0b8c|Nájemní smlouva]] [[source:f85327cf-cfbc-5c9a-bef0-d732e6e0437b|Platby spojené s nájmem bytu]] [[source:9def696b-1053-500d-96bd-e00b7b0de833|Dočasná ochrana]] [[source:e0d20dd8-5340-59d2-b091-eb919fc244c7|Act 66/2022]] [[source:54790931-2d68-5609-8323-603b69b19eb0|Pomoc pro občany Ukrajiny a jejich zaměstnavatele]] [[source:05c7d02b-8cc8-51ed-8f2f-02a69cbe04d7|Humanitární dávka]]
 
 ### Claim coverage
 
-- State humanitarian accommodation → CZ-HOUSING01-01, CZ-HOUSING01-02, CZ-HOUSING01-03
-- Finding a private rental → CZ-HOUSING01-04, CZ-HOUSING01-05
-- Housing costs and support navigation → CZ-HOUSING01-06, CZ-HOUSING01-07, CZ-HOUSING01-08
+See the shared [claim/source coverage matrix](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv).
 
 ## UK
 
@@ -67,12 +66,11 @@ Content:
 
 Відповідні витрати на житло можуть враховуватися в межах допомоги humanitární dávka (HuD), що залежить від оцінки доходів і ресурсів, законної підстави проживання та відповідних умов щодо зайнятості чи вразливості. Відшкодування оренди не гарантоване. Якщо є ризик втратити житло, зверніться до Управління праці або муніципальних соціальних працівників для індивідуальної оцінки; це не створює загального права на муніципальне житло.
 
+Official sources: [[source:28ae9265-1d80-5843-99f7-1eae992595f3|Státní humanitární ubytování]] [[source:c22981bd-1abc-5801-9bb8-8e70c47f0b8c|Nájemní smlouva]] [[source:f85327cf-cfbc-5c9a-bef0-d732e6e0437b|Platby spojené s nájmem bytu]] [[source:9def696b-1053-500d-96bd-e00b7b0de833|Dočasná ochrana]] [[source:e0d20dd8-5340-59d2-b091-eb919fc244c7|Act 66/2022]] [[source:54790931-2d68-5609-8323-603b69b19eb0|Pomoc pro občany Ukrajiny a jejich zaměstnavatele]] [[source:05c7d02b-8cc8-51ed-8f2f-02a69cbe04d7|Humanitární dávka]]
 
 ### Claim coverage
 
-- State humanitarian accommodation → CZ-HOUSING01-01, CZ-HOUSING01-02, CZ-HOUSING01-03
-- Finding a private rental → CZ-HOUSING01-04, CZ-HOUSING01-05
-- Housing costs and support navigation → CZ-HOUSING01-06, CZ-HOUSING01-07, CZ-HOUSING01-08
+See the shared [claim/source coverage matrix](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv).
 
 ## RU
 
@@ -101,13 +99,8 @@ Content:
 
 Подходящие жилищные расходы могут учитываться в рамках выплаты humanitární dávka (HuD), которая зависит от оценки доходов и ресурсов, законного основания проживания и соответствующих условий занятости или уязвимости. Возмещение аренды не гарантировано. При риске потерять жильё обратитесь в Управление труда или к муниципальным социальным работникам для индивидуальной оценки; это не создаёт общего права на муниципальное жильё.
 
+Official sources: [[source:28ae9265-1d80-5843-99f7-1eae992595f3|Státní humanitární ubytování]] [[source:c22981bd-1abc-5801-9bb8-8e70c47f0b8c|Nájemní smlouva]] [[source:f85327cf-cfbc-5c9a-bef0-d732e6e0437b|Platby spojené s nájmem bytu]] [[source:9def696b-1053-500d-96bd-e00b7b0de833|Dočasná ochrana]] [[source:e0d20dd8-5340-59d2-b091-eb919fc244c7|Act 66/2022]] [[source:54790931-2d68-5609-8323-603b69b19eb0|Pomoc pro občany Ukrajiny a jejich zaměstnavatele]] [[source:05c7d02b-8cc8-51ed-8f2f-02a69cbe04d7|Humanitární dávka]]
 
 ### Claim coverage
 
-- State humanitarian accommodation → CZ-HOUSING01-01, CZ-HOUSING01-02, CZ-HOUSING01-03
-- Finding a private rental → CZ-HOUSING01-04, CZ-HOUSING01-05
-- Housing costs and support navigation → CZ-HOUSING01-06, CZ-HOUSING01-07, CZ-HOUSING01-08
-
-## Editorial source set
-
-HOUSE-S01, HOUSE-S02, HOUSE-S03, TP-S01, SOC-S01, EMP-S01
+See the shared [claim/source coverage matrix](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv).

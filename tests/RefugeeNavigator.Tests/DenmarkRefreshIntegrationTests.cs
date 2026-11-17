@@ -45,7 +45,7 @@ public sealed class DenmarkRefreshIntegrationTests
     public async Task DenmarkSourcesAndArticleSourceReferencesReconcile()
     {
         var catalog = await new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync();
-        Assert.Equal(1494, catalog.OfficialSources.Count);
+        Assert.Equal(1498, catalog.OfficialSources.Count);
         var denmarkSources = catalog.OfficialSources.Where(source => ArticleIds.Contains(source.InformationEntryId)).ToArray();
         Assert.Equal(107, denmarkSources.Length);
         Assert.Equal(denmarkSources.Length, denmarkSources.Select(source => source.Id).Distinct().Count());

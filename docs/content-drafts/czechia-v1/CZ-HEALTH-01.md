@@ -3,8 +3,8 @@
 - Article ID: CZ-HEALTH-01
 - Category: `healthcare`
 - Working English title: Accessing Healthcare in Czechia
-- Source matrix: [healthcare/SOURCES_AND_CLAIMS.md](../../content-research/czechia-batch-2026-10-19/healthcare/SOURCES_AND_CLAIMS.md)
-- Editorial status: DRAFT — NOT APPROVED FOR PUBLICATION
+- Source matrix: [claim/source coverage](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv)
+- Editorial status: APPROVED FOR PUBLICATION — integrated 17 November 2026
 
 ## EN
 
@@ -39,13 +39,11 @@ A general practitioner is a usual first contact. Access to specialists and hospi
 
 Insured care covered by the applicable rules cannot simply be charged again, but optional or non-covered services may require payment. Coverage, provider contracts and any co-payment matter, so do not assume all healthcare, medicines or services are free.
 
+Official sources: [[source:93923489-d91d-5243-8901-d7f55c383577|Act 65/2022 (Lex Ukraine)]] [[source:27f15d64-01ad-589e-a95d-5db32b5b744a|Oznámení plátce pojistného]] [[source:97322d7e-3022-5096-92ff-192cca1f7d4d|Přechod osob z víza dočasné ochrany na…]] [[source:e7bf1b87-bd83-508a-8377-ad3652f0d086|OZP]] [[source:5dfc1ea5-3379-5fcc-afc4-fa8c9be3f9ef|Získal/a jsem vízum dočasné ochrany a chci se…]] [[source:70acdcb5-28aa-5e21-9cbd-a3738d554c21|Prodloužení zdravotního pojištění po prodloužení…]] [[source:d94a8789-9178-5f34-b701-6a1c707c93ad|Zdravotnická záchranná služba]] [[source:ab42f29a-5d3c-5b16-8fe0-2eed41e5c917|Poskytovatelé zdravotních služeb]] [[source:28a3e62f-be4d-5e9e-86e7-5a3efeca8f25|Za co u lékaře platit můžete a za co ne?…]] [[source:6f8e3aa4-eb9b-59f2-9baa-9dc7d7fa6ffe|Obecné informace ke zvláštnímu dlouhodobému pobytu]]
 
 ### Claim coverage
 
-- Health insurance and who pays → CZ-HEALTH01-01, CZ-HEALTH01-02, CZ-HEALTH01-06
-- After the initial state-paid period → CZ-HEALTH01-03, CZ-HEALTH01-04, CZ-HEALTH01-05, CZ-HEALTH01-06
-- If you acquire ZDP → CZ-HEALTH01-10, CZ-HEALTH01-11
-- Finding care and emergency help → CZ-HEALTH01-07, CZ-HEALTH01-08, CZ-HEALTH01-09
+See the shared [claim/source coverage matrix](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv).
 
 ## UK
 
@@ -80,13 +78,11 @@ Content:
 
 Послугу, покриту застосовними правилами страхування, не можна просто виставити до повторної оплати, але за додаткові чи непокриті послуги може стягуватися плата. Важливі покриття, договір надавача та співоплата, тому не вважайте, що вся медицина, ліки й послуги безоплатні.
 
+Official sources: [[source:93923489-d91d-5243-8901-d7f55c383577|Act 65/2022 (Lex Ukraine)]] [[source:27f15d64-01ad-589e-a95d-5db32b5b744a|Oznámení plátce pojistného]] [[source:97322d7e-3022-5096-92ff-192cca1f7d4d|Přechod osob z víza dočasné ochrany na…]] [[source:e7bf1b87-bd83-508a-8377-ad3652f0d086|OZP]] [[source:5dfc1ea5-3379-5fcc-afc4-fa8c9be3f9ef|Získal/a jsem vízum dočasné ochrany a chci se…]] [[source:70acdcb5-28aa-5e21-9cbd-a3738d554c21|Prodloužení zdravotního pojištění po prodloužení…]] [[source:d94a8789-9178-5f34-b701-6a1c707c93ad|Zdravotnická záchranná služba]] [[source:ab42f29a-5d3c-5b16-8fe0-2eed41e5c917|Poskytovatelé zdravotních služeb]] [[source:28a3e62f-be4d-5e9e-86e7-5a3efeca8f25|Za co u lékaře platit můžete a za co ne?…]] [[source:6f8e3aa4-eb9b-59f2-9baa-9dc7d7fa6ffe|Obecné informace ke zvláštnímu dlouhodobému pobytu]]
 
 ### Claim coverage
 
-- Health insurance and who pays → CZ-HEALTH01-01, CZ-HEALTH01-02, CZ-HEALTH01-06
-- After the initial state-paid period → CZ-HEALTH01-03, CZ-HEALTH01-04, CZ-HEALTH01-05, CZ-HEALTH01-06
-- If you acquire ZDP → CZ-HEALTH01-10, CZ-HEALTH01-11
-- Finding care and emergency help → CZ-HEALTH01-07, CZ-HEALTH01-08, CZ-HEALTH01-09
+See the shared [claim/source coverage matrix](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv).
 
 ## RU
 
@@ -121,14 +117,8 @@ Content:
 
 Застрахованную услугу, покрытую применимыми правилами, нельзя просто выставить к повторной оплате, однако дополнительные или не покрываемые услуги могут быть платными. Важны условия покрытия, договор с поставщиком и доплата, поэтому не считайте всю медицину, лекарства или услуги бесплатными.
 
+Official sources: [[source:93923489-d91d-5243-8901-d7f55c383577|Act 65/2022 (Lex Ukraine)]] [[source:27f15d64-01ad-589e-a95d-5db32b5b744a|Oznámení plátce pojistného]] [[source:97322d7e-3022-5096-92ff-192cca1f7d4d|Přechod osob z víza dočasné ochrany na…]] [[source:e7bf1b87-bd83-508a-8377-ad3652f0d086|OZP]] [[source:5dfc1ea5-3379-5fcc-afc4-fa8c9be3f9ef|Získal/a jsem vízum dočasné ochrany a chci se…]] [[source:70acdcb5-28aa-5e21-9cbd-a3738d554c21|Prodloužení zdravotního pojištění po prodloužení…]] [[source:d94a8789-9178-5f34-b701-6a1c707c93ad|Zdravotnická záchranná služba]] [[source:ab42f29a-5d3c-5b16-8fe0-2eed41e5c917|Poskytovatelé zdravotních služeb]] [[source:28a3e62f-be4d-5e9e-86e7-5a3efeca8f25|Za co u lékaře platit můžete a za co ne?…]] [[source:6f8e3aa4-eb9b-59f2-9baa-9dc7d7fa6ffe|Obecné informace ke zvláštnímu dlouhodobému pobytu]]
 
 ### Claim coverage
 
-- Health insurance and who pays → CZ-HEALTH01-01, CZ-HEALTH01-02, CZ-HEALTH01-06
-- After the initial state-paid period → CZ-HEALTH01-03, CZ-HEALTH01-04, CZ-HEALTH01-05, CZ-HEALTH01-06
-- If you acquire ZDP → CZ-HEALTH01-10, CZ-HEALTH01-11
-- Finding care and emergency help → CZ-HEALTH01-07, CZ-HEALTH01-08, CZ-HEALTH01-09
-
-## Editorial source set
-
-HEALTH-S01, HEALTH-S02, HEALTH-S03, HEALTH-S04, HEALTH-S05, HEALTH-S06, HEALTH-S07, HEALTH-S08, TP-S05, RES-S03
+See the shared [claim/source coverage matrix](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv).

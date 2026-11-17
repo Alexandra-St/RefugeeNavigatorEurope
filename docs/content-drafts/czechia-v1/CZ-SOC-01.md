@@ -3,8 +3,8 @@
 - Article ID: CZ-SOC-01
 - Category: `social-assistance`
 - Working English title: Financial and Social Assistance in Czechia
-- Source matrix: [social-assistance/SOURCES_AND_CLAIMS.md](../../content-research/czechia-batch-2026-10-19/social-assistance/SOURCES_AND_CLAIMS.md)
-- Editorial status: DRAFT — NOT APPROVED FOR PUBLICATION
+- Source matrix: [claim/source coverage](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv)
+- Editorial status: APPROVED FOR PUBLICATION — integrated 17 November 2026
 
 ## EN
 
@@ -43,14 +43,11 @@ Mimořádná okamžitá pomoc (MOP) is urgent assistance assessed individually u
 
 Special long-term residence (ZDP) changes access to non-insurance benefits. The Ministry states that holders do not receive the listed non-insurance social benefits on that basis. Do not assume that HuD under TP continues unchanged after ZDP is acquired; verify the applicable rules for the new status.
 
+Official sources: [[source:0a0103b7-751d-5d19-909a-f7696bc6cf0b|Act 66/2022]] [[source:35422666-3296-5760-89cb-b4069aa3d98e|Humanitární dávka]] [[source:c0ad7f8a-b90b-5e0b-b8db-984f5027ad42|Zákon č. 111/2006 Sb., o pomoci v hmotné nouzi]] [[source:f407b4c0-aee6-50fa-aed3-4f567c54527e|Mimořádná okamžitá pomoc]] [[source:d734f84c-2adc-5ac0-bf20-08f9fa0437fc|Pomoc pro občany Ukrajiny a jejich zaměstnavatele]] [[source:e91302cf-5fe2-5967-9553-f3a543a85431|Obecné informace ke zvláštnímu dlouhodobému pobytu]]
 
 ### Claim coverage
 
-- Humanitarian benefit is means-tested → CZ-SOC01-01, CZ-SOC01-02, CZ-SOC01-03
-- How the monthly assessment works → CZ-SOC01-05, CZ-SOC01-06, CZ-SOC01-09
-- Adult reduction and exceptions → CZ-SOC01-04
-- Applying and urgent assistance → CZ-SOC01-07, CZ-SOC01-08, CZ-SOC01-10
-- If you acquire ZDP → CZ-SOC01-11
+See the shared [claim/source coverage matrix](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv).
 
 ## UK
 
@@ -89,14 +86,11 @@ Mimořádná okamžitá pomoc (MOP) — це термінова допомога
 
 Спеціальне довгострокове проживання (ZDP) змінює доступ до виплат, не пов’язаних зі страхуванням. Міністерство зазначає, що власники ZDP не отримують перелічені соціальні виплати на цій підставі. Не припускайте, що HuD за TP автоматично продовжиться без змін після набуття ZDP; перевірте правила для нового статусу.
 
+Official sources: [[source:0a0103b7-751d-5d19-909a-f7696bc6cf0b|Act 66/2022]] [[source:35422666-3296-5760-89cb-b4069aa3d98e|Humanitární dávka]] [[source:c0ad7f8a-b90b-5e0b-b8db-984f5027ad42|Zákon č. 111/2006 Sb., o pomoci v hmotné nouzi]] [[source:f407b4c0-aee6-50fa-aed3-4f567c54527e|Mimořádná okamžitá pomoc]] [[source:d734f84c-2adc-5ac0-bf20-08f9fa0437fc|Pomoc pro občany Ukrajiny a jejich zaměstnavatele]] [[source:e91302cf-5fe2-5967-9553-f3a543a85431|Obecné informace ke zvláštnímu dlouhodobému pobytu]]
 
 ### Claim coverage
 
-- Humanitarian benefit is means-tested → CZ-SOC01-01, CZ-SOC01-02, CZ-SOC01-03
-- How the monthly assessment works → CZ-SOC01-05, CZ-SOC01-06, CZ-SOC01-09
-- Adult reduction and exceptions → CZ-SOC01-04
-- Applying and urgent assistance → CZ-SOC01-07, CZ-SOC01-08, CZ-SOC01-10
-- If you acquire ZDP → CZ-SOC01-11
+See the shared [claim/source coverage matrix](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv).
 
 ## RU
 
@@ -135,15 +129,8 @@ Mimořádná okamžitá pomoc (MOP) — это срочная помощь, оц
 
 Специальное долгосрочное проживание (ZDP) меняет доступ к выплатам, не связанным со страхованием. Министерство указывает, что обладатели ZDP не получают перечисленные социальные выплаты на этом основании. Не предполагайте, что HuD на основании TP автоматически продолжится без изменений после приобретения ZDP; проверьте правила для нового статуса.
 
+Official sources: [[source:0a0103b7-751d-5d19-909a-f7696bc6cf0b|Act 66/2022]] [[source:35422666-3296-5760-89cb-b4069aa3d98e|Humanitární dávka]] [[source:c0ad7f8a-b90b-5e0b-b8db-984f5027ad42|Zákon č. 111/2006 Sb., o pomoci v hmotné nouzi]] [[source:f407b4c0-aee6-50fa-aed3-4f567c54527e|Mimořádná okamžitá pomoc]] [[source:d734f84c-2adc-5ac0-bf20-08f9fa0437fc|Pomoc pro občany Ukrajiny a jejich zaměstnavatele]] [[source:e91302cf-5fe2-5967-9553-f3a543a85431|Obecné informace ke zvláštnímu dlouhodobému pobytu]]
 
 ### Claim coverage
 
-- Humanitarian benefit is means-tested → CZ-SOC01-01, CZ-SOC01-02, CZ-SOC01-03
-- How the monthly assessment works → CZ-SOC01-05, CZ-SOC01-06, CZ-SOC01-09
-- Adult reduction and exceptions → CZ-SOC01-04
-- Applying and urgent assistance → CZ-SOC01-07, CZ-SOC01-08, CZ-SOC01-10
-- If you acquire ZDP → CZ-SOC01-11
-
-## Editorial source set
-
-SOC-S01, SOC-S02, SOC-S03, SOC-S04, EMP-S01, RES-S03
+See the shared [claim/source coverage matrix](../../content-refresh/2026-11/czechia/CLAIM_SOURCE_COVERAGE_01.csv).
