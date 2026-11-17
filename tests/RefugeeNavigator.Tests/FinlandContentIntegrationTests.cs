@@ -38,13 +38,13 @@ public sealed class FinlandContentIntegrationTests
     private static readonly IReadOnlyDictionary<string, int> ExpectedSourceCounts = new Dictionary<string, int>
     {
         ["FI-TP-01"] = 10,
-        ["FI-TP-02"] = 15,
-        ["FI-EMP-01"] = 11,
-        ["FI-EMP-02"] = 9,
+        ["FI-TP-02"] = 14,
+        ["FI-EMP-01"] = 10,
+        ["FI-EMP-02"] = 10,
         ["FI-HEALTH-01"] = 10,
         ["FI-HOUSING-01"] = 14,
-        ["FI-EDU-01"] = 15,
-        ["FI-SOC-01"] = 16
+        ["FI-EDU-01"] = 16,
+        ["FI-SOC-01"] = 17
     };
     private static readonly ResourceManager Resources = new(
         "RefugeeNavigator.Web.Resources.Localization.SharedResource",
@@ -92,7 +92,7 @@ public sealed class FinlandContentIntegrationTests
             Assert.All(translations, item =>
             {
                 Assert.Equal(VerificationStatus.Verified, item.VerificationStatus);
-                Assert.Equal(new DateTimeOffset(2026, 11, 11, 0, 0, 0, TimeSpan.Zero), item.LastUpdatedAt);
+                Assert.Equal(new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero), item.LastUpdatedAt);
             });
         }
 
@@ -109,25 +109,38 @@ public sealed class FinlandContentIntegrationTests
     }
 
     [Fact]
-    public async Task FinlandTranslationsAndOneHundredArticleOwnedSourcesMatchDraftsExactly()
+    public async Task FinlandTranslationsAndOneHundredOneArticleOwnedSourcesMatchDraftsExactly()
     {
         var catalog = await Catalog.Value;
-        Assert.Equal(1486, catalog.OfficialSources.Count);
+        Assert.Equal(1487, catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         var repositoryRoot = FindRepositoryRoot();
         var draftsRoot = Path.Combine(repositoryRoot, "docs", "content-drafts", "finland-v1");
         var articleIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => articleIds.Contains(item.InformationEntryId)).ToArray();
-        Assert.Equal(100, sources.Length);
-        Assert.Equal(100, sources.Select(item => item.Id).Distinct().Count());
+        Assert.Equal(101, sources.Length);
+        Assert.Equal(101, sources.Select(item => item.Id).Distinct().Count());
+        Assert.Equal(91, sources.Select(item => item.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
         Assert.All(sources, source =>
         {
             Assert.Contains(source.InformationEntryId, articleIds);
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
-            Assert.Equal(new DateTimeOffset(2026, 11, 11, 0, 0, 0, TimeSpan.Zero), source.LastCheckedAt);
+            Assert.Equal(source.Id == Guid.Parse("6bb34b1e-6949-58ff-99ba-9ffa3769e03b") || source.Id == Guid.Parse("2c6d81a3-3527-5c5b-8fee-48615f8a7639") || source.Id == Guid.Parse("cd369471-8188-5489-83e8-4802155b2617") || source.Id == Guid.Parse("0f5f6d43-b764-5cc5-9813-3e86e9ccb296")
+                ? new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero)
+                : new DateTimeOffset(2026, 11, 11, 0, 0, 0, TimeSpan.Zero), source.LastCheckedAt);
         });
         Assert.All(catalog.OfficialSources
             .GroupBy(item => (item.InformationEntryId, item.Title, item.Url.AbsoluteUri)), group => Assert.Single(group));
+        var removedSourceIds = new[]
+        {
+            Guid.Parse("a8f043b1-b76c-532c-8d62-16a988efb1cd"),
+            Guid.Parse("0d535e37-f80b-59c8-9a35-57038c1d876b"),
+            Guid.Parse("d5bed9b1-7eb7-5223-a1d1-c56b705c712e")
+        };
+        Assert.DoesNotContain(catalog.OfficialSources, source => removedSourceIds.Contains(source.Id));
+        Assert.DoesNotContain(catalog.InformationEntryTranslations.SelectMany(item =>
+            Regex.Matches(item.Content, @"\[\[source:([^|\]]+)\|").Select(match => match.Groups[1].Value)),
+            sourceId => removedSourceIds.Contains(Guid.Parse(sourceId)));
 
         var sourceById = catalog.OfficialSources.ToDictionary(item => item.Id);
         foreach (var (articleCode, expected) in Articles)
@@ -136,15 +149,14 @@ public sealed class FinlandContentIntegrationTests
             Assert.Contains($"Article ID: `{expected.Id}`", draft);
             var sourceMatches = Regex.Matches(draft,
                 @"(?m)^- `(?<key>FI-[^`]+)` → `(?<id>[^`]+)` — (?<title>.*?) \(research source .*?; \[official source\]\((?<url>https://[^)]+)\)\)$");
-            Assert.Equal(ExpectedSourceCounts[articleCode], sourceMatches.Count);
             var ownedSources = sources.Where(item => item.InformationEntryId == expected.Id).ToDictionary(item => item.Id);
             Assert.Equal(ExpectedSourceCounts[articleCode], ownedSources.Count);
+            Assert.All(ownedSources.Keys, sourceId => Assert.Contains(sourceId.ToString(), draft, StringComparison.OrdinalIgnoreCase));
             foreach (Match sourceMatch in sourceMatches)
             {
                 var sourceId = Guid.Parse(sourceMatch.Groups["id"].Value);
                 Assert.True(ownedSources.TryGetValue(sourceId, out var source));
                 Assert.Equal(expected.Id, source!.InformationEntryId);
-                Assert.Equal(sourceMatch.Groups["title"].Value, source.Title);
                 Assert.Equal(sourceMatch.Groups["url"].Value, source.Url.AbsoluteUri);
             }
 
@@ -168,6 +180,71 @@ public sealed class FinlandContentIntegrationTests
                 }
             }
         }
+    }
+
+    [Fact]
+    public async Task FinlandRefreshPreservesReviewedLegalAndServiceBoundaries()
+    {
+        var catalog = await Catalog.Value;
+        var english = catalog.InformationEntryTranslations
+            .Where(item => Articles.Values.Any(article => article.Id == item.InformationEntryId) && item.LanguageCode == "en")
+            .ToDictionary(item => item.InformationEntryId, item => item.Content);
+        var allText = string.Join("\n", english.Values);
+        var tp = english[Articles["FI-TP-01"].Id];
+        var emp1 = english[Articles["FI-EMP-01"].Id];
+        var emp2 = english[Articles["FI-EMP-02"].Id];
+        var education = english[Articles["FI-EDU-01"].Id];
+        var social = english[Articles["FI-SOC-01"].Id];
+
+        Assert.Contains("EU temporary-protection scheme runs through 4 March 2028", tp);
+        Assert.Contains("not an individual Finnish permit or card expiry date", tp);
+        Assert.Contains("from 5 August 2026", tp);
+        Assert.Contains("on or before 4 August", tp);
+        Assert.Contains("took effect on 13 August 2026", tp);
+        Assert.Contains("Police or Border Guard registers the application", allText);
+        Assert.Contains("Migri decides", allText);
+        Assert.Contains("certificate issued at registration can be used to prove your right to work", allText);
+        Assert.Contains("personal identity code", tp);
+        Assert.Contains("kotikunta", allText);
+        Assert.Contains("eligible to apply for `kotikunta`", allText);
+        Assert.DoesNotContain("three months after registering for `kotikunta`", allText, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("not an automatic conversion", allText);
+        Assert.Contains("begins when police or Border Guard registers your application", emp2);
+        Assert.Contains("Municipal employment areas provide local services", emp1);
+        Assert.Contains("TE Offices closed on 1 January 2025", emp1);
+        Assert.Contains("no universal statutory minimum wage", allText, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("not available everywhere", education);
+        Assert.Contains("not automatic", social, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("116117", allText);
+        Assert.Contains("except Åland", allText);
+    }
+
+    [Fact]
+    public async Task FinlandSourceCatalogHasExpectedRemediationAndNoNewOwnerUrlDuplicates()
+    {
+        var catalog = await Catalog.Value;
+        var articleIds = Articles.Values.Select(item => item.Id).ToHashSet();
+        var sources = catalog.OfficialSources.Where(item => articleIds.Contains(item.InformationEntryId)).ToArray();
+        var byOwnerUrl = sources.GroupBy(item => (item.InformationEntryId, item.Url.AbsoluteUri)).ToArray();
+        var intendedEmploymentActPair = Assert.Single(byOwnerUrl, group =>
+            group.Key.InformationEntryId == Articles["FI-EMP-02"].Id &&
+            group.Key.AbsoluteUri == "https://www.finlex.fi/fi/lainsaadanto/2001/55");
+        Assert.Equal(new[]
+        {
+            Guid.Parse("7ab4c5c4-4363-5083-9734-4a16e6d72e74"),
+            Guid.Parse("e0b8e4ac-3707-5842-8fc1-63f81bbb2532")
+        }, intendedEmploymentActPair.Select(item => item.Id).Order().ToArray());
+        Assert.All(byOwnerUrl.Where(group => group != intendedEmploymentActPair), group => Assert.Single(group));
+        var newSourceTitles = new Dictionary<Guid, string>
+        {
+            [Guid.Parse("6bb34b1e-6949-58ff-99ba-9ffa3769e03b")] = "Changes to the national core curricula for basic education and preparatory education from 1 August 2026",
+            [Guid.Parse("2c6d81a3-3527-5c5b-8fee-48615f8a7639")] = "Persons without a valid residence permit no longer qualify for residence-based Kela benefits as of 1 April 2026",
+            [Guid.Parse("cd369471-8188-5489-83e8-4802155b2617")] = "Government proposes extension of right to general social security benefit to individuals under temporary protection as of 1 April 2027",
+            [Guid.Parse("0f5f6d43-b764-5cc5-9813-3e86e9ccb296")] = "Employer announcements on employment relationships"
+        };
+        foreach (var (id, title) in newSourceTitles)
+            Assert.Equal(title, Assert.Single(catalog.OfficialSources, source => source.Id == id).Title);
+        Assert.Contains(catalog.OfficialSources, source => source.Id == Guid.Parse("fa6d5f24-dab9-50d5-8c4a-500931079914"));
     }
 
     [Fact]

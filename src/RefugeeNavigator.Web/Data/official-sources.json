@@ -7259,13 +7259,6 @@
     "LastCheckedAt": "2026-11-11T00:00:00+00:00"
   },
   {
-    "Id": "0d535e37-f80b-59c8-9a35-57038c1d876b",
-    "InformationEntryId": "344c5e31-45a9-5f22-8d4a-4a58d8fe8243",
-    "Title": "Migri, “Temporary protection” (Information Bank)",
-    "Url": "https://migri.fi/en/information-bank/temporary-protection",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
-  },
-  {
     "Id": "58f4b9d4-ec68-5f15-9b6b-05d069aabf56",
     "InformationEntryId": "344c5e31-45a9-5f22-8d4a-4a58d8fe8243",
     "Title": "Council, Implementing Decision (EU) 2026/1912",
@@ -7326,13 +7319,6 @@
     "InformationEntryId": "53743a68-bacb-5344-9aee-559e146cab54",
     "Title": "Job Market Finland, “Handling official matters and registering as a job seeker”",
     "Url": "https://tyomarkkinatori.fi/en/personal-customers/information-about-working-life/search-for-work/registration-as-a-job-seeker",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
-  },
-  {
-    "Id": "a8f043b1-b76c-532c-8d62-16a988efb1cd",
-    "InformationEntryId": "53743a68-bacb-5344-9aee-559e146cab54",
-    "Title": "Job Market Finland, “Registering as a job seeker and job search for Ukrainians in Finland”",
-    "Url": "https://tyomarkkinatori.fi/en/personal-customers/information-about-working-life/search-for-work/registration-as-a-job-seeker/registering-as-a-job-seeker-and-job-search-for-ukrainians-in-finland",
     "LastCheckedAt": "2026-11-11T00:00:00+00:00"
   },
   {
@@ -7795,13 +7781,6 @@
     "InformationEntryId": "51691974-1c20-5b25-9572-66624984a52f",
     "Title": "Kela, “Child benefit”",
     "Url": "https://www.kela.fi/child-benefit",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
-  },
-  {
-    "Id": "d5bed9b1-7eb7-5223-a1d1-c56b705c712e",
-    "InformationEntryId": "51691974-1c20-5b25-9572-66624984a52f",
-    "Title": "Kela, Ukraine-specific form UA1e, “Application – Kela card and child benefit”",
-    "Url": "https://www.kela.fi/benefit-forms/UA1e.pdf",
     "LastCheckedAt": "2026-11-11T00:00:00+00:00"
   },
   {
@@ -10399,6 +10378,34 @@
     "InformationEntryId": "55696570-3337-5e2f-8a24-71e256e869e9",
     "Title": "INPS, 2026 AUU indexation and ISEE guidance",
     "Url": "https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2026.02.assegno-unico-2026-presentazione-domanda-e-aggiornamento-importi.html",
+    "LastCheckedAt": "2026-11-17T00:00:00+00:00"
+  },
+  {
+    "Id": "6bb34b1e-6949-58ff-99ba-9ffa3769e03b",
+    "InformationEntryId": "2a2094da-e321-50bd-8a45-bf3988be06c9",
+    "Title": "Changes to the national core curricula for basic education and preparatory education from 1 August 2026",
+    "Url": "https://www.oph.fi/fi/uutiset/2026/perustemuutokset-voimaan-182026-muutoksilla-edistetaan-maahanmuuttotaustaisten",
+    "LastCheckedAt": "2026-11-17T00:00:00+00:00"
+  },
+  {
+    "Id": "2c6d81a3-3527-5c5b-8fee-48615f8a7639",
+    "InformationEntryId": "51691974-1c20-5b25-9572-66624984a52f",
+    "Title": "Persons without a valid residence permit no longer qualify for residence-based Kela benefits as of 1 April 2026",
+    "Url": "https://www.kela.fi/news/persons-without-a-valid-residence-permit-no-longer-qualify-for-residence-based-kela-benefits-as-of-1-april-2026",
+    "LastCheckedAt": "2026-11-17T00:00:00+00:00"
+  },
+  {
+    "Id": "cd369471-8188-5489-83e8-4802155b2617",
+    "InformationEntryId": "51691974-1c20-5b25-9572-66624984a52f",
+    "Title": "Government proposes extension of right to general social security benefit to individuals under temporary protection as of 1 April 2027",
+    "Url": "https://www.kela.fi/news/government-proposes-extension-of-right-to-general-social-security-benefit-to-individuals-under-temporary-protection-as-of-1-april-2027",
+    "LastCheckedAt": "2026-11-17T00:00:00+00:00"
+  },
+  {
+    "Id": "0f5f6d43-b764-5cc5-9813-3e86e9ccb296",
+    "InformationEntryId": "0abffa8c-cd42-571e-97f3-e160afad880c",
+    "Title": "Employer announcements on employment relationships",
+    "Url": "https://migri.fi/en/employer-s-announcements-on-employment-relationships",
     "LastCheckedAt": "2026-11-17T00:00:00+00:00"
   }
 ]

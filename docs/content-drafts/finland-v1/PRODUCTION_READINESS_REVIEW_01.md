@@ -1,6 +1,8 @@
 # Finland Production Readiness Review 01
 
 **Review date:** 15 November 2026
+
+> **Superseded:** The 2027/2028 permit/card interpretation and parity figures below are historical. Use [Finland Refresh Review 01](../../content-refresh/2026-11/finland/FINLAND_REFRESH_REVIEW_01.md), dated 17 November 2026, for the unresolved Migri guidance conflict and current integration plan.
 **Scope:** Eight Finland Core drafts in EN/UK/RU, their citation ownership, and parity against the existing production catalog. The production catalog was inspected but not changed. No new research was conducted; the FI-TP-01 correction uses the findings and six registered official sources in `TARGETED_PROTECTION_DATES_RESEARCH_01.md`.
 
 ## Article review

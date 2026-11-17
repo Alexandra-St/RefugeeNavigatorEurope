@@ -52,13 +52,13 @@
 
 **InformationEntryId:** `ffd32dca-56d8-5dcf-b995-7522a159010a`
 
-**EN:** The EU temporary-protection scheme runs through 4 March 2028, while Migri says current Finnish temporary-protection permits are valid until 4 March 2027 and are extended automatically without a separate application; Migri will issue further instructions for the 2028 rollout. Cards printed with expiry dates of 4 March 2023, 2024, 2025 or 2026 are recognised in Finland through 4 March 2027 while the permit remains valid; if card details are current, Migri says a new card is not needed solely because of the extension, but travel use and validity after that date are not established.
+**EN:** The EU temporary-protection scheme runs through 4 March 2028. Migri's central permit and card guidance currently states validity through 4 March 2027 and says further 2028-rollout instructions will follow, while Migri's Information Bank says permits will be extended automatically. These official statements do not establish an individual's updated permit or 2028 card validity; follow Migri's later instructions and check your permit record. The current old-card rule is Finland-only through 4 March 2027 while the underlying permit remains valid; travel use and post-2027 card validity are not established.
 
-**UK:** Режим тимчасового захисту ЄС діє до 4 березня 2028 року, тоді як, за даними Migri, нинішні фінські дозволи на проживання на підставі тимчасового захисту чинні до 4 березня 2027 року й продовжуються автоматично без окремої заяви; Migri опублікує подальші інструкції щодо продовження на 2028 рік. Картки з датою закінчення 4 березня 2023, 2024, 2025 або 2026 року визнаються чинними у Фінляндії до 4 березня 2027 року, доки чинний дозвіл; якщо дані картки актуальні, Migri повідомляє, що лише через продовження нову картку отримувати не потрібно, але використання для подорожей і чинність після цієї дати не встановлені.
+**UK:** Режим тимчасового захисту ЄС діє до 4 березня 2028 року. У центральних інструкціях Migri щодо дозволу й картки наразі вказано чинність до 4 березня 2027 року та сказано, що додаткові інструкції про продовження на 2028 рік з’являться згодом; водночас Інформаційний банк Migri повідомляє про автоматичне продовження дозволів. Ці офіційні повідомлення не підтверджують оновлення індивідуального дозволу чи чинність картки у 2028 році; стежте за подальшими інструкціями Migri та перевіряйте дані свого дозволу. Чинне правило для старих карток діє лише у Фінляндії до 4 березня 2027 року, якщо основний дозвіл залишається чинним; використання для подорожей і чинність картки після 2027 року не встановлені.
 
-**RU:** Режим временной защиты ЕС действует до 4 марта 2028 года, тогда как, по данным Migri, действующие финские разрешения на проживание на основании временной защиты актуальны до 4 марта 2027 года и продлеваются автоматически без отдельного заявления; Migri опубликует дальнейшие инструкции о продлении на 2028 год. Карты с датой окончания 4 марта 2023, 2024, 2025 или 2026 года признаются действительными в Финляндии до 4 марта 2027 года, пока действует разрешение; если данные карты актуальны, Migri сообщает, что только из-за продления получать новую карту не нужно, но использование для поездок и действие после этой даты не установлены.
+**RU:** Режим временной защиты ЕС действует до 4 марта 2028 года. В центральных инструкциях Migri о разрешении и карте сейчас указан срок действия до 4 марта 2027 года и сказано, что дополнительные инструкции о продлении на 2028 год появятся позднее; при этом Информационный банк Migri сообщает об автоматическом продлении разрешений. Эти официальные сообщения не подтверждают обновление индивидуального разрешения или действие карты в 2028 году; следите за дальнейшими инструкциями Migri и проверяйте данные своего разрешения. Действующее правило для старых карт применяется только в Финляндии до 4 марта 2027 года, если основное разрешение остаётся действительным; использование для поездок и действие карты после 2027 года не установлены.
 
-**OfficialSourceIds:** `1012bff7-ff9e-59f7-89da-d184ca95f384`, `4e930362-ce28-56f0-bbb9-404ea074c787`, `fa6d5f24-dab9-50d5-8c4a-500931079914`, `844049fc-2256-57d1-af24-c5f395879707`, `9b91b261-5a80-566a-9630-8e4ec200966d`
+**OfficialSourceIds:** `1012bff7-ff9e-59f7-89da-d184ca95f384`, `4e930362-ce28-56f0-bbb9-404ea074c787`, `fa6d5f24-dab9-50d5-8c4a-500931079914`, `f8052aa5-7266-53ca-ba71-e1545ca27bf4`, `844049fc-2256-57d1-af24-c5f395879707`, `9b91b261-5a80-566a-9630-8e4ec200966d`
 
 **Qualification:** The EU scheme end date, Finnish permit validity and printed card date are different. Do not claim old-card travel validity, validity after 4 March 2027, or that no future action could be needed; holders should follow Migri's later instructions and check their permit record.
 
@@ -164,13 +164,13 @@
 
 **InformationEntryId:** `53743a68-bacb-5344-9aee-559e146cab54`
 
-**EN:** The responsible employment authority assesses which employment services or assistance are available, and the reviewed contact route can be used without electronic identification. Access to job-search services does not establish eligibility for a programme or payment; temporary-protection work rights alone do not establish jobseeker or benefit eligibility.
+**EN:** The responsible employment authority assesses which employment services or assistance are available; the reviewed contact route can be used without electronic identification. Access to job-search services does not establish eligibility for a programme or payment; temporary-protection work rights alone do not establish jobseeker or benefit eligibility.
 
-**UK:** Відповідальний орган зайнятості визначає, які послуги чи допомога доступні; описаний спосіб звернення можна використати без електронної ідентифікації. Доступ до пошуку роботи не підтверджує право на програму чи виплату, а саме право працювати за тимчасовим захистом не встановлює право на реєстрацію як шукача роботи або на допомогу.
+**UK:** Відповідальний орган зайнятості оцінює, які послуги чи підтримка доступні; перевірений спосіб звернення можна використати без електронної ідентифікації. Доступ до пошуку роботи не підтверджує право на програму чи виплату; саме право працювати за тимчасовим захистом не встановлює право на реєстрацію шукача роботи або на допомогу.
 
-**RU:** Ответственный орган занятости оценивает, какие услуги или поддержка доступны; описанный способ обращения можно использовать без электронной идентификации. Доступ к поиску работы не подтверждает право на программу или выплату, а само право работать по временной защите не устанавливает право на регистрацию в качестве ищущего работу или на пособие.
+**RU:** Ответственный орган занятости оценивает доступные услуги и поддержку; проверенный способ обращения можно использовать без электронной идентификации. Доступ к поиску работы не подтверждает право на программу или выплату; само право работать по временной защите не устанавливает право на регистрацию соискателя или пособие.
 
-**OfficialSourceIds:** `80f71596-2660-53ce-8321-e29dc4681d27`, `3881ecc5-dadd-5b72-ab44-3ac2c0f9674a`, `2c0ecfdf-bea6-5c69-bd3e-5d4066318f8a`, `a8f043b1-b76c-532c-8d62-16a988efb1cd`, `3a6478eb-d82b-54ea-b70f-dc6292a56ee3`, `8fe293c6-bec7-5224-9afb-8cc9061fd903`
+**OfficialSourceIds:** `80f71596-2660-53ce-8321-e29dc4681d27`, `3881ecc5-dadd-5b72-ab44-3ac2c0f9674a`, `2c0ecfdf-bea6-5c69-bd3e-5d4066318f8a`, `3a6478eb-d82b-54ea-b70f-dc6292a56ee3`, `8fe293c6-bec7-5224-9afb-8cc9061fd903`
 
 **Qualification:** Local service, interpreter and programme availability may vary. Benefit eligibility is decided separately under the applicable rules.
 
@@ -202,13 +202,13 @@
 
 **InformationEntryId:** `0abffa8c-cd42-571e-97f3-e160afad880c`
 
-**EN:** Employers must verify and retain the required evidence of a worker's right to work and make applicable notifications. These employer duties are separate from the worker's work right, and the reviewed sources do not establish every early-ending notice rule for temporary-protection workers.
+**EN:** Employers must verify and retain required evidence of a worker's right to work and make applicable hiring notifications. Migri says temporary-protection permit holders are exempt from the separate early-ending notification for work-based permits. Employers must also arrange statutory preventive occupational healthcare; broader medical treatment depends on the service agreement.
 
-**UK:** Роботодавець має перевірити й зберігати необхідні підтвердження права працівника на роботу та подавати передбачені повідомлення. Ці обов’язки роботодавця відрізняються від права працівника на роботу; перевірені джерела не встановлюють усіх правил повідомлення про дострокове припинення роботи для людей із тимчасовим захистом.
+**UK:** Роботодавці мають перевіряти й зберігати необхідні підтвердження права працівника на роботу та подавати відповідні повідомлення про найм. За даними Migri, власники дозволу на тимчасовий захист звільнені від окремого повідомлення про дострокове припинення, передбаченого для дозволів на підставі роботи. Роботодавець також має організувати передбачену законом профілактичну охорону здоров’я працівників; ширше медичне лікування залежить від договору з надавачем послуг.
 
-**RU:** Работодатель должен проверить и хранить необходимые подтверждения права работника на работу и подавать предусмотренные уведомления. Эти обязанности работодателя отличаются от права работника на работу; изученные источники не устанавливают все правила уведомления о досрочном прекращении работы для людей с временной защитой.
+**RU:** Работодатели должны проверять и хранить необходимые подтверждения права работника на трудоустройство и подавать применимые уведомления о найме. По данным Migri, владельцы разрешения на временную защиту освобождены от отдельного уведомления о досрочном прекращении, предусмотренного для разрешений на основании работы. Работодатель также обязан организовать предусмотренную законом профилактическую охрану здоровья работников; более широкое лечение зависит от договора с поставщиком услуг.
 
-**OfficialSourceIds:** `221e9632-cf8c-5035-b23a-449e0def7e71`, `6a645e0c-7b9b-5914-ab3f-6f5ef7581c50`, `7ab4c5c4-4363-5083-9734-4a16e6d72e74`, `8d32c90d-d0a8-5028-9f2a-07c51f58d3f6`, `e0b8e4ac-3707-5842-8fc1-63f81bbb2532`
+**OfficialSourceIds:** `221e9632-cf8c-5035-b23a-449e0def7e71`, `6a645e0c-7b9b-5914-ab3f-6f5ef7581c50`, `7ab4c5c4-4363-5083-9734-4a16e6d72e74`, `8d32c90d-d0a8-5028-9f2a-07c51f58d3f6`, `0f5f6d43-b764-5cc5-9813-3e86e9ccb296`
 
 **Qualification:** Keep statutory employer checks and notifications distinct from the worker's authorization. Do not state a universal notice period for a temporary-protection worker unless the specific rule applies.
 
@@ -352,13 +352,13 @@
 
 **InformationEntryId:** `2a2094da-e321-50bd-8a45-bf3988be06c9`
 
-**EN:** A child under temporary protection who lives in a municipality can access pre-primary or basic education without `kotikunta`; contact the municipality's education department. Access to education is distinct from compulsory-education duties and does not guarantee immediate placement or a preferred school.
+**EN:** Children living in a municipality, including children under temporary protection without `kotikunta`, can access pre-primary/basic education under current guidance. EDUFI also describes access for eligible asylum applicants. Contact the municipality where the child lives; local placement and required documents should be confirmed, and an immediate or preferred place is not guaranteed.
 
-**UK:** Дитина під тимчасовим захистом, яка проживає в муніципалітеті, може мати доступ до дошкільної підготовки чи базової освіти без `kotikunta`; зверніться до освітнього відділу муніципалітету. Доступ до освіти відрізняється від обов’язку здобувати обов’язкову освіту й не гарантує негайного зарахування чи обраної школи.
+**UK:** Діти, які живуть у муніципалітеті, зокрема діти під тимчасовим захистом без `kotikunta`, мають доступ до дошкільної/базової освіти за чинними інструкціями. EDUFI також описує доступ для дітей заявників на притулок, які відповідають умовам. Зверніться до муніципалітету за місцем проживання; місце й потрібні документи уточнюються локально, негайне чи бажане місце не гарантоване.
 
-**RU:** Ребёнок под временной защитой, проживающий в муниципалитете, может получить доступ к дошкольной подготовке или базовому образованию без `kotikunta`; обратитесь в отдел образования муниципалитета. Доступ к образованию отличается от обязанности получать обязательное образование и не гарантирует немедленного зачисления или выбранной школы.
+**RU:** Дети, живущие в муниципалитете, включая детей под временной защитой без `kotikunta`, имеют доступ к дошкольному/базовому образованию согласно действующим инструкциям. EDUFI также описывает доступ для отвечающих условиям детей просителей убежища. Обратитесь в муниципалитет по месту жительства; место и необходимые документы уточняются на местах, немедленное или выбранное место не гарантируется.
 
-**OfficialSourceIds:** `81c5698c-a309-53d8-9d8d-f40c72837a6a`, `3cabfba2-d943-5ec7-a5c9-770bc8977f61`, `00b0ee24-ebaf-5544-a7db-e2b96b5b7abf`, `14b56222-4944-58f6-be6b-035ec0c7eab9`, `e2d9734a-5b52-55d1-9545-c767783f3971`
+**OfficialSourceIds:** `81c5698c-a309-53d8-9d8d-f40c72837a6a`, `3cabfba2-d943-5ec7-a5c9-770bc8977f61`, `00b0ee24-ebaf-5544-a7db-e2b96b5b7abf`, `14b56222-4944-58f6-be6b-035ec0c7eab9`
 
 **Qualification:** No national document checklist, preferred-school right or immediate placement is established. Municipality residence and the applicable education rules matter.
 
@@ -370,13 +370,13 @@
 
 **InformationEntryId:** `2a2094da-e321-50bd-8a45-bf3988be06c9`
 
-**EN:** Preparatory education and Finnish/Swedish as a second language support (S2/R2) may be arranged according to a pupil's needs and the provider's decision. These supports are not guaranteed in the same form in every municipality.
+**EN:** Preparatory education and Finnish/Swedish as a second language support depend on pupil need and local provision. From 1 August 2026, a provider may offer supplementary preparatory teaching after preparatory education for up to one year when a teacher assesses a need; it is optional and not available everywhere. Ask the municipality or school what is available.
 
-**UK:** Підготовче навчання та підтримку з фінської/шведської як другої мови (S2/R2) можуть організувати з огляду на потреби учня та рішення надавача послуг. Однакова форма такої підтримки не гарантується в кожному муніципалітеті.
+**UK:** Підготовче навчання та підтримка з фінської/шведської як другої мови залежать від потреб учня й місцевої пропозиції. З 1 серпня 2026 року надавач може запропонувати додаткове підготовче навчання після підготовчої освіти до одного року, якщо вчитель оцінить потребу; воно необов’язкове й доступне не всюди. Уточніть варіанти в муніципалітеті або школі.
 
-**RU:** Подготовительное обучение и поддержку финского/шведского как второго языка (S2/R2) могут организовать с учётом потребностей ученика и решения поставщика услуг. Одинаковая форма такой поддержки не гарантируется в каждом муниципалитете.
+**RU:** Подготовительное обучение и поддержка финского/шведского как второго языка зависят от потребностей ученика и местных возможностей. С 1 августа 2026 года поставщик может предложить дополнительное подготовительное обучение после подготовительного образования сроком до одного года, если учитель оценит необходимость; оно необязательно и доступно не везде. Уточните варианты в муниципалитете или школе.
 
-**OfficialSourceIds:** `3cabfba2-d943-5ec7-a5c9-770bc8977f61`, `9c00c687-87ca-5512-9f72-0494308bf522`, `c59e3fa6-6b4f-5dee-b370-2791e6a33f62`
+**OfficialSourceIds:** `3cabfba2-d943-5ec7-a5c9-770bc8977f61`, `9c00c687-87ca-5512-9f72-0494308bf522`, `c59e3fa6-6b4f-5dee-b370-2791e6a33f62`, `6bb34b1e-6949-58ff-99ba-9ffa3769e03b`
 
 **Qualification:** Preparatory or Ukrainian-language teaching depends on local provision and decisions; do not describe it as a guaranteed nationwide programme or an equivalent replacement for Finnish schooling.
 
@@ -408,13 +408,13 @@
 
 **InformationEntryId:** `51691974-1c20-5b25-9572-66624984a52f`
 
-**EN:** The reception centre assesses reception allowance while a person is entitled to reception services; a person with `kotikunta` may separately apply to Kela for basic social assistance if eligible. These are different systems, and neither payment is automatic or a general reimbursement of private rent.
+**EN:** Reception allowance is applied for through the centre while reception services continue; the centre assesses need, resources and the applicable 2026 rate. Ordinary services generally end within three months of eligibility to apply for `kotikunta`, not registration. Kela basic social assistance and county supplementary/preventive aid are separate, assessed routes; urgent help may also be requested. No TP status or `kotikunta` alone guarantees a continuing payment.
 
-**UK:** Центр прийому оцінює право на допомогу на прийом, поки людина має право на послуги прийому; особа з `kotikunta` може окремо звернутися до Kela по базову соціальну допомогу, якщо відповідає умовам. Це різні системи, і жодна з виплат не призначається автоматично чи не є загальним відшкодуванням приватної оренди.
+**UK:** Допомогу на прийом оформлюють у центрі, поки тривають послуги; центр оцінює потреби, ресурси й відповідну ставку 2026 року. Звичайні послуги переважно закінчуються не пізніше ніж через три місяці від права подати заяву на `kotikunta`, а не від реєстрації. Базова допомога Kela та додаткова/превентивна допомога округу — окремі шляхи з оцінюванням; також можна звернутися по термінову допомогу. Самі TP чи `kotikunta` не гарантують безперервної виплати.
 
-**RU:** Центр приёма оценивает право на пособие на приёме, пока человек имеет право на услуги приёма; лицо с `kotikunta` может отдельно обратиться в Kela за базовой социальной помощью, если соответствует условиям. Это разные системы, и ни одна из выплат не назначается автоматически и не является общим возмещением частной аренды.
+**RU:** Пособие на приёме оформляют в центре, пока продолжаются услуги; центр оценивает потребности, средства и применимую ставку 2026 года. Обычные услуги, как правило, заканчиваются не позднее трёх месяцев с даты возникновения права подать заявление на `kotikunta`, а не с даты регистрации. Базовая помощь Kela и дополнительная/превентивная помощь округа — отдельные оцениваемые маршруты; можно также обратиться за срочной помощью. Сами TP или `kotikunta` не гарантируют непрерывную выплату.
 
-**OfficialSourceIds:** `b81175f1-eb6f-5e6a-a1af-db122bd8fa6a`, `a9734191-6060-5223-96b6-8acac2459063`, `f3fff495-e76e-5760-9381-1c6012124292`, `8a039a93-38cb-550d-a584-3632043c859b`
+**OfficialSourceIds:** `b81175f1-eb6f-5e6a-a1af-db122bd8fa6a`, `a9734191-6060-5223-96b6-8acac2459063`, `f3fff495-e76e-5760-9381-1c6012124292`, `8a039a93-38cb-550d-a584-3632043c859b`, `893de843-3cc2-5321-b43f-eea77dad270f`
 
 **Qualification:** Reception allowance depends on reception-service entitlement and assessment; Kela basic social assistance has separate eligibility and a separate decision. Without `kotikunta`, regular post-reception support is not established by the reviewed national guidance.
 
@@ -426,13 +426,13 @@
 
 **InformationEntryId:** `51691974-1c20-5b25-9572-66624984a52f`
 
-**EN:** Apply to the reception centre for reception allowance and to Kela for Kela benefits; Kela accepts social-assistance applications through non-online channels as well as online. Jobseeker registration, an employment-authority assessment and a benefit decision are separate steps.
+**EN:** Apply for reception allowance through the reception centre while reception services continue. Kela basic social assistance and wellbeing-services-county supplementary/preventive assistance require separate applications and individual assessment. Since 1 April 2026, non-EU/EEA/Swiss nationals also need a valid residence permit for residence-based Kela benefits. TP or `kotikunta` alone does not guarantee payment.
 
-**UK:** Щодо допомоги на прийом звертайтеся до центру прийому, а щодо виплат Kela — до Kela; заяву на соціальну допомогу до Kela можна подати не лише онлайн. Реєстрація шукача роботи, оцінка органу зайнятості та рішення про виплату — окремі етапи.
+**UK:** Допомогу на прийом оформлюють у центрі прийому, поки тривають відповідні послуги. Базова допомога Kela та додаткова/превентивна допомога wellbeing services county потребують окремих заяв і оцінювання. З 1 квітня 2026 року громадянам поза ЄС/ЄЕЗ і Швейцарії також потрібен чинний дозвіл для виплат Kela, що залежать від проживання. Самі TP чи `kotikunta` не гарантують виплату.
 
-**RU:** За пособием на приёме обращайтесь в центр приёма, а за выплатами Kela — в Kela; заявление на социальную помощь в Kela можно подать не только онлайн. Регистрация ищущего работу, оценка органа занятости и решение о выплате — отдельные этапы.
+**RU:** Пособие на приёме оформляют в центре приёма, пока продолжаются соответствующие услуги. Базовая помощь Kela и дополнительная/превентивная помощь wellbeing services county требуют отдельных заявлений и оценки. С 1 апреля 2026 года гражданам вне ЕС/ЕЭЗ и Швейцарии также требуется действующее разрешение на проживание для выплат Kela, зависящих от проживания. Сами TP или `kotikunta` не гарантируют выплату.
 
-**OfficialSourceIds:** `b81175f1-eb6f-5e6a-a1af-db122bd8fa6a`, `f3fff495-e76e-5760-9381-1c6012124292`, `43e9bd3e-ac6f-55e3-b329-aeba4d0c3d2b`, `106b820f-90b4-5b37-8789-2b592084ff1b`, `71f31cc7-a8ce-507f-8a9e-6590fbd85ef8`
+**OfficialSourceIds:** `b81175f1-eb6f-5e6a-a1af-db122bd8fa6a`, `f3fff495-e76e-5760-9381-1c6012124292`, `43e9bd3e-ac6f-55e3-b329-aeba4d0c3d2b`, `a9734191-6060-5223-96b6-8acac2459063`, `8a039a93-38cb-550d-a584-3632043c859b`, `893de843-3cc2-5321-b43f-eea77dad270f`, `2c6d81a3-3527-5c5b-8fee-48615f8a7639`
 
 **Qualification:** The correct office and application route depend on the scheme and the person's status. The reviewed sources do not establish one universal process for applicants without a personal identity code or usable e-identification.
 
@@ -444,13 +444,13 @@
 
 **InformationEntryId:** `51691974-1c20-5b25-9572-66624984a52f`
 
-**EN:** Temporary protection or `kotikunta` alone does not automatically award child or family benefits; Kela decides each benefit under its own conditions. Kela describes a temporary-protection child-benefit application route for qualifying cases after at least one year in Finland, but family circumstances, including a child living abroad, require individual assessment.
+**EN:** Family benefits are not automatic from TP or `kotikunta`. Kela describes an application route after at least one year in Finland for a child under 17 who lives in Finland, including without `kotikunta`; Kela decides each case. Relevant non-EU/EEA/Swiss nationals need a valid permit for residence-based benefits. Other family benefits have separate rules.
 
-**UK:** Сам тимчасовий захист або `kotikunta` не надає автоматичного права на дитячі чи сімейні виплати; Kela окремо вирішує питання кожної виплати за її умовами. Kela описує маршрут подання заяви на дитячу допомогу для окремих сімей із тимчасовим захистом після щонайменше року у Фінляндії, але сімейні обставини, зокрема проживання дитини за кордоном, оцінюють індивідуально.
+**UK:** Сімейні виплати не надаються автоматично через TP чи `kotikunta`. Kela описує подання заяви після щонайменше року у Фінляндії на дитину до 17 років, яка живе у Фінляндії, навіть без `kotikunta`; Kela вирішує кожну справу. Відповідним громадянам поза ЄС/ЄЕЗ і Швейцарії потрібен чинний дозвіл для виплат, що залежать від проживання. Інші сімейні виплати мають окремі правила.
 
-**RU:** Сама временная защита или `kotikunta` не даёт автоматического права на детские или семейные выплаты; Kela отдельно решает вопрос каждой выплаты по её условиям. Kela описывает маршрут подачи заявления на детское пособие для некоторых семей с временной защитой после как минимум года в Финляндии, но семейные обстоятельства, включая проживание ребёнка за границей, оцениваются индивидуально.
+**RU:** Семейные пособия не предоставляются автоматически из-за TP или `kotikunta`. Kela описывает подачу заявления после как минимум года в Финляндии на ребёнка младше 17 лет, живущего в Финляндии, даже без `kotikunta`; Kela решает каждый случай. Соответствующим гражданам вне ЕС/ЕЭЗ и Швейцарии требуется действующее разрешение на проживание для пособий, зависящих от проживания. У других семейных пособий отдельные условия.
 
-**OfficialSourceIds:** `54aeabdc-7ce2-56a9-b414-42acb9a18583`, `9ce83adb-45b3-5399-99e5-452e5e5f9edd`, `d5bed9b1-7eb7-5223-a1d1-c56b705c712e`, `6343a83f-5bb6-5569-9636-c1c3ac175675`, `6f00998a-e0b4-5aa5-ae87-999b8401047e`
+**OfficialSourceIds:** `54aeabdc-7ce2-56a9-b414-42acb9a18583`, `9ce83adb-45b3-5399-99e5-452e5e5f9edd`, `6343a83f-5bb6-5569-9636-c1c3ac175675`, `6f00998a-e0b4-5aa5-ae87-999b8401047e`, `2c6d81a3-3527-5c5b-8fee-48615f8a7639`
 
 **Qualification:** The TP-specific form is dated and individual Kela eligibility applies. Do not promise an award, infer entitlement for a child abroad, or present a future 2027 rule as already in force.
 
