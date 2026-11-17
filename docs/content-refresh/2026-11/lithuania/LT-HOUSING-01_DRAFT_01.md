@@ -1,0 +1,53 @@
+# LT-HOUSING-01 — Housing in Lithuania (review copy)
+
+- Article ID: `28169e82-6320-5f00-9b34-37e77f3c7d26`
+- As of: 17 November 2026
+- Status: review draft only; canonical draft unchanged
+
+## EN
+
+**Title:** Housing in Lithuania
+**Summary:** Initial accommodation, private renting and housing support have separate rules; placement and benefits are not automatic.
+
+People entitled to temporary protection (TP) while their TP residence-permit application awaits a decision may receive free accommodation in eligible state or municipal facilities for up to six months from registration of the application, under the statutory conditions. This is not a guarantee of an available bed, location or immediate placement. The sources reviewed do not establish one current nationwide intake phone number or a guaranteed referral route; contact the municipality or responsible accommodation authority and confirm current capacity. This route is specific to the statutory TP-entitled group, not every person with an unresolved immigration application or generic receipt. [[source:edd48b6b-339f-59c0-858c-89c6b3a1a5fb|Foreigners Law]] [[source:002ab8f8-f86b-50d2-86f3-0192fa6ec11d|Government Resolution No. 224]]
+
+Private renting is separate from reception accommodation. A fixed-term residential lease must be in writing. The Civil Code limits advance rent demands to no more than the first month; the reviewed rules do not establish a general statutory security-deposit cap. A lease, its registration in the Real Estate Register, and declaration of a place of residence are different things. Residence declaration evidence and owner-consent steps may depend on the municipality. Agree in writing on rent, deposit, utilities and return conditions. [[source:36ff51ff-ff51-529a-9424-ce4b1c325a6e|Civil Code rental rules]] [[source:c8dedc7c-e90b-5d75-8d9a-1099a67d17a1|Residence-declaration guidance]]
+
+People granted TP may apply for housing and social support under separate conditions. The ordinary rent-compensation and social-housing routes have their own income/property and residence tests; the TP-specific partial-rent route is distinct and has statutory exceptions from some ordinary tests, but still needs an application and local administration. Utility compensation and cash social assistance are means-tested. The 2026 SADM status guide lists one-time settlement/accommodation support for a qualifying category; it does not guarantee local availability, so confirm the current application route and funding with the municipality. Historical host-accommodation reimbursement is not a current nationwide programme. TP alone does not guarantee payment, a fixed amount or immediate housing. Contact the municipality where you live or intend to live. [[source:279afd3e-c06d-5723-810c-79b49b0b6c86|SADM housing support]] [[source:789a25a4-129e-5c64-9450-364e81486f29|Low-income and utility support]] [[source:6e630bfe-7cba-510f-90c9-847f1b421d79|Support for Ukrainians]] [[source:f8b8d6e4-d750-544d-a112-0fbef0a3658f|SADM 2026 status guide]]
+
+## UK
+
+**Заголовок:** Житло в Литві
+**Короткий опис:** Тимчасове розміщення, приватна оренда та житлова допомога мають окремі правила; місце й виплати не надаються автоматично.
+
+Особи, які мають право на TP і чию заяву на дозвіл на проживання за TP ще розглядають, можуть отримати безкоштовне розміщення у визначених державних або муніципальних закладах на строк до шести місяців від реєстрації заяви за встановлених законом умов. Це не гарантує вільного місця, конкретного розташування чи негайного поселення. Переглянуті джерела не встановлюють єдиного чинного загальнонаціонального телефонного номера для поселення чи гарантованого маршруту направлення; зверніться до муніципалітету або відповідального органу з розміщення та перевірте наявність місць. Цей маршрут стосується визначеної законом групи осіб, які мають право на TP, а не кожної людини з невирішеною заявою на проживання чи загальною квитанцією. [[source:edd48b6b-339f-59c0-858c-89c6b3a1a5fb|Закон про правове становище іноземців]] [[source:002ab8f8-f86b-50d2-86f3-0192fa6ec11d|Постанова Уряду № 224]]
+
+Приватна оренда не є частиною системи прийому. Строковий договір оренди житла має бути письмовим. Цивільний кодекс обмежує вимогу авансової орендної плати сумою не більше першого місяця; переглянуті правила не встановлюють загального законодавчого ліміту застави. Договір оренди, його реєстрація в Реєстрі нерухомості та декларування місця проживання — різні процедури. Підтвердження адреси й згода власника можуть залежати від муніципалітету. Письмово погодьте орендну плату, заставу, комунальні витрати та умови повернення застави. [[source:36ff51ff-ff51-529a-9424-ce4b1c325a6e|Правила оренди в Цивільному кодексі]] [[source:c8dedc7c-e90b-5d75-8d9a-1099a67d17a1|Вказівки щодо декларування місця проживання]]
+
+Особи, які отримали TP, можуть подавати заяви на житлову та соціальну підтримку за окремими умовами. Звичайні маршрути компенсації оренди й соціального житла мають власні перевірки доходів/майна та місця проживання; спеціальна компенсація частини орендної плати для TP відрізняється й законом звільнена від деяких звичайних умов, але все одно потребує заяви та місцевого адміністрування. Компенсація комунальних витрат і грошова соціальна допомога залежать від доходів. У посібнику SADM 2026 року щодо статусу зазначено одноразову допомогу на облаштування/проживання для визначеної категорії; це не гарантує її наявності на місцях, тому уточніть чинний порядок подання та фінансування в муніципалітеті. Історична компенсація за розміщення українців у приватних господарів не є чинною загальнонаціональною програмою. Сам TP не гарантує виплати, визначеної суми чи негайного житла. Зверніться до муніципалітету за місцем проживання або запланованого проживання. [[source:279afd3e-c06d-5723-810c-79b49b0b6c86|Житлова підтримка SADM]] [[source:789a25a4-129e-5c64-9450-364e81486f29|Допомога малозабезпеченим і на комунальні послуги]] [[source:6e630bfe-7cba-510f-90c9-847f1b421d79|Підтримка українців]] [[source:f8b8d6e4-d750-544d-a112-0fbef0a3658f|Посібник SADM про статус, 2026]]
+
+## RU
+
+**Заголовок:** Жильё в Литве
+**Краткое описание:** Временное размещение, частная аренда и жилищная помощь регулируются отдельно; место и выплаты не предоставляются автоматически.
+
+Лица, имеющие право на TP и ожидающие решения по заявлению на разрешение на проживание по TP, могут получить бесплатное размещение в предусмотренных государственных или муниципальных учреждениях на срок до шести месяцев с даты регистрации заявления при соблюдении условий закона. Это не гарантирует свободное место, конкретное расположение или немедленное поселение. Изученные источники не устанавливают единый действующий общенациональный телефон для размещения или гарантированный маршрут направления; обратитесь в муниципалитет или ответственный орган по размещению и уточните наличие мест. Этот маршрут относится к установленной законом группе лиц, имеющих право на TP, а не ко всем людям с нерешённым заявлением на проживание или общей квитанцией. [[source:edd48b6b-339f-59c0-858c-89c6b3a1a5fb|Закон о правовом положении иностранцев]] [[source:002ab8f8-f86b-50d2-86f3-0192fa6ec11d|Постановление Правительства № 224]]
+
+Частная аренда не является частью системы приёма. Договор аренды жилья на определённый срок должен быть письменным. Гражданский кодекс ограничивает требование авансовой арендной платы суммой не более первого месяца; изученные нормы не устанавливают общего законодательного лимита залога. Договор аренды, его регистрация в Реестре недвижимости и декларирование места жительства — разные процедуры. Подтверждение адреса и согласие владельца могут зависеть от муниципалитета. Письменно согласуйте арендную плату, залог, коммунальные расходы и условия возврата залога. [[source:36ff51ff-ff51-529a-9424-ce4b1c325a6e|Правила аренды в Гражданском кодексе]] [[source:c8dedc7c-e90b-5d75-8d9a-1099a67d17a1|Указания по декларированию места жительства]]
+
+Лица, получившие TP, могут подавать заявления на жилищную и социальную поддержку по отдельным правилам. Обычные виды компенсации аренды и социального жилья имеют собственные проверки дохода/имущества и места жительства; специальная компенсация части аренды для лиц с TP отличается и законом освобождена от некоторых обычных условий, но всё равно требует заявления и местного администрирования. Компенсация коммунальных расходов и денежная социальная помощь зависят от дохода. В справочнике SADM 2026 года о статусе указана единовременная помощь на обустройство/проживание для определённой категории; это не гарантирует её наличие на местах, поэтому уточните действующий порядок подачи и финансирование в муниципалитете. Историческая компенсация за размещение украинцев у частных хозяев не является действующей общенациональной программой. Сам по себе TP не гарантирует выплату, определённую сумму или немедленное жильё. Обратитесь в муниципалитет по месту жительства или предполагаемого проживания. [[source:279afd3e-c06d-5723-810c-79b49b0b6c86|Жилищная поддержка SADM]] [[source:789a25a4-129e-5c64-9450-364e81486f29|Помощь малоимущим и на коммунальные услуги]] [[source:6e630bfe-7cba-510f-90c9-847f1b421d79|Поддержка украинцев]] [[source:f8b8d6e4-d750-544d-a112-0fbef0a3658f|Справочник SADM о статусе, 2026]]
+
+## Claim coverage and editorial exclusions
+
+Covers the statutory pending-TP accommodation route and its six-month limit, absence of a placement guarantee or verified universal intake channel, private lease form/advance-rent/deposit boundary, separate residence declaration, housing-support routes, TP-specific rent compensation, means-tested utilities/social aid, and locally administered one-off help. Does not promise shelter, a national hotline, a cash amount, or active host reimbursement.
+
+## Editorial source set (8 owner-specific sources)
+
+- `LT-HOUSING-01-S01` → `edd48b6b-339f-59c0-858c-89c6b3a1a5fb` — Foreigners Law.
+- `LT-HOUSING-01-S02` → `002ab8f8-f86b-50d2-86f3-0192fa6ec11d` — Government Resolution No. 224.
+- `LT-HOUSING-01-S03` → `36ff51ff-ff51-529a-9424-ce4b1c325a6e` — Civil Code residential-rental rules.
+- `LT-HOUSING-01-S04` → `c8dedc7c-e90b-5d75-8d9a-1099a67d17a1` — Migration Department residence-declaration guidance.
+- `LT-HOUSING-01-S05` → `279afd3e-c06d-5723-810c-79b49b0b6c86` — SADM housing support.
+- `LT-HOUSING-01-S06` → `789a25a4-129e-5c64-9450-364e81486f29` — SADM low-income and utility support.
+- `LT-HOUSING-01-S07` → `6e630bfe-7cba-510f-90c9-847f1b421d79` — SADM social support for Ukrainians.
+- `LT-HOUSING-01-S09` → `f8b8d6e4-d750-544d-a112-0fbef0a3658f` — SADM, Support for Ukrainian war refugees by personal status (2026 guide; owner-bound replacement record).

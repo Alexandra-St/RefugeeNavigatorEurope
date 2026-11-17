@@ -61,7 +61,7 @@ public sealed class LithuaniaContentIntegrationTests
         {
             var translations = catalog.InformationEntryTranslations.Where(t => t.InformationEntryId == entry.Id).ToArray();
             Assert.Equal(3, translations.Length);
-            Assert.All(translations, t => { Assert.Equal(VerificationStatus.Verified, t.VerificationStatus); Assert.Equal(new DateTimeOffset(2026, 11, 9, 0, 0, 0, TimeSpan.Zero), t.LastUpdatedAt); });
+            Assert.All(translations, t => { Assert.Equal(VerificationStatus.Verified, t.VerificationStatus); Assert.Equal(new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero), t.LastUpdatedAt); });
         }
         Assert.Contains(CountryVisibility.GetVisibleCountries(catalog, false), c => c.Slug == "lithuania");
         Assert.Contains(CountryVisibility.GetVisibleCountries(catalog, true), c => c.Slug == "lithuania");
@@ -81,7 +81,8 @@ public sealed class LithuaniaContentIntegrationTests
         Assert.Equal(1487, catalog.OfficialSources.Count);
         Assert.Equal(71, sources.Select(s => s.Id).Distinct().Count());
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(s => s.Id).Distinct().Count());
-        Assert.All(sources, s => { Assert.Contains(s.InformationEntryId, ids); Assert.Equal("https", s.Url.Scheme); Assert.Equal(new DateTimeOffset(2026, 11, 9, 0, 0, 0, TimeSpan.Zero), s.LastCheckedAt); });
+        var historicalDeclarationId = Guid.Parse("c8dedc7c-e90b-5d75-8d9a-1099a67d17a1");
+        Assert.All(sources, s => { Assert.Contains(s.InformationEntryId, ids); Assert.Equal("https", s.Url.Scheme); Assert.Equal(historicalDeclarationId == s.Id ? new DateTimeOffset(2026, 11, 9, 0, 0, 0, TimeSpan.Zero) : new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero), s.LastCheckedAt); });
         Assert.All(sources.GroupBy(s => (s.InformationEntryId, s.Url.AbsoluteUri)), g => Assert.Single(g));
         var sourceById = catalog.OfficialSources.ToDictionary(s => s.Id);
         var inlineCitationCount = 0;
@@ -95,7 +96,7 @@ public sealed class LithuaniaContentIntegrationTests
             foreach (var (sourceId, title, url) in sourceLines) { Assert.True(owned.TryGetValue(sourceId, out var source)); Assert.Equal(title, source!.Title); Assert.Equal(url, source.Url.AbsoluteUri); Assert.Equal("https", source.Url.Scheme); }
             foreach (var (language, section) in new[] { ("en", "EN"), ("uk", "UK"), ("ru", "RU") })
             {
-                var m = Regex.Match(draft, $@"(?ms)^## {section}\s+Title: (?<title>.*?)\s+Summary: (?<summary>.*?)\s+Content:\s+(?<content>.*?)(?=^### Claim coverage and editorial exclusions$)");
+                var m = Regex.Match(draft, $@"(?ms)^## {section}\s+Title: (?<title>.*?)\s+Summary: (?<summary>.*?)\s+Content:\s+(?<content>.*?)(?=^### Claim coverage and editorial exclusions$|^## (?:EN|UK|RU)$|^## Claim coverage and editorial exclusions$|^## Editorial source set)");
                 Assert.True(m.Success);
                 var translation = Assert.Single(catalog.InformationEntryTranslations, t => t.InformationEntryId == expected.Id && t.LanguageCode == language);
                 Assert.Equal(m.Groups["title"].Value.Trim(), translation.Title); Assert.Equal(m.Groups["summary"].Value.Trim(), translation.Summary); Assert.Equal(Normalize(m.Groups["content"].Value), Normalize(translation.Content));
@@ -107,7 +108,7 @@ public sealed class LithuaniaContentIntegrationTests
                 }
             }
         }
-        Assert.Equal(222, inlineCitationCount);
+        Assert.Equal(228, inlineCitationCount);
     }
 
     [Fact]
@@ -134,6 +135,79 @@ public sealed class LithuaniaContentIntegrationTests
         var nlFiling = Assert.Single(comparison.Topics.SelectMany(t => t.Aspects).Single(a => a.Id == "residence-filing").Facts, f => f.CountrySlug == "netherlands"); Assert.False(nlFiling.IsAvailable); Assert.Empty(nlFiling.OfficialSourceIds);
         var sweden = Assert.Single(comparison.Topics.SelectMany(t => t.Aspects).Single(a => a.Id == "social-child-benefits").Facts, f => f.CountrySlug == "sweden"); Assert.Equal(ComparisonFactStatus.Draft, sweden.Status); Assert.False(sweden.IsAvailable); Assert.Empty(sweden.OfficialSourceIds);
         var ltAspects = comparison.Topics.SelectMany(t => t.Aspects).Where(a => a.Facts.Any(f => f.CountrySlug == "lithuania")).Select(a => a.Id).ToArray(); Assert.Equal(24, ltAspects.Length); Assert.Equal(ArticleByAspect.Keys.Order(StringComparer.Ordinal), ltAspects.Order(StringComparer.Ordinal));
+    }
+
+    [Fact]
+    public async Task LithuaniaRefreshCriticalRulesAndSourceRemediationAreIntegrated()
+    {
+        var catalog = await Catalog.Value;
+        var facts = await Facts.Value;
+        var translations = catalog.InformationEntryTranslations.ToDictionary(t => (t.InformationEntryId, t.LanguageCode));
+        string Content(string article, string language) => translations[(Articles[article].Id, language)].Content;
+
+        var tp = new Dictionary<string, string>
+        {
+            ["en"] = Content("LT-TP-01", "en"), ["uk"] = Content("LT-TP-01", "uk"), ["ru"] = Content("LT-TP-01", "ru")
+        };
+        Assert.Contains("5 August 2026", tp["en"]); Assert.Contains("4 August 2026", tp["en"]); Assert.Contains("any EU Member State", tp["en"]); Assert.Contains("same Member State", tp["en"]);
+        Assert.Contains("5 серпня 2026 року", tp["uk"]); Assert.Contains("4 серпня 2026 року", tp["uk"]); Assert.Contains("будь-якій державі-члені ЄС", tp["uk"]); Assert.Contains("тій самій державі-члені", tp["uk"]);
+        Assert.Contains("5 августа 2026 года", tp["ru"]); Assert.Contains("4 августа 2026 года", tp["ru"]); Assert.Contains("любом государстве-члене ЕС", tp["ru"]); Assert.Contains("том же государстве-члене", tp["ru"]);
+        Assert.Contains("digital temporary residence permit", tp["en"]); Assert.Contains("4 March 2028", tp["en"]); Assert.Contains("does not establish the expiry printed on every person’s document", tp["en"]);
+        Assert.Contains("replacement", tp["en"]); Assert.Contains("not a complete first-application checklist", tp["en"]);
+
+        var residenceFiling = Assert.Single(facts.Topics.SelectMany(t => t.Aspects).Single(a => a.Id == "residence-filing").Facts, f => f.CountrySlug == "lithuania");
+        Assert.Contains("From 1 November 2026", residenceFiling.Values["en"]); Assert.Contains("does not guarantee approval", residenceFiling.Values["en"]);
+        var work = Content("LT-EMP-02", "en");
+        Assert.Contains("may start working after applying for TP", work); Assert.Contains("This specific trigger is not arrival", work);
+        Assert.Contains("1-SD", work); Assert.Contains("one working day", work); Assert.Contains("SAM", work); Assert.Contains("2-SD", work);
+        var employerDuties = Assert.Single(facts.Topics.SelectMany(t => t.Aspects).Single(a => a.Id == "work-employer-duties").Facts, f => f.CountrySlug == "lithuania"); Assert.Contains("15th", employerDuties.Values["en"]);
+        var minimumPay = Assert.Single(facts.Topics.SelectMany(t => t.Aspects).Single(a => a.Id == "work-minimum-pay").Facts, f => f.CountrySlug == "lithuania");
+        Assert.Contains("€1,153", minimumPay.Values["en"]); Assert.Contains("€7.05", minimumPay.Values["en"]); Assert.Contains("unqualified", minimumPay.Values["en"]);
+        Assert.Contains("€1,245", minimumPay.Values["en"]); Assert.Contains("€7.61", minimumPay.Values["en"]); Assert.Contains("1 January 2027", minimumPay.Values["en"]);
+        Assert.Contains("separate from route-specific immigration salary tests", Content("LT-EMP-02", "en"));
+        Assert.Contains("€1 153", minimumPay.Values["uk"]); Assert.Contains("€7,05", minimumPay.Values["uk"]); Assert.Contains("€1 245", minimumPay.Values["uk"]); Assert.Contains("€7,61", minimumPay.Values["uk"]);
+        Assert.Contains("€1 153", minimumPay.Values["ru"]); Assert.Contains("€7,05", minimumPay.Values["ru"]); Assert.Contains("€1 245", minimumPay.Values["ru"]); Assert.Contains("€7,61", minimumPay.Values["ru"]);
+
+        var health = Content("LT-HEALTH-01", "en");
+        Assert.Contains("not automatically established for every Ukrainian or every adult TP holder", health);
+        Assert.Contains("generic pending receipt alone", health); Assert.Contains("113", health); Assert.Contains("112", health);
+        var housing = Content("LT-HOUSING-01", "en");
+        Assert.Contains("generic receipt", housing); Assert.Contains("six months", housing); Assert.Contains("not a guarantee of an available bed", housing);
+        Assert.Contains("no more than the first month", housing); Assert.Contains("do not establish a general statutory security-deposit cap", housing);
+        var education = Content("LT-EDU-01", "en");
+        Assert.Contains("until age 16", education); Assert.Contains("generally begins", education); Assert.Contains("normally starts", education);
+        Assert.Contains("generic receipt alone", education);
+        Assert.Contains("general receipt alone", Content("LT-SOC-01", "en"));
+        Assert.Contains("unrelated receipt", work);
+
+        var subsistence = Assert.Single(facts.Topics.SelectMany(t => t.Aspects).Single(a => a.Id == "social-subsistence").Facts, f => f.CountrySlug == "lithuania");
+        Assert.Contains("256.30", subsistence.Values["en"]); Assert.Contains("256,30", subsistence.Values["uk"]); Assert.Contains("256,30", subsistence.Values["ru"]);
+        Assert.Contains("assessment threshold, not the amount paid", subsistence.Values["en"]);
+        var children = Assert.Single(facts.Topics.SelectMany(t => t.Aspects).Single(a => a.Id == "social-child-benefits").Facts, f => f.CountrySlug == "lithuania");
+        Assert.Contains("€129.50", children.Values["en"]); Assert.Contains("€76.22", children.Values["en"]); Assert.Contains("conditional", children.Values["en"]);
+        Assert.Contains("€129,50", children.Values["uk"]); Assert.Contains("€76,22", children.Values["uk"]); Assert.Contains("€129,50", children.Values["ru"]); Assert.Contains("€76,22", children.Values["ru"]);
+
+        var sources = catalog.OfficialSources;
+        var removed = Guid.Parse("fb747279-3f8b-5001-99cb-3478c6e17f5c");
+        var historical = Guid.Parse("c8dedc7c-e90b-5d75-8d9a-1099a67d17a1");
+        var healthLaw = Guid.Parse("928b6d64-fcd6-5f98-9aa0-36e91eda9fc8");
+        var newHousing = Guid.Parse("f8b8d6e4-d750-544d-a112-0fbef0a3658f");
+        Assert.DoesNotContain(sources, s => s.Id == removed);
+        var historicalSource = Assert.Single(sources, s => s.Id == historical);
+        Assert.StartsWith("Historical (2021-03-05)", historicalSource.Title);
+        Assert.Equal(Articles["LT-HOUSING-01"].Id, historicalSource.InformationEntryId);
+        Assert.Contains(historical.ToString(), housing); Assert.Contains("36ff51ff-ff51-529a-9424-ce4b1c325a6e", housing);
+        var insuranceLaw = Assert.Single(sources, s => s.Id == healthLaw);
+        Assert.Contains("Health Insurance Law", insuranceLaw.Title);
+        var housingGuide = Assert.Single(sources, s => s.Id == newHousing);
+        Assert.Equal(Articles["LT-HOUSING-01"].Id, housingGuide.InformationEntryId);
+        Assert.Equal(new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero), housingGuide.LastCheckedAt);
+        Assert.Contains(newHousing.ToString(), housing);
+        Assert.DoesNotContain(removed.ToString(), string.Join("\n", catalog.InformationEntryTranslations.Where(t => Articles.Values.Any(a => a.Id == t.InformationEntryId)).Select(t => t.Content)));
+        var housingFact = Assert.Single(facts.Topics.SelectMany(t => t.Aspects).Single(a => a.Id == "housing-financial-support").Facts, f => f.CountrySlug == "lithuania");
+        Assert.Contains(newHousing, housingFact.OfficialSourceIds); Assert.DoesNotContain(removed, housingFact.OfficialSourceIds);
+        Assert.All(facts.Topics.SelectMany(t => t.Aspects).SelectMany(a => a.Facts).Where(f => f.CountrySlug == "lithuania"),
+            fact => Assert.All(fact.OfficialSourceIds, sourceId => Assert.Contains(sources, s => s.Id == sourceId && s.InformationEntryId == fact.InformationEntryId)));
     }
 
     [Fact]
