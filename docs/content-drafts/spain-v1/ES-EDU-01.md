@@ -4,7 +4,7 @@
 - Category: `education`
 - Working English title: Education and Language Learning in Spain
 - Source matrix: [education/SOURCES_AND_CLAIMS.md](../../content-research/spain-batch-2026-10-20/education/SOURCES_AND_CLAIMS.md)
-- Editorial status: DRAFT — NOT APPROVED FOR PUBLICATION
+- Editorial status: APPROVED FOR INTEGRATION — Task 103 final review
 
 ## EN
 
@@ -49,12 +49,12 @@ For university qualifications, separate procedures distinguish homologation for 
 
 ### Claim coverage
 
-- School education and compulsory ages → ES-EDU01-01, ES-EDU01-02
-- Arriving during the school year → ES-EDU01-03
-- Admission and language support vary by region → ES-EDU01-04, ES-EDU01-05
-- Adult language learning → ES-EDU01-06
-- Vocational and university education → ES-EDU01-07, ES-EDU01-09
-- Recognition of previous studies and qualifications → ES-EDU01-08, ES-EDU01-10
+- School education and compulsory ages → ES-EDU-01-C001, ES-EDU-01-C002
+- Arriving during the school year → ES-EDU-01-C003
+- Admission and language support vary by region → ES-EDU-01-C004, ES-EDU-01-C005
+- Adult language learning → ES-EDU-01-C006
+- Vocational and university education → ES-EDU-01-C007, ES-EDU-01-C009
+- Recognition of previous studies and qualifications → ES-EDU-01-C008, ES-EDU-01-C010
 
 ## UK
 
@@ -99,12 +99,12 @@ Content:
 
 ### Claim coverage
 
-- Шкільна освіта та обов’язковий вік навчання → ES-EDU01-01, ES-EDU01-02
-- Приїзд під час навчального року → ES-EDU01-03
-- Вступ і мовна підтримка залежать від регіону → ES-EDU01-04, ES-EDU01-05
-- Вивчення мов дорослими → ES-EDU01-06
-- Професійна та університетська освіта → ES-EDU01-07, ES-EDU01-09
-- Визнання попередньої освіти та кваліфікацій → ES-EDU01-08, ES-EDU01-10
+- Шкільна освіта та обов’язковий вік навчання → ES-EDU-01-C001, ES-EDU-01-C002
+- Приїзд під час навчального року → ES-EDU-01-C003
+- Вступ і мовна підтримка залежать від регіону → ES-EDU-01-C004, ES-EDU-01-C005
+- Вивчення мов дорослими → ES-EDU-01-C006
+- Професійна та університетська освіта → ES-EDU-01-C007, ES-EDU-01-C009
+- Визнання попередньої освіти та кваліфікацій → ES-EDU-01-C008, ES-EDU-01-C010
 
 ## RU
 
@@ -149,17 +149,17 @@ Content:
 
 ### Claim coverage
 
-- Школьное образование и обязательный возраст обучения → ES-EDU01-01, ES-EDU01-02
-- Прибытие в течение учебного года → ES-EDU01-03
-- Зачисление и языковая поддержка зависят от региона → ES-EDU01-04, ES-EDU01-05
-- Изучение языков взрослыми → ES-EDU01-06
-- Профессиональное и университетское образование → ES-EDU01-07, ES-EDU01-09
-- Признание предыдущего образования и квалификаций → ES-EDU01-08, ES-EDU01-10
+- Школьное образование и обязательный возраст обучения → ES-EDU-01-C001, ES-EDU-01-C002
+- Прибытие в течение учебного года → ES-EDU-01-C003
+- Зачисление и языковая поддержка зависят от региона → ES-EDU-01-C004, ES-EDU-01-C005
+- Изучение языков взрослыми → ES-EDU-01-C006
+- Профессиональное и университетское образование → ES-EDU-01-C007, ES-EDU-01-C009
+- Признание предыдущего образования и квалификаций → ES-EDU-01-C008, ES-EDU-01-C010
 
 ## Editorial exclusions
 
-- No universal school enrolment calendar, document list, language-course hours, examination concession, school place or university admission outcome is stated; the procedures depend on the competent region or institution (ES-EDU01-03–07, ES-EDU01-09).
-- Recognition procedures and the temporary-protection document declaration are described narrowly; no automatic equivalence, admission or professional authorization is claimed (ES-EDU01-08, ES-EDU01-10).
+- No universal school enrolment calendar, document list, language-course hours, examination concession, school place or university admission outcome is stated; the procedures depend on the competent region or institution (ES-EDU-01-C003–07, ES-EDU-01-C009).
+- Recognition procedures and the temporary-protection document declaration are described narrowly; no automatic equivalence, admission or professional authorization is claimed (ES-EDU-01-C008, ES-EDU-01-C010).
 
 ## Editorial source set
 

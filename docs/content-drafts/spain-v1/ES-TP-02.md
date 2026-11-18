@@ -4,7 +4,7 @@
 - Category: `temporary-protection`
 - Working English title: Residence Options Beyond Temporary Protection in Spain
 - Source matrix: [after-temporary-protection/SOURCES_AND_CLAIMS.md](../../content-research/spain-batch-2026-10-20/after-temporary-protection/SOURCES_AND_CLAIMS.md)
-- Editorial status: DRAFT — NOT APPROVED FOR PUBLICATION
+- Editorial status: APPROVED FOR INTEGRATION — Task 103 final review
 
 ## EN
 
@@ -58,12 +58,12 @@ Filing channels and route requirements can change and differ by procedure. Confi
 
 ### Claim coverage
 
-- Spain does not use one automatic conversion → ES-TP02-01, ES-TP02-14
-- Routes that may be available from inside Spain → ES-TP02-02, ES-TP02-03, ES-TP02-04, ES-TP02-05, ES-TP02-06, ES-TP02-07, ES-TP02-08, ES-TP02-13
-- National long-term residence → ES-TP02-10, ES-TP02-12
-- EU long-term residence is a separate route → ES-TP02-11, ES-TP02-12
-- When temporary protection is renounced → ES-TP02-09
-- Check the exact route before applying → ES-TP02-07, ES-TP02-13
+- Spain does not use one automatic conversion → ES-TP-02-C001, ES-TP-02-C014
+- Routes that may be available from inside Spain → ES-TP-02-C002, ES-TP-02-C003, ES-TP-02-C004, ES-TP-02-C005, ES-TP-02-C006, ES-TP-02-C007, ES-TP-02-C008, ES-TP-02-C013
+- National long-term residence → ES-TP-02-C010, ES-TP-02-C012
+- EU long-term residence is a separate route → ES-TP-02-C011, ES-TP-02-C012
+- When temporary protection is renounced → ES-TP-02-C009
+- Check the exact route before applying → ES-TP-02-C007, ES-TP-02-C013
 
 ## UK
 
@@ -117,12 +117,12 @@ Content:
 
 ### Claim coverage
 
-- В Іспанії немає одного автоматичного переходу → ES-TP02-01, ES-TP02-14
-- Маршрути, які можуть бути доступні з Іспанії → ES-TP02-02, ES-TP02-03, ES-TP02-04, ES-TP02-05, ES-TP02-06, ES-TP02-07, ES-TP02-08, ES-TP02-13
-- Національний довгостроковий дозвіл на проживання → ES-TP02-10, ES-TP02-12
-- Довгострокове проживання в ЄС — окремий маршрут → ES-TP02-11, ES-TP02-12
-- Коли відмовляються від тимчасового захисту → ES-TP02-09
-- Перевірте конкретний маршрут перед поданням → ES-TP02-07, ES-TP02-13
+- В Іспанії немає одного автоматичного переходу → ES-TP-02-C001, ES-TP-02-C014
+- Маршрути, які можуть бути доступні з Іспанії → ES-TP-02-C002, ES-TP-02-C003, ES-TP-02-C004, ES-TP-02-C005, ES-TP-02-C006, ES-TP-02-C007, ES-TP-02-C008, ES-TP-02-C013
+- Національний довгостроковий дозвіл на проживання → ES-TP-02-C010, ES-TP-02-C012
+- Довгострокове проживання в ЄС — окремий маршрут → ES-TP-02-C011, ES-TP-02-C012
+- Коли відмовляються від тимчасового захисту → ES-TP-02-C009
+- Перевірте конкретний маршрут перед поданням → ES-TP-02-C007, ES-TP-02-C013
 
 ## RU
 
@@ -176,12 +176,12 @@ Content:
 
 ### Claim coverage
 
-- В Испании нет одного автоматического перехода → ES-TP02-01, ES-TP02-14
-- Маршруты, которые могут быть доступны из Испании → ES-TP02-02, ES-TP02-03, ES-TP02-04, ES-TP02-05, ES-TP02-06, ES-TP02-07, ES-TP02-08, ES-TP02-13
-- Национальный долгосрочный вид на жительство → ES-TP02-10, ES-TP02-12
-- Долгосрочное проживание в ЕС — отдельный маршрут → ES-TP02-11, ES-TP02-12
-- Когда отказываются от временной защиты → ES-TP02-09
-- Проверьте конкретный маршрут перед подачей заявления → ES-TP02-07, ES-TP02-13
+- В Испании нет одного автоматического перехода → ES-TP-02-C001, ES-TP-02-C014
+- Маршруты, которые могут быть доступны из Испании → ES-TP-02-C002, ES-TP-02-C003, ES-TP-02-C004, ES-TP-02-C005, ES-TP-02-C006, ES-TP-02-C007, ES-TP-02-C008, ES-TP-02-C013
+- Национальный долгосрочный вид на жительство → ES-TP-02-C010, ES-TP-02-C012
+- Долгосрочное проживание в ЕС — отдельный маршрут → ES-TP-02-C011, ES-TP-02-C012
+- Когда отказываются от временной защиты → ES-TP-02-C009
+- Проверьте конкретный маршрут перед подачей заявления → ES-TP-02-C007, ES-TP-02-C013
 
 ## Editorial source set
 

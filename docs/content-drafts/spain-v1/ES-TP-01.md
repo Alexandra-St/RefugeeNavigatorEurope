@@ -4,7 +4,7 @@
 - Category: `temporary-protection`
 - Working English title: Temporary Protection in Spain: Applying and Maintaining Your Status
 - Source matrix: [temporary-protection-application/SOURCES_AND_CLAIMS.md](../../content-research/spain-batch-2026-10-20/temporary-protection-application/SOURCES_AND_CLAIMS.md)
-- Editorial status: DRAFT — NOT APPROVED FOR PUBLICATION
+- Editorial status: APPROVED FOR INTEGRATION — Task 103 final review
 
 ## EN
 
@@ -54,16 +54,16 @@ Application locations, appointments and evidence instructions can change. Use th
 
 ### Claim coverage
 
-- What temporary protection means → ES-TP01-01, ES-TP01-07, ES-TP01-13
-- Who may apply → ES-TP01-03, ES-TP01-04, ES-TP01-05, ES-TP01-06, ES-TP01-20
-- Where and how to apply → ES-TP01-08, ES-TP01-09, ES-TP01-10, ES-TP01-11, ES-TP01-12
-- Evidence and the rule from 5 August 2026 → ES-TP01-16, ES-TP01-17, ES-TP01-18
-- Status duration and your TIE → ES-TP01-01, ES-TP01-14, ES-TP01-15, ES-TP01-19
-- What to check before relying on your documents → ES-TP01-09, ES-TP01-10, ES-TP01-15, ES-TP01-18
+- What temporary protection means → ES-TP-01-C001, ES-TP-01-C006, ES-TP-01-C012
+- Who may apply → ES-TP-01-C002, ES-TP-01-C003, ES-TP-01-C004, ES-TP-01-C005, ES-TP-01-C019
+- Where and how to apply → ES-TP-01-C007, ES-TP-01-C008, ES-TP-01-C009, ES-TP-01-C010, ES-TP-01-C011
+- Evidence and the rule from 5 August 2026 → ES-TP-01-C015, ES-TP-01-C016, ES-TP-01-C017
+- Status duration and your TIE → ES-TP-01-C001, ES-TP-01-C013, ES-TP-01-C014, ES-TP-01-C018
+- What to check before relying on your documents → ES-TP-01-C008, ES-TP-01-C009, ES-TP-01-C014, ES-TP-01-C017
 
 ## Editorial exclusions
 
-- ES-TP01-02 — the Ministry page's older 4 March 2027 EU endpoint is stale relative to the later EU decision and is not presented as current.
+- Superseded information — the Ministry page's older 4 March 2027 EU endpoint is stale relative to the later EU decision and is not presented as current.
 
 ## UK
 
@@ -113,16 +113,16 @@ TIE — це документ, що посвідчує особу та прож�
 
 ### Claim coverage
 
-- Що означає тимчасовий захист → ES-TP01-01, ES-TP01-07, ES-TP01-13
-- Хто може подати заяву → ES-TP01-03, ES-TP01-04, ES-TP01-05, ES-TP01-06, ES-TP01-20
-- Де і як подати заяву → ES-TP01-08, ES-TP01-09, ES-TP01-10, ES-TP01-11, ES-TP01-12
-- Докази та правило з 5 серпня 2026 року → ES-TP01-16, ES-TP01-17, ES-TP01-18
-- Строк захисту та картка TIE → ES-TP01-01, ES-TP01-14, ES-TP01-15, ES-TP01-19
-- Що перевірити перед тим, як покладатися на документи → ES-TP01-09, ES-TP01-10, ES-TP01-15, ES-TP01-18
+- Що означає тимчасовий захист → ES-TP-01-C001, ES-TP-01-C006, ES-TP-01-C012
+- Хто може подати заяву → ES-TP-01-C002, ES-TP-01-C003, ES-TP-01-C004, ES-TP-01-C005, ES-TP-01-C019
+- Де і як подати заяву → ES-TP-01-C007, ES-TP-01-C008, ES-TP-01-C009, ES-TP-01-C010, ES-TP-01-C011
+- Докази та правило з 5 серпня 2026 року → ES-TP-01-C015, ES-TP-01-C016, ES-TP-01-C017
+- Строк захисту та картка TIE → ES-TP-01-C001, ES-TP-01-C013, ES-TP-01-C014, ES-TP-01-C018
+- Що перевірити перед тим, як покладатися на документи → ES-TP-01-C008, ES-TP-01-C009, ES-TP-01-C014, ES-TP-01-C017
 
 ## Editorial exclusions
 
-- ES-TP01-02 — старіша дата завершення механізму ЄС на сторінці Міністерства не узгоджується з пізнішим рішенням ЄС і не подається як чинна.
+- Застаріла інформація — раніша дата завершення механізму ЄС на сторінці Міністерства не узгоджується з пізнішим рішенням ЄС і не подається як чинна.
 
 ## RU
 
@@ -172,16 +172,16 @@ TIE — документ, удостоверяющий личность и пр�
 
 ### Claim coverage
 
-- Что означает временная защита → ES-TP01-01, ES-TP01-07, ES-TP01-13
-- Кто может подать заявление → ES-TP01-03, ES-TP01-04, ES-TP01-05, ES-TP01-06, ES-TP01-20
-- Где и как подать заявление → ES-TP01-08, ES-TP01-09, ES-TP01-10, ES-TP01-11, ES-TP01-12
-- Доказательства и правило с 5 августа 2026 года → ES-TP01-16, ES-TP01-17, ES-TP01-18
-- Срок защиты и карта TIE → ES-TP01-01, ES-TP01-14, ES-TP01-15, ES-TP01-19
-- Что проверить, прежде чем полагаться на документы → ES-TP01-09, ES-TP01-10, ES-TP01-15, ES-TP01-18
+- Что означает временная защита → ES-TP-01-C001, ES-TP-01-C006, ES-TP-01-C012
+- Кто может подать заявление → ES-TP-01-C002, ES-TP-01-C003, ES-TP-01-C004, ES-TP-01-C005, ES-TP-01-C019
+- Где и как подать заявление → ES-TP-01-C007, ES-TP-01-C008, ES-TP-01-C009, ES-TP-01-C010, ES-TP-01-C011
+- Доказательства и правило с 5 августа 2026 года → ES-TP-01-C015, ES-TP-01-C016, ES-TP-01-C017
+- Срок защиты и карта TIE → ES-TP-01-C001, ES-TP-01-C013, ES-TP-01-C014, ES-TP-01-C018
+- Что проверить, прежде чем полагаться на документы → ES-TP-01-C008, ES-TP-01-C009, ES-TP-01-C014, ES-TP-01-C017
 
 ## Editorial exclusions
 
-- ES-TP01-02 — более ранняя дата окончания механизма ЕС на странице Министерства расходится с последующим решением ЕС и не приводится как действующая.
+- Устаревшая информация — более ранняя дата окончания механизма ЕС на странице Министерства расходится с последующим решением ЕС и не приводится как действующая.
 
 ## Editorial source set
 

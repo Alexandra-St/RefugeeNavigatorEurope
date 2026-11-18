@@ -4,7 +4,7 @@
 - Category: `employment`
 - Working English title: Work Authorization and Employee Rights in Spain
 - Source matrix: [employment-rights/SOURCES_AND_CLAIMS.md](../../content-research/spain-batch-2026-10-20/employment-rights/SOURCES_AND_CLAIMS.md)
-- Editorial status: DRAFT — NOT APPROVED FOR PUBLICATION
+- Editorial status: APPROVED FOR INTEGRATION — Task 103 final review
 
 ## EN
 
@@ -33,6 +33,8 @@ For 2026, Spain's statutory minimum wage (SMI) is €1,221 per month or €40.70
 
 The rules provide for two extra payments each year; a collective agreement may prorate them across 12 months where applicable. Shorter working time is proportional. In-kind pay cannot reduce the full statutory 2026 SMI cash amount. These figures are for 2026 and should not be carried forward as 2027 amounts.
 
+The Council of Ministers approved the 2027 SMI at €18,004 per year from 1 January 2027, as reported in its official reference of 17 November 2026. This future-effective annual amount does not replace the 2026 monthly and daily rates above before that date. No hourly rate is inferred.
+
 ## Working time, leave and documented pay
 
 The ordinary working-time limit is an average of 40 effective hours per week over the year. Paid annual leave must be at least 30 calendar days. The applicable schedule and conditions can depend on the law, contract and collective agreement; these figures do not describe every working-time or rest rule.
@@ -48,11 +50,13 @@ The Workers' Statute provides a 20-working-day limitation period for an action a
 
 ### Claim coverage
 
-- Work authorization and your current document → ES-EMP02-01, ES-EMP02-02, ES-EMP02-03
-- Employer duties and employment contracts → ES-EMP02-04, ES-EMP02-05, ES-EMP02-06, ES-EMP02-13, ES-EMP02-14
-- Pay and the 2026 minimum wage → ES-EMP02-07, ES-EMP02-08
-- Working time, leave and documented pay → ES-EMP02-09, ES-EMP02-10, ES-EMP02-11
-- If a workplace problem arises → ES-EMP02-12, ES-EMP02-15
+- 2027 SMI annual amount and effective date → ES-EMP-02-C016
+
+- Work authorization and your current document → ES-EMP-02-C001, ES-EMP-02-C002, ES-EMP-02-C003
+- Employer duties and employment contracts → ES-EMP-02-C004, ES-EMP-02-C005, ES-EMP-02-C006, ES-EMP-02-C013, ES-EMP-02-C014
+- Pay and the 2026 minimum wage → ES-EMP-02-C007, ES-EMP-02-C008
+- Working time, leave and documented pay → ES-EMP-02-C009, ES-EMP-02-C010, ES-EMP-02-C011
+- If a workplace problem arises → ES-EMP-02-C012, ES-EMP-02-C015
 
 ## UK
 
@@ -81,6 +85,8 @@ Content:
 
 Правила передбачають дві додаткові виплати на рік; за застосовною колективною угодою їх можна розподілити на 12 місяців. За меншої тривалості робочого часу сума є пропорційною. Натуральна оплата не може зменшити повну грошову суму встановленої мінімальної зарплати 2026 року. Ці суми стосуються 2026 року; їх не можна автоматично переносити на 2027 рік.
 
+Рада міністрів затвердила SMI на 2027 рік у розмірі 18 004 євро на рік із 1 січня 2027 року, як зазначено в офіційному повідомленні від 17 листопада 2026 року. Ця майбутня річна сума не замінює наведені вище місячну та денну ставки 2026 року до цієї дати. Погодинну ставку не виведено.
+
 ## Робочий час, відпустка та підтвердження оплати
 
 Звичайна тривалість роботи обмежена в середньому 40 фактичними годинами на тиждень за рік. Оплачувана щорічна відпустка має становити не менш як 30 календарних днів. Розклад і умови можуть залежати від закону, договору та колективної угоди; ці показники не охоплюють усіх правил робочого часу та відпочинку.
@@ -96,11 +102,13 @@ Content:
 
 ### Claim coverage
 
-- Дозвіл на роботу та ваш чинний документ → ES-EMP02-01, ES-EMP02-02, ES-EMP02-03
-- Обов’язки роботодавця та трудові договори → ES-EMP02-04, ES-EMP02-05, ES-EMP02-06, ES-EMP02-13, ES-EMP02-14
-- Оплата праці та мінімальна зарплата 2026 року → ES-EMP02-07, ES-EMP02-08
-- Робочий час, відпустка та підтвердження оплати → ES-EMP02-09, ES-EMP02-10, ES-EMP02-11
-- Якщо виникла проблема на роботі → ES-EMP02-12, ES-EMP02-15
+- Річний розмір SMI на 2027 рік і дата набрання чинності → ES-EMP-02-C016
+
+- Дозвіл на роботу та ваш чинний документ → ES-EMP-02-C001, ES-EMP-02-C002, ES-EMP-02-C003
+- Обов’язки роботодавця та трудові договори → ES-EMP-02-C004, ES-EMP-02-C005, ES-EMP-02-C006, ES-EMP-02-C013, ES-EMP-02-C014
+- Оплата праці та мінімальна зарплата 2026 року → ES-EMP-02-C007, ES-EMP-02-C008
+- Робочий час, відпустка та підтвердження оплати → ES-EMP-02-C009, ES-EMP-02-C010, ES-EMP-02-C011
+- Якщо виникла проблема на роботі → ES-EMP-02-C012, ES-EMP-02-C015
 
 ## RU
 
@@ -129,6 +137,8 @@ Content:
 
 Правила предусматривают две дополнительные выплаты в год; применимое коллективное соглашение может распределить их на 12 месяцев. При меньшем рабочем времени сумма рассчитывается пропорционально. Натуральная оплата не может уменьшить полную денежную сумму установленной минимальной зарплаты 2026 года. Эти суммы относятся к 2026 году и не должны автоматически переноситься на 2027 год.
 
+Совет министров утвердил SMI на 2027 год в размере 18 004 евро в год с 1 января 2027 года, как указано в официальном сообщении от 17 ноября 2026 года. Эта будущая годовая сумма не заменяет приведённые выше месячную и дневную ставки 2026 года до указанной даты. Почасовая ставка не выводится.
+
 ## Рабочее время, отпуск и подтверждение оплаты
 
 Обычное рабочее время ограничено в среднем 40 фактическими часами в неделю за год. Оплачиваемый ежегодный отпуск должен составлять не менее 30 календарных дней. Расписание и условия могут зависеть от закона, договора и коллективного соглашения; эти показатели не описывают все правила рабочего времени и отдыха.
@@ -144,12 +154,14 @@ Content:
 
 ### Claim coverage
 
-- Разрешение на работу и ваш действующий документ → ES-EMP02-01, ES-EMP02-02, ES-EMP02-03
-- Обязанности работодателя и трудовые договоры → ES-EMP02-04, ES-EMP02-05, ES-EMP02-06, ES-EMP02-13, ES-EMP02-14
-- Оплата труда и минимальная зарплата 2026 года → ES-EMP02-07, ES-EMP02-08
-- Рабочее время, отпуск и подтверждение оплаты → ES-EMP02-09, ES-EMP02-10, ES-EMP02-11
-- Если возникла проблема на работе → ES-EMP02-12, ES-EMP02-15
+- Годовой размер SMI на 2027 год и дата вступления в силу → ES-EMP-02-C016
+
+- Разрешение на работу и ваш действующий документ → ES-EMP-02-C001, ES-EMP-02-C002, ES-EMP-02-C003
+- Обязанности работодателя и трудовые договоры → ES-EMP-02-C004, ES-EMP-02-C005, ES-EMP-02-C006, ES-EMP-02-C013, ES-EMP-02-C014
+- Оплата труда и минимальная зарплата 2026 года → ES-EMP-02-C007, ES-EMP-02-C008
+- Рабочее время, отпуск и подтверждение оплаты → ES-EMP-02-C009, ES-EMP-02-C010, ES-EMP-02-C011
+- Если возникла проблема на работе → ES-EMP-02-C012, ES-EMP-02-C015
 
 ## Editorial source set
 
-WORK-S01, WORK-S02, WORK-S03, WORK-S04, WORK-S05, WORK-S06, WORK-S07, WORK-S08
+WORK-S01, WORK-S02, WORK-S03, WORK-S04, WORK-S05, WORK-S06, WORK-S07, WORK-S08, WORK-S09

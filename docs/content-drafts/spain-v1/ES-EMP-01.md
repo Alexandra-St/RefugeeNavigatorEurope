@@ -4,7 +4,7 @@
 - Category: `employment`
 - Working English title: Finding a Job in Spain
 - Source matrix: [finding-a-job/SOURCES_AND_CLAIMS.md](../../content-research/spain-batch-2026-10-20/finding-a-job/SOURCES_AND_CLAIMS.md)
-- Editorial status: DRAFT — NOT APPROVED FOR PUBLICATION
+- Editorial status: APPROVED FOR INTEGRATION — Task 103 final review
 
 ## EN
 
@@ -48,11 +48,11 @@ Professional recognition is distinct from academic homologación or equivalence.
 
 ### Claim coverage
 
-- Start with the public employment service → ES-EMP01-03, ES-EMP01-07
-- Search official vacancies → ES-EMP01-01, ES-EMP01-02, ES-EMP01-03, ES-EMP01-04
-- Registering as a jobseeker → ES-EMP01-05, ES-EMP01-06, ES-EMP01-08
-- Counselling and training → ES-EMP01-07
-- Foreign qualifications and regulated professions → ES-EMP01-09
+- Start with the public employment service → ES-EMP-01-C003, ES-EMP-01-C007
+- Search official vacancies → ES-EMP-01-C001, ES-EMP-01-C002, ES-EMP-01-C003, ES-EMP-01-C004
+- Registering as a jobseeker → ES-EMP-01-C005, ES-EMP-01-C006, ES-EMP-01-C008
+- Counselling and training → ES-EMP-01-C007
+- Foreign qualifications and regulated professions → ES-EMP-01-C009
 
 ## UK
 
@@ -96,11 +96,11 @@ EURES — ще один офіційний канал для пошуку вак
 
 ### Claim coverage
 
-- Почніть із державної служби зайнятості → ES-EMP01-03, ES-EMP01-07
-- Шукайте офіційні вакансії → ES-EMP01-01, ES-EMP01-02, ES-EMP01-03, ES-EMP01-04
-- Реєстрація шукача роботи → ES-EMP01-05, ES-EMP01-06, ES-EMP01-08
-- Консультації та навчання → ES-EMP01-07
-- Іноземні кваліфікації та регульовані професії → ES-EMP01-09
+- Почніть із державної служби зайнятості → ES-EMP-01-C003, ES-EMP-01-C007
+- Шукайте офіційні вакансії → ES-EMP-01-C001, ES-EMP-01-C002, ES-EMP-01-C003, ES-EMP-01-C004
+- Реєстрація шукача роботи → ES-EMP-01-C005, ES-EMP-01-C006, ES-EMP-01-C008
+- Консультації та навчання → ES-EMP-01-C007
+- Іноземні кваліфікації та регульовані професії → ES-EMP-01-C009
 
 ## RU
 
@@ -144,11 +144,11 @@ EURES — ещё один официальный канал для поиска 
 
 ### Claim coverage
 
-- Начните с государственной службы занятости → ES-EMP01-03, ES-EMP01-07
-- Ищите официальные вакансии → ES-EMP01-01, ES-EMP01-02, ES-EMP01-03, ES-EMP01-04
-- Регистрация ищущего работу → ES-EMP01-05, ES-EMP01-06, ES-EMP01-08
-- Консультации и обучение → ES-EMP01-07
-- Иностранные квалификации и регулируемые профессии → ES-EMP01-09
+- Начните с государственной службы занятости → ES-EMP-01-C003, ES-EMP-01-C007
+- Ищите официальные вакансии → ES-EMP-01-C001, ES-EMP-01-C002, ES-EMP-01-C003, ES-EMP-01-C004
+- Регистрация ищущего работу → ES-EMP-01-C005, ES-EMP-01-C006, ES-EMP-01-C008
+- Консультации и обучение → ES-EMP-01-C007
+- Иностранные квалификации и регулируемые профессии → ES-EMP-01-C009
 
 ## Editorial source set
 

@@ -4,7 +4,7 @@
 - Category: `housing`
 - Working English title: Finding Accommodation in Spain
 - Source matrix: [housing/SOURCES_AND_CLAIMS.md](../../content-research/spain-batch-2026-10-20/housing/SOURCES_AND_CLAIMS.md)
-- Editorial status: DRAFT — NOT APPROVED FOR PUBLICATION
+- Editorial status: APPROVED FOR INTEGRATION — Task 103 final review
 
 ## EN
 
@@ -22,6 +22,10 @@ Spain's Sistema de Acogida de Protección Internacional y Temporal may include a
 The system works through a network of resources and an individualized support itinerary. The responsible system determines arrangements. A place, particular accommodation, city, region, duration or service is not guaranteed, and no right to choose a facility is established here. The authorized period for a particular programme or service can be one of the reasons support ends; there is no single maximum stay stated here.
 
 The Ministry's Ukraine information page lists CREADE centres as information and appointment points and as a route to the reception system. Check current operational locations and contact instructions before relying on them.
+
+## State rental assistance under the 2026–2030 Plan
+
+The State Housing Plan 2026–2030 establishes rental-assistance programmes. The Autonomous Communities and the cities of Ceuta and Melilla publish calls and administer applications. Eligibility, income and rent limits, and application windows depend on the specific programme and call. Temporary-protection status alone does not guarantee an award; check the current call where you live.
 
 ## Renting a home
 
@@ -48,10 +52,12 @@ Ask the relevant reception-system contact about current access arrangements. For
 
 ### Claim coverage
 
-- State reception and private renting are different routes → ES-HOUSING01-01, ES-HOUSING01-04
-- Renting a home → ES-HOUSING01-05, ES-HOUSING01-06, ES-HOUSING01-07, ES-HOUSING01-08
-- Registering your actual address → ES-HOUSING01-09, ES-HOUSING01-10, ES-HOUSING01-11
-- What to check locally → ES-HOUSING01-02, ES-HOUSING01-03, ES-HOUSING01-12, ES-HOUSING01-13
+- State rental assistance under Plan 2026–2030 → ES-HOUSING-01-C014
+
+- State reception and private renting are different routes → ES-HOUSING-01-C001, ES-HOUSING-01-C004
+- Renting a home → ES-HOUSING-01-C005, ES-HOUSING-01-C006, ES-HOUSING-01-C007, ES-HOUSING-01-C008
+- Registering your actual address → ES-HOUSING-01-C009, ES-HOUSING-01-C010, ES-HOUSING-01-C011
+- What to check locally → ES-HOUSING-01-C002, ES-HOUSING-01-C003, ES-HOUSING-01-C012, ES-HOUSING-01-C013
 
 ## UK
 
@@ -69,6 +75,10 @@ Content:
 Система працює через мережу ресурсів та індивідуальний план підтримки. Відповідальна система визначає умови. Тут не гарантується місце, конкретне житло, місто, регіон, тривалість чи послуга, а також не встановлюється право обрати заклад. Закінчення строку, дозволеного для конкретної програми або послуги, може бути однією з підстав припинення підтримки; єдиного максимального строку тут не визначено.
 
 На інформаційній сторінці Міністерства щодо України центри CREADE зазначені як місця для отримання інформації та запису, а також як один зі шляхів до системи прийому. Перед зверненням перевірте, які центри й контактні процедури працюють зараз.
+
+## Допомога з орендою за Планом на 2026–2030 роки
+
+Державний план житла на 2026–2030 роки передбачає програми допомоги з орендою. Автономні спільноти та міста Сеута й Мелілья оголошують процедури та приймають заяви. Право на допомогу, ліміти доходу й орендної плати та строки подання залежать від конкретної програми й оголошення. Сам тимчасовий захист не гарантує виплату; перевірте актуальне оголошення за місцем проживання.
 
 ## Оренда житла
 
@@ -95,10 +105,12 @@ Content:
 
 ### Claim coverage
 
-- Державна система прийому та приватна оренда — різні шляхи → ES-HOUSING01-01, ES-HOUSING01-04
-- Оренда житла → ES-HOUSING01-05, ES-HOUSING01-06, ES-HOUSING01-07, ES-HOUSING01-08
-- Реєстрація фактичного місця проживання → ES-HOUSING01-09, ES-HOUSING01-10, ES-HOUSING01-11
-- Що уточнити на місці → ES-HOUSING01-02, ES-HOUSING01-03, ES-HOUSING01-12, ES-HOUSING01-13
+- Допомога з орендою за Планом на 2026–2030 роки → ES-HOUSING-01-C014
+
+- Державна система прийому та приватна оренда — різні шляхи → ES-HOUSING-01-C001, ES-HOUSING-01-C004
+- Оренда житла → ES-HOUSING-01-C005, ES-HOUSING-01-C006, ES-HOUSING-01-C007, ES-HOUSING-01-C008
+- Реєстрація фактичного місця проживання → ES-HOUSING-01-C009, ES-HOUSING-01-C010, ES-HOUSING-01-C011
+- Що уточнити на місці → ES-HOUSING-01-C002, ES-HOUSING-01-C003, ES-HOUSING-01-C012, ES-HOUSING-01-C013
 
 ## RU
 
@@ -116,6 +128,10 @@ Content:
 Система работает через сеть ресурсов и индивидуальный план поддержки. Ответственная система определяет условия. Здесь не гарантируются место, конкретное жильё, город, регион, продолжительность или услуга; право выбрать учреждение также не устанавливается. Окончание срока, разрешённого для конкретной программы или услуги, может быть одним из оснований прекращения поддержки; единого максимального срока здесь не указано.
 
 На информационной странице Министерства по Украине центры CREADE указаны как места для получения информации и записи, а также как один из путей к системе приёма. Перед обращением проверьте, какие центры и контактные процедуры работают сейчас.
+
+## Помощь с арендой по Плану на 2026–2030 годы
+
+Государственный план жилья на 2026–2030 годы предусматривает программы помощи с арендой. Автономные сообщества и города Сеута и Мелилья объявляют процедуры и принимают заявления. Право на помощь, пределы дохода и арендной платы, а также сроки подачи зависят от конкретной программы и объявления. Сам по себе временный статус не гарантирует выплату; проверьте действующее объявление по месту проживания.
 
 ## Аренда жилья
 
@@ -142,16 +158,18 @@ Content:
 
 ### Claim coverage
 
-- Государственная система приёма и частная аренда — разные пути → ES-HOUSING01-01, ES-HOUSING01-04
-- Аренда жилья → ES-HOUSING01-05, ES-HOUSING01-06, ES-HOUSING01-07, ES-HOUSING01-08
-- Регистрация фактического места проживания → ES-HOUSING01-09, ES-HOUSING01-10, ES-HOUSING01-11
-- Что уточнить на месте → ES-HOUSING01-02, ES-HOUSING01-03, ES-HOUSING01-12, ES-HOUSING01-13
+- Помощь с арендой по Плану на 2026–2030 годы → ES-HOUSING-01-C014
+
+- Государственная система приёма и частная аренда — разные пути → ES-HOUSING-01-C001, ES-HOUSING-01-C004
+- Аренда жилья → ES-HOUSING-01-C005, ES-HOUSING-01-C006, ES-HOUSING-01-C007, ES-HOUSING-01-C008
+- Регистрация фактического места проживания → ES-HOUSING-01-C009, ES-HOUSING-01-C010, ES-HOUSING-01-C011
+- Что уточнить на месте → ES-HOUSING-01-C002, ES-HOUSING-01-C003, ES-HOUSING-01-C012, ES-HOUSING-01-C013
 
 ## Editorial exclusions
 
-- No fixed reception stay, cash entitlement or regional housing programme is stated; the reviewed evidence does not establish these as universal outcomes (ES-HOUSING01-02, ES-HOUSING01-03).
-- CREADE is included only as a conditional signpost. The undated page and its stale legal text are not used to state current protection rules or exhaustive intake arrangements (ES-HOUSING01-13).
-- The recently amended LAU rules are presented within habitual-residence lease scope and with a publication-time freshness caveat (ES-HOUSING01-05, ES-HOUSING01-07, ES-HOUSING01-08).
+- No fixed reception stay, cash entitlement or regional housing programme is stated; the reviewed evidence does not establish these as universal outcomes (ES-HOUSING-01-C002, ES-HOUSING-01-C003).
+- CREADE is included only as a conditional signpost. The undated page and its stale legal text are not used to state current protection rules or exhaustive intake arrangements (ES-HOUSING-01-C013).
+- The recently amended LAU rules are presented within habitual-residence lease scope and with a publication-time freshness caveat (ES-HOUSING-01-C005, ES-HOUSING-01-C007, ES-HOUSING-01-C008).
 
 ## Editorial source set
 

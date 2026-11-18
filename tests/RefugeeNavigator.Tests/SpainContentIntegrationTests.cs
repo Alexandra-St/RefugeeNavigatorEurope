@@ -12,6 +12,7 @@ using RefugeeNavigator.Data;
 using RefugeeNavigator.Domain;
 using RefugeeNavigator.Web.Components;
 using RefugeeNavigator.Web.Components.Pages;
+using RefugeeNavigator.Web.Comparison;
 using RefugeeNavigator.Web.Guides;
 using RefugeeNavigator.Web.Localization;
 
@@ -34,7 +35,7 @@ public sealed class SpainContentIntegrationTests
         ["ES-TP-01"] = 7,
         ["ES-TP-02"] = 4,
         ["ES-EMP-01"] = 7,
-        ["ES-EMP-02"] = 8,
+        ["ES-EMP-02"] = 9,
         ["ES-HEALTH-01"] = 3,
         ["ES-HOUSING-01"] = 6,
         ["ES-EDU-01"] = 6,
@@ -105,6 +106,7 @@ public sealed class SpainContentIntegrationTests
             Assert.All(translations, item =>
             {
                 Assert.Equal(VerificationStatus.Verified, item.VerificationStatus);
+                Assert.Equal(DateTimeOffset.Parse("2026-11-18T00:00:00+00:00"), item.LastUpdatedAt);
                 Assert.False(string.IsNullOrWhiteSpace(item.Title));
                 Assert.False(string.IsNullOrWhiteSpace(item.Summary));
                 Assert.False(string.IsNullOrWhiteSpace(item.Content));
@@ -152,7 +154,7 @@ public sealed class SpainContentIntegrationTests
             .Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => entryIds.Contains(item.InformationEntryId)).ToArray();
 
-        Assert.Equal(52, sources.Length);
+        Assert.Equal(53, sources.Length);
         Assert.Equal(sources.Length, sources.Select(item => item.Id).Distinct().Count());
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         Assert.All(sources, source =>
@@ -172,6 +174,67 @@ public sealed class SpainContentIntegrationTests
         Assert.Contains(sources, item =>
             item.InformationEntryId == StableArticleIds["ES-TP-02"]
             && item.Url == new Uri("https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02003L0109-20260612"));
+        var added = Assert.Single(sources, item => item.Id == Guid.Parse("55dfb9f1-bee9-54a7-867a-0c2379dca38e"));
+        Assert.Equal(StableArticleIds["ES-EMP-02"], added.InformationEntryId);
+        Assert.Equal(new Uri("https://www.lamoncloa.gob.es/consejoministros/referencias/Paginas/2026/20261117-referencia-rueda-de-consejo-ministros.aspx"), added.Url);
+        Assert.Equal(new Uri("https://eures.europa.eu/index_es"), Assert.Single(sources, item => item.Id == Guid.Parse("ba96278e-9e7b-40cd-a678-f917e392e861")).Url);
+        Assert.Equal(new Uri("https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10967/27924/desc27924?changeLanguage=es"), Assert.Single(sources, item => item.Id == Guid.Parse("f2bb0f3b-2674-54ea-8d97-5b0244e958cc")).Url);
+    }
+
+    [Fact]
+    public async Task SpainRefreshPreservesReviewedSafetyDistinctionsAndCompareBinding()
+    {
+        var catalog = await Catalog.Value;
+        var translations = catalog.InformationEntryTranslations.Where(item =>
+            StableArticleIds.Values.Contains(item.InformationEntryId) && item.LanguageCode == "en")
+            .ToDictionary(item => StableArticleIds.Single(pair => pair.Value == item.InformationEntryId).Key, item => item.Content);
+
+        Assert.Contains("through 4 March 2028", translations["ES-TP-01"]);
+        Assert.Contains("from 5 August 2026", translations["ES-TP-01"]);
+        Assert.Contains("on 4 August 2026", translations["ES-TP-01"]);
+        Assert.Contains("compliance with Ukrainian military obligations or an exemption", translations["ES-TP-01"]);
+        Assert.Contains("does not specify age groups or the accepted evidence format", translations["ES-TP-01"]);
+        Assert.Contains("through 4 March 2027", translations["ES-TP-01"]);
+        Assert.Contains("does not establish that every TIE is valid through 2028", translations["ES-TP-01"]);
+        Assert.DoesNotContain("30 July 2026", translations["ES-TP-01"]);
+        Assert.DoesNotContain("24 hours", translations["ES-TP-01"], StringComparison.OrdinalIgnoreCase);
+        Assert.DoesNotContain("guaranteed service time", translations["ES-TP-01"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("Ukrainian nationality alone does not establish", translations["ES-TP-01"]);
+        Assert.Contains("A receipt or NIE is not the same as a grant decision or a TIE card", translations["ES-TP-01"]);
+        Assert.Contains("A decision granting temporary protection", translations["ES-EMP-02"]);
+        Assert.Contains("employees or self-employed", translations["ES-EMP-02"]);
+        Assert.Contains("€1,221 per month", translations["ES-EMP-02"]);
+        Assert.Contains("€40.70 per day", translations["ES-EMP-02"]);
+        Assert.Contains("€17,094", translations["ES-EMP-02"]);
+        Assert.Contains("€18,004 per year from 1 January 2027", translations["ES-EMP-02"]);
+        Assert.Contains("No hourly rate is inferred", translations["ES-EMP-02"]);
+        Assert.Contains("route still apply", translations["ES-TP-02"]);
+        Assert.Contains("not one new permit automatically granted", translations["ES-TP-02"]);
+        Assert.Contains("does not by itself establish that a person qualifies for or will receive long-term residence", translations["ES-TP-02"]);
+        Assert.Contains("must be granted", translations["ES-TP-02"]);
+        Assert.Contains("A TIE, NIE, temporary-protection decision, application receipt and individual health card are different documents", translations["ES-HEALTH-01"]);
+        Assert.Contains("not itself a health card", translations["ES-HEALTH-01"]);
+        Assert.Contains("Autonomous Community", translations["ES-HEALTH-01"]);
+        Assert.DoesNotContain("free for all Ukrainian applicants", translations["ES-HEALTH-01"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("is not guaranteed", translations["ES-HOUSING-01"]);
+        Assert.Contains("temporary protection alone does not establish admission", translations["ES-HOUSING-01"]);
+        Assert.Contains("publish calls and administer applications", translations["ES-HOUSING-01"]);
+        Assert.Contains("Padrón records where a person actually lives", translations["ES-HOUSING-01"]);
+        Assert.Contains("determine immigration status", translations["ES-HOUSING-01"]);
+        Assert.Contains("means-tested Social Security benefit", translations["ES-SOC-01"]);
+        Assert.Contains("do not assume the same cash assistance exists everywhere", translations["ES-SOC-01"]);
+        Assert.Contains("ages 6 through 16", translations["ES-EDU-01"]);
+        Assert.Contains("competent education authority determines placement", translations["ES-EDU-01"]);
+
+        var comparison = await new JsonComparisonFactProvider(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json"))
+            .LoadAsync(catalog);
+        var wage = Assert.Single(comparison.Topics.SelectMany(topic => topic.Aspects)
+            .Single(aspect => aspect.Id == "work-minimum-pay").Facts, fact => fact.CountrySlug == "spain");
+        Assert.Equal(new[] { Guid.Parse("2b15b8cb-2568-4b24-b5eb-4afd6b3682a7"), Guid.Parse("55dfb9f1-bee9-54a7-867a-0c2379dca38e") }, wage.OfficialSourceIds);
+        Assert.Contains("€1,221", wage.Values["en"]);
+        Assert.Contains("€18,004 per year from 1 January 2027", wage.Values["en"]);
+        Assert.DoesNotContain("€1,286", wage.Values["en"]);
+        Assert.DoesNotContain("€42.87", wage.Values["en"]);
     }
 
     [Theory]

@@ -4,7 +4,7 @@
 - Category: `healthcare`
 - Working English title: Accessing Healthcare in Spain
 - Source matrix: [healthcare/SOURCES_AND_CLAIMS.md](../../content-research/spain-batch-2026-10-20/healthcare/SOURCES_AND_CLAIMS.md)
-- Editorial status: DRAFT — NOT APPROVED FOR PUBLICATION
+- Editorial status: APPROVED FOR INTEGRATION — Task 103 final review
 
 ## EN
 
@@ -41,11 +41,11 @@ Use the current health-authority information for your Autonomous Community to ch
 
 ### Claim coverage
 
-- How healthcare access is organised → ES-HEALTH01-01
-- Health entitlement and the health card are different → ES-HEALTH01-04
-- Procedures vary by Autonomous Community → ES-HEALTH01-01, ES-HEALTH01-04
-- Emergency healthcare → ES-HEALTH01-05
-- What to check locally → ES-HEALTH01-01, ES-HEALTH01-04
+- How healthcare access is organised → ES-HEALTH-01-C001
+- Health entitlement and the health card are different → ES-HEALTH-01-C002
+- Procedures vary by Autonomous Community → ES-HEALTH-01-C001, ES-HEALTH-01-C002
+- Emergency healthcare → ES-HEALTH-01-C003
+- What to check locally → ES-HEALTH-01-C001, ES-HEALTH-01-C002
 
 ## UK
 
@@ -82,11 +82,11 @@ TIE, NIE, рішення про тимчасовий захист, підтве�
 
 ### Claim coverage
 
-- Як організовано доступ до медичної допомоги → ES-HEALTH01-01
-- Право на медичну допомогу та медична картка — не одне й те саме → ES-HEALTH01-04
-- Процедури відрізняються в автономних спільнотах → ES-HEALTH01-01, ES-HEALTH01-04
-- Невідкладна допомога → ES-HEALTH01-05
-- Що уточнити на місці → ES-HEALTH01-01, ES-HEALTH01-04
+- Як організовано доступ до медичної допомоги → ES-HEALTH-01-C001
+- Право на медичну допомогу та медична картка — не одне й те саме → ES-HEALTH-01-C002
+- Процедури відрізняються в автономних спільнотах → ES-HEALTH-01-C001, ES-HEALTH-01-C002
+- Невідкладна допомога → ES-HEALTH-01-C003
+- Що уточнити на місці → ES-HEALTH-01-C001, ES-HEALTH-01-C002
 
 ## RU
 
@@ -123,16 +123,16 @@ TIE, NIE, решение о временной защите, подтвержд�
 
 ### Claim coverage
 
-- Как организован доступ к медицинской помощи → ES-HEALTH01-01
-- Право на медицинскую помощь и медицинская карта — не одно и то же → ES-HEALTH01-04
-- Порядок зависит от автономной области → ES-HEALTH01-01, ES-HEALTH01-04
-- Неотложная помощь → ES-HEALTH01-05
-- Что уточнить на месте → ES-HEALTH01-01, ES-HEALTH01-04
+- Как организован доступ к медицинской помощи → ES-HEALTH-01-C001
+- Право на медицинскую помощь и медицинская карта — не одно и то же → ES-HEALTH-01-C002
+- Порядок зависит от автономной области → ES-HEALTH-01-C001, ES-HEALTH-01-C002
+- Неотложная помощь → ES-HEALTH-01-C003
+- Что уточнить на месте → ES-HEALTH-01-C001, ES-HEALTH-01-C002
 
 ## Editorial exclusions
 
-- The Ministry FAQ's detailed receipt/resolution-to-health-card route (ES-HEALTH01-02 and ES-HEALTH01-03) is omitted because the linked PDF is marked “Draft Concept Note,” has no clear revision date, and its current operative status is unresolved.
-- The broad 2022 statement that healthcare is free for all Ukrainian applicants is not presented as a current universal rule (ES-HEALTH01-06). No universal claim about medicines, copayments, referrals or interpretation is made.
+- The Ministry FAQ's detailed receipt/resolution-to-health-card route ( and ) is omitted because the linked PDF is marked “Draft Concept Note,” has no clear revision date, and its current operative status is unresolved.
+- The broad 2022 statement that healthcare is free for all Ukrainian applicants is not presented as a current universal rule (). No universal claim about medicines, copayments, referrals or interpretation is made.
 
 ## Editorial source set
 

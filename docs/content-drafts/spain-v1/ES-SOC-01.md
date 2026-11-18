@@ -4,7 +4,7 @@
 - Category: `social-assistance`
 - Working English title: Financial and Social Assistance in Spain
 - Source matrix: [social-assistance/SOURCES_AND_CLAIMS.md](../../content-research/spain-batch-2026-10-20/social-assistance/SOURCES_AND_CLAIMS.md)
-- Editorial status: DRAFT — NOT APPROVED FOR PUBLICATION
+- Editorial status: APPROVED FOR INTEGRATION — Task 103 final review
 
 ## EN
 
@@ -49,12 +49,12 @@ The reviewed direct-aid measure for qualifying temporary-protection beneficiarie
 
 ### Claim coverage
 
-- Social support is not one single benefit → ES-SOC01-01
-- Support through the reception system → ES-SOC01-02, ES-SOC01-03, ES-SOC01-04
-- Ingreso Mínimo Vital → ES-SOC01-06, ES-SOC01-07
-- Child-related IMV support → ES-SOC01-08
-- Regional and municipal assistance → ES-SOC01-09
-- Historical Ukraine-specific aid → ES-SOC01-05
+- Social support is not one single benefit → ES-SOC-01-C001
+- Support through the reception system → ES-SOC-01-C002, ES-SOC-01-C003, ES-SOC-01-C004
+- Ingreso Mínimo Vital → ES-SOC-01-C006, ES-SOC-01-C007
+- Child-related IMV support → ES-SOC-01-C008
+- Regional and municipal assistance → ES-SOC-01-C009
+- Historical Ukraine-specific aid → ES-SOC-01-C005
 
 ## UK
 
@@ -99,12 +99,12 @@ Ingreso Mínimo Vital (IMV) — окрема допомога системи с�
 
 ### Claim coverage
 
-- Соціальна підтримка — це не одна універсальна виплата → ES-SOC01-01
-- Підтримка в системі прийому → ES-SOC01-02, ES-SOC01-03, ES-SOC01-04
-- Ingreso Mínimo Vital → ES-SOC01-06, ES-SOC01-07
-- Доплата IMV на дітей → ES-SOC01-08
-- Регіональна та муніципальна допомога → ES-SOC01-09
-- Історична допомога, пов’язана з Україною → ES-SOC01-05
+- Соціальна підтримка — це не одна універсальна виплата → ES-SOC-01-C001
+- Підтримка в системі прийому → ES-SOC-01-C002, ES-SOC-01-C003, ES-SOC-01-C004
+- Ingreso Mínimo Vital → ES-SOC-01-C006, ES-SOC-01-C007
+- Доплата IMV на дітей → ES-SOC-01-C008
+- Регіональна та муніципальна допомога → ES-SOC-01-C009
+- Історична допомога, пов’язана з Україною → ES-SOC-01-C005
 
 ## RU
 
@@ -149,18 +149,18 @@ Ingreso Mínimo Vital (IMV) — отдельное пособие испанск
 
 ### Claim coverage
 
-- Социальная поддержка — это не одна универсальная выплата → ES-SOC01-01
-- Поддержка в системе приёма → ES-SOC01-02, ES-SOC01-03, ES-SOC01-04
-- Ingreso Mínimo Vital → ES-SOC01-06, ES-SOC01-07
-- Доплата IMV на детей → ES-SOC01-08
-- Региональная и муниципальная помощь → ES-SOC01-09
-- Историческая помощь, связанная с Украиной → ES-SOC01-05
+- Социальная поддержка — это не одна универсальная выплата → ES-SOC-01-C001
+- Поддержка в системе приёма → ES-SOC-01-C002, ES-SOC-01-C003, ES-SOC-01-C004
+- Ingreso Mínimo Vital → ES-SOC-01-C006, ES-SOC-01-C007
+- Доплата IMV на детей → ES-SOC-01-C008
+- Региональная и муниципальная помощь → ES-SOC-01-C009
+- Историческая помощь, связанная с Украиной → ES-SOC-01-C005
 
 ## Editorial exclusions
 
-- No historical amount is reproduced because the matrix records a discrepancy between the Ministry summary and the legal act (ES-SOC01-05; SOC-S10). The old measure is not presented as open, and no conclusion is drawn that no current or regional replacement exists.
-- No universal TP cash allowance or automatic IMV or child-supplement eligibility is stated (ES-SOC01-02, ES-SOC01-06, ES-SOC01-08). No MOP category or individual eligibility claim is included because it is outside the supported scope of this matrix.
-- Current annual amounts and thresholds are omitted because they are time-sensitive and unnecessary for this navigation draft (ES-SOC01-06, ES-SOC01-08).
+- No historical amount is reproduced because the matrix records a discrepancy between the Ministry summary and the legal act (ES-SOC-01-C005; SOC-S10). The old measure is not presented as open, and no conclusion is drawn that no current or regional replacement exists.
+- No universal TP cash allowance or automatic IMV or child-supplement eligibility is stated (ES-SOC-01-C002, ES-SOC-01-C006, ES-SOC-01-C008). No MOP category or individual eligibility claim is included because it is outside the supported scope of this matrix.
+- Current annual amounts and thresholds are omitted because they are time-sensitive and unnecessary for this navigation draft (ES-SOC-01-C006, ES-SOC-01-C008).
 
 ## Editorial source set
 
