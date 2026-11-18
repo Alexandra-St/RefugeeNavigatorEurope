@@ -74,7 +74,7 @@ public sealed class BulgariaContentIntegrationTests
         var entryIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => entryIds.Contains(item.InformationEntryId)).ToArray();
         Assert.Equal(70, sources.Length);
-        Assert.Equal(1504, catalog.OfficialSources.Count);
+        Assert.Equal(1516, catalog.OfficialSources.Count);
         Assert.Equal(70, sources.Select(item => item.Id).Distinct().Count());
         var sourceById = catalog.OfficialSources.ToDictionary(item => item.Id);
         var citedSourceIds = new HashSet<Guid>();

@@ -1,16 +1,16 @@
 # Education and Norwegian-Language Learning
 
 - **Article ID:** NO-EDU-01
-- **Research date:** 14 November 2026
+- **Research date:** 18 November 2026
 - **Editorial status:** DRAFT
 - **Compare aspects:** `education-school-enrolment`, `education-pupil-language`, `education-higher-admission`
-- **Last verified:** 14 November 2026
+- **Last verified:** 18 November 2026
 
 Children, pupils and adults entering education in Norway follow different rules. Contact the municipality or institution responsible for the programme you want; eligibility and admission depend on age, previous education and individual requirements.
 
 ## School-age children
 
-For children of compulsory school age, Udir says education should begin as soon as possible and no later than one month after arrival in Norway. Contact the municipality where the child is staying to ask how to enrol. The school and municipality assess the child’s school background and appropriate placement; this does not guarantee a particular school or class.
+Children who are likely to stay in Norway for more than three months have the right to compulsory-school education. It must begin as soon as possible and a full education offer must be provided no later than three months after arrival. The temporary Ukraine-related three-month rule was continued by legislation effective 1 July 2026 and is scheduled to end on 1 July 2028. Municipalities must start what instruction they can as soon as possible; the three-month limit is not permission to delay unnecessarily. Contact the municipality where the child is staying to ask how to enrol. School placement is assessed individually; a particular school or class is not guaranteed.
 
 ## Language support at school
 
@@ -24,9 +24,9 @@ Admission requirements do not establish eligibility for Lånekassen financial su
 
 ## Official sources
 
-- [Udir: Welcoming newly arrived pupils](https://www.udir.no/laring-og-trivsel/minoritetsspraklige-og-nyankomne/minoritetsspraklige/ta--imot-nyankomne-elever-pa-skolen/)
-- [Udir: Language support for minority-language and newly arrived pupils](https://www.udir.no/laring-og-trivsel/minoritetsspraklige-og-nyankomne/minoritetsspraklige/tilrettelegge-opplaringen-for-minoritetsspraklige-og-nyankomne-elever/)
-- [HK-dir: Education from Ukraine](https://hkdir.no/en/foreign-education/education-from-ukraine)
-- [HK-dir: Higher Education Entrance Qualification (GSU)](https://hkdir.no/en/foreign-education/lists-and-databases/higher-education-entrance-qualification-gsu)
+- [[source:3a587460-7d31-5199-a08f-7124e657b9ff|Udir: Welcoming newly arrived pupils]]
+- [[source:00574711-0d71-5cc5-b48e-0f36eb28a003|Udir: Language support for minority-language and newly arrived pupils]]
+- [[source:5bfeeae8-82f9-54bb-ba32-9df08eb405da|HK-dir: Education from Ukraine]]
+- [[source:03d6aff7-3127-583b-ba68-98e2310fba77|HK-dir: Higher Education Entrance Qualification (GSU)]]
 
 *Check with the municipality or admissions institution for current local procedures and programme-specific requirements.*

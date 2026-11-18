@@ -1,10 +1,10 @@
 # Разрешение на работу и права работников
 
 - **Article ID:** NO-EMP-02
-- **Research date:** 14 November 2026
+- **Research date:** 18 November 2026
 - **Editorial status:** DRAFT
 - **Compare aspects:** `work-permission`, `work-employer-duties`, `work-minimum-pay`
-- **Last verified:** 14 November 2026
+- **Last verified:** 18 November 2026
 
 Право на работу зависит от вашего текущего иммиграционного статуса. В Норвегии также действуют основные гарантии для работников, но правила оплаты различаются по отраслям.
 
@@ -18,13 +18,13 @@
 
 ## Минимальная оплата
 
-В Норвегии нет единой национальной минимальной зарплаты, действующей для всех видов работы. Обязательные минимальные ставки установлены в некоторых отраслях. В остальных отраслях оплата согласуется индивидуально или определяется коллективным соглашением. Проверьте действующую ставку для вашей отрасли в Норвежской инспекции труда (Arbeidstilsynet): ставки могут меняться.
+В Норвегии нет общенациональной установленной законом минимальной зарплаты для всех видов работы. Законодательные минимальные ставки действуют в десяти определённых отраслях; в остальных отраслях установленной законом минимальной ставки нет. В автомобильной отрасли минимальную зарплату ввели с 15 июня 2026 года, а отраслевые ставки пересмотрели с 6 ноября 2026 года. Вне охваченных отраслей оплату определяет трудовой договор или коллективное соглашение. Проверяйте в Arbeidstilsynet актуальную ставку и точную категорию по работе, возрасту, квалификации и опыту: ставки могут меняться.
 
 ## Официальные источники
 
-- [UDI: ожидание решения по коллективной защите](https://www.udi.no/en/information-ukraine-and-russia/ukraine/waiting-for-a-decision/i-have-an-application-for-collective-protection/?lang=uk)
-- [UDI: после предоставления коллективной защиты](https://www.udi.no/en/information-ukraine-and-russia/ukraine/i-have-received-an-answer-to-my-application/my-application-for-collective-protection-has-been-granted/)
-- [Arbeidstilsynet: трудовые договоры](https://www.arbeidstilsynet.no/en/pay-and-engagement-of-employees/contract-of-employment/)
-- [Arbeidstilsynet: минимальная оплата труда](https://www.arbeidstilsynet.no/en/pay-and-engagement-of-employees/pay-and-minimum-rates-of-pay/minimum-wage/)
+- [[source:8f928a3d-4811-514d-8108-1b8b6ac69c73|UDI: ожидание решения по коллективной защите]]
+- [[source:cee37a0e-e30f-5aa9-ae2d-02b30f2b44a6|UDI: после предоставления коллективной защиты]]
+- [[source:5bf10ab7-1b3d-5b4e-978b-1708385bf520|Arbeidstilsynet: трудовые договоры]]
+- [[source:d205b462-2e97-5f29-9df7-86e8e56c1e3b|Arbeidstilsynet: минимальная оплата труда]]
 
 *До начала работы проверьте право на трудоустройство и действующую ставку для соответствующей отрасли.*

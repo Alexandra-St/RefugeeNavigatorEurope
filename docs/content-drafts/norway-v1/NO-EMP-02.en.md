@@ -1,10 +1,10 @@
 # Work Authorization and Employee Rights
 
 - **Article ID:** NO-EMP-02
-- **Research date:** 14 November 2026
+- **Research date:** 18 November 2026
 - **Editorial status:** DRAFT
 - **Compare aspects:** `work-permission`, `work-employer-duties`, `work-minimum-pay`
-- **Last verified:** 14 November 2026
+- **Last verified:** 18 November 2026
 
 Your right to work depends on your current immigration status. Norway also sets basic employment protections, but pay rules differ across sectors.
 
@@ -18,13 +18,17 @@ All employees must have a written employment contract, and the employer is respo
 
 ## Minimum pay
 
-Norway does not have one national minimum wage that applies to every job. Mandatory minimum rates apply in certain sectors. In other sectors, pay is agreed individually or under a collective agreement. Check the current rate for your sector with the Norwegian Labour Inspection Authority (Arbeidstilsynet); rates can change.
+Norway has no nationwide statutory minimum wage covering every job. Statutory minimum rates apply in ten specified sectors; there is no set statutory minimum in other sectors. A minimum wage was introduced in the automotive sector from 15 June 2026, and sector rates were revised from 6 November 2026. Outside covered sectors, pay is set by the employment contract or a collective agreement. Check Arbeidstilsynet for the current rate and the precise job, age, skill and experience category; rates can change.
+
+## Self-employment
+
+UDI distinguishes employment from self-employment: before starting or operating an independent business, check whether your residence permit allows self-employed work. Registering a business by itself is not work authorization. Registration, tax, VAT and regulated-profession requirements are separate.
 
 ## Official sources
 
-- [UDI: Waiting for a decision on collective protection](https://www.udi.no/en/information-ukraine-and-russia/ukraine/waiting-for-a-decision/i-have-an-application-for-collective-protection/?lang=uk)
-- [UDI: When collective protection is granted](https://www.udi.no/en/information-ukraine-and-russia/ukraine/i-have-received-an-answer-to-my-application/my-application-for-collective-protection-has-been-granted/)
-- [Arbeidstilsynet: Employment contracts](https://www.arbeidstilsynet.no/en/pay-and-engagement-of-employees/contract-of-employment/)
-- [Arbeidstilsynet: Minimum wage](https://www.arbeidstilsynet.no/en/pay-and-engagement-of-employees/pay-and-minimum-rates-of-pay/minimum-wage/)
+- [[source:8f928a3d-4811-514d-8108-1b8b6ac69c73|UDI: Waiting for a decision on collective protection]]
+- [[source:cee37a0e-e30f-5aa9-ae2d-02b30f2b44a6|UDI: When collective protection is granted]]
+- [[source:5bf10ab7-1b3d-5b4e-978b-1708385bf520|Arbeidstilsynet: Employment contracts]]
+- [[source:d205b462-2e97-5f29-9df7-86e8e56c1e3b|Arbeidstilsynet: Minimum wage]]
 
 *Confirm your work authorization and the current sector rate before starting work.*

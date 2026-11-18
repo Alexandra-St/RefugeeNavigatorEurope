@@ -1,10 +1,10 @@
 # Доступ до медичної допомоги в Норвегії
 
 - **Article ID:** NO-HEALTH-01
-- **Research date:** 14 November 2026
+- **Research date:** 18 November 2026
 - **Editorial status:** DRAFT
 - **Compare aspects:** `healthcare-access`, `healthcare-proof`, `healthcare-urgent`
-- **Last verified:** 14 November 2026
+- **Last verified:** 18 November 2026
 
 Право на медичну допомогу залежить від вашого статусу та етапу процедури захисту. Медичні працівники оцінюють, яка допомога потрібна. Право на медичну допомогу не означає, що всі послуги безкоштовні або що ви можете самостійно обирати будь-яке лікування.
 
@@ -21,10 +21,10 @@
 
 ## Офіційні джерела
 
-- [UDI: медична допомога для заявників на притулок](https://www.udi.no/en/have-applied/protection-asylum/ordinary-asylum-reception-centre/healthcare/)
-- [UDI: документи, школа та медична допомога під час очікування](https://www.udi.no/en/information-ukraine-and-russia/ukraine/waiting-for-a-decision/school-health-d-number-asylum-seeker-card/)
-- [UDI: права після надання колективного захисту](https://www.udi.no/en/information-ukraine-and-russia/ukraine/i-have-received-an-answer-to-my-application/my-application-for-collective-protection-has-been-granted/)
-- [Helsenorge: де отримати допомогу](https://www.helsenorge.no/en/foreigners-in-norway/refugees-and-asylum-seekers/where-to-get-help/)
-- [Helsenorge: права на медичну допомогу](https://www.helsenorge.no/en/foreigners-in-norway/refugees-and-asylum-seekers/your-health-rights-as-refugee/)
+- [[source:c581fc20-d490-536e-b90f-aba94ed8a468|UDI: медична допомога для заявників на притулок]]
+- [[source:c7cd4cf0-0cb2-52ba-94e0-0d2b95bad4eb|UDI: документи, школа та медична допомога під час очікування]]
+- [[source:9e02df1c-a9f8-5baf-88ec-97c66645b014|UDI: права після надання колективного захисту]]
+- [[source:9815370c-fdf3-517d-a566-bc8afe661ef4|Helsenorge: де отримати допомогу]]
+- [[source:a4c150a9-c9c3-53e1-afb9-18d1f79ee8ed|Helsenorge: права на медичну допомогу]]
 
 *Щодо конкретної медичної потреби зверніться до медичного закладу. Запитайте Helsenorge або Helfo про оплату та документи, необхідні у вашій ситуації.*

@@ -1,10 +1,10 @@
 # Finding Accommodation in Norway
 
 - **Article ID:** NO-HOUSING-01
-- **Research date:** 14 November 2026
+- **Research date:** 18 November 2026
 - **Editorial status:** DRAFT
 - **Compare aspects:** `housing-initial`, `housing-private-rental`, `housing-financial-support`
-- **Last verified:** 14 November 2026
+- **Last verified:** 18 November 2026
 
 Accommodation may be arranged through the protection and settlement process, or you may look for a private rental. A place to live, a particular municipality, or financial support is not automatic.
 
@@ -26,11 +26,11 @@ You may check whether you qualify for housing allowance (bostøtte) from Husbank
 
 ## Official sources
 
-- [UDI: Applying for protection in Norway](https://www.udi.no/en/information-ukraine-and-russia/ukraine/apply-for-protection/i-am-in-norway-applying-from-norway/)
-- [IMDi: Settlement](https://www.imdi.no/en/english/settlement/)
-- [Lovdata: Tenancy Act, section 3-5 (deposit)](https://lovdata.no/nav/lov/1999-03-26-17/kap3)
-- [NAV: Help with housing, rent and deposit](https://www.nav.no/ikke-penger/en)
-- [Husbanken: Housing allowance eligibility](https://www.husbanken.no/english/housing-allowance/am-i-entitled/)
-- [Husbanken: Eligible types of housing](https://www.husbanken.no/english/housing-allowance/type-of-housing/)
+- [[source:7fea9bd7-9b7c-5ce1-bb93-ea6a06499496|UDI: Applying for protection in Norway]]
+- [[source:92558d9c-43fa-58b7-86dd-28d11066eb24|IMDi: Settlement]]
+- [[source:bca7882d-c3dc-5735-a356-b3274bcb8986|Lovdata: Tenancy Act, section 3-5 (deposit)]]
+- [[source:37629e8f-a347-501c-aaf8-6a61aba1afb0|NAV: Help with housing, rent and deposit]]
+- [[source:9fcf9e3d-57e6-598d-9d63-6730b473d95e|Husbanken: Housing allowance eligibility]]
+- [[source:5131b9a5-13c9-52db-ba4d-1ec6ae2cf401|Husbanken: Eligible types of housing]]
 
 *Check municipal and agency rules for your own circumstances. No housing or payment is guaranteed by collective protection alone.*

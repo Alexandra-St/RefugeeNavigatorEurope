@@ -1,10 +1,10 @@
 # Фінансова та соціальна допомога
 
 - **Article ID:** NO-SOC-01
-- **Research date:** 14 November 2026
+- **Research date:** 18 November 2026
 - **Editorial status:** DRAFT
 - **Compare aspects:** `social-subsistence`, `social-application`, `social-child-benefits`
-- **Last verified:** 14 November 2026
+- **Last verified:** 18 November 2026
 
 У Норвегії для різних виплат діють окремі умови. Колективний захист автоматично не дає права на виплати NAV. NAV та інші установи оцінюють заяви з урахуванням вашого статусу проживання, складу домогосподарства, доходів, витрат і правил конкретної виплати.
 
@@ -22,9 +22,9 @@
 
 ## Офіційні джерела
 
-- [NAV: фінансова допомога](https://www.nav.no/okonomisk-sosialhjelp/en)
-- [NAV: допомога на дитину](https://www.nav.no/barnetrygd/en)
-- [NAV: виплата по догляду за дитиною](https://www.nav.no/kontantstotte/en)
-- [Lovdata: Закон про виплату по догляду за малолітніми дітьми, §3](https://lovdata.no/dokument/NL/lov/1998-06-26-41/KAPITTEL_5)
+- [[source:2ff25ce4-d175-5eb5-a785-84f8c36f4369|NAV: фінансова допомога]]
+- [[source:b3dd187c-da7d-5948-838c-69b2908b67ef|NAV: допомога на дитину]]
+- [[source:0a48ce45-45eb-5bd4-b643-46d75e002135|NAV: виплата по догляду за дитиною]]
+- [[source:586b8189-0d4d-55c6-8bdd-603b0b9d1d23|Lovdata: Закон про виплату по догляду за малолітніми дітьми, §3]]
 
 *Це загальна інформація. Попросіть NAV оцінити ваше індивідуальне право та перевірте чинні умови, перш ніж покладатися на виплату.*

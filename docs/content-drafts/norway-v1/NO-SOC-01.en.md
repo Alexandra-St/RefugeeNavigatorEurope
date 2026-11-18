@@ -1,10 +1,10 @@
 # Financial and Social Assistance
 
 - **Article ID:** NO-SOC-01
-- **Research date:** 14 November 2026
+- **Research date:** 18 November 2026
 - **Editorial status:** DRAFT
 - **Compare aspects:** `social-subsistence`, `social-application`, `social-child-benefits`
-- **Last verified:** 14 November 2026
+- **Last verified:** 18 November 2026
 
 Norwegian benefits have separate eligibility rules. Collective protection does not automatically qualify you for NAV payments. NAV and other agencies assess applications using your residence status, household, income, expenses and the rules for each benefit.
 
@@ -22,9 +22,9 @@ Cash-for-care benefit (kontantstøtte) is a separate benefit for children aged 1
 
 ## Official sources
 
-- [NAV: Financial assistance](https://www.nav.no/okonomisk-sosialhjelp/en)
-- [NAV: Child benefit](https://www.nav.no/barnetrygd/en)
-- [NAV: Cash-for-care benefit](https://www.nav.no/kontantstotte/en)
-- [Lovdata: Cash-for-care Act, section 3](https://lovdata.no/dokument/NL/lov/1998-06-26-41/KAPITTEL_5)
+- [[source:2ff25ce4-d175-5eb5-a785-84f8c36f4369|NAV: Financial assistance]]
+- [[source:b3dd187c-da7d-5948-838c-69b2908b67ef|NAV: Child benefit]]
+- [[source:0a48ce45-45eb-5bd4-b643-46d75e002135|NAV: Cash-for-care benefit]]
+- [[source:586b8189-0d4d-55c6-8bdd-603b0b9d1d23|Lovdata: Cash-for-care Act, section 3]]
 
 *This is general information. Ask NAV to assess your individual entitlement and confirm current conditions before relying on a benefit.*

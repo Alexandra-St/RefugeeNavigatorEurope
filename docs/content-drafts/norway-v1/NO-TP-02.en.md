@@ -1,10 +1,10 @@
 # Residence Options Beyond Collective Protection
 
 - **Article ID:** NO-TP-02
-- **Research date:** 14 November 2026
+- **Research date:** 18 November 2026
 - **Editorial status:** DRAFT
 - **Compare aspects:** `residence-routes`, `residence-conditions`, `residence-filing`
-- **Last verified:** 14 November 2026
+- **Last verified:** 18 November 2026
 
 Collective protection is a temporary national permit. It does not itself provide a basis for permanent residence. If you are considering another residence route, check the conditions for that specific route with the Norwegian Directorate of Immigration (UDI) before applying.
 
@@ -20,7 +20,7 @@ UDI says a person who has been granted collective protection may apply for anoth
 2. Check UDI’s current eligibility conditions and whether that application can be filed from Norway.
 3. Read the consequences of changing permits carefully. Do not assume that submitting an application automatically changes your current status or preserves every right.
 
-This article does not provide a universal filing address, document list, or step-by-step procedure: these differ by route. UDI also states that a proposed special work-based permit for some people with collective protection is not yet an available application route. A proposal is not a current right.
+This article does not provide a universal filing address, document list, or step-by-step procedure: these differ by route. UDI says the special work-based route remains a proposal, not an available application route. The Labour Ministry’s consultation proposed a route for people already in Norway with collective protection who meet work and income conditions, with qualifying family members potentially receiving a derivative permit. The consultation deadline was extended to 5 November 2026. As of 18 November 2026, the proposal was still under consideration; no new rules had been introduced. The proposed permit could form a basis for permanent residence after three years if the law is adopted and all conditions are met. A proposal is not a current right.
 
 ## Permanent residence
 
@@ -28,8 +28,8 @@ Collective protection itself does not form the basis for permanent residence. Do
 
 ## Official sources
 
-- [UDI: Applying for protection in Norway and other routes](https://www.udi.no/en/information-ukraine-and-russia/ukraine/apply-for-protection/i-am-in-norway-applying-from-norway/)
-- [UDI: Extending your stay and applying for another permit](https://www.udi.no/en/information-ukraine-and-russia/ukraine/i-want-to-extend-my-stay-in-norway/)
-- [UDI: Collective protection and permanent residence](https://www.udi.no/en/information-ukraine-and-russia/ukraine/i-have-received-an-answer-to-my-application/my-application-for-collective-protection-has-been-granted/)
+- [[source:11f42995-3322-57ae-8caf-34b6e952d0f9|UDI: Applying for protection in Norway and other routes]]
+- [[source:c6ecb727-f0c3-5aab-aa30-58c3f75b0857|UDI: Extending your stay and applying for another permit]]
+- [[source:7e1eb5a4-969c-5b2c-8854-209eda42bd1d|UDI: Collective protection and permanent residence]]
 
 *Check UDI’s instructions for your chosen route before making plans. This draft is general information and does not determine eligibility.*

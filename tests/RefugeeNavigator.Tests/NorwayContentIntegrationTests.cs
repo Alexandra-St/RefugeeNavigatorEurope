@@ -12,13 +12,13 @@ public sealed class NorwayContentIntegrationTests
     private static readonly IReadOnlyDictionary<string, (string Id, string Category, int Sources)> Articles =
         new Dictionary<string, (string, string, int)>
         {
-            ["NO-TP-01"] = ("411f9a13-a59d-53e6-a25c-148d63aa3818", "temporary-protection", 5),
-            ["NO-TP-02"] = ("3030161d-7da6-5e97-9a68-9a410aedecf2", "temporary-protection", 3),
-            ["NO-EMP-01"] = ("027596b8-606a-58df-aae0-63a040f69064", "employment", 3),
-            ["NO-EMP-02"] = ("8fd8c9c0-1b79-5e47-bf21-ce3f84dbe4b7", "employment", 4),
+            ["NO-TP-01"] = ("411f9a13-a59d-53e6-a25c-148d63aa3818", "temporary-protection", 10),
+            ["NO-TP-02"] = ("3030161d-7da6-5e97-9a68-9a410aedecf2", "temporary-protection", 4),
+            ["NO-EMP-01"] = ("027596b8-606a-58df-aae0-63a040f69064", "employment", 5),
+            ["NO-EMP-02"] = ("8fd8c9c0-1b79-5e47-bf21-ce3f84dbe4b7", "employment", 6),
             ["NO-HEALTH-01"] = ("0073bdfa-5d2e-5fc6-a63f-35763fd61032", "healthcare", 5),
             ["NO-HOUSING-01"] = ("df086f92-efd1-50e6-b2dd-f2af63e00963", "housing", 6),
-            ["NO-EDU-01"] = ("e77330ad-938f-5d9e-bdf7-3318ee0a7b96", "education", 4),
+            ["NO-EDU-01"] = ("e77330ad-938f-5d9e-bdf7-3318ee0a7b96", "education", 6),
             ["NO-SOC-01"] = ("8bc5e2c5-0a6c-59f8-b37b-3b75300fe817", "social-assistance", 4)
         };
 
@@ -39,8 +39,8 @@ public sealed class NorwayContentIntegrationTests
         var translations = catalog.InformationEntryTranslations.Where(item => entries.Any(entry => entry.Id == item.InformationEntryId)).ToArray();
         var sources = catalog.OfficialSources.Where(item => entries.Any(entry => entry.Id == item.InformationEntryId)).ToArray();
         Assert.Equal(24, translations.Length);
-        Assert.Equal(34, sources.Length);
-        Assert.Equal(34, sources.Select(item => item.Id).Distinct().Count());
+        Assert.Equal(46, sources.Length);
+        Assert.Equal(46, sources.Select(item => item.Id).Distinct().Count());
         Assert.All(sources, source => Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme));
 
         foreach (var (articleId, expected) in Articles)
@@ -53,6 +53,7 @@ public sealed class NorwayContentIntegrationTests
             {
                 var translation = Assert.Single(translations, item => item.InformationEntryId == entry.Id && item.LanguageCode == language);
                 Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
+                Assert.Equal(new DateTimeOffset(2026, 11, 18, 0, 0, 0, TimeSpan.Zero), translation.LastUpdatedAt);
                 var draft = File.ReadAllText(Path.Combine(root, "docs", "content-drafts", "norway-v1", $"{articleId}.{language}.md"));
                 var expectedTitle = Regex.Match(draft, "(?m)^# (.+)$").Groups[1].Value;
                 Assert.Equal(expectedTitle, translation.Title);
@@ -82,9 +83,9 @@ public sealed class NorwayContentIntegrationTests
         Assert.Equal(72, norwayFacts.Sum(fact => fact.Values.Count));
         Assert.All(norwayFacts, fact => Assert.True(fact.IsAvailable));
         Assert.All(norwayFacts, fact => Assert.Equal(ComparisonFactStatus.Approved, fact.Status));
-        Assert.Equal(31, norwayFacts.SelectMany(fact => fact.OfficialSourceIds).Distinct().Count());
+        Assert.Equal(43, norwayFacts.SelectMany(fact => fact.OfficialSourceIds).Distinct().Count());
         var norwaySources = catalog.OfficialSources.Where(source => norwayFacts.SelectMany(fact => fact.OfficialSourceIds).Contains(source.Id)).ToArray();
-        Assert.Equal(26, norwaySources.Select(source => source.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(37, norwaySources.Select(source => source.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
 
         var expectedByTopic = new Dictionary<string, string>(StringComparer.Ordinal)
         {

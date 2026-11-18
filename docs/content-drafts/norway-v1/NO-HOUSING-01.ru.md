@@ -1,10 +1,10 @@
 # Поиск жилья в Норвегии
 
 - **Article ID:** NO-HOUSING-01
-- **Research date:** 14 November 2026
+- **Research date:** 18 November 2026
 - **Editorial status:** DRAFT
 - **Compare aspects:** `housing-initial`, `housing-private-rental`, `housing-financial-support`
-- **Last verified:** 14 November 2026
+- **Last verified:** 18 November 2026
 
 Жильё может предоставляться в рамках процедуры защиты и расселения, либо вы можете самостоятельно искать аренду. Наличие жилья, места в конкретном муниципалитете или финансовой помощи автоматически не гарантируется.
 
@@ -26,11 +26,11 @@
 
 ## Официальные источники
 
-- [UDI: подача заявления о защите в Норвегии](https://www.udi.no/en/information-ukraine-and-russia/ukraine/apply-for-protection/i-am-in-norway-applying-from-norway/)
-- [IMDi: расселение](https://www.imdi.no/en/english/settlement/)
-- [Lovdata: Закон об аренде жилья, §3-5 (депозит)](https://lovdata.no/nav/lov/1999-03-26-17/kap3)
-- [NAV: помощь с жильём, арендой и депозитом](https://www.nav.no/ikke-penger/en)
-- [Husbanken: право на жилищное пособие](https://www.husbanken.no/english/housing-allowance/am-i-entitled/)
-- [Husbanken: подходящие типы жилья](https://www.husbanken.no/english/housing-allowance/type-of-housing/)
+- [[source:7fea9bd7-9b7c-5ce1-bb93-ea6a06499496|UDI: подача заявления о защите в Норвегии]]
+- [[source:92558d9c-43fa-58b7-86dd-28d11066eb24|IMDi: расселение]]
+- [[source:bca7882d-c3dc-5735-a356-b3274bcb8986|Lovdata: Закон об аренде жилья, §3-5 (депозит)]]
+- [[source:37629e8f-a347-501c-aaf8-6a61aba1afb0|NAV: помощь с жильём, арендой и депозитом]]
+- [[source:9fcf9e3d-57e6-598d-9d63-6730b473d95e|Husbanken: право на жилищное пособие]]
+- [[source:5131b9a5-13c9-52db-ba4d-1ec6ae2cf401|Husbanken: подходящие типы жилья]]
 
 *Проверяйте правила муниципалитета и государственных органов с учётом своих обстоятельств. Сама коллективная защита не гарантирует жильё или выплату.*
