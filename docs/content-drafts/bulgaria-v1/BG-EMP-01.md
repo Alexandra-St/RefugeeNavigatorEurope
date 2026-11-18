@@ -4,8 +4,9 @@
 - Category: `employment`
 - Article ID: `d210414c-a502-59ef-b10e-1ae642b50207`
 - Research package: `docs/content-research/bulgaria-batch-2026-11-07/finding-a-job/SOURCES_AND_CLAIMS.md`
-- Translation status: `NeedsReview` (EN / UK / RU)
+- Translation status: `Verified` (EN / UK / RU)
 - Comparison aspects: `employment-vacancies, employment-institutions, employment-assistance-conditions`
+- LastUpdatedAt: `2026-11-17T00:00:00+00:00`
 
 ## EN
 
@@ -63,11 +64,11 @@ Content:
 
 ## Editorial source set
 
-- `BG-EMP-01-S01` → `a8f52573-501f-5ef2-929d-4b3d79934145` — Ministry of Labour and Social Policy, Employment Promotion Act
-- `BG-EMP-01-S02` → `f5d17e23-dfba-5cd0-bde0-b3f0b8dbface` — State Gazette, 2022 Employment Promotion Act amendments
-- `BG-EMP-01-S03` → `d6bee524-62dd-5ebc-8312-8d7e63f19570` — Employment Agency, e-Labour Exchange and vacancies
-- `BG-EMP-01-S04` → `2df25d74-a7e2-588b-b9ee-368e1f1cfb59` — Administrative Register, jobseeker application and registration
-- `BG-EMP-01-S05` → `759785f9-2240-587b-841d-414dd3bbfd93` — European Commission EURES, living and working in Bulgaria
-- `BG-EMP-01-S06` → `b7350769-5ebb-5ffd-afca-2dda4446d84e` — Employment Agency, Refugee Employment and Training Programme
-- `BG-EMP-01-S07` → `dc44b7fb-fa68-5658-a89a-37c3d65ae67f` — National Social Security Institute, unemployment cash benefit
-- `BG-EMP-01-S08` → `0fb4e6bd-2a0e-5668-b340-be46f83ce44f` — NACID, foreign professional qualifications FAQ
+- `BG-SRC-043` → `a8f52573-501f-5ef2-929d-4b3d79934145` — Ministry of Labour and Social Policy, Employment Promotion Act
+- `BG-SRC-047` → `f5d17e23-dfba-5cd0-bde0-b3f0b8dbface` — State Gazette, 2022 Employment Promotion Act amendments
+- `BG-SRC-045` → `d6bee524-62dd-5ebc-8312-8d7e63f19570` — Employment Agency, e-Labour Exchange and vacancies
+- `BG-SRC-041` → `2df25d74-a7e2-588b-b9ee-368e1f1cfb59` — Administrative Register, jobseeker application and registration
+- `BG-SRC-042` → `759785f9-2240-587b-841d-414dd3bbfd93` — European Commission EURES, living and working in Bulgaria
+- `BG-SRC-044` → `b7350769-5ebb-5ffd-afca-2dda4446d84e` — Employment Agency, Refugee Employment and Training Programme
+- `BG-SRC-046` → `dc44b7fb-fa68-5658-a89a-37c3d65ae67f` — National Social Security Institute, unemployment cash benefit
+- `BG-SRC-040` → `0fb4e6bd-2a0e-5668-b340-be46f83ce44f` — NACID, foreign professional qualifications FAQ

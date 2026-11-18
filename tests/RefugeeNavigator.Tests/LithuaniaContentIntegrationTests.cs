@@ -78,7 +78,7 @@ public sealed class LithuaniaContentIntegrationTests
         var ids = Articles.Values.Select(x => x.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(s => ids.Contains(s.InformationEntryId)).ToArray();
         Assert.Equal(71, sources.Length);
-        Assert.Equal(1498, catalog.OfficialSources.Count);
+        Assert.Equal(1503, catalog.OfficialSources.Count);
         Assert.Equal(71, sources.Select(s => s.Id).Distinct().Count());
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(s => s.Id).Distinct().Count());
         var historicalDeclarationId = Guid.Parse("c8dedc7c-e90b-5d75-8d9a-1099a67d17a1");

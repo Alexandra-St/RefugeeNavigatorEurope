@@ -4,8 +4,9 @@
 - Category: `housing`
 - Article ID: `f763854d-dee2-5cb3-aacb-6c01203b52fc`
 - Research package: `docs/content-research/bulgaria-batch-2026-11-07/housing/SOURCES_AND_CLAIMS.md`
-- Translation status: `NeedsReview` (EN / UK / RU)
+- Translation status: `Verified` (EN / UK / RU)
 - Comparison aspects: `housing-initial, housing-private-rental, housing-financial-support`
+- LastUpdatedAt: `2026-11-17T00:00:00+00:00`
 
 ## EN
 
@@ -63,9 +64,9 @@ Content:
 
 ## Editorial source set
 
-- `BG-HOUSING-01-S01` → `89d9cea9-d325-58fc-89fb-0b78c574b5a1` — Ministry of Interior, Law on Asylum and Refugees
-- `BG-HOUSING-01-S02` → `8ccb8ced-a074-5702-8441-c3cd529cec4b` — Council of Ministers, September 2026 Program 3 amendment summary
-- `BG-HOUSING-01-S03` → `530d3b5c-ab37-595c-83a0-c5708fa044af` — Ministry of Tourism, Program 3 provider reporting periods
-- `BG-HOUSING-01-S04` → `a2981f25-2a47-5ef4-ad62-349dee64690b` — Ministry of Tourism, Program 2 closure notice
-- `BG-HOUSING-01-S05` → `94fa7cba-f8a1-5b34-bcbc-21b8cb4aa20f` — Ministry of Justice, Obligations and Contracts Act
-- `BG-HOUSING-01-S06` → `08595874-44ef-5b19-92fa-6c341a3352b3` — Ministry of Labour and Social Policy, social support information
+- `BG-SRC-062` → `89d9cea9-d325-58fc-89fb-0b78c574b5a1` — Ministry of Interior, Law on Asylum and Refugees
+- `BG-SRC-063` → `8ccb8ced-a074-5702-8441-c3cd529cec4b` — Council of Ministers, September 2026 Program 3 amendment summary
+- `BG-SRC-061` → `530d3b5c-ab37-595c-83a0-c5708fa044af` — Ministry of Tourism, Program 3 provider reporting periods
+- `BG-SRC-065` → `a2981f25-2a47-5ef4-ad62-349dee64690b` — Ministry of Tourism, Program 2 closure notice
+- `BG-SRC-064` → `94fa7cba-f8a1-5b34-bcbc-21b8cb4aa20f` — Ministry of Justice, Obligations and Contracts Act
+- `BG-SRC-060` → `08595874-44ef-5b19-92fa-6c341a3352b3` — Ministry of Labour and Social Policy, social support information

@@ -4,8 +4,9 @@
 - Category: `temporary-protection`
 - Article ID: `c276de77-a6b9-5ff7-bbc7-685349b1009a`
 - Research package: `docs/content-research/bulgaria-batch-2026-11-07/after-temporary-protection/SOURCES_AND_CLAIMS.md`
-- Translation status: `NeedsReview` (EN / UK / RU)
+- Translation status: `Verified` (EN / UK / RU)
 - Comparison aspects: `residence-routes, residence-conditions, residence-filing`
+- LastUpdatedAt: `2026-11-17T00:00:00+00:00`
 
 ## EN
 
@@ -63,8 +64,8 @@ Content:
 
 ## Editorial source set
 
-- `BG-TP-02-S01` → `9591f217-22d0-5a9c-8a50-4d6fcf344a8b` — Ministry of Interior, Law on Foreigners in the Republic of Bulgaria
-- `BG-TP-02-S02` → `c5368b87-86d7-5236-b0bd-b7c90176bd42` — Ministry of Interior, Law on Asylum and Refugees
-- `BG-TP-02-S03` → `35ed6bdf-578c-586f-abc7-3c7adc9e3779` — European Union, Directive 2003/109/EC on long-term residents
-- `BG-TP-02-S04` → `bd07f58c-b6bc-59b3-83ec-2af08330a37f` — Ministry of Labour and Social Policy, Law on Labour Migration and Labour Mobility
-- `BG-TP-02-S05` → `92763c9a-e086-5432-be40-770681f92d95` — Ministry of Interior, Migration Directorate residence services
+- `BG-SRC-037` → `9591f217-22d0-5a9c-8a50-4d6fcf344a8b` — Ministry of Interior, Law on Foreigners in the Republic of Bulgaria
+- `BG-SRC-039` → `c5368b87-86d7-5236-b0bd-b7c90176bd42` — Ministry of Interior, Law on Asylum and Refugees
+- `BG-SRC-035` → `35ed6bdf-578c-586f-abc7-3c7adc9e3779` — European Union, Directive 2003/109/EC on long-term residents
+- `BG-SRC-038` → `bd07f58c-b6bc-59b3-83ec-2af08330a37f` — Ministry of Labour and Social Policy, Law on Labour Migration and Labour Mobility
+- `BG-SRC-036` → `92763c9a-e086-5432-be40-770681f92d95` — Ministry of Interior, Migration Directorate residence services

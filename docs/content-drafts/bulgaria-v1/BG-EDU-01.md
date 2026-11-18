@@ -4,8 +4,9 @@
 - Category: `education`
 - Article ID: `db6f961d-e976-52c1-8ef3-d826ee46b3fc`
 - Research package: `docs/content-research/bulgaria-batch-2026-11-07/education/SOURCES_AND_CLAIMS.md`
-- Translation status: `NeedsReview` (EN / UK / RU)
+- Translation status: `Verified` (EN / UK / RU)
 - Comparison aspects: `education-school-enrolment, education-pupil-language, education-higher-admission`
+- LastUpdatedAt: `2026-11-17T00:00:00+00:00`
 
 ## EN
 
@@ -15,7 +16,7 @@ Summary: School access, language support and university admission each have sepa
 
 Content:
 
-Children with temporary protection can apply for public kindergarten or school through the Regional Department of Education (RDE). The general compulsory rules apply: preschool from the calendar year a child turns four; school normally from the school year in which the child turns seven, with possible entry at six if ready; compulsory school education continues to 16. A family may state a school preference, but a seat at that school is not guaranteed. If records are missing or the school is full, contact the RDE about assessment and placement; grade assignment is not automatic. [[source:f87c647e-62bb-5082-abf5-77ef42366d97|Preschool and School Education Act]] [[source:989cc461-fa87-5e26-8058-a8404fbe6d52|Government education guidance]] [[source:4639994e-692e-5fdd-80a1-e65fbb61f9da|RDE admission guidance]] [[source:b76ea3f3-4ee1-5b97-b724-5cbf35d67f34|Admission and placement procedure]]
+Children with temporary protection can apply for public kindergarten or school through the Regional Department of Education (RDE). The general compulsory rules apply: preschool from the calendar year a child turns four; school normally from the school year in which the child turns seven, with possible entry at six at a parent’s choice when a readiness assessment confirms preparedness; compulsory school education continues to 16. A family may state a school preference, but a seat at that school is not guaranteed. If records are missing or the school is full, contact the RDE about assessment and placement; grade assignment is not automatic. [[source:f87c647e-62bb-5082-abf5-77ef42366d97|Preschool and School Education Act]] [[source:989cc461-fa87-5e26-8058-a8404fbe6d52|Government education guidance]] [[source:4639994e-692e-5fdd-80a1-e65fbb61f9da|RDE admission guidance]] [[source:b76ea3f3-4ee1-5b97-b724-5cbf35d67f34|Admission and placement procedure]]
 
 Newly arrived pupils may receive additional Bulgarian-language teaching or other support arranged by the school/RDE according to need. The rules set maximum course amounts by stage, not guaranteed hours, a particular course or automatic assignment of a psychologist/resource teacher. Ukrainian online study may supplement learning, but it is not an automatic substitute for Bulgarian compulsory attendance. Ask the RDE about the child’s individual route. [[source:f500c89e-8bcc-5f93-b0ff-f6acfc803ab9|Bulgarian-language support rules]] [[source:9423b53a-7503-5f22-99c4-50b311a95023|MES support information]]
 
@@ -63,15 +64,15 @@ Content:
 
 ## Editorial source set
 
-- `BG-EDU-01-S01` → `f87c647e-62bb-5082-abf5-77ef42366d97` — Ministry of Education and Science, Preschool and School Education Act
-- `BG-EDU-01-S02` → `989cc461-fa87-5e26-8058-a8404fbe6d52` — Government of Bulgaria, education information for Ukraine
-- `BG-EDU-01-S03` → `4639994e-692e-5fdd-80a1-e65fbb61f9da` — Sofia Regional Department of Education, admission and education guidance
-- `BG-EDU-01-S04` → `b76ea3f3-4ee1-5b97-b724-5cbf35d67f34` — MES / Regional Department of Education, Ordinance No. 3/2017
-- `BG-EDU-01-S05` → `f500c89e-8bcc-5f93-b0ff-f6acfc803ab9` — Ministry of Education and Science, Ordinance No. 6/2016 on Bulgarian language
-- `BG-EDU-01-S06` → `9423b53a-7503-5f22-99c4-50b311a95023` — Ministry of Education and Science, support for children and pupils seeking/receiving protection
-- `BG-EDU-01-S07` → `a50255f6-0186-54a7-93c4-c07cb0bb3a47` — Ministry of Education and Science, Higher Education Act
-- `BG-EDU-01-S08` → `173a8a18-640b-542e-b7d7-f09b6cd7f71b` — Council of Ministers, Decree No. 264/2024 on TP admission to state universities
-- `BG-EDU-01-S09` → `3e4a301d-ed57-5c7a-9389-96539818e37e` — Ministry of Education and Science, 2026/27 state-university place allocation
-- `BG-EDU-01-S10` → `d849fc5b-549a-580f-9027-83b0d94b4826` — NACID, Ukrainian qualification guidance
-- `BG-EDU-01-S11` → `e7fedeed-5899-5207-98bc-a60c863fe510` — NACID, foreign secondary education recognition
-- `BG-EDU-01-S12` → `5954762c-669a-57ad-814f-be1230a7d195` — NACID, electronic application and recognition of prior higher study
+- `BG-SRC-059` → `f87c647e-62bb-5082-abf5-77ef42366d97` — Ministry of Education and Science, Preschool and School Education Act
+- `BG-SRC-053` → `989cc461-fa87-5e26-8058-a8404fbe6d52` — Government of Bulgaria, education information for Ukraine
+- `BG-SRC-050` → `4639994e-692e-5fdd-80a1-e65fbb61f9da` — Sofia Regional Department of Education, admission and education guidance
+- `BG-SRC-055` → `b76ea3f3-4ee1-5b97-b724-5cbf35d67f34` — MES / Regional Department of Education, Ordinance No. 3/2017
+- `BG-SRC-058` → `f500c89e-8bcc-5f93-b0ff-f6acfc803ab9` — Ministry of Education and Science, Ordinance No. 6/2016 on Bulgarian language
+- `BG-SRC-052` → `9423b53a-7503-5f22-99c4-50b311a95023` — Ministry of Education and Science, support for children and pupils seeking/receiving protection
+- `BG-SRC-054` → `a50255f6-0186-54a7-93c4-c07cb0bb3a47` — Ministry of Education and Science, Higher Education Act
+- `BG-SRC-048` → `173a8a18-640b-542e-b7d7-f09b6cd7f71b` — Council of Ministers, Decree No. 264/2024 on TP admission to state universities
+- `BG-SRC-049` → `3e4a301d-ed57-5c7a-9389-96539818e37e` — Ministry of Education and Science, 2026/27 state-university place allocation
+- `BG-SRC-056` → `d849fc5b-549a-580f-9027-83b0d94b4826` — NACID, Ukrainian qualification guidance
+- `BG-SRC-057` → `e7fedeed-5899-5207-98bc-a60c863fe510` — NACID, foreign secondary education recognition
+- `BG-SRC-051` → `5954762c-669a-57ad-814f-be1230a7d195` — NACID, electronic application and recognition of prior higher study

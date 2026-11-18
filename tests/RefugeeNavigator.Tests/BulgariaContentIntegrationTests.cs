@@ -50,7 +50,7 @@ public sealed class BulgariaContentIntegrationTests
             Assert.All(translations, item =>
             {
                 Assert.Equal(VerificationStatus.Verified, item.VerificationStatus);
-                Assert.Equal(new DateTimeOffset(2026, 11, 7, 12, 0, 0, TimeSpan.Zero), item.LastUpdatedAt);
+                Assert.Equal(new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero), item.LastUpdatedAt);
                 Assert.False(string.IsNullOrWhiteSpace(item.Title));
                 Assert.False(string.IsNullOrWhiteSpace(item.Summary));
                 Assert.False(string.IsNullOrWhiteSpace(item.Content));
@@ -73,16 +73,20 @@ public sealed class BulgariaContentIntegrationTests
         Assert.Equal(8, Directory.GetFiles(root, "BG-*.md").Length);
         var entryIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => entryIds.Contains(item.InformationEntryId)).ToArray();
-        Assert.Equal(65, sources.Length);
-        Assert.Equal(1498, catalog.OfficialSources.Count);
-        Assert.Equal(65, sources.Select(item => item.Id).Distinct().Count());
+        Assert.Equal(70, sources.Length);
+        Assert.Equal(1503, catalog.OfficialSources.Count);
+        Assert.Equal(70, sources.Select(item => item.Id).Distinct().Count());
         var sourceById = catalog.OfficialSources.ToDictionary(item => item.Id);
+        var citedSourceIds = new HashSet<Guid>();
         Assert.All(sources, item =>
         {
             Assert.Contains(item.InformationEntryId, entryIds);
             Assert.Equal(Uri.UriSchemeHttps, item.Url.Scheme);
             Assert.False(string.IsNullOrWhiteSpace(item.Title));
-            Assert.Equal(new DateTimeOffset(2026, 11, 7, 0, 0, 0, TimeSpan.Zero), item.LastCheckedAt);
+            if (new[] { "6dd90ade-3354-5160-97dc-fe4d66eed6cb", "62ec9f9f-0d3a-51ba-88aa-6c5aade59a71", "c233cdfc-267b-58d8-9fd5-887650066d8a", "d584362c-3990-5055-8833-158f2b594773", "bb443266-cbc9-55a9-bcbf-eb01ea44d1fc", "f5d17e23-dfba-5cd0-bde0-b3f0b8dbface", "989cc461-fa87-5e26-8058-a8404fbe6d52", "a2981f25-2a47-5ef4-ad62-349dee64690b" }.Contains(item.Id.ToString()))
+                Assert.Equal(new DateTimeOffset(2026, 11, 7, 0, 0, 0, TimeSpan.Zero), item.LastCheckedAt);
+            else
+                Assert.Equal(new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero), item.LastCheckedAt);
         });
 
         foreach (var (code, expected) in Articles)
@@ -117,11 +121,13 @@ public sealed class BulgariaContentIntegrationTests
                 foreach (Match token in tokens)
                 {
                     var sourceId = Guid.Parse(token.Groups[1].Value);
+                    citedSourceIds.Add(sourceId);
                     Assert.Contains(sourceId, owned.Keys);
                     Assert.Equal(expected.Id, sourceById[sourceId].InformationEntryId);
                 }
             }
         }
+        Assert.Equal(sources.Select(item => item.Id).ToHashSet(), citedSourceIds);
     }
 
     [Fact]
@@ -152,6 +158,10 @@ public sealed class BulgariaContentIntegrationTests
         Assert.Equal(0, facts.Count(item => item.Status == ComparisonFactStatus.Draft));
         Assert.Equal(24, facts.Count(item => item.IsAvailable));
         Assert.Equal(8, facts.Select(item => item.InformationEntryId).Distinct().Count());
+        var protectionDates = Assert.Single(comparison.Topics.SelectMany(item => item.Aspects), item => item.Id == "protection-dates");
+        var bulgariaProtectionDates = Assert.Single(protectionDates.Facts, item => item.CountrySlug == "bulgaria");
+        Assert.Contains(Guid.Parse("1b7d23f4-0c08-581b-b156-ba4c119f92bc"), bulgariaProtectionDates.OfficialSourceIds);
+        Assert.DoesNotContain(Guid.Parse("d584362c-3990-5055-8833-158f2b594773"), bulgariaProtectionDates.OfficialSourceIds);
 
         var netherlandsId = catalog.Countries.Single(item => item.Slug == "netherlands").Id;
         var netherlandsEntryIds = catalog.InformationEntries.Where(item => item.CountryId == netherlandsId)
@@ -173,6 +183,67 @@ public sealed class BulgariaContentIntegrationTests
             Assert.All(fact.OfficialSourceIds, sourceId => Assert.Equal(fact.InformationEntryId, sourcesById[sourceId].InformationEntryId));
             Assert.All(new[] { "en", "uk", "ru" }, language => Assert.False(string.IsNullOrWhiteSpace(fact.Values[language])));
         });
+    }
+
+    [Fact]
+    public async Task BulgariaReleaseBaselinePreservesReviewedDatesWagesAndSourceBindings()
+    {
+        var catalog = await Catalog.Value;
+        var translations = catalog.InformationEntryTranslations
+            .Where(item => Articles.Values.Select(value => value.Id).Contains(item.InformationEntryId)).ToArray();
+        var content = string.Join("\n", translations.Select(item => item.Content));
+
+        Assert.Equal(24, translations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
+        Assert.All(translations, item => Assert.Equal(new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero), item.LastUpdatedAt));
+        Assert.Contains("4 March 2028", content);
+        Assert.DoesNotContain("national temporary-protection period was extended through 4 March 2027", content, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("30 April 2026", content);
+        Assert.Contains("5 March–30 April 2027", content);
+        Assert.Contains("does not describe the 2027 procedure", content);
+        Assert.Contains("temporary protection is", content, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("Temporary protection is a separate status", content, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("without a separate work permit", content, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("Labour Inspectorate within seven days", content);
+        Assert.Contains("Employment Agency notice", content);
+        Assert.Contains("free profession", content, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("€620.20", content);
+        Assert.Contains("€3.74", content);
+        Assert.Contains("€660", content);
+        Assert.Contains("€3.98", content);
+        Assert.Contains("90 days", content);
+        Assert.DoesNotContain("BGN 28.40", content);
+        Assert.Contains("4 March 2027", content); // Program 3 remains separately scoped.
+        Assert.Contains("€390.63", content);
+        Assert.Contains("€117.19", content);
+        Assert.Contains("€64.39", content);
+        Assert.Contains("31 October 2026", content);
+        Assert.Contains("31 March 2027", content);
+        var social = translations.Single(item => item.InformationEntryId == Articles["BG-SOC-01"].Id && item.LanguageCode == "en").Content;
+        Assert.Contains("1 January 2026", social);
+        Assert.Contains("sole legal tender from 1 February 2026", social);
+        Assert.Contains("1.95583", social);
+        Assert.Contains("8 August 2026", social);
+        var education = translations.Single(item => item.InformationEntryId == Articles["BG-EDU-01"].Id && item.LanguageCode == "en").Content;
+        Assert.Contains("school year in which the child turns seven", education);
+        Assert.Contains("at a parent’s choice", education);
+        Assert.Contains("readiness assessment", education);
+        Assert.Contains("continues to 16", education);
+
+        var sourceIds = catalog.OfficialSources.Select(item => item.Id).ToHashSet();
+        Assert.All(new[] { "1b7d23f4-0c08-581b-b156-ba4c119f92bc", "399a3a4e-75e4-59d3-bdb1-315585052ea8", "8b439e25-9430-5ab2-92b9-0df6343fa660", "44c74fe5-d729-5690-b037-fd1d96bf502d", "50f0a447-2fb8-532c-920e-8f24e69a637a" }, id => Assert.Contains(Guid.Parse(id), sourceIds));
+        var sourcesById = catalog.OfficialSources.ToDictionary(item => item.Id);
+        Assert.Equal("https://www.mvr.bg/migration/%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D0%B8-%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B8-%D0%B7%D0%B0-%D0%B3%D1%80%D0%B0%D0%B6%D0%B4%D0%B0%D0%BD%D0%B8/rpr", sourcesById[Guid.Parse("92763c9a-e086-5432-be40-770681f92d95")].Url.AbsoluteUri);
+        Assert.Equal("https://ruo.mon.bg/sofia-grad/regulation/naredba-%E2%84%96-3-ot-6-april-2017-g-za-usloviyata-i-reda-za-priemane-i-obuchenie-na-liczata-tarsesthi-ili-poluchili-mezhdunarodna-zakrila/", sourcesById[Guid.Parse("b76ea3f3-4ee1-5b97-b724-5cbf35d67f34")].Url.AbsoluteUri);
+        Assert.Equal(38, File.ReadAllLines(Path.Combine(FindRepositoryRoot(), "docs", "content-refresh", "2026-11", "bulgaria", "CLAIM_SOURCE_COVERAGE_01.csv")).Count(line => line.Contains(",YES", StringComparison.Ordinal)));
+        var claims = File.ReadAllLines(Path.Combine(FindRepositoryRoot(), "docs", "content-refresh", "2026-11", "bulgaria", "CLAIM_SOURCE_COVERAGE_01.csv"));
+        Assert.Equal(111, claims.Length - 1);
+        Assert.Equal(97, claims.Count(line => line.Contains(",MATERIAL,", StringComparison.Ordinal)));
+        Assert.Equal(0, claims.Count(line => line.Contains(",MATERIAL,", StringComparison.Ordinal) && line.Contains(",UNSUPPORTED,", StringComparison.Ordinal)));
+        Assert.Equal(76, claims.Count(line => line.Contains(",CONFIRMED,", StringComparison.Ordinal)));
+        Assert.Equal(3, claims.Count(line => line.Contains(",UPDATED,", StringComparison.Ordinal)));
+        Assert.Equal(16, claims.Count(line => line.Contains(",QUALIFICATION REQUIRED,", StringComparison.Ordinal)));
+        Assert.Equal(16, claims.Count(line => line.Contains(",NEW IMPORTANT INFORMATION,", StringComparison.Ordinal)));
+        Assert.Equal(8, File.ReadAllLines(Path.Combine(FindRepositoryRoot(), "docs", "content-refresh", "2026-11", "bulgaria", "DATE_EVENT_WATCH_CANDIDATES_01.md")).Count(line => line.StartsWith("- Trigger date:", StringComparison.Ordinal)));
     }
 
     private static string FindRepositoryRoot()

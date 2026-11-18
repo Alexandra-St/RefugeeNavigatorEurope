@@ -4,8 +4,9 @@
 - Category: `temporary-protection`
 - Article ID: `4a1e4c9b-a09c-5c92-bc37-2c9a15b459bc`
 - Research package: `docs/content-research/bulgaria-batch-2026-11-07/temporary-protection-application/SOURCES_AND_CLAIMS.md`
-- Translation status: `NeedsReview` (EN / UK / RU)
+- Translation status: `Verified` (EN / UK / RU)
 - Comparison aspects: `protection-scheme, protection-application, protection-dates`
+- LastUpdatedAt: `2026-11-17T00:00:00+00:00`
 
 ## EN
 
@@ -19,7 +20,7 @@ Temporary protection follows defined EU categories, including Ukrainian citizens
 
 EU rules adopted in 2026 address Ukrainian military obligations “where applicable.” They include an exception for a person who already had protection in the same Member State on or before 4 August 2026 and has retained it continuously there. Bulgaria has not published a local accepted-proof checklist or screening process. Ask the State Agency for Refugees (AREF) how the rule applies to your case. [[source:48ff49e5-26d6-59b1-aa02-e0889e97ee54|EU 2026 decision]]
 
-The latest Bulgarian notice reviewed says national protection was extended through 4 March 2027. The EU scheme has been extended through 4 March 2028. These dates do not establish the validity printed on your Bulgarian card or the national renewal steps after March 2027. Contact AREF to confirm your individual document and current procedure. Initial-application information identifies AREF and Ministry of Interior channels, but does not provide a complete current checklist or guaranteed processing time; confirm the intake point before travelling. [[source:d584362c-3990-5055-8833-158f2b594773|AREF date notice]] [[source:62ec9f9f-0d3a-51ba-88aa-6c5aade59a71|AREF procedure information]]
+The Council of Ministers approved an amendment on 4 November 2026 extending Bulgaria’s national temporary-protection period through 4 March 2028. The announced next re-registration period is 5 March–30 April 2027. The decision summary does not establish that an existing card remains valid for that entire period or give all operational steps; confirm your individual document and the process with AREF before the window opens. The earlier AREF notice about the 2026 card cycle is historical: it described the protection and card arrangements then in effect, and its 30 April 2026 card deadline has passed; it does not describe the 2027 procedure. First registration is a separate process; AREF guidance describes in-person processing through AREF or Ministry of Interior channels, but readers should confirm the current intake point and documents before travel. [[source:1b7d23f4-0c08-581b-b156-ba4c119f92bc|Council of Ministers notice, 4 November 2026]] [[source:d584362c-3990-5055-8833-158f2b594773|Superseded AREF 2026 notice (historical)]] [[source:62ec9f9f-0d3a-51ba-88aa-6c5aade59a71|AREF first-registration guidance (dated; confirm current steps)]].
 
 ### Claim coverage and editorial exclusions
 
@@ -33,11 +34,7 @@ Summary: Хто може відповідати умовам, як зверну�
 
 Content:
 
-Тимчасовий захист охоплює визначені категорії ЄС, зокрема громадян України, які проживали в Україні до 24 лютого 2022 року, та окремих членів їхніх сімей. Уряд Болгарії також описує національний шлях для людей, які виїхали з України через бойові дії, в’їхали до Болгарії, залишаються тут і прямо просять про захист. Важлива саме відповідна категорія: самого виїзду з України недостатньо для підтвердження права. [[source:e834f7a7-8491-5bca-87a7-ac344af0b9e3|Правила ЄС щодо права на захист]] [[source:c233cdfc-267b-58d8-9fd5-887650066d8a|Інформація уряду Болгарії]]
-
-Правила ЄС, ухвалені у 2026 році, стосуються військових обов’язків перед Україною «коли це застосовно». Передбачено виняток для людини, яка вже мала захист у тій самій державі-члені 4 серпня 2026 року або раніше та безперервно зберігала його там. Болгарія не опублікувала місцевого переліку прийнятних доказів чи процедури перевірки. Запитайте Державне агентство у справах біженців (AREF), як це правило застосовується у вашій ситуації. [[source:48ff49e5-26d6-59b1-aa02-e0889e97ee54|Рішення ЄС 2026 року]]
-
-В останньому перевіреному болгарському повідомленні зазначено, що національний захист продовжено до 4 березня 2027 року. Схему ЄС продовжено до 4 березня 2028 року. Ці дати не підтверджують строк дії на конкретній болгарській картці або національний порядок поновлення після березня 2027 року. Уточніть в AREF строк дії свого документа й чинну процедуру. Опис первинного звернення називає канали AREF та Міністерства внутрішніх справ, але не містить повного актуального переліку документів чи гарантованого строку розгляду; перед поїздкою уточніть місце прийому. [[source:d584362c-3990-5055-8833-158f2b594773|Повідомлення AREF про строки]] [[source:62ec9f9f-0d3a-51ba-88aa-6c5aade59a71|Інформація AREF про процедуру]]
+4 листопада 2026 року Рада міністрів схвалила зміни, якими період тимчасового захисту в Болгарії продовжено до 4 березня 2028 року. Оголошений наступний період перереєстрації: 5 березня–30 квітня 2027 року. Короткий опис рішення не підтверджує, що наявна картка залишатиметься чинною весь цей період, і не містить усіх практичних кроків; до початку періоду уточніть індивідуальну чинність документа та процедуру в ДАБ. Попереднє повідомлення ДАБ про період тимчасового захисту й картки 2026 року є історичним; строк дії карток до 30 квітня 2026 року минув, і це повідомлення не описує процедуру 2027 року. Первинна реєстрація є окремою процедурою; інструкція ДАБ передбачає особисте звернення через ДАБ або МВС, але перед поїздкою слід уточнити чинне місце прийому та документи. [[source:1b7d23f4-0c08-581b-b156-ba4c119f92bc|Повідомлення Ради міністрів від 4 листопада 2026 року]] [[source:d584362c-3990-5055-8833-158f2b594773|Застаріле повідомлення AREF 2026 року (історичне)]] [[source:62ec9f9f-0d3a-51ba-88aa-6c5aade59a71|Інформація ДАБ про первинну реєстрацію (датована; уточніть чинні кроки)]].
 
 ### Claim coverage and editorial exclusions
 
@@ -51,11 +48,7 @@ Summary: Кто может соответствовать условиям, ка
 
 Content:
 
-Временная защита распространяется на установленные категории ЕС, включая граждан Украины, проживавших в Украине до 24 февраля 2022 года, и определённых членов их семей. Правительство Болгарии также описывает национальный путь для людей, которые покинули Украину из-за боевых действий, въехали в Болгарию, остаются здесь и прямо просят о защите. Важна именно соответствующая категория: одного выезда из Украины недостаточно для подтверждения права. [[source:e834f7a7-8491-5bca-87a7-ac344af0b9e3|Правила ЕС о праве на защиту]] [[source:c233cdfc-267b-58d8-9fd5-887650066d8a|Информация правительства Болгарии]]
-
-Правила ЕС, принятые в 2026 году, касаются воинских обязанностей перед Украиной «когда это применимо». Предусмотрено исключение для человека, который уже имел защиту в том же государстве-члене 4 августа 2026 года или раньше и непрерывно сохранял её там. Болгария не опубликовала местный перечень принимаемых доказательств или процедуру проверки. Уточните в Государственном агентстве по делам беженцев (AREF), как правило применяется к вашей ситуации. [[source:48ff49e5-26d6-59b1-aa02-e0889e97ee54|Решение ЕС 2026 года]]
-
-В последнем проверенном болгарском уведомлении указано, что национальная защита продлена до 4 марта 2027 года. Схема ЕС продлена до 4 марта 2028 года. Эти даты не подтверждают срок действия конкретной болгарской карты или национальный порядок продления после марта 2027 года. Уточните в AREF срок действия своего документа и действующую процедуру. Описание первичного обращения называет каналы AREF и Министерства внутренних дел, но не содержит полного актуального перечня документов или гарантированного срока рассмотрения; перед поездкой проверьте место приёма. [[source:d584362c-3990-5055-8833-158f2b594773|Уведомление AREF о сроках]] [[source:62ec9f9f-0d3a-51ba-88aa-6c5aade59a71|Информация AREF о процедуре]]
+4 ноября 2026 года Совет министров одобрил поправки, продлевающие срок временной защиты в Болгарии до 4 марта 2028 года. Объявленный следующий период перерегистрации: 5 марта–30 апреля 2027 года. Краткое описание решения не подтверждает, что имеющаяся карта будет действительна весь этот период, и не содержит всех практических шагов; до начала периода уточните срок действия своего документа и порядок в ГАБ. Предыдущее уведомление ГАБ о сроке временной защиты и карточках на 2026 год носит исторический характер; срок действия карт до 30 апреля 2026 года истёк, и это уведомление не описывает процедуру 2027 года. Первичная регистрация — отдельная процедура; инструкция ГАБ предусматривает личное обращение через ГАБ или МВД, но перед поездкой следует уточнить действующее место приёма и документы. [[source:1b7d23f4-0c08-581b-b156-ba4c119f92bc|Сообщение Совета министров от 4 ноября 2026 года]] [[source:d584362c-3990-5055-8833-158f2b594773|Устаревшее уведомление AREF за 2026 год (историческое)]] [[source:62ec9f9f-0d3a-51ba-88aa-6c5aade59a71|Информация ГАБ о первичной регистрации (датированная; уточните текущие шаги)]].
 
 ### Claim coverage and editorial exclusions
 
@@ -63,8 +56,9 @@ Content:
 
 ## Editorial source set
 
-- `BG-TP-01-S01` → `e834f7a7-8491-5bca-87a7-ac344af0b9e3` — Council of the European Union, Implementing Decision (EU) 2022/382
-- `BG-TP-01-S02` → `48ff49e5-26d6-59b1-aa02-e0889e97ee54` — Council of the European Union, Implementing Decision (EU) 2026/1912, corrected consolidated text
-- `BG-TP-01-S03` → `d584362c-3990-5055-8833-158f2b594773` — State Agency for Refugees, Bulgarian protection extension notice (2026)
-- `BG-TP-01-S04` → `c233cdfc-267b-58d8-9fd5-887650066d8a` — Government of Bulgaria, Temporary protection overview
-- `BG-TP-01-S05` → `62ec9f9f-0d3a-51ba-88aa-6c5aade59a71` — State Agency for Refugees, procedure for granting temporary protection (2022 guidance)
+- `BG-SRC-023` → `e834f7a7-8491-5bca-87a7-ac344af0b9e3` — Council of the European Union, Implementing Decision (EU) 2022/382
+- `BG-SRC-019` → `48ff49e5-26d6-59b1-aa02-e0889e97ee54` — Council of the European Union, Implementing Decision (EU) 2026/1912, corrected consolidated text
+- `BG-SRC-022` → `d584362c-3990-5055-8833-158f2b594773` — State Agency for Refugees, Bulgarian protection extension notice (2026)
+- `BG-SRC-021` → `c233cdfc-267b-58d8-9fd5-887650066d8a` — Government of Bulgaria, Temporary protection overview
+- `BG-SRC-020` → `62ec9f9f-0d3a-51ba-88aa-6c5aade59a71` — State Agency for Refugees, procedure for granting temporary protection (2022 guidance)
+- `BG-NEW-001` → `1b7d23f4-0c08-581b-b156-ba4c119f92bc` — Council of Ministers, Agenda of the Council of Ministers meeting of 4 November 2026
