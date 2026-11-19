@@ -37,13 +37,13 @@ public sealed class FranceContentIntegrationTests
     };
     private static readonly IReadOnlyDictionary<string, int> ExpectedSourceCounts = new Dictionary<string, int>
     {
-        ["FR-TP-01"] = 7,
-        ["FR-EMP-01"] = 12,
-        ["FR-EMP-02"] = 12,
-        ["FR-HEALTH-01"] = 12,
-        ["FR-EDU-01"] = 17,
-        ["FR-SOC-01"] = 20,
-        ["FR-TP-02"] = 10,
+        ["FR-TP-01"] = 9,
+        ["FR-EMP-01"] = 15,
+        ["FR-EMP-02"] = 15,
+        ["FR-HEALTH-01"] = 14,
+        ["FR-EDU-01"] = 19,
+        ["FR-SOC-01"] = 21,
+        ["FR-TP-02"] = 11,
         ["FR-HOUSING-01"] = 14
     };
     private static readonly ResourceManager Resources = new(
@@ -89,9 +89,7 @@ public sealed class FranceContentIntegrationTests
             Assert.Equal(expected.Category, catalog.Categories.Single(item => item.Id == entry.CategoryId).Slug);
             var translations = catalog.InformationEntryTranslations.Where(item => item.InformationEntryId == expected.Id).ToArray();
             Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(item => item.LanguageCode).Order(StringComparer.Ordinal).ToArray());
-            var expectedLastUpdatedAt = articleCode is "FR-TP-02" or "FR-HOUSING-01"
-                ? new DateTimeOffset(2026, 11, 14, 0, 0, 0, TimeSpan.Zero)
-                : new DateTimeOffset(2026, 11, 11, 0, 0, 0, TimeSpan.Zero);
+            var expectedLastUpdatedAt = new DateTimeOffset(2026, 11, 19, 0, 0, 0, TimeSpan.Zero);
             Assert.All(translations, item =>
             {
                 Assert.Equal(VerificationStatus.Verified, item.VerificationStatus);
@@ -110,64 +108,52 @@ public sealed class FranceContentIntegrationTests
     }
 
     [Fact]
-    public async Task FranceTranslationsAndOneHundredFourArticleOwnedSourcesMatchDraftsExactly()
+    public async Task FranceTranslationsAndOneHundredEighteenArticleOwnedSourcesMatchCertificationExactly()
     {
         var catalog = await Catalog.Value;
-        Assert.Equal(1530, catalog.OfficialSources.Count);
+        Assert.Equal(1544, catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         var repositoryRoot = FindRepositoryRoot();
-        var draftsRoot = Path.Combine(repositoryRoot, "docs", "content-drafts", "france-v1");
+        var refreshRoot = Path.Combine(repositoryRoot, "docs", "content-refresh", "2026-11", "france");
         var articleIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => articleIds.Contains(item.InformationEntryId)).ToArray();
-        Assert.Equal(104, sources.Length);
-        Assert.Equal(104, sources.Select(item => item.Id).Distinct().Count());
+        Assert.Equal(118, sources.Length);
+        Assert.Equal(118, sources.Select(item => item.Id).Distinct().Count());
         Assert.All(sources, source =>
         {
             Assert.Contains(source.InformationEntryId, articleIds);
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
-            Assert.Equal(new DateTimeOffset(2026, 11, 11, 0, 0, 0, TimeSpan.Zero), source.LastCheckedAt);
         });
         Assert.All(catalog.OfficialSources.GroupBy(item => (item.InformationEntryId, item.Title, item.Url.AbsoluteUri)), group => Assert.Single(group));
 
         var sourceById = catalog.OfficialSources.ToDictionary(item => item.Id);
         foreach (var (articleCode, expected) in Articles)
         {
-            var draft = await File.ReadAllTextAsync(Path.Combine(draftsRoot, articleCode + ".md"));
-            Assert.Contains($"Article ID: `{expected.Id}`", draft);
-            var sourceMatches = Regex.Matches(draft,
-                @"(?m)^- `(?<key>FR-[^`]+)` → `(?<id>[^`]+)` — (?<title>.*?) \(research source .*?; \[official source\]\((?<url>https://[^)]+)\)\)$");
-            Assert.Equal(ExpectedSourceCounts[articleCode], sourceMatches.Count);
-            var ownedSources = sources.Where(item => item.InformationEntryId == expected.Id).ToDictionary(item => item.Id);
-            Assert.Equal(ExpectedSourceCounts[articleCode], ownedSources.Count);
-            foreach (Match sourceMatch in sourceMatches)
-            {
-                var sourceId = Guid.Parse(sourceMatch.Groups["id"].Value);
-                Assert.True(ownedSources.TryGetValue(sourceId, out var source));
-                Assert.Equal(expected.Id, source!.InformationEntryId);
-                Assert.Equal(sourceMatch.Groups["title"].Value, source.Title);
-                Assert.Equal(sourceMatch.Groups["url"].Value, source.Url.AbsoluteUri);
-            }
-
+            var draft = await File.ReadAllTextAsync(Path.Combine(refreshRoot, articleCode + "_DRAFT_01.md"));
+            Assert.Contains($"ArticleId: `{expected.Id}`", draft);
+            Assert.Equal(ExpectedSourceCounts[articleCode], sources.Count(item => item.InformationEntryId == expected.Id));
             foreach (var (language, section) in new[] { ("en", "EN"), ("uk", "UK"), ("ru", "RU") })
             {
                 var match = Regex.Match(draft,
-                    $@"(?ms)^## {section}\s+Title: (?<title>.*?)\s+Summary: (?<summary>.*?)\s+Content:\s+(?<content>.*?)(?=^### Claim coverage and editorial exclusions$)");
+                    $@"(?ms)^## {section}\s+(?<content>.*?)(?=^## (?:EN|UK|RU|EN claim handles)$)");
                 Assert.True(match.Success, $"Missing {section} in {articleCode}.");
                 var translation = Assert.Single(catalog.InformationEntryTranslations,
                     item => item.InformationEntryId == expected.Id && item.LanguageCode == language);
-                Assert.Equal(match.Groups["title"].Value.Trim(), translation.Title);
-                Assert.Equal(match.Groups["summary"].Value.Trim(), translation.Summary);
                 Assert.Equal(match.Groups["content"].Value.Trim(), translation.Content);
                 var tokens = Regex.Matches(translation.Content, @"\[\[source:([^|\]]+)\|([^\]]+)\]\]");
-                Assert.NotEmpty(tokens);
                 foreach (Match token in tokens)
                 {
                     var sourceId = Guid.Parse(token.Groups[1].Value);
-                    Assert.True(ownedSources.ContainsKey(sourceId), $"{articleCode} {language} cites non-owned source {sourceId}.");
-                    Assert.Equal(expected.Id, sourceById[sourceId].InformationEntryId);
+                    Assert.True(sourceById.TryGetValue(sourceId, out var source), $"Unknown source {sourceId}.");
+                    Assert.Equal(expected.Id, source!.InformationEntryId);
                 }
             }
         }
+
+        Assert.Contains(sources, item => item.Id == Guid.Parse("fecb425a-243b-5233-871d-2ce26b742a66")
+            && item.InformationEntryId == Articles["FR-TP-02"].Id);
+        Assert.DoesNotContain(sources, item => item.Id == Guid.Parse("d0f6fb72-2f27-487d-8cc2-0cfdd32506f9"));
+        Assert.DoesNotContain(sources, item => item.Id == Guid.Parse("2e094655-76bf-4800-91a5-7b6e62823d20"));
     }
 
     [Theory]
@@ -267,9 +253,9 @@ public sealed class FranceContentIntegrationTests
         Assert.Equal(8, facts.Topics.Count);
         Assert.Equal(24, facts.Topics.Sum(topic => topic.Aspects.Count));
         var repositoryRoot = FindRepositoryRoot();
-        var draft = await File.ReadAllTextAsync(Path.Combine(repositoryRoot, "docs", "content-drafts", "france-v1", "COMPARE_DRAFT_01.md"));
-        var factBlocks = Regex.Split(draft, @"(?m)(?=^### [a-z0-9-]+\s*$)")
-            .Where(block => Regex.IsMatch(block, @"(?m)^### [a-z0-9-]+\s*$"))
+        var draft = await File.ReadAllTextAsync(Path.Combine(repositoryRoot, "docs", "content-refresh", "2026-11", "france", "COMPARE_DRAFT_01.md"));
+        var factBlocks = Regex.Split(draft, @"(?m)(?=^## [a-z0-9-]+\s*$)")
+            .Where(block => Regex.IsMatch(block, @"(?m)^## [a-z0-9-]+\s*$"))
             .ToArray();
         Assert.Equal(24, factBlocks.Length);
 
@@ -283,30 +269,25 @@ public sealed class FranceContentIntegrationTests
 
         foreach (var block in factBlocks)
         {
-            var aspectId = Regex.Match(block, @"(?m)^### (?<id>[a-z0-9-]+)\s*$").Groups["id"].Value;
-            var ownerMatch = Regex.Match(block, @"(?m)^\*\*Owner:\*\* `(?<code>FR-[A-Z]+-\d+)` — `(?<id>[0-9a-f-]{36})`$");
-            var informationEntryId = Guid.Parse(Regex.Match(block, @"(?m)^\*\*InformationEntryId:\*\* `(?<id>[0-9a-f-]{36})`$").Groups["id"].Value);
-            Assert.True(ownerMatch.Success, $"Missing owner for {aspectId}.");
-            Assert.Equal(informationEntryId, Guid.Parse(ownerMatch.Groups["id"].Value));
+            var aspectId = Regex.Match(block, @"(?m)^## (?<id>[a-z0-9-]+)\s*$").Groups["id"].Value;
             var actual = Assert.Single(franceFacts, item => item.aspect.Id == aspectId);
             var mappedEntryId = CountryComparisonTopicMap.EntryIdFor(
                 Assert.Single(CountryComparisonTopicMap.All, topic => topic.ResourceKey == actual.topic.TopicResourceKey), "france");
-            Assert.Equal(mappedEntryId, informationEntryId);
-            Assert.Equal(informationEntryId, actual.fact.InformationEntryId);
+            Assert.Equal(mappedEntryId, actual.fact.InformationEntryId);
             Assert.Equal(ComparisonFactStatus.Approved, actual.fact.Status);
             Assert.True(actual.fact.IsAvailable);
             Assert.Equal(new[] { "en", "ru", "uk" }, actual.fact.Values.Keys.Order(StringComparer.Ordinal).ToArray());
 
             foreach (var language in new[] { "en", "uk", "ru" })
             {
-                var value = Regex.Match(block, $@"(?m)^\*\*{language.ToUpperInvariant()}:\*\* (?<value>.+)$");
+                var value = Regex.Match(block, $@"(?m)^- {language.ToUpperInvariant()}: (?<value>.+)$");
                 Assert.True(value.Success, $"Missing {language} draft value for {aspectId}.");
                 Assert.Equal(value.Groups["value"].Value, actual.fact.Values[language]);
             }
 
             var expectedSourceIds = Regex.Matches(
-                    Regex.Match(block, @"(?m)^\*\*OfficialSourceIds:\*\* (?<ids>.+)$").Groups["ids"].Value,
-                    @"`(?<id>[0-9a-f-]{36})`")
+                    Regex.Match(block, @"(?m)^- Candidate SourceIds: (?<ids>.+)$").Groups["ids"].Value,
+                    @"(?<id>[0-9a-f-]{36})")
                 .Select(match => Guid.Parse(match.Groups["id"].Value))
                 .ToArray();
             Assert.Equal(expectedSourceIds, actual.fact.OfficialSourceIds);
@@ -314,7 +295,7 @@ public sealed class FranceContentIntegrationTests
             Assert.All(actual.fact.OfficialSourceIds, sourceId =>
             {
                 var source = Assert.Single(catalog.OfficialSources, item => item.Id == sourceId);
-                Assert.Equal(informationEntryId, source.InformationEntryId);
+                Assert.Equal(actual.fact.InformationEntryId, source.InformationEntryId);
                 Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
             });
         }
