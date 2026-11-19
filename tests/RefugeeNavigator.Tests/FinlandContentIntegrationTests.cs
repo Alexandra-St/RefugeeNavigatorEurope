@@ -112,7 +112,7 @@ public sealed class FinlandContentIntegrationTests
     public async Task FinlandTranslationsAndOneHundredOneArticleOwnedSourcesMatchDraftsExactly()
     {
         var catalog = await Catalog.Value;
-        Assert.Equal(1516, catalog.OfficialSources.Count);
+        Assert.Equal(1530, catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         var repositoryRoot = FindRepositoryRoot();
         var draftsRoot = Path.Combine(repositoryRoot, "docs", "content-drafts", "finland-v1");

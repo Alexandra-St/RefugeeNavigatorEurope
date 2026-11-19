@@ -1553,23 +1553,29 @@ public sealed class CountryComparisonTests
 
             var entryId = Guid.Parse(Regex.Match(Field("InformationEntryId"), @"[0-9a-f-]{36}").Value);
             var values = new[] { Field("EN"), Field("UK"), Field("RU") };
-            var sourceIds = Regex.Matches(Field("OfficialSourceIds"), @"[0-9a-f-]{36}")
-                .Select(match => Guid.Parse(match.Value)).ToArray();
+            var legacySourceIds = Regex.Match(block, @"(?m)^\*\*OfficialSourceIds:\*\* (?<value>.*)$");
+            var sourceIdText = legacySourceIds.Success
+                ? legacySourceIds.Groups["value"].Value
+                : Regex.Match(block, @"(?m)^\*\*Final binding actions:\*\* (?<value>.*)$").Groups["value"].Value;
+            var sourceIds = legacySourceIds.Success
+                ? Regex.Matches(sourceIdText, @"[0-9a-f-]{36}").Select(match => Guid.Parse(match.Value)).ToArray()
+                : Regex.Matches(sourceIdText, @"\b(?:KEEP|ADD) ([0-9a-f-]{36})")
+                    .Select(match => Guid.Parse(match.Groups[1].Value)).ToArray();
             draftFacts.Add(aspectMatch.Groups["id"].Value, (entryId, values[0], values[1], values[2], sourceIds));
         }
 
         Assert.Equal(24, draftFacts.Count);
         Assert.Contains("complete universal application route", draftFacts["protection-application"].En);
         Assert.Contains("individual Irish permission", draftFacts["protection-dates"].En);
-        Assert.Contains("pending decision does not by itself", draftFacts["residence-filing"].En);
-        Assert.Contains("fallback placement", draftFacts["housing-initial"].En);
+        Assert.Contains("a filing receipt does not itself create a permission", draftFacts["residence-filing"].En);
+        Assert.Contains("may be offered a stay of up to 30 days", draftFacts["housing-initial"].En);
         var irelandFacts = facts.Topics.SelectMany(topic => topic.Aspects.SelectMany(aspect =>
                 aspect.Facts.Where(fact => fact.CountrySlug == "ireland").Select(fact => (aspect.Id, Fact: fact))))
             .ToArray();
         Assert.Equal(24, irelandFacts.Length);
-        Assert.Equal(77, irelandFacts.Sum(item => item.Fact.OfficialSourceIds.Count));
-        Assert.Equal(72, irelandFacts.SelectMany(item => item.Fact.OfficialSourceIds).Distinct().Count());
-        Assert.Equal(65, irelandFacts.SelectMany(item => item.Fact.OfficialSourceIds)
+        Assert.Equal(78, irelandFacts.Sum(item => item.Fact.OfficialSourceIds.Count));
+        Assert.Equal(73, irelandFacts.SelectMany(item => item.Fact.OfficialSourceIds).Distinct().Count());
+        Assert.Equal(66, irelandFacts.SelectMany(item => item.Fact.OfficialSourceIds)
             .Select(id => Assert.Single(catalog.OfficialSources, source => source.Id == id).Url.AbsoluteUri)
             .Distinct(StringComparer.Ordinal).Count());
         var sourceById = catalog.OfficialSources.ToDictionary(source => source.Id);

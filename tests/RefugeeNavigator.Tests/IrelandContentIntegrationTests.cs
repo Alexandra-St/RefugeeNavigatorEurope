@@ -38,13 +38,13 @@ public sealed class IrelandContentIntegrationTests
     private static readonly IReadOnlyDictionary<string, int> ExpectedSourceCounts = new Dictionary<string, int>
     {
         ["IE-EMP-01"] = 9,
-        ["IE-EMP-02"] = 20,
-        ["IE-HEALTH-01"] = 10,
-        ["IE-EDU-01"] = 15,
+        ["IE-EMP-02"] = 22,
+        ["IE-HEALTH-01"] = 12,
+        ["IE-EDU-01"] = 16,
         ["IE-SOC-01"] = 16,
-        ["IE-TP-01"] = 11,
-        ["IE-TP-02"] = 10,
-        ["IE-HOUSING-01"] = 15
+        ["IE-TP-01"] = 13,
+        ["IE-TP-02"] = 13,
+        ["IE-HOUSING-01"] = 19
     };
     private static readonly ResourceManager Resources = new(
         "RefugeeNavigator.Web.Resources.Localization.SharedResource",
@@ -97,9 +97,7 @@ public sealed class IrelandContentIntegrationTests
             Assert.All(translations, item =>
             {
                 Assert.Equal(VerificationStatus.Verified, item.VerificationStatus);
-                var expectedDate = articleCode is "IE-TP-01" or "IE-TP-02" or "IE-HOUSING-01"
-                    ? new DateTimeOffset(2026, 11, 15, 0, 0, 0, TimeSpan.Zero)
-                    : new DateTimeOffset(2026, 11, 10, 0, 0, 0, TimeSpan.Zero);
+                var expectedDate = new DateTimeOffset(2026, 11, 18, 0, 0, 0, TimeSpan.Zero);
                 Assert.Equal(expectedDate, item.LastUpdatedAt);
             });
         }
@@ -113,64 +111,47 @@ public sealed class IrelandContentIntegrationTests
     }
 
     [Fact]
-    public async Task IrelandTranslationsAndOneHundredSixArticleOwnedSourcesMatchDraftsExactly()
+    public async Task IrelandTranslationsAndOneHundredTwentyArticleOwnedSourcesMatchDraftsExactly()
     {
         var catalog = await Catalog.Value;
-        Assert.Equal(1516, catalog.OfficialSources.Count);
+        Assert.Equal(1530, catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         var repositoryRoot = FindRepositoryRoot();
         var draftsRoot = Path.Combine(repositoryRoot, "docs", "content-drafts", "ireland-v1");
         var articleIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => articleIds.Contains(item.InformationEntryId)).ToArray();
-        Assert.Equal(106, sources.Length);
-        Assert.Equal(106, sources.Select(item => item.Id).Distinct().Count());
-        Assert.Equal(96, sources.Select(item => item.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
-        var research = await File.ReadAllTextAsync(Path.Combine(repositoryRoot, "docs", "content-research", "ireland-batch-2026-11-10", "TARGETED_CORE_COMPARE_RESEARCH_02.md"));
-        var retainedInventory = research.Split("### URLs reviewed but not used as current evidence", StringSplitOptions.None)[0];
-        var retainedUrls = Regex.Matches(retainedInventory, @"<(https://[^>]+)>")
-            .Select(match => match.Groups[1].Value).ToHashSet(StringComparer.Ordinal);
-        Assert.Equal(24, retainedUrls.Count);
+        Assert.Equal(120, sources.Length);
+        Assert.Equal(120, sources.Select(item => item.Id).Distinct().Count());
+        Assert.Equal(109, sources.Select(item => item.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
         Assert.All(sources, source =>
         {
             Assert.Contains(source.InformationEntryId, articleIds);
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
-            var isNewArticle = source.InformationEntryId == Articles["IE-TP-01"].Id ||
-                source.InformationEntryId == Articles["IE-TP-02"].Id ||
-                source.InformationEntryId == Articles["IE-HOUSING-01"].Id;
-            var expectedDate = isNewArticle && retainedUrls.Contains(source.Url.AbsoluteUri)
-                ? new DateTimeOffset(2026, 11, 15, 0, 0, 0, TimeSpan.Zero)
-                : new DateTimeOffset(2026, 11, 10, 0, 0, 0, TimeSpan.Zero);
-            Assert.Equal(expectedDate, source.LastCheckedAt);
+            Assert.Equal(new DateTimeOffset(2026, 11, 18, 0, 0, 0, TimeSpan.Zero), source.LastCheckedAt);
         });
         Assert.All(catalog.OfficialSources.GroupBy(item => (item.InformationEntryId, item.Title, item.Url.AbsoluteUri)), group => Assert.Single(group));
 
         var sourceById = catalog.OfficialSources.ToDictionary(item => item.Id);
         var totalCitationTokens = 0;
         var citedSourceIds = new HashSet<Guid>();
+        var plannedCoreBoundIds = new HashSet<Guid>();
         foreach (var (articleCode, expected) in Articles)
         {
             var draft = await File.ReadAllTextAsync(Path.Combine(draftsRoot, articleCode + ".md"));
             Assert.Contains($"Article ID: `{expected.Id}`", draft);
             var sourceMatches = Regex.Matches(draft,
-                @"(?m)^- `(?<key>IE-[^`]+)` → `(?<id>[^`]+)` — (?<title>.*?) \((?:research source (?:`[^`]+`|[^;]+); (?:\[official source\]\(https://[^)]+\)|official source)|Targeted Research 02; official source)(?:; [^)]*)?\)$");
+                @"(?m)^- `(?<key>IE-[^`]+)` → `(?<id>[^`]+)` — (?<title>.*?) — <(?<url>https://[^>]+)> — source-record (?<record>[^;]+); core-binding (?<binding>[^ \r\n]+)$");
             Assert.Equal(ExpectedSourceCounts[articleCode], sourceMatches.Count);
             var ownedSources = sources.Where(item => item.InformationEntryId == expected.Id).ToDictionary(item => item.Id);
             Assert.Equal(ExpectedSourceCounts[articleCode], ownedSources.Count);
-            var sourceUrlMatches = Regex.Matches(draft,
-                @"(?m)^- `IE-[^`]+` → `(?<id>[^`]+)` — .*?\[(?<linkTitle>[^]]+)\]\((?<url>https://[^)]+)\).*$");
-            Assert.Equal(ExpectedSourceCounts[articleCode], sourceUrlMatches.Count);
             foreach (Match sourceMatch in sourceMatches)
             {
                 var sourceId = Guid.Parse(sourceMatch.Groups["id"].Value);
-                Assert.True(ownedSources.TryGetValue(sourceId, out var source));
-                Assert.Equal(expected.Id, source!.InformationEntryId);
-                Assert.Equal(sourceMatch.Groups["title"].Value, source.Title);
-            }
-            foreach (Match sourceMatch in sourceUrlMatches)
-            {
-                var sourceId = Guid.Parse(sourceMatch.Groups["id"].Value);
-                Assert.True(ownedSources.TryGetValue(sourceId, out var source));
-                Assert.Equal(sourceMatch.Groups["url"].Value, source!.Url.AbsoluteUri);
+                Assert.True(ownedSources.TryGetValue(sourceId, out var source), $"{articleCode} source record {sourceId} is absent or not owned by the article.");
+                Assert.Equal(sourceMatch.Groups["title"].Value, source!.Title);
+                Assert.Equal(sourceMatch.Groups["url"].Value, source.Url.AbsoluteUri);
+                if (sourceMatch.Groups["binding"].Value is "KEEP" or "ADD")
+                    plannedCoreBoundIds.Add(sourceId);
             }
 
             foreach (var (language, section) in new[] { ("en", "EN"), ("uk", "UK"), ("ru", "RU") })
@@ -196,8 +177,46 @@ public sealed class IrelandContentIntegrationTests
                 }
             }
         }
-        Assert.Equal(339, totalCitationTokens);
-        Assert.Equal(sources.Select(item => item.Id).ToHashSet(), citedSourceIds);
+        Assert.Equal(379, totalCitationTokens);
+        Assert.Equal(plannedCoreBoundIds, citedSourceIds);
+    }
+
+    [Fact]
+    public async Task IrelandCompareFactsMatchApprovedDraftAcrossAllAspectsAndLanguages()
+    {
+        var catalog = await Catalog.Value;
+        var facts = await Facts.Value;
+        JsonComparisonFactProvider.Validate(facts, catalog);
+        var root = FindRepositoryRoot();
+        var draft = await File.ReadAllTextAsync(Path.Combine(root, "docs", "content-drafts", "ireland-v1", "COMPARE_DRAFT_01.md"));
+        var blocks = Regex.Split(draft, "(?m)^### (?<aspect>[a-z0-9-]+)\\s*$");
+        Assert.Equal(49, blocks.Length);
+        var actual = facts.Topics.SelectMany(topic => topic.Aspects)
+            .SelectMany(aspect => aspect.Facts.Select(fact => (aspect.Id, Fact: fact)))
+            .Where(item => item.Fact.CountrySlug == "ireland")
+            .ToDictionary(item => item.Id, item => item.Fact, StringComparer.Ordinal);
+        Assert.Equal(24, actual.Count);
+        var seen = new HashSet<string>(StringComparer.Ordinal);
+        for (var index = 1; index < blocks.Length; index += 2)
+        {
+            var aspectId = blocks[index];
+            var body = blocks[index + 1];
+            Assert.True(seen.Add(aspectId), $"Duplicate Compare aspect {aspectId}.");
+            var owner = Regex.Match(body, "(?m)^\\*\\*InformationEntryId:\\*\\* `([^`]+)`$").Groups[1].Value;
+            Assert.True(actual.TryGetValue(aspectId, out var fact), $"Missing production fact {aspectId}.");
+            Assert.Equal(Guid.Parse(owner), fact!.InformationEntryId);
+            Assert.Equal(ComparisonFactStatus.Approved, fact.Status);
+            Assert.True(fact.IsAvailable);
+            foreach (var (label, language) in new[] { ("EN", "en"), ("UK", "uk"), ("RU", "ru") })
+            {
+                var expected = Regex.Match(body, $"(?m)^\\*\\*{label}:\\*\\* (.*)$").Groups[1].Value;
+                Assert.Equal(expected, fact.Values[language]);
+            }
+            var expectedSourceIds = Regex.Matches(body, "(?m)^\\*\\*Final binding actions:\\*\\* (.*)$").SelectMany(match =>
+                Regex.Matches(match.Groups[1].Value, "\\b(?:KEEP|ADD) ([0-9a-f-]{36})")).Select(match => Guid.Parse(match.Groups[1].Value)).Order().ToArray();
+            Assert.Equal(expectedSourceIds, fact.OfficialSourceIds.Order().ToArray());
+        }
+        Assert.Equal(actual.Keys.Order(StringComparer.Ordinal), seen.Order(StringComparer.Ordinal));
     }
 
     [Theory]
