@@ -34,10 +34,10 @@ The deterministic EUR-Lex Article 2 record is UUIDv5 `fdf859e7-da78-52eb-88e9-03
 ## Release commit and workflows
 
 - Production commit subject: `feat: refresh France content`
-- Production commit SHA: pending
-- Branch push: pending
-- CI workflow (`CI`): run ID/SHA/conclusion pending
-- Visual workflow (`Netherlands visual evidence`, the repository's available visual-evidence workflow): run ID/SHA/conclusion pending
+- Production commit SHA: `b3a9cd74c4b3ae2e4ed0c4e1a03c1e471786376d`
+- Branch push: `main` → `origin/main`, successful.
+- CI workflow (`CI`): run `44607328562`; SHA `b3a9cd74c4b3ae2e4ed0c4e1a03c1e471786376d`; conclusion `success`.
+- Visual workflow (`Netherlands visual evidence`, the repository's available visual-evidence workflow): run `44607328679`; SHA `b3a9cd74c4b3ae2e4ed0c4e1a03c1e471786376d`; conclusion `success`. Both release validation runs are on the exact production commit SHA.
 
 ## Final production counts
 
@@ -45,4 +45,4 @@ The deterministic EUR-Lex Article 2 record is UUIDv5 `fdf859e7-da78-52eb-88e9-03
 - France OfficialSources: 118; global OfficialSources: 1,544.
 - France Core pairs: 97.
 - France Compare aspects: 24; France Compare pairs: 77.
-- Owner conflicts: 0; dangling Core SourceIds: 0; dangling Compare SourceIds: 0; invalid/stale operative IDs: 0.
+- Owner conflicts: 0; dangling Core SourceIds: 0; dangling Compare SourceIds: 0; invalid/stale operative IDs: 0. Unintended other-country production changes: 0.
