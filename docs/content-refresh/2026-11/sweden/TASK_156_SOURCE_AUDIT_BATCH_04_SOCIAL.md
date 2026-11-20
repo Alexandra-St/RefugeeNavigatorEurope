@@ -1,0 +1,49 @@
+# Task 156 — Sweden Batch 4 Social Assistance source audit
+
+As of 2026-11-20. All nine Social Assistance owner records were inspected. All 123 Core tuples attached to those records are adjudicated; all 9 affected Compare tuples are supported. Production articles, OfficialSources, Compare bindings and tests were left unchanged.
+
+## Source results
+
+Batch 4 contains 9 P0 sources and 0 P1/P2 sources. Status: CURRENT 9, LEGACY 0, UNCLEAR 0, BROKEN 0. Action: KEEP 9, UPDATE 0, RETAIN_HISTORICAL 0, REMOVE 0. No actionable source replacement was needed. The Reception Ordinance source has no dedicated numeric-rate claim in the ledger; it remains a current statutory context source for daily-allowance rules and the daily-living-cost proposition.
+
+## Reception support and amounts
+
+The Reception Act (2026:999) is current from 1 October 2026. A person covered by it who lacks income or assets may qualify for daily allowance and special grant, subject to the law’s conditions; temporary-protection holders must remain in Sweden and keep the Migration Agency informed of their address. Support ends when the person is population-registered under the ordinary cessation rule. Misreported/overpaid aid may be recovered, and daily allowance may be reduced or withdrawn in specified cases. The 2026 Reception Ordinance sets the daily allowance: single adult SEK 71/day with self-catering or SEK 24 when free food is provided; cohabiting adults SEK 61/19; children 0–3 SEK 37/12, 4–10 SEK 43/12, 11–17 SEK 50/12; a home-dwelling adult SEK 61/19. For families with more than two children, the two oldest receive full rates and each younger child half. These are official ordinance rates, not assumptions from guidance. Daily allowance covers food, clothing, shoes, leisure, hygiene and other consumables, plus healthcare/medicine as specified by law. [Reception Ordinance](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/mottagandeforordning-20261715_sfs-2026-1715/) and [Reception Act](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/mottagandelag-2026999_sfs-2026-999/).
+
+Special grants require proof of great need and inability to pay, receive individual assessment, and are limited to specified packages/eligible urgent needs and the cheapest option needed. Listed needs include infant items, school supplies, winter clothing, prams, glasses, healthcare, medication, medical travel and other necessary needs. Applications go in writing to the Swedish Migration Agency; aid decisions are appealable. [Migration Agency financial-aid guidance](https://www.migrationsverket.se/en/you-have-a-permit-in-sweden/protection-under-the-temporary-protection-directive/financial-aid.html).
+
+## Municipal assistance, insurance and employment-programme benefits
+
+As of 20 November 2026, the Social Services Act excludes people covered by the Reception Act from ordinary economic assistance under Chapter 12, Section 1. Registered temporary-protection holders who are no longer covered by reception support may apply to the municipality under ordinary needs-based rules; the municipality assesses each case, including available income/assets and ability to work. This is not automatic full entitlement. [Social Services Act](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/socialtjanstlag-2025400_sfs-2025-400/) and [Socialstyrelsen guidance](https://socialstyrelsen.se/om-socialstyrelsen/krisberedskap/samlad-information-med-anledning-av-kriget-i-ukraina/ratt-till-vard-och-bistand-i-sverige/fragor-och-svar-om-ratt-till-vard-och-bistand-i-sverige/).
+
+The Social Insurance Code separates residence-based, work-based and other benefits, sets distinct conditions, and excludes covered temporary-protection permit holders from the statutory residence test except for an express protection-status exception. Registration alone does not award benefits. Arbetsförmedlingen decides establishment-programme participation; Försäkringskassan handles establishment compensation applications after programme participation decisions. Temporary protection alone does not establish universal access or payment.
+
+The official Socialstyrelsen page states that temporary-protection holders registered on/after 1 November 2024 cannot receive child or housing allowance under that guidance; those registered by 31 October 2024 may be eligible subject to individual rules. This is not an automatic award, is limited to those benefits, and is retained as a date-specific historical boundary.
+
+## C055 and W-SE-06
+
+Exact proposition: “The Social Services Act rule changes from 2 January 2027.” Ledger TemporalClass FUTURE; NumericDate YES. The current consolidated Social Services Act displays the pre-amendment rule as ending on 2 January 2027 and SFS 2026:1552 as entering into force on 2 January 2027. C055 is SUPPORTED_FUTURE, with no temporal reopen. Sole effective SourceId: `e0c6e5e6-c491-4394-90fc-729ee9d05c3d`. W-SE-06 is APPROVE, TriggerType IMPLEMENTATION_DATE, ExactDate 2027-01-02, PrecheckDate 2026-12-01, SourceId e0c6e5e6-c491-4394-90fc-729ee9d05c3d. The amendment changes the Reception Act exclusion by adding a narrow exception tied to urgent dental-care assistance; the date is the amendment’s entry-into-force date. [Official consolidated Act](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/socialtjanstlag-2025400_sfs-2025-400/) and [SFS 2026:1552](https://svenskforfattningssamling.se/sites/default/files/sfs/2026-08/SFS2026-1552.pdf).
+
+## Core and coverage
+
+Batch 4: 123 tuples reviewed (61 SUPPORTED, 62 NOT_SUPPORTED, 0 pending); 32 exact mapping omissions were repaired using existing production sources; no tuple was removed. Cumulative Core: 614 (262 SUPPORTED, 352 NOT_SUPPORTED, 0 pending). Coverage over 283 active claims: COVERED 161, COVERED_MULTIPLE 49, NOT_EXTERNALLY_SOURCE_DEPENDENT 0, UNSUPPORTED 73, REQUIRES_SOURCE_REVIEW 0.
+
+MATERIAL: covered 110, multiple 29, review 0, unsupported 41. NumericDate: covered 27, multiple 10, review 0, unsupported 8. Newly unsupported: SE-SOC-01-C056, SE-SOC-01-C072, SE-SOC-01-C073. Previously unsupported newly resolved: none. Final unsupported IDs are listed in `EVIDENCE_GAP_INPUT_01.csv` and `SOURCE_AUDIT_SYNTHESIS_01.md`. Remaining Social evidence gaps: SE-SOC-01-C056, SE-SOC-01-C072, SE-SOC-01-C073. There are no remaining REQUIRES_SOURCE_REVIEW claims.
+
+## Compare and Watch
+
+Batch 4 reviewed 9 Compare tuples; 9 supported, 0 unsupported or pending. Cumulative staged Compare evidence graph: 55 tuples, 55 supported, 0 not supported, 0 pending. Production baseline remains 24 aspects/52 bindings. Certified aspects 11/24: employment-assistance-conditions, work-permission, healthcare-access, healthcare-proof, housing-initial, housing-private-rental, education-school-enrolment, education-pupil-language, social-subsistence, social-application, social-child-benefits. Newly available child-benefit evidence is a staging candidate only.
+
+Final candidate disposition counts: KEEP 23, REVISE 0, UNAVAILABLE 0, NEWLY_AVAILABLE 1. Uncertified aspects: protection-scheme, protection-application, protection-dates, residence-routes, residence-conditions, residence-filing, employment-vacancies, employment-institutions, work-employer-duties, work-minimum-pay, healthcare-urgent, housing-financial-support, education-higher-admission; missing components are described in the Compare draft and source audit. All six Watch candidates were reconciled: W-SE-01 APPROVE, W-SE-02 APPROVE, W-SE-03 APPROVE, W-SE-04 EDIT, W-SE-05 APPROVE, W-SE-06 APPROVE. Earliest certified future trigger: 2027-01-01; earliest maintenance precheck: 2026-12-01.
+
+## 69-source closure and gaps
+
+All four batches total 21 + 22 + 17 + 9 = 69 production sources. Final source status: CURRENT 68, LEGACY 1, UNCLEAR 0, BROKEN 0. Final action: KEEP 67, UPDATE 0, RETAIN_HISTORICAL 1, REMOVE 1. Historical source: `78f08f69-cbf2-4715-8a6c-faedcec8be27` (dated notice retained for historical abolition context). Removed source: `f241d32f-d41c-46f1-90c2-8d61eb4b2aea` (current but no remaining exact production/article role). Current claims relying solely on legacy/retained-historical evidence: none.
+
+Production Core baseline remains 69 source/owner pairs; preliminary staging plan: KEEP_CANDIDATE 68 (including the retained historical context record), ADD_CANDIDATE 0, REMOVE_CANDIDATE 1. Production Compare baseline remains 24 aspects/52 bindings. Owner conflicts 0, same-owner canonical duplicates 0, Core dangling 0, wrong-owner 0, Compare dangling 0. Four cross-owner URL groups were touched; owner-specific records remain separate: Arbetsförmedlingen Ukraine guidance (`e4d07c65-fb07-4f6f-b46a-3d05dfc752d1` / `b4ec…`), Migration Agency 1 October Reception Act notice (`57d10098-a6a9-4cbb-9242-8ba46fe93418` / `90a…`), Reception Act 2026:999 (`c1ba3594-7cfc-4c92-abcb-c1819fdf63cd` / `15871…`), and Socialstyrelsen Ukraine rights FAQ (`2f022132-dcbb-4b15-817f-1e9542e63710` / `61666e4b-67f1-4ca3-894a-3717737eaf40`; URL differs only by `www.`).
+
+High-risk register: 108 rows; source-certified 75; evidence-gap 33; claim-reopen 0; temporal-reopen 0. Batch-4 high-risk rows 17, source-certified 17, evidence-gap ClaimIds: none. Existing claim reopens remain SE-TP-01-C008 and SE-HEALTH-01-C007; no new claim, temporal or translation reopen was created.
+
+Recommended evidence-gap resolution batches: (1) P0 legal/status, benefit eligibility, NumericDate and current-transition gaps; (2) P1 practical process and lower-risk unsupported propositions; (3) separately review any REWRITE/CLAIM_REOPEN rows and Compare proposition adjustments. No new source, claim, temporal class, translation or production binding was changed in Task 156.
+
+Verdict: **SWEDEN SOURCE AUDIT COMPLETE — READY FOR EVIDENCE GAP RESOLUTION**

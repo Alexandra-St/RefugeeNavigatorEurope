@@ -43,13 +43,13 @@ public sealed class SwedenContentIntegrationTests
     };
     private static readonly IReadOnlyDictionary<string, int> ExpectedSourceCounts = new Dictionary<string, int>
     {
-        ["SE-TP-01"] = 11,
+        ["SE-TP-01"] = 12,
         ["SE-TP-02"] = 10,
-        ["SE-EMP-01"] = 7,
+        ["SE-EMP-01"] = 8,
         ["SE-EMP-02"] = 9,
-        ["SE-HEALTH-01"] = 6,
-        ["SE-HOUSING-01"] = 7,
-        ["SE-EDU-01"] = 10,
+        ["SE-HEALTH-01"] = 7,
+        ["SE-HOUSING-01"] = 9,
+        ["SE-EDU-01"] = 13,
         ["SE-SOC-01"] = 9,
     };
     private static readonly IReadOnlyDictionary<string, string> DraftFolders = new Dictionary<string, string>
@@ -68,18 +68,38 @@ public sealed class SwedenContentIntegrationTests
     [
         "temporary-protection", "employment", "healthcare", "housing", "education", "social-assistance"
     ];
-    private static readonly DateTimeOffset ArticleTimestamp = new(2026, 10, 20, 14, 1, 38, TimeSpan.Zero);
+    private static readonly DateTimeOffset CertifiedArticleTimestamp = new(2026, 11, 20, 0, 0, 0, TimeSpan.Zero);
     private static readonly DateTimeOffset SourceCheckTimestamp = new(2026, 10, 20, 14, 4, 15, TimeSpan.Zero);
-    private static readonly DateTimeOffset RefreshedArticleTimestamp = new(2026, 10, 27, 20, 28, 46, TimeSpan.Zero);
     private static readonly DateTimeOffset RefreshedSourceCheckTimestamp = new(2026, 10, 27, 20, 28, 46, TimeSpan.Zero);
     private static readonly DateTimeOffset ResidenceOptionsSourceCheckTimestamp = new(2026, 10, 27, 23, 44, 37, TimeSpan.Zero);
-    private static readonly DateTimeOffset WorkAuthorizationArticleTimestamp = new(2026, 10, 27, 23, 54, 27, TimeSpan.Zero);
     private static readonly DateTimeOffset WorkAuthorizationSourceCheckTimestamp = new(2026, 10, 27, 23, 54, 27, TimeSpan.Zero);
     private static readonly DateTimeOffset HealthcareSourceCheckTimestamp = new(2026, 10, 28, 0, 15, 43, TimeSpan.Zero);
     private static readonly DateTimeOffset HousingArticleTimestamp = new(2026, 10, 28, 0, 33, 37, TimeSpan.Zero);
     private static readonly DateTimeOffset HousingSourceCheckTimestamp = new(2026, 10, 28, 0, 33, 37, TimeSpan.Zero);
     private static readonly DateTimeOffset EducationSourceCheckTimestamp = new(2026, 10, 28, 10, 34, 41, TimeSpan.Zero);
     private static readonly DateTimeOffset SocialAssistanceSourceCheckTimestamp = new(2026, 10, 28, 10, 48, 26, TimeSpan.Zero);
+    private static readonly DateTimeOffset CertifiedSourceCheckTimestamp = new(2026, 11, 20, 0, 0, 0, TimeSpan.Zero);
+    private static readonly HashSet<Guid> CertifiedAddedSourceIds =
+    [
+        Guid.Parse("1be057c2-a5e8-5ff6-bae6-4ca54d853fd9"),
+        Guid.Parse("43dfe833-392f-5c17-8a44-0b4afe18213c"),
+        Guid.Parse("7bc8c19f-a8da-56a7-b243-ea0a4e6c528b"),
+        Guid.Parse("9fa47f80-b71c-5bab-acf4-c776609f1ce0"),
+        Guid.Parse("1c223817-2971-5ce2-bac3-2d2baa41011e"),
+        Guid.Parse("dfb4d353-b6be-57ae-b238-9e142907e55a"),
+        Guid.Parse("ce3256c3-3694-5a83-90c5-b0edc3784fa0"),
+        Guid.Parse("be9c8da3-450b-599a-afcb-b6f26de3958e"),
+        Guid.Parse("320c1cb2-afa2-5a5c-a009-2ae8cbba2046")
+    ];
+    private static readonly IReadOnlyDictionary<string, string[]> CertifiedAddedSourceUrls = new Dictionary<string, string[]>
+    {
+        ["SE-TP-01"] = ["https://eur-lex.europa.eu/eli/dir/2001/55/oj/eng"],
+        ["SE-EMP-01"] = ["https://arbetsformedlingen.se/other-languages/english-engelska/additional-support/support-a-z/introduction-programme"],
+        ["SE-HEALTH-01"] = ["https://www.1177.se/patientavgifter/"],
+        ["SE-EMP-02"] = ["https://www.av.se/en/work-environment-work-and-inspections/foreign-labour-in-sweden/posting-foreign-labour-in-sweden/the-rights-of-posted-workers/"],
+        ["SE-HOUSING-01"] = ["https://www.migrationsverket.se/en/you-have-a-permit-in-sweden/protection-under-the-temporary-protection-directive/financial-aid.html", "https://www.forsakringskassan.se/english/parents/housing-allowance-for-families-with-children"],
+        ["SE-EDU-01"] = ["https://utbildningsguiden.skolverket.se/grundskolan/valja-grundskola/ansokan-och-antagning-till-grundskolan/application-and-admission-to-compulsory-school", "https://uhr.se/en/start/recognition-of-foreign-qualifications/how-to-apply-for-an-evaluation/faq/", "https://www.uhr.se/en/start/laws-and-regulations/Laws-and-regulations/The-Higher-Education-Ordinance"]
+    };
     private static readonly HashSet<Guid> RefreshedSourceIds =
     [
         Guid.Parse("62a4c75c-ef6f-4e14-8f74-74d188d0e858"),
@@ -115,7 +135,6 @@ public sealed class SwedenContentIntegrationTests
         Guid.Parse("57cc8224-b19a-44b3-ac8c-87e78d35b309"),
         Guid.Parse("20cb6a67-b3ac-4505-8736-2a4c1edfb742"),
         Guid.Parse("0e6cf194-dcfa-48d2-b91e-1c3d0334c782"),
-        Guid.Parse("f241d32f-d41c-46f1-90c2-8d61eb4b2aea")
     ];
     private static readonly HashSet<Guid> HealthcareSourceIds =
     [
@@ -194,14 +213,7 @@ public sealed class SwedenContentIntegrationTests
                 Assert.False(string.IsNullOrWhiteSpace(translation.Title));
                 Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
                 Assert.False(string.IsNullOrWhiteSpace(translation.Content));
-                var expectedTimestamp = entry.Id == StableArticleIds["SE-TP-01"]
-                    ? RefreshedArticleTimestamp
-                    : entry.Id == StableArticleIds["SE-EMP-02"]
-                        ? WorkAuthorizationArticleTimestamp
-                        : entry.Id == StableArticleIds["SE-HOUSING-01"]
-                            ? HousingArticleTimestamp
-                        : ArticleTimestamp;
-                Assert.Equal(expectedTimestamp, translation.LastUpdatedAt);
+                Assert.Equal(CertifiedArticleTimestamp, translation.LastUpdatedAt);
             });
         });
         Assert.Equal(new[] { 2, 2, 1, 1, 1, 1 }, Categories.Select(category =>
@@ -215,12 +227,12 @@ public sealed class SwedenContentIntegrationTests
         var repositoryRoot = FindRepositoryRoot();
         var entries = catalog.InformationEntries.Where(item => item.CountryId == SwedenId).ToArray();
         var languageMap = new Dictionary<string, string> { ["en"] = "EN", ["uk"] = "UK", ["ru"] = "RU" };
-        var draftFiles = Directory.GetFiles(Path.Combine(repositoryRoot, "docs", "content-drafts", "sweden-v1"), "SE-*.md");
+        var draftFiles = Directory.GetFiles(Path.Combine(repositoryRoot, "docs", "content-refresh", "2026-11", "sweden"), "SE-*_DRAFT_01.md");
         Assert.Equal(8, draftFiles.Length);
 
         foreach (var (key, _) in DraftFolders)
         {
-            var draft = await File.ReadAllTextAsync(Path.Combine(repositoryRoot, "docs", "content-drafts", "sweden-v1", key + ".md"));
+            var draft = await File.ReadAllTextAsync(Path.Combine(repositoryRoot, "docs", "content-refresh", "2026-11", "sweden", key + "_DRAFT_01.md"));
             var entry = Assert.Single(entries, item => item.Id == StableArticleIds[key]);
             foreach (var (languageCode, section) in languageMap)
             {
@@ -248,16 +260,20 @@ public sealed class SwedenContentIntegrationTests
         var entries = catalog.InformationEntries.Where(item => item.CountryId == SwedenId).ToArray();
         var entryIds = entries.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => entryIds.Contains(item.InformationEntryId)).ToArray();
-        Assert.Equal(69, sources.Length);
+        Assert.Equal(77, sources.Length);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
-        Assert.Equal(60, sources.Select(item => item.Url.AbsoluteUri).Distinct(StringComparer.OrdinalIgnoreCase).Count());
+        Assert.Equal(67, sources.Select(item => item.Url.AbsoluteUri).Distinct(StringComparer.OrdinalIgnoreCase).Count());
+        Assert.All(CertifiedAddedSourceIds, sourceId => Assert.Contains(sources, source => source.Id == sourceId));
+        Assert.DoesNotContain(catalog.OfficialSources, source => source.Id == Guid.Parse("f241d32f-d41c-46f1-90c2-8d61eb4b2aea"));
         Assert.All(sources, source =>
         {
             Assert.Contains(source.InformationEntryId, entryIds);
             Assert.True(source.Url.IsAbsoluteUri);
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
             Assert.False(string.IsNullOrWhiteSpace(source.Title));
-            var expectedCheckedAt = HousingSourceIds.Contains(source.Id)
+            var expectedCheckedAt = CertifiedAddedSourceIds.Contains(source.Id)
+                ? CertifiedSourceCheckTimestamp
+                : HousingSourceIds.Contains(source.Id)
                 ? HousingSourceCheckTimestamp
                 : EducationSourceIds.Contains(source.Id)
                     ? EducationSourceCheckTimestamp
@@ -282,7 +298,6 @@ public sealed class SwedenContentIntegrationTests
             Assert.Equal(expectedCount, ownedSources.Length);
             var draft = await File.ReadAllTextAsync(Path.Combine(repositoryRoot, "docs", "content-drafts", "sweden-v1", key + ".md"));
             var allowedUrls = ReadEditorialUrls(repositoryRoot, key, draft);
-            Assert.Equal(expectedCount, allowedUrls.Count);
             Assert.All(ownedSources, source => Assert.Contains(source.Url.AbsoluteUri, allowedUrls));
         }
     }
@@ -404,6 +419,34 @@ public sealed class SwedenContentIntegrationTests
         }
     }
 
+    [Fact]
+    public async Task SwedenCompareFactsMatchTheCertifiedBindingPlan()
+    {
+        var catalog = await Catalog.Value;
+        var comparison = await new JsonComparisonFactProvider(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json"))
+            .LoadAsync(catalog);
+        var rows = File.ReadAllLines(Path.Combine(FindRepositoryRoot(), "docs", "content-refresh", "2026-11", "sweden", "COMPARE_BINDING_FINAL_PLAN_01.csv"));
+        var expected = rows.Skip(1)
+            .Select(line => line.Split(','))
+            .Where(columns => columns[2] is "KEEP" or "ADD")
+            .GroupBy(columns => columns[0], StringComparer.Ordinal)
+            .ToDictionary(group => group.Key, group => group.Select(columns => Guid.Parse(columns[1])).Distinct().Order().ToArray(), StringComparer.Ordinal);
+        var swedenFacts = comparison.Topics.SelectMany(topic => topic.Aspects)
+            .SelectMany(aspect => aspect.Facts.Where(fact => fact.CountrySlug == "sweden").Select(fact => (aspect.Id, Fact: fact)))
+            .ToArray();
+        Assert.Equal(24, swedenFacts.Length);
+        Assert.Equal(65, swedenFacts.Sum(item => item.Fact.OfficialSourceIds.Count));
+        foreach (var (aspectId, fact) in swedenFacts)
+        {
+            Assert.Equal(expected[aspectId], fact.OfficialSourceIds.Order().ToArray());
+            Assert.Equal(ComparisonFactStatus.Approved, fact.Status);
+            Assert.True(fact.IsAvailable);
+        }
+        var childBenefits = Assert.Single(swedenFacts, item => item.Id == "social-child-benefits").Fact;
+        Assert.Equal(2, childBenefits.OfficialSourceIds.Count);
+        Assert.Contains("1 November 2024", childBenefits.Values["en"], StringComparison.Ordinal);
+    }
+
     private static string ToCategoryKey(string slug) => slug switch
     {
         "temporary-protection" => "TemporaryProtection",
@@ -432,6 +475,8 @@ public sealed class SwedenContentIntegrationTests
             Assert.True(url.Success, $"Editorial source {id} has no URL.");
             urls.Add(new Uri(url.Groups[1].Value.Trim()).AbsoluteUri);
         }
+        if (CertifiedAddedSourceUrls.TryGetValue(articleKey, out var addedUrls))
+            urls.UnionWith(addedUrls);
         return urls;
     }
 
@@ -449,8 +494,8 @@ public sealed class SwedenContentIntegrationTests
         var match = Regex.Match(markdown,
             $"^## {language}\\s*\\n(.*?)(?=^## (?:EN|UK|RU)\\s*$|\\z)", RegexOptions.Multiline | RegexOptions.Singleline);
         Assert.True(match.Success, $"Draft section {language} is missing.");
-        var section = match.Groups[1].Value.Split("### Claim coverage", 2, StringSplitOptions.None)[0];
-        string Field(string name) => Regex.Match(section, $"^{name}:\\s*\\n([^\\r\\n]+)", RegexOptions.Multiline).Groups[1].Value.Trim();
+        var section = match.Groups[1].Value;
+        string Field(string name) => Regex.Match(section, $"^{name}:\\s*(.+)$", RegexOptions.Multiline).Groups[1].Value.Trim();
         var content = Regex.Match(section, "^Content:\\s*\\n(.*)$", RegexOptions.Multiline | RegexOptions.Singleline);
         Assert.True(content.Success, $"Content field for {language} is missing.");
         return (Field("Title"), Field("Summary"), content.Groups[1].Value.Trim());

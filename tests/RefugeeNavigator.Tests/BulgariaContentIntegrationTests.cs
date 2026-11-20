@@ -74,7 +74,7 @@ public sealed class BulgariaContentIntegrationTests
         var entryIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => entryIds.Contains(item.InformationEntryId)).ToArray();
         Assert.Equal(70, sources.Length);
-        Assert.Equal(1544, catalog.OfficialSources.Count);
+        Assert.Equal(1552, catalog.OfficialSources.Count);
         Assert.Equal(70, sources.Select(item => item.Id).Distinct().Count());
         var sourceById = catalog.OfficialSources.ToDictionary(item => item.Id);
         var citedSourceIds = new HashSet<Guid>();
@@ -171,9 +171,9 @@ public sealed class BulgariaContentIntegrationTests
         Assert.Equal(1, allFacts.Count(item => item.CountrySlug == "netherlands" && item.Status == ComparisonFactStatus.Draft));
         var socialChildBenefits = Assert.Single(comparison.Topics.SelectMany(item => item.Aspects), item => item.Id == "social-child-benefits");
         var swedenChildBenefits = Assert.Single(socialChildBenefits.Facts, item => item.CountrySlug == "sweden");
-        Assert.Equal(ComparisonFactStatus.Draft, swedenChildBenefits.Status);
-        Assert.False(swedenChildBenefits.IsAvailable);
-        Assert.Empty(swedenChildBenefits.OfficialSourceIds);
+        Assert.Equal(ComparisonFactStatus.Approved, swedenChildBenefits.Status);
+        Assert.True(swedenChildBenefits.IsAvailable);
+        Assert.Equal(new[] { Guid.Parse("2f022132-dcbb-4b15-817f-1e9542e63710"), Guid.Parse("92eff09d-9d6e-4478-9693-bba2cc41379c") }, swedenChildBenefits.OfficialSourceIds.Order().ToArray());
 
         var sourcesById = catalog.OfficialSources.ToDictionary(item => item.Id);
         Assert.All(facts, fact =>

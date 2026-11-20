@@ -2492,13 +2492,6 @@
     "LastCheckedAt": "2026-10-27T23:54:27+00:00"
   },
   {
-    "Id": "f241d32f-d41c-46f1-90c2-8d61eb4b2aea",
-    "InformationEntryId": "55949af5-b4fe-404e-bcb7-6ebb37131bab",
-    "Title": "Arbetsförmedlingen EURES, Find your new job in Sweden.",
-    "Url": "https://arbetsformedlingen.se/other-languages/english-engelska/find-your-new-job-in-sweden",
-    "LastCheckedAt": "2026-10-27T23:54:27+00:00"
-  },
-  {
     "Id": "61666e4b-67f1-4ca3-894a-3717737eaf40",
     "InformationEntryId": "2234b91f-4021-40b2-b9d5-a029a6b533f2",
     "Title": "National Board of Health and Welfare (Socialstyrelsen), Questions and answers about the right to healthcare and assistance in Sweden.",
@@ -10806,5 +10799,68 @@
     "Title": "Council Implementing Decision (EU) 2022/382, Article 2 — temporary protection categories",
     "Url": "https://eur-lex.europa.eu/eli/dec_impl/2022/382/oj/eng",
     "LastCheckedAt": "2026-11-19T00:00:00+00:00"
+  },
+  {
+    "Id": "1be057c2-a5e8-5ff6-bae6-4ca54d853fd9",
+    "InformationEntryId": "d2ab273d-21b7-44e4-b408-f4269a8753d8",
+    "Title": "European Parliament and Council, Council Directive 2001/55/EC, Articles 26(1), 26(4)",
+    "Url": "https://eur-lex.europa.eu/eli/dir/2001/55/oj/eng",
+    "LastCheckedAt": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "Id": "43dfe833-392f-5c17-8a44-0b4afe18213c",
+    "InformationEntryId": "a218013b-3a77-4ba2-829a-d724689837f2",
+    "Title": "Introduction programme",
+    "Url": "https://arbetsformedlingen.se/other-languages/english-engelska/additional-support/support-a-z/introduction-programme",
+    "LastCheckedAt": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "Id": "7bc8c19f-a8da-56a7-b243-ea0a4e6c528b",
+    "InformationEntryId": "2234b91f-4021-40b2-b9d5-a029a6b533f2",
+    "Title": "Patient fees and high-cost protection",
+    "Url": "https://www.1177.se/patientavgifter/",
+    "LastCheckedAt": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "Id": "9fa47f80-b71c-5bab-acf4-c776609f1ce0",
+    "InformationEntryId": "55949af5-b4fe-404e-bcb7-6ebb37131bab",
+    "Title": "The rights of posted workers in Sweden",
+    "Url": "https://www.av.se/en/work-environment-work-and-inspections/foreign-labour-in-sweden/posting-foreign-labour-in-sweden/the-rights-of-posted-workers/",
+    "LastCheckedAt": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "Id": "1c223817-2971-5ce2-bac3-2d2baa41011e",
+    "InformationEntryId": "e0f307e9-7991-4350-89f4-2f84a9047393",
+    "Title": "Swedish Migration Agency, Financial aid for people with temporary protection under the Temporary Protection Directive.",
+    "Url": "https://www.migrationsverket.se/en/you-have-a-permit-in-sweden/protection-under-the-temporary-protection-directive/financial-aid.html",
+    "LastCheckedAt": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "Id": "dfb4d353-b6be-57ae-b238-9e142907e55a",
+    "InformationEntryId": "e0f307e9-7991-4350-89f4-2f84a9047393",
+    "Title": "Försäkringskassan, Housing allowance for families with children.",
+    "Url": "https://www.forsakringskassan.se/english/parents/housing-allowance-for-families-with-children",
+    "LastCheckedAt": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "Id": "ce3256c3-3694-5a83-90c5-b0edc3784fa0",
+    "InformationEntryId": "cac58c0c-ce69-41ac-877e-4fd124105b89",
+    "Title": "Skolverket, Application and admission to compulsory school.",
+    "Url": "https://utbildningsguiden.skolverket.se/grundskolan/valja-grundskola/ansokan-och-antagning-till-grundskolan/application-and-admission-to-compulsory-school",
+    "LastCheckedAt": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "Id": "be9c8da3-450b-599a-afcb-b6f26de3958e",
+    "InformationEntryId": "cac58c0c-ce69-41ac-877e-4fd124105b89",
+    "Title": "Swedish Council for Higher Education, FAQ on assessment of foreign qualifications.",
+    "Url": "https://uhr.se/en/start/recognition-of-foreign-qualifications/how-to-apply-for-an-evaluation/faq/",
+    "LastCheckedAt": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "Id": "320c1cb2-afa2-5a5c-a009-2ae8cbba2046",
+    "InformationEntryId": "cac58c0c-ce69-41ac-877e-4fd124105b89",
+    "Title": "Swedish Council for Higher Education, The Higher Education Ordinance (1993:100).",
+    "Url": "https://www.uhr.se/en/start/laws-and-regulations/Laws-and-regulations/The-Higher-Education-Ordinance",
+    "LastCheckedAt": "2026-11-20T00:00:00+00:00"
   }
 ]

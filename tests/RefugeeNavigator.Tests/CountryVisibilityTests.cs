@@ -265,8 +265,8 @@ public sealed class CountryVisibilityTests
         Assert.Equal(ProductionCompareCountries.Order(StringComparer.Ordinal), SelectValues(compare.Html, "country1").Order(StringComparer.Ordinal));
         Assert.Equal(ProductionCompareCountries.Order(StringComparer.Ordinal), SelectValues(compare.Html, "country2").Order(StringComparer.Ordinal));
         Assert.DoesNotContain("class=\"selection-message\"", compare.Html);
-        Assert.Contains("class=\"draft-preview-notice\"", compare.Html);
-        Assert.Contains("class=\"draft-label\"", compare.Html);
+        Assert.DoesNotContain("class=\"draft-preview-notice\"", compare.Html);
+        Assert.DoesNotContain("class=\"draft-label\"", compare.Html);
         Assert.Contains("value=\"romania\"", compare.Html);
         Assert.Contains("class=\"structured-country\"", compare.Html);
         Assert.Equal(8, Regex.Matches(search.Html, "class=\"result-card\"").Count);

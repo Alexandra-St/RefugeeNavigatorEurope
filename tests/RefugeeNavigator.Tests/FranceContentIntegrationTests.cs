@@ -111,7 +111,7 @@ public sealed class FranceContentIntegrationTests
     public async Task FranceTranslationsAndOneHundredEighteenArticleOwnedSourcesMatchCertificationExactly()
     {
         var catalog = await Catalog.Value;
-        Assert.Equal(1544, catalog.OfficialSources.Count);
+        Assert.Equal(1552, catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         var repositoryRoot = FindRepositoryRoot();
         var refreshRoot = Path.Combine(repositoryRoot, "docs", "content-refresh", "2026-11", "france");

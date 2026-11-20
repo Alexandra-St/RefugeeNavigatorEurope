@@ -55,10 +55,10 @@ public sealed class HungaryContentIntegrationTests
         var comparison = await new JsonComparisonFactProvider(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json")).LoadAsync(catalog);
         var allFacts = comparison.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts).ToArray();
         Assert.Equal(456, allFacts.Length);
-        Assert.Equal(453, allFacts.Count(fact => fact.IsAvailable));
-        Assert.Equal(3, allFacts.Count(fact => !fact.IsAvailable));
-        Assert.Equal(453, allFacts.Count(fact => fact.Status == ComparisonFactStatus.Approved));
-        Assert.Equal(3, allFacts.Count(fact => fact.Status == ComparisonFactStatus.Draft));
+        Assert.Equal(454, allFacts.Count(fact => fact.IsAvailable));
+        Assert.Equal(2, allFacts.Count(fact => !fact.IsAvailable));
+        Assert.Equal(454, allFacts.Count(fact => fact.Status == ComparisonFactStatus.Approved));
+        Assert.Equal(2, allFacts.Count(fact => fact.Status == ComparisonFactStatus.Draft));
         var hungaryFacts = allFacts.Where(fact => fact.CountrySlug == "hungary").ToArray();
         Assert.Equal(24, hungaryFacts.Length);
         Assert.All(hungaryFacts, fact =>
