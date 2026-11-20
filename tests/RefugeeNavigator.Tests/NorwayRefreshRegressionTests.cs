@@ -205,7 +205,7 @@ public sealed class NorwayRefreshRegressionTests
         Assert.Contains("1 Apr 2028",watch,StringComparison.Ordinal);
         Assert.Contains("REVIEW_ON",watch,StringComparison.Ordinal);
         Assert.Contains("not a legal trigger",ReadReviewArtifact("NORWAY_REFRESH_REVIEW_01.md"),StringComparison.OrdinalIgnoreCase);
-        Assert.Equal(1552,catalog.OfficialSources.Count);
+        Assert.Equal(1558,catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count,catalog.OfficialSources.Select(source=>source.Id).Distinct().Count());
     }
 

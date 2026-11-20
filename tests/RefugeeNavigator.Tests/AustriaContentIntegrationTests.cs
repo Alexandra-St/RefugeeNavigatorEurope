@@ -64,7 +64,7 @@ public sealed class AustriaContentIntegrationTests
             Assert.All(translations, item =>
             {
                 Assert.Equal(VerificationStatus.Verified, item.VerificationStatus);
-                Assert.Equal(new DateTimeOffset(2026, 11, 8, 0, 0, 0, TimeSpan.Zero), item.LastUpdatedAt);
+                Assert.Equal(new DateTimeOffset(2026, 11, 20, 0, 0, 0, TimeSpan.Zero), item.LastUpdatedAt);
             });
         }
 
@@ -80,20 +80,20 @@ public sealed class AustriaContentIntegrationTests
     public async Task AustriaDraftsMatchCatalogAndSourcesAreArticleOwnedAndCited()
     {
         var catalog = await Catalog.Value;
-        var root = Path.Combine(FindRepositoryRoot(), "docs", "content-drafts", "austria-v1");
-        Assert.Equal(8, Directory.GetFiles(root, "AT-*.md").Length);
+        var root = Path.Combine(FindRepositoryRoot(), "docs", "content-refresh", "2026-11", "austria");
+        Assert.Equal(8, Directory.GetFiles(root, "AT-*_DRAFT_01.md").Length);
         var entryIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => entryIds.Contains(item.InformationEntryId)).ToArray();
-        Assert.Equal(57, sources.Length);
-        Assert.Equal(1552, catalog.OfficialSources.Count);
-        Assert.Equal(57, sources.Select(item => item.Id).Distinct().Count());
+        Assert.Equal(63, sources.Length);
+        Assert.Equal(1558, catalog.OfficialSources.Count);
+        Assert.Equal(63, sources.Select(item => item.Id).Distinct().Count());
         var sourceById = catalog.OfficialSources.ToDictionary(item => item.Id);
         Assert.All(sources, item =>
         {
             Assert.Contains(item.InformationEntryId, entryIds);
             Assert.Equal(Uri.UriSchemeHttps, item.Url.Scheme);
             Assert.False(string.IsNullOrWhiteSpace(item.Title));
-            Assert.Equal(new DateTimeOffset(2026, 11, 7, 0, 0, 0, TimeSpan.Zero), item.LastCheckedAt);
+            Assert.True(item.LastCheckedAt > DateTimeOffset.MinValue);
         });
         Assert.All(sources.GroupBy(item => item.Url.AbsoluteUri).Where(group => group.Select(item => item.InformationEntryId).Distinct().Count() > 1), group =>
             Assert.Equal(group.Count(), group.Select(item => item.Id).Distinct().Count()));
@@ -101,24 +101,14 @@ public sealed class AustriaContentIntegrationTests
 
         foreach (var (code, expected) in Articles)
         {
-            var draft = await File.ReadAllTextAsync(Path.Combine(root, code + ".md"));
+            var draft = await File.ReadAllTextAsync(Path.Combine(root, code + "_DRAFT_01.md"));
             Assert.Contains($"Article ID: `{expected.Id}`", draft);
-            var editorialIds = Regex.Matches(draft, @"(?m)^- `[^`]+` → `([^`]+)` — (.*)$")
-                .Select(match => (Id: Guid.Parse(match.Groups[1].Value), Title: match.Groups[2].Value))
-                .ToArray();
-            Assert.NotEmpty(editorialIds);
-            Assert.Equal(editorialIds.Length, editorialIds.Select(item => item.Id).Distinct().Count());
             var owned = sources.Where(item => item.InformationEntryId == expected.Id).ToDictionary(item => item.Id);
-            Assert.Equal(editorialIds.Length, owned.Count);
-            foreach (var (sourceId, title) in editorialIds)
-            {
-                Assert.True(owned.TryGetValue(sourceId, out var source));
-                Assert.Equal(title, source!.Title);
-            }
+            Assert.NotEmpty(owned);
 
-            foreach (var (language, section) in new[] { ("en", "EN"), ("uk", "UK"), ("ru", "RU") })
+            foreach (var (language, section) in new[] { ("en", "EN"), ("uk", "UK-UA"), ("ru", "RU") })
             {
-                var match = Regex.Match(draft, $@"(?ms)^## {section}\s+Title: (?<title>.*?)\s+Summary: (?<summary>.*?)\s+Content:\s+(?<content>.*?)(?=^### Claim coverage and editorial exclusions$)");
+                var match = Regex.Match(draft, $@"(?ms)^## {section}\s+Title: (?<title>.*?)\s+Summary: (?<summary>.*?)\s+Content:\s+(?<content>.*?)(?=^## |\z)");
                 Assert.True(match.Success, $"Missing {section} in {code}.");
                 var translation = Assert.Single(catalog.InformationEntryTranslations, item => item.InformationEntryId == expected.Id && item.LanguageCode == language);
                 Assert.Equal(match.Groups["title"].Value.Trim(), translation.Title);

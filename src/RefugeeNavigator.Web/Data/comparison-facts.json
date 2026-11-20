@@ -779,15 +779,15 @@
               "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "aee98c48-02d0-51fa-8566-aa260901b80d",
                 "a95d2973-b058-568a-a3e2-b3dd754e1ab8",
                 "9fdd8cef-d41e-530a-a196-738a77c1edae",
-                "b46e0b79-e4da-51c6-97d8-6baf45e67df4"
+                "b46e0b79-e4da-51c6-97d8-6baf45e67df4",
+                "ea5185f7-d875-5fa7-b4bc-1da82628c315"
               ],
               "Values": {
-                "en": "The current protection period runs to 4 March 2028. Austrian and EU materials give conflicting military-transition dates (30 July, 4 August and 5 August 2026); ask BFA how they apply to your case.",
-                "uk": "Поточний період захисту триває до 4 березня 2028 року. Австрійські та європейські матеріали наводять різні дати військового перехідного періоду (30 липня, 4 та 5 серпня 2026 року); уточніть у BFA, як вони стосуються вашої справи.",
-                "ru": "Текущий период защиты действует до 4 марта 2028 года. Австрийские и европейские материалы указывают разные даты военного переходного периода (30 июля, 4 и 5 августа 2026 года); уточните в BFA, как они применяются к вашему делу."
+                "en": "Temporary protection runs to 4 March 2028. The Article 2 military-obligation condition applies from 5 August 2026; it does not apply to people who enjoyed protection in a Member State on or before 4 August 2026 and continuously retained it there after that date.",
+                "uk": "Тимчасовий захист діє до 4 березня 2028 року. Умова статті 2 щодо військових обов’язків застосовується з 5 серпня 2026 року; вона не застосовується до осіб, які мали захист у державі-члені 4 серпня 2026 року або раніше й безперервно зберігали його там після цієї дати.",
+                "ru": "Временная защита действует до 4 марта 2028 года. Условие статьи 2 о воинских обязанностях применяется с 5 августа 2026 года; оно не применяется к людям, которые имели защиту в государстве-члене 4 августа 2026 года или ранее и непрерывно сохраняли её там после этой даты."
               }
             },
             {
@@ -1722,12 +1722,13 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "fe7206c3-7361-5a98-be23-e10902661348",
-                "c799014e-9cc6-5090-8218-a4d7acec717f"
+                "867f2e4e-1f48-591d-9819-8de70bd8c903",
+                "b9903026-fbc3-509c-b629-deabd5e1faab"
               ],
               "Values": {
-                "en": "Filing the special RWR+ application does not itself extend stay after temporary protection ends. A qualifying timely §4a filing may bridge lawful stay while pending, but this is not work authorization.",
-                "uk": "Подання заяви на спеціальну RWR+ саме по собі не продовжує перебування після завершення тимчасового захисту. Належне своєчасне подання за §4a може забезпечити законність перебування під час розгляду, але не дає дозволу на роботу.",
-                "ru": "Подача заявления на специальную RWR+ сама по себе не продлевает пребывание после окончания временной защиты. Надлежащая своевременная подача по §4a может обеспечить законность пребывания на время рассмотрения, но не даёт разрешения на работу."
+                "en": "A person meeting the special §41a(7b) conditions may file for RWR+ in Austria while lawfully present. NAG §21 says an in-country first application does not itself create a right to remain beyond the otherwise permitted stay. Work access for displaced-person cardholders comes from the separate AuslBG rule.",
+                "uk": "Особа, яка відповідає умовам спеціального §41a(7b), може подати заяву на RWR+ в Австрії під час законного перебування. За §21 NAG подання першої заяви всередині країни саме по собі не створює права залишатися довше, ніж дозволяє чинне перебування. Право на працю для власників картки переміщеної особи випливає з окремого правила AuslBG.",
+                "ru": "Лицо, отвечающее условиям специального §41a(7b), может подать заявление на RWR+ в Австрии во время законного пребывания. Согласно §21 NAG, подача первого заявления внутри страны сама по себе не создаёт права оставаться дольше, чем разрешено действующим режимом пребывания. Право на работу для владельцев карты перемещённого лица следует из отдельного правила AuslBG."
               }
             },
             {
@@ -2627,8 +2628,7 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "0fd19c6c-39b1-5b47-926d-c16c5db89fd1",
-                "4682269e-a81f-5cc0-a56d-d1a75212ce6f",
-                "6fb69e2b-ca13-528e-88c4-5462df9ce01e"
+                "4682269e-a81f-5cc0-a56d-d1a75212ce6f"
               ],
               "Values": {
                 "en": "AMS advice, referrals and training depend on individual assessment and available places. `Arbeitslosengeld` is a separate insurance-based decision, not an automatic result of jobseeker registration.",
@@ -4449,7 +4449,6 @@
               "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "f336a2fc-f1ad-5a37-8041-03462e7d842a",
                 "9be1f3b0-4c85-59db-8dc4-0a39d5ed535f"
               ],
               "Values": {
@@ -6289,7 +6288,6 @@
               "OfficialSourceIds": [
                 "bd72dc2b-147a-5230-bc48-909c7f901776",
                 "676f0daf-5f96-5322-85a0-e36daf446d6b",
-                "17de6eb2-d2e0-5a2d-8d86-bfe8582526e2",
                 "a8aae671-c9ea-513a-bd55-580d70406a1e",
                 "04d980c3-cab7-5406-9837-0f009e5f7f9d"
               ],

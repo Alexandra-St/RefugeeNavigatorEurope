@@ -4683,13 +4683,6 @@
     "LastCheckedAt": "2026-11-07T00:00:00+00:00"
   },
   {
-    "Id": "f336a2fc-f1ad-5a37-8041-03462e7d842a",
-    "InformationEntryId": "44e8aebe-fd7e-5ed8-acb2-f949d6243e26",
-    "Title": "RIS, KAKuG §22",
-    "Url": "https://ris.bka.gv.at/eli/bgbl/1957/1/P22/NOR40015071",
-    "LastCheckedAt": "2026-11-07T00:00:00+00:00"
-  },
-  {
     "Id": "9be1f3b0-4c85-59db-8dc4-0a39d5ed535f",
     "InformationEntryId": "44e8aebe-fd7e-5ed8-acb2-f949d6243e26",
     "Title": "Austrian public health portal, emergency numbers",
@@ -10861,6 +10854,55 @@
     "InformationEntryId": "cac58c0c-ce69-41ac-877e-4fd124105b89",
     "Title": "Swedish Council for Higher Education, The Higher Education Ordinance (1993:100).",
     "Url": "https://www.uhr.se/en/start/laws-and-regulations/Laws-and-regulations/The-Higher-Education-Ordinance",
+    "LastCheckedAt": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "Id": "b6e032c0-80ac-5582-9655-5dfaa3052919",
+    "InformationEntryId": "7f03cea4-6c2e-5990-91eb-01b4933ba53d",
+    "Title": "AMS, FAQ for jobseekers",
+    "Url": "https://www.ams.at/arbeitsuchende/faq",
+    "LastCheckedAt": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "Id": "b96e9edb-4ec2-5dcf-a799-ed2dab72d728",
+    "InformationEntryId": "7f03cea4-6c2e-5990-91eb-01b4933ba53d",
+    "Title": "AMS, EURES advice and jobseeker services",
+    "Url": "https://www.ams.at/organisation/public-employment-service-austria/working--recruiting---studying",
+    "LastCheckedAt": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "Id": "3ffef08a-6045-5fad-8770-fe8c26e93915",
+    "InformationEntryId": "44e8aebe-fd7e-5ed8-acb2-f949d6243e26",
+    "Title": "KAKuG §22, current consolidated provision",
+    "Url": "https://www.ris.bka.gv.at/eli/bgbl/1957/1/P22/NOR40134463",
+    "LastCheckedAt": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "Id": "bb44f895-eabf-518c-b336-99dd5c63021d",
+    "InformationEntryId": "44e8aebe-fd7e-5ed8-acb2-f949d6243e26",
+    "Title": "ÖGK, Gut versichert: compulsorily insured groups",
+    "Url": "https://www.gesundheitskasse.at/cdscontent/load?contentid=10008.748630",
+    "LastCheckedAt": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "Id": "f9621fb0-0021-56b8-9e7a-048c81693147",
+    "InformationEntryId": "b7ae3606-2d3b-5ddc-b178-f1905d72996e",
+    "Title": "Mietvertrag",
+    "Url": "https://www.oesterreich.gv.at/de/lexicon/M/Seite.990075",
+    "LastCheckedAt": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "Id": "66dbb552-df18-5624-9c79-d5c3b2b5c47e",
+    "InformationEntryId": "fc9332d0-9eda-5f09-b3ca-df3c9e63f755",
+    "Title": "Voraussetzungen für das Pflegegeld",
+    "Url": "https://www.oesterreich.gv.at/de/themen/pflege/4/Seite.360512",
+    "LastCheckedAt": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "Id": "b9903026-fbc3-509c-b629-deabd5e1faab",
+    "InformationEntryId": "dc76be21-d9dc-5070-83ca-9a7468d78e71",
+    "Title": "RIS, AuslBG §1, displaced-person card exemption",
+    "Url": "https://ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Anlage=&Artikel=&FassungVom=2026-08-30&Gesetzesnummer=10008365&Paragraf=1&Uebergangsrecht=",
     "LastCheckedAt": "2026-11-20T00:00:00+00:00"
   }
 ]
