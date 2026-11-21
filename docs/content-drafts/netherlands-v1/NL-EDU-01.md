@@ -33,17 +33,16 @@ The government says people in the described temporary-protection arrangement do 
 
 People under 18 may follow MBO; adults need lawful residence. The MBO or higher-education institution decides admission and course/language requirements, and may assess foreign diplomas or request advice from SBB or Nuffic. For higher education in 2026–27, statutory tuition is €2,694 for students who qualify for that rate; students charged institutional tuition pay the institution’s higher rate. Ukraine-specific guidance says students from outside the EEA usually pay institutional fees (often €10,000–€30,000) and people under temporary protection do not receive Dutch student finance. Confirm your fee type and any waiver with the institution and DUO.
 
-## Conditional DUO MBO course-fee remission for 2026–27
+## Conditional DUO MBO and full-time VAVO course-fee remission for 2026–27
 
-DUO describes a course-fee remission route for specified MBO applicants under temporary protection, but only when all listed conditions are met. For the 2026–27 school year, the conditions include being aged 18 to under 31 on 1 August, being unable to pay and having no sponsor, and not qualifying for student finance or a grant for students in secondary education because you do not meet the nationality criteria. In some cases, an existing continuous MBO remission may continue after age 30. The application uses the current DUO form and must be submitted by 31 July 2027. Check DUO’s current form and full conditions. This is not a general right to free MBO, higher education or Dutch-language courses.
-
+DUO says applicants aged 18 or over on 1 August who attend MBO-BOL or full-time VAVO may apply for course-fee remission, but only if all conditions are met. For 2026–27, these include being younger than 30 on 1 August, being unable to pay with no organisation able to pay for you, not qualifying for student finance or a student grant because you do not meet the nationality criteria, and meeting the specified asylum or Temporary Protection Directive conditions. Fees already paid cannot be refunded. Apply using the current DUO form by 31 July 2027. Continuation after age 30 is described only for an MBO programme: it may apply if you first applied before your 30th birthday, stayed enrolled without interruption, and received remission every year without interruption. Check DUO’s current form and full conditions. This is not a general right to free education or Dutch-language courses.
 ### Claim coverage
 
 - School access and attendance → NL-EDU01-01, NL-EDU01-02
 - Newcomer language support for children → NL-EDU01-03
 - Adult Dutch-language learning is a local route → NL-EDU01-03
 - MBO and higher education → NL-EDU01-04
-- Conditional DUO MBO course-fee remission for 2026–27 → NL-EDU01-05
+- Conditional DUO MBO/VAVO course-fee remission for 2026–27 → NL-EDU01-05
 
 ## Editorial exclusions
 
@@ -80,17 +79,16 @@ Content:
 
 Молодь до 18 років може навчатися в MBO; повнолітнім потрібне законне перебування. Заклад MBO або вищої освіти ухвалює рішення про вступ і визначає вимоги до програми та мови; він може оцінити іноземний диплом або запросити висновок SBB чи Nuffic. У 2026–27 навчальному році встановлена законом плата за вищу освіту становить €2 694 для тих, хто має право на цю ставку; студенти, яким призначено інституційну плату, сплачують вищу суму, визначену закладом. Спеціальні рекомендації для України зазначають, що студенти з країн поза ЄЕЗ зазвичай сплачують інституційну плату (часто €10 000–€30 000), а особи під тимчасовим захистом не отримують нідерландського студентського фінансування. Уточніть тип плати й можливе звільнення у закладі та DUO.
 
-## Умовне звільнення DUO від плати за MBO у 2026–27 роках
+## Умовне звільнення DUO від плати за MBO та денну програму VAVO у 2026–27 навчальному році
 
-DUO описує можливість звільнення від плати за навчання для визначених заявників MBO під тимчасовим захистом, але лише за виконання всіх перелічених умов. Для 2026–27 навчального року серед умов: вік від 18 років до досягнення 31 року станом на 1 серпня, неможливість сплатити й відсутність спонсора, а також відсутність права на студентське фінансування чи грант для учнів закладів середньої освіти через невідповідність критеріям громадянства. У деяких випадках безперервне звільнення для MBO може тривати після 30 років. Заява подається за актуальною формою DUO до 31 липня 2027 року. Перевірте чинну форму й повний перелік умов DUO. Це не загальне право на безплатну MBO, вищу освіту чи курси нідерландської.
-
+За даними DUO, особи віком від 18 років станом на 1 серпня, які навчаються за програмою MBO-BOL або денною програмою VAVO, можуть подати заяву про звільнення від плати за навчання, але лише за виконання всіх умов. Для 2026–27 навчального року серед умов — вік до 30 років станом на 1 серпня, неможливість сплатити за відсутності організації, яка могла б сплатити за вас, відсутність права на студентське фінансування чи студентський грант через невідповідність критеріям громадянства, а також відповідність визначеним умовам щодо притулку або Директиви про тимчасовий захист. Уже сплачену плату не повертають. Подайте заяву за чинною формою DUO до 31 липня 2027 року. Продовження після 30-річчя описано лише для програми MBO: воно можливе, якщо ви вперше подали заяву до 30-річчя, навчалися без перерви й щороку безперервно отримували звільнення. Перевірте чинну форму DUO та всі умови. Це не загальне право на безплатну освіту чи курси нідерландської.
 ### Claim coverage
 
 - Доступ до школи та обов’язкове навчання → NL-EDU01-01, NL-EDU01-02
 - Мовна підтримка для дітей у newcomer-класах → NL-EDU01-03
 - Вивчення нідерландської дорослими залежить від місцевих пропозицій → NL-EDU01-03
 - MBO та вища освіта → NL-EDU01-04
-- Умовне звільнення DUO від плати за MBO у 2026–27 роках → NL-EDU01-05
+- Умовне звільнення DUO від плати за MBO/VAVO у 2026–27 роках → NL-EDU01-05
 
 ## Editorial exclusions
 
@@ -127,24 +125,23 @@ Content:
 
 Лица младше 18 лет могут учиться в MBO; взрослым требуется законное пребывание. Учреждение MBO или высшего образования решает вопрос о приёме и устанавливает требования к программе и языку; оно может оценить иностранный диплом или запросить заключение SBB либо Nuffic. В 2026–27 учебном году установленная законом плата за высшее образование составляет €2 694 для тех, кто имеет право на эту ставку; студенты, которым назначена институциональная плата, платят более высокую сумму, установленную учреждением. Специальные рекомендации для Украины указывают, что студенты из стран вне ЕЭЗ обычно платят институциональную плату (часто €10 000–€30 000), а лица под временной защитой не получают нидерландского студенческого финансирования. Уточните тип платы и возможное освобождение в учреждении и DUO.
 
-## Условное освобождение DUO от платы за MBO в 2026–27 учебном году
+## Условное освобождение DUO от платы за MBO и очную программу VAVO в 2026–27 учебном году
 
-DUO описывает возможность освобождения от платы за обучение для определённых заявителей MBO под временной защитой, но только при выполнении всех перечисленных условий. Для 2026–27 учебного года условия включают возраст от 18 лет до достижения 31 года на 1 августа, отсутствие возможности оплатить обучение и спонсора, а также отсутствие права на студенческое финансирование или грант для учащихся среднего образования из-за несоответствия критериям гражданства. В некоторых случаях непрерывное освобождение от платы за MBO может сохраняться после 30 лет. Заявление подаётся по действующей форме DUO до 31 июля 2027 года. Проверьте актуальную форму и полный список условий DUO. Это не общее право на бесплатное обучение MBO, высшее образование или курсы нидерландского.
-
+По данным DUO, лица в возрасте от 18 лет на 1 августа, обучающиеся по программе MBO-BOL или очной программе VAVO, могут подать заявление об освобождении от платы за обучение, но только при соблюдении всех условий. Для 2026–27 учебного года к ним относятся возраст младше 30 лет на 1 августа, невозможность оплатить обучение при отсутствии организации, которая могла бы оплатить его за вас, отсутствие права на студенческое финансирование или студенческий грант из-за несоответствия критериям гражданства, а также соответствие установленным условиям для лиц, ищущих убежище, или Директиве о временной защите. Уже уплаченную плату не возвращают. Подайте заявление по действующей форме DUO до 31 июля 2027 года. Продолжение освобождения после 30-летия предусмотрено только для программы MBO: оно возможно, если первое заявление подано до 30-летия, обучение продолжалось без перерыва и освобождение предоставлялось ежегодно без перерыва. Проверьте действующую форму и все условия DUO. Это не общее право на бесплатное образование или курсы нидерландского.
 ### Claim coverage
 
 - Доступ к школе и обязательное обучение → NL-EDU01-01, NL-EDU01-02
 - Языковая поддержка детей в newcomer-классах → NL-EDU01-03
 - Курсы нидерландского для взрослых зависят от местных предложений → NL-EDU01-03
 - MBO и высшее образование → NL-EDU01-04
-- Условное освобождение DUO от платы за MBO в 2026–27 учебном году → NL-EDU01-05
+- Условное освобождение DUO от платы за MBO/VAVO в 2026–27 учебном году → NL-EDU01-05
 
 ## Editorial exclusions
 
 - Не гарантируются место в школе, помощь муниципалитета, newcomer-класс, часы языковой поддержки или индивидуальное освобождение от обучения.
 - Курсы нидерландского для взрослых описаны только как дискреционный маршрут для указанной взрослой группы с регистрацией BRP; бесплатность, финансирование, онлайн-обучение или место не обещаются.
 - Сумма финансирования WEB за 2025 год является исторической и не указывается как доступное финансирование на 2026 год.
-- Освобождение DUO касается условной оплаты MBO в 2026–27 учебном году, а не права на бесплатный курс нидерландского.
+- Освобождение DUO касается условного освобождения от платы за MBO-BOL или дневную VAVO-программу в 2026–27 учебном году, а не права на бесплатные курсы нидерландского.
 - Не гарантируются поступление, признание диплома, эквивалентность или профессиональное лицензирование.
 
 ## Editorial source set

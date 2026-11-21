@@ -155,30 +155,36 @@ public sealed class NetherlandsContentIntegrationTests
             ["en"] =
             [
                 "because you do not meet the nationality criteria",
-                "only when all listed conditions are met",
-                "specified MBO applicants under temporary protection",
-                "aged 18 to under 31 on 1 August",
-                "being unable to pay and having no sponsor",
+                "but only if all conditions are met",
+                "attend MBO-BOL or full-time VAVO",
+                "younger than 30 on 1 August",
+                "being unable to pay with no organisation able to pay for you",
+                "Fees already paid cannot be refunded",
+                "if you first applied before your 30th birthday",
                 "31 July 2027",
                 "not a general right"
             ],
             ["uk"] =
             [
                 "через невідповідність критеріям громадянства",
-                "лише за виконання всіх перелічених умов",
-                "заявників MBO під тимчасовим захистом",
-                "від 18 років до досягнення 31 року станом на 1 серпня",
-                "неможливість сплатити й відсутність спонсора",
+                "але лише за виконання всіх умов",
+                "програмою MBO-BOL або денною програмою VAVO",
+                "вік до 30 років станом на 1 серпня",
+                "неможливість сплатити за відсутності організації, яка могла б сплатити за вас",
+                "Уже сплачену плату не повертають",
+                "ви вперше подали заяву до 30-річчя",
                 "31 липня 2027 року",
                 "не загальне право"
             ],
             ["ru"] =
             [
                 "из-за несоответствия критериям гражданства",
-                "только при выполнении всех перечисленных условий",
-                "заявителей MBO под временной защитой",
-                "от 18 лет до достижения 31 года на 1 августа",
-                "отсутствие возможности оплатить обучение и спонсора",
+                "но только при соблюдении всех условий",
+                "по программе MBO-BOL или очной программе VAVO",
+                "возраст младше 30 лет на 1 августа",
+                "невозможность оплатить обучение при отсутствии организации, которая могла бы оплатить его за вас",
+                "Уже уплаченную плату не возвращают",
+                "первое заявление подано до 30-летия",
                 "31 июля 2027 года",
                 "не общее право"
             ]
@@ -196,7 +202,7 @@ public sealed class NetherlandsContentIntegrationTests
 
         var duoSource = Assert.Single(catalog.OfficialSources, source =>
             source.InformationEntryId == entry.Id &&
-            source.Url.AbsoluteUri == "https://www.duo.nl/particulier/course-fees/asylum-seeker-or-ukrainian.jsp");
+            source.Url.AbsoluteUri == "https://duo.nl/particulier/lesgeld/asielzoeker-en-lesgeld.jsp");
         Assert.Equal(entry.Id, duoSource.InformationEntryId);
     }
 
@@ -262,7 +268,7 @@ public sealed class NetherlandsContentIntegrationTests
 
         Assert.Equal(63, sources.Length);
         Assert.Equal(1559, catalog.OfficialSources.Count);
-        Assert.Equal(48, sources.Select(item => item.Url.AbsoluteUri).Distinct(StringComparer.OrdinalIgnoreCase).Count());
+        Assert.Equal(49, sources.Select(item => item.Url.AbsoluteUri).Distinct(StringComparer.OrdinalIgnoreCase).Count());
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         Assert.All(sources, source =>
         {
@@ -270,7 +276,8 @@ public sealed class NetherlandsContentIntegrationTests
             Assert.True(source.Url.IsAbsoluteUri);
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
             Assert.False(string.IsNullOrWhiteSpace(source.Title));
-            Assert.Equal(new DateTime(2026, 11, 16), source.LastCheckedAt.UtcDateTime.Date);
+            Assert.InRange(source.LastCheckedAt.UtcDateTime.Date,
+                new DateTime(2026, 11, 16), new DateTime(2026, 11, 21));
         });
 
         foreach (var (key, expectedCount) in ExpectedSourceCounts)
@@ -454,7 +461,12 @@ public sealed class NetherlandsContentIntegrationTests
             .Select(pair => pair.Value).ToHashSet();
         foreach (var translation in catalog.InformationEntryTranslations
                      .Where(item => refreshedIds.Contains(item.InformationEntryId)))
-            Assert.Equal(new DateTimeOffset(2026, 11, 16, 0, 0, 0, TimeSpan.Zero), translation.LastUpdatedAt);
+        {
+            var expectedUpdate = translation.InformationEntryId == StableArticleIds["NL-EDU-01"]
+                ? new DateTimeOffset(2026, 11, 21, 0, 0, 0, TimeSpan.Zero)
+                : new DateTimeOffset(2026, 11, 16, 0, 0, 0, TimeSpan.Zero);
+            Assert.Equal(expectedUpdate, translation.LastUpdatedAt);
+        }
 
         var tp02Id = StableArticleIds["NL-TP-02"];
         foreach (var translation in catalog.InformationEntryTranslations.Where(item => item.InformationEntryId == tp02Id))

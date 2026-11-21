@@ -408,8 +408,7 @@ public sealed class CountryComparisonTests
             new[]
             {
                 Guid.Parse("979a64e2-7a45-5c2b-8151-9ad7f57d61d8"),
-                Guid.Parse("fda6d123-58d8-5858-9e91-311f5266f5ee"),
-                Guid.Parse("249d9618-2212-5251-8f6e-8de0766e0cf3")
+                Guid.Parse("9ca3552f-70b8-4a39-b5ae-7ba0d9b09813")
             },
             netherlandsFacts.Single(item => item.Id == "residence-routes").fact.OfficialSourceIds);
         Assert.Equal(432, facts.Topics.SelectMany(topic => topic.Aspects).SelectMany(aspect => aspect.Facts)
@@ -477,12 +476,18 @@ public sealed class CountryComparisonTests
             .Single(item => item.CountrySlug == "netherlands");
 
         Assert.Equal(ComparisonFactStatus.Approved, fact.Status);
-        Assert.Contains("conditional DUO course-fee remission requires all criteria", fact.Values["en"], StringComparison.OrdinalIgnoreCase);
-        Assert.Contains("application by 31 July 2027", fact.Values["en"], StringComparison.OrdinalIgnoreCase);
-        Assert.Contains("умовне звільнення DUO потребує виконання всіх критеріїв", fact.Values["uk"], StringComparison.OrdinalIgnoreCase);
-        Assert.Contains("заяви до 31 липня 2027 року", fact.Values["uk"], StringComparison.OrdinalIgnoreCase);
-        Assert.Contains("условное освобождение DUO требует соблюдения всех критериев", fact.Values["ru"], StringComparison.OrdinalIgnoreCase);
-        Assert.Contains("подачи заявления до 31 июля 2027 года", fact.Values["ru"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("For MBO-BOL or full-time VAVO", fact.Values["en"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("aged 18 to under 30 on 1 August", fact.Values["en"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("paid fees are not refunded", fact.Values["en"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("applications are due by 31 July 2027", fact.Values["en"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("Для MBO-BOL або денної VAVO-програми", fact.Values["uk"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("яким на 1 серпня ще не виповнилося 30 років", fact.Values["uk"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("уже сплачену плату не повертають", fact.Values["uk"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("до 31 липня 2027 року", fact.Values["uk"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("Для MBO-BOL или очной программы VAVO", fact.Values["ru"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("которым на 1 августа ещё не исполнилось 30 лет", fact.Values["ru"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("уже уплаченная плата не возвращается", fact.Values["ru"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("до 31 июля 2027 года", fact.Values["ru"], StringComparison.OrdinalIgnoreCase);
 
         var nationalityReasons = new Dictionary<string, string>
         {
@@ -502,9 +507,9 @@ public sealed class CountryComparisonTests
             .ToDictionary(item => item.LanguageCode);
         var preservedConditions = new Dictionary<string, string[]>
         {
-            ["en"] = ["only when all listed conditions are met", "specified MBO applicants under temporary protection", "aged 18 to under 31 on 1 August", "being unable to pay and having no sponsor", "31 July 2027", "2026–27"],
-            ["uk"] = ["лише за виконання всіх перелічених умов", "заявників MBO під тимчасовим захистом", "від 18 років до досягнення 31 року станом на 1 серпня", "неможливість сплатити й відсутність спонсора", "31 липня 2027 року", "2026–27"],
-            ["ru"] = ["только при выполнении всех перечисленных условий", "заявителей MBO под временной защитой", "возраст от 18 лет до достижения 31 года на 1 августа", "отсутствие возможности оплатить обучение и спонсора", "31 июля 2027 года", "2026–27"]
+            ["en"] = ["but only if all conditions are met", "attend MBO-BOL or full-time VAVO", "younger than 30 on 1 August", "being unable to pay with no organisation able to pay for you", "Fees already paid cannot be refunded", "if you first applied before your 30th birthday", "31 July 2027", "2026–27"],
+            ["uk"] = ["але лише за виконання всіх умов", "програмою MBO-BOL або денною програмою VAVO", "вік до 30 років станом на 1 серпня", "неможливість сплатити за відсутності організації, яка могла б сплатити за вас", "Уже сплачену плату не повертають", "ви вперше подали заяву до 30-річчя", "31 липня 2027 року", "2026–27"],
+            ["ru"] = ["но только при соблюдении всех условий", "по программе MBO-BOL или очной программе VAVO", "возраст младше 30 лет на 1 августа", "невозможность оплатить обучение при отсутствии организации, которая могла бы оплатить его за вас", "Уже уплаченную плату не возвращают", "первое заявление подано до 30-летия", "31 июля 2027 года", "2026–27"]
         };
         foreach (var language in nationalityReasons.Keys)
         {

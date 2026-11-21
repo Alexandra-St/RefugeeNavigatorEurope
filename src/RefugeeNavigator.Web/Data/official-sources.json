@@ -2814,13 +2814,6 @@
     "LastCheckedAt": "2026-11-16T00:00:00+00:00"
   },
   {
-    "Id": "249d9618-2212-5251-8f6e-8de0766e0cf3",
-    "InformationEntryId": "c5f5f833-0ab7-5e1a-9325-87a92b21d2ad",
-    "Title": "26 June 2026 Minister letter to Parliament",
-    "Url": "https://www.tweedekamer.nl/kamerstukken/brieven_regering/detail?did=2026D33137&id=2026Z14792",
-    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
-  },
-  {
     "Id": "98966301-dedb-5b6c-907c-adc84b07dfbb",
     "InformationEntryId": "757c1db6-b66b-54b9-ac14-d8a3da958ef5",
     "Title": "Rijksoverheid, Werk en inkomen voor vluchtelingen uit Oekraïne",
@@ -3028,13 +3021,6 @@
     "InformationEntryId": "7633a085-4555-5a8f-a9a8-747a0f6e0545",
     "Title": "Government.nl, Language disadvantage at primary school",
     "Url": "https://www.government.nl/themes/education/language-disadvantage/language-disadvantage-at-primary-school",
-    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
-  },
-  {
-    "Id": "c917869f-703b-5f62-99ff-9bb23bfe6443",
-    "InformationEntryId": "7633a085-4555-5a8f-a9a8-747a0f6e0545",
-    "Title": "DUO, Asylum seeker or Ukrainian — Course fees",
-    "Url": "https://www.duo.nl/particulier/course-fees/asylum-seeker-or-ukrainian.jsp",
     "LastCheckedAt": "2026-11-16T00:00:00+00:00"
   },
   {
@@ -10911,5 +10897,19 @@
     "Title": "RIS, AuslBG §1, displaced-person card exemption",
     "Url": "https://ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Anlage=&Artikel=&FassungVom=2026-08-30&Gesetzesnummer=10008365&Paragraf=1&Uebergangsrecht=",
     "LastCheckedAt": "2026-11-20T00:00:00+00:00"
+  },
+  {
+    "Id": "fa1441b8-9c03-408e-b9a5-0d751c261bd9",
+    "InformationEntryId": "7633a085-4555-5a8f-a9a8-747a0f6e0545",
+    "Title": "DUO, Asielzoeker of Oekraïner — Lesgeld (Dutch eligibility and remission conditions)",
+    "Url": "https://duo.nl/particulier/lesgeld/asielzoeker-en-lesgeld.jsp",
+    "LastCheckedAt": "2026-11-21T00:00:00+00:00"
+  },
+  {
+    "Id": "9ca3552f-70b8-4a39-b5ae-7ba0d9b09813",
+    "InformationEntryId": "c5f5f833-0ab7-5e1a-9325-87a92b21d2ad",
+    "Title": "Rijksoverheid, Ukraine: what happens when the Temporary Protection Directive ends? (November 2026 explainer)",
+    "Url": "https://www.rijksoverheid.nl/actueel/weblogs/jenv-verhalen/2026/opvang-van-oekrainers-in-nederland-wat-als-de-rtb-stopt",
+    "LastCheckedAt": "2026-11-21T00:00:00+00:00"
   }
 ]
