@@ -1,0 +1,6 @@
+﻿WatchId,ClaimIds,SourceIds,TriggerType,ExactDate,PrecheckDate,Reason,InitialDisposition
+RO-W-001,RO-TP-01-C008-S01;RO-TP-01-C008-S02,8fe9a340-b48b-5e35-a76d-2a37a3fb748c,EXACT_START_DATE,2027-03-05,2026-12-05,Scheduled EU temporary-protection extension start; precheck set three months before the explicit date.,WATCH_CANDIDATE_REVIEW_REQUIRED
+RO-W-002,RO-TP-01-C008-S01;RO-TP-01-C008-S02,8fe9a340-b48b-5e35-a76d-2a37a3fb748c,EXPIRES_ON,2028-03-04,2027-12-04,Explicit temporary-protection scheme endpoint; precheck set three months before the explicit date.,WATCH_CANDIDATE_REVIEW_REQUIRED
+RO-W-003,RO-EMP-02-C005,8e63ea72-f1ca-52d0-bc87-d5fc2f4e25e8,RATE_UPDATE,NONE,NONE,Minimum-wage amount is date-sensitive and likely to change; no future change date appears in current production.,WATCH_CANDIDATE_REVIEW_REQUIRED
+RO-W-004,RO-EDU-01-C004-S01,e47fa493-a454-5f69-ade6-789e193c4d6f,ANNUAL_ADMISSION_PLAN_CHANGE,NONE,NONE,Annual higher-education admission/place planning; no next publication or precheck date is specified in production.,WATCH_CANDIDATE_REVIEW_REQUIRED
+RO-W-005,RO-EDU-01-C006;RO-EDU-01-C007,4b7f9f52-e26c-5d39-b274-8f0fedf97c8e,SCHOOL_YEAR_CHANGE,NONE,NONE,"School-placement, language-support and admission information may change by school year; no exact event date is stated.",WATCH_CANDIDATE_REVIEW_REQUIRED

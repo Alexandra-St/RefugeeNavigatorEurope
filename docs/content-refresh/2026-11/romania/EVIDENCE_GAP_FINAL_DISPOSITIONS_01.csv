@@ -1,0 +1,40 @@
+﻿ClaimId,OriginalDisposition,FinalAction,FinalClaimIds,FinalProposition,FinalSourceIds,ResolutionType,Status
+RO-EDU-01-C001-S02,NARROWER_REWRITE_NEEDED,REWRITE_SUPPORTED,RO-EDU-01-C001-S02,The county school-inspectorate committee decides the receiving school placement and communicates the decision within the prescribed procedure.,8ae492b9-7875-50c0-b7a2-4d6574e1afc8,NARROWED_TO_AUDITED_SOURCE,RESOLVED
+RO-EDU-01-C004-S02,NEW_SOURCE_NEEDED,REWRITE_SUPPORTED,RO-EDU-01-C004-S02,Individual university admission follows the institution’s published regulation and selection criteria.,e47fa493-a454-5f69-ade6-789e193c4d6f;8ad9e863-a228-57e6-890a-3ac183eca778,NARROWED_TO_AUDITED_SOURCE,RESOLVED
+RO-EDU-01-C004-S03,NEW_SOURCE_NEEDED,REWRITE_SUPPORTED,RO-EDU-01-C004-S03,State-funded places are allocated through the annual plan and the institution’s applicable admission process.,e47fa493-a454-5f69-ade6-789e193c4d6f;c2bee662-3b3f-5b94-803d-1e1f49184180,NARROWED_TO_AUDITED_SOURCE,RESOLVED
+RO-EMP-01-C001-S02,NEW_SOURCE_NEEDED,REMOVE,,,,REMOVED,RESOLVED
+RO-EMP-01-C001-S03,NEW_SOURCE_NEEDED,REMOVE,,,,REMOVED,RESOLVED
+RO-EMP-01-C002,NEW_SOURCE_NEEDED,REWRITE_SUPPORTED,RO-EMP-01-C002,EURES/Europass lets jobseekers create a CV/profile and share it with employers.,8b4add6a-c2bf-549f-8066-6bcd8a7e9789,NARROWED_TO_AUDITED_SOURCE,RESOLVED
+RO-EMP-01-C003,NARROWER_REWRITE_NEEDED,REWRITE_SUPPORTED,RO-EMP-01-C003,County employment agencies register eligible jobseekers and provide employment services under the relevant statutory conditions.,c065aa80-dd50-593e-ac02-f23bd49f9bd8,NARROWED_TO_AUDITED_SOURCE,RESOLVED
+RO-EMP-02-C007-S01,NARROWER_REWRITE_NEEDED,REWRITE_SUPPORTED,RO-EMP-02-C007-S01,"The stated minimum-wage amounts are statutory gross basic wages, before deductions required by law.",c5bf046c-6006-5e16-bd7a-9b30d6bc3554;8e63ea72-f1ca-52d0-bc87-d5fc2f4e25e8,NARROWED_TO_AUDITED_SOURCE,RESOLVED
+RO-EMP-02-C007-S02,NARROWER_REWRITE_NEEDED,REMOVE,,,,REMOVED,RESOLVED
+RO-EMP-02-C007-S03,NARROWER_REWRITE_NEEDED,REWRITE_SUPPORTED,RO-EMP-02-C007-S03,"The 4,582 lei gross basic minimum applies to the construction sector under OUG 156/2024, Article LXIX, from 1 January 2025.",c5bf046c-6006-5e16-bd7a-9b30d6bc3554,NARROWED_TO_AUDITED_SOURCE,RESOLVED
+RO-EMP-02-C008-S01,NARROWER_REWRITE_NEEDED,REWRITE_SUPPORTED,RO-EMP-02-C008-S01,"For the specific work route where qualification documents are unavailable, OUG 96/2024 requires a worker declaration and employer aptitude verification; a probation period may apply under its conditions.",c6a07aec-3184-5db7-92f8-085dd076a20f,NARROWED_TO_AUDITED_SOURCE,RESOLVED
+RO-HEALTH-01-C004-S01,NEW_SOURCE_NEEDED,REWRITE_SUPPORTED,RO-HEALTH-01-C004-S01,OUG 96/2024 Article 4 defines the health package for its covered Ukraine-related beneficiary categories and its own contribution treatment.,abdf3c49-b02d-56bd-abbb-486792f2901e,NARROWED_TO_AUDITED_SOURCE,RESOLVED
+RO-HEALTH-01-C004-S02,NEW_SOURCE_NEEDED,REWRITE_SUPPORTED,RO-HEALTH-01-C004-S02,"Ordinary insured categories and exemptions are set out separately in Law 95/2006, Article 224.",71778c57-a167-5e83-8928-7aefc2cf0da8,NARROWED_TO_AUDITED_SOURCE,RESOLVED
+RO-HEALTH-01-C004-S03,NEW_SOURCE_NEEDED,REWRITE_SUPPORTED,RO-HEALTH-01-C004-S03,Employment income contribution rules arise under the Tax Code; ordinary insured classification follows the separate categories in Law 95/2006.,71778c57-a167-5e83-8928-7aefc2cf0da8;574b99c2-3876-5921-9b1a-6b28237763d2,NARROWED_TO_AUDITED_SOURCE,RESOLVED
+RO-HEALTH-01-C006,NARROWER_REWRITE_NEEDED,REWRITE_SUPPORTED,RO-HEALTH-01-C006,"For routine care, check the applicable package and referral/coverage rules with CNAS or the healthcare provider.",33154c72-87f0-5edb-bbcd-445c9fa66ba3;abdf3c49-b02d-56bd-abbb-486792f2901e,NARROWED_TO_AUDITED_SOURCE,RESOLVED
+RO-HOUSING-01-C002-S01,NARROWER_REWRITE_NEEDED,REWRITE_SUPPORTED,RO-HOUSING-01-C002-S01,OUG 96/2024 provides for accommodation at sites designated through the competent local-authority process.,491030f2-f0c2-5494-a295-819a8ad82433,NARROWED_TO_AUDITED_SOURCE,RESOLVED
+RO-HOUSING-01-C002-S02,NARROWER_REWRITE_NEEDED,REMOVE,,,,REMOVED,RESOLVED
+RO-HOUSING-01-C002-S03,NARROWER_REWRITE_NEEDED,REMOVE,,,,REMOVED,RESOLVED
+RO-HOUSING-01-C002-S04,NARROWER_REWRITE_NEEDED,REMOVE,,,,REMOVED,RESOLVED
+RO-SOC-01-C002-S01,NARROWER_REWRITE_NEEDED,REWRITE_SUPPORTED,RO-SOC-01-C002-S01,State child allowance and child-raising allowance each have distinct statutory eligibility and application rules.,b8c201b0-ab0a-502e-ac96-37cd7b2f5d13;4944c633-304a-5114-8213-2f843879df73,NARROWED_TO_AUDITED_SOURCE,RESOLVED
+RO-SOC-01-C002-S02,NARROWER_REWRITE_NEEDED,REMOVE,,,,REMOVED,RESOLVED
+RO-SOC-01-C002-S03,NARROWER_REWRITE_NEEDED,REMOVE,,,,REMOVED,RESOLVED
+RO-SOC-01-C004,NARROWER_REWRITE_NEEDED,REMOVE,,,,REMOVED,RESOLVED
+RO-SOC-01-C007-S03,NARROWER_REWRITE_NEEDED,REWRITE_SUPPORTED,RO-SOC-01-C007-S03,"Children of foreign citizens or stateless residents may qualify for state child allowance when they live in Romania with their parents, under Law 61/1993.",b8c201b0-ab0a-502e-ac96-37cd7b2f5d13,NARROWED_TO_AUDITED_SOURCE,RESOLVED
+RO-TP-01-C003-S01,NEW_SOURCE_NEEDED,REWRITE_SUPPORTED,RO-TP-01-C003-S01,EU temporary protection includes stateless people and third-country nationals who held permanent residence in Ukraine and cannot safely and durably return.,eac2f2ab-c8a6-5b6f-a147-af80096ebce6,NARROWED_TO_AUDITED_SOURCE,RESOLVED
+RO-TP-01-C004-S01,NARROWER_REWRITE_NEEDED,REWRITE_SUPPORTED,RO-TP-01-C004-S01,"From 5 August 2026, the EU military-obligation condition applies to the covered category specified in Council Implementing Decision (EU) 2026/1912, Article 2.",8fe9a340-b48b-5e35-a76d-2a37a3fb748c,NARROWED_TO_AUDITED_SOURCE,RESOLVED
+RO-TP-01-C006-S01,NEW_SOURCE_NEEDED,REWRITE_SUPPORTED,RO-TP-01-C006-S01,Each person registering for temporary protection must appear in person before the competent IGI structure.,d4f3d26a-e604-5eb1-972b-de9ae691af0b,NARROWED_TO_AUDITED_SOURCE,RESOLVED
+RO-TP-01-C006-S02,NEW_SOURCE_NEEDED,REWRITE_SUPPORTED,RO-TP-01-C006-S02,IGI photographs each person during temporary-protection registration.,d4f3d26a-e604-5eb1-972b-de9ae691af0b,NARROWED_TO_AUDITED_SOURCE,RESOLVED
+RO-TP-01-C006-S03,NEW_SOURCE_NEEDED,REWRITE_SUPPORTED,RO-TP-01-C006-S03,IGI issues the temporary-protection residence permit without charge.,d4f3d26a-e604-5eb1-972b-de9ae691af0b,NARROWED_TO_AUDITED_SOURCE,RESOLVED
+RO-TP-01-C007,NEW_SOURCE_NEEDED,REMOVE,,,,REMOVED,RESOLVED
+RO-TP-01-C009,NEW_SOURCE_NEEDED,REWRITE_SUPPORTED,RO-TP-01-C009,Romanian implementing rules tie the permit validity period to the EU temporary-protection period; the current EU scheme ends on 4 March 2028.,822e16b8-0279-5560-b821-541b80d5b5c8;8fe9a340-b48b-5e35-a76d-2a37a3fb748c,NARROWED_TO_AUDITED_SOURCE,RESOLVED
+RO-TP-01-C010,NEW_SOURCE_NEEDED,REMOVE,,,,REMOVED,RESOLVED
+RO-TP-02-C006-S01,NARROWER_REWRITE_NEEDED,REWRITE_SUPPORTED,RO-TP-02-C006-S01,OUG 96/2024 provides a specific work-purpose residence route for qualifying current or former temporary-protection beneficiaries.,c6a07aec-3184-5db7-92f8-085dd076a20f,NARROWED_TO_AUDITED_SOURCE,RESOLVED
+RO-TP-02-C006-S02,NEW_SOURCE_NEEDED,REMOVE,,,,REMOVED,RESOLVED
+RO-TP-02-C007-S01,NEW_SOURCE_NEEDED,REWRITE_SUPPORTED,RO-TP-02-C007-S01,"Romania’s ordinary study, family and other residence procedures are governed by the purpose-specific provisions of OUG 194/2002.",d3a3d139-2774-5024-8cb7-02d3404dac48,NARROWED_TO_AUDITED_SOURCE,RESOLVED
+RO-TP-02-C007-S02,NARROWER_REWRITE_NEEDED,REMOVE,,,,REMOVED,RESOLVED
+RO-TP-02-C007-S03,NARROWER_REWRITE_NEEDED,REMOVE,,,,REMOVED,RESOLVED
+RO-TP-02-C008,NARROWER_REWRITE_NEEDED,REMOVE,,,,REMOVED,RESOLVED
+RO-TP-02-C009,NEW_SOURCE_NEEDED,SPLIT,RO-TP-02-C009-S01;RO-TP-02-C009-S02;RO-TP-02-C009-S03,"Split into permit validity, work right, and long-term-residence qualification propositions.",822e16b8-0279-5560-b821-541b80d5b5c8;c6a07aec-3184-5db7-92f8-085dd076a20f;d3a3d139-2774-5024-8cb7-02d3404dac48,SPLIT_SUCCESSORS,RESOLVED

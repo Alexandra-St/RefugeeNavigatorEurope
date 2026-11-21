@@ -3119,7 +3119,7 @@
     "InformationEntryId": "24d0ab3d-935c-50b7-8385-c1c54583ec51",
     "Title": "Inspectoratul General pentru Imigrări (IGI), expanded categories notice",
     "Url": "https://igi.mai.gov.ro/informare-privind-noile-prevederi-legislative-referitoare-la-extinderea-categoriilor-de-persoane-refugiate-din-ucraina-carora-li-se-poate-acorda-protectie-temporara/",
-    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-20T00:00:00+00:00"
   },
   {
     "Id": "8fe9a340-b48b-5e35-a76d-2a37a3fb748c",
@@ -3129,11 +3129,11 @@
     "LastCheckedAt": "2026-11-05T00:00:00+00:00"
   },
   {
-    "Id": "501ff4ab-87d5-514d-b2a5-ac95fc628881",
+    "Id": "d3a3d139-2774-5024-8cb7-02d3404dac48",
     "InformationEntryId": "6b966a1f-335e-596a-9825-005d30ab23d4",
-    "Title": "Romanian Legislative Portal, current consolidated OUG 194/2002",
-    "Url": "https://legislatie.just.ro/Public/DetaliiDocument/50236",
-    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
+    "Title": "Romanian Legislative Portal, current consolidated OUG 194/2002, consolidation through 27 April 2026",
+    "Url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/50236",
+    "LastCheckedAt": "2026-11-20T00:00:00+00:00"
   },
   {
     "Id": "c6a07aec-3184-5db7-92f8-085dd076a20f",
@@ -3154,20 +3154,13 @@
     "InformationEntryId": "6b966a1f-335e-596a-9825-005d30ab23d4",
     "Title": "IGI, Family reunification",
     "Url": "https://igi.mai.gov.ro/en/family-reunification-2/",
-    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-20T00:00:00+00:00"
   },
   {
     "Id": "c75ac1cb-32c1-5bab-85e3-09eeb4c4cd72",
     "InformationEntryId": "6b966a1f-335e-596a-9825-005d30ab23d4",
     "Title": "Romanian Legislative Portal, Law 28/2024 amending immigration legislation, including EU Blue Card rules",
     "Url": "https://legislatie.just.ro/Public/DetaliiDocument/279587",
-    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
-  },
-  {
-    "Id": "2d6c45be-df4c-5064-ad7b-423a9d7bcea4",
-    "InformationEntryId": "6b966a1f-335e-596a-9825-005d30ab23d4",
-    "Title": "IGI, Long-term residence in Romania",
-    "Url": "https://igi.mai.gov.ro/en/long-term-residence-in-romania/",
     "LastCheckedAt": "2026-11-05T00:00:00+00:00"
   },
   {
@@ -3178,11 +3171,11 @@
     "LastCheckedAt": "2026-11-05T00:00:00+00:00"
   },
   {
-    "Id": "ee3461f2-62c1-5515-aff2-4abf1b958a8a",
+    "Id": "643e0f53-5acd-5ad8-9371-b4cf42fe851e",
     "InformationEntryId": "6b966a1f-335e-596a-9825-005d30ab23d4",
-    "Title": "Romanian Legislative Portal, OUG 32/2026 on foreign access to the Romanian labour market and amendments to immigration legislation",
-    "Url": "https://legislatie.just.ro/Public/DetaliiDocument/309832",
-    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
+    "Title": "Emergency Ordinance no. 32 of 23 April 2026 on foreign access to the Romanian labour market and amendments to immigration legislation",
+    "Url": "https://igi.mai.gov.ro/wp-content/uploads/2026/05/ORDONANTA-DE-URGENTA-nr.-32-din-23-aprilie-2026.pdf",
+    "LastCheckedAt": "2026-11-20T00:00:00+00:00"
   },
   {
     "Id": "f4d17c86-d0f0-5f30-89a4-e41d22039c30",
@@ -3236,9 +3229,9 @@
   {
     "Id": "0320ee26-8918-5e10-8022-a64bd60d708c",
     "InformationEntryId": "54197f49-594b-51d2-a40c-2fcded05f791",
-    "Title": "Romanian Ministry of Education, CNRED, Higher Education Studies",
+    "Title": "CNRED, Higher Education Studies recognition procedures",
     "Url": "https://cnred.edu.ro/en/higher-education-studies/",
-    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-21T00:00:00+00:00"
   },
   {
     "Id": "49ae3d06-a9a3-5319-bf00-520c542d44c2",
@@ -3248,18 +3241,18 @@
     "LastCheckedAt": "2026-11-05T00:00:00+00:00"
   },
   {
-    "Id": "643a3def-a38f-59f5-b83e-c09284188c61",
+    "Id": "c587c8b0-1ef3-5124-b335-44e82158a480",
     "InformationEntryId": "61d13a69-6704-50ee-8b7b-e673a2828e65",
     "Title": "Romanian Legislative Portal, Labour Code (Law 53/2003), consolidated text",
-    "Url": "https://legislatie.just.ro/Public/DetaliiDocument/208423",
-    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
+    "Url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/208423",
+    "LastCheckedAt": "2026-11-21T00:00:00+00:00"
   },
   {
-    "Id": "70cda0bf-de1c-54bc-b411-386e4dbec151",
+    "Id": "b672a40e-3adb-5f60-97ab-6303e8b060de",
     "InformationEntryId": "61d13a69-6704-50ee-8b7b-e673a2828e65",
     "Title": "Romanian Legislative Portal, OUG 32/2026 on foreign access to the labour market",
-    "Url": "https://legislatie.just.ro/Public/DetaliiDocument/309832",
-    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
+    "Url": "https://igi.mai.gov.ro/wp-content/uploads/2026/05/ORDONANTA-DE-URGENTA-nr.-32-din-23-aprilie-2026.pdf",
+    "LastCheckedAt": "2026-11-21T00:00:00+00:00"
   },
   {
     "Id": "8e63ea72-f1ca-52d0-bc87-d5fc2f4e25e8",
@@ -3301,14 +3294,14 @@
     "InformationEntryId": "be12596b-8657-5b23-a17c-dead174859f3",
     "Title": "National Health Insurance House (CNAS), Ghidul Ucraina cu OUG 96 actualizat 07 feb 2025",
     "Url": "https://cnas.ro/wp-content/uploads/2025/02/Ghidul-Ucraina-cu-OUG-96-actualizat-07-feb-2025.pdf",
-    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-21T00:00:00+00:00"
   },
   {
     "Id": "0168ea01-48ba-5a2b-93fd-b42cfcd1d54d",
     "InformationEntryId": "be12596b-8657-5b23-a17c-dead174859f3",
     "Title": "CNAS, Manual aplicație Ucraina — versiune revizuită",
     "Url": "https://cnas.ro/wp-content/uploads/2024/03/Manual-aplicatie-Ucraina-versiune-revizuita.pdf",
-    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-21T00:00:00+00:00"
   },
   {
     "Id": "71778c57-a167-5e83-8928-7aefc2cf0da8",
@@ -3323,6 +3316,34 @@
     "Title": "Romanian Legislative Portal, OUG 34/2008 on the National Unique System for Emergency Calls, current consolidated text",
     "Url": "https://legislatie.just.ro/Public/DetaliiDocument/217476",
     "LastCheckedAt": "2026-11-05T00:00:00+00:00"
+  },
+  {
+    "Id": "54066df3-de04-565d-bc6d-8a211b389c8c",
+    "InformationEntryId": "61d13a69-6704-50ee-8b7b-e673a2828e65",
+    "Title": "Romanian Legislative Portal, Emergency Ordinance (OUG) 29/2026",
+    "Url": "https://legislatie.just.ro/Public/DetaliiDocument/309674",
+    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
+  },
+  {
+    "Id": "574b99c2-3876-5921-9b1a-6b28237763d2",
+    "InformationEntryId": "be12596b-8657-5b23-a17c-dead174859f3",
+    "Title": "National Agency for Fiscal Administration (ANAF), current Tax Code",
+    "Url": "https://static.anaf.ro/static/10/Anaf/legislatie/Cod_fiscal_norme_2023.htm",
+    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
+  },
+  {
+    "Id": "8b4add6a-c2bf-549f-8066-6bcd8a7e9789",
+    "InformationEntryId": "54197f49-594b-51d2-a40c-2fcded05f791",
+    "Title": "EURES / European Labour Authority, Create your Europass CV",
+    "Url": "https://eures.europa.eu/jobseekers/create-your-europass-cv_en",
+    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
+  },
+  {
+    "Id": "c5bf046c-6006-5e16-bd7a-9b30d6bc3554",
+    "InformationEntryId": "61d13a69-6704-50ee-8b7b-e673a2828e65",
+    "Title": "Romanian Legislative Portal, OUG 156/2024, Article LXIX — construction minimum wage",
+    "Url": "https://static.anaf.ro/static/10/Anaf/legislatie/OUG_156_2024.pdf",
+    "LastCheckedAt": "2026-11-21T00:00:00+00:00"
   },
   {
     "Id": "491030f2-f0c2-5494-a295-819a8ad82433",
@@ -3371,14 +3392,14 @@
     "InformationEntryId": "bfd554ff-a41a-5338-ab3e-25bb3c827a73",
     "Title": "Ministry of Education, Order no. 5726/2024 — Pre-university School Regulation (ROFUIP)",
     "Url": "https://www.edu.ro/sites/default/files/_fi%C8%99iere/Legislatie/2024/OME_5726_2024_ROFUIP.pdf",
-    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-21T00:00:00+00:00"
   },
   {
     "Id": "3ef0a209-7ace-5cc7-927b-65932e22cea5",
     "InformationEntryId": "bfd554ff-a41a-5338-ab3e-25bb3c827a73",
     "Title": "Ministry of Education / Portal Legislativ, Order no. 6129/2022 — adult Romanian initiation courses",
     "Url": "https://www.edu.ro/sites/default/files/_fi%C8%99iere/Legislatie/2022/OM_6129_2022.pdf",
-    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-21T00:00:00+00:00"
   },
   {
     "Id": "1244a27d-7d6c-502f-b8f2-4cf68a5e7671",
@@ -3406,6 +3427,20 @@
     "InformationEntryId": "bfd554ff-a41a-5338-ab3e-25bb3c827a73",
     "Title": "Ministry of Education / Portal Legislativ, Order no. 5655/2024 — admission of foreign citizens on fee-paying places",
     "Url": "https://legislatie.just.ro/public/DetaliiDocument/286720",
+    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
+  },
+  {
+    "Id": "8ae492b9-7875-50c0-b7a2-4d6574e1afc8",
+    "InformationEntryId": "bfd554ff-a41a-5338-ab3e-25bb3c827a73",
+    "Title": "Romanian Ministry of Education / Portal Legislativ, current consolidated Pre-university School Regulation (ROFUIP)",
+    "Url": "https://legislatie.just.ro/Public/FormaPrintabila/00000G1XW01S6XCJ1IP08ADVQDNKT2OX",
+    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
+  },
+  {
+    "Id": "c2bee662-3b3f-5b94-803d-1e1f49184180",
+    "InformationEntryId": "bfd554ff-a41a-5338-ab3e-25bb3c827a73",
+    "Title": "Romanian Legislative Portal, OUG 100/2022 — annual state-funded higher-education places measure",
+    "Url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/256915",
     "LastCheckedAt": "2026-11-05T00:00:00+00:00"
   },
   {
@@ -3458,46 +3493,18 @@
     "LastCheckedAt": "2026-11-05T00:00:00+00:00"
   },
   {
-    "Id": "8ae492b9-7875-50c0-b7a2-4d6574e1afc8",
-    "InformationEntryId": "bfd554ff-a41a-5338-ab3e-25bb3c827a73",
-    "Title": "Romanian Ministry of Education / Portal Legislativ, current consolidated Pre-university School Regulation (ROFUIP)",
-    "Url": "https://legislatie.just.ro/Public/FormaPrintabila/00000G1XW01S6XCJ1IP08ADVQDNKT2OX",
-    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
+    "Id": "eac2f2ab-c8a6-5b6f-a147-af80096ebce6",
+    "InformationEntryId": "24d0ab3d-935c-50b7-8385-c1c54583ec51",
+    "Title": "Council Implementing Decision (EU) 2022/382 establishing temporary protection and defining covered cohorts",
+    "Url": "https://eur-lex.europa.eu/eli/dec_impl/2022/382/oj/eng",
+    "LastCheckedAt": "2026-11-21T00:00:00+00:00"
   },
   {
-    "Id": "54066df3-de04-565d-bc6d-8a211b389c8c",
-    "InformationEntryId": "61d13a69-6704-50ee-8b7b-e673a2828e65",
-    "Title": "Romanian Legislative Portal, Emergency Ordinance (OUG) 29/2026",
-    "Url": "https://legislatie.just.ro/Public/DetaliiDocument/309674",
-    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
-  },
-  {
-    "Id": "574b99c2-3876-5921-9b1a-6b28237763d2",
-    "InformationEntryId": "be12596b-8657-5b23-a17c-dead174859f3",
-    "Title": "National Agency for Fiscal Administration (ANAF), current Tax Code",
-    "Url": "https://static.anaf.ro/static/10/Anaf/legislatie/Cod_fiscal_norme_2023.htm",
-    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
-  },
-  {
-    "Id": "8b4add6a-c2bf-549f-8066-6bcd8a7e9789",
-    "InformationEntryId": "54197f49-594b-51d2-a40c-2fcded05f791",
-    "Title": "EURES / European Labour Authority, Create your Europass CV",
-    "Url": "https://eures.europa.eu/jobseekers/create-your-europass-cv_en",
-    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
-  },
-  {
-    "Id": "e4283f53-f70c-5eff-a2c7-3a78fc1615d7",
-    "InformationEntryId": "61d13a69-6704-50ee-8b7b-e673a2828e65",
-    "Title": "Romanian Legislative Portal, OUG 156/2024, Article LXIX — construction minimum wage",
-    "Url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/293109",
-    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
-  },
-  {
-    "Id": "c2bee662-3b3f-5b94-803d-1e1f49184180",
-    "InformationEntryId": "bfd554ff-a41a-5338-ab3e-25bb3c827a73",
-    "Title": "Romanian Legislative Portal, OUG 100/2022 — annual state-funded higher-education places measure",
-    "Url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/256915",
-    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
+    "Id": "d4f3d26a-e604-5eb1-972b-de9ae691af0b",
+    "InformationEntryId": "24d0ab3d-935c-50b7-8385-c1c54583ec51",
+    "Title": "Temporary protection: information for displaced people from Ukraine — registration procedure scope",
+    "Url": "https://igi.mai.gov.ro/protectia-temporara-informatii-pentru-persoanele-stramutate-din-ucraina/",
+    "LastCheckedAt": "2026-11-21T00:00:00+00:00"
   },
   {
     "Id": "a1509aff-d7fa-5e45-93ee-530d44b2101e",

@@ -1,0 +1,9 @@
+﻿ArticleCode,ArticleId,TopicDomain,TitleEN,LanguagesPresent,SourceCount,CoreBindingCount,TranslationStatuses
+RO-EDU-01,bfd554ff-a41a-5338-ab3e-25bb3c827a73,education,Education and Romanian-Language Learning in Romania,en;ru;uk,10,10,en:1;ru:1;uk:1
+RO-EMP-01,54197f49-594b-51d2-a40c-2fcded05f791,employment,Finding a Job in Romania,en;ru;uk,9,9,en:1;ru:1;uk:1
+RO-EMP-02,61d13a69-6704-50ee-8b7b-e673a2828e65,employment,Work Authorization and Employee Rights in Romania,en;ru;uk,9,9,en:1;ru:1;uk:1
+RO-HEALTH-01,be12596b-8657-5b23-a17c-dead174859f3,healthcare,Accessing Healthcare in Romania,en;ru;uk,6,6,en:1;ru:1;uk:1
+RO-HOUSING-01,35bb6fe6-b0b9-5517-af04-e022c7105ec7,housing,Finding Accommodation in Romania,en;ru;uk,4,4,en:1;ru:1;uk:1
+RO-SOC-01,97f02ab3-3352-597b-ad48-11ebf19993c2,social-assistance,Financial and Social Assistance in Romania,en;ru;uk,7,7,en:1;ru:1;uk:1
+RO-TP-01,24d0ab3d-935c-50b7-8385-c1c54583ec51,temporary-protection,Temporary Protection in Romania: Applying and Maintaining Your Status,en;ru;uk,3,3,en:1;ru:1;uk:1
+RO-TP-02,6b966a1f-335e-596a-9825-005d30ab23d4,temporary-protection,Residence Options Beyond Temporary Protection in Romania,en;ru;uk,8,8,en:1;ru:1;uk:1

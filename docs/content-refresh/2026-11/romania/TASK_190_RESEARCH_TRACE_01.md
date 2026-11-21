@@ -1,0 +1,28 @@
+# Task 190 Research Trace — Romania Batch 3
+
+Access date: 21 November 2026. As-of date: 21 November 2026. Paraphrased source notes follow.
+
+## Official-source pages and instruments inspected
+
+- OUG 96/2024 consolidated Portal text: https://legislatie.just.ro/Public/FormaPrintabila/00000G0QBYKFR4FB89A28GQQ3M77FREN — arts.1–3, 7–11 and 26 (housing eligibility/channels/transition; minor cohort and school access/placement).
+- HG 1178/2024: https://legislatie.just.ro/Public/DetaliiDocument/295453 — stored Portal route returned 502. Inspected official-gazette text and corroborating IGSU current programme page: https://igsu.ro/program-suport-ucraina/noul-program-de-suport-ucraina-luna-1-2256. The official-gazette text was accessed via a county emergency-services domain; no URL/canonical change was made.
+- Housing Law 114/1996: https://legislatie.just.ro/Public/DetaliiDocument/70658 — stored Portal route returned 502. Inspected current reproduced text and official Craiova municipal law PDF: https://www.primariacraiova.ro/uploads/articole/attachments/693ac6d0b99b7212669997.pdf; arts.21–25 govern written landlord–tenant contract and duties.
+- ANAF Order 161/2025 official PDF: https://static.anaf.ro/static/10/Anaf/legislatie/OPANAF_161_2025.pdf — 30-day tax registration duty for qualifying lessors; designated person for co-owned property.
+- Order 5679/2024 Portal entry: https://legislatie.just.ro/Public/FormaPrintabila/00000G04UCO6K29RV9L2UIMB92LZ8UVC and linked placement procedure: https://legislatie.just.ro/Public/DetaliiDocument/286548 — inspectorate committee roles, application process and up-to-five-working-day decision step.
+- Order 5726/2024 ROFUIP official Ministry PDF: https://www.edu.ro/sites/default/files/_fi%C8%99iere/Legislatie/2024/OME_5726_2024_ROFUIP.pdf; current consolidated regulation: https://legislatie.just.ro/Public/FormaPrintabila/00000G1XW01S6XCJ1IP08ADVQDNKT2OX — foreign-pupil enrolment, study recognition and Romanian initiation course; 2025 amendments to art.125 make current consolidated text controlling.
+- Order 6129/2022 adult Romanian initiation methodology: https://www.edu.ro/sites/default/files/_fi%C8%99iere/Legislatie/2022/OM_6129_2022.pdf; Order 4649/2026 current course/evaluation fees: https://edu.ro/sites/default/files/2026-09/OM_4649_2026.pdf (5,217 lei course plus evaluation; 522 lei evaluation alone for its defined cohort).
+- Higher Education Law 199/2023: https://legislatie.just.ro/Public/DetaliiDocument/271898 — Portal request timed out; admission framework and official Ministry framework were cross-checked.
+- Order 3693/2024: https://edu.ro/sites/default/files/fisiere%20articole/OM_3693_2024.pdf — Ministry admission rules, institution autonomy, annual offers/criteria and admissions procedure.
+- Order 5655/2024: https://legislatie.just.ro/public/DetaliiDocument/286720 — foreign-citizen, fee-paying admission method; not a TP-specific fee entitlement.
+- OUG 100/2022: https://legislatie.just.ro/Public/DetaliiDocumentAfis/256915 — the plan applies for the duration of TP; annex measure 13.2.2 provides annual state-funded higher-education places for displaced TP beneficiaries. Measure 13.2.1’s 20% additional capacity is explicitly limited to 2021–22 and 2022–23.
+
+## Adjudication notes
+
+- Housing: distinguish first-response temporary camps from accommodation in local emergency-committee designated locations and the lump-sum route. The new-beneficiary cohort is defined in OUG 96/2024 (TP permit obtained from 1 July 2024, not asylum applicants); earlier-beneficiary support is a separate transition. The current lump sum is 750 lei/month for one person or 2,000 lei/month for a family for one three-month period, with local application and months-two/three conditions and exceptions. Unsupported negative promises about municipality, housing type or duration are not inferred from silence.
+- Rental: Law 114/1996 art.21 supports written owner–tenant contract terms. ANAF Order 161/2025 places 30-day tax registration on qualifying lessors/designated owners; this is distinct from a tenant residence-address filing.
+- Education: OUG 96/2024 arts.7–11 and Order 5679/2024 define the covered Ukraine-minor access route, audient enrolment, inspectorate committee coordination/placement and distinct unaccompanied-minor decisions. Do not claim a chosen school or universal document list.
+- Pupil language: current ROFUIP identifies Romanian initiation-course procedures for foreign pupils who do not know Romanian; adult-course fee orders do not establish pupil hours, duration or a school-year-specific model. School regulations require event-driven year-change review, without fabricated dates.
+- Higher education: annual state-funded places under OUG 100/2022 are a plan-level measure for the TP cohort. The 2024–25 additional 20%-capacity measure is historical. General admission is institution-specific; Order 5655 governs a separate foreign fee-paying pathway. Candidate sources do not directly establish personal admission/funded-place guarantees.
+- Translation: both reopen questions now have exact source baselines, identified EN/UK-UA/RU scope differences and future correction recommendations. No production translation was edited.
+- Watch: W-004 stays event-driven for annual university admission publication, with no fixed date. W-005 has no linked ClaimId or SourceId and is not a Batch-3 linked watch row.
+- Metadata: three source rows were marked UPDATE for scope notes only; no URL/canonical changes, SourceId changes, new source records or replacement candidates were made. Owner-specific OUG 96 rows 491030f2… and 4b7f9f52… remain valid for their own domains.

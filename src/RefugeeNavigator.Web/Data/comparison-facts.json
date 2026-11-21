@@ -1053,10 +1053,9 @@
               "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "501ff4ab-87d5-514d-b2a5-ac95fc628881",
+                "d3a3d139-2774-5024-8cb7-02d3404dac48",
                 "340d8194-9a6a-5370-8a03-04eef740dc55",
-                "d22b2dda-6a08-5a85-ae33-aa40b6a778fe",
-                "2d6c45be-df4c-5064-ad7b-423a9d7bcea4"
+                "d22b2dda-6a08-5a85-ae33-aa40b6a778fe"
               ],
               "Values": {
                 "en": "Romania has employment, study, family and long-term residence routes; the work-purpose route has a specific temporary-protection visa waiver.",
@@ -1357,7 +1356,7 @@
               "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "501ff4ab-87d5-514d-b2a5-ac95fc628881",
+                "d3a3d139-2774-5024-8cb7-02d3404dac48",
                 "c75ac1cb-32c1-5bab-85e3-09eeb4c4cd72",
                 "27fbd191-87df-56b9-b952-f881799079f4"
               ],
@@ -1672,9 +1671,9 @@
               "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "501ff4ab-87d5-514d-b2a5-ac95fc628881",
+                "d3a3d139-2774-5024-8cb7-02d3404dac48",
                 "c6a07aec-3184-5db7-92f8-085dd076a20f",
-                "ee3461f2-62c1-5515-aff2-4abf1b958a8a"
+                "643e0f53-5acd-5ad8-9371-b4cf42fe851e"
               ],
               "Values": {
                 "en": "The reviewed law establishes a TP-linked work filing route; it does not establish a general direct in-country switch for study or family purposes.",
@@ -2888,7 +2887,7 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "49ae3d06-a9a3-5319-bf00-520c542d44c2",
-                "70cda0bf-de1c-54bc-b411-386e4dbec151"
+                "b672a40e-3adb-5f60-97ab-6303e8b060de"
               ],
               "Values": {
                 "en": "Covered current and former TP beneficiaries have a specific statutory work exception for the applicable period; it is not a general post-TP work right.",
@@ -3182,7 +3181,7 @@
               "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "643a3def-a38f-59f5-b83e-c09284188c61",
+                "c587c8b0-1ef3-5124-b335-44e82158a480",
                 "0b139749-4942-575f-aad0-3a2d130a40f9",
                 "2964fb39-22fa-58a3-86a6-0fbbc1c34b8d"
               ],
@@ -3491,7 +3490,7 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "8e63ea72-f1ca-52d0-bc87-d5fc2f4e25e8",
-                "e4283f53-f70c-5eff-a2c7-3a78fc1615d7"
+                "c5bf046c-6006-5e16-bd7a-9b30d6bc3554"
               ],
               "Values": {
                 "en": "From 1 July 2026, the general minimum is 4,325 lei gross per month; a separate statutory construction rate is 4,582 lei gross per month. Gross is before deductions, and sector scope/rates are date-sensitive.",

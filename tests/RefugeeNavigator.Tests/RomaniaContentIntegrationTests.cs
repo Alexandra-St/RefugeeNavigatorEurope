@@ -62,7 +62,7 @@ public sealed class RomaniaContentIntegrationTests
             Assert.All(translations, translation =>
             {
                 Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
-                Assert.Equal(new DateTimeOffset(2026, 11, 5, 12, 0, 0, TimeSpan.Zero), translation.LastUpdatedAt);
+                Assert.Equal(new DateTimeOffset(2026, 11, 21, 12, 0, 0, TimeSpan.Zero), translation.LastUpdatedAt);
                 Assert.False(string.IsNullOrWhiteSpace(translation.Title));
                 Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
                 Assert.False(string.IsNullOrWhiteSpace(translation.Content));
@@ -80,18 +80,18 @@ public sealed class RomaniaContentIntegrationTests
     public async Task RomaniaDraftsMatchCatalogTranslationsAndKeepEditorialNotesOutOfContent()
     {
         var catalog = await Catalog.Value;
-        var draftRoot = Path.Combine(FindRepositoryRoot(), "docs", "content-drafts", "romania-v1");
-        var files = Directory.GetFiles(draftRoot, "RO-*.md");
+        var draftRoot = Path.Combine(FindRepositoryRoot(), "docs", "content-refresh", "2026-11", "romania");
+        var files = Directory.GetFiles(draftRoot, "RO-*_REVIEW_COPY_01.md");
         Assert.Equal(8, files.Length);
 
         foreach (var (code, expected) in Articles)
         {
-            var draft = await File.ReadAllTextAsync(Path.Combine(draftRoot, code + ".md"));
-            Assert.Contains($"Article ID: `{expected.Id}`", draft);
-            foreach (var (language, section) in new[] { ("en", "EN"), ("uk", "UK"), ("ru", "RU") })
+            var draft = await File.ReadAllTextAsync(Path.Combine(draftRoot, code + "_REVIEW_COPY_01.md"));
+            Assert.Contains($"ArticleId: `{expected.Id}`", draft);
+            foreach (var (language, section) in new[] { ("en", "EN"), ("uk", "UK-UA"), ("ru", "RU") })
             {
                 var match = Regex.Match(draft,
-                    $@"(?ms)^## {section}\s+Title: (?<title>.*?)\s+Summary: (?<summary>.*?)\s+Content:\s+(?<content>.*?)(?=^### Claim coverage and editorial exclusions$)");
+                    $@"(?ms)^## {section}\s+Title: (?<title>.*?)\s+Summary: (?<summary>.*?)\s+Content:\s+(?<content>.*?)(?=^## |\z)");
                 Assert.True(match.Success, $"Missing {section} translation in {code}.");
                 var translation = Assert.Single(catalog.InformationEntryTranslations,
                     item => item.InformationEntryId == expected.Id && item.LanguageCode == language);
@@ -106,21 +106,43 @@ public sealed class RomaniaContentIntegrationTests
     }
 
     [Fact]
-    public async Task RomaniaSourcesAreArticleOwnedHttpsAndMatchResearchPackages()
+    public async Task RomaniaSourcesMatchCertifiedSetAndAllCitationsResolve()
     {
         var catalog = await Catalog.Value;
         var sourceById = catalog.OfficialSources.ToDictionary(source => source.Id);
         var romaniaEntryIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(source => romaniaEntryIds.Contains(source.InformationEntryId)).ToArray();
-        Assert.Equal(56, sources.Length);
-        Assert.Equal(1558, catalog.OfficialSources.Count);
+        Assert.Equal(57, sources.Length);
+        Assert.Equal(1559, catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(source => source.Id).Distinct().Count());
+        var sourceIds = sources.Select(source => source.Id).ToHashSet();
+        Assert.All(new[]
+        {
+            "d3a3d139-2774-5024-8cb7-02d3404dac48",
+            "643e0f53-5acd-5ad8-9371-b4cf42fe851e",
+            "c587c8b0-1ef3-5124-b335-44e82158a480",
+            "b672a40e-3adb-5f60-97ab-6303e8b060de",
+            "c5bf046c-6006-5e16-bd7a-9b30d6bc3554",
+            "eac2f2ab-c8a6-5b6f-a147-af80096ebce6",
+            "d4f3d26a-e604-5eb1-972b-de9ae691af0b"
+        }, id => Assert.Contains(Guid.Parse(id), sourceIds));
+        Assert.All(new[]
+        {
+            "501ff4ab-87d5-514d-b2a5-ac95fc628881",
+            "ee3461f2-62c1-5515-aff2-4abf1b958a8a",
+            "643a3def-a38f-59f5-b83e-c09284188c61",
+            "70cda0bf-de1c-54bc-b411-386e4dbec151",
+            "e4283f53-f70c-5eff-a2c7-3a78fc1615d7",
+            "2d6c45be-df4c-5064-ad7b-423a9d7bcea4"
+        }, id => Assert.DoesNotContain(Guid.Parse(id), sourceIds));
         Assert.All(sources, source =>
         {
             Assert.Contains(source.InformationEntryId, romaniaEntryIds);
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
             Assert.False(string.IsNullOrWhiteSpace(source.Title));
-            Assert.Equal(new DateTimeOffset(2026, 11, 5, 0, 0, 0, TimeSpan.Zero), source.LastCheckedAt);
+            Assert.InRange(source.LastCheckedAt,
+                new DateTimeOffset(2026, 11, 5, 0, 0, 0, TimeSpan.Zero),
+                new DateTimeOffset(2026, 11, 21, 0, 0, 0, TimeSpan.Zero));
         });
 
         foreach (var (code, expected) in Articles)
@@ -128,8 +150,8 @@ public sealed class RomaniaContentIntegrationTests
             var entrySources = sources.Where(source => source.InformationEntryId == expected.Id).ToArray();
             var expectedSourceCount = code switch
             {
-                "RO-TP-01" => 3,
-                "RO-TP-02" => 8,
+                "RO-TP-01" => 5,
+                "RO-TP-02" => 7,
                 "RO-EMP-01" => 9,
                 "RO-EMP-02" => 9,
                 "RO-HEALTH-01" => 6,
@@ -139,19 +161,16 @@ public sealed class RomaniaContentIntegrationTests
                 _ => throw new InvalidOperationException($"Unexpected draft {code}.")
             };
             Assert.Equal(expectedSourceCount, entrySources.Length);
-            var ownedIds = entrySources.Select(source => source.Id.ToString()).ToHashSet(StringComparer.OrdinalIgnoreCase);
             foreach (var translation in catalog.InformationEntryTranslations.Where(item => item.InformationEntryId == expected.Id))
             {
                 var tokens = Regex.Matches(translation.Content, @"\[\[source:([^|\]]+)\|([^\]]+)\]\]");
                 Assert.NotEmpty(tokens);
                 foreach (Match token in tokens)
                 {
-                    Assert.Contains(token.Groups[1].Value, ownedIds);
-                    Assert.True(sourceById.ContainsKey(Guid.Parse(token.Groups[1].Value)));
+                    Assert.True(sourceById.TryGetValue(Guid.Parse(token.Groups[1].Value), out var citedSource));
+                    Assert.Contains(citedSource!.InformationEntryId, romaniaEntryIds);
                 }
             }
-            var draft = await File.ReadAllTextAsync(Path.Combine(FindRepositoryRoot(), "docs", "content-drafts", "romania-v1", code + ".md"));
-            Assert.Contains("## Editorial source set", draft);
         }
     }
 
@@ -187,7 +206,7 @@ public sealed class RomaniaContentIntegrationTests
         var wage = Assert.Single(wageAspect.Facts, fact => fact.CountrySlug == "romania");
         Assert.Equal("Approved", wage.Status.ToString());
         Assert.True(wage.IsAvailable);
-        Assert.Equal(new[] { Guid.Parse("8e63ea72-f1ca-52d0-bc87-d5fc2f4e25e8"), Guid.Parse("e4283f53-f70c-5eff-a2c7-3a78fc1615d7") }, wage.OfficialSourceIds);
+        Assert.Equal(new[] { Guid.Parse("8e63ea72-f1ca-52d0-bc87-d5fc2f4e25e8"), Guid.Parse("c5bf046c-6006-5e16-bd7a-9b30d6bc3554") }, wage.OfficialSourceIds);
         Assert.DoesNotContain(Guid.Parse("70cda0bf-de1c-54bc-b411-386e4dbec151"), wage.OfficialSourceIds);
         Assert.All(Languages, language =>
         {
