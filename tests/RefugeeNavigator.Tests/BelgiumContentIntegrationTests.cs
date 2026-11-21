@@ -185,9 +185,9 @@ public sealed class BelgiumContentIntegrationTests
             }
         }
 
-        Assert.Equal(93, totalBindings);
-        Assert.Equal(85, sourceIds.Count);
-        Assert.Equal(81, sourceUrls.Count);
+        Assert.Equal(92, totalBindings);
+        Assert.Equal(84, sourceIds.Count);
+        Assert.Equal(80, sourceUrls.Count);
     }
 
     [Fact]
@@ -293,7 +293,9 @@ public sealed class BelgiumContentIntegrationTests
         Assert.Contains("valid until 4 March 2025", tp, StringComparison.Ordinal);
 
         var employment = Content("55fa79e5-89a2-518b-90b2-85a2735f171b", "en");
-        Assert.Contains("€2,189.81", employment);
+        Assert.Contains("€2,233.61", employment);
+        Assert.Contains("1 July 2026", employment);
+        Assert.Contains("supplementary fallback", employment, StringComparison.OrdinalIgnoreCase);
         Assert.Contains("CCT 50", employment);
         Assert.Contains("student workers aged 18–20", employment);
         Assert.Contains("Annex 3", employment);
