@@ -183,6 +183,8 @@
               "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
+                "21a3a70f-2515-5c72-97a8-4ca8cd80e064",
+                "9e67a296-0fac-5005-98b9-11e079bd56e5",
                 "dde016b4-2f2d-5322-9d21-0269318f8456"
               ],
               "Values": {
@@ -796,7 +798,8 @@
               "Status": "Approved",
               "IsAvailable": true,
               "OfficialSourceIds": [
-                "a73b7d5b-720e-5d02-8014-32cc416c5b5d"
+                "a73b7d5b-720e-5d02-8014-32cc416c5b5d",
+                "9e67a296-0fac-5005-98b9-11e079bd56e5"
               ],
               "Values": {
                 "en": "The EU temporary-protection scheme runs through 4 March 2028. Italy’s latest identified national measure allows covered existing TP permits to be renewed on request through 4 March 2027. The EU date does not establish Italian permit validity, printed-card expiry or renewal procedure through 2028.",

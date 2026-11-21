@@ -141,12 +141,20 @@ public sealed class ItalyContentIntegrationTests
         Assert.Equal(76, sources.Select(item => item.Id).Distinct().Count());
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         var sourceById = catalog.OfficialSources.ToDictionary(item => item.Id);
+        var task215RefreshedSourceIds = new HashSet<Guid>
+        {
+            Guid.Parse("a73b7d5b-720e-5d02-8014-32cc416c5b5d"),
+            Guid.Parse("1bad6a10-abe2-5b2f-976c-bb4b3e4ad274")
+        };
         Assert.All(sources, item =>
         {
             Assert.Contains(item.InformationEntryId, entryIds);
             Assert.Equal(Uri.UriSchemeHttps, item.Url.Scheme);
             Assert.False(string.IsNullOrWhiteSpace(item.Title));
-            Assert.Equal(new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero), item.LastCheckedAt);
+            var expectedLastCheckedAt = task215RefreshedSourceIds.Contains(item.Id)
+                ? new DateTimeOffset(2026, 11, 21, 0, 0, 0, TimeSpan.Zero)
+                : new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero);
+            Assert.Equal(expectedLastCheckedAt, item.LastCheckedAt);
         });
         Assert.All(sources.GroupBy(item => item.Url.AbsoluteUri).Where(group => group.Select(item => item.InformationEntryId).Distinct().Count() > 1), group =>
             Assert.Equal(group.Count(), group.Select(item => item.Id).Distinct().Count()));
@@ -235,6 +243,37 @@ public sealed class ItalyContentIntegrationTests
         });
         var byAspect = comparison.Topics.SelectMany(topic => topic.Aspects).ToDictionary(aspect => aspect.Id);
         var dates = Assert.Single(byAspect["protection-dates"].Facts, item => item.CountrySlug == "italy");
+        var protectionScheme = Assert.Single(byAspect["protection-scheme"].Facts,
+            item => item.CountrySlug == "italy");
+
+        Assert.Equal(new[]
+        {
+            Guid.Parse("21a3a70f-2515-5c72-97a8-4ca8cd80e064"),
+            Guid.Parse("9e67a296-0fac-5005-98b9-11e079bd56e5"),
+            Guid.Parse("dde016b4-2f2d-5322-9d21-0269318f8456")
+        }, protectionScheme.OfficialSourceIds);
+
+        Assert.Equal(new[]
+        {
+            Guid.Parse("a73b7d5b-720e-5d02-8014-32cc416c5b5d"),
+            Guid.Parse("9e67a296-0fac-5005-98b9-11e079bd56e5")
+        }, dates.OfficialSourceIds);
+
+        var task215Tp2Translations = catalog.InformationEntryTranslations
+            .Where(item => item.InformationEntryId == Articles["IT-TP-02"].Id)
+            .ToArray();
+
+        Assert.Equal(3, task215Tp2Translations.Length);
+
+        Assert.All(task215Tp2Translations, translation =>
+        {
+            var firstParagraph = translation.Content
+                .Split("\n\n", StringSplitOptions.None)[0];
+
+            Assert.Contains("[[source:5ce3f0f1-ec54-5bbd-b73a-af43d87c119e|", firstParagraph);
+            Assert.Contains("[[source:1bad6a10-abe2-5b2f-976c-bb4b3e4ad274|", firstParagraph);
+        });
+
         Assert.Contains("4 March 2028", dates.Values["en"]);
         Assert.Contains("4 March 2027", dates.Values["en"]);
         Assert.Contains("5 August 2026", byAspect["protection-scheme"].Facts.Single(item => item.CountrySlug == "italy").Values["en"]);
