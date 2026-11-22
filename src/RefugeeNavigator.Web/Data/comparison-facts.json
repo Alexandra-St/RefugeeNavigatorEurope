@@ -448,9 +448,9 @@
                 "80a28bba-0a9a-54fc-b3c8-7325c9b0091c"
               ],
               "Values": {
-                "en": "Reserve the current DOČASNÉ ÚTOČISKO service; its TP booking horizon is 21 days. The electronic declaration is separate and is not stated to be mandatory.",
-                "uk": "Запишіться на чинну послугу DOČASNÉ ÚTOČISKO; горизонт запису для тимчасового укриття — 21 день. Електронна декларація окрема й не названа обов’язковою.",
-                "ru": "Запишитесь на действующую услугу DOČASNÉ ÚTOČISKO; горизонт записи для временного убежища — 21 день. Электронная декларация отдельна и не названа обязательной."
+                "en": "Reserve the current DOČASNÉ ÚTOČISKO service; the live system determines currently available dates, and the availability horizon may differ by user/access category. The electronic declaration is separate and is not stated to be mandatory.",
+                "uk": "Запишіться на чинну послугу DOČASNÉ ÚTOČИСКО; актуальна система показує доступні дати, а горизонт запису може відрізнятися залежно від категорії користувача чи способу доступу/авторизації. Електронна декларація окрема й не названа обов’язковою.",
+                "ru": "Запишитесь на действующую услугу DOČASNÉ ÚTOČISKO; актуальная система показывает доступные даты, а горизонт записи может различаться в зависимости от категории пользователя или способа доступа/авторизации. Электронная декларация отдельна и не названа обязательной."
               }
             },
             {

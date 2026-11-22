@@ -188,6 +188,48 @@ public sealed class SlovakiaContentIntegrationTests
     }
 
     [Fact]
+    public async Task SlovakiaTemporaryProtectionBookingHorizonIsQualifiedAcrossTranslationsAndComparison()
+    {
+        var catalog = await Catalog.Value;
+        var comparison = await new JsonComparisonFactProvider(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json")).LoadAsync(catalog);
+        var articleId = Articles["SK-TP-01"].Id;
+        var fact = Assert.Single(comparison.Topics.SelectMany(topic => topic.Aspects)
+            .Where(aspect => aspect.Id == "protection-application")
+            .SelectMany(aspect => aspect.Facts)
+            .Where(item => item.CountrySlug == "slovakia" && item.InformationEntryId == articleId));
+
+        var bookingMarkers = new Dictionary<string, (string Reservation, string System, string Availability, string Electronic, string Separate, string NotMandatory, string OldHorizon)>
+        {
+            ["en"] = ("Reserve", "reservation system", "available", "electronic declaration", "separate", "not stated to be mandatory", "21 days"),
+            ["uk"] = ("Запишіться", "система", "доступні", "електронна декларація", "окрема", "не названа обов’язковою", "21 день"),
+            ["ru"] = ("Запишитесь", "система", "доступные", "электронная декларация", "отдельна", "не названа обязательной", "21 день")
+        };
+        foreach (var (language, markers) in bookingMarkers)
+        {
+            var content = Assert.Single(catalog.InformationEntryTranslations,
+                item => item.InformationEntryId == articleId && item.LanguageCode == language).Content;
+            Assert.Contains("DOČASNÉ ÚTOČISKO", content, StringComparison.Ordinal);
+            Assert.Contains(markers.Reservation, content, StringComparison.OrdinalIgnoreCase);
+            Assert.Contains(markers.System, content, StringComparison.OrdinalIgnoreCase);
+            Assert.Contains(markers.Availability, content, StringComparison.OrdinalIgnoreCase);
+            Assert.Contains(markers.Electronic, content, StringComparison.OrdinalIgnoreCase);
+            Assert.Contains(markers.Separate, content, StringComparison.OrdinalIgnoreCase);
+            Assert.Contains(markers.NotMandatory, content, StringComparison.OrdinalIgnoreCase);
+            Assert.DoesNotContain(markers.OldHorizon, content, StringComparison.OrdinalIgnoreCase);
+
+            var value = fact.Values[language];
+            Assert.Contains("DOČASNÉ ÚTOČISKO", value, StringComparison.Ordinal);
+            Assert.Contains(markers.Reservation, value, StringComparison.OrdinalIgnoreCase);
+            Assert.Contains(markers.System, value, StringComparison.OrdinalIgnoreCase);
+            Assert.Contains(markers.Availability, value, StringComparison.OrdinalIgnoreCase);
+            Assert.Contains(markers.Electronic, value, StringComparison.OrdinalIgnoreCase);
+            Assert.Contains(markers.Separate, value, StringComparison.OrdinalIgnoreCase);
+            Assert.Contains(markers.NotMandatory, value, StringComparison.OrdinalIgnoreCase);
+            Assert.DoesNotContain(markers.OldHorizon, value, StringComparison.OrdinalIgnoreCase);
+        }
+    }
+
+    [Fact]
     public async Task SlovakiaComparisonFactsHaveClaimSpecificOwnedSourcesAndSocialBenefitParity()
     {
         var catalog = await Catalog.Value;

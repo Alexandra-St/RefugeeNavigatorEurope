@@ -19,9 +19,9 @@
 - **Disposition:** KEEP
 - **Article:** `09d72fd2-1fa7-51a2-886b-9ebd93f4678d`
 - **Availability:** true
-- **EN:** Reserve the current DOČASNÉ ÚTOČISKO service; its TP booking horizon is 21 days. The electronic declaration is separate and is not stated to be mandatory.
-- **UK:** Запишіться на чинну послугу DOČASNÉ ÚTOČISKO; горизонт запису для тимчасового укриття — 21 день. Електронна декларація окрема й не названа обов’язковою.
-- **RU:** Запишитесь на действующую услугу DOČASNÉ ÚTOČISKO; горизонт записи для временного убежища — 21 день. Электронная декларация отдельна и не названа обязательной.
+- **EN:** Reserve the current DOČASNÉ ÚTOČISKO service; the live system determines currently available dates, and the availability horizon may differ by user/access category. The electronic declaration is separate and is not stated to be mandatory.
+- **UK:** Запишіться на чинну послугу DOČASNÉ ÚTOČISKO; актуальна система показує доступні дати, а горизонт запису може відрізнятися залежно від категорії користувача чи способу доступу/авторизації. Електронна декларація окрема й не названа обов’язковою.
+- **RU:** Запишитесь на действующую услугу DOČASNÉ ÚTOČISKO; актуальная система показывает доступные даты, а горизонт записи может различаться в зависимости от категории пользователя или способа доступа/авторизации. Электронная декларация отдельна и не названа обязательной.
 - **Final proposed SourceIds:** `fca86339-e32a-5489-907c-b93555272dc5`, `80a28bba-0a9a-54fc-b3c8-7325c9b0091c`
 - **Binding action:** KEEP; existing bindings retained and checked for scope/ownership.
 - **Evidence needed / note:** Current wording is unchanged; final source bindings were checked in Task 81 and independently reviewed in Task 82.
