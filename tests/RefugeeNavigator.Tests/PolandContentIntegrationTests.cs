@@ -32,7 +32,7 @@ public sealed class PolandContentIntegrationTests
     private static readonly IReadOnlyDictionary<string, int> ExpectedSourceCounts = new Dictionary<string, int>
     {
         ["218207bd-2a85-59e1-a945-eedb0604392e"] = 11,
-        ["c230d45f-9c76-5912-8c97-dc7d0689baa6"] = 6,
+        ["c230d45f-9c76-5912-8c97-dc7d0689baa6"] = 7,
         ["a323701f-367e-52bb-9c33-45c4156a1350"] = 5,
         ["7797d03c-6873-50cd-aef6-0d94a2f5fcab"] = 7,
         ["d7e0716b-154d-5db3-8790-f73684c07271"] = 4,
@@ -63,7 +63,7 @@ public sealed class PolandContentIntegrationTests
         var sources = catalog.OfficialSources.Where(source => entryIds.Contains(source.InformationEntryId)).ToArray();
 
         Assert.Equal(152, catalog.InformationEntries.Count);
-        Assert.Equal(1559, catalog.OfficialSources.Count);
+        Assert.Equal(1560, catalog.OfficialSources.Count);
         Assert.Equal(8, entries.Length);
         Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == DenmarkId));
         Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == GermanyId));
@@ -115,8 +115,8 @@ public sealed class PolandContentIntegrationTests
             Assert.Equal(RefreshAt, translation.LastUpdatedAt));
         Assert.Single(translations.Select(translation => translation.LastUpdatedAt).Distinct());
 
-        Assert.Equal(50, sources.Length);
-        Assert.Equal(50, sources.Select(source => source.Id).Distinct().Count());
+        Assert.Equal(51, sources.Length);
+        Assert.Equal(51, sources.Select(source => source.Id).Distinct().Count());
         Assert.All(entries, entry => Assert.Equal(ExpectedSourceCounts[entry.Id.ToString()], sources.Count(source => source.InformationEntryId == entry.Id)));
         Assert.All(sources, source =>
         {
@@ -125,13 +125,37 @@ public sealed class PolandContentIntegrationTests
             Assert.False(string.IsNullOrWhiteSpace(source.Title));
             Assert.Equal(RefreshAt, source.LastCheckedAt);
         });
-        Assert.Equal(39, sources.Select(source => source.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(40, sources.Select(source => source.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
         Assert.Equal(2, entries.Count(entry => entry.CategoryId == CategoryIds[0]));
         Assert.Equal(2, entries.Count(entry => entry.CategoryId == CategoryIds[1]));
         Assert.Equal(1, entries.Count(entry => entry.CategoryId == CategoryIds[2]));
         Assert.Equal(1, entries.Count(entry => entry.CategoryId == CategoryIds[3]));
         Assert.Equal(1, entries.Count(entry => entry.CategoryId == CategoryIds[4]));
         Assert.Equal(1, entries.Count(entry => entry.CategoryId == CategoryIds[5]));
+    }
+
+    [Theory]
+    [InlineData("en", "lawful while it is pending", "4 March 2027", "60 days", "Filing alone does not grant CUKR", "UKR changes to CUKR")]
+    [InlineData("uk", "вважається законним на час розгляду заяви", "4 березня 2027 року", "60 днів", "Саме подання заяви не надає CUKR", "статус UKR змінюється на CUKR")]
+    [InlineData("ru", "считается законным на время рассмотрения заявления", "4 марта 2027 года", "60 дней", "Сама подача заявления не предоставляет CUKR", "статус UKR меняется на CUKR")]
+    public async Task PolandCukrPendingStageIsCoveredInAllTranslations(
+        string language,
+        string pendingStay,
+        string deadline,
+        string nonCollectionPeriod,
+        string filingIsNotGrant,
+        string statusTransition)
+    {
+        var catalog = await LoadCatalogAsync();
+        var content = catalog.InformationEntryTranslations.Single(translation =>
+            translation.InformationEntryId == ArticleIds["after-temporary-protection"] && translation.LanguageCode == language).Content;
+
+        Assert.Contains(pendingStay, content, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains(deadline, content, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains(nonCollectionPeriod, content, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains(filingIsNotGrant, content, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains(statusTransition, content, StringComparison.OrdinalIgnoreCase);
+        Assert.DoesNotContain("associated rights continue", content, StringComparison.OrdinalIgnoreCase);
     }
 
     [Theory]
@@ -338,9 +362,9 @@ public sealed class PolandContentIntegrationTests
         var catalog = await LoadCatalogAsync();
         var entryIds = ArticleIds.Values.ToHashSet();
         var polandSources = catalog.OfficialSources.Where(source => entryIds.Contains(source.InformationEntryId)).ToArray();
-        Assert.Equal(50, polandSources.Length);
-        Assert.Equal(50, polandSources.Select(source => source.Id).Distinct().Count());
-        Assert.Equal(1559, catalog.OfficialSources.Count);
+        Assert.Equal(51, polandSources.Length);
+        Assert.Equal(51, polandSources.Select(source => source.Id).Distinct().Count());
+        Assert.Equal(1560, catalog.OfficialSources.Count);
 
         var expectedAdds = new Dictionary<Guid, (Guid Owner, string Url)>
         {

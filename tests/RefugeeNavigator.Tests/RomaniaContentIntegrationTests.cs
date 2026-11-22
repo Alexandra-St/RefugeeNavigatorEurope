@@ -113,7 +113,7 @@ public sealed class RomaniaContentIntegrationTests
         var romaniaEntryIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(source => romaniaEntryIds.Contains(source.InformationEntryId)).ToArray();
         Assert.Equal(57, sources.Length);
-        Assert.Equal(1559, catalog.OfficialSources.Count);
+        Assert.Equal(1560, catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(source => source.Id).Distinct().Count());
         var sourceIds = sources.Select(source => source.Id).ToHashSet();
         Assert.All(new[]

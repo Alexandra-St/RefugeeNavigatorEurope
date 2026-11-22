@@ -19,7 +19,15 @@ UdSC lists the main CUKR conditions for the eligible group: valid UKR status whe
 
 ## PLACES
 
-A CUKR application is filed only online through MOS (Moduł Obsługi Spraw). A timely CUKR application filed by 4 March 2027 can make the applicant’s stay lawful until the card is collected, it is invalidated for failure to collect it within 60 days, or a refusal/discontinuance becomes final. Filing does not itself grant a residence permit; UKR status and associated rights continue until the card is collected, subject to other loss events. Since 27 April 2026, ordinary temporary, permanent and EU long-term-resident applications are generally filed electronically through MOS, with statutory exceptions for specified cases. From 5 March 2026, the special basis for certain simplified Ukraine-law permits ended; general Foreigners Act requirements apply again.
+A CUKR application is filed only online through MOS (Moduł Obsługi Spraw).
+
+A qualifying CUKR application filed electronically through MOS by 4 March 2027 makes the applicant’s stay in Poland lawful while it is pending. This lawful-stay effect ends when the CUKR card is collected, when the card is invalidated because it was not collected within 60 days from the date information that it was ready for collection was made available, or when a refusal or discontinuance becomes final. Filing alone does not grant CUKR. Until the CUKR transition, UKR status remains subject to the ordinary UKR-loss rules. Individual benefits and assistance follow their own eligibility rules. When the CUKR card is collected, UKR changes to CUKR. If the card is not collected within 60 days, it is invalidated, UKR does not change to CUKR, and CUKR-permit rights do not arise.
+
+Since 27 April 2026, ordinary temporary, permanent and EU long-term-resident applications are generally filed electronically through MOS, with statutory exceptions for specified cases.
+
+From 5 March 2026, the special basis for certain simplified Ukraine-law permits ended; general Foreigners Act requirements apply again.
+
+A qualifying CUKR application submitted electronically through MOS by 4 March 2027 makes your stay in Poland lawful while it is pending. This lawful-stay effect ends when you collect the CUKR card, when the card is invalidated because it was not collected within 60 days from the date information that it was ready for collection was made available, or when a refusal or discontinuance becomes final. Filing alone does not grant CUKR. Until the CUKR transition, UKR status remains subject to the ordinary UKR-loss rules. Individual benefits and assistance follow their own eligibility rules. When you collect the CUKR card, UKR changes to CUKR. If you do not collect it within 60 days, the card is invalidated, UKR does not change to CUKR, and CUKR-permit rights do not arise.
 
 ## NEXT STEPS
 
@@ -43,6 +51,8 @@ UdSC наводить основні умови CUKR для визначеної
 
 Заяву на CUKR подають лише онлайн через MOS (Moduł Obsługi Spraw). З 27 квітня 2026 року заяви на звичайні дозволи на тимчасове, постійне перебування та дозвіл довгострокового резидента ЄС подаються через MOS; UdSC називає винятки з електронного подання для окремих справ про тимчасове перебування, зокрема деяких внутрішньокорпоративних переведень і сімейних заяв, коли заявник перебуває за межами Польщі. Перевірте актуальні інструкції MOS для конкретного виду дозволу. З 5 березня 2026 року спеціальна підстава для певного спрощеного дозволу за законом про допомогу громадянам України припинилася; UdSC повідомляє про повернення загальних вимог Закону про іноземців.
 
+Якщо відповідну умовам заяву на CUKR подано електронно через MOS не пізніше 4 березня 2027 року, перебування заявника в Польщі вважається законним на час розгляду заяви. Цей ефект законного перебування триває до отримання картки CUKR, її анулювання через неотримання протягом 60 днів від дня, коли було надано інформацію про можливість отримання картки, або до набрання остаточної сили рішенням про відмову чи припинення провадження. Саме подання заяви не надає CUKR. До переходу на CUKR статус UKR зберігається з урахуванням звичайних підстав його втрати. Окремі виплати й допомога мають власні умови. Після отримання картки CUKR статус UKR змінюється на CUKR. Якщо картку не отримати протягом 60 днів, її анулюють, статус UKR не змінюється на CUKR, а права за дозволом CUKR не виникають.
+
 ## НАСТУПНІ КРОКИ
 
 Перед вибором процедури перевірте чинність свого документа, підставу перебування, роботу, навчання, сімейні обставини та строки безпосередньо в UdSC, MOS і компетентного воєводи. Рішення про дозвіл приймає орган у конкретній справі. Не відкликайте й не подавайте паралельні заяви, спираючись лише на загальний опис: правові наслідки залежать від виду заяви та стадії справи.
@@ -64,6 +74,8 @@ UdSC указывает основные условия CUKR для опреде
 ## КУДА ОБРАТИТЬСЯ
 
 Заявление на CUKR подают только онлайн через MOS (Moduł Obsługi Spraw). С 27 апреля 2026 года заявления на обычные разрешения на временное и постоянное пребывание, а также статус долгосрочного резидента ЕС подаются через MOS; UdSC указывает исключения из электронного способа для отдельных дел о временном пребывании, включая некоторые внутрикорпоративные переводы и семейные заявления, если заявитель находится за пределами Польши. Проверьте актуальные инструкции MOS для конкретного вида разрешения. С 5 марта 2026 года прекратилось специальное основание для отдельных упрощённых разрешений по закону о помощи гражданам Украины; UdSC сообщает о возвращении общих требований закона об иностранцах.
+
+Если соответствующее условиям заявление на CUKR подано электронно через MOS не позднее 4 марта 2027 года, пребывание заявителя в Польше считается законным на время рассмотрения заявления. Этот эффект законного пребывания действует до получения карты CUKR, её аннулирования из-за неполучения в течение 60 дней со дня предоставления информации о возможности её получения либо до вступления в окончательную силу решения об отказе или прекращении производства. Сама подача заявления не предоставляет CUKR. До перехода на CUKR статус UKR сохраняется с учётом обычных оснований его утраты. Отдельные выплаты и помощь регулируются собственными условиями. После получения карты CUKR статус UKR меняется на CUKR. Если карту не получить в течение 60 дней, её аннулируют, статус UKR не меняется на CUKR, а права по разрешению CUKR не возникают.
 
 ## СЛЕДУЮЩИЕ ШАГИ
 
