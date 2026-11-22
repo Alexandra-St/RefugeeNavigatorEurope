@@ -84,8 +84,8 @@ public sealed class HungaryContentIntegrationTests
         });
 
         var sources = catalog.OfficialSources.Where(item => entries.Any(entry => entry.Id == item.InformationEntryId)).ToArray();
-        Assert.Equal(113, sources.Length);
-        Assert.Equal(113, sources.Select(item => item.Id).Distinct().Count());
+        Assert.Equal(112, sources.Length);
+        Assert.Equal(112, sources.Select(item => item.Id).Distinct().Count());
         Assert.All(sources, item => Assert.Equal(Uri.UriSchemeHttps, item.Url.Scheme));
         foreach (var (article, expected) in Articles)
         {

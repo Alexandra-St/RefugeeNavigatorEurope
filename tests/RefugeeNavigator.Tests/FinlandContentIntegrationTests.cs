@@ -40,7 +40,7 @@ public sealed class FinlandContentIntegrationTests
         ["FI-TP-01"] = 10,
         ["FI-TP-02"] = 14,
         ["FI-EMP-01"] = 10,
-        ["FI-EMP-02"] = 10,
+        ["FI-EMP-02"] = 9,
         ["FI-HEALTH-01"] = 10,
         ["FI-HOUSING-01"] = 14,
         ["FI-EDU-01"] = 16,
@@ -112,14 +112,14 @@ public sealed class FinlandContentIntegrationTests
     public async Task FinlandTranslationsAndOneHundredOneArticleOwnedSourcesMatchDraftsExactly()
     {
         var catalog = await Catalog.Value;
-        Assert.Equal(1562, catalog.OfficialSources.Count);
+        Assert.Equal(1560, catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         var repositoryRoot = FindRepositoryRoot();
         var draftsRoot = Path.Combine(repositoryRoot, "docs", "content-drafts", "finland-v1");
         var articleIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => articleIds.Contains(item.InformationEntryId)).ToArray();
-        Assert.Equal(101, sources.Length);
-        Assert.Equal(101, sources.Select(item => item.Id).Distinct().Count());
+        Assert.Equal(100, sources.Length);
+        Assert.Equal(100, sources.Select(item => item.Id).Distinct().Count());
         Assert.Equal(91, sources.Select(item => item.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
         Assert.All(sources, source =>
         {
@@ -226,15 +226,7 @@ public sealed class FinlandContentIntegrationTests
         var articleIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => articleIds.Contains(item.InformationEntryId)).ToArray();
         var byOwnerUrl = sources.GroupBy(item => (item.InformationEntryId, item.Url.AbsoluteUri)).ToArray();
-        var intendedEmploymentActPair = Assert.Single(byOwnerUrl, group =>
-            group.Key.InformationEntryId == Articles["FI-EMP-02"].Id &&
-            group.Key.AbsoluteUri == "https://www.finlex.fi/fi/lainsaadanto/2001/55");
-        Assert.Equal(new[]
-        {
-            Guid.Parse("7ab4c5c4-4363-5083-9734-4a16e6d72e74"),
-            Guid.Parse("e0b8e4ac-3707-5842-8fc1-63f81bbb2532")
-        }, intendedEmploymentActPair.Select(item => item.Id).Order().ToArray());
-        Assert.All(byOwnerUrl.Where(group => group != intendedEmploymentActPair), group => Assert.Single(group));
+        Assert.All(byOwnerUrl, group => Assert.Single(group));
         var newSourceTitles = new Dictionary<Guid, string>
         {
             [Guid.Parse("6bb34b1e-6949-58ff-99ba-9ffa3769e03b")] = "Changes to the national core curricula for basic education and preparatory education from 1 August 2026",
