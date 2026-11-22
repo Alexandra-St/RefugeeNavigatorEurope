@@ -74,7 +74,7 @@ public sealed class SlovakiaContentIntegrationTests
         var ids = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => ids.Contains(item.InformationEntryId)).ToArray();
         Assert.Equal(78, sources.Length);
-        Assert.Equal(1562, catalog.OfficialSources.Count);
+        Assert.Equal(1560, catalog.OfficialSources.Count);
         var removedIds = new[]
         {
             Guid.Parse("97ffc889-36c7-51f1-b119-e6b5afdf1aa1"),

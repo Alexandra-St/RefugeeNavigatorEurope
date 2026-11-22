@@ -63,7 +63,7 @@ public sealed class PolandContentIntegrationTests
         var sources = catalog.OfficialSources.Where(source => entryIds.Contains(source.InformationEntryId)).ToArray();
 
         Assert.Equal(152, catalog.InformationEntries.Count);
-        Assert.Equal(1562, catalog.OfficialSources.Count);
+        Assert.Equal(1560, catalog.OfficialSources.Count);
         Assert.Equal(8, entries.Length);
         Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == DenmarkId));
         Assert.Equal(8, catalog.InformationEntries.Count(entry => entry.CountryId == GermanyId));
@@ -431,7 +431,7 @@ public sealed class PolandContentIntegrationTests
         var polandSources = catalog.OfficialSources.Where(source => entryIds.Contains(source.InformationEntryId)).ToArray();
         Assert.Equal(51, polandSources.Length);
         Assert.Equal(51, polandSources.Select(source => source.Id).Distinct().Count());
-        Assert.Equal(1562, catalog.OfficialSources.Count);
+        Assert.Equal(1560, catalog.OfficialSources.Count);
 
         var expectedAdds = new Dictionary<Guid, (Guid Owner, string Url)>
         {

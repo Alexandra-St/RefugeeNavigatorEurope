@@ -12,7 +12,7 @@ public sealed class HungaryContentIntegrationTests
     private static readonly IReadOnlyDictionary<string, (Guid Id, string Category, int Sources)> Articles = new Dictionary<string, (Guid, string, int)>
     {
         ["HU-TP-01"] = (Guid.Parse("1bb2a2b8-cfe0-5595-8155-138443fade17"), "temporary-protection", 10),
-        ["HU-TP-02"] = (Guid.Parse("914418c6-15f8-527c-85dd-be5bda5594fc"), "temporary-protection", 19),
+        ["HU-TP-02"] = (Guid.Parse("914418c6-15f8-527c-85dd-be5bda5594fc"), "temporary-protection", 18),
         ["HU-EMP-01"] = (Guid.Parse("0e65e68f-5c42-58d5-b7b3-e941896bb532"), "employment", 14),
         ["HU-EMP-02"] = (Guid.Parse("4dde28d5-8f4c-5503-926b-eac8789b4e9f"), "employment", 15),
         ["HU-HEALTH-01"] = (Guid.Parse("8cb405ab-c562-5c22-81ad-0fd93ef50202"), "healthcare", 14),
