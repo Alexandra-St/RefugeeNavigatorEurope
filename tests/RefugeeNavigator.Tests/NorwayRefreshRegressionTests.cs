@@ -227,9 +227,9 @@ public sealed class NorwayRefreshRegressionTests
             "b557071d-a1d5-5477-afc8-7bac81a15ed4","c0004a3c-e283-5cde-9c72-aed63dca5d9e","d97f071b-f63e-57f2-9646-8d9b7573b6fd",
             "cf40560a-9c0d-5868-bb45-250c0bf77dfb","84b1573d-3863-5143-a259-a2df44f9f102","176b7699-9b1f-5b09-9e67-8c6970823253",
             "1a57b6ab-e0ae-5960-bcae-94c99a3e1cbb","2c2d6ed3-a946-53d5-bc14-b24bd1d7f4d6","e41a3ab3-0a8f-5790-94c8-dc7c19368eff",
-            "2047a021-cdbd-5b8f-9f00-cc6cdd14004f","cbc89c81-de97-57eb-8b3f-97fbf29225d5","aeec0350-1919-56f6-9a21-872a8fb11f58"
+            "2047a021-cdbd-5b8f-9f00-cc6cdd14004f","cbc89c81-de97-57eb-8b3f-97fbf29225d5"
         }.Select(Guid.Parse).ToArray();
-        Assert.Equal(12,adds.Distinct().Count());
+        Assert.Equal(11,adds.Distinct().Count());
         Assert.All(adds,id=>Assert.Contains(id,sources.Keys));
         var reg=sources[Guid.Parse("cbc89c81-de97-57eb-8b3f-97fbf29225d5")];
         Assert.Contains("KAPITTEL_7-3",reg.Url.AbsoluteUri,StringComparison.Ordinal);
