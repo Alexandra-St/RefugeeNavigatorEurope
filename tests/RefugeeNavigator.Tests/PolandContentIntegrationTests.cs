@@ -159,6 +159,24 @@ public sealed class PolandContentIntegrationTests
     }
 
     [Theory]
+    [InlineData("en", "registered as unemployed", "health-insurance coverage", "jobseeker registration alone does not provide that coverage", "Unemployment benefit has separate eligibility conditions", "neither status guarantees access to every PUP service")]
+    [InlineData("uk", "Реєстрація як безробітної особи", "державне медичне страхування", "сама реєстрація як особи, що шукає роботу, такого страхування не надає", "Допомога по безробіттю має окремі умови призначення", "жоден із цих статусів не гарантує доступу до кожної послуги PUP")]
+    [InlineData("ru", "Регистрация как безработного", "государственное медицинское страхование", "сама регистрация как соискателя такого страхования не предоставляет", "Пособие по безработице назначается на отдельных условиях", "ни один из этих статусов не гарантирует доступ ко всем услугам PUP")]
+    public async Task PolandEmploymentRegistrationCoverageIsDistinctInAllTranslations(
+        string language, string unemployedMarker, string healthInsuranceMarker, string jobseekerInsuranceMarker, string benefitMarker, string serviceMarker)
+    {
+        var catalog = await LoadCatalogAsync();
+        var content = catalog.InformationEntryTranslations.Single(translation =>
+            translation.InformationEntryId == ArticleIds["finding-employment"] && translation.LanguageCode == language).Content;
+
+        Assert.Contains(unemployedMarker, content, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains(healthInsuranceMarker, content, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains(jobseekerInsuranceMarker, content, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains(benefitMarker, content, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains(serviceMarker, content, StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Theory]
     [InlineData("uk")]
     [InlineData("en")]
     [InlineData("ru")]

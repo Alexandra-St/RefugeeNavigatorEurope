@@ -23,7 +23,7 @@ Search ePraca and contact your local powiat employment office (PUP) to ask about
 
 ## NEXT STEPS
 
-Ask your PUP which documents it needs for registration or advice. These may include identity, education and work-history records and, where relevant, proof of lawful stay. Confirm the list locally. You can use ePraca to look for vacancies without assuming that PUP registration gives you access to support payments, insurance or a particular service.
+Ask your PUP which documents it needs for registration or advice. These may include identity, education and work-history records and, where relevant, proof of lawful stay. Confirm the list locally. Use ePraca to look for vacancies. Registration as unemployed and registration as a jobseeker are different statuses. A person registered as unemployed can generally receive public health-insurance coverage if the applicable conditions are met and they have no other insurance title; jobseeker registration alone does not provide that coverage. Unemployment benefit has separate eligibility conditions, and neither status guarantees access to every PUP service.
 
 ## UK
 
@@ -45,7 +45,7 @@ ePraca — державна база вакансій, стажувань і п�
 
 ## НАСТУПНІ КРОКИ
 
-Передайте PUP документи, які він попросить для реєстрації або консультації: посвідчення особи, підтвердження освіти й досвіду та документи про законне перебування, якщо це потрібно. Уточніть список у своєму PUP. Для пошуку вакансій можна користуватися ePraca без припущення, що реєстрація дає право на допомогу, страховку чи виплату.
+Передайте PUP документи, які він попросить для реєстрації або консультації: посвідчення особи, підтвердження освіти й досвіду та документи про законне перебування, якщо це потрібно. Уточніть список у своєму PUP. Для пошуку вакансій можна користуватися ePraca. Реєстрація як безробітної особи та як особи, що шукає роботу, — це різні статуси. Зареєстрована безробітна особа за загальним правилом може мати державне медичне страхування, якщо виконано застосовні умови й немає іншої підстави страхування; сама реєстрація як особи, що шукає роботу, такого страхування не надає. Допомога по безробіттю має окремі умови призначення, а жоден із цих статусів не гарантує доступу до кожної послуги PUP.
 
 ## RU
 
@@ -67,4 +67,4 @@ ePraca — государственная база вакансий, стажи�
 
 ## СЛЕДУЮЩИЕ ШАГИ
 
-Уточните в PUP, какие документы нужны для регистрации или консультации. Это могут быть документы личности, образования и опыта работы, а при необходимости — подтверждение законного пребывания. Список уточняйте на месте. Использовать ePraca для поиска вакансий можно без предположения, что регистрация в PUP автоматически даёт право на выплату, страховку или конкретную услугу.
+Уточните в PUP, какие документы нужны для регистрации или консультации. Это могут быть документы личности, образования и опыта работы, а при необходимости — подтверждение законного пребывания. Список уточняйте на месте. Ищите вакансии на ePraca. Регистрация как безработного и как соискателя — разные статусы. Зарегистрированный безработный, как правило, может иметь государственное медицинское страхование, если соблюдены применимые условия и у него нет другого основания страхования; сама регистрация как соискателя такого страхования не предоставляет. Пособие по безработице назначается на отдельных условиях, а ни один из этих статусов не гарантирует доступ ко всем услугам PUP.
