@@ -385,18 +385,42 @@ public sealed class PolandContentIntegrationTests
         Assert.Contains("up to 12 months", educationContent);
         var socialContent = Content("social-assistance", "en");
         Assert.Contains("work-activity condition", socialContent);
-        Assert.Contains("school-age child must attend", socialContent);
+        Assert.Contains("annual preschool preparation", socialContent);
         Assert.Contains("PLN 300 once per school year", socialContent);
         Assert.Contains("2026/2027", socialContent);
         Assert.Contains("does not guarantee a payment", socialContent);
         Assert.Contains("професійної активності", Content("social-assistance", "uk"));
-        Assert.Contains("шкільного віку — навчатися", Content("social-assistance", "uk"));
+        Assert.Contains("річну дошкільну підготовку", Content("social-assistance", "uk"));
         Assert.Contains("профессиональной активности", Content("social-assistance", "ru"));
-        Assert.Contains("школьного возраста — учиться", Content("social-assistance", "ru"));
+        Assert.Contains("годичную дошкольную подготовку", Content("social-assistance", "ru"));
 
         Assert.Contains("more than 30 days", Content("temporary-protection-application", "en"));
         Assert.Contains("can be restored", Content("temporary-protection-application", "en"));
         Assert.Contains("Filing an application alone is not the same event", Content("after-temporary-protection", "en"));
+    }
+
+    [Theory]
+    [InlineData("en", "annual preschool preparation", "compulsory schooling", "learning obligation")]
+    [InlineData("uk", "річну дошкільну підготовку", "шкільний обов’язок", "обов’язок навчання")]
+    [InlineData("ru", "годичную дошкольную подготовку", "школьную обязанность", "обязанность обучения")]
+    public async Task Poland800EducationConditionCoversAllApplicableObligationsInArticleAndCompare(
+        string language, string preschoolPreparation, string compulsorySchooling, string learningObligation)
+    {
+        var catalog = await LoadCatalogAsync();
+        var article = catalog.InformationEntryTranslations.Single(translation =>
+            translation.InformationEntryId == ArticleIds["social-assistance"] && translation.LanguageCode == language).Content;
+        var facts = await new JsonComparisonFactProvider(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json"))
+            .LoadAsync(catalog);
+        var compare = Assert.Single(facts.Topics.SelectMany(topic => topic.Aspects)
+            .Where(aspect => aspect.Id == "social-child-benefits"))
+            .Facts.Single(fact => fact.CountrySlug == "poland").Values[language];
+
+        foreach (var value in new[] { article, compare })
+        {
+            Assert.Contains(preschoolPreparation, value, StringComparison.OrdinalIgnoreCase);
+            Assert.Contains(compulsorySchooling, value, StringComparison.OrdinalIgnoreCase);
+            Assert.Contains(learningObligation, value, StringComparison.OrdinalIgnoreCase);
+        }
     }
 
     [Fact]
