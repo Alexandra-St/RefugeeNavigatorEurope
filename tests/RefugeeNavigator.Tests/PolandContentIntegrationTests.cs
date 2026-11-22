@@ -185,7 +185,8 @@ public sealed class PolandContentIntegrationTests
         string articleCoverageLimit, string compareCoverageLimit)
     {
         var catalog = await LoadCatalogAsync();
-        var article = Content("healthcare", language);
+        var article = catalog.InformationEntryTranslations.Single(translation =>
+            translation.InformationEntryId == ArticleIds["healthcare"] && translation.LanguageCode == language).Content;
         Assert.Contains(articleChildbirthMarker, article, StringComparison.OrdinalIgnoreCase);
         Assert.Contains(articleCoverageLimit, article, StringComparison.OrdinalIgnoreCase);
 
