@@ -198,11 +198,11 @@ public sealed class SlovakiaContentIntegrationTests
             .SelectMany(aspect => aspect.Facts)
             .Where(item => item.CountrySlug == "slovakia" && item.InformationEntryId == articleId));
 
-        var bookingMarkers = new Dictionary<string, (string Reservation, string ArticleSystem, string CompareSystem, string ArticleAvailability, string CompareAvailability, string ArticleCategory, string CompareCategory, string Electronic, string Separate, string NotMandatory, string OldHorizon)>
+        var bookingMarkers = new Dictionary<string, (string Reservation, string ArticleSystem, string CompareSystem, string ArticleAvailability, string CompareAvailability, string ArticleCategory, string CompareCategory, string Electronic, string Separate, string ArticleNotMandatory, string CompareNotMandatory, string OldHorizon)>
         {
-            ["en"] = ("Reserve", "reservation system", "live system", "available offices and dates", "available dates", "user/access category", "user/access category", "electronic declaration", "separate", "not stated to be mandatory", "21 days"),
-            ["uk"] = ("Запишіться", "система", "система", "доступні підрозділи та дати", "доступні дати", "категорії користувача", "категорії користувача", "електронна декларація", "окрема", "не названа обов’язковою", "21 день"),
-            ["ru"] = ("Запишитесь", "система", "система", "доступные отделения и даты", "доступные даты", "категории пользователя", "категории пользователя", "электронная декларация", "отдельна", "не названа обязательной", "21 день")
+            ["en"] = ("Reserve", "reservation system", "live system", "available offices and dates", "available dates", "user/access category", "user/access category", "electronic declaration", "separate", "not stated to be mandatory", "not stated to be mandatory", "21 days"),
+            ["uk"] = ("Запишіться", "система", "система", "доступні підрозділи та дати", "доступні дати", "категорії користувача", "категорії користувача", "електронна декларація", "окрема", "її не названо обов’язковою", "не названа обов’язковою", "21 день"),
+            ["ru"] = ("Запишитесь", "система", "система", "доступные отделения и даты", "доступные даты", "категории пользователя", "категории пользователя", "электронная декларация", "отдельна", "не названа обязательной", "не названа обязательной", "21 день")
         };
         foreach (var (language, markers) in bookingMarkers)
         {
@@ -215,7 +215,7 @@ public sealed class SlovakiaContentIntegrationTests
             Assert.Contains(markers.ArticleCategory, content, StringComparison.OrdinalIgnoreCase);
             Assert.Contains(markers.Electronic, content, StringComparison.OrdinalIgnoreCase);
             Assert.Contains(markers.Separate, content, StringComparison.OrdinalIgnoreCase);
-            Assert.Contains(markers.NotMandatory, content, StringComparison.OrdinalIgnoreCase);
+            Assert.Contains(markers.ArticleNotMandatory, content, StringComparison.OrdinalIgnoreCase);
             Assert.DoesNotContain(markers.OldHorizon, content, StringComparison.OrdinalIgnoreCase);
 
             var value = fact.Values[language];
@@ -226,7 +226,7 @@ public sealed class SlovakiaContentIntegrationTests
             Assert.Contains(markers.CompareCategory, value, StringComparison.OrdinalIgnoreCase);
             Assert.Contains(markers.Electronic, value, StringComparison.OrdinalIgnoreCase);
             Assert.Contains(markers.Separate, value, StringComparison.OrdinalIgnoreCase);
-            Assert.Contains(markers.NotMandatory, value, StringComparison.OrdinalIgnoreCase);
+            Assert.Contains(markers.CompareNotMandatory, value, StringComparison.OrdinalIgnoreCase);
             Assert.DoesNotContain(markers.OldHorizon, value, StringComparison.OrdinalIgnoreCase);
         }
     }
