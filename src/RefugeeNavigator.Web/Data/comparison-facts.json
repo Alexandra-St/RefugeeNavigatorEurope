@@ -15,12 +15,13 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "441b7bd9-54cf-47a8-80a1-e89a0e410952",
-                "6677f201-1246-417c-8d8f-56dc99c93b0f"
+                "6677f201-1246-417c-8d8f-56dc99c93b0f",
+                "486ee6fc-fc67-4d04-891b-acb967e5477b"
               ],
               "Values": {
-                "en": "Denmark uses its national Ukraine Special Act, not the EU Temporary Protection Directive. Protection in another EU country does not by itself establish eligibility in Denmark.",
-                "uk": "У Данії діє національний Спеціальний закон щодо України, а не Директива ЄС про тимчасовий захист. Захист в іншій країні ЄС сам собою не підтверджує відповідність данським умовам.",
-                "ru": "В Дании действует национальный Специальный закон об Украине, а не Директива ЕС о временной защите. Защита в другой стране ЕС сама по себе не подтверждает соответствие датским условиям."
+                "en": "Denmark uses its national Ukraine Special Act, not the EU Temporary Protection Directive. Protection in another EU country does not by itself establish eligibility in Denmark. Children whose biometrics were taken before age 6 must provide new biometrics after turning 6.",
+                "uk": "У Данії діє національний Спеціальний закон щодо України, а не Директива ЄС про тимчасовий захист. Захист в іншій країні ЄС сам собою не підтверджує відповідність данським умовам. Діти, чиї біометричні дані було знято до 6 років, мають надати нові після досягнення 6 років.",
+                "ru": "В Дании действует национальный Специальный закон об Украине, а не Директива ЕС о временной защите. Защита в другой стране ЕС сама по себе не подтверждает соответствие датским условиям. Дети, у которых биометрические данные были сняты до 6 лет, должны сдать их повторно после достижения 6 лет."
               }
             },
             {
@@ -126,9 +127,9 @@
                 "8fe9a340-b48b-5e35-a76d-2a37a3fb748c"
               ],
               "Values": {
-                "en": "EU temporary protection applies to covered cohorts; Romanian law also defines national categories. Eligibility and the 2026 military-obligation condition depend on the person’s category; exceptions are specific.",
-                "uk": "Тимчасовий захист ЄС поширюється на визначені категорії; закон Румунії також встановлює національні категорії. Умови та правило 2026 року щодо військового обов’язку залежать від категорії; винятки конкретні.",
-                "ru": "Временная защита ЕС действует для определённых категорий; закон Румынии также устанавливает национальные категории. Условия и правило 2026 года о воинской обязанности зависят от категории; исключения конкретны."
+                "en": "EU temporary protection applies to covered cohorts; Romanian law also defines national categories. Eligibility and the 2026 military-obligation condition depend on the person’s category; exceptions are specific. Eligibility includes specified people already in Romania before 24 February 2022, qualifying family/close-relative categories and statutory conditions. For the covered military-obligation cohort, Border Police examples include a lawful-exit stamp or official paper/electronic Reserv+ evidence; examples are not exhaustive. For the covered military-obligation cohort, Border Police examples include lawful-exit stamps and official paper/electronic Reserv+ records; examples are not exhaustive.",
+                "uk": "Тимчасовий захист ЄС поширюється на визначені категорії; закон Румунії також встановлює національні категорії. Умови та правило 2026 року щодо військового обов’язку залежать від категорії; винятки конкретні. Право охоплює визначених осіб, які вже перебували в Румунії до 24 лютого 2022 року, відповідні категорії членів сім’ї/близьких родичів і законодавчі умови. Для відповідної групи з військовим обов’язком прикладами Прикордонної поліції є штамп про законний виїзд або офіційний паперовий/електронний доказ Reserv+; перелік не вичерпний. Для відповідної групи з військовим обов’язком приклади Прикордонної поліції включають штамп про законний виїзд та офіційні паперові/електронні записи Reserv+; перелік не вичерпний.",
+                "ru": "Временная защита ЕС действует для определённых категорий; закон Румынии также устанавливает национальные категории. Условия и правило 2026 года о воинской обязанности зависят от категории; исключения конкретны. Право распространяется на определённых лиц, уже находившихся в Румынии до 24 февраля 2022 года, соответствующие категории членов семьи/близких родственников и установленные законом условия. Для соответствующей группы с воинской обязанностью примеры Пограничной полиции включают штамп о законном выезде или официальное бумажное/электронное подтверждение Reserv+; список не исчерпывающий. Для соответствующей группы с воинской обязанностью примеры Пограничной полиции включают штамп о законном выезде и официальные бумажные/электронные записи Reserv+; список не исчерпывающий."
               }
             },
             {
@@ -157,9 +158,9 @@
                 "c233cdfc-267b-58d8-9fd5-887650066d8a"
               ],
               "Values": {
-                "en": "EU categories include Ukrainians resident in Ukraine before 24 February 2022 and specified family members. Bulgaria also describes a national route; Ukrainian nationality or departure alone does not establish eligibility.",
-                "uk": "Категорії ЄС охоплюють громадян України, які проживали в Україні до 24 лютого 2022 року, та окремих членів сім’ї. Болгарія також описує національний шлях; самих громадянства чи виїзду недостатньо для підтвердження права.",
-                "ru": "Категории ЕС охватывают граждан Украины, проживавших в Украине до 24 февраля 2022 года, и отдельных членов семьи. Болгария также описывает национальный путь; одного гражданства или выезда недостаточно для подтверждения права."
+                "en": "EU categories include Ukrainians resident in Ukraine before 24 February 2022 and specified family members. Bulgaria also describes a national route; Ukrainian nationality or departure alone does not establish eligibility. Other eligible cohorts include qualifying people already protected in Ukraine, certain third-country nationals or stateless permanent residents unable to return safely and durably, and qualifying family members, subject to statutory conditions.",
+                "uk": "Категорії ЄС охоплюють громадян України, які проживали в Україні до 24 лютого 2022 року, та окремих членів сім’ї. Болгарія також описує національний шлях; самих громадянства чи виїзду недостатньо для підтвердження права. Інші відповідні категорії включають осіб, які мали захист в Україні, окремих громадян третіх країн або осіб без громадянства з постійним проживанням, які не можуть безпечно й надовго повернутися, та відповідних членів сім’ї за умовами закону.",
+                "ru": "Категории ЕС охватывают граждан Украины, проживавших в Украине до 24 февраля 2022 года, и отдельных членов семьи. Болгария также описывает национальный путь; одного гражданства или выезда недостаточно для подтверждения права. Другие подходящие категории включают лиц, имевших защиту в Украине, некоторых граждан третьих стран или лиц без гражданства с постоянным проживанием, которые не могут безопасно и надолго вернуться, а также соответствующих членов семьи при соблюдении закона."
               }
             },
             {
@@ -172,9 +173,9 @@
                 "9fdd8cef-d41e-530a-a196-738a77c1edae"
               ],
               "Values": {
-                "en": "Austria grants temporary protection as a `vorübergehendes Aufenthaltsrecht` to defined groups; the `Ausweis für Vertriebene` documents that right.",
-                "uk": "Австрія надає тимчасовий захист визначеним групам як `vorübergehendes Aufenthaltsrecht`; право підтверджує картка `Ausweis für Vertriebene`.",
-                "ru": "Австрия предоставляет временную защиту определённым группам как `vorübergehendes Aufenthaltsrecht`; это право подтверждает карта `Ausweis für Vertriebene`."
+                "en": "Austria grants temporary protection as a `vorübergehendes Aufenthaltsrecht` to defined groups; the `Ausweis für Vertriebene` documents that right. Eligible cohorts include the main Ukrainian group, qualifying non-Ukrainian or stateless people under the EU decision, and qualifying family members; nationality alone does not confer entitlement.",
+                "uk": "Австрія надає тимчасовий захист визначеним групам як `vorübergehendes Aufenthaltsrecht`; право підтверджує картка `Ausweis für Vertriebene`. Відповідні категорії включають основну українську групу, визначених громадян інших країн або осіб без громадянства за рішенням ЄС і членів сім’ї; самого громадянства недостатньо.",
+                "ru": "Австрия предоставляет временную защиту определённым группам как `vorübergehendes Aufenthaltsrecht`; это право подтверждает карта `Ausweis für Vertriebene`. Подходящие категории включают основную украинскую группу, определённых граждан других стран или лиц без гражданства по решению ЕС и членов семьи; одного гражданства недостаточно."
               }
             },
             {
@@ -188,9 +189,9 @@
                 "dde016b4-2f2d-5322-9d21-0269318f8456"
               ],
               "Values": {
-                "en": "EU temporary protection in Italy covers defined displaced groups and specified family members, including certain stateless persons and third-country nationals with specified Ukrainian protection or permanent residence who cannot safely return. From 5 August 2026, new grants are subject to the EU military-obligation condition where applicable. The corrected exception covers people protected in the same Member State by 4 August 2026 and continuously thereafter. Italian-wide evidence instructions are not established.",
-                "uk": "Тимчасовий захист ЄС в Італії охоплює визначені групи переміщених осіб і членів їхніх сімей, зокрема окремих осіб без громадянства та громадян третіх країн із визначеним захистом або постійним проживанням в Україні, які не можуть безпечно повернутися. Із 5 серпня 2026 року нові рішення про надання захисту підпадають під умову ЄС щодо військових обов’язків, якщо вона застосовна. Виправлений виняток стосується людей, які мали захист у тій самій державі-члені до або 4 серпня 2026 року включно та безперервно зберігають його там. Загальноіталійські інструкції щодо доказів не встановлені.",
-                "ru": "Временная защита ЕС в Италии охватывает определённые группы перемещённых лиц и членов их семей, включая некоторых лиц без гражданства и граждан третьих стран с установленной защитой или постоянным проживанием в Украине, которые не могут безопасно вернуться. С 5 августа 2026 года новые решения о предоставлении защиты подпадают под условие ЕС о военных обязанностях, если оно применимо. Исправленное исключение касается людей, имевших защиту в том же государстве-члене до или 4 августа 2026 года включительно и непрерывно сохраняющих её там. Общенациональные инструкции Италии по доказательствам не установлены."
+                "en": "EU temporary protection in Italy covers defined displaced groups and specified family members, including certain stateless persons and third-country nationals with specified Ukrainian protection or permanent residence who cannot safely return. From 5 August 2026, new grants are subject to the EU military-obligation condition where applicable. The corrected exception covers people protected in the same Member State by 4 August 2026 and continuously thereafter. Italian-wide evidence instructions are not established. The eligibility categories come from the foundational EU decision; the 2026 military-obligation rule and continuity exception are supported by the corrected decision and corrigendum.",
+                "uk": "Тимчасовий захист ЄС в Італії охоплює визначені групи переміщених осіб і членів їхніх сімей, зокрема окремих осіб без громадянства та громадян третіх країн із визначеним захистом або постійним проживанням в Україні, які не можуть безпечно повернутися. Із 5 серпня 2026 року нові рішення про надання захисту підпадають під умову ЄС щодо військових обов’язків, якщо вона застосовна. Виправлений виняток стосується людей, які мали захист у тій самій державі-члені до або 4 серпня 2026 року включно та безперервно зберігають його там. Загальноіталійські інструкції щодо доказів не встановлені. Категорії права визначає базове рішення ЄС; правило військового обов’язку 2026 року та виняток безперервності підтверджуються виправленим рішенням і corrigendum.",
+                "ru": "Временная защита ЕС в Италии охватывает определённые группы перемещённых лиц и членов их семей, включая некоторых лиц без гражданства и граждан третьих стран с установленной защитой или постоянным проживанием в Украине, которые не могут безопасно вернуться. С 5 августа 2026 года новые решения о предоставлении защиты подпадают под условие ЕС о военных обязанностях, если оно применимо. Исправленное исключение касается людей, имевших защиту в том же государстве-члене до или 4 августа 2026 года включительно и непрерывно сохраняющих её там. Общенациональные инструкции Италии по доказательствам не установлены. Категории права определены основным решением ЕС; правило о воинской обязанности 2026 года и исключение непрерывности подтверждаются исправленным решением и corrigendum."
               }
             },
             {
@@ -324,9 +325,9 @@
                 "a17d9700-bcc4-4978-b9f8-0687c42ef038"
               ],
               "Values": {
-                "en": "Apply to the Danish Immigration Service: section 1 applicants must be in Denmark and use SL1 (digital or paper). Qualifying section 2 family applications use SL2 and may be submitted in Denmark or abroad.",
-                "uk": "Заяву подають до Danish Immigration Service: заявники за §1 мають перебувати в Данії та використовують SL1 (онлайн або на папері). Для сімейних заяв за §2 за наявності відповідних підстав використовують SL2; їх можна подати в Данії або за кордоном.",
-                "ru": "Заявление подают в Danish Immigration Service: заявители по §1 должны находиться в Дании и используют SL1 (онлайн или на бумаге). Для семейных заявлений по §2 при наличии соответствующих оснований используют SL2; их можно подать в Дании или за рубежом."
+                "en": "Apply to the Danish Immigration Service: section 1 applicants must be in Denmark and use SL1 (digital or paper). Qualifying section 2 family applications use SL2 and may be submitted in Denmark or abroad. Men aged 23–59 in the covered group must provide Ukrainian-authority evidence that clearly shows current military status; DIS recommends Rezerv+ or Diia records as examples, not an exhaustive list.",
+                "uk": "Заяву подають до Danish Immigration Service: заявники за §1 мають перебувати в Данії та використовують SL1 (онлайн або на папері). Для сімейних заяв за §2 за наявності відповідних підстав використовують SL2; їх можна подати в Данії або за кордоном. Чоловіки віком 23–59 років із відповідної групи мають надати виданий українським органом доказ поточного військового статусу; DIS рекомендує, зокрема, Rezerv+ або Дію, але перелік не є вичерпним.",
+                "ru": "Заявление подают в Danish Immigration Service: заявители по §1 должны находиться в Дании и используют SL1 (онлайн или на бумаге). Для семейных заявлений по §2 при наличии соответствующих оснований используют SL2; их можно подать в Дании или за рубежом. Мужчины 23–59 лет из соответствующей группы должны предоставить выданное украинским органом подтверждение текущего военного статуса; DIS рекомендует, например, Rezerv+ или Дію, но список не исчерпывающий."
               }
             },
             {
@@ -387,9 +388,9 @@
                 "753615fa-6bf0-454d-b103-be0739600632"
               ],
               "Values": {
-                "en": "Spain's temporary-protection procedure uses in-person Police channels, including designated CREADE or police locations under current instructions. The applicable route and evidence depend on the applicant's circumstances; check current official appointment guidance.",
-                "uk": "Процедура тимчасового захисту в Іспанії передбачає особисте звернення до поліції, зокрема до визначених центрів CREADE або підрозділів поліції за чинними інструкціями. Маршрут і докази залежать від обставин заявника; перевірте актуальні офіційні інструкції щодо прийому.",
-                "ru": "Процедура временной защиты в Испании предполагает личное обращение в полицию, в том числе в указанные центры CREADE или подразделения полиции согласно действующим инструкциям. Маршрут и подтверждающие документы зависят от обстоятельств заявителя; проверьте актуальные официальные инструкции о приёме."
+                "en": "Spain's temporary-protection procedure uses in-person Police channels, including designated CREADE or police locations under current instructions. The applicable route and evidence depend on the applicant's circumstances; check current official appointment guidance. A formal application has a statutory maximum decision period of 24 hours; this is not a guaranteed real-world processing time.",
+                "uk": "Процедура тимчасового захисту в Іспанії передбачає особисте звернення до поліції, зокрема до визначених центрів CREADE або підрозділів поліції за чинними інструкціями. Маршрут і докази залежать від обставин заявника; перевірте актуальні офіційні інструкції щодо прийому. Для формальної заяви встановлено максимальний строк рішення 24 години; це не гарантія фактичного строку обробки.",
+                "ru": "Процедура временной защиты в Испании предполагает личное обращение в полицию, в том числе в указанные центры CREADE или подразделения полиции согласно действующим инструкциям. Маршрут и подтверждающие документы зависят от обстоятельств заявителя; проверьте актуальные официальные инструкции о приёме. Для формального заявления установлен максимальный срок решения 24 часа; это не гарантия фактического срока обработки."
               }
             },
             {
@@ -399,12 +400,13 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "6fd70e1b-fb73-46f1-aa8e-176ec5c280a3",
-                "e17f7ee0-b423-42b3-9c9c-280d33c54298"
+                "e17f7ee0-b423-42b3-9c9c-280d33c54298",
+                "62a4c75c-ef6f-4e14-8f74-74d188d0e858"
               ],
               "Values": {
-                "en": "The Swedish Migration Agency directs first-time applicants to its e-service; if you cannot use it, follow the Agency’s instructions for applying in person. Evidence, co-applicants and biometrics depend on the procedure. A submission receipt is not a granted permit and does not itself establish work authorization.",
-                "uk": "Міграційне агентство Швеції спрямовує тих, хто подає заяву вперше, до своєї електронної послуги; якщо нею скористатися неможливо, дотримуйтеся інструкцій агентства щодо особистого подання. Документи, спільне подання та біометрія залежать від процедури. Підтвердження подання не є виданим дозволом і саме по собі не підтверджує право на роботу.",
-                "ru": "Миграционное агентство Швеции направляет впервые подающих заявление в свою электронную службу; если воспользоваться ею невозможно, следуйте инструкциям агентства для личной подачи. Документы, совместная подача и биометрия зависят от процедуры. Подтверждение подачи не является выданным разрешением и само по себе не подтверждает право на работу."
+                "en": "The Swedish Migration Agency directs first-time applicants to its e-service; if you cannot use it, follow the Agency’s instructions for applying in person. Evidence, co-applicants and biometrics depend on the procedure. A submission receipt is not a granted permit and does not itself establish work authorization. For the covered men aged 23–65, an exit stamp must be no more than 90 days old.",
+                "uk": "Міграційне агентство Швеції спрямовує тих, хто подає заяву вперше, до своєї електронної послуги; якщо нею скористатися неможливо, дотримуйтеся інструкцій агентства щодо особистого подання. Документи, спільне подання та біометрія залежать від процедури. Підтвердження подання не є виданим дозволом і саме по собі не підтверджує право на роботу. Для відповідних чоловіків віком 23–65 років штамп про виїзд має бути не старшим за 90 днів.",
+                "ru": "Миграционное агентство Швеции направляет впервые подающих заявление в свою электронную службу; если воспользоваться ею невозможно, следуйте инструкциям агентства для личной подачи. Документы, совместная подача и биометрия зависят от процедуры. Подтверждение подачи не является выданным разрешением и само по себе не подтверждает право на работу. Для соответствующих мужчин 23–65 лет штамп о выезде должен быть не старше 90 дней."
               }
             },
             {
@@ -433,9 +435,9 @@
                 "208129b4-8d5a-533a-bc06-9f97d9e40847"
               ],
               "Values": {
-                "en": "Apply through IGI using its current intake instructions; expect an in-person step and photograph. No universal appointment or processing time is established.",
-                "uk": "Подайте заяву до IGI за актуальними інструкціями; передбачено особистий етап і фотографування. Загального правила про запис чи строк розгляду не встановлено.",
-                "ru": "Подайте заявление в IGI по актуальным инструкциям; предусмотрен личный этап и фотографирование. Общее правило о записи или сроке рассмотрения не установлено."
+                "en": "Apply through IGI using its current intake instructions; expect an in-person step and photograph. No universal appointment or processing time is established. Applications require Romanian residence/address information. If supporting address papers are unavailable, ask the competent authority to record the address under the applicable fallback procedure.",
+                "uk": "Подайте заяву до IGI за актуальними інструкціями; передбачено особистий етап і фотографування. Загального правила про запис чи строк розгляду не встановлено. Заява має містити інформацію про проживання/адресу в Румунії. Якщо підтвердних документів про адресу немає, попросіть компетентний орган зафіксувати адресу за застосовною альтернативною процедурою.",
+                "ru": "Подайте заявление в IGI по актуальным инструкциям; предусмотрен личный этап и фотографирование. Общее правило о записи или сроке рассмотрения не установлено. В заявлении необходимо указать место жительства/адрес в Румынии. Если подтверждающих адрес документов нет, попросите компетентный орган зафиксировать адрес по применимой альтернативной процедуре."
               }
             },
             {
@@ -462,9 +464,9 @@
                 "48ff49e5-26d6-59b1-aa02-e0889e97ee54"
               ],
               "Values": {
-                "en": "EU rules adopted in 2026 address military obligations where applicable, with a continuity exception for prior protection in the same Member State. Bulgaria has not published a local proof checklist; ask AREF how the rule applies.",
-                "uk": "Правила ЄС 2026 року стосуються військових обов’язків, коли це застосовно, і містять виняток для безперервного захисту в тій самій державі. Болгарія не опублікувала місцевого переліку доказів; уточнюйте застосування правила в AREF.",
-                "ru": "Правила ЕС 2026 года касаются воинских обязанностей, когда это применимо, и предусматривают исключение для непрерывной защиты в том же государстве. Болгария не опубликовала местный перечень доказательств; уточняйте применение правила в AREF."
+                "en": "The 2026 EU military-obligation condition applies from 5 August 2026 to the covered Ukrainian male cohort when it applies, subject to the continuous-protection-in-the-same-Member-State exception. Bulgaria has no exhaustive published proof checklist; ask AREF how the rule applies.",
+                "uk": "Умова ЄС 2026 року щодо військового обов’язку застосовується з 5 серпня 2026 року до охопленої категорії українських чоловіків, коли вона застосовна, з урахуванням винятку для безперервного захисту в тій самій державі-члені. Болгарія не опублікувала вичерпного переліку підтверджень; уточнюйте застосування правила в AREF.",
+                "ru": "Условие ЕС 2026 года о воинской обязанности применяется с 5 августа 2026 года к охватываемой категории украинских мужчин, когда это применимо, с учётом исключения для непрерывной защиты в том же государстве-члене. Болгария не опубликовала исчерпывающий перечень подтверждений; уточняйте применение правила в AREF."
               }
             },
             {
@@ -537,9 +539,9 @@
                 "cbc89c81-de97-57eb-8b3f-97fbf29225d5"
               ],
               "Values": {
-                "en": "Norway assesses applications under its national collective-protection rules. Some new applicants are excluded, including men aged 18–60 applying from 5 May 2026 (subject to UDI’s evidence-based exceptions) and people whose last permanent residence was in a designated safe area (subject to listed exceptions). People who do not qualify for collective protection may be assessed under individual-protection rules; refusal is not automatic.",
-                "uk": "Норвегія розглядає заяви за національними правилами колективного захисту. Деякі нові заявники не підпадають під схему, зокрема чоловіки віком 18–60 років, які подають заяву з 5 травня 2026 року (з урахуванням визначених UDI винятків, що потребують доказів), та особи, чиє останнє постійне місце проживання було у визначеній безпечною області (з урахуванням встановлених винятків). Осіб, які не відповідають критеріям колективного захисту, можуть оцінити за правилами індивідуального захисту; автоматична відмова не передбачається.",
-                "ru": "Норвегия рассматривает заявления по национальным правилам коллективной защиты. Некоторые новые заявители не подпадают под схему, в том числе мужчины 18–60 лет, подавшие заявление с 5 мая 2026 года (с учётом предусмотренных UDI исключений, которые требуется подтвердить), а также лица, чьё последнее постоянное место жительства находилось в области, признанной безопасной (с учётом установленных исключений). Заявители, не отвечающие условиям коллективной защиты, могут быть рассмотрены по правилам индивидуальной защиты; автоматический отказ не следует."
+                "en": "Norway assesses applications under its national collective-protection rules. Some new applicants are excluded, including men aged 18–60 applying from 5 May 2026 (subject to UDI’s evidence-based exceptions) and people whose last permanent residence was in a designated safe area (subject to listed exceptions). People who do not qualify for collective protection may be assessed under individual-protection rules; refusal is not automatic. For extension, since 1 March 2024 dual Ukrainian/safe-country citizens generally cannot renew, except a family member of a collective-protection holder who lacks safe-country citizenship. Revocation may be considered for travel to Ukraine without legitimate reason or residence abroad over six months in a year; short travel does not automatically cancel protection.",
+                "uk": "Норвегія розглядає заяви за національними правилами колективного захисту. Деякі нові заявники не підпадають під схему, зокрема чоловіки віком 18–60 років, які подають заяву з 5 травня 2026 року (з урахуванням визначених UDI винятків, що потребують доказів), та особи, чиє останнє постійне місце проживання було у визначеній безпечною області (з урахуванням встановлених винятків). Осіб, які не відповідають критеріям колективного захисту, можуть оцінити за правилами індивідуального захисту; автоматична відмова не передбачається. Для продовження, з 1 березня 2024 року особи з громадянством України та безпечної країни зазвичай не можуть поновити дозвіл, крім члена сім’ї власника колективного захисту без громадянства безпечної країни. Відкликання можуть розглянути через поїздку в Україну без поважної причини або проживання за кордоном понад шість місяців на рік; коротка поїздка автоматично не скасовує захист.",
+                "ru": "Норвегия рассматривает заявления по национальным правилам коллективной защиты. Некоторые новые заявители не подпадают под схему, в том числе мужчины 18–60 лет, подавшие заявление с 5 мая 2026 года (с учётом предусмотренных UDI исключений, которые требуется подтвердить), а также лица, чьё последнее постоянное место жительства находилось в области, признанной безопасной (с учётом установленных исключений). Заявители, не отвечающие условиям коллективной защиты, могут быть рассмотрены по правилам индивидуальной защиты; автоматический отказ не следует. Для продления, с 1 марта 2024 года лица с гражданством Украины и безопасной страны обычно не могут продлить разрешение, кроме члена семьи владельца коллективной защиты без гражданства безопасной страны. Отзыв могут рассмотреть из-за поездки в Украину без уважительной причины или проживания за границей более шести месяцев в году; короткая поездка автоматически не прекращает защиту."
               }
             },
             {
@@ -707,9 +709,9 @@
                 "e17f7ee0-b423-42b3-9c9c-280d33c54298"
               ],
               "Values": {
-                "en": "The EU temporary-protection scheme runs through 4 March 2028, but this is not automatically the expiry date on an individual Swedish permit. Sweden says permits decided before 5 August 2026 run through 4 March 2027, while decisions on or after that date run through 4 March 2028. As of 27 October 2026, the Agency expected another extension opportunity in early 2027, but exact opening dates and booking instructions were not shown in the official guidance reviewed.",
-                "uk": "Дія механізму тимчасового захисту ЄС триває до 4 березня 2028 року, але ця дата не є автоматично строком дії індивідуального шведського дозволу. За інформацією Швеції, дозволи за рішеннями до 5 серпня 2026 року діють до 4 березня 2027 року, а за рішеннями від цієї дати — до 4 березня 2028 року. Станом на 27 жовтня 2026 року Агентство очікувало наступну можливість продовження на початку 2027 року, але в перевірених офіційних матеріалах не було зазначено точних дат відкриття та інструкцій щодо запису.",
-                "ru": "Механизм временной защиты ЕС действует до 4 марта 2028 года, но эта дата не становится автоматически сроком действия индивидуального шведского разрешения. По информации Швеции, разрешения по решениям до 5 августа 2026 года действуют до 4 марта 2027 года, а по решениям с этой даты — до 4 марта 2028 года. По состоянию на 27 октября 2026 года Агентство ожидало следующую возможность продления в начале 2027 года, но в проверенных официальных материалах не были указаны точные даты открытия и инструкции по записи."
+                "en": "The EU temporary-protection scheme runs through 4 March 2028, but this is not automatically the expiry date on an individual Swedish permit. Sweden says permits decided before 5 August 2026 run through 4 March 2027, while decisions on or after that date run through 4 March 2028. As of 27 October 2026, the Agency expected another extension opportunity in early 2027, but exact opening dates and booking instructions were not shown in the official guidance reviewed. Permits decided on or after 5 August 2026 can run through 4 March 2028; earlier permit cohorts follow their separate decision/extension rules.",
+                "uk": "Дія механізму тимчасового захисту ЄС триває до 4 березня 2028 року, але ця дата не є автоматично строком дії індивідуального шведського дозволу. За інформацією Швеції, дозволи за рішеннями до 5 серпня 2026 року діють до 4 березня 2027 року, а за рішеннями від цієї дати — до 4 березня 2028 року. Станом на 27 жовтня 2026 року Агентство очікувало наступну можливість продовження на початку 2027 року, але в перевірених офіційних матеріалах не було зазначено точних дат відкриття та інструкцій щодо запису. Дозволи, рішення за якими ухвалено 5 серпня 2026 року або пізніше, можуть діяти до 4 березня 2028 року; для попередніх когорт діють окремі правила рішення/продовження.",
+                "ru": "Механизм временной защиты ЕС действует до 4 марта 2028 года, но эта дата не становится автоматически сроком действия индивидуального шведского разрешения. По информации Швеции, разрешения по решениям до 5 августа 2026 года действуют до 4 марта 2027 года, а по решениям с этой даты — до 4 марта 2028 года. По состоянию на 27 октября 2026 года Агентство ожидало следующую возможность продления в начале 2027 года, но в проверенных официальных материалах не были указаны точные даты открытия и инструкции по записи. Разрешения, решение по которым принято 5 августа 2026 года или позднее, могут действовать до 4 марта 2028 года; для более ранних когорт действуют отдельные правила решения/продления."
               }
             },
             {
@@ -784,12 +786,13 @@
                 "a95d2973-b058-568a-a3e2-b3dd754e1ab8",
                 "9fdd8cef-d41e-530a-a196-738a77c1edae",
                 "b46e0b79-e4da-51c6-97d8-6baf45e67df4",
-                "ea5185f7-d875-5fa7-b4bc-1da82628c315"
+                "ea5185f7-d875-5fa7-b4bc-1da82628c315",
+                "2441d7de-46e9-5f61-a36b-665e06af139b"
               ],
               "Values": {
-                "en": "Temporary protection runs to 4 March 2028. The Article 2 military-obligation condition applies from 5 August 2026; it does not apply to people who enjoyed protection in a Member State on or before 4 August 2026 and continuously retained it there after that date.",
-                "uk": "Тимчасовий захист діє до 4 березня 2028 року. Умова статті 2 щодо військових обов’язків застосовується з 5 серпня 2026 року; вона не застосовується до осіб, які мали захист у державі-члені 4 серпня 2026 року або раніше й безперервно зберігали його там після цієї дати.",
-                "ru": "Временная защита действует до 4 марта 2028 года. Условие статьи 2 о воинских обязанностях применяется с 5 августа 2026 года; оно не применяется к людям, которые имели защиту в государстве-члене 4 августа 2026 года или ранее и непрерывно сохраняли её там после этой даты."
+                "en": "Your right to reside continues independently of the printed displaced-person-card date under the current automatic process. BFA sends replacement cards to the address registered in the Central Register of Residents; no extension application is required. Keep your registered address current and contact BFA if your replacement card does not arrive. The EU scheme date does not itself set the printed card date. For the covered Austrian military-obligation group, examples of evidence include proof of lawful exit, official paper/electronic records or Reserv+; these are examples, not an exhaustive checklist.",
+                "uk": "Право на проживання за чинною автоматичною процедурою зберігається незалежно від дати, надрукованої на картці переміщеної особи. BFA надсилає нові картки на адресу, зареєстровану в Центральному реєстрі мешканців; подавати заяву про продовження не потрібно. Підтримуйте адресу актуальною й зверніться до BFA, якщо нова картка не надійшла. Дата завершення схеми ЄС сама по собі не визначає дату на картці. Для відповідної австрійської групи з військовим обов’язком прикладами доказів є законний виїзд, офіційні паперові/електронні записи або Rezerv+; це не вичерпний перелік.",
+                "ru": "Право на проживание по действующей автоматической процедуре сохраняется независимо от даты, напечатанной на карте перемещённого лица. BFA отправляет новые карты на адрес, зарегистрированный в Центральном реестре жителей; подавать заявление о продлении не нужно. Следите за актуальностью адреса и обратитесь в BFA, если новая карта не пришла. Дата окончания схемы ЕС сама по себе не определяет дату на карте. Для соответствующей австрийской группы с воинской обязанностью примеры доказательств включают законный выезд, официальные бумажные/электронные документы или Rezerv+; перечень не исчерпывающий."
               }
             },
             {
@@ -802,9 +805,9 @@
                 "9e67a296-0fac-5005-98b9-11e079bd56e5"
               ],
               "Values": {
-                "en": "The EU temporary-protection scheme runs through 4 March 2028. Italy’s latest identified national measure allows covered existing TP permits to be renewed on request through 4 March 2027. The EU date does not establish Italian permit validity, printed-card expiry or renewal procedure through 2028.",
-                "uk": "Схема тимчасового захисту ЄС діє до 4 березня 2028 року. За останнім виявленим національним заходом Італії наявні охоплені посвідки TP можна поновити на прохання до 4 березня 2027 року. Дата ЄС не встановлює строк дії італійської посвідки, дату на картці чи процедуру поновлення до 2028 року.",
-                "ru": "Схема временной защиты ЕС действует до 4 марта 2028 года. Согласно последней найденной национальной мере Италии, имеющиеся разрешения TP, подпадающие под её действие, можно продлить по заявлению до 4 марта 2027 года. Дата ЕС не устанавливает срок действия итальянского разрешения, дату на карте или порядок продления до 2028 года."
+                "en": "The EU temporary-protection scheme runs through 4 March 2028. Italy’s latest identified national measure allows covered existing TP permits to be renewed on request through 4 March 2027. The EU date does not establish Italian permit validity, printed-card expiry or renewal procedure through 2028. The EU scheme runs through 4 March 2028; the existing Italian permit-renewal measure is a separate request-based extension through 4 March 2027.",
+                "uk": "Схема тимчасового захисту ЄС діє до 4 березня 2028 року. За останнім виявленим національним заходом Італії наявні охоплені посвідки TP можна поновити на прохання до 4 березня 2027 року. Дата ЄС не встановлює строк дії італійської посвідки, дату на картці чи процедуру поновлення до 2028 року. Режим ЄС діє до 4 березня 2028 року; чинне італійське продовження дозволу за заявою окремо діє до 4 березня 2027 року.",
+                "ru": "Схема временной защиты ЕС действует до 4 марта 2028 года. Согласно последней найденной национальной мере Италии, имеющиеся разрешения TP, подпадающие под её действие, можно продлить по заявлению до 4 марта 2027 года. Дата ЕС не устанавливает срок действия итальянского разрешения, дату на карте или порядок продления до 2028 года. Режим ЕС действует до 4 марта 2028 года; действующее продление итальянского разрешения по заявлению отдельно действует до 4 марта 2027 года."
               }
             },
             {
@@ -1330,12 +1333,13 @@
                 "1edfa642-6b18-494f-81dc-0c2eea1728db",
                 "67b35a29-610f-49e3-b439-c2521683a619",
                 "b2602495-c681-4853-b69e-c173f70abdcd",
-                "d4b72ce1-6f3e-4f28-ac6d-ff144ad283d7"
+                "d4b72ce1-6f3e-4f28-ac6d-ff144ad283d7",
+                "dc8c2eb8-2fdd-4e68-bec4-4fcf83456555"
               ],
               "Values": {
-                "en": "Each alternative permit has its own requirements. A person cannot hold two Swedish residence permits at the same time; qualifying family members may apply under specified routes. EU long-term resident status is a distinct status with its own qualifying-residence and support conditions; the EU Long-Term Residents Directive excludes people currently authorized under temporary protection or awaiting a decision on that status.",
-                "uk": "Кожен альтернативний дозвіл має власні вимоги. Людина не може одночасно мати два шведські дозволи на проживання; визначені члени сім’ї можуть подавати заяви за окремими процедурами. Статус довгострокового резидента ЄС є окремим статусом із власними вимогами щодо строку проживання та забезпечення; Директива ЄС про довгострокових резидентів не поширюється на людей, які наразі мають дозвіл на проживання на підставі тимчасового захисту або очікують рішення щодо такого статусу.",
-                "ru": "У каждого альтернативного разрешения свои требования. Человек не может одновременно иметь два шведских вида на жительство; определённые члены семьи могут подавать заявления по отдельным процедурам. Статус долгосрочного резидента ЕС — отдельный статус со своими требованиями к сроку проживания и обеспечению; Директива ЕС о долгосрочных резидентах не распространяется на людей, которым в настоящее время разрешено проживать на основании временной защиты или которые ожидают решения по этому статусу."
+                "en": "Each alternative permit has its own requirements. A person cannot hold two Swedish residence permits at the same time; qualifying family members may apply under specified routes. EU long-term resident status is a distinct status with its own qualifying-residence and support conditions; the EU Long-Term Residents Directive excludes people currently authorized under temporary protection or awaiting a decision on that status. Swedish temporary-protection time itself does not count toward the five-year EU long-term-residence period; a later qualifying permit may count.",
+                "uk": "Кожен альтернативний дозвіл має власні вимоги. Людина не може одночасно мати два шведські дозволи на проживання; визначені члени сім’ї можуть подавати заяви за окремими процедурами. Статус довгострокового резидента ЄС є окремим статусом із власними вимогами щодо строку проживання та забезпечення; Директива ЄС про довгострокових резидентів не поширюється на людей, які наразі мають дозвіл на проживання на підставі тимчасового захисту або очікують рішення щодо такого статусу. Сам час тимчасового захисту у Швеції не зараховується до п’ятирічного періоду довгострокового проживання ЄС; подальший відповідний дозвіл може зараховуватися.",
+                "ru": "У каждого альтернативного разрешения свои требования. Человек не может одновременно иметь два шведских вида на жительство; определённые члены семьи могут подавать заявления по отдельным процедурам. Статус долгосрочного резидента ЕС — отдельный статус со своими требованиями к сроку проживания и обеспечению; Директива ЕС о долгосрочных резидентах не распространяется на людей, которым в настоящее время разрешено проживать на основании временной защиты или которые ожидают решения по этому статусу. Сам срок временной защиты в Швеции не засчитывается в пятилетний период долгосрочного проживания ЕС; последующее подходящее разрешение может засчитываться."
               }
             },
             {
@@ -1363,9 +1367,9 @@
                 "27fbd191-87df-56b9-b952-f881799079f4"
               ],
               "Values": {
-                "en": "Work, study, family and long-term routes have different eligibility conditions; the TP-linked work rule is limited to its statutory scope.",
-                "uk": "Для роботи, навчання, сім’ї та довгострокового проживання діють різні умови; правило для роботи після TP має визначені законом межі.",
-                "ru": "Для работы, учёбы, семьи и долгосрочного проживания действуют разные условия; правило для работы после TP ограничено законом."
+                "en": "Work, study, family and long-term routes have different eligibility conditions; the TP-linked work rule is limited to its statutory scope. Temporary-protection time is excluded from the Directive-based long-term-residence period; subsequent qualifying residence may count under the ordinary route conditions.",
+                "uk": "Для роботи, навчання, сім’ї та довгострокового проживання діють різні умови; правило для роботи після TP має визначені законом межі. Час тимчасового захисту виключається з періоду довгострокового проживання за Директивою; подальше відповідне проживання може зараховуватися за звичайних умов маршруту.",
+                "ru": "Для работы, учёбы, семьи и долгосрочного проживания действуют разные условия; правило для работы после TP ограничено законом. Срок временной защиты исключается из периода долгосрочного проживания по Директиве; последующее подходящее проживание может засчитываться на обычных условиях маршрута."
               }
             },
             {
@@ -1378,9 +1382,9 @@
                 "0ad1bc01-1675-5d83-86d5-a410cdcda966"
               ],
               "Values": {
-                "en": "The pre-end §131o route requires the eligible Slovak purpose/activity for six months immediately before filing; the post-end route tests six months before refuge ends plus uninterrupted continuation to filing, within §131o’s one-year post-termination period for the specified cohort, subject to statutory exceptions. Cross-reference ambiguity remains.",
-                "uk": "Для раннього подання за §131o потрібна відповідна діяльність у Словаччині шість місяців перед поданням; після завершення перевіряють шість місяців до завершення та безперервність до подання; цей перехід обмежений передбаченим §131o однорічним періодом після припинення укриття для визначеної категорії осіб, з урахуванням законодавчих винятків. У перехресному посиланні лишається неоднозначність.",
-                "ru": "Для ранней подачи по §131o требуется подходящая деятельность в Словакии шесть месяцев до подачи; после окончания проверяются шесть месяцев до окончания и непрерывность до подачи; этот переход ограничен предусмотренным §131o годичным периодом после прекращения убежища для определённой категории лиц, с учётом законодательных исключений. В перекрёстной ссылке остаётся неоднозначность."
+                "en": "The pre-end §131o route requires the eligible Slovak purpose/activity for six months immediately before filing; the post-end route tests six months before refuge ends plus uninterrupted continuation to filing, within §131o’s one-year post-termination period for the specified cohort, subject to statutory exceptions. Cross-reference ambiguity remains. The Foreign Police currently counts temporary-refuge time in full as administrative practice after a switch to an eligible status; this is not explicit statutory text. A current odídenec cannot directly use the ordinary §52 route.",
+                "uk": "Для раннього подання за §131o потрібна відповідна діяльність у Словаччині шість місяців перед поданням; після завершення перевіряють шість місяців до завершення та безперервність до подання; цей перехід обмежений передбаченим §131o однорічним періодом після припинення укриття для визначеної категорії осіб, з урахуванням законодавчих винятків. У перехресному посиланні лишається неоднозначність. Поліція у справах іноземців наразі зараховує весь час тимчасового прихистку як адміністративну практику після переходу на відповідний статус; це не пряма норма закону. Власник статусу odídenec не може безпосередньо скористатися звичайним маршрутом §52.",
+                "ru": "Для ранней подачи по §131o требуется подходящая деятельность в Словакии шесть месяцев до подачи; после окончания проверяются шесть месяцев до окончания и непрерывность до подачи; этот переход ограничен предусмотренным §131o годичным периодом после прекращения убежища для определённой категории лиц, с учётом законодательных исключений. В перекрёстной ссылке остаётся неоднозначность. Полиция по делам иностранцев в настоящее время засчитывает весь срок временного убежища как административную практику после перехода на подходящий статус; это не прямая норма закона. Владелец статуса odídenec не может напрямую воспользоваться обычным маршрутом §52."
               }
             },
             {
@@ -1406,12 +1410,13 @@
               "OfficialSourceIds": [
                 "867f2e4e-1f48-591d-9819-8de70bd8c903",
                 "c799014e-9cc6-5090-8218-a4d7acec717f",
-                "2584201a-b416-5fd9-9631-1e82611cf693"
+                "2584201a-b416-5fd9-9631-1e82611cf693",
+                "fe7206c3-7361-5a98-be23-e10902661348"
               ],
               "Values": {
-                "en": "The special §41a(7b) RWR+ route has employment-history conditions and does not require the §4a waiver. Other §4a titles have route-specific requirements and a conditional written waiver effective on grant.",
-                "uk": "Спеціальний маршрут RWR+ за §41a(7b) має вимоги до трудової історії та не потребує відмови за §4a. Інші дозволи за §4a мають окремі вимоги й умовну письмову відмову, що набирає чинності після надання дозволу.",
-                "ru": "Для специального маршрута RWR+ по §41a(7b) требуется соответствующая трудовая история, но отказ по §4a не нужен. У других разрешений по §4a свои требования и условный письменный отказ, вступающий в силу при выдаче разрешения."
+                "en": "The special §41a(7b) RWR+ route is application-based, not automatic. It generally requires at least 12 months of fully insured qualifying employment in the preceding 24 months under ASVG or applicable GSVG insurance, sufficient means, suitable accommodation, comprehensive health insurance, German/integration and public-order conditions, and no disqualifying Grundversorgung. The statutory waiver applies only within its stated conditions. Under §41a(7b), the special RWR+ route is application-based and generally requires 12 months fully insured work within the previous 24 months, qualifying ASVG/GSVG coverage, means, accommodation, comprehensive insurance, German/integration and public-order conditions, and no Grundversorgung where required. Limited waivers apply. Qualifying TP time immediately before displaced-person RWR+ can count in a later five-year Daueraufenthalt-EU sequence, but TP alone gives no permanent residence. The domestic §4a Blue Card pathway remains conditional on ordinary Blue Card criteria and no simultaneous TP.",
+                "uk": "Спеціальний маршрут RWR+ за §41a(7b) вимагає заяви й не є автоматичним. Зазвичай потрібні щонайменше 12 місяців кваліфікованої роботи з повним страхуванням протягом попередніх 24 місяців за ASVG або відповідне страхування GSVG, достатні кошти, належне житло, повне медичне страхування, вимоги щодо німецької мови/інтеграції й громадського порядку та відсутність Grundversorgung, що виключає маршрут. Законодавче звільнення діє лише за встановлених умов. За §41a(7b) спеціальний маршрут RWR+ потребує заяви й зазвичай вимагає 12 місяців повністю застрахованої роботи протягом попередніх 24 місяців, відповідного покриття ASVG/GSVG, коштів, житла, повного страхування, виконання умов щодо німецької мови/інтеграції та громадського порядку, а також відсутності Grundversorgung, якщо це потрібно. Можливі обмежені винятки. Відповідний час TP безпосередньо перед RWR+ для переміщеної особи може зараховуватися до подальшого п’ятирічного маршруту Daueraufenthalt-EU, але сам TP не дає постійного проживання. Внутрішній маршрут Блакитної карти за §4a залежить від звичайних критеріїв і заборони одночасного TP.",
+                "ru": "Специальный маршрут RWR+ по §41a(7b) требует заявления и не является автоматическим. Обычно нужны не менее 12 месяцев квалифицируемой полностью застрахованной работы за предыдущие 24 месяца по ASVG либо соответствующее страхование GSVG, достаточные средства, подходящее жильё, полная медицинская страховка, требования по немецкому языку/интеграции и общественному порядку, а также отсутствие Grundversorgung, исключающего маршрут. Законодательное освобождение действует только при установленных условиях. По §41a(7b) специальный маршрут RWR+ требует заявления и обычно предполагает 12 месяцев полностью застрахованной работы за предыдущие 24 месяца, подходящее покрытие ASVG/GSVG, средства, жильё, полное страхование, выполнение требований по немецкому языку/интеграции и общественному порядку, а также отсутствие Grundversorgung, если это требуется. Возможны ограниченные исключения. Подходящий срок TP непосредственно перед RWR+ для перемещённого лица может засчитываться в последующий пятилетний маршрут Daueraufenthalt-EU, но сам TP не даёт постоянного проживания. Внутренний маршрут Голубой карты по §4a зависит от обычных критериев и отсутствия одновременного TP."
               }
             },
             {
@@ -1499,9 +1504,9 @@
                 "798b8925-2162-55aa-ae31-1b816c45ea65"
               ],
               "Values": {
-                "en": "Eligibility and visa rules depend on the selected ordinary permit; an APS-BPT is a temporary-protection document, not an ordinary residence card. The long-term EU resident route has separate five-year and other conditions, and the reviewed sources do not establish that APS-BPT time counts toward that period.",
-                "uk": "Відповідність умовам і візові вимоги залежать від обраного звичайного дозволу; APS-BPT є документом тимчасового захисту, а не звичайною карткою проживання. Маршрут довгострокового резидента ЄС має окремі п’ятирічні та інші умови, а опрацьовані джерела не підтверджують зарахування періоду APS-BPT до цього строку.",
-                "ru": "Соответствие требованиям и визовые условия зависят от выбранного обычного вида на жительство; APS-BPT — документ временной защиты, а не обычная карта резидента. Для статуса долгосрочного резидента ЕС действуют отдельные пятилетние и другие условия, а проверенные источники не подтверждают зачёт срока APS-BPT в этот период."
+                "en": "Eligibility and visa rules depend on the selected ordinary permit; an APS-BPT is a temporary-protection document, not an ordinary residence card. The long-term EU resident route has separate five-year and other conditions, and the reviewed sources do not establish that APS-BPT time counts toward that period. APS-BPT time is excluded from the EU long-term-residence Directive scope under Article 3(2)(b) of Directive 2003/109/EC and does not count toward that five-year period.",
+                "uk": "Відповідність умовам і візові вимоги залежать від обраного звичайного дозволу; APS-BPT є документом тимчасового захисту, а не звичайною карткою проживання. Маршрут довгострокового резидента ЄС має окремі п’ятирічні та інші умови, а опрацьовані джерела не підтверджують зарахування періоду APS-BPT до цього строку. Час APS-BPT виключено зі сфери Директиви ЄС про довгострокове проживання згідно зі статтею 3(2)(b) Директиви 2003/109/ЄС і він не зараховується до п’ятирічного періоду.",
+                "ru": "Соответствие требованиям и визовые условия зависят от выбранного обычного вида на жительство; APS-BPT — документ временной защиты, а не обычная карта резидента. Для статуса долгосрочного резидента ЕС действуют отдельные пятилетние и другие условия, а проверенные источники не подтверждают зачёт срока APS-BPT в этот период. Время APS-BPT исключено из сферы Директивы ЕС о долгосрочном проживании согласно статье 3(2)(b) Директивы 2003/109/EC и не засчитывается в пятилетний период."
               }
             },
             {
@@ -1634,9 +1639,9 @@
                 "12423382-1710-4b16-a782-06e294c547d1"
               ],
               "Values": {
-                "en": "Only procedures that the immigration rules allow to start in Spain can be filed in-country, and current channels depend on the route. Under the transition instructions, a new authorization must be granted before temporary protection is expressly renounced.",
-                "uk": "В Іспанії можна подати лише ті заяви, які міграційні правила дозволяють розпочати всередині країни; актуальний канал залежить від маршруту. За інструкціями щодо переходу новий дозвіл має бути наданий до офіційної відмови від тимчасового захисту.",
-                "ru": "В Испании внутри страны можно подать только заявления по процедурам, которые разрешено начинать в Испании; действующий канал зависит от маршрута. Согласно инструкциям о переходе, новый вид на жительство должен быть предоставлен до официального отказа от временной защиты."
+                "en": "Only procedures that the immigration rules allow to start in Spain can be filed in-country, and current channels depend on the route. Under the transition instructions, a new authorization must be granted before temporary protection is expressly renounced. After renouncing temporary protection to take up another authorization, return or surrender the existing TIE as required by Order INT/96/2026.",
+                "uk": "В Іспанії можна подати лише ті заяви, які міграційні правила дозволяють розпочати всередині країни; актуальний канал залежить від маршруту. За інструкціями щодо переходу новий дозвіл має бути наданий до офіційної відмови від тимчасового захисту. Після відмови від тимчасового захисту для переходу на інший дозвіл поверніть або здайте чинну TIE згідно з Наказом INT/96/2026.",
+                "ru": "В Испании внутри страны можно подать только заявления по процедурам, которые разрешено начинать в Испании; действующий канал зависит от маршрута. Согласно инструкциям о переходе, новый вид на жительство должен быть предоставлен до официального отказа от временной защиты. После отказа от временной защиты для перехода на другое разрешение верните или сдайте действующую TIE согласно Приказу INT/96/2026."
               }
             },
             {
@@ -1979,12 +1984,13 @@
               "OfficialSourceIds": [
                 "f4d17c86-d0f0-5f30-89a4-e41d22039c30",
                 "e75b4f4d-cf11-5234-93b2-3f404af9a66f",
-                "8b4add6a-c2bf-549f-8066-6bcd8a7e9789"
+                "8b4add6a-c2bf-549f-8066-6bcd8a7e9789",
+                "436991bc-fea3-5d09-826f-d8cfdee31573"
               ],
               "Values": {
-                "en": "ANOFM publishes vacancies and operates a job-matching portal; EURES provides another vacancy channel. Listings change and do not guarantee a job.",
-                "uk": "ANOFM публікує вакансії та має портал підбору роботи; EURES є іншим каналом пошуку. Оголошення змінюються й не гарантують роботу.",
-                "ru": "ANOFM публикует вакансии и имеет портал подбора работы; EURES — другой канал поиска. Объявления меняются и не гарантируют работу."
+                "en": "ANOFM publishes vacancies and operates a job-matching portal; EURES provides another vacancy channel. Listings change and do not guarantee a job.  A direct EURES vacancies search is available for Romania.",
+                "uk": "ANOFM публікує вакансії та має портал підбору роботи; EURES є іншим каналом пошуку. Оголошення змінюються й не гарантують роботу.  Для Румунії доступний прямий пошук вакансій EURES.",
+                "ru": "ANOFM публикует вакансии и имеет портал подбора работы; EURES — другой канал поиска. Объявления меняются и не гарантируют работу.  Для Румынии доступен прямой поиск вакансий EURES."
               }
             },
             {
@@ -2600,9 +2606,9 @@
                 "a0f81409-3a9d-5d0e-acca-4ae5618f92c0"
               ],
               "Values": {
-                "en": "UoZ and ZoZ are distinct registers. Temporary-refuge-holder UoZ eligibility remains unclear in reviewed guidance and should be confirmed with ÚPSVaR.",
-                "uk": "UoZ і ZoZ — різні реєстри. Право власників тимчасового укриття на UoZ не з’ясоване в перевірених інструкціях і потребує уточнення в ÚPSVaR.",
-                "ru": "UoZ и ZoZ — разные реестры. Право обладателей временного убежища на UoZ неясно по изученным инструкциям и требует уточнения в ÚPSVaR."
+                "en": "UoZ and ZoZ are distinct registers. Temporary-protection (odídenec) status alone does not qualify for UoZ registration, but a person may qualify independently under another statutory category; ÚPSVaR assesses that basis.",
+                "uk": "UoZ і ZoZ — різні реєстри. Сам по собі статус тимчасового захисту (odídenec) не дає права на реєстрацію в UoZ, але особа може відповідати критеріям незалежно від нього за іншою законодавчою категорією; цю підставу оцінює ÚPSVaR.",
+                "ru": "UoZ и ZoZ — разные реестры. Сам по себе статус временной защиты (odídenec) не даёт права на регистрацию в UoZ, но человек может независимо соответствовать требованиям другой установленной законом категории; это основание оценивает ÚPSVaR."
               }
             },
             {
@@ -2693,8 +2699,7 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "8d578639-b4bc-50c5-8ca9-8d708b7c60dd",
-                "2047a021-cdbd-5b8f-9f00-cc6cdd14004f",
-                "aeec0350-1919-56f6-9a21-872a8fb11f58"
+                "2047a021-cdbd-5b8f-9f00-cc6cdd14004f"
               ],
               "Values": {
                 "en": "For people first granted collective protection from 1 January 2026, the Introduction Programme generally carries both a right and a duty under the applicable rules; people first granted it earlier retain a right without a duty. Participation and introduction benefit depend on eligibility and the municipal programme, so neither is automatic.",
@@ -3154,12 +3159,13 @@
               "OfficialSourceIds": [
                 "0e6cf194-dcfa-48d2-b91e-1c3d0334c782",
                 "3d4d281b-b267-4e22-a282-8d736b00ebd2",
-                "78f75cc3-a5d4-497f-9d4a-de6999d8000c"
+                "78f75cc3-a5d4-497f-9d4a-de6999d8000c",
+                "1809031a-2cc5-49ae-b6ed-595c9a675b83"
               ],
               "Values": {
-                "en": "Some employers must notify the Tax Agency when hiring specified foreign nationals. Employers must also provide written information about material employment terms within the deadlines set by law and manage the work environment. Exact duties depend on the hiring situation and statutory conditions.",
-                "uk": "Деякі роботодавці мають повідомляти Податкове агентство про найм визначених іноземних працівників. Роботодавці також мають у встановлені законом строки надати письмову інформацію про істотні умови праці та забезпечувати робоче середовище. Конкретні обов’язки залежать від ситуації найму та законодавчих умов.",
-                "ru": "Некоторые работодатели должны уведомлять Налоговое агентство о найме определённых иностранных работников. Работодатели также обязаны в установленные законом сроки предоставить письменную информацию о существенных условиях труда и обеспечивать рабочую среду. Конкретные обязанности зависят от ситуации найма и требований закона."
+                "en": "Some employers must notify the Tax Agency when hiring specified foreign nationals. Employers must also provide written information about material employment terms within the deadlines set by law and manage the work environment. Exact duties depend on the hiring situation and statutory conditions. Notification exceptions include EU long-term residents and specified free-movement family members; where required, notify by the end of the third month after the calendar month work began.",
+                "uk": "Деякі роботодавці мають повідомляти Податкове агентство про найм визначених іноземних працівників. Роботодавці також мають у встановлені законом строки надати письмову інформацію про істотні умови праці та забезпечувати робоче середовище. Конкретні обов’язки залежать від ситуації найму та законодавчих умов. Винятки охоплюють довгострокових резидентів ЄС та визначених членів сім’ї за правилами вільного пересування; якщо повідомлення потрібне, подайте його до кінця третього місяця після місяця початку роботи.",
+                "ru": "Некоторые работодатели должны уведомлять Налоговое агентство о найме определённых иностранных работников. Работодатели также обязаны в установленные законом сроки предоставить письменную информацию о существенных условиях труда и обеспечивать рабочую среду. Конкретные обязанности зависят от ситуации найма и требований закона. Исключения включают долгосрочных резидентов ЕС и определённых членов семьи по правилам свободного передвижения; если уведомление требуется, подайте его до конца третьего месяца после месяца начала работы."
               }
             },
             {
@@ -3448,12 +3454,13 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "2b15b8cb-2568-4b24-b5eb-4afd6b3682a7",
-                "55dfb9f1-bee9-54a7-867a-0c2379dca38e"
+                "55dfb9f1-bee9-54a7-867a-0c2379dca38e",
+                "8af0cba6-f3a1-4e5b-a6f9-35c62bd4471c"
               ],
               "Values": {
-                "en": "For 2026, Spain’s gross statutory minimum wage is €1,221 per month or €40.70 per day, depending on the statutory wage basis; the annual floor is €17,094. These rates apply through 31 December 2026. The Council of Ministers approved the 2027 SMI at €18,004 per year from 1 January 2027, as reported in the official Council reference. No hourly rate is inferred. These are gross amounts, not net-pay estimates.",
-                "uk": "У 2026 році валова законодавча мінімальна зарплата в Іспанії становить 1 221 євро на місяць або 40,70 євро на день залежно від установленої законом форми оплати; річний мінімум — 17 094 євро. Ці ставки діють до 31 грудня 2026 року. Рада міністрів затвердила SMI на 2027 рік у розмірі 18 004 євро на рік із 1 січня 2027 року, як зазначено в офіційному повідомленні Ради міністрів. Погодинну ставку не виведено. Це суми до оподаткування, а не оцінка чистої зарплати.",
-                "ru": "В 2026 году установленная законом минимальная зарплата в Испании до вычета налогов составляет 1 221 евро в месяц или 40,70 евро в день в зависимости от предусмотренной законом формы оплаты; годовой минимум — 17 094 евро. Эти ставки действуют до 31 декабря 2026 года. Совет министров утвердил SMI на 2027 год в размере 18 004 евро в год с 1 января 2027 года, как указано в официальном сообщении Совета министров. Почасовая ставка не выводится. Это суммы до вычета налогов, а не оценка зарплаты на руки."
+                "en": "For 2026, Spain’s gross statutory minimum wage is €1,221 per month or €40.70 per day, depending on the statutory wage basis; the annual floor is €17,094. These rates apply through 31 December 2026. The Council of Ministers approved the 2027 SMI at €18,004 per year from 1 January 2027, as reported in the official Council reference. No hourly rate is inferred. These are gross amounts, not net-pay estimates. From 1 January 2027, the enacted minimum wage is €1,286 per month, €42.87 per day, or €18,004 per year; 2026 rates remain separate.",
+                "uk": "У 2026 році валова законодавча мінімальна зарплата в Іспанії становить 1 221 євро на місяць або 40,70 євро на день залежно від установленої законом форми оплати; річний мінімум — 17 094 євро. Ці ставки діють до 31 грудня 2026 року. Рада міністрів затвердила SMI на 2027 рік у розмірі 18 004 євро на рік із 1 січня 2027 року, як зазначено в офіційному повідомленні Ради міністрів. Погодинну ставку не виведено. Це суми до оподаткування, а не оцінка чистої зарплати. З 1 січня 2027 року встановлена мінімальна зарплата становить 1 286 євро на місяць, 42,87 євро на день або 18 004 євро на рік; ставки 2026 року залишаються окремими.",
+                "ru": "В 2026 году установленная законом минимальная зарплата в Испании до вычета налогов составляет 1 221 евро в месяц или 40,70 евро в день в зависимости от предусмотренной законом формы оплаты; годовой минимум — 17 094 евро. Эти ставки действуют до 31 декабря 2026 года. Совет министров утвердил SMI на 2027 год в размере 18 004 евро в год с 1 января 2027 года, как указано в официальном сообщении Совета министров. Почасовая ставка не выводится. Это суммы до вычета налогов, а не оценка зарплаты на руки. С 1 января 2027 года установленная минимальная зарплата составляет 1 286 евро в месяц, 42,87 евро в день или 18 004 евро в год; ставки 2026 года указываются отдельно."
               }
             },
             {
@@ -3510,12 +3517,14 @@
                 "ec5c2ea1-fd6e-564f-825e-73fd0a5c7429",
                 "6ab4517b-bc98-5890-aef1-ff0bb9c6f227",
                 "ae4b6e26-5c1f-598e-ba51-8f67451bc621",
-                "7be4136e-5c35-5491-99d2-39de492cea0b"
+                "7be4136e-5c35-5491-99d2-39de492cea0b",
+                "c4015793-bfba-529b-b9c3-fbda351a68d6",
+                "28c61de2-1ddb-5984-8020-b9e19bb986e8"
               ],
               "Values": {
-                "en": "2026 gross monthly grade floors are €915, €1,031, €1,147, €1,263, €1,379 and €1,495; hourly floors are €5.259, €5.925, €6.592, €7.259, €7.925 and €8.592 respectively. Grade depends on job complexity and the applicable collective-agreement rules; dated figures require refresh. FUTURE from 1 January 2027: enacted monthly floors for grades 1–6 are €972, €1,088, €1,204, €1,320, €1,436 and €1,552; hourly floors are €5.586, €6.253, €6.920, €7.586, €8.253 and €8.920.",
-                "uk": "Місячні мінімуми брутто за шістьма рівнями складності у 2026 році: €915, €1 031, €1 147, €1 263, €1 379 і €1 495; погодинні мінімуми відповідно: €5,259, €5,925, €6,592, €7,259, €7,925 і €8,592. Рівень залежить від складності роботи та застосовних правил колективного договору; суми датовані й потребують оновлення. МАЙБУТНІ з 1 січня 2027 року: встановлені місячні мінімуми для рівнів 1–6 становитимуть €972, €1 088, €1 204, €1 320, €1 436 і €1 552; погодинні — €5,586, €6,253, €6,920, €7,586, €8,253 і €8,920.",
-                "ru": "Месячные минимумы брутто по шести уровням сложности в 2026 году: €915, €1 031, €1 147, €1 263, €1 379 и €1 495; почасовые минимумы соответственно: €5,259, €5,925, €6,592, €7,259, €7,925 и €8,592. Уровень зависит от сложности работы и применимых правил коллективного договора; суммы датированы и требуют обновления. БУДУЩИЕ с 1 января 2027 года: установленные месячные минимумы для уровней 1–6 составят €972, €1 088, €1 204, €1 320, €1 436 и €1 552; почасовые — €5,586, €6,253, €6,920, €7,586, €8,253 и €8,920."
+                "en": "2026 gross monthly grade floors are €915, €1,031, €1,147, €1,263, €1,379 and €1,495; hourly floors are €5.259, €5.925, €6.592, €7.259, €7.925 and €8.592 respectively. Grade depends on job complexity and the applicable collective-agreement rules; dated figures require refresh. FUTURE from 1 January 2027: enacted monthly floors for grades 1–6 are €972, €1,088, €1,204, €1,320, €1,436 and €1,552; hourly floors are €5.586, €6.253, €6.920, €7.586, €8.253 and €8.920. The 2026 hourly figures use a 40-hour week; adjust the hourly minimum for a shorter statutory week, and check any higher collective-agreement or wage-grade minimum.",
+                "uk": "Місячні мінімуми брутто за шістьма рівнями складності у 2026 році: €915, €1 031, €1 147, €1 263, €1 379 і €1 495; погодинні мінімуми відповідно: €5,259, €5,925, €6,592, €7,259, €7,925 і €8,592. Рівень залежить від складності роботи та застосовних правил колективного договору; суми датовані й потребують оновлення. МАЙБУТНІ з 1 січня 2027 року: встановлені місячні мінімуми для рівнів 1–6 становитимуть €972, €1 088, €1 204, €1 320, €1 436 і €1 552; погодинні — €5,586, €6,253, €6,920, €7,586, €8,253 і €8,920. Погодинні показники 2026 року розраховані для 40-годинного тижня; скоригуйте погодинний мінімум для коротшого законодавчого тижня та перевірте вищі колективні чи тарифні мінімуми.",
+                "ru": "Месячные минимумы брутто по шести уровням сложности в 2026 году: €915, €1 031, €1 147, €1 263, €1 379 и €1 495; почасовые минимумы соответственно: €5,259, €5,925, €6,592, €7,259, €7,925 и €8,592. Уровень зависит от сложности работы и применимых правил коллективного договора; суммы датированы и требуют обновления. БУДУЩИЕ с 1 января 2027 года: установленные месячные минимумы для уровней 1–6 составят €972, €1 088, €1 204, €1 320, €1 436 и €1 552; почасовые — €5,586, €6,253, €6,920, €7,586, €8,253 и €8,920. Почасовые показатели 2026 года рассчитаны для 40-часовой недели; скорректируйте почасовой минимум для более короткой установленной законом недели и проверьте более высокие коллективные или тарифные минимумы."
               }
             },
             {
@@ -3690,12 +3699,13 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "0163c42d-cc40-4f65-b06e-6535d23ea740",
-                "5b9eaffd-59e9-4d59-9280-8abb5af7ef02"
+                "5b9eaffd-59e9-4d59-9280-8abb5af7ef02",
+                "d3520d2c-2fc2-4cdf-89dc-eb192aa9b64a"
               ],
               "Values": {
-                "en": "For Special Act permit holders, the Ministry describes Health Act access once CPR registration and the yellow card are in place. This does not cover pending applicants, and not every healthcare service is free.",
-                "uk": "Для власників дозволу за Спеціальним законом міністерство описує доступ за Законом про охорону здоров’я після реєстрації CPR і видачі жовтої картки. Це не описує заявників, які очікують рішення; не всі медичні послуги безоплатні.",
-                "ru": "Для обладателей разрешения по Специальному закону министерство описывает доступ по Закону о здравоохранении после регистрации CPR и выдачи жёлтой карты. Это не описывает заявителей, ожидающих решения; не все медицинские услуги бесплатны."
+                "en": "For people holding a Special Act permit, Health Act services are available once they are registered in CPR. The yellow health card is issued after registration and documents practical access; physical issuance is not the entitlement trigger. This does not cover pending applicants, and not every healthcare service is free.",
+                "uk": "Для власників дозволу за Спеціальним законом послуги за Законом про охорону здоров’я доступні після реєстрації в CPR. Жовту картку видають після реєстрації; вона документує практичний доступ, але її фізичне отримання не є умовою виникнення права. Це не охоплює заявників, які очікують рішення; не всі медичні послуги безоплатні.",
+                "ru": "Для обладателей разрешения по Специальному закону услуги по Закону о здравоохранении доступны после регистрации в CPR. Жёлтую карту выдают после регистрации; она подтверждает практический доступ, но её физическое получение не является условием возникновения права. Это не относится к заявителям, ожидающим решения; не все медицинские услуги бесплатны."
               }
             },
             {
@@ -3757,9 +3767,9 @@
                 "e375e58f-972b-438b-9439-45dc9c51f22c"
               ],
               "Values": {
-                "en": "Spanish law places temporary-protection applicants in a specially protected group whose healthcare rights follow the applicable specific rules. The practical process is administered by competent regional health authorities; check the current rules where you live.",
-                "uk": "Закон Іспанії відносить заявників на тимчасовий захист до спеціально захищеної групи, права на медичну допомогу якої визначаються відповідними спеціальними правилами. Практичні процедури адмініструють компетентні регіональні органи охорони здоров’я; перевірте чинні правила за місцем проживання.",
-                "ru": "Закон Испании относит заявителей на временную защиту к специально защищённой группе, право которой на медицинскую помощь определяется соответствующими специальными правилами. Практические процедуры администрируют компетентные региональные органы здравоохранения; проверьте действующие правила по месту проживания."
+                "en": "Spanish law places temporary-protection applicants in a specially protected group whose healthcare rights follow the applicable specific rules. The practical process is administered by competent regional health authorities; check the current rules where you live. Healthcare entitlement for TP applicants starts on the date the application is submitted; regional card administration is separate.",
+                "uk": "Закон Іспанії відносить заявників на тимчасовий захист до спеціально захищеної групи, права на медичну допомогу якої визначаються відповідними спеціальними правилами. Практичні процедури адмініструють компетентні регіональні органи охорони здоров’я; перевірте чинні правила за місцем проживання. Право заявника на медичну допомогу починається з дати подання заяви на тимчасовий захист; регіональне оформлення картки є окремим.",
+                "ru": "Закон Испании относит заявителей на временную защиту к специально защищённой группе, право которой на медицинскую помощь определяется соответствующими специальными правилами. Практические процедуры администрируют компетентные региональные органы здравоохранения; проверьте действующие правила по месту проживания. Право заявителя на медицинскую помощь начинается с даты подачи заявления на временную защиту; региональное оформление карты является отдельным."
               }
             },
             {
@@ -3822,9 +3832,9 @@
                 "84ac063a-2b96-5676-b97c-ab372f94fd75"
               ],
               "Values": {
-                "en": "Temporary refuge alone does not create public-insurance membership. The separate §9h necessary-care reimbursement route may apply only to a relevant temporary-refuge holder not publicly insured in Slovakia and not covered by another EU Member State’s public health-insurance system; adult and child scope differs.",
-                "uk": "Тимчасове укриття саме по собі не створює членства у державному страхуванні. Окремий шлях відшкодування необхідної допомоги за §9h може стосуватися відповідного власника тимчасового укриття, який не застрахований у Словаччині й не охоплений державною системою страхування іншої держави ЄС; обсяг для дорослих і дітей різний.",
-                "ru": "Временное убежище само по себе не создаёт членства в государственном страховании. Отдельное возмещение необходимой помощи по §9h может применяться к соответствующему обладателю временного убежища, который не застрахован в Словакии и не охвачен государственной системой страхования другой страны ЕС; объём для взрослых и детей различается."
+                "en": "Temporary refuge alone does not create public-insurance membership. The separate §9h necessary-care reimbursement route may apply only to a relevant temporary-refuge holder not publicly insured in Slovakia and not covered by another EU Member State’s public health-insurance system; adult and child scope differs. VšZP’s child coverage range runs from birth through 18 years and 364 days. Before a physical TP document is issued, any document showing name and date of birth can support urgent care only.",
+                "uk": "Тимчасове укриття саме по собі не створює членства у державному страхуванні. Окремий шлях відшкодування необхідної допомоги за §9h може стосуватися відповідного власника тимчасового укриття, який не застрахований у Словаччині й не охоплений державною системою страхування іншої держави ЄС; обсяг для дорослих і дітей різний. Віковий діапазон покриття VšZP для дітей: від народження до 18 років і 364 днів включно. До видачі фізичного документа про тимчасовий захист будь-який документ з ім’ям і датою народження може підтвердити право лише на невідкладну допомогу.",
+                "ru": "Временное убежище само по себе не создаёт членства в государственном страховании. Отдельное возмещение необходимой помощи по §9h может применяться к соответствующему обладателю временного убежища, который не застрахован в Словакии и не охвачен государственной системой страхования другой страны ЕС; объём для взрослых и детей различается. Возрастной диапазон покрытия VšZP для детей: от рождения до 18 лет и 364 дней включительно. До выдачи физического документа о временной защите любой документ с именем и датой рождения может подтвердить право только на неотложную помощь."
               }
             },
             {
@@ -4726,9 +4736,9 @@
                 "de4856af-6e9b-5754-9a0a-6beb8e2e3727"
               ],
               "Values": {
-                "en": "Section 68 facility accommodation ordinarily lasts up to 60 days from first grant. Vulnerable groups: people aged 65+, a single parent caring for a child under five, or a court-appointed caregiver caring for a child under five. A vulnerable person may request a written extension for up to six months at a time; repeat requests are possible subject to capacity. A person already housed must apply at least 15 days before expiry. No extension/place is guaranteed.",
-                "uk": "Проживання у закладі за §68 зазвичай триває до 60 днів від першого надання. Вразливі категорії: особи від 65 років, одинокий з батьків, який доглядає дитину до п’яти років, або призначений судом опікун такої дитини. Письмове продовження можна просити до шести місяців за раз; повторні звернення можливі за наявності спроможності. Той, хто вже проживає у закладі, має звернутися не пізніше ніж за 15 днів до завершення строку. Продовження/місце не гарантуються.",
-                "ru": "Проживание в учреждении по §68 обычно длится до 60 дней с первого предоставления. Уязвимые категории: лица от 65 лет, одинокий родитель, ухаживающий за ребёнком младше пяти лет, или назначенный судом опекун такого ребёнка. Можно письменно просить продление до шести месяцев за раз; повторные обращения возможны при наличии мест. Уже размещённый человек должен подать заявление не менее чем за 15 дней до окончания срока. Продление/место не гарантируются."
+                "en": "Section 68 accommodation ordinarily lasts up to 60 days from first grant. Vulnerable groups include people aged 65+, a single parent caring for a child under five, the child under five in the qualifying care arrangement, or a court-appointed caregiver caring for that child. A vulnerable person may request a written extension for up to six months at a time; repeat requests depend on capacity. A person already housed must apply at least 15 days before expiry. No place or extension is guaranteed.",
+                "uk": "Проживання у закладі за §68 зазвичай триває до 60 днів від першого надання. До вразливих категорій належать особи від 65 років, одинокий з батьків, який доглядає дитину до п’яти років, сама дитина до п’яти років у відповідному порядку догляду або призначений судом опікун цієї дитини. Вразлива особа може просити письмове продовження до шести місяців за раз; повторні заяви залежать від наявності місць. Той, хто вже проживає у закладі, має подати заяву щонайменше за 15 днів до закінчення строку. Місце чи продовження не гарантуються.",
+                "ru": "Проживание в учреждении по §68 обычно длится до 60 дней с момента первого предоставления. К уязвимым категориям относятся люди от 65 лет, одинокий родитель, ухаживающий за ребёнком младше пяти лет, сам ребёнок младше пяти лет при соответствующем порядке ухода или назначенный судом опекун этого ребёнка. Уязвимое лицо может подать письменную просьбу о продлении до шести месяцев за раз; повторные обращения зависят от наличия мест. Уже размещённый человек должен подать заявление не менее чем за 15 дней до окончания срока. Место или продление не гарантируются."
               }
             },
             {
@@ -4742,9 +4752,9 @@
                 "530d3b5c-ab37-595c-83a0-c5708fa044af"
               ],
               "Values": {
-                "en": "Law recognizes a right to suitable accommodation or means of accommodation when necessary. Current Program 3 support reimburses eligible providers; it does not guarantee a particular placement.",
-                "uk": "Закон визнає право на належне житло або засоби для проживання за потреби. Чинна Програма 3 відшкодовує витрати відповідним надавачам, але не гарантує конкретне місце.",
-                "ru": "Закон признаёт право на подходящее жильё или средства для проживания при необходимости. Действующая Программа 3 возмещает расходы соответствующим поставщикам, но не гарантирует конкретное место."
+                "en": "Bulgarian law recognizes accommodation or means of accommodation where necessary. Under current Program 3, a usual one-time stay is limited to 60 days; eligible risk groups may use it for the full applicable temporary-protection period under current rules. Individual/family conditions apply and no placement or location is guaranteed. Program 3 reimbursement is paid to eligible providers, not as cash to displaced residents. Programme 3 normally allows one 60-day stay; qualifying risk groups may use it for the full applicable TP period subject to individual/family conditions, without a guaranteed place. Provider reimbursement is €8.40 before VAT (€9.16 or €10.08 including VAT by category), paid to the provider, not the resident.",
+                "uk": "Болгарське законодавство визнає право на житло або засоби проживання за потреби. За чинною Програмою 3 звичайне одноразове перебування обмежене 60 днями; визначені групи ризику можуть користуватися маршрутом протягом усього застосовного періоду тимчасового захисту. Діють умови для окремих осіб і сімей; розміщення чи місце не гарантуються. Відшкодування за Програмою 3 виплачується відповідним надавачам, а не переміщеним мешканцям готівкою. За Програмою 3 звичайний одноразовий строк становить 60 днів; відповідні групи ризику можуть користуватися нею протягом усього періоду захисту за індивідуальних/сімейних умов, без гарантії місця. Провайдеру відшкодовують 8,40 євро без ПДВ (9,16 або 10,08 євро з ПДВ залежно від категорії), а не мешканцю.",
+                "ru": "Болгарское законодательство предусматривает право на жильё или средства проживания при необходимости. По действующей Программе 3 обычное однократное размещение ограничено 60 днями; определённые группы риска могут пользоваться маршрутом весь применимый период временной защиты. Действуют условия для отдельных лиц и семей, размещение или место не гарантируются. Возмещение по Программе 3 выплачивается соответствующим поставщикам, а не перемещённым жителям наличными. По Программе 3 обычный разовый срок составляет 60 дней; соответствующие группы риска могут пользоваться ею весь период защиты при индивидуальных/семейных условиях, без гарантии места. Поставщику возмещают 8,40 евро без НДС (9,16 или 10,08 евро с НДС в зависимости от категории), а не жильцу."
               }
             },
             {
@@ -5277,9 +5287,9 @@
                 "dfb4d353-b6be-57ae-b238-9e142907e55a"
               ],
               "Values": {
-                "en": "For people with temporary protection, the Migration Agency daily allowance varies by accommodation and whether food is provided. Once a person is population-registered, Migration Agency financial aid ends and the person may instead qualify for benefits from Försäkringskassan, the Pensions Agency or their municipality. Försäkringskassan housing allowance for families with children is a separate benefit with its own income, housing and application rules; registration exceptions may apply. Eligibility must be checked with the responsible agency.",
-                "uk": "Розмір щоденної допомоги Міграційного агентства для людей із тимчасовим захистом залежить від житла та наявності харчування. Після реєстрації в реєстрі населення фінансова допомога Міграційного агентства припиняється; людина натомість може мати право на виплати Försäkringskassan, Пенсійного агентства або муніципалітету. Житлова допомога Försäkringskassan для сімей із дітьми є окремою виплатою з власними вимогами щодо доходу, житла та подання заяви; можливі винятки щодо реєстрації. Перевірте право на виплату у відповідному органі.",
-                "ru": "Размер ежедневного пособия Миграционного агентства для людей с временной защитой зависит от жилья и наличия питания. После регистрации в реестре населения финансовая помощь Миграционного агентства прекращается; вместо неё человек может иметь право на выплаты Försäkringskassan, Пенсионного агентства или муниципалитета. Жилищное пособие Försäkringskassan для семей с детьми — отдельная выплата со своими требованиями к доходу, жилью и подаче заявления; возможны исключения из требований регистрации. Проверьте право на выплату в соответствующем ведомстве."
+                "en": "The deadline to reapply for Migration Agency daily allowance for payments from 1 October 2026 was 30 September 2026 and has passed. An application received later does not cover days before receipt. If you still need accommodation or support, apply promptly and confirm the current route with the Agency.",
+                "uk": "Строк повторного звернення за щоденною допомогою Міграційного агентства для виплат із 1 жовтня 2026 року — 30 вересня 2026 року — минув. Заява, отримана пізніше, не покриває дні до її отримання. Якщо вам досі потрібне житло чи підтримка, подайте заяву якнайшвидше й уточніть чинний порядок в Агентстві.",
+                "ru": "Срок повторного обращения за ежедневным пособием Миграционного агентства для выплат с 1 октября 2026 года — 30 сентября 2026 года — прошёл. Заявление, полученное позже, не покрывает дни до его получения. Если вам всё ещё нужны жильё или поддержка, подайте заявление как можно скорее и уточните действующий порядок в Агентстве."
               }
             },
             {
@@ -5337,12 +5347,13 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "8ccb8ced-a074-5702-8441-c3cd529cec4b",
-                "530d3b5c-ab37-595c-83a0-c5708fa044af"
+                "530d3b5c-ab37-595c-83a0-c5708fa044af",
+                "89d9cea9-d325-58fc-89fb-0b78c574b5a1"
               ],
               "Values": {
-                "en": "Program 3 reimbursement goes to eligible accommodation providers, not directly to displaced people as rent money. The latest rate located is not confirmed as current.",
-                "uk": "Відшкодування за Програмою 3 отримують відповідні надавачі житла, а не переміщені люди як гроші на оренду. Останній знайдений тариф не підтверджено як чинний.",
-                "ru": "Возмещение по Программе 3 получают соответствующие поставщики жилья, а не перемещённые лица в виде денег на аренду. Последний найденный тариф не подтверждён как действующий."
+                "en": "Program 3 reimbursement goes to eligible accommodation providers, not directly to displaced people as rent money. The latest rate located is not confirmed as current. Programme 3 provider reimbursement is €8.40 per person before VAT (€9.16 or €10.08 including VAT by accommodation category); it is paid to eligible providers, not residents.",
+                "uk": "Відшкодування за Програмою 3 отримують відповідні надавачі житла, а не переміщені люди як гроші на оренду. Останній знайдений тариф не підтверджено як чинний. Відшкодування провайдеру за Програмою 3 становить 8,40 євро на особу без ПДВ (9,16 або 10,08 євро з ПДВ залежно від категорії житла); його виплачують провайдерам, а не мешканцям.",
+                "ru": "Возмещение по Программе 3 получают соответствующие поставщики жилья, а не перемещённые лица в виде денег на аренду. Последний найденный тариф не подтверждён как действующий. Возмещение поставщику по Программе 3 составляет 8,40 евро на человека без НДС (9,16 или 10,08 евро с НДС в зависимости от категории размещения); оно выплачивается поставщикам, а не жильцам."
               }
             },
             {
@@ -5751,7 +5762,6 @@
                 "c1e00c90-969a-5831-90a5-6c8e06edb96c",
                 "721e7d54-e295-5eec-9467-b8580f3ba6c4",
                 "d95b3e68-784e-517c-8f8e-b72f1789357c",
-                "fe6b9f9e-ea2b-5864-bd31-e4f19b566e7b",
                 "ea7b16e1-7abc-5ebc-9521-2d45289a040d",
                 "a8de9820-9b53-5b98-b1e7-b89cb427f71d",
                 "8e80f891-0c43-5ad7-a308-c54c4c55d097"
@@ -5898,12 +5908,13 @@
               "OfficialSourceIds": [
                 "5acde4f0-9f59-4712-a5ee-8c557c0184af",
                 "eb031d39-0478-479b-b1d4-116fb19c69d7",
-                "f549fba3-6194-4e4c-886c-c77d6d419c77"
+                "f549fba3-6194-4e4c-886c-c77d6d419c77",
+                "2bf43e8d-8479-47a7-b429-f2a41006e080"
               ],
               "Values": {
-                "en": "A school may provide study guidance in a pupil’s mother tongue when needed; this is different from mother-tongue teaching, which has additional conditions and is decided by the school. Temporary protection alone does not create an entitlement to SFI Swedish-language courses; eligibility and any municipal participation depend on the applicable rules.",
-                "uk": "Школа може надавати учневі мовну навчальну підтримку рідною мовою, якщо це потрібно; вона відрізняється від викладання рідної мови як предмета, для якого діють додаткові умови й рішення школи. Сам тимчасовий захист не створює права на курси шведської мови SFI; відповідність умовам і можлива участь за рішенням муніципалітету залежать від застосовних правил.",
-                "ru": "Школа может предоставлять ученику учебную поддержку на родном языке, если это необходимо; она отличается от преподавания родного языка как предмета, для которого действуют дополнительные условия и решение школы. Один лишь статус временной защиты не создаёт права на курсы шведского языка SFI; соответствие условиям и возможное участие по решению муниципалитета зависят от применимых правил."
+                "en": "A school may provide study guidance in a pupil’s mother tongue when needed; this is different from mother-tongue teaching, which has additional conditions and is decided by the school. Temporary protection alone does not create an entitlement to SFI Swedish-language courses; eligibility and any municipal participation depend on the applicable rules. SFI is generally limited to three years, with possible extensions and transition rules for learners accepted before 1 January 2026. New course plans apply to courses starting after 31 December 2026.",
+                "uk": "Школа може надавати учневі мовну навчальну підтримку рідною мовою, якщо це потрібно; вона відрізняється від викладання рідної мови як предмета, для якого діють додаткові умови й рішення школи. Сам тимчасовий захист не створює права на курси шведської мови SFI; відповідність умовам і можлива участь за рішенням муніципалітету залежать від застосовних правил. Навчання SFI зазвичай обмежене трьома роками з можливим продовженням і перехідними правилами для учнів, прийнятих до 1 січня 2026 року. Нові навчальні плани застосовуються до курсів, що починаються після 31 грудня 2026 року.",
+                "ru": "Школа может предоставлять ученику учебную поддержку на родном языке, если это необходимо; она отличается от преподавания родного языка как предмета, для которого действуют дополнительные условия и решение школы. Один лишь статус временной защиты не создаёт права на курсы шведского языка SFI; соответствие условиям и возможное участие по решению муниципалитета зависят от применимых правил. Обучение SFI обычно ограничено тремя годами с возможным продлением и переходными правилами для учащихся, принятых до 1 января 2026 года. Новые учебные планы применяются к курсам, начинающимся после 31 декабря 2026 года."
               }
             },
             {
@@ -5976,12 +5987,13 @@
               "IsAvailable": true,
               "OfficialSourceIds": [
                 "ad8f3eb2-23aa-5b13-90ec-1dc597df18d7",
-                "31dc189b-429d-5dd3-9a5e-f11aba7c397c"
+                "31dc189b-429d-5dd3-9a5e-f11aba7c397c",
+                "eb79f315-5e9a-537c-a299-8a3ed6ea4efd"
               ],
               "Values": {
-                "en": "Schools assess German-language needs and may use `Deutschförderklassen`, `Deutschförderkurse` or a site-specific support plan in 2026/27. No individual course, number of hours or duration is guaranteed.",
-                "uk": "Школи оцінюють потребу в підтримці німецької мови й у 2026/27 році можуть застосовувати `Deutschförderklassen`, `Deutschförderkurse` або власний план підтримки. Конкретний курс, кількість годин чи тривалість не гарантуються.",
-                "ru": "Школы оценивают потребность в поддержке немецкого языка и в 2026/27 году могут применять `Deutschförderklassen`, `Deutschförderkurse` или собственный план поддержки. Конкретный курс, число часов или длительность не гарантируются."
+                "en": "Schools assess German-language needs and may use `Deutschförderklassen`, `Deutschförderkurse` or a site-specific support plan in 2026/27. No individual course, number of hours or duration is guaranteed. The 2027 mandatory summer-school rule applies only to specified German-support classes/courses, with automatic registration where required and regional dates; it is not universal for all pupils.",
+                "uk": "Школи оцінюють потребу в підтримці німецької мови й у 2026/27 році можуть застосовувати `Deutschförderklassen`, `Deutschförderkurse` або власний план підтримки. Конкретний курс, кількість годин чи тривалість не гарантуються. Правило об обов’язковій літній школі 2027 року стосується лише визначених класів/курсів підтримки німецької мови, передбачає автоматичну реєстрацію та регіональні дати; воно не є універсальним для всіх учнів.",
+                "ru": "Школы оценивают потребность в поддержке немецкого языка и в 2026/27 году могут применять `Deutschförderklassen`, `Deutschförderkurse` или собственный план поддержки. Конкретный курс, число часов или длительность не гарантируются. Правило об обязательной летней школе 2027 года касается только определённых классов/курсов поддержки немецкого языка, предусматривает автоматическую регистрацию и региональные даты; оно не распространяется на всех учеников."
               }
             },
             {
@@ -6543,9 +6555,9 @@
                 "e0c6e5e6-c491-4394-90fc-729ee9d05c3d"
               ],
               "Values": {
-                "en": "People covered by the Reception Act may apply to the Migration Agency for daily allowance or a special grant if income and assets are insufficient; household resources and accommodation affect assessment, and payment is not guaranteed. Agency support normally ends when population registration takes effect. Under current law, while a person remains covered by the Reception Act, they have no right to municipal economic assistance under Social Services Act Chapter 12 §1. Once that coverage ends, a registered temporary-protection holder may apply to the municipality under ordinary needs-based rules; the municipality assesses each case individually, and registration does not guarantee payment. The statutory change takes effect on 2 January 2027 and is not yet in force.",
-                "uk": "Люди, на яких поширюється Закон про прийом, можуть звернутися до Міграційного агентства по щоденну допомогу або спеціальну виплату, якщо доходів і майна недостатньо; під час оцінювання враховують ресурси домогосподарства та житло, а виплата не гарантується. Підтримка агентства зазвичай припиняється після набрання чинності реєстрацією населення. За чинним законодавством, поки на людину поширюється Закон про прийом, вона не має права на муніципальну економічну допомогу за главою 12 §1 Закону про соціальні послуги. Після припинення такого охоплення зареєстрований власник тимчасового захисту може звернутися до муніципалітету за звичайними правилами оцінювання потреб; муніципалітет розглядає кожну справу індивідуально, а реєстрація не гарантує виплату. Законодавча зміна набирає чинності 2 січня 2027 року й наразі ще не діє.",
-                "ru": "Люди, на которых распространяется Закон о приёме, могут обратиться в Миграционное агентство за ежедневным пособием или специальной выплатой, если доходов и имущества недостаточно; при оценке учитываются ресурсы домохозяйства и жильё, выплата не гарантируется. Поддержка агентства обычно прекращается после вступления в силу регистрации населения. По действующему законодательству, пока на человека распространяется Закон о приёме, у него нет права на муниципальную экономическую помощь по главе 12 §1 Закона о социальных услугах. После прекращения такого охвата зарегистрированный обладатель временной защиты может обратиться в муниципалитет по обычным правилам оценки нуждаемости; муниципалитет рассматривает каждый случай индивидуально, а регистрация не гарантирует выплату. Законодательное изменение вступает в силу 2 января 2027 года и пока не действует."
+                "en": "For daily allowance to continue from 1 October 2026, the new application had to reach the Migration Agency by 30 September 2026. That deadline has passed. A later application cannot cover days before it was received; apply promptly if you still need support and ask the Agency about your case.",
+                "uk": "Щоб щоденна допомога продовжувала виплачуватися з 1 жовтня 2026 року, нову заяву потрібно було подати до Міграційного агентства до 30 вересня 2026 року. Цей строк минув. Пізніша заява не покриває дні до її отримання; якщо підтримка досі потрібна, подайте заяву якнайшвидше й уточніть свою ситуацію в Агентстві.",
+                "ru": "Чтобы ежедневное пособие продолжало выплачиваться с 1 октября 2026 года, новое заявление нужно было подать в Миграционное агентство до 30 сентября 2026 года. Этот срок прошёл. Более позднее заявление не покрывает дни до его получения; если поддержка всё ещё нужна, подайте заявление как можно скорее и уточните свою ситуацию в Агентстве."
               }
             },
             {
@@ -7148,12 +7160,13 @@
               "OfficialSourceIds": [
                 "f87e7ade-a2cc-42fc-a8f9-764476219a67",
                 "eaa069f9-9bec-407f-86d8-7d7966b082fc",
-                "f2bb0f3b-2674-54ea-8d97-5b0244e958cc"
+                "f2bb0f3b-2674-54ea-8d97-5b0244e958cc",
+                "4d8fabcf-05ce-41a5-96bb-1a02e5f2866a"
               ],
               "Values": {
-                "en": "Families with children may apply to the INSS for the Minimum Vital Income (IMV) and its child supplement (CAPI), including a possible CAPI-only award, if they meet the applicable residence, household, income and asset rules. The general residence rule is one year of legal and effective residence in Spain for beneficiaries and household members, subject to statutory exceptions. Temporary protection alone does not guarantee an award. A separate dependent-child family benefit is limited to qualifying disability cases (under 18 with disability of at least 33%, or age 18 and over with disability of at least 65%); new general claims for non-disabled children closed on 1 June 2020.",
-                "uk": "Сім’ї з дітьми можуть подати до INSS заяву на мінімальний життєвий дохід (IMV) і дитячу доплату до нього (CAPI), зокрема окрему виплату CAPI, якщо відповідають застосовним вимогам щодо проживання, складу сім’ї, доходів і майна. Загальне правило вимагає одного року законного та фактичного проживання в Іспанії для заявників і членів сім’ї, з урахуванням передбачених законом винятків. Сам тимчасовий захист не гарантує виплати. Окрема сімейна допомога на дитину на утриманні обмежена випадками відповідної інвалідності (до 18 років — щонайменше 33%, від 18 років — щонайменше 65%); подання нових загальних заяв на дітей без інвалідності припинилося 1 червня 2020 року.",
-                "ru": "Семьи с детьми могут подать в INSS заявление на минимальный жизненный доход (IMV) и детскую надбавку к нему (CAPI), в том числе на отдельную выплату CAPI, если они соответствуют применимым требованиям к проживанию, составу семьи, доходам и имуществу. Общее правило требует одного года законного и фактического проживания в Испании для заявителей и членов семьи с учётом предусмотренных законом исключений. Сам временный статус не гарантирует выплату. Отдельное семейное пособие на ребёнка на иждивении ограничено случаями соответствующей инвалидности (до 18 лет — не менее 33%, с 18 лет — не менее 65%); приём новых обычных заявлений на детей без инвалидности прекратился 1 июня 2020 года."
+                "en": "Families with children may apply to the INSS for the Minimum Vital Income (IMV) and its child supplement (CAPI), including a possible CAPI-only award, if they meet the applicable residence, household, income and asset rules. The general residence rule is one year of legal and effective residence in Spain for beneficiaries and household members, subject to statutory exceptions. Temporary protection alone does not guarantee an award. A separate dependent-child family benefit is limited to qualifying disability cases (under 18 with disability of at least 33%, or age 18 and over with disability of at least 65%); new general claims for non-disabled children closed on 1 June 2020. CAPI may be awarded without the main IMV amount where its own conditions are met; it is not automatic.",
+                "uk": "Сім’ї з дітьми можуть подати до INSS заяву на мінімальний життєвий дохід (IMV) і дитячу доплату до нього (CAPI), зокрема окрему виплату CAPI, якщо відповідають застосовним вимогам щодо проживання, складу сім’ї, доходів і майна. Загальне правило вимагає одного року законного та фактичного проживання в Іспанії для заявників і членів сім’ї, з урахуванням передбачених законом винятків. Сам тимчасовий захист не гарантує виплати. Окрема сімейна допомога на дитину на утриманні обмежена випадками відповідної інвалідності (до 18 років — щонайменше 33%, від 18 років — щонайменше 65%); подання нових загальних заяв на дітей без інвалідності припинилося 1 червня 2020 року. CAPI може призначатися без основної суми IMV за виконання власних умов; виплата не є автоматичною.",
+                "ru": "Семьи с детьми могут подать в INSS заявление на минимальный жизненный доход (IMV) и детскую надбавку к нему (CAPI), в том числе на отдельную выплату CAPI, если они соответствуют применимым требованиям к проживанию, составу семьи, доходам и имуществу. Общее правило требует одного года законного и фактического проживания в Испании для заявителей и членов семьи с учётом предусмотренных законом исключений. Сам временный статус не гарантирует выплату. Отдельное семейное пособие на ребёнка на иждивении ограничено случаями соответствующей инвалидности (до 18 лет — не менее 33%, с 18 лет — не менее 65%); приём новых обычных заявлений на детей без инвалидности прекратился 1 июня 2020 года. CAPI может назначаться без основной суммы IMV при выполнении собственных условий; выплата не предоставляется автоматически."
               }
             },
             {
@@ -7255,9 +7268,9 @@
                 "358c5219-739e-528a-8de8-dff5f77c79e0"
               ],
               "Values": {
-                "en": "From 1 July 2026, displaced Ukrainians’ `Familienbeihilfe` follows the current general conditions and the Grundversorgung boundary, with a narrow significant-disability exception; the former employment/AMS condition no longer applies. `Kinderabsetzbetrag` is paid with it; childcare and maternity benefits have separate conditions.",
-                "uk": "З 1 липня 2026 року `Familienbeihilfe` для переміщених українців підпорядковується чинним загальним умовам і правилу щодо Grundversorgung, із вузьким винятком для випадку значної інвалідності; колишня вимога працевлаштування/реєстрації в AMS не діє. `Kinderabsetzbetrag` виплачується разом із нею; допомога на догляд за дитиною та виплата у зв’язку з вагітністю й пологами мають окремі умови.",
-                "ru": "С 1 июля 2026 года `Familienbeihilfe` для перемещённых украинцев подчиняется текущим общим условиям и правилу о Grundversorgung, с узким исключением для случая значительной инвалидности; прежнее требование о работе/регистрации в AMS больше не действует. `Kinderabsetzbetrag` выплачивается вместе с ней; пособия по уходу за ребёнком и материнству имеют отдельные условия."
+                "en": "From 1 July 2026, Familienbeihilfe is generally unavailable while the person receives Grundversorgung, including relevant in-kind support such as health-insurance assistance. A narrow significant-disability exception applies. The former employment/AMS-registration condition was removed. Kinderbetreuungsgeld remains separate and has its own residence, insurance and income-history conditions.",
+                "uk": "З 1 липня 2026 року Familienbeihilfe зазвичай не надається, поки особа отримує Grundversorgung, включно з відповідною допомогою в натуральній формі, як-от підтримкою медичного страхування. Діє вузький виняток для випадку значної інвалідності. Попередню вимогу щодо працевлаштування/реєстрації в AMS скасовано. Kinderbetreuungsgeld є окремою виплатою зі своїми умовами проживання, страхування та історії доходів.",
+                "ru": "С 1 июля 2026 года Familienbeihilfe обычно не предоставляется, пока человек получает Grundversorgung, включая соответствующую натуральную поддержку, например помощь с медицинской страховкой. Действует узкое исключение для случая значительной инвалидности. Прежнее требование о работе/регистрации в AMS отменено. Kinderbetreuungsgeld — отдельное пособие со своими условиями проживания, страхования и истории доходов."
               }
             },
             {
@@ -7323,12 +7336,13 @@
               "OfficialSourceIds": [
                 "b3dd187c-da7d-5948-838c-69b2908b67ef",
                 "0a48ce45-45eb-5bd4-b643-46d75e002135",
-                "586b8189-0d4d-55c6-8bdd-603b0b9d1d23"
+                "586b8189-0d4d-55c6-8bdd-603b0b9d1d23",
+                "2ff25ce4-d175-5eb5-a785-84f8c36f4369"
               ],
               "Values": {
-                "en": "Child benefit (barnetrygd) may be available when residence and status conditions are met; many foreign families must have lived lawfully and continuously in Norway for 12 months, while EEA coordination can change the result. Cash-for-care (kontantstøtte) is separate and generally requires a child aged 13–19 months, an eligible childcare-place situation and five years’ National Insurance membership.",
-                "uk": "Допомога на дитину (barnetrygd) може бути доступна за умови виконання вимог щодо проживання та статусу; для багатьох іноземних сімей необхідно законно й безперервно прожити в Норвегії 12 місяців, а координація за правилами ЄЕЗ може змінити результат. Виплата по догляду за дитиною (kontantstøtte) є окремою та зазвичай вимагає, щоб дитині було 13–19 місяців, а також виконання умов щодо місця в дитячому садку та п’ятирічного членства в системі національного страхування.",
-                "ru": "Пособие на ребёнка (barnetrygd) может быть доступно при соблюдении условий проживания и статуса; многим иностранным семьям необходимо законно и непрерывно прожить в Норвегии 12 месяцев, а координация по правилам ЕЭЗ может повлиять на результат. Пособие по уходу за ребёнком (kontantstøtte) является отдельной выплатой; обычно ребёнку должно быть 13–19 месяцев, а также должны выполняться условия о месте в детском саду и пятилетнем членстве в системе национального страхования."
+                "en": "Child benefit (barnetrygd) may be available when residence and status conditions are met; many foreign families must have lived lawfully and continuously in Norway for 12 months, while EEA coordination can change the result. Cash-for-care (kontantstøtte) is separate and generally requires a child aged 13–19 months, an eligible childcare-place situation and five years’ National Insurance membership. Cash-for-care requires that the child does not attend kindergarten full time; part-time attendance may reduce payment.",
+                "uk": "Допомога на дитину (barnetrygd) може бути доступна за умови виконання вимог щодо проживання та статусу; для багатьох іноземних сімей необхідно законно й безперервно прожити в Норвегії 12 місяців, а координація за правилами ЄЕЗ може змінити результат. Виплата по догляду за дитиною (kontantstøtte) є окремою та зазвичай вимагає, щоб дитині було 13–19 місяців, а також виконання умов щодо місця в дитячому садку та п’ятирічного членства в системі національного страхування. Для допомоги по догляду дитина не має відвідувати садок повний день; неповний день може зменшити суму.",
+                "ru": "Пособие на ребёнка (barnetrygd) может быть доступно при соблюдении условий проживания и статуса; многим иностранным семьям необходимо законно и непрерывно прожить в Норвегии 12 месяцев, а координация по правилам ЕЭЗ может повлиять на результат. Пособие по уходу за ребёнком (kontantstøtte) является отдельной выплатой; обычно ребёнку должно быть 13–19 месяцев, а также должны выполняться условия о месте в детском саду и пятилетнем членстве в системе национального страхования. Для пособия по уходу ребёнок не должен посещать детский сад полный день; неполный день может уменьшить сумму."
               }
             },
             {

@@ -79,9 +79,9 @@
   {
     "Id": "d3520d2c-2fc2-4cdf-89dc-eb192aa9b64a",
     "InformationEntryId": "b1e4aed1-bbaf-4f09-9468-74000bf96430",
-    "Title": "Sundhedshjælp til ukrainske flygtninge",
-    "Url": "https://www.ism.dk/nyheder/2022/april/sundhedshjaelp-til-ukrainske-flygtninge",
-    "LastCheckedAt": "2026-10-15T16:37:09+00:00"
+    "Title": "Danish Health Authority, Healthcare access for people displaced from Ukraine",
+    "Url": "https://www.sst.dk/vidensbase/sundhedsvaesenets-rammer/beredskab/beredskab-og-krigen-i-ukraine/adgang-til-sundheds-vaesenet-for-flygtninge-fra-ukraine",
+    "LastCheckedAt": "2026-11-22T00:00:00+00:00"
   },
   {
     "Id": "0163c42d-cc40-4f65-b06e-6535d23ea740",
@@ -3222,9 +3222,9 @@
   {
     "Id": "49ae3d06-a9a3-5319-bf00-520c542d44c2",
     "InformationEntryId": "61d13a69-6704-50ee-8b7b-e673a2828e65",
-    "Title": "Romanian Legislative Portal, OUG 96/2024, especially Article 19",
+    "Title": "Romanian Legislative Portal, Emergency Ordinance 96/2024, Article 19",
     "Url": "https://legislatie.just.ro/Public/DetaliiDocument/284711",
-    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-22T00:00:00+00:00"
   },
   {
     "Id": "c587c8b0-1ef3-5124-b335-44e82158a480",
@@ -3259,7 +3259,7 @@
     "InformationEntryId": "61d13a69-6704-50ee-8b7b-e673a2828e65",
     "Title": "Romanian Legislative Portal, Law 367/2022 on social dialogue",
     "Url": "https://legislatie.just.ro/Public/DetaliiDocument/262989",
-    "LastCheckedAt": "2026-11-05T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-22T00:00:00+00:00"
   },
   {
     "Id": "2964fb39-22fa-58a3-86a6-0fbbc1c34b8d",
@@ -4097,9 +4097,9 @@
   {
     "Id": "92763c9a-e086-5432-be40-770681f92d95",
     "InformationEntryId": "c276de77-a6b9-5ff7-bbc7-685349b1009a",
-    "Title": "Ministry of Interior, Migration Directorate residence services",
-    "Url": "https://www.mvr.bg/migration/%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D0%B8-%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B8-%D0%B7%D0%B0-%D0%B3%D1%80%D0%B0%D0%B6%D0%B4%D0%B0%D0%BD%D0%B8/rpr",
-    "LastCheckedAt": "2026-11-17T00:00:00+00:00"
+    "Title": "Ministry of Interior, Migration Directorate, residence services",
+    "Url": "https://www.mvr.bg/migration",
+    "LastCheckedAt": "2026-11-22T00:00:00+00:00"
   },
   {
     "Id": "a8f52573-501f-5ef2-929d-4b3d79934145",
@@ -4342,9 +4342,9 @@
   {
     "Id": "4639994e-692e-5fdd-80a1-e65fbb61f9da",
     "InformationEntryId": "db6f961d-e976-52c1-8ef3-d826ee46b3fc",
-    "Title": "Sofia Regional Department of Education, admission and education guidance",
-    "Url": "https://ruo.mon.bg/sofia-grad/ucheniczi/priem-i-obuchenie-na-decza-i-uchenici-tarsesthi-vremenna-zakrila/",
-    "LastCheckedAt": "2026-11-17T00:00:00+00:00"
+    "Title": "Sofia Regional Department of Education, student admission and education guidance",
+    "Url": "https://ruo.mon.bg/sofia-grad/",
+    "LastCheckedAt": "2026-11-22T00:00:00+00:00"
   },
   {
     "Id": "b76ea3f3-4ee1-5b97-b724-5cbf35d67f34",
@@ -4923,9 +4923,9 @@
   {
     "Id": "4cd09057-d389-5bf3-bcbc-5e4853bff7fa",
     "InformationEntryId": "28aee635-27ff-525c-9cd3-8673b5ba2be3",
-    "Title": "Normattiva, Law 213/2023 conversion provision",
+    "Title": "Normattiva, Law 213/2023 conversion provision (specified Ukrainian cohort; not TP permit-renewal procedure)",
     "Url": "https://www.normattiva.it/eli/stato/LEGGE/2023/12/30/213/CONSOLIDATED",
-    "LastCheckedAt": "2026-11-17T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-22T00:00:00+00:00"
   },
   {
     "Id": "59c83267-a469-5689-b90c-af386a8be359",
@@ -6001,9 +6001,9 @@
   {
     "Id": "7e6c51ae-784c-5494-acdd-6e44526fef30",
     "InformationEntryId": "e6b45fb5-4180-5e57-8e48-30c25ddad0f8",
-    "Title": "WRC, [National Minimum Wage](https://www.workplacerelations.ie/en/what_you_should_know/hours-and-wages/national%20minimum%20wage/national_minimum_wage.html)",
+    "Title": "Workplace Relations Commission, National Minimum Wage",
     "Url": "https://www.workplacerelations.ie/en/what_you_should_know/hours-and-wages/national%20minimum%20wage/national_minimum_wage.html",
-    "LastCheckedAt": "2026-11-18T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-22T00:00:00+00:00"
   },
   {
     "Id": "59d457af-4e8a-5542-b3b8-ed202a624bcc",
@@ -6393,9 +6393,9 @@
   {
     "Id": "44c2a53e-f0ab-5eb3-b167-016b7e89c86d",
     "InformationEntryId": "d16ad009-3391-5e3b-80b2-5b0d348503d3",
-    "Title": "Préfecture de Seine-Saint-Denis, “Ukraine - Nouvelles modalités”",
-    "Url": "https://www.seine-saint-denis.gouv.fr/Actualites/Breves-Informations-Conseils/Ukraine-Nouvelles-modalites",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+    "Title": "Préfecture de Seine-Saint-Denis, current temporary-protection appointment procedure",
+    "Url": "https://demarche.numerique.gouv.fr/commencer/renouvellement-titre-sejour-protection-temporaire",
+    "LastCheckedAt": "2026-11-22T00:00:00+00:00"
   },
   {
     "Id": "bec70186-5af2-54e6-8ba3-2a4f8ce770c1",
@@ -6449,16 +6449,9 @@
   {
     "Id": "a3d23582-5dd0-5ae8-ba1e-c7fb48e46e7a",
     "InformationEntryId": "82179b12-c3bd-5bf1-be0a-374502fc0386",
-    "Title": "France Travail, “Premier entretien France Travail”",
-    "Url": "https://www.francetravail.fr/faq/candidat/ma-recherche-demploi/laccompagnement-par-le-reseau-fr/diagnostic/premier-entretien-france-travail.html",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
-  },
-  {
-    "Id": "2b033f12-8f12-5d32-a767-66b34dbfaa08",
-    "InformationEntryId": "82179b12-c3bd-5bf1-be0a-374502fc0386",
-    "Title": "France Travail / Mes aides, “Ateliers-Conseils : Préparer sa candidature”",
-    "Url": "https://mes-aides.francetravail.fr/trouver-un-emploi/preparer-une-candidature/france-travail/ateliers-conseils-preparer-une-candidature-",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+    "Title": "France Travail, First appointment with France Travail",
+    "Url": "https://www.francetravail.fr/candidat/france-travail-et-vous/le-premier-entretien.html",
+    "LastCheckedAt": "2026-11-22T00:00:00+00:00"
   },
   {
     "Id": "7d86532f-1621-5249-a9c4-c4601c445f70",
@@ -6676,13 +6669,6 @@
     "Title": "Service-Public / DILA, “Scolarisation au collège ou lycée d’un élève venant de l’étranger”",
     "Url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F21304",
     "LastCheckedAt": "2026-11-11T00:00:00+00:00"
-  },
-  {
-    "Id": "fe6b9f9e-ea2b-5864-bd31-e4f19b566e7b",
-    "InformationEntryId": "0a1c276b-9a49-5bf5-8be8-104974dd0e5e",
-    "Title": "Ministry of National Education, Circular 2002-063, “Modalités d’inscription et de scolarisation des élèves de nationalité étrangère des premier et second degrés”",
-    "Url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1866",
-    "LastCheckedAt": "2026-11-19T00:00:00+00:00"
   },
   {
     "Id": "d3ac151f-b455-548c-b287-781e29a82249",
@@ -6995,9 +6981,9 @@
   {
     "Id": "7343237a-23ed-546e-96be-3e308e41aa33",
     "InformationEntryId": "a308b75d-4b39-56d0-9ce9-effb4418400c",
-    "Title": "Préfecture de la Haute-Garonne, “Ukraine : mobilisation des services de l’État dans le département”",
-    "Url": "https://www.haute-garonne.gouv.fr/Actualites/Ukraine-mobilisation-des-services-de-l-Etat-dans-le-departement",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+    "Title": "Haute-Garonne Prefecture, Ukraine and state services in the department",
+    "Url": "https://www.haute-garonne.gouv.fr/actualites/international-et-europe/ukraine-mobilisation-des-services-de-letat-dans-le-departement",
+    "LastCheckedAt": "2026-11-22T00:00:00+00:00"
   },
   {
     "Id": "403f8b19-ddc8-5350-8853-1ade414d0d37",
@@ -10336,7 +10322,7 @@
     "InformationEntryId": "c8c06066-d3cd-55ce-88b0-3499384eece7",
     "Title": "Polizia di Stato, Questura di Roma — renewal of Ukrainian temporary-protection permits",
     "Url": "https://questure.poliziadistato.it/it/Roma/articolo/199867b85c08de1f5642927550",
-    "LastCheckedAt": "2026-11-21T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-22T00:00:00+00:00"
   },
   {
     "Id": "1bad6a10-abe2-5b2f-976c-bb4b3e4ad274",
@@ -10593,9 +10579,9 @@
   {
     "Id": "55dfb9f1-bee9-54a7-867a-0c2379dca38e",
     "InformationEntryId": "b76b631c-92de-4379-8136-c9e4e08e2fd2",
-    "Title": "Council of Ministers reference — 2027 statutory minimum wage approval",
-    "Url": "https://www.lamoncloa.gob.es/consejoministros/referencias/Paginas/2026/20261117-referencia-rueda-de-consejo-ministros.aspx",
-    "LastCheckedAt": "2026-11-18T00:00:00+00:00"
+    "Title": "Spain, Royal Decree 1013/2026 setting the 2027 minimum wage, BOE-A-2026-24189",
+    "Url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24189",
+    "LastCheckedAt": "2026-11-22T00:00:00+00:00"
   },
   {
     "Id": "b557071d-a1d5-5477-afc8-7bac81a15ed4",
@@ -10672,13 +10658,6 @@
     "InformationEntryId": "411f9a13-a59d-53e6-a25c-148d63aa3818",
     "Title": "Lovdata: Immigration Regulations §7-5a, temporary collective protection for displaced persons from Ukraine",
     "Url": "https://lovdata.no/dokument/SF/forskrift/2009-10-15-1286/KAPITTEL_7-3",
-    "LastCheckedAt": "2026-11-18T00:00:00+00:00"
-  },
-  {
-    "Id": "aeec0350-1919-56f6-9a21-872a8fb11f58",
-    "InformationEntryId": "027596b8-606a-58df-aae0-63a040f69064",
-    "Title": "IMDi: Information about introduction programme and language training for collective-protection holders",
-    "Url": "https://www.imdi.no/globalassets/dokumenter/informasjon-om-introduksjonsprogram-og-sprakopplaring-for-personer-med-kollektiv-beskyttelse/endinformasjon-om-introduksjonsprogram-og-sprakopplaring-for-deg-med-midlertidig-kollektiv-beskyttelse-engelsk.pdf",
     "LastCheckedAt": "2026-11-18T00:00:00+00:00"
   },
   {
@@ -10918,5 +10897,47 @@
     "Title": "Minister of Interior and Administration, Regulation of 3 April 2026 on the CUKR residence-card application form (Dz.U. 2026 item 530)",
     "Url": "https://eli.gov.pl/api/acts/DU/2026/530/text.pdf",
     "LastCheckedAt": "2026-11-17T00:00:00+00:00"
+  },
+  {
+    "Id": "436991bc-fea3-5d09-826f-d8cfdee31573",
+    "InformationEntryId": "54197f49-594b-51d2-a40c-2fcded05f791",
+    "Title": "EURES, search job vacancies in Romania",
+    "Url": "https://europa.eu/eures/portal/jv-se/home?lang=en",
+    "LastCheckedAt": "2026-11-22T00:00:00+00:00"
+  },
+  {
+    "Id": "7eee6a0a-96ec-5963-8e10-f8080468459b",
+    "InformationEntryId": "6b966a1f-335e-596a-9825-005d30ab23d4",
+    "Title": "Government of Romania, HG no. 367/2022, consolidated form",
+    "Url": "https://legislatie.just.ro/Public/DetaliiDocument/282745",
+    "LastCheckedAt": "2026-11-22T00:00:00+00:00"
+  },
+  {
+    "Id": "7634654d-0321-5a85-8f1b-5b0d4327e331",
+    "InformationEntryId": "61d13a69-6704-50ee-8b7b-e673a2828e65",
+    "Title": "Romanian Legislative Portal, Emergency Ordinance 96/2024, Article 19",
+    "Url": "https://legislatie.just.ro/Public/DetaliiDocument/284711",
+    "LastCheckedAt": "2026-11-22T00:00:00+00:00"
+  },
+  {
+    "Id": "13031914-aded-56ff-8034-db4e198070b1",
+    "InformationEntryId": "78be24cd-82f5-5f29-ab54-0013aa15ab93",
+    "Title": "Council of the European Union, Implementing Decision (EU) 2026/1912, consolidated text with Corrigendum C1",
+    "Url": "https://eur-lex.europa.eu/eli/dec_impl/2026/1912/2026-08-04/eng",
+    "LastCheckedAt": "2026-11-22T00:00:00+00:00"
+  },
+  {
+    "Id": "01c93379-a45d-5da0-9b7f-07cfd595013b",
+    "InformationEntryId": "d0d74e2e-9a2a-50bc-970f-605997565456",
+    "Title": "Irish Statute Book, International Protection Act 2026, section 237 (social-housing residency provisions)",
+    "Url": "https://www.irishstatutebook.ie/eli/2026/act/9/section/237/enacted/en/index.html",
+    "LastCheckedAt": "2026-11-22T00:00:00+00:00"
+  },
+  {
+    "Id": "3ec94ac7-3c1a-51f1-9cc6-93118307cc0b",
+    "InformationEntryId": "e6b45fb5-4180-5e57-8e48-30c25ddad0f8",
+    "Title": "Workplace Relations Commission, National Minimum Wage poster",
+    "Url": "https://www.workplacerelations.ie/media/334fojsq/national-minimum-wage-poster.pdf",
+    "LastCheckedAt": "2026-11-22T00:00:00+00:00"
   }
 ]
