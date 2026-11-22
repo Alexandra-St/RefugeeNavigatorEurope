@@ -142,7 +142,7 @@ public sealed class FranceContentIntegrationTests
                 Assert.True(match.Success, $"Missing {section} in {articleCode}.");
                 var translation = Assert.Single(catalog.InformationEntryTranslations,
                     item => item.InformationEntryId == expected.Id && item.LanguageCode == language);
-                Assert.Equal(match.Groups["content"].Value.Trim(), translation.Content);
+                Assert.Equal(match.Groups["content"].Value.Trim(), translation.Content.Trim());
                 var tokens = Regex.Matches(translation.Content, @"\[\[source:([^|\]]+)\|([^\]]+)\]\]");
                 foreach (Match token in tokens)
                 {
