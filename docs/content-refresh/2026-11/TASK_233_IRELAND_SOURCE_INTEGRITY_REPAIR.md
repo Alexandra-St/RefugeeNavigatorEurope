@@ -1,0 +1,3 @@
+# Task 233 — Ireland source integrity repair
+
+Task 231 identified dead WRC source `7e6c51ae-784c-5494-acdd-6e44526fef30` in `IE-EMP-01` / `IE_P2_002`. The former National Minimum Wage HTML URL returned 404. Updated the same source record in place to the WRC's current “Employment Rights in Ireland — Information for Ukrainian Nationals” page, which resolves and includes current €14.15 minimum wage guidance for Ukrainian nationals. The existing WRC minimum wage poster and enacted 2027 rate source remain in place. Article wording and Compare values were not changed. Task 231 must be rerun from this new production snapshot. Password/access gate unchanged; site not published.
