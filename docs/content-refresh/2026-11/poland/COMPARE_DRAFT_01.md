@@ -116,9 +116,9 @@
 
 - Production state: `Approved` / available `True`
 - Final source bindings: 6dbd3c8d-ac7f-5211-8609-eea9edfecbce, 10831751-821e-5615-993d-d0b29f693361
-- **EN — KEEP:** From 5 March 2026, limited free care under the PESEL UKR protection route covers specified groups: under-18s, pregnancy/postnatal cases, torture or rape survivors, or holders of a collective-accommodation certificate. It does not cover every public service; insurance may provide another route.
-- **UK — KEEP:** З 5 березня 2026 року обмежена безоплатна допомога за шляхом захисту з PESEL UKR охоплює визначені групи: осіб до 18 років, вагітних і в післяпологовому періоді, постраждалих від катувань чи зґвалтування або власників довідки про колективне розміщення. Це не всі публічні послуги; інший шлях може давати страхування.
-- **RU — KEEP:** С 5 марта 2026 года ограниченная бесплатная помощь по пути защиты с PESEL UKR охватывает определённые группы: лиц до 18 лет, беременных и в послеродовом периоде, пострадавших от пыток или изнасилования либо обладателей справки о коллективном размещении. Это не все публичные услуги; другой путь может давать страхование.
+- **EN — KEEP:** From 5 March 2026, limited free care under the PESEL UKR protection route covers specified groups: under-18s, pregnancy, childbirth or postnatal cases, torture or rape survivors, or holders of a collective-accommodation certificate. It does not cover every public service; insurance may provide another route.
+- **UK — KEEP:** З 5 березня 2026 року обмежена безоплатна допомога за шляхом захисту з PESEL UKR охоплює визначені групи: осіб до 18 років, вагітних, осіб під час пологів або в післяпологовому періоді, постраждалих від катувань чи зґвалтування або власників довідки про колективне розміщення. Це не всі публічні послуги; інший шлях може давати страхування.
+- **RU — KEEP:** С 5 марта 2026 года ограниченная бесплатная помощь по пути защиты с PESEL UKR охватывает определённые группы: лиц до 18 лет, беременных, лиц в период родов или в послеродовом периоде, пострадавших от пыток или изнасилования либо обладателей справки о коллективном размещении. Это не все публичные услуги; другой путь может давать страхование.
 - **Disposition:** KEEP.
 
 ## 14. Compare.Topic.Healthcare / `healthcare-proof`

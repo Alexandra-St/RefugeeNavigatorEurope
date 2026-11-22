@@ -11,7 +11,7 @@ Since 5 March 2026, NFZ care depends on insurance status or a defined temporary-
 
 ## RULES
 
-From 5 March 2026, the former special healthcare rules changed. NFZ says temporary-protection beneficiaries with PESEL UKR have access to a defined range of free care, including primary healthcare (POZ) and reimbursed medicines, if they are under 18, pregnant or in the postnatal period, survivors of torture or rape, or hold a certificate confirming residence in collective accommodation. This is not access to every public healthcare service.
+From 5 March 2026, the former special healthcare rules changed. NFZ says temporary-protection beneficiaries with PESEL UKR have access to a defined range of free care, including primary healthcare (POZ) and reimbursed medicines, if they are under 18, pregnant, in childbirth or in the postnatal period, survivors of torture or rape, or hold a certificate confirming residence in collective accommodation. This is not access to every public healthcare service.
 
 ## TASKS
 
@@ -33,7 +33,7 @@ For an immediate threat to life, call 112 or 999. For an urgent problem outside 
 
 ## ПРАВИЛА
 
-З 5 березня 2026 року колишні спеціальні правила медичної допомоги змінилися. За інформацією NFZ, бенефіціари тимчасового захисту з PESEL UKR мають доступ до визначеного обсягу безоплатної допомоги, зокрема POZ і відшкодовуваних ліків, якщо вони є дітьми до 18 років, вагітними/післяпологовими, постраждалими від катувань або зґвалтування чи мають довідку про проживання в центрі колективного розміщення. Це не є повним доступом до всіх послуг.
+З 5 березня 2026 року колишні спеціальні правила медичної допомоги змінилися. За інформацією NFZ, бенефіціари тимчасового захисту з PESEL UKR мають доступ до визначеного обсягу безоплатної допомоги, зокрема POZ і відшкодовуваних ліків, якщо вони є діти до 18 років, вагітні, особи під час пологів або в післяпологовому періоді, постраждалі від катувань або зґвалтування чи власники довідки про проживання в центрі колективного розміщення. Це не є повним доступом до всіх послуг.
 
 ## ДІЇ
 
@@ -55,7 +55,7 @@ For an immediate threat to life, call 112 or 999. For an urgent problem outside 
 
 ## ПРАВИЛА
 
-С 5 марта 2026 года прежние специальные правила медицинской помощи изменились. По данным NFZ, получатели временной защиты с PESEL UKR имеют право на определённый объём бесплатной помощи, включая первичную медицинскую помощь (POZ) и возмещаемые лекарства, если это дети до 18 лет, беременные или женщины в послеродовом периоде, пережившие пытки или изнасилование либо имеющие справку о проживании в центре коллективного размещения. Это не означает доступа ко всем государственным медицинским услугам.
+С 5 марта 2026 года прежние специальные правила медицинской помощи изменились. По данным NFZ, получатели временной защиты с PESEL UKR имеют право на определённый объём бесплатной помощи, включая первичную медицинскую помощь (POZ) и возмещаемые лекарства, если это дети до 18 лет, беременные, женщины в период родов или в послеродовом периоде, пережившие пытки или изнасилование либо имеющие справку о проживании в центре коллективного размещения. Это не означает доступа ко всем государственным медицинским услугам.
 
 ## ДЕЙСТВИЯ
 

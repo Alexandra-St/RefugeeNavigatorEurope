@@ -177,6 +177,30 @@ public sealed class PolandContentIntegrationTests
     }
 
     [Theory]
+    [InlineData("en", "in childbirth", "childbirth", "not access to every public healthcare service", "limited free care")]
+    [InlineData("uk", "під час пологів", "полог", "не є повним доступом до всіх послуг", "обмежена безоплатна допомога")]
+    [InlineData("ru", "в период родов", "род", "не означает доступа ко всем государственным медицинским услугам", "ограниченная бесплатная помощь")]
+    public async Task PolandHealthcareChildbirthScopeIsExplicitInArticleAndCompare(
+        string language, string articleChildbirthMarker, string compareChildbirthMarker,
+        string articleCoverageLimit, string compareCoverageLimit)
+    {
+        var catalog = await LoadCatalogAsync();
+        var article = Content("healthcare", language);
+        Assert.Contains(articleChildbirthMarker, article, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains(articleCoverageLimit, article, StringComparison.OrdinalIgnoreCase);
+
+        var facts = await new JsonComparisonFactProvider(Path.Combine(AppContext.BaseDirectory, "Data", "comparison-facts.json"))
+            .LoadAsync(catalog);
+        var healthcareAccess = Assert.Single(facts.Topics.SelectMany(topic => topic.Aspects)
+            .Where(aspect => aspect.Id == "healthcare-access"))
+            .Facts.Single(fact => fact.CountrySlug == "poland");
+        Assert.Equal(ComparisonFactStatus.Approved, healthcareAccess.Status);
+        Assert.True(healthcareAccess.IsAvailable);
+        Assert.Contains(compareChildbirthMarker, healthcareAccess.Values[language], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains(compareCoverageLimit, healthcareAccess.Values[language], StringComparison.OrdinalIgnoreCase);
+    }
+
+    [Theory]
     [InlineData("uk")]
     [InlineData("en")]
     [InlineData("ru")]
