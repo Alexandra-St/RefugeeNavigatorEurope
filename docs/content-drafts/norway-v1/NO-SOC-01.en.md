@@ -4,7 +4,7 @@
 - **Research date:** 18 November 2026
 - **Editorial status:** DRAFT
 - **Compare aspects:** `social-subsistence`, `social-application`, `social-child-benefits`
-- **Last verified:** 18 November 2026
+- **Last verified:** 22 November 2026
 
 Norwegian benefits have separate eligibility rules. Collective protection does not automatically qualify you for NAV payments. NAV and other agencies assess applications using your residence status, household, income, expenses and the rules for each benefit.
 
@@ -28,3 +28,5 @@ Cash-for-care benefit (kontantstøtte) is a separate benefit for children aged 1
 - [[source:586b8189-0d4d-55c6-8bdd-603b0b9d1d23|Lovdata: Cash-for-care Act, section 3]]
 
 *This is general information. Ask NAV to assess your individual entitlement and confirm current conditions before relying on a benefit.*
+
+Cash-for-care requires that the child does not attend kindergarten full time; part-time attendance can reduce the payment. The benefit is generally for children aged 13–19 months, subject to National Insurance and other eligibility conditions.

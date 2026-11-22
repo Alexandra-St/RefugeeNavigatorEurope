@@ -106,7 +106,10 @@ public sealed class SpainContentIntegrationTests
             Assert.All(translations, item =>
             {
                 Assert.Equal(VerificationStatus.Verified, item.VerificationStatus);
-                Assert.Equal(DateTimeOffset.Parse("2026-11-18T00:00:00+00:00"), item.LastUpdatedAt);
+                var expectedDate = StableArticleIds["ES-TP-01"] == entry.Id || StableArticleIds["ES-EMP-02"] == entry.Id || StableArticleIds["ES-HEALTH-01"] == entry.Id || StableArticleIds["ES-SOC-01"] == entry.Id
+                    ? DateTimeOffset.Parse("2026-11-22T00:00:00+00:00")
+                    : DateTimeOffset.Parse("2026-11-18T00:00:00+00:00");
+                Assert.Equal(expectedDate, item.LastUpdatedAt);
                 Assert.False(string.IsNullOrWhiteSpace(item.Title));
                 Assert.False(string.IsNullOrWhiteSpace(item.Summary));
                 Assert.False(string.IsNullOrWhiteSpace(item.Content));
@@ -176,7 +179,7 @@ public sealed class SpainContentIntegrationTests
             && item.Url == new Uri("https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02003L0109-20260612"));
         var added = Assert.Single(sources, item => item.Id == Guid.Parse("55dfb9f1-bee9-54a7-867a-0c2379dca38e"));
         Assert.Equal(StableArticleIds["ES-EMP-02"], added.InformationEntryId);
-        Assert.Equal(new Uri("https://www.lamoncloa.gob.es/consejoministros/referencias/Paginas/2026/20261117-referencia-rueda-de-consejo-ministros.aspx"), added.Url);
+        Assert.Equal(new Uri("https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24189"), added.Url);
         Assert.Equal(new Uri("https://eures.europa.eu/index_es"), Assert.Single(sources, item => item.Id == Guid.Parse("ba96278e-9e7b-40cd-a678-f917e392e861")).Url);
         Assert.Equal(new Uri("https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/PrestacionesPensionesTrabajadores/10967/27924/desc27924?changeLanguage=es"), Assert.Single(sources, item => item.Id == Guid.Parse("f2bb0f3b-2674-54ea-8d97-5b0244e958cc")).Url);
     }
@@ -197,7 +200,7 @@ public sealed class SpainContentIntegrationTests
         Assert.Contains("through 4 March 2027", translations["ES-TP-01"]);
         Assert.Contains("does not establish that every TIE is valid through 2028", translations["ES-TP-01"]);
         Assert.DoesNotContain("30 July 2026", translations["ES-TP-01"]);
-        Assert.DoesNotContain("24 hours", translations["ES-TP-01"], StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("Spanish rules set a maximum of 24 hours to decide a", translations["ES-TP-01"], StringComparison.Ordinal);
         Assert.DoesNotContain("guaranteed service time", translations["ES-TP-01"], StringComparison.OrdinalIgnoreCase);
         Assert.Contains("Ukrainian nationality alone does not establish", translations["ES-TP-01"]);
         Assert.Contains("A receipt or NIE is not the same as a grant decision or a TIE card", translations["ES-TP-01"]);

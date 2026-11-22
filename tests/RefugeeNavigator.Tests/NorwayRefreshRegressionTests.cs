@@ -205,7 +205,7 @@ public sealed class NorwayRefreshRegressionTests
         Assert.Contains("1 Apr 2028",watch,StringComparison.Ordinal);
         Assert.Contains("REVIEW_ON",watch,StringComparison.Ordinal);
         Assert.Contains("not a legal trigger",ReadReviewArtifact("NORWAY_REFRESH_REVIEW_01.md"),StringComparison.OrdinalIgnoreCase);
-        Assert.Equal(1560,catalog.OfficialSources.Count);
+        Assert.Equal(1563,catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count,catalog.OfficialSources.Select(source=>source.Id).Distinct().Count());
     }
 
@@ -216,7 +216,7 @@ public sealed class NorwayRefreshRegressionTests
         var sources=catalog.OfficialSources.ToDictionary(source=>source.Id);
         var norway=Articles.Values.ToHashSet();
         var norwaySources=sources.Values.Where(source=>norway.Contains(source.InformationEntryId)).ToArray();
-        Assert.Equal(46,norwaySources.Length);
+        Assert.Equal(45,norwaySources.Length);
         Assert.Equal(38,norwaySources.Select(source=>source.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
         Assert.Equal(0,norwaySources.GroupBy(source=>(source.InformationEntryId,source.Url.AbsoluteUri)).Count(group=>group.Count()>1));
         Assert.Equal("https://www.husbanken.no/english/housing-allowance/type-of-housing/",sources[Guid.Parse("5131b9a5-13c9-52db-ba4d-1ec6ae2cf401")].Url.AbsoluteUri);
@@ -240,7 +240,7 @@ public sealed class NorwayRefreshRegressionTests
         JsonComparisonFactProvider.Validate(facts,catalog);
         var norwayFacts=facts.Topics.SelectMany(topic=>topic.Aspects).SelectMany(aspect=>aspect.Facts).Where(fact=>fact.CountrySlug=="norway").ToArray();
         Assert.Equal(24,norwayFacts.Length);
-        Assert.Equal(43,norwayFacts.SelectMany(fact=>fact.OfficialSourceIds).Distinct().Count());
+        Assert.Equal(42,norwayFacts.SelectMany(fact=>fact.OfficialSourceIds).Distinct().Count());
         foreach(var fact in norwayFacts)
             Assert.All(fact.OfficialSourceIds,id=>Assert.Equal(fact.InformationEntryId,sources[id].InformationEntryId));
         Assert.Contains("KEEP 32 / UPDATE 2",ReadReviewArtifact("NORWAY_REFRESH_REVIEW_01.md"),StringComparison.Ordinal);

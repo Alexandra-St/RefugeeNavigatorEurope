@@ -68,4 +68,4 @@ Content:
 - `BG-SRC-039` → `c5368b87-86d7-5236-b0bd-b7c90176bd42` — Ministry of Interior, Law on Asylum and Refugees
 - `BG-SRC-035` → `35ed6bdf-578c-586f-abc7-3c7adc9e3779` — European Union, Directive 2003/109/EC on long-term residents
 - `BG-SRC-038` → `bd07f58c-b6bc-59b3-83ec-2af08330a37f` — Ministry of Labour and Social Policy, Law on Labour Migration and Labour Mobility
-- `BG-SRC-036` → `92763c9a-e086-5432-be40-770681f92d95` — Ministry of Interior, Migration Directorate residence services
+- `BG-SRC-036` → `92763c9a-e086-5432-be40-770681f92d95` — Ministry of Interior, Migration Directorate, residence services

@@ -38,12 +38,12 @@ public sealed class FranceContentIntegrationTests
     private static readonly IReadOnlyDictionary<string, int> ExpectedSourceCounts = new Dictionary<string, int>
     {
         ["FR-TP-01"] = 9,
-        ["FR-EMP-01"] = 15,
+        ["FR-EMP-01"] = 14,
         ["FR-EMP-02"] = 15,
         ["FR-HEALTH-01"] = 14,
-        ["FR-EDU-01"] = 19,
+        ["FR-EDU-01"] = 18,
         ["FR-SOC-01"] = 21,
-        ["FR-TP-02"] = 11,
+        ["FR-TP-02"] = 12,
         ["FR-HOUSING-01"] = 14
     };
     private static readonly ResourceManager Resources = new(
@@ -89,11 +89,14 @@ public sealed class FranceContentIntegrationTests
             Assert.Equal(expected.Category, catalog.Categories.Single(item => item.Id == entry.CategoryId).Slug);
             var translations = catalog.InformationEntryTranslations.Where(item => item.InformationEntryId == expected.Id).ToArray();
             Assert.Equal(new[] { "en", "ru", "uk" }, translations.Select(item => item.LanguageCode).Order(StringComparer.Ordinal).ToArray());
-            var expectedLastUpdatedAt = new DateTimeOffset(2026, 11, 19, 0, 0, 0, TimeSpan.Zero);
+            var baselineDate = new DateTimeOffset(2026, 11, 19, 0, 0, 0, TimeSpan.Zero);
             Assert.All(translations, item =>
             {
                 Assert.Equal(VerificationStatus.Verified, item.VerificationStatus);
-                Assert.Equal(expectedLastUpdatedAt, item.LastUpdatedAt);
+                var expectedDate = item.InformationEntryId == Guid.Parse("084c5497-7b96-59a2-9d9a-4b0be9b5a2ff") || item.InformationEntryId == Guid.Parse("78be24cd-82f5-5f29-ab54-0013aa15ab93") || (item.InformationEntryId == Guid.Parse("8d7dd894-f0c5-53f4-831c-4c936f27fdff") && item.LanguageCode == "ru")
+                    ? new DateTimeOffset(2026, 11, 22, 0, 0, 0, TimeSpan.Zero)
+                    : baselineDate;
+                Assert.Equal(expectedDate, item.LastUpdatedAt);
             });
         }
 
@@ -108,17 +111,17 @@ public sealed class FranceContentIntegrationTests
     }
 
     [Fact]
-    public async Task FranceTranslationsAndOneHundredEighteenArticleOwnedSourcesMatchCertificationExactly()
+    public async Task FranceTranslationsAndOneHundredSeventeenArticleOwnedSourcesMatchCertificationExactly()
     {
         var catalog = await Catalog.Value;
-        Assert.Equal(1560, catalog.OfficialSources.Count);
+        Assert.Equal(1563, catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         var repositoryRoot = FindRepositoryRoot();
         var refreshRoot = Path.Combine(repositoryRoot, "docs", "content-refresh", "2026-11", "france");
         var articleIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => articleIds.Contains(item.InformationEntryId)).ToArray();
-        Assert.Equal(118, sources.Length);
-        Assert.Equal(118, sources.Select(item => item.Id).Distinct().Count());
+        Assert.Equal(117, sources.Length);
+        Assert.Equal(sources.Length, sources.Select(item => item.Id).Distinct().Count());
         Assert.All(sources, source =>
         {
             Assert.Contains(source.InformationEntryId, articleIds);

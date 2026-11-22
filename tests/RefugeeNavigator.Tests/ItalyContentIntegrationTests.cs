@@ -137,21 +137,24 @@ public sealed class ItalyContentIntegrationTests
         var entryIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => entryIds.Contains(item.InformationEntryId)).ToArray();
         Assert.Equal(76, sources.Length);
-        Assert.Equal(1560, catalog.OfficialSources.Count);
+        Assert.Equal(1563, catalog.OfficialSources.Count);
         Assert.Equal(76, sources.Select(item => item.Id).Distinct().Count());
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         var sourceById = catalog.OfficialSources.ToDictionary(item => item.Id);
-        var task215RefreshedSourceIds = new HashSet<Guid>
+        var task230RefreshedSourceIds = new HashSet<Guid>
         {
             Guid.Parse("a73b7d5b-720e-5d02-8014-32cc416c5b5d"),
-            Guid.Parse("1bad6a10-abe2-5b2f-976c-bb4b3e4ad274")
+            Guid.Parse("4cd09057-d389-5bf3-bcbc-5e4853bff7fa")
         };
+        var task215RefreshedSourceId = Guid.Parse("1bad6a10-abe2-5b2f-976c-bb4b3e4ad274");
         Assert.All(sources, item =>
         {
             Assert.Contains(item.InformationEntryId, entryIds);
             Assert.Equal(Uri.UriSchemeHttps, item.Url.Scheme);
             Assert.False(string.IsNullOrWhiteSpace(item.Title));
-            var expectedLastCheckedAt = task215RefreshedSourceIds.Contains(item.Id)
+            var expectedLastCheckedAt = task230RefreshedSourceIds.Contains(item.Id)
+                ? new DateTimeOffset(2026, 11, 22, 0, 0, 0, TimeSpan.Zero)
+                : item.Id == task215RefreshedSourceId
                 ? new DateTimeOffset(2026, 11, 21, 0, 0, 0, TimeSpan.Zero)
                 : new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero);
             Assert.Equal(expectedLastCheckedAt, item.LastCheckedAt);

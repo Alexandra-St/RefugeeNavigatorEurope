@@ -21,6 +21,8 @@ Use current DOČASNÉ ÚTOČISKO status/document proof and the applicable provid
 
 Urgent care is distinct from the broader limited necessary-care package, planned services and full insured coverage. Call 155 for emergency medical service/ambulance or 112 for the integrated emergency line. A reimbursement route does not guarantee every provider, service or medicine is fully covered. [[source:8b5b3ce8-2067-5ebc-abde-1d66f6ccd0cf|necessary-care determination]] [[source:40dc0568-def5-51d8-9ca3-848ca71ec70e|Healthcare Act]] [[source:2586fa5d-8fc5-5387-a15f-97570efbcd2f|emergency numbers]] [[source:88dc09a3-92be-5b0e-aaa3-0b7186ee3d9c|emergency medical service law]]
 
+For VšZP coverage, the relevant child age range is from birth through 18 years and 364 days, not only until the 18th birthday. Before a physical temporary-protection document is issued, a person who has applied may use any document showing their name and date of birth for urgent care; this proof rule is limited to urgent care.
+
 ### Claim coverage and editorial exclusions
 
 Temporary refuge is not public-insurance membership; reimbursement is not full insurance or a guarantee of every service.
@@ -39,6 +41,8 @@ Content:
 
 Невідкладна допомога відрізняється від ширшого, але обмеженого пакета необхідної допомоги, планових послуг і повного страхового покриття. Для екстреної медичної служби/швидкої телефонуйте 155, а на інтегровану лінію екстреної допомоги — 112. Відшкодування не гарантує повного покриття всіх надавачів, послуг чи ліків. [[source:8b5b3ce8-2067-5ebc-abde-1d66f6ccd0cf|Визначення необхідної допомоги]] [[source:40dc0568-def5-51d8-9ca3-848ca71ec70e|Закон про охорону здоров’я]] [[source:2586fa5d-8fc5-5387-a15f-97570efbcd2f|Номери екстреної допомоги]] [[source:88dc09a3-92be-5b0e-aaa3-0b7186ee3d9c|Закон про екстрену медичну службу]]
 
+Для страхового покриття VšZP відповідний віковий діапазон дитини — від народження до 18 років і 364 днів включно, а не лише до 18-го дня народження. До видачі фізичного документа про тимчасовий захист особа, яка подала заяву, може надати для невідкладної допомоги будь-який документ із її ім’ям та датою народження; це правило підтвердження стосується лише невідкладної допомоги.
+
 ### Claim coverage and editorial exclusions
 
 Temporary refuge is not public-insurance membership; reimbursement is not full insurance or a guarantee of every service.
@@ -56,6 +60,8 @@ Content:
 Используйте актуальное подтверждение статуса/документ DOČASNÉ ÚTOČISKO и применимый порядок расчётов с поставщиком услуг; в соответствующих случаях может применяться поддерживаемое старое подтверждение A4. Ни один из этих документов не является картой словацкого государственного медицинского страхования. Подтверждение только личности до выдачи документа и переход после окончания работы требуют индивидуального уточнения. За лекарства может взиматься доплата. [[source:5604f5aa-f855-56a1-a76a-05e0bc267711|Информация для поставщиков]] [[source:47be309d-df73-563f-9833-5dbe138239f0|Правила расчётов]] [[source:4318b158-14af-5668-87fb-1ea1e0a93b3d|Регистрация иностранного работника]]
 
 Неотложная помощь отличается от более широкого, но ограниченного пакета необходимой помощи, плановых услуг и полного страхового покрытия. Для экстренной медицинской службы/скорой звоните 155, а на интегрированную линию экстренной помощи — 112. Возмещение не гарантирует полного покрытия всех поставщиков, услуг или лекарств. [[source:8b5b3ce8-2067-5ebc-abde-1d66f6ccd0cf|Определение необходимой помощи]] [[source:40dc0568-def5-51d8-9ca3-848ca71ec70e|Закон о здравоохранении]] [[source:2586fa5d-8fc5-5387-a15f-97570efbcd2f|Номера экстренной помощи]] [[source:88dc09a3-92be-5b0e-aaa3-0b7186ee3d9c|Закон об экстренной медслужбе]]
+
+Для покрытия VšZP соответствующий возраст ребёнка — от рождения до 18 лет и 364 дней включительно, а не только до 18-летия. До выдачи физического документа о временной защите заявитель может предъявить для неотложной помощи любой документ со своим именем и датой рождения; это правило подтверждения ограничено неотложной помощью.
 
 ### Claim coverage and editorial exclusions
 

@@ -4,7 +4,7 @@
 - **Research date:** 18 November 2026
 - **Editorial status:** DRAFT
 - **Compare aspects:** `protection-scheme`, `protection-application`, `protection-dates`
-- **Last verified:** 18 November 2026
+- **Last verified:** 22 November 2026
 
 Norway has a national collective protection scheme for people displaced from Ukraine. It is based on section 34 of Norway’s Immigration Act and is separate from the EU Temporary Protection Directive. Under collective protection, applications can be assessed as a group rather than by a full individual assessment of each person’s need for protection.
 
@@ -47,3 +47,5 @@ The permit is granted for one year at a time. Current UDI guidance says it may b
 - [[source:fe10e16d-4315-511f-bda9-31c010784d31|UDI: Waiting for a decision on collective protection]]
 
 *This draft is general information, not an assessment of an individual application. Check UDI for current criteria and instructions.*
+
+For new applications, the safe-country dual-citizenship restriction is separate from renewal. Since 1 March 2024, existing collective-protection permits generally cannot be extended for people with Ukrainian and safe-country citizenship; an exception applies to a family member of a collective-protection holder who does not have safe-country citizenship. A current permit remains valid until its expiry unless a case-specific decision changes it. UDI may assess revocation if someone travels to Ukraine without a legitimate reason or resides outside Norway for more than six months during a year. Carry a valid travel document; ordinary short trips do not automatically cancel protection.

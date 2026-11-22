@@ -38,13 +38,13 @@ public sealed class IrelandContentIntegrationTests
     private static readonly IReadOnlyDictionary<string, int> ExpectedSourceCounts = new Dictionary<string, int>
     {
         ["IE-EMP-01"] = 9,
-        ["IE-EMP-02"] = 22,
+        ["IE-EMP-02"] = 23,
         ["IE-HEALTH-01"] = 12,
         ["IE-EDU-01"] = 16,
         ["IE-SOC-01"] = 16,
         ["IE-TP-01"] = 13,
         ["IE-TP-02"] = 13,
-        ["IE-HOUSING-01"] = 19
+        ["IE-HOUSING-01"] = 20
     };
     private static readonly ResourceManager Resources = new(
         "RefugeeNavigator.Web.Resources.Localization.SharedResource",
@@ -97,7 +97,9 @@ public sealed class IrelandContentIntegrationTests
             Assert.All(translations, item =>
             {
                 Assert.Equal(VerificationStatus.Verified, item.VerificationStatus);
-                var expectedDate = new DateTimeOffset(2026, 11, 18, 0, 0, 0, TimeSpan.Zero);
+                var expectedDate = entry.Id == Guid.Parse("51fc8ed8-123d-5a6f-b4fa-16cd2e41f3bf") || entry.Id == Guid.Parse("d0d74e2e-9a2a-50bc-970f-605997565456")
+                    ? new DateTimeOffset(2026, 11, 22, 0, 0, 0, TimeSpan.Zero)
+                    : new DateTimeOffset(2026, 11, 18, 0, 0, 0, TimeSpan.Zero);
                 Assert.Equal(expectedDate, item.LastUpdatedAt);
             });
         }
@@ -111,23 +113,27 @@ public sealed class IrelandContentIntegrationTests
     }
 
     [Fact]
-    public async Task IrelandTranslationsAndOneHundredTwentyArticleOwnedSourcesMatchDraftsExactly()
+    public async Task IrelandTranslationsAndOneHundredTwentyTwoArticleOwnedSourcesMatchDraftsExactly()
     {
         var catalog = await Catalog.Value;
-        Assert.Equal(1560, catalog.OfficialSources.Count);
+        Assert.Equal(1563, catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         var repositoryRoot = FindRepositoryRoot();
         var draftsRoot = Path.Combine(repositoryRoot, "docs", "content-drafts", "ireland-v1");
         var articleIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => articleIds.Contains(item.InformationEntryId)).ToArray();
-        Assert.Equal(120, sources.Length);
-        Assert.Equal(120, sources.Select(item => item.Id).Distinct().Count());
-        Assert.Equal(109, sources.Select(item => item.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(122, sources.Length);
+        Assert.Equal(122, sources.Select(item => item.Id).Distinct().Count());
+        Assert.Equal(110, sources.Select(item => item.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
         Assert.All(sources, source =>
         {
             Assert.Contains(source.InformationEntryId, articleIds);
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
-            Assert.Equal(new DateTimeOffset(2026, 11, 18, 0, 0, 0, TimeSpan.Zero), source.LastCheckedAt);
+            var refreshedSourceIds = new HashSet<Guid>
+            { Guid.Parse("7e6c51ae-784c-5494-acdd-6e44526fef30"), Guid.Parse("01c93379-a45d-5da0-9b7f-07cfd595013b"), Guid.Parse("3ec94ac7-3c1a-51f1-9cc6-93118307cc0b") };
+            Assert.Equal(refreshedSourceIds.Contains(source.Id)
+                ? new DateTimeOffset(2026, 11, 22, 0, 0, 0, TimeSpan.Zero)
+                : new DateTimeOffset(2026, 11, 18, 0, 0, 0, TimeSpan.Zero), source.LastCheckedAt);
         });
         Assert.All(catalog.OfficialSources.GroupBy(item => (item.InformationEntryId, item.Title, item.Url.AbsoluteUri)), group => Assert.Single(group));
 
@@ -177,7 +183,7 @@ public sealed class IrelandContentIntegrationTests
                 }
             }
         }
-        Assert.Equal(379, totalCitationTokens);
+        Assert.Equal(385, totalCitationTokens);
         Assert.Equal(plannedCoreBoundIds, citedSourceIds);
     }
 

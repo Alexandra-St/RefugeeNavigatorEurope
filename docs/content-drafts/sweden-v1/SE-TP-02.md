@@ -17,11 +17,11 @@ Some people with Swedish temporary protection may be able to apply in Sweden for
 Content:
 ## A limited route while you hold temporary protection
 
-Since 11 June 2026, Swedish law has allowed certain people with a temporary-protection permit to apply from within Sweden for specified permits, including work, self-employment, research, higher education and an EU Blue Card. Some qualifying family applications are also covered. This is a limited exception, not a general right to apply in Sweden for any residence permit. The ordinary requirements for the permit still apply, and an application does not guarantee approval.
+Since 11 June 2026, Swedish law has allowed certain people with a temporary-protection permit to apply from within Sweden for specified permits, including work, self-employment, research, higher education and an EU Blue Card. Family members may also apply under the specified qualifying alternative-permit routes. This is a limited exception, not a general right to apply in Sweden for any residence permit. The ordinary requirements for the permit still apply, and an application does not guarantee approval.
 
 ## Filing date and a pending decision
 
-If your current temporary-protection permit may expire before a decision, the special in-country rule requires the covered application to have been submitted before that expiry. This filing condition does not itself grant another permit or guarantee continued residence while the case is pending. Check the current Migration Agency instructions for the exact route and your circumstances.
+If your current temporary-protection permit may expire before a decision, the special in-country rule requires the covered application to have been submitted before that expiry. If the permit has expired when the application is decided, Act 2026:456 permits a grant only where the application was filed while the current permit was valid. Filing does not itself grant the alternative permit. Check the current Migration Agency instructions for the exact route and your circumstances.
 
 ## Wait for a decision before changing status
 
@@ -33,15 +33,13 @@ A narrow exemption may allow a person to work without a separate work permit whi
 
 ## Check possible support and housing effects
 
-Granting another permit may affect Migration Agency accommodation, allowances or other support. The effect depends on the permit and the person’s situation. Check with the responsible authority before relying on support during a transition.
+Granting another permit may affect Migration Agency accommodation, allowances or other support. For a person not registered in the Population Register, a new permit under the 2026 route ends Reception Act coverage and Migration Agency reception aid. Registered people are not covered by the Reception Act and may be affected under different support rules. Check with the responsible authority before relying on support during a transition.
 
 ## Longer-term residence is route-specific
 
-Swedish permanent residence is not automatic after a period under temporary protection. It depends on the permit route and its requirements. For example, one work-based route describes four years of qualifying work permits and work within a seven-year period, together with other conditions. This is a route-specific example, not a general residence clock for temporary-protection holders. July 2026 guidance also does not clearly settle every temporary-protection category.
+Swedish permanent residence and Swedish long-term resident status are different routes. The Migration Agency’s long-term-residence test requires five years of continuous residence with a residence permit or lawful residence on another basis, with certain temporary stays excluded. Directive 2003/109/EC separately excludes people currently authorized to reside on temporary-protection grounds or awaiting a decision on that status.
 
-Swedish permanent residence and EU long-term resident status are different statuses. Swedish long-term resident status has its own five-year continuous qualifying-residence and support conditions; not every type of stay necessarily counts. A person granted that status receives a five-year residence permit. The Migration Agency says the status does not later confer Swedish permanent residence on that basis. The reviewed EU rules exclude current temporary-protection beneficiaries and applicants from the long-term-resident framework. The reviewed sources do not establish whether earlier time under temporary protection counts after a person changes to another residence basis. Do not assume that it counts in full, in part or not at all.
-
-The asylum-related route called spårbyte ended on 1 April 2025. It is not the limited 2026 route for some temporary-protection holders.
+Time under Sweden’s Temporary Protection Directive permit does not count toward the five-year qualifying period for EU long-term resident status. A later residence permit may count if it independently meets the applicable rules.
 
 ### Claim coverage
 
@@ -74,7 +72,7 @@ Content:
 
 ## Строк подання та очікування рішення
 
-Якщо строк дії вашого дозволу на тимчасовий захист може завершитися до ухвалення рішення, спеціальне правило для подання у Швеції вимагає подати охоплену ним заяву до завершення цього строку. Ця умова подання сама по собі не надає іншого дозволу й не гарантує право залишатися у країні під час розгляду справи. Перевірте актуальні інструкції Міграційного агентства щодо потрібного маршруту та ваших обставин.
+Якщо строк дії вашого дозволу на тимчасовий захист може завершитися до ухвалення рішення, спеціальне правило для подання у Швеції вимагає подати охоплену ним заяву до завершення цього строку. Якщо дозвіл уже завершився на момент ухвалення рішення, Закон 2026:456 дозволяє надати альтернативний дозвіл лише за умови, що заяву подано під час чинності поточного дозволу. Подання заяви саме по собі не надає альтернативного дозволу. Перевірте актуальні інструкції Міграційного агентства щодо потрібного маршруту та ваших обставин.
 
 ## Дочекайтеся рішення, перш ніж змінювати статус
 
@@ -86,15 +84,13 @@ Content:
 
 ## Перевірте можливі наслідки для житла й підтримки
 
-Надання іншого дозволу може вплинути на житло, виплати чи іншу підтримку Міграційного агентства. Наслідки залежать від дозволу та обставин людини. Перш ніж розраховувати на підтримку під час переходу, уточніть це у відповідного органу.
+Надання іншого дозволу може вплинути на житло, виплати чи іншу підтримку Міграційного агентства. Для людини, не внесеної до Реєстру населення, новий дозвіл за маршрутом 2026 року припиняє дію Закону про прийом та пов’язану допомогу Міграційного агентства. Зареєстровані люди не охоплюються цим законом, і до них застосовуються інші правила підтримки. Перш ніж розраховувати на підтримку під час переходу, уточніть це у відповідного органу.
 
 ## Довгострокове проживання залежить від маршруту
 
-Шведське постійне проживання не надається автоматично після певного часу під тимчасовим захистом. Воно залежить від маршруту дозволу та його вимог. Наприклад, один маршрут на підставі роботи передбачає чотири роки відповідних дозволів на роботу та роботи протягом семирічного періоду, а також інші умови. Це приклад конкретного маршруту, а не загальний строк проживання для людей із тимчасовим захистом. Вказівки за липень 2026 року також не дають чіткої відповіді щодо кожної категорії тимчасового захисту.
+Шведське постійне проживання та статус довгострокового резидента у Швеції — різні маршрути. Для статусу довгострокового резидента Міграційне агентство вимагає п’ять років безперервного проживання з дозволом на проживання або на іншій законній підставі; певні тимчасові види перебування виключаються. Директива 2003/109/ЄС окремо не поширюється на осіб, які зараз мають дозвіл на проживання на підставі тимчасового захисту або очікують рішення щодо такого статусу.
 
-Шведське постійне проживання та статус довгострокового резидента ЄС — різні статуси. Для статусу довгострокового резидента у Швеції діють окремі умови щодо п’яти років безперервного проживання, яке відповідає вимогам, та наявності засобів для утримання; не кожен вид перебування обов’язково зараховується. Людина, якій надано цей статус, отримує дозвіл на проживання строком на п’ять років. За інформацією Міграційного агентства, цей статус згодом не надає шведського постійного проживання на цій підставі. Перевірені правила ЄС виключають нинішніх бенефіціарів тимчасового захисту та заявників із механізму довгострокового резидентства. Перевірені джерела не встановлюють, чи зараховується попередній час під тимчасовим захистом після переходу на іншу підставу проживання. Не припускайте, що його зарахують повністю, частково або не зарахують зовсім.
-
-Маршрут зміни підстави проживання, пов’язаний із процедурою надання притулку (spårbyte), скасовано з 1 квітня 2025 року. Це не обмежений маршрут 2026 року для деяких людей із тимчасовим захистом.
+Час перебування у Швеції за дозволом відповідно до Директиви про тимчасовий захист не зараховується до п’ятирічного періоду для статусу довгострокового резидента ЄС. Подальший дозвіл на проживання може зараховуватися, якщо самостійно відповідає відповідним правилам.
 
 ### Claim coverage
 
@@ -127,7 +123,7 @@ Content:
 
 ## Срок подачи и ожидание решения
 
-Если срок действия вашего разрешения на временную защиту может закончиться до принятия решения, специальное правило подачи заявления в Швеции требует подать заявление, подпадающее под его действие, до окончания этого срока. Само соблюдение этого срока не предоставляет другое разрешение и не гарантирует право оставаться в стране во время рассмотрения дела. Проверьте актуальные инструкции Миграционного агентства для нужного маршрута и ваших обстоятельств.
+Если срок действия вашего разрешения на временную защиту может закончиться до принятия решения, специальное правило подачи заявления в Швеции требует подать заявление, подпадающее под его действие, до окончания этого срока. Если срок разрешения уже истёк на момент принятия решения, Закон 2026:456 позволяет предоставить альтернативный вид на жительство только при условии, что заявление подано во время действия текущего разрешения. Подача заявления сама по себе не предоставляет альтернативное разрешение. Проверьте актуальные инструкции Миграционного агентства для нужного маршрута и ваших обстоятельств.
 
 ## Дождитесь решения, прежде чем менять статус
 
@@ -139,15 +135,13 @@ Content:
 
 ## Проверьте возможные последствия для жилья и поддержки
 
-Предоставление другого вида на жительство может повлиять на жильё, выплаты или другую поддержку Миграционного агентства. Последствия зависят от вида разрешения и обстоятельств человека. Прежде чем рассчитывать на поддержку во время перехода, уточните это у компетентного органа.
+Предоставление другого вида на жительство может повлиять на жильё, выплаты или другую поддержку Миграционного агентства. Для человека, не внесённого в Реестр населения, новый вид на жительство по маршруту 2026 года прекращает действие Закона о приёме и связанную с ним помощь Миграционного агентства. Зарегистрированные лица не охватываются этим законом, и к ним применяются другие правила поддержки. Прежде чем рассчитывать на поддержку во время перехода, уточните это у компетентного органа.
 
 ## Долгосрочное проживание зависит от маршрута
 
-Шведский постоянный вид на жительство не предоставляется автоматически после определённого срока временной защиты. Он зависит от маршрута и его требований. Например, один рабочий маршрут предусматривает четыре года соответствующих разрешений на работу и работы в течение семилетнего периода, а также другие условия. Это пример конкретного маршрута, а не общий срок проживания для лиц с временной защитой. Инструкции июля 2026 года также не дают ясного ответа по каждой категории временной защиты.
+Шведский постоянный вид на жительство и статус долгосрочного резидента в Швеции — разные маршруты. Для статуса долгосрочного резидента Миграционное агентство требует пять лет непрерывного проживания с видом на жительство или на другом законном основании; некоторые временные виды пребывания исключаются. Директива 2003/109/ЕС отдельно не распространяется на лиц, которые сейчас имеют разрешение на проживание на основании временной защиты или ожидают решения по этому статусу.
 
-Шведский постоянный вид на жительство и статус долгосрочного резидента ЕС — разные статусы. Для статуса долгосрочного резидента в Швеции действуют отдельные требования: пять лет непрерывного проживания, которое отвечает установленным условиям, и наличие средств к существованию; не каждый вид пребывания обязательно засчитывается. Человек, которому предоставлен этот статус, получает вид на жительство сроком на пять лет. По информации Миграционного агентства, этот статус впоследствии не предоставляет шведский постоянный вид на жительство на этом основании. Проверенные правила ЕС исключают нынешних получателей временной защиты и заявителей из режима долгосрочного резидентства. Проверенные источники не устанавливают, засчитывается ли прежнее время временной защиты после перехода на другое основание проживания. Не предполагайте, что оно будет засчитано полностью, частично или не будет засчитано вовсе.
-
-Маршрут смены основания проживания, связанный с процедурой предоставления убежища (spårbyte), отменён с 1 апреля 2025 года. Это не ограниченный маршрут 2026 года для некоторых лиц с временной защитой.
+Время пребывания в Швеции по разрешению согласно Директиве о временной защите не засчитывается в пятилетний период для статуса долгосрочного резидента ЕС. Последующий вид на жительство может засчитываться, если сам по себе соответствует применимым правилам.
 
 ### Claim coverage
 

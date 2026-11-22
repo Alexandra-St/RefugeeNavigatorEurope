@@ -39,6 +39,8 @@ Call 112 for a general emergency anywhere in Spain. Autonomous Communities opera
 
 Use the current health-authority information for your Autonomous Community to check how to ask about access and the individual health card. Do not assume that a document or procedure described for another group or region applies to you.
 
+For people applying for temporary protection, healthcare entitlement starts on the date the application is submitted. Regional health services may separately handle registration and practical access cards.
+
 ### Claim coverage
 
 - How healthcare access is organised → ES-HEALTH-01-C001
@@ -80,6 +82,8 @@ TIE, NIE, рішення про тимчасовий захист, підтве�
 
 Щоб дізнатися, як звернутися щодо доступу до допомоги та індивідуальної медичної картки, скористайтеся актуальною інформацією органу охорони здоров’я своєї автономної спільноти. Не припускайте, що документ або процедура, описані для іншої групи чи регіону, підходять саме вам.
 
+Для осіб, які подають заяву на тимчасовий захист, право на медичну допомогу починається з дати подання заяви. Регіональні медичні служби окремо оформлюють реєстрацію та практичні картки доступу.
+
 ### Claim coverage
 
 - Як організовано доступ до медичної допомоги → ES-HEALTH-01-C001
@@ -120,6 +124,8 @@ TIE, NIE, решение о временной защите, подтвержд�
 ## Что уточнить на месте
 
 Чтобы узнать, как обратиться по вопросу доступа к помощи и индивидуальной медицинской карты, воспользуйтесь актуальной информацией органа здравоохранения своей автономной области. Не предполагайте, что документ или порядок, описанные для другой группы или региона, подходят именно вам.
+
+Для лиц, подающих заявление на временную защиту, право на медицинскую помощь начинается с даты подачи заявления. Региональные службы здравоохранения отдельно оформляют регистрацию и практические карты доступа.
 
 ### Claim coverage
 

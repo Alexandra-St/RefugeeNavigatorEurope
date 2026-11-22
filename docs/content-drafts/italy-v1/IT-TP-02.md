@@ -64,7 +64,7 @@ Content:
 ## Editorial source set
 
 - `IT-TP-02-S01` → `87ee9811-270e-5769-af67-4e0359110d0e` — Gazzetta Ufficiale, DPCM 28 March 2022
-- `IT-TP-02-S02` → `4cd09057-d389-5bf3-bcbc-5e4853bff7fa` — Normattiva, Law 213/2023 conversion provision
+- `IT-TP-02-S02` → `4cd09057-d389-5bf3-bcbc-5e4853bff7fa` — Normattiva, Law 213/2023 conversion provision (specified Ukrainian cohort; not TP permit-renewal procedure)
 - `IT-TP-02-S03` → `59c83267-a469-5689-b90c-af386a8be359` — Normattiva, DL 202/2024 conversion provision
 - `IT-TP-02-S04` → `7f87bebf-55df-51f3-97b0-f01b05eb5fe8` — Normattiva, consolidated TUI immigration law
 - `IT-TP-02-S05` → `b5723ac1-589f-5aeb-9159-a2c41b8d2694` — Ministry of the Interior, visa and permit guidance

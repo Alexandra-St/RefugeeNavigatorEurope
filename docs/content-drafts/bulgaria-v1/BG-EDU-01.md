@@ -66,7 +66,7 @@ Content:
 
 - `BG-SRC-059` → `f87c647e-62bb-5082-abf5-77ef42366d97` — Ministry of Education and Science, Preschool and School Education Act
 - `BG-SRC-053` → `989cc461-fa87-5e26-8058-a8404fbe6d52` — Government of Bulgaria, education information for Ukraine
-- `BG-SRC-050` → `4639994e-692e-5fdd-80a1-e65fbb61f9da` — Sofia Regional Department of Education, admission and education guidance
+- `BG-SRC-050` → `4639994e-692e-5fdd-80a1-e65fbb61f9da` — Sofia Regional Department of Education, student admission and education guidance
 - `BG-SRC-055` → `b76ea3f3-4ee1-5b97-b724-5cbf35d67f34` — MES / Regional Department of Education, Ordinance No. 3/2017
 - `BG-SRC-058` → `f500c89e-8bcc-5f93-b0ff-f6acfc803ab9` — Ministry of Education and Science, Ordinance No. 6/2016 on Bulgarian language
 - `BG-SRC-052` → `9423b53a-7503-5f22-99c4-50b311a95023` — Ministry of Education and Science, support for children and pupils seeking/receiving protection

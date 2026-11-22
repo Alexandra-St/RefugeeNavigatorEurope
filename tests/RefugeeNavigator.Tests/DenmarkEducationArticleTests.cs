@@ -74,7 +74,7 @@ public sealed class DenmarkEducationArticleTests
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
             Assert.Equal(7, Regex.Matches(translation.Content, "(?m)^## ").Count);
             Assert.Contains("- ", translation.Content);
-            Assert.Equal(new DateOnly(2026, 11, 17), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
+            Assert.Equal(new DateOnly(2026, 11, 22), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
         });
 
         var sources = catalog.OfficialSources.Where(source => source.InformationEntryId == ArticleId).ToArray();

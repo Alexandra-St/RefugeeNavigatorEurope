@@ -51,6 +51,7 @@ A TIE is an identity and residence document; it is not the underlying protection
 
 Application locations, appointments and evidence instructions can change. Use the current Ministry page for operational directions and check which documents apply to your own route. In particular, do not treat an application receipt, an NIE, a grant decision and a TIE as interchangeable, and do not infer an individual expiry date from the EU scheme date.
 
+Spanish rules set a maximum of 24 hours to decide a formal temporary-protection application under Order PCM/169/2022. This is a statutory maximum, not a guarantee that every case will be completed in that time. After renouncing temporary protection to take up another authorization, return or surrender the existing TIE as required by Order INT/96/2026.
 
 ### Claim coverage
 
@@ -110,6 +111,7 @@ TIE — це документ, що посвідчує особу та прож�
 
 Місце подання, запис і вимоги до доказів можуть змінюватися. Користуйтеся актуальною сторінкою Міністерства для організаційних вказівок і перевірте, які документи потрібні саме для вашого маршруту. Не ототожнюйте квитанцію про подання, NIE, рішення про надання захисту та TIE і не визначайте індивідуальну дату завершення статусу за датою механізму ЄС.
 
+Іспанські правила встановлюють максимальний строк 24 години для вирішення формальної заяви про тимчасовий захист відповідно до Наказу PCM/169/2022. Це граничний строк у законі, а не гарантія, що кожну справу буде завершено саме за цей час. Після відмови від тимчасового захисту для переходу на інший дозвіл поверніть або здайте чинну картку TIE відповідно до Наказу INT/96/2026.
 
 ### Claim coverage
 
@@ -169,6 +171,7 @@ TIE — документ, удостоверяющий личность и пр�
 
 Места подачи, запись и требования к доказательствам могут меняться. Используйте актуальную страницу Министерства для организационных указаний и проверьте, какие документы нужны именно для вашего маршрута. Не считайте квитанцию о подаче, NIE, решение о предоставлении защиты и TIE взаимозаменяемыми документами и не определяйте индивидуальную дату окончания статуса по дате механизма ЕС.
 
+Испанские правила устанавливают максимальный срок 24 часа для решения по формальному заявлению о временной защите согласно Приказу PCM/169/2022. Это установленный законом максимум, а не гарантия, что каждое дело будет завершено за это время. После отказа от временной защиты для перехода на другое разрешение верните или сдайте действующую карту TIE в соответствии с Приказом INT/96/2026.
 
 ### Claim coverage
 

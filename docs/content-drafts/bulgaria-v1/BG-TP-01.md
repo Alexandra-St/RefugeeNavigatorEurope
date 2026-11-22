@@ -22,6 +22,10 @@ EU rules adopted in 2026 address Ukrainian military obligations “where applica
 
 The Council of Ministers approved an amendment on 4 November 2026 extending Bulgaria’s national temporary-protection period through 4 March 2028. The announced next re-registration period is 5 March–30 April 2027. The decision summary does not establish that an existing card remains valid for that entire period or give all operational steps; confirm your individual document and the process with AREF before the window opens. The earlier AREF notice about the 2026 card cycle is historical: it described the protection and card arrangements then in effect, and its 30 April 2026 card deadline has passed; it does not describe the 2027 procedure. First registration is a separate process; AREF guidance describes in-person processing through AREF or Ministry of Interior channels, but readers should confirm the current intake point and documents before travel. [[source:1b7d23f4-0c08-581b-b156-ba4c119f92bc|Council of Ministers notice, 4 November 2026]] [[source:d584362c-3990-5055-8833-158f2b594773|Superseded AREF 2026 notice (historical)]] [[source:62ec9f9f-0d3a-51ba-88aa-6c5aade59a71|AREF first-registration guidance (dated; confirm current steps)]].
 
+For Ukrainian men within the military-obligation cohort covered by the amended EU Decision, the condition applies to applications submitted from 5 August 2026, subject to the Decision’s same-state continuity exception. Bulgaria has not published an exhaustive national proof checklist; follow the Bulgarian registration authority’s current instructions and do not assume that another country’s document list applies. [[source:48ff49e5-26d6-59b1-aa02-e0889e97ee54|Corrected EU Decision]]
+
+EU temporary-protection eligibility also covers qualifying people who were protected in Ukraine, certain third-country nationals or stateless people permanently resident in Ukraine who cannot safely and durably return, and qualifying family members, subject to the applicable statutory conditions.
+
 ### Claim coverage and editorial exclusions
 
 This guide does not settle military-proof requirements, a complete initial-application checklist, individual card validity, travel/transfer rules or processing times.
@@ -36,6 +40,10 @@ Content:
 
 4 листопада 2026 року Рада міністрів схвалила зміни, якими період тимчасового захисту в Болгарії продовжено до 4 березня 2028 року. Оголошений наступний період перереєстрації: 5 березня–30 квітня 2027 року. Короткий опис рішення не підтверджує, що наявна картка залишатиметься чинною весь цей період, і не містить усіх практичних кроків; до початку періоду уточніть індивідуальну чинність документа та процедуру в ДАБ. Попереднє повідомлення ДАБ про період тимчасового захисту й картки 2026 року є історичним; строк дії карток до 30 квітня 2026 року минув, і це повідомлення не описує процедуру 2027 року. Первинна реєстрація є окремою процедурою; інструкція ДАБ передбачає особисте звернення через ДАБ або МВС, але перед поїздкою слід уточнити чинне місце прийому та документи. [[source:1b7d23f4-0c08-581b-b156-ba4c119f92bc|Повідомлення Ради міністрів від 4 листопада 2026 року]] [[source:d584362c-3990-5055-8833-158f2b594773|Застаріле повідомлення AREF 2026 року (історичне)]] [[source:62ec9f9f-0d3a-51ba-88aa-6c5aade59a71|Інформація ДАБ про первинну реєстрацію (датована; уточніть чинні кроки)]].
 
+Для українських чоловіків, які належать до визначеної Рішенням ЄС категорії військового обов’язку, умова застосовується до заяв, поданих з 5 серпня 2026 року, з урахуванням винятку щодо безперервного захисту в тій самій державі. Болгарія не опублікувала вичерпного національного переліку доказів; дотримуйтеся актуальних інструкцій болгарського органу реєстрації й не вважайте перелік документів іншої країни застосовним у Болгарії. [[source:48ff49e5-26d6-59b1-aa02-e0889e97ee54|Виправлене рішення ЄС]]
+
+Право на тимчасовий захист ЄС також охоплює відповідних осіб, які мали захист в Україні, окремих громадян третіх країн або осіб без громадянства з постійним проживанням в Україні, які не можуть безпечно й надовго повернутися, а також відповідних членів сім’ї за встановлених законом умов.
+
 ### Claim coverage and editorial exclusions
 
 Цей матеріал не визначає вимоги до доказів щодо військового обов’язку, повний перелік документів для першого звернення, строк дії конкретної картки, правила поїздок/переведення чи строки розгляду.
@@ -49,6 +57,10 @@ Summary: Кто может соответствовать условиям, ка
 Content:
 
 4 ноября 2026 года Совет министров одобрил поправки, продлевающие срок временной защиты в Болгарии до 4 марта 2028 года. Объявленный следующий период перерегистрации: 5 марта–30 апреля 2027 года. Краткое описание решения не подтверждает, что имеющаяся карта будет действительна весь этот период, и не содержит всех практических шагов; до начала периода уточните срок действия своего документа и порядок в ГАБ. Предыдущее уведомление ГАБ о сроке временной защиты и карточках на 2026 год носит исторический характер; срок действия карт до 30 апреля 2026 года истёк, и это уведомление не описывает процедуру 2027 года. Первичная регистрация — отдельная процедура; инструкция ГАБ предусматривает личное обращение через ГАБ или МВД, но перед поездкой следует уточнить действующее место приёма и документы. [[source:1b7d23f4-0c08-581b-b156-ba4c119f92bc|Сообщение Совета министров от 4 ноября 2026 года]] [[source:d584362c-3990-5055-8833-158f2b594773|Устаревшее уведомление AREF за 2026 год (историческое)]] [[source:62ec9f9f-0d3a-51ba-88aa-6c5aade59a71|Информация ГАБ о первичной регистрации (датированная; уточните текущие шаги)]].
+
+Для украинских мужчин, входящих в охваченную изменённым решением ЕС категорию воинской обязанности, условие применяется к заявлениям, поданным с 5 августа 2026 года, с учётом исключения для непрерывной защиты в том же государстве. Болгария не опубликовала исчерпывающий национальный перечень подтверждающих документов; следуйте актуальным инструкциям болгарского органа регистрации и не переносите на Болгарию перечень документов другой страны. [[source:48ff49e5-26d6-59b1-aa02-e0889e97ee54|Исправленное решение ЕС]]
+
+Право на временную защиту ЕС также распространяется на отвечающих условиям лиц, имевших защиту в Украине, некоторых граждан третьих стран или лиц без гражданства с постоянным проживанием в Украине, которые не могут безопасно и надолго вернуться, а также на соответствующих членов семьи при соблюдении установленных законом условий.
 
 ### Claim coverage and editorial exclusions
 

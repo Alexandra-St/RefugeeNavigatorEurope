@@ -47,6 +47,8 @@ Local social services have responsibilities for information, assessment and imme
 
 The reviewed direct-aid measure for qualifying temporary-protection beneficiaries was time-limited, with its funded action period ending on 31 December 2023. It is not current application guidance. This bounded research did not establish a current nationwide replacement, but that evidence limitation does not prove that no later or regional assistance exists.
 
+A household may qualify for the child supplement CAPI without qualifying for the main IMV payment, if it meets CAPI’s own conditions. Apply through Social Security; neither benefit is automatic.
+
 ### Claim coverage
 
 - Social support is not one single benefit → ES-SOC-01-C001
@@ -97,6 +99,8 @@ Ingreso Mínimo Vital (IMV) — окрема допомога системи с�
 
 Перевірений захід прямої допомоги для визначених бенефіціарів тимчасового захисту був обмежений у часі; період фінансування завершився 31 грудня 2023 року. Це не є актуальною інструкцією для подання заяви. Це обмежене дослідження не встановило загальнонаціональної заміни, але така прогалина в доказах не доводить, що пізнішої або регіональної допомоги не існує.
 
+Сім’я може мати право на дитячу доплату CAPI без права на основну виплату IMV, якщо відповідає окремим умовам CAPI. Подайте заяву до Соціального страхування; жодна з виплат не призначається автоматично.
+
 ### Claim coverage
 
 - Соціальна підтримка — це не одна універсальна виплата → ES-SOC-01-C001
@@ -146,6 +150,8 @@ Ingreso Mínimo Vital (IMV) — отдельное пособие испанск
 ## Историческая помощь, связанная с Украиной
 
 Проверенная мера прямой помощи для определённых бенефициаров временной защиты была ограничена по времени; период финансирования завершился 31 декабря 2023 года. Это не актуальная инструкция для подачи заявления. Это ограниченное исследование не установило общенациональной замены, но такой пробел в доказательствах не доказывает, что позднейшей или региональной помощи не существует.
+
+Семья может иметь право на детскую доплату CAPI без права на основную выплату IMV, если она соответствует отдельным условиям CAPI. Подайте заявление в систему социального страхования; ни одна из выплат не назначается автоматически.
 
 ### Claim coverage
 

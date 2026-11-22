@@ -25,6 +25,8 @@ Temporary refuge ends on specified statutory events: expiry of the period set by
 
 The EU scheme and Slovak automatic-extension mechanism support temporary refuge through 4 March 2028. That endpoint is different from the date printed on an individual paper or card. Check an individual record through the Ministry validation service; no universal card-replacement rule or printed expiry date is established. [[source:38918d42-3122-587a-b06a-a70fd99520bc|Government resolution]] [[source:bf463b9b-1bac-5914-ae1d-64fce762a7dc|EU decision]] [[source:ebd39fa2-8a33-53e1-8858-5d90b09b6642|document validation service]]
 
+If you later change from temporary refuge to an eligible residence status, the Foreign Police currently counts the temporary-refuge period in full as an administrative practice; the statute does not expressly say this. A person who still holds odídenec status cannot apply directly under the ordinary §52 route.
+
 ### Claim coverage and editorial exclusions
 
 Eligibility remains category-specific; no universal Slovak military-proof checklist, appointment guarantee, document expiry rule or processing time is asserted.
@@ -47,6 +49,8 @@ Content:
 
 Схема ЄС і словацький механізм автоматичного продовження передбачають тимчасове укриття до 4 березня 2028 року. Ця дата відрізняється від дати на конкретному папері чи картці. Перевірте індивідуальний запис через сервіс міністерства; загального правила про заміну карток або єдину друковану дату не встановлено. [[source:38918d42-3122-587a-b06a-a70fd99520bc|Постанова уряду]] [[source:bf463b9b-1bac-5914-ae1d-64fce762a7dc|Рішення ЄС]] [[source:ebd39fa2-8a33-53e1-8858-5d90b09b6642|Сервіс перевірки документа]]
 
+Якщо згодом ви перейдете з тимчасового прихистку на відповідний статус проживання, поліція у справах іноземців наразі зараховує весь період тимчасового прихистку як адміністративну практику; закон прямо цього не встановлює. Особа, яка ще має статус odídenec, не може безпосередньо подати заяву за звичайним маршрутом §52.
+
 ### Claim coverage and editorial exclusions
 
 Eligibility remains category-specific; no universal Slovak military-proof checklist, appointment guarantee, document expiry rule or processing time is asserted.
@@ -68,6 +72,8 @@ Content:
 Временное убежище прекращается в отдельных предусмотренных законом случаях: по окончании периода, определённого Советом ЕС или правительством Словакии; при подаче заявления о международной защите в Словакии; при предоставлении Словакией временного или постоянного проживания; после получения МВД письменного отказа от убежища; при предоставлении международной защиты или временного убежища другим государством ЕС; при предоставлении другой страной бессрочного проживания; либо при приобретении гражданства Словакии или другой страны ЕС. МВД может отменить статус по предусмотренным законом основаниям, в том числе из-за несоответствия условиям или ложных/поддельных данных о личности. Отдельно производство по заявлению может быть прекращено, если заявитель покинет Словакию. Закон № 69/2026 не устанавливает общего правила о прекращении после определённого числа дней отсутствия или общей автоматической процедуры восстановления; перед поездкой, возвращением или повторной подачей уточните индивидуальную ситуацию в полиции по делам иностранцев. [[source:a1509aff-d7fa-5e45-93ee-530d44b2101e|Закон № 69/2026]]
 
 Схема ЕС и словацкий механизм автоматического продления предусматривают временное убежище до 4 марта 2028 года. Эта дата отличается от даты на конкретном бумажном документе или карте. Проверьте индивидуальную запись через сервис министерства; общего правила о замене карт или единой печатной дате не установлено. [[source:38918d42-3122-587a-b06a-a70fd99520bc|Постановление правительства]] [[source:bf463b9b-1bac-5914-ae1d-64fce762a7dc|Решение ЕС]] [[source:ebd39fa2-8a33-53e1-8858-5d90b09b6642|Сервис проверки документа]]
+
+Если позднее вы перейдёте с временного убежища на подходящий статус проживания, полиция по делам иностранцев в настоящее время засчитывает весь период временного убежища в рамках административной практики; закон прямо этого не устанавливает. Человек, который всё ещё имеет статус odídenec, не может подать заявление напрямую по обычному маршруту §52.
 
 ### Claim coverage and editorial exclusions
 

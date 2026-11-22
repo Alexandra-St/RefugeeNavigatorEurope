@@ -12,7 +12,7 @@ Title:
 Financial and Social Assistance in Sweden
 
 Summary:
-Learn how Migration Agency reception aid, municipal economic assistance, employment-programme compensation and social-insurance benefits are separate systems, each with its own conditions and decision-maker.
+Learn how Migration Agency reception aid, municipal economic assistance, employment-programme compensation and social-insurance benefits have different eligibility rules.
 
 Content:
 ## Migration Agency reception support
@@ -27,17 +27,17 @@ Daily allowance is intended for daily living costs. A special grant may cover sp
 
 ## How to apply to the Migration Agency
 
-Apply through the reception unit where you are registered and follow the Agency’s current form and instructions. You must disclose income and assets as required and report changes such as a new address or work. Keep the Agency informed of your residential address and remain in Sweden to receive daily allowance or special grant under the rules effective from 1 October 2026. Recovery of improperly paid aid may apply under statutory conditions.
+To apply for daily allowance, submit the form to the Swedish Migration Agency reception unit where you are registered, and follow the Agency’s current instructions. You must disclose income and assets as required and report changes such as a new address or work. Keep the Agency informed of your residential address and remain in Sweden to receive daily allowance or special grant under the rules effective from 1 October 2026. Recovery of improperly paid aid may apply under statutory conditions.
 
 The Agency says TPD holders from Ukraine are not subject to the new geographical restriction or attendance checks described for specified other reception-system groups. Do not assume those group-specific rules apply to you; follow the rules that apply to your own support.
 
 ## What changes after population registration
 
-Migration Agency support under the Reception Act ends when population registration takes effect. That change does not automatically provide access to other benefits. Each system has its own legal conditions, application route and decision-maker.
+Migration Agency support under the Reception Act ends when population registration takes effect. That change does not automatically provide access to other benefits. The Swedish Migration Agency decides whether to grant daily allowance under the Reception Act.
 
 ## Municipal economic assistance
 
-Under the Social Services Act rule in force on 20 October 2026, a person still covered by the Reception Act has no right to economic assistance under Chapter 12, Section 1. A temporary-protection holder registered in the population register who is no longer covered by the Reception Act may apply to the municipality under the ordinary needs-based rules. The municipality assesses resources, other available support and ability to contribute. Applicants able to work normally must be available to the labour market, subject to acceptable reasons. Applying does not guarantee a grant.
+Under the Social Services Act rule in force on 20 October 2026, a person still covered by the Reception Act has no right to economic assistance under Chapter 12, Section 1. A temporary-protection holder registered in the population register who is no longer covered by the Reception Act may apply to the municipality under the ordinary needs-based rules. The municipality’s social services assess each economic-assistance application individually, considering resources, other available support and ability to contribute. Applicants able to work normally must be available to the labour market, subject to acceptable reasons. Applying does not guarantee a grant.
 
 This rule changes from 2 January 2027. If you are relying on municipal-assistance rules on or after that date, check the current law and municipal guidance. Do not treat the future amendment as the rule currently in force.
 
@@ -49,11 +49,13 @@ Establishment compensation (etableringsersättning) is a separate payment admini
 
 ## Social-insurance benefits
 
-Population registration (folkbokföring) is not the same as being “resident” (bosatt) under the Social Insurance Code. The Code generally excludes covered temporary-protection permit holders from that residence test, subject to its express exception. Registration or a personal identity number does not by itself establish entitlement to ordinary residence-based benefits. Work-based social-insurance benefits are a separate system; employment does not automatically qualify you for every benefit. Each benefit has its own conditions and decision.
+Population registration (folkbokföring) is not the same as being “resident” (bosatt) under the Social Insurance Code. The Code generally excludes covered temporary-protection permit holders from that residence test, subject to its express exception. Registration or a personal identity number does not by itself establish entitlement to ordinary residence-based benefits. Work-based social-insurance benefits are a separate system; employment does not automatically qualify you for every benefit.
 
 ## Child and housing allowance boundary
 
-Socialstyrelsen states that temporary-protection holders who were population-registered on or after 1 November 2024 cannot receive child allowance or housing allowance under the reviewed guidance. People registered by 31 October 2024 may be eligible, subject to individual rules. This date boundary is not an automatic award and applies only to these benefits. Check current guidance and your circumstances.
+Socialstyrelsen states that temporary-protection holders who were population-registered on or after 1 November 2024 cannot receive child allowance or housing allowance. People registered by 31 October 2024 may be eligible, subject to individual rules. This date boundary is not an automatic award and applies only to these benefits. Check current guidance and your circumstances.
+
+Under the Reception Act transition, a new application had to reach the Migration Agency by 30 September 2026 for daily allowance payments to continue from 1 October 2026. That deadline has passed. A later application can support payment from the date it is received, but not for days before receipt. If you still need support, apply to the Migration Agency promptly and ask what applies to your case. [[source:c1ba3594-7cfc-4c92-abcb-c1819fdf63cd|Reception Act]] [[source:beeb9ffe-a708-4570-80c0-959830014656|Migration Agency financial aid guidance]]
 
 ### Claim coverage
 
@@ -82,7 +84,7 @@ Title:
 Фінансова та соціальна допомога у Швеції
 
 Summary:
-Дізнайтеся, чим відрізняються допомога Міграційного агентства в системі прийому, муніципальна економічна допомога, виплати в межах програми працевлаштування та соціальне страхування: кожна система має власні умови й орган ухвалення рішення.
+Дізнайтеся, чим відрізняються допомога Міграційного агентства в системі прийому, муніципальна економічна допомога, виплати в межах програми працевлаштування та соціальне страхування: вони мають різні правила відповідності критеріям.
 
 Content:
 ## Допомога Міграційного агентства в системі прийому
@@ -97,17 +99,17 @@ Content:
 
 ## Як звернутися до Міграційного агентства
 
-Подайте заяву до підрозділу прийому, де ви зареєстровані, та дотримуйтеся актуальної форми й інструкцій Агентства. Ви повинні повідомляти про доходи й майно відповідно до вимог чинної форми, а також про зміни, наприклад нову адресу чи роботу. Для отримання щоденної допомоги або спеціальної виплати за правилами, чинними з 1 жовтня 2026 року, потрібно залишатися у Швеції та повідомляти Агентству свою адресу проживання. За встановлених законом умов неправомірно отримані кошти можуть підлягати поверненню.
+Щоб подати заяву на щоденну допомогу, надішліть форму до підрозділу прийому Міграційного агентства Швеції, де ви зареєстровані, та дотримуйтеся актуальних інструкцій Агентства. Ви повинні повідомляти про доходи й майно відповідно до вимог чинної форми, а також про зміни, наприклад нову адресу чи роботу. Для отримання щоденної допомоги або спеціальної виплати за правилами, чинними з 1 жовтня 2026 року, потрібно залишатися у Швеції та повідомляти Агентству свою адресу проживання. За встановлених законом умов неправомірно отримані кошти можуть підлягати поверненню.
 
 Агентство зазначає, що на людей з України з тимчасовим захистом не поширюються нове географічне обмеження та перевірки відвідування, описані для окремих інших груп системи прийому. Не вважайте, що правила для цих груп автоматично стосуються вас; дотримуйтеся вимог, застосовних до вашої допомоги.
 
 ## Що змінюється після реєстрації в реєстрі населення
 
-Допомога Міграційного агентства за Законом про прийом припиняється, коли набуває чинності реєстрація в реєстрі населення. Це не означає автоматичного доступу до інших виплат. Кожна система має власні законодавчі умови, порядок подання заяви та орган, який ухвалює рішення.
+Допомога Міграційного агентства за Законом про прийом припиняється, коли набуває чинності реєстрація в реєстрі населення. Це не означає автоматичного доступу до інших виплат. Міграційне агентство Швеції вирішує, чи призначити щоденну допомогу за Законом про прийом.
 
 ## Муніципальна економічна допомога
 
-За Законом про соціальні послуги, чинним 20 жовтня 2026 року, людина, на яку ще поширюється Закон про прийом, не має права на економічну допомогу за Главою 12, §1. Особа з тимчасовим захистом, зареєстрована в реєстрі населення і на яку більше не поширюється Закон про прийом, може звернутися до муніципалітету за звичайними правилами оцінювання потреб. Муніципалітет оцінює ресурси, іншу доступну підтримку та можливість людини зробити внесок. Працездатні заявники зазвичай мають бути доступними для ринку праці, крім випадків, коли є прийнятні підстави. Подання заяви не гарантує виплати.
+За Законом про соціальні послуги, чинним 20 жовтня 2026 року, людина, на яку ще поширюється Закон про прийом, не має права на економічну допомогу за Главою 12, §1. Особа з тимчасовим захистом, зареєстрована в реєстрі населення і на яку більше не поширюється Закон про прийом, може звернутися до муніципалітету за звичайними правилами оцінювання потреб. Соціальна служба муніципалітету індивідуально оцінює кожну заяву на економічну допомогу, враховуючи ресурси, іншу доступну підтримку та можливість людини зробити внесок. Працездатні заявники зазвичай мають бути доступними для ринку праці, крім випадків, коли є прийнятні підстави. Подання заяви не гарантує виплати.
 
 Це правило змінюється з 2 січня 2027 року. Якщо ви покладаєтеся на правила муніципальної допомоги в цю дату або пізніше, перевірте чинний закон та рекомендації муніципалітету. Не застосовуйте майбутню зміну як правило, чинне зараз.
 
@@ -119,11 +121,13 @@ Content:
 
 ## Виплати соціального страхування
 
-Реєстрація в реєстрі населення (folkbokföring) не тотожна статусу «проживає» (bosatt) за Кодексом соціального страхування. Кодекс зазвичай виключає людей із дозволом на тимчасовий захист, на яких поширюються відповідні правила, із цього критерію проживання, з урахуванням прямо передбаченого винятку. Реєстрація або персональний номер самі по собі не встановлюють права на звичайні виплати, що залежать від проживання. Страхування, пов’язане з роботою, є окремою системою; працевлаштування не надає автоматичного права на кожну виплату. Для кожної виплати діють власні умови та рішення.
+Реєстрація в реєстрі населення (folkbokföring) не тотожна статусу «проживає» (bosatt) за Кодексом соціального страхування. Кодекс зазвичай виключає людей із дозволом на тимчасовий захист, на яких поширюються відповідні правила, із цього критерію проживання, з урахуванням прямо передбаченого винятку. Реєстрація або персональний номер самі по собі не встановлюють права на звичайні виплати, що залежать від проживання. Страхування, пов’язане з роботою, є окремою системою; працевлаштування не надає автоматичного права на кожну виплату.
 
 ## Межа щодо дитячої та житлової допомоги
 
-За інформацією Socialstyrelsen, власники тимчасового захисту, зареєстровані в реєстрі населення 1 листопада 2024 року або пізніше, не можуть отримувати дитячу допомогу чи житлову допомогу згідно з розглянутими рекомендаціями. Люди, зареєстровані до 31 жовтня 2024 року включно, можуть мати право на них за умови виконання індивідуальних вимог. Ця межа за датою не означає автоматичного призначення та стосується лише цих виплат. Перевірте актуальні рекомендації та свою ситуацію.
+За інформацією Socialstyrelsen, власники тимчасового захисту, зареєстровані в реєстрі населення 1 листопада 2024 року або пізніше, не можуть отримувати дитячу допомогу чи житлову допомогу. Люди, зареєстровані до 31 жовтня 2024 року включно, можуть мати право на них за умови виконання індивідуальних вимог. Ця межа за датою не означає автоматичного призначення та стосується лише цих виплат. Перевірте актуальні рекомендації та свою ситуацію.
+
+За перехідними правилами Закону про прийом нову заяву потрібно було подати до Міграційного агентства не пізніше 30 вересня 2026 року, щоб щоденна допомога продовжувала виплачуватися з 1 жовтня 2026 року. Цей строк минув. Пізніша заява може бути підставою для виплати з дати її отримання, але не за попередні дні. Якщо підтримка вам досі потрібна, подайте заяву до Міграційного агентства якнайшвидше й уточніть, що застосовується у вашому випадку. [[source:c1ba3594-7cfc-4c92-abcb-c1819fdf63cd|Закон про прийом]] [[source:beeb9ffe-a708-4570-80c0-959830014656|Інформація Міграційного агентства про допомогу]]
 
 ### Claim coverage
 
@@ -152,7 +156,7 @@ Title:
 Финансовая и социальная помощь в Швеции
 
 Summary:
-Узнайте, чем отличаются помощь Миграционного агентства в системе приёма, муниципальная экономическая помощь, компенсация по программе занятости и социальное страхование: у каждой системы свои условия и орган, принимающий решение.
+Узнайте, чем отличаются помощь Миграционного агентства в системе приёма, муниципальная экономическая помощь, компенсация по программе занятости и социальное страхование: у них разные правила соответствия критериям.
 
 Content:
 ## Поддержка Миграционного агентства в системе приёма
@@ -167,17 +171,17 @@ Content:
 
 ## Как обратиться в Миграционное агентство
 
-Подайте заявление в подразделение системы приёма, где вы зарегистрированы, и следуйте действующей форме и инструкциям Агентства. Вы должны указывать доходы и имущество в соответствии с требованиями действующей формы и сообщать об изменениях, например о новом адресе или работе. Чтобы получать ежедневное пособие или специальную выплату по правилам, действующим с 1 октября 2026 года, нужно оставаться в Швеции и сообщать Агентству адрес проживания. При установленных законом условиях неправомерно полученную помощь могут потребовать вернуть.
+Чтобы подать заявление на ежедневное пособие, отправьте форму в подразделение системы приёма Миграционного агентства Швеции, где вы зарегистрированы, и следуйте актуальным инструкциям Агентства. Вы должны указывать доходы и имущество в соответствии с требованиями действующей формы и сообщать об изменениях, например о новом адресе или работе. Чтобы получать ежедневное пособие или специальную выплату по правилам, действующим с 1 октября 2026 года, нужно оставаться в Швеции и сообщать Агентству адрес проживания. При установленных законом условиях неправомерно полученную помощь могут потребовать вернуть.
 
 Агентство указывает, что на людей из Украины с временной защитой не распространяются новое географическое ограничение и проверки посещаемости, описанные для отдельных других групп системы приёма. Не следует считать, что правила для этих групп автоматически относятся к вам; соблюдайте требования, применимые к вашей поддержке.
 
 ## Что меняется после регистрации в реестре населения
 
-Поддержка Миграционного агентства по Закону о приёме прекращается, когда регистрация в реестре населения вступает в силу. Это не означает автоматического доступа к другим выплатам. У каждой системы свои законодательные условия, порядок подачи заявления и орган, принимающий решение.
+Поддержка Миграционного агентства по Закону о приёме прекращается, когда регистрация в реестре населения вступает в силу. Это не означает автоматического доступа к другим выплатам. Миграционное агентство Швеции принимает решение о назначении ежедневного пособия по Закону о приёме.
 
 ## Муниципальная экономическая помощь
 
-Согласно Закону о социальных услугах в редакции, действующей на 20 октября 2026 года, человек, который всё ещё подпадает под действие Закона о приёме, не имеет права на экономическую помощь по главе 12, §1. Зарегистрированный в реестре населения обладатель временной защиты, на которого больше не распространяется Закон о приёме, может обратиться в муниципалитет по обычным правилам, основанным на оценке нуждаемости. Муниципалитет оценивает ресурсы, другую доступную поддержку и возможность человека участвовать в покрытии расходов. Трудоспособные заявители обычно должны быть доступны для рынка труда, если нет уважительных причин. Подача заявления не гарантирует выплату.
+Согласно Закону о социальных услугах в редакции, действующей на 20 октября 2026 года, человек, который всё ещё подпадает под действие Закона о приёме, не имеет права на экономическую помощь по главе 12, §1. Зарегистрированный в реестре населения обладатель временной защиты, на которого больше не распространяется Закон о приёме, может обратиться в муниципалитет по обычным правилам, основанным на оценке нуждаемости. Социальная служба муниципалитета индивидуально оценивает каждое заявление на экономическую помощь с учётом ресурсов, другой доступной поддержки и возможности человека участвовать в покрытии расходов. Трудоспособные заявители обычно должны быть доступны для рынка труда, если нет уважительных причин. Подача заявления не гарантирует выплату.
 
 Это правило меняется с 2 января 2027 года. Если вы полагаетесь на правила муниципальной помощи в эту дату или позднее, проверьте действующий закон и рекомендации муниципалитета. Не применяйте будущее изменение как правило, действующее сейчас.
 
@@ -189,11 +193,13 @@ Content:
 
 ## Выплаты социального страхования
 
-Регистрация в реестре населения (folkbokföring) не равна статусу «проживает» (bosatt) по Кодексу социального страхования. Кодекс обычно исключает обладателей разрешений на временную защиту, подпадающих под соответствующие правила, из этого критерия проживания, с учётом прямо предусмотренного исключения. Регистрация или персональный номер сами по себе не устанавливают право на обычные выплаты, основанные на проживании. Страхование, связанное с работой, — отдельная система; трудоустройство не даёт автоматически права на каждую выплату. У каждой выплаты свои условия и решение.
+Регистрация в реестре населения (folkbokföring) не равна статусу «проживает» (bosatt) по Кодексу социального страхования. Кодекс обычно исключает обладателей разрешений на временную защиту, подпадающих под соответствующие правила, из этого критерия проживания, с учётом прямо предусмотренного исключения. Регистрация или персональный номер сами по себе не устанавливают право на обычные выплаты, основанные на проживании. Страхование, связанное с работой, — отдельная система; трудоустройство не даёт автоматически права на каждую выплату.
 
 ## Граница по детскому и жилищному пособию
 
-По сведениям Socialstyrelsen, обладатели временной защиты, зарегистрированные в реестре населения 1 ноября 2024 года или позднее, не могут получать детское или жилищное пособие согласно рассмотренным рекомендациям. Зарегистрированные не позднее 31 октября 2024 года могут иметь право на эти выплаты при соблюдении индивидуальных правил. Эта дата не означает автоматического назначения и относится только к указанным выплатам. Проверьте актуальные рекомендации и свою ситуацию.
+По сведениям Socialstyrelsen, обладатели временной защиты, зарегистрированные в реестре населения 1 ноября 2024 года или позднее, не могут получать детское или жилищное пособие. Зарегистрированные не позднее 31 октября 2024 года могут иметь право на эти выплаты при соблюдении индивидуальных правил. Эта дата не означает автоматического назначения и относится только к указанным выплатам. Проверьте актуальные рекомендации и свою ситуацию.
+
+По переходным правилам Закона о приёме новое заявление нужно было подать в Миграционное агентство до 30 сентября 2026 года, чтобы ежедневное пособие продолжало выплачиваться с 1 октября 2026 года. Этот срок прошёл. Позднее заявление может дать право на выплату с даты его получения, но не за предыдущие дни. Если поддержка вам всё ещё нужна, подайте заявление в Миграционное агентство как можно скорее и уточните, что применяется в вашей ситуации. [[source:c1ba3594-7cfc-4c92-abcb-c1819fdf63cd|Закон о приёме]] [[source:beeb9ffe-a708-4570-80c0-959830014656|Информация Миграционного агентства о помощи]]
 
 ### Claim coverage
 

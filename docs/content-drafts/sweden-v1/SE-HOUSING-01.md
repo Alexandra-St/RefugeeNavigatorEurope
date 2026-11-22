@@ -17,11 +17,11 @@ Learn how reception accommodation works for people covered by Sweden’s Recepti
 Content:
 ## Choose how to arrange accommodation
 
-People covered by Sweden’s Reception Act may arrange their own accommodation or ask the Swedish Migration Agency about reception accommodation. If you are population-registered, you are responsible for arranging your own accommodation. Population registration is an administrative status and is not the same as your immigration status.
+People covered by Sweden’s Reception Act may arrange their own accommodation or ask the Swedish Migration Agency about reception accommodation.
 
 ## If you arrange your own accommodation
 
-You pay your own housing costs. You must also notify the Migration Agency of your address using its current procedure. This does not create a general right to rent reimbursement or a rent subsidy; financial support is governed by separate rules.
+The Migration Agency’s daily allowance is a separate reception benefit. Its amount depends in part on whether you live in your own housing or in agency accommodation where food is provided. A daily allowance is not a rent reimbursement.
 
 ## If you need Migration Agency accommodation
 
@@ -42,6 +42,8 @@ For a second-hand apartment rental, guidance describes reasonable-rent rules and
 ## Renting from a private person
 
 Separate rules may apply when renting a home from a private individual. Some disputes may be brought to the Rent Tribunal, depending on the dwelling and rental type. The Consumer Agency provides practical information but does not give individual legal advice; check which rules and route apply to your situation.
+
+For daily allowance under the new Reception Act, a new application had to reach the Migration Agency by 30 September 2026 for payments from 1 October 2026. The deadline has passed. An application received later does not cover days before its receipt; apply promptly if you still need support and confirm the current process with the Agency. [[source:15871cb1-c621-4275-ab06-ed2e6d2fdf32|Reception Act]] [[source:48a66397-3f08-4dd6-83fd-be6273d70663|Migration Agency accommodation guidance]]
 
 ### Claim coverage
 
@@ -72,11 +74,11 @@ Summary:
 Content:
 ## Оберіть спосіб пошуку житла
 
-Люди, на яких поширюється Закон Швеції про прийом, можуть шукати житло самостійно або звернутися до Міграційного агентства Швеції щодо житла для прийому. Якщо ви зареєстровані в реєстрі населення, ви відповідаєте за самостійне облаштування житла. Реєстрація в реєстрі населення є адміністративним статусом і не тотожна імміграційному статусу.
+Люди, на яких поширюється Закон Швеції про прийом, можуть шукати житло самостійно або звернутися до Міграційного агентства Швеції щодо житла для прийому.
 
 ## Якщо ви шукаєте житло самостійно
 
-Ви самостійно сплачуєте витрати на житло. Також потрібно повідомити Міграційне агентство про свою адресу за його актуальною процедурою. Це не створює загального права на відшкодування орендної плати чи субсидію на оренду; фінансова допомога регулюється окремими правилами.
+Добова допомога Міграційного агентства є окремою виплатою в системі прийому. Її розмір частково залежить від того, чи ви живете у власному житлі, чи в житлі Агентства з харчуванням. Добова допомога не є відшкодуванням орендної плати.
 
 ## Якщо вам потрібне житло від Міграційного агентства
 
@@ -97,6 +99,8 @@ Content:
 ## Оренда житла у приватної особи
 
 Під час оренди житла у приватної особи можуть застосовуватися окремі правила. Залежно від житла та виду оренди деякі спори можна передати до Житлового трибуналу. Агентство у справах споживачів надає практичну інформацію, але не індивідуальні юридичні консультації; перевірте, які правила та порядок застосовуються у вашій ситуації.
+
+Для щоденної допомоги за новим Законом про прийом нову заяву потрібно було подати до Міграційного агентства до 30 вересня 2026 року, щоб виплати здійснювалися з 1 жовтня 2026 року. Строк минув. Заява, отримана пізніше, не покриває дні до її отримання; якщо підтримка вам досі потрібна, подайте заяву якнайшвидше й уточніть чинну процедуру в Агентстві. [[source:15871cb1-c621-4275-ab06-ed2e6d2fdf32|Закон про прийом]] [[source:48a66397-3f08-4dd6-83fd-be6273d70663|Інформація Міграційного агентства про житло]]
 
 ### Claim coverage
 
@@ -127,11 +131,11 @@ Summary:
 Content:
 ## Выберите способ найти жильё
 
-Люди, на которых распространяется Закон Швеции о приёме, могут искать жильё самостоятельно или обратиться в Миграционное агентство Швеции по поводу жилья для приёма. Если вы зарегистрированы в реестре населения, вы сами отвечаете за организацию своего жилья. Регистрация в реестре населения — административный статус, не тождественный иммиграционному статусу.
+Люди, на которых распространяется Закон Швеции о приёме, могут искать жильё самостоятельно или обратиться в Миграционное агентство Швеции по поводу жилья для приёма.
 
 ## Если вы ищете жильё самостоятельно
 
-Вы сами оплачиваете расходы на жильё. Также необходимо сообщить Миграционному агентству свой адрес в соответствии с его действующей процедурой. Это не создаёт общего права на возмещение аренды или субсидию; финансовая поддержка регулируется отдельно.
+Суточное пособие Миграционного агентства является отдельной выплатой в системе приёма. Его размер отчасти зависит от того, живёте ли вы в самостоятельно найденном жилье или в жилье Агентства с питанием. Суточное пособие не является возмещением аренды.
 
 ## Если вам необходимо жильё от Миграционного агентства
 
@@ -152,6 +156,8 @@ Content:
 ## Аренда жилья у частного лица
 
 При аренде жилья у частного лица могут действовать отдельные правила. В зависимости от жилья и вида найма некоторые споры можно передать в Жилищный трибунал. Агентство по защите прав потребителей предоставляет практическую информацию, но не индивидуальные юридические консультации; проверьте, какие правила и порядок применяются в вашей ситуации.
+
+Для ежедневного пособия по новому Закону о приёме новое заявление нужно было подать в Миграционное агентство до 30 сентября 2026 года, чтобы выплаты шли с 1 октября 2026 года. Срок прошёл. Заявление, полученное позже, не покрывает дни до его получения; если поддержка вам всё ещё нужна, подайте заявление как можно скорее и уточните действующий порядок в Агентстве. [[source:15871cb1-c621-4275-ab06-ed2e6d2fdf32|Закон о приёме]] [[source:48a66397-3f08-4dd6-83fd-be6273d70663|Информация Миграционного агентства о жилье]]
 
 ### Claim coverage
 

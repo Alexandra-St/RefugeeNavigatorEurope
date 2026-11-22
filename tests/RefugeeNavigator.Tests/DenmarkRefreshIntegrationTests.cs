@@ -34,7 +34,10 @@ public sealed class DenmarkRefreshIntegrationTests
         Assert.All(translations, translation =>
         {
             Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
-            Assert.Equal(new DateOnly(2026, 11, 17), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
+            var expectedDate = translation.InformationEntryId == Guid.Parse("2d106fd3-e981-4ef9-9733-568b654dfca5") || translation.InformationEntryId == Guid.Parse("fee9dcf0-447d-4402-92a2-8b1bec125944") || translation.InformationEntryId == Guid.Parse("afc14824-4035-4ca7-9662-6d5352ba63cb")
+                ? new DateOnly(2026, 11, 22)
+                : new DateOnly(2026, 11, 17);
+            Assert.Equal(expectedDate, DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
             Assert.False(string.IsNullOrWhiteSpace(translation.Title));
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
@@ -45,7 +48,7 @@ public sealed class DenmarkRefreshIntegrationTests
     public async Task DenmarkSourcesAndArticleSourceReferencesReconcile()
     {
         var catalog = await new JsonCatalogProvider(AppContext.BaseDirectory).LoadAsync();
-        Assert.Equal(1560, catalog.OfficialSources.Count);
+        Assert.Equal(1563, catalog.OfficialSources.Count);
         var denmarkSources = catalog.OfficialSources.Where(source => ArticleIds.Contains(source.InformationEntryId)).ToArray();
         Assert.Equal(107, denmarkSources.Length);
         Assert.Equal(denmarkSources.Length, denmarkSources.Select(source => source.Id).Distinct().Count());

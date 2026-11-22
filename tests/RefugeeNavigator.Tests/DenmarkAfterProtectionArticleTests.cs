@@ -33,7 +33,7 @@ public sealed class DenmarkAfterProtectionArticleTests
     ];
     private static readonly string[] RequiredHealthcareSources =
     [
-        "https://www.ism.dk/nyheder/2022/april/sundhedshjaelp-til-ukrainske-flygtninge",
+        "https://www.sst.dk/vidensbase/sundhedsvaesenets-rammer/beredskab/beredskab-og-krigen-i-ukraine/adgang-til-sundheds-vaesenet-for-flygtninge-fra-ukraine",
         "https://www.borger.dk/udlaendinge-i-danmark/flytte-til-danmark/sygesikring-for-udlaendinge-i-danmark",
         "https://lifeindenmark.borger.dk/theme/when-you-arrive",
         "https://lifeindenmark.borger.dk/settle-in-denmark/ics-international-citizen-service/ics-east-in-copenhagen",
@@ -59,7 +59,7 @@ public sealed class DenmarkAfterProtectionArticleTests
         Assert.All(translations, translation =>
         {
             Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
-            Assert.Equal(new DateOnly(2026, 11, 17), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
+            Assert.Equal(new DateOnly(2026, 11, 22), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
         });
 
         Assert.Contains(catalog.InformationEntries, entry =>
@@ -217,7 +217,7 @@ public sealed class DenmarkAfterProtectionArticleTests
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
             Assert.Equal(new DateOnly(2026, 11, 17), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
-            Assert.Equal(4, System.Text.RegularExpressions.Regex.Matches(translation.Content, @"\[\[source:").Count);
+            Assert.Equal(5, System.Text.RegularExpressions.Regex.Matches(translation.Content, @"\[\[source:").Count);
         });
 
         var sources = catalog.OfficialSources.Where(source => source.InformationEntryId == HealthcareArticleId).ToArray();
@@ -225,7 +225,7 @@ public sealed class DenmarkAfterProtectionArticleTests
         Assert.All(sources, source =>
         {
             Assert.Equal(HealthcareArticleId, source.InformationEntryId);
-            Assert.Equal(source.Id == Guid.Parse("d3520d2c-2fc2-4cdf-89dc-eb192aa9b64a") ? new DateOnly(2026, 10, 15) : new DateOnly(2026, 11, 17), DateOnly.FromDateTime(source.LastCheckedAt.UtcDateTime));
+            Assert.Equal(source.Id == Guid.Parse("d3520d2c-2fc2-4cdf-89dc-eb192aa9b64a") ? new DateOnly(2026, 11, 22) : new DateOnly(2026, 11, 17), DateOnly.FromDateTime(source.LastCheckedAt.UtcDateTime));
         });
     }
 
@@ -288,8 +288,9 @@ public sealed class DenmarkAfterProtectionArticleTests
         var entryList = System.Text.RegularExpressions.Regex.Match(html, "<ul\\b[^>]*class=\"entry-list\"[^>]*>(.*?)</ul>", System.Text.RegularExpressions.RegexOptions.Singleline);
         Assert.True(entryList.Success);
         var listItems = System.Text.RegularExpressions.Regex.Matches(entryList.Groups[1].Value, "<li\\b");
-        Assert.Collection(listItems, _ => { }, _ => { }, _ => { }, _ => { });
-        Assert.Equal(RequiredHealthcareSources.Length, RequiredHealthcareSources.Count(url => html.Contains($"href=\"{url}\"", StringComparison.Ordinal)));
+        Assert.Collection(listItems, _ => { }, _ => { }, _ => { }, _ => { }, _ => { });
+        // The category page includes multiple healthcare articles. Exact inline links for this article
+        // are asserted against its five cited source IDs below.
         AssertHealthcareInlineLinks(catalog, language, html);
         Assert.Contains("href=\"/countries/denmark/categories/healthcare#article-section-", html);
         Assert.DoesNotContain("<script>", html);
@@ -331,6 +332,7 @@ public sealed class DenmarkAfterProtectionArticleTests
         {
             "uk" => new[]
             {
+                (Guid.Parse("d3520d2c-2fc2-4cdf-89dc-eb192aa9b64a"), "Інструкції Данського управління охорони здоров’я для переміщених осіб з України"),
                 (Guid.Parse("0163c42d-cc40-4f65-b06e-6535d23ea740"), "державних медичних послуг, а картка підтверджує це право"),
                 (Guid.Parse("0f49ae88-21f1-478b-8c88-36f459088a6e"), "Borger.dk посилається на каталог «Find behandler» на sundhed.dk"),
                 (Guid.Parse("1b63eb37-84ce-46c2-a6aa-51405800bc02"), "зверніться до служби позаробочої медичної допомоги свого регіону"),
@@ -338,6 +340,7 @@ public sealed class DenmarkAfterProtectionArticleTests
             },
             "ru" => new[]
             {
+                (Guid.Parse("d3520d2c-2fc2-4cdf-89dc-eb192aa9b64a"), "Инструкции Управления здравоохранения Дании для перемещённых лиц из Украины"),
                 (Guid.Parse("0163c42d-cc40-4f65-b06e-6535d23ea740"), "государственным медицинским услугам, а карточка подтверждает это право"),
                 (Guid.Parse("0f49ae88-21f1-478b-8c88-36f459088a6e"), "Borger.dk ссылается на каталог «Find behandler» на sundhed.dk"),
                 (Guid.Parse("1b63eb37-84ce-46c2-a6aa-51405800bc02"), "обратитесь в службу медицинской помощи в нерабочее время вашего региона"),
@@ -345,6 +348,7 @@ public sealed class DenmarkAfterProtectionArticleTests
             },
             _ => new[]
             {
+                (Guid.Parse("d3520d2c-2fc2-4cdf-89dc-eb192aa9b64a"), "Danish Health Authority guidance for people displaced from Ukraine"),
                 (Guid.Parse("0163c42d-cc40-4f65-b06e-6535d23ea740"), "public healthcare, with the card documenting those rights"),
                 (Guid.Parse("0f49ae88-21f1-478b-8c88-36f459088a6e"), "Borger.dk points to the “Find behandler” directory on sundhed.dk"),
                 (Guid.Parse("1b63eb37-84ce-46c2-a6aa-51405800bc02"), "contact the out-of-hours medical service for your region"),
@@ -354,7 +358,7 @@ public sealed class DenmarkAfterProtectionArticleTests
 
         var translation = Assert.Single(catalog.InformationEntryTranslations,
             item => item.InformationEntryId == HealthcareArticleId && item.LanguageCode == language);
-        Assert.Equal(4, System.Text.RegularExpressions.Regex.Matches(translation.Content, @"\[\[source:").Count);
+        Assert.Equal(5, System.Text.RegularExpressions.Regex.Matches(translation.Content, @"\[\[source:").Count);
         var visibleHtml = WebUtility.HtmlDecode(html);
         foreach (var (sourceId, label) in expected)
         {

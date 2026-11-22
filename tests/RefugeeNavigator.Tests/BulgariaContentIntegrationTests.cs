@@ -50,7 +50,10 @@ public sealed class BulgariaContentIntegrationTests
             Assert.All(translations, item =>
             {
                 Assert.Equal(VerificationStatus.Verified, item.VerificationStatus);
-                Assert.Equal(new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero), item.LastUpdatedAt);
+                var expectedDate = expected.Id == Guid.Parse("4a1e4c9b-a09c-5c92-bc37-2c9a15b459bc") || expected.Id == Guid.Parse("f763854d-dee2-5cb3-aacb-6c01203b52fc")
+                    ? new DateTimeOffset(2026, 11, 22, 0, 0, 0, TimeSpan.Zero)
+                    : new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero);
+                Assert.Equal(expectedDate, item.LastUpdatedAt);
                 Assert.False(string.IsNullOrWhiteSpace(item.Title));
                 Assert.False(string.IsNullOrWhiteSpace(item.Summary));
                 Assert.False(string.IsNullOrWhiteSpace(item.Content));
@@ -74,7 +77,7 @@ public sealed class BulgariaContentIntegrationTests
         var entryIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => entryIds.Contains(item.InformationEntryId)).ToArray();
         Assert.Equal(70, sources.Length);
-        Assert.Equal(1560, catalog.OfficialSources.Count);
+        Assert.Equal(1563, catalog.OfficialSources.Count);
         Assert.Equal(70, sources.Select(item => item.Id).Distinct().Count());
         var sourceById = catalog.OfficialSources.ToDictionary(item => item.Id);
         var citedSourceIds = new HashSet<Guid>();
@@ -85,6 +88,8 @@ public sealed class BulgariaContentIntegrationTests
             Assert.False(string.IsNullOrWhiteSpace(item.Title));
             if (new[] { "6dd90ade-3354-5160-97dc-fe4d66eed6cb", "62ec9f9f-0d3a-51ba-88aa-6c5aade59a71", "c233cdfc-267b-58d8-9fd5-887650066d8a", "d584362c-3990-5055-8833-158f2b594773", "bb443266-cbc9-55a9-bcbf-eb01ea44d1fc", "f5d17e23-dfba-5cd0-bde0-b3f0b8dbface", "989cc461-fa87-5e26-8058-a8404fbe6d52", "a2981f25-2a47-5ef4-ad62-349dee64690b" }.Contains(item.Id.ToString()))
                 Assert.Equal(new DateTimeOffset(2026, 11, 7, 0, 0, 0, TimeSpan.Zero), item.LastCheckedAt);
+            else if (item.Id == Guid.Parse("4639994e-692e-5fdd-80a1-e65fbb61f9da"))
+                Assert.Equal(new DateTimeOffset(2026, 11, 22, 0, 0, 0, TimeSpan.Zero), item.LastCheckedAt);
             else
                 Assert.Equal(new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero), item.LastCheckedAt);
         });
@@ -194,7 +199,10 @@ public sealed class BulgariaContentIntegrationTests
         var content = string.Join("\n", translations.Select(item => item.Content));
 
         Assert.Equal(24, translations.Count(item => item.VerificationStatus == VerificationStatus.Verified));
-        Assert.All(translations, item => Assert.Equal(new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero), item.LastUpdatedAt));
+        Assert.All(translations, item => Assert.Equal(
+            item.InformationEntryId == Guid.Parse("4a1e4c9b-a09c-5c92-bc37-2c9a15b459bc") || item.InformationEntryId == Guid.Parse("f763854d-dee2-5cb3-aacb-6c01203b52fc")
+                ? new DateTimeOffset(2026, 11, 22, 0, 0, 0, TimeSpan.Zero)
+                : new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero), item.LastUpdatedAt));
         Assert.Contains("4 March 2028", content);
         Assert.DoesNotContain("national temporary-protection period was extended through 4 March 2027", content, StringComparison.OrdinalIgnoreCase);
         Assert.Contains("30 April 2026", content);

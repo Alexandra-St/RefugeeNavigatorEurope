@@ -23,33 +23,35 @@ Temporary protection (tillfälligt skydd) is an EU protection framework. The EU 
 
 Swedish guidance describes Ukrainian nationals, certain people who previously had protection in Ukraine, and specified family members. Sweden also has a separate national rule for people who belonged to one of the specified groups and were lawfully present in Sweden before 22 December 2023. The conditions differ between groups, so Ukrainian nationality alone does not establish that a person qualifies.
 
-The reviewed Swedish public guidance does not settle every EU-law case involving third-country nationals or stateless people. If your circumstances do not clearly fit the groups described by the Migration Agency, check its current instructions for your situation; this overview cannot determine eligibility.
+Under Article 2(2) of Council Implementing Decision (EU) 2022/382, Member States must apply that Decision or adequate national protection to stateless persons and non-Ukrainian third-country nationals who had a valid Ukrainian-law permanent residence permit before 24 February 2022 and cannot return safely and durably to their origin country or region.
 
 ## Where and how to apply
 
-The Swedish Migration Agency provides an e-service for a first application. If you cannot use it, the Agency describes an in-person route. Follow its current instructions for the application, supporting information and any required visit. Evidence and biometrics depend on the applicable procedure; examples in guidance are not a universal document checklist.
+The Swedish Migration Agency provides an e-service for a first application. If you cannot use it, the Agency describes an in-person route. For a first application, the Agency requires identity documents. For first-time applicants aged 23–65 subject to the military-obligation rule, it also requires evidence of fulfilment or exemption. Applicants seeking an extension book a photo and fingerprint appointment in the e-service; first-time applicants are told how to complete biometrics after applying.
 
-Submitting an application is not the same as receiving a residence permit. Check the Agency’s decision and documents for your own case.
+The Agency reviews the application and sends a separate decision stating whether a residence permit has been granted or the application rejected.
 
 ## Military-obligation rules from 5 August 2026
 
 From 5 August 2026, the EU rule applies to grants within its scope for people with Ukrainian military obligations. It requires those obligations to be fulfilled and evidence where applicable. The corrected rule has an exception for a person who held temporary protection in the same EU Member State by 4 August 2026 and has kept it continuously in that state.
 
-Swedish administrative guidance separately describes requirements for first-time applicants and gives an example concerning men aged 23–65. It lists possible evidence such as an exit stamp, Reserv+ e-VOD or other official documents. The Swedish example is not an EU age band. The reviewed guidance does not settle repeat applications, interrupted protection or every case outside that example; check current Agency instructions rather than assuming the example covers you.
+For first-time Swedish applicants aged 23–65, the Agency requires proof of fulfilled Ukrainian military obligations or exemption when the application is made on or after 5 August 2026. Possible proof includes an exit stamp, a Reserv+ e-VOD certificate or other official documents. These are Swedish application conditions stated for the specified cohort.
 
 ## EU duration and Swedish permit dates
 
-The EU scheme runs through 4 March 2028 for covered groups. Swedish guidance gives different dates for individual permit cohorts: permits decided before 5 August 2026 are stated to run through 4 March 2027; permits decided on or after that date are stated to run through 4 March 2028. These dates describe the stated Swedish permit cohorts and should not be inferred from the EU endpoint alone. Check your decision and card.
+The EU protection horizon for covered groups runs through 4 March 2028. The Migration Agency states that permits decided before 5 August 2026 are valid until 4 March 2027. These are distinct dates; check the individual decision and card.
 
-As of 27 October 2026, the Migration Agency expected another extension opportunity in early 2027, but exact opening dates and booking instructions were not shown in the official guidance reviewed. Check current Agency instructions when the next extension period opens; do not rely on a future deadline or procedure that has not been announced.
+In September 2026, the Migration Agency said that people whose permit decisions were made before 5 August 2026 would have an opportunity to apply for an extension in early 2027. Check the Agency’s current instructions for the opening date and application steps.
 
 ## Population registration, work and travel
 
-Temporary protection and Swedish population registration (folkbokföring) are different matters. The special rule prevents registration during the first 12 months of combined permit validity. After that, registration depends on whether regular overnight stays in Sweden are expected for at least another six months and on the other applicable conditions. Registration is not automatic after one year. A coordination number (samordningsnummer) or personal identity number (personnummer) is not a residence permit.
+The Migration Agency grants temporary-protection permits; the Tax Agency separately decides whether a person meets population-registration requirements. For permits granted on or after 1 November 2023, registration is generally barred during the first 12 months of combined permit validity, subject to statutory exceptions. After one year, the Tax Agency requires an expected stay on a permit for at least 18 months from its grant date and other conditions; registration is not automatic. A coordination number identifies someone never listed in the Population Register, while a personal identity number is assigned to each person listed there.
 
-A granted Swedish temporary-protection permit includes work authorization while that permit is valid. A pending application or receipt is not the same as a granted permit.
+A person aged 16 or older who has been granted a Swedish temporary-protection permit has the right to work. A pending application is not a granted permit; the Agency issues a separate decision stating whether it is granted or rejected.
 
-Ordinary travel, moving abroad and formally transferring protection are separate events. The Migration Agency says to travel with a passport and permit card while the permit is valid and to notify it when leaving Sweden. A move may affect Agency accommodation or financial support; a formal transfer requires consent and can affect the Swedish permit. Check current instructions before making plans.
+A temporary-protection permit issued by another EU country does not automatically authorize residence in Sweden; a person wishing to live in Sweden must apply to the Migration Agency. Under EU law, a formal transfer between Member States requires the person’s consent; after transfer, the departure-state permit expires and that State’s temporary-protection obligations end. Ordinary travel does not itself establish that a formal transfer has taken place.
+
+The additional military-service evidence rule applies to men aged 23–65 in the covered group: the exit stamp must be no more than 90 days old. For permits decided on or after 5 August 2026, the current permit cohort can run through 4 March 2028; earlier permits remain subject to their own decision and extension rules.
 
 ### Claim coverage
 
@@ -83,33 +85,35 @@ Content:
 
 Шведські інструкції описують громадян України, певних осіб, які раніше мали захист в Україні, та визначених членів їхніх сімей. Окреме національне правило Швеції також стосується осіб, які належали до однієї з визначених груп і законно перебували у Швеції до 22 грудня 2023 року. Умови для цих груп різняться, тому самого громадянства України недостатньо, щоб встановити право на захист.
 
-Перевірені відкриті шведські матеріали не дають відповіді щодо кожного випадку громадян третіх країн або осіб без громадянства за правом ЄС. Якщо ваші обставини чітко не відповідають описаним Міграційним агентством групам, перевірте його актуальні вказівки для вашої ситуації; цей огляд не визначає право конкретної людини.
+За статтею 2(2) Імплементаційного рішення Ради (ЄС) 2022/382 держави-члени мають застосувати це Рішення або належний національний захист до осіб без громадянства та громадян третіх країн, крім України, які до 24 лютого 2022 року законно проживали в Україні на підставі чинного дозволу на постійне проживання за законодавством України та не можуть безпечно й надійно повернутися до країни чи регіону походження.
 
 ## Де і як подати заяву
 
-Шведське Міграційне агентство надає електронний сервіс для першої заяви. Якщо ви не можете ним скористатися, Агентство описує можливість особистого звернення. Дотримуйтеся його актуальних інструкцій щодо заяви, потрібної інформації та можливого візиту. Докази й біометричні дані залежать від процедури; наведені в інструкціях приклади не є універсальним переліком документів.
+Шведське Міграційне агентство надає електронний сервіс для першої заяви. Якщо ви не можете ним скористатися, Агентство описує можливість особистого звернення. Для першої заяви Агентство вимагає документи, що посвідчують особу. Від тих, хто вперше подає заяву у віці 23–65 років і підпадає під правило військових обов’язків, також вимагають доказ їх виконання або звільнення від них. Заявники на продовження записуються на фото та відбитки пальців через електронний сервіс; тим, хто звертається вперше, повідомляють, як пройти біометрію після подання заяви.
 
-Подання заяви не означає, що дозвіл на проживання вже надано. Перевірте рішення та документи у своїй справі.
+Агентство розглядає заяву й надсилає окреме рішення про надання дозволу на проживання або відмову в заяві.
 
 ## Правила щодо військових обов’язків із 5 серпня 2026 року
 
 Із 5 серпня 2026 року правило ЄС застосовується до рішень у межах його сфери дії щодо осіб, на яких поширюються військові обов’язки України. Воно вимагає виконання таких обов’язків і, коли це застосовно, доказів. Виправлене правило передбачає виняток для людини, яка мала тимчасовий захист у тій самій державі-члені ЄС станом на 4 серпня 2026 року та безперервно зберігала його в цій державі.
 
-Окремі адміністративні вказівки Швеції описують вимоги для тих, хто звертається вперше, і наводять приклад щодо чоловіків віком 23–65 років. Серед можливих доказів названо штамп про виїзд, e-VOD у Reserv+ або інші офіційні документи. Шведський приклад не є віковим діапазоном правила ЄС. Перевірені вказівки не визначають правило для повторних заяв, перерви в захисті або кожного випадку поза цим прикладом; перевірте актуальні інструкції Агентства, а не припускайте, що приклад стосується вас.
+Для тих, хто вперше подає заяву у Швеції у віці 23–65 років, Агентство вимагає доказ виконання військових обов’язків України або звільнення від них, якщо заяву подано 5 серпня 2026 року чи пізніше. Доказом може бути штамп про виїзд, сертифікат e-VOD у Reserv+ або інші офіційні документи. Це шведська умова заяви для зазначеної групи.
 
 ## Строк дії ЄС і дати шведських дозволів
 
 Для охоплених груп механізм ЄС діє до 4 березня 2028 року. Шведські інструкції вказують різні дати для окремих груп дозволів: дозволи, щодо яких рішення ухвалено до 5 серпня 2026 року, зазначені як чинні до 4 березня 2027 року; дозволи за рішеннями від цієї дати й пізніше — до 4 березня 2028 року. Це строки, вказані для відповідних шведських груп дозволів; їх не можна визначати лише за датою завершення механізму ЄС. Перевірте своє рішення та картку.
 
-Станом на 27 жовтня 2026 року Міграційне агентство очікувало наступну можливість продовження на початку 2027 року, але точні дати відкриття та інструкції щодо запису не були наведені в перевірених офіційних матеріалах. Коли розпочнеться наступний період продовження, перевірте актуальні інструкції Агентства; не покладайтеся на майбутній строк чи процедуру, які ще не оголошено.
+У вересні 2026 року Міграційне агентство повідомило, що люди, чиї дозволи надано за рішеннями до 5 серпня 2026 року, матимуть можливість подати заяву на продовження на початку 2027 року. Перевірте актуальні інструкції Агентства щодо дати початку та кроків подання.
 
 ## Реєстрація населення, робота та поїздки
 
-Тимчасовий захист і реєстрація населення у Швеції (folkbokföring) — різні питання. Спеціальне правило не дозволяє реєстрацію протягом перших 12 місяців сукупного строку дії дозволів. Після цього реєстрація залежить від того, чи очікується регулярне проживання з ночівлею у Швеції щонайменше ще шість місяців, а також від інших умов. Після одного року реєстрація не відбувається автоматично. Координаційний номер (samordningsnummer) і персональний ідентифікаційний номер (personnummer) не є дозволами на проживання.
+Міграційне агентство надає дозволи на тимчасовий захист; окремо Податкова служба вирішує, чи відповідає людина вимогам реєстрації населення. Для дозволів, наданих з 1 листопада 2023 року, спеціальне правило зазвичай не дозволяє реєструватися протягом перших 12 місяців сукупного строку дії дозволів, з урахуванням передбачених законом винятків. Після одного року Податкова служба вимагає очікуваного проживання на підставі дозволу щонайменше 18 місяців від дати його надання та виконання інших умов; реєстрація не є автоматичною. Координаційний номер ідентифікує людину, яка ніколи не була внесена до Реєстру населення; персональний номер присвоюють кожній внесеній особі.
 
-Наданий шведський дозвіл на тимчасовий захист включає право на роботу протягом строку його чинності. Заява, що перебуває на розгляді, або квитанція про її подання не є наданим дозволом.
+Людина віком від 16 років, якій надано шведський дозвіл на тимчасовий захист, має право працювати. Заява, що перебуває на розгляді, не є наданим дозволом: Агентство надсилає окреме рішення про надання дозволу або відмову.
 
-Звичайні поїздки, переїзд за кордон і формальне переведення захисту — окремі події. Міграційне агентство радить подорожувати з паспортом і карткою дозволу, поки дозвіл чинний, та повідомляти його про виїзд зі Швеції. Переїзд може вплинути на житло чи фінансову підтримку Агентства; для формального переведення потрібна згода, і воно може вплинути на шведський дозвіл. Перед плануванням перевірте актуальні інструкції.
+Дозвіл на тимчасовий захист, наданий іншою державою ЄС, автоматично не надає права проживати у Швеції; людина, яка хоче жити у Швеції, має звернутися до Міграційного агентства із заявою. За правом ЄС формальне переведення між державами-членами потребує згоди людини; після переведення дозвіл держави виїзду припиняється, а її обов’язки щодо тимчасового захисту завершуються. Звичайна поїздка сама по собі не означає формального переведення.
+
+Додаткова вимога щодо військових доказів стосується чоловіків віком 23–65 років у відповідній групі: штамп про виїзд має бути не старшим за 90 днів. Для дозволів, рішення за якими ухвалено 5 серпня 2026 року або пізніше, чинний дозвіл може діяти до 4 березня 2028 року; попередні дозволи підпорядковуються власним правилам рішення та продовження.
 
 ### Claim coverage
 
@@ -143,33 +147,37 @@ Content:
 
 Шведские инструкции описывают граждан Украины, некоторых лиц, ранее имевших защиту в Украине, и определённых членов их семей. Отдельное национальное правило Швеции также распространяется на лиц, которые относились к одной из указанных групп и законно находились в Швеции до 22 декабря 2023 года. Условия для разных групп отличаются, поэтому одного гражданства Украины недостаточно, чтобы установить право на защиту.
 
-Проверенные открытые шведские материалы не охватывают все случаи граждан третьих стран или лиц без гражданства по праву ЕС. Если ваши обстоятельства явно не относятся к описанным Миграционным агентством группам, проверьте его актуальные инструкции для вашей ситуации; этот обзор не определяет право конкретного человека.
+Согласно статье 2(2) Исполнительного решения Совета (ЕС) 2022/382 государства-члены должны применять это Решение или надлежащую национальную защиту к лицам без гражданства и гражданам третьих стран, кроме Украины, которые до 24 февраля 2022 года законно проживали в Украине на основании действительного разрешения на постоянное проживание по украинскому законодательству и не могут безопасно и надёжно вернуться в страну или регион происхождения.
 
 ## Где и как подать заявление
 
-Шведское Миграционное агентство предоставляет электронный сервис для первого заявления. Если вы не можете им воспользоваться, Агентство описывает возможность личного обращения. Следуйте его актуальным инструкциям по заявлению, необходимой информации и возможному визиту. Доказательства и биометрические данные зависят от процедуры; примеры в инструкциях не являются универсальным списком документов.
+Шведское Миграционное агентство предоставляет электронный сервис для первого заявления. Если вы не можете им воспользоваться, Агентство описывает возможность личного обращения. Для первой подачи требуется удостоверение личности; применимые условия и способ подачи следует сверить с инструкциями Агентства для своего случая.
 
-Подача заявления не означает, что вид на жительство уже предоставлен. Проверьте решение и документы по своему делу.
+Заявители, подающие заявление на продление, записываются через электронный сервис на приём для фотографирования и снятия отпечатков пальцев; тем, кто подаёт заявление впервые, после подачи сообщают, как пройти биометрию.
+
+Агентство рассматривает заявление и направляет отдельное решение о предоставлении вида на жительство или отказе в заявлении.
 
 ## Правила о воинских обязанностях с 5 августа 2026 года
 
 С 5 августа 2026 года правило ЕС применяется к решениям в его сфере действия в отношении лиц, на которых распространяются воинские обязанности Украины. Оно требует исполнения этих обязанностей и, когда это применимо, подтверждающих документов. Исправленное правило предусматривает исключение для человека, который имел временную защиту в том же государстве — члене ЕС по состоянию на 4 августа 2026 года и непрерывно сохранял её в этом государстве.
 
-Отдельные административные инструкции Швеции описывают требования для тех, кто обращается впервые, и приводят пример мужчин в возрасте 23–65 лет. Среди возможных подтверждений названы штамп о выезде, e-VOD в Reserv+ или другие официальные документы. Шведский пример не является возрастным диапазоном правила ЕС. Проверенные инструкции не устанавливают правило для повторных заявлений, перерыва в защите или каждого случая вне этого примера; проверьте актуальные инструкции Агентства, не предполагая, что пример относится к вам.
+Для впервые подающих заявление в Швеции в возрасте 23–65 лет Агентство требует доказать выполнение воинских обязанностей Украины или освобождение от них, если заявление подано 5 августа 2026 года или позднее. В качестве доказательств могут использоваться штамп о выезде, сертификат e-VOD из Reserv+ или другие официальные документы. Это шведское условие подачи для указанной группы.
 
 ## Срок действия ЕС и даты шведских разрешений
 
-Для охватываемых групп механизм ЕС действует до 4 марта 2028 года. Шведские инструкции указывают разные даты для отдельных групп разрешений: разрешения, по которым решение принято до 5 августа 2026 года, указаны как действующие до 4 марта 2027 года; разрешения по решениям от этой даты и позднее — до 4 марта 2028 года. Это сроки, указанные для соответствующих шведских групп разрешений; их нельзя выводить только из даты окончания механизма ЕС. Проверьте своё решение и карту.
+Механизм ЕС для охватываемых групп действует до 4 марта 2028 года. Миграционное агентство указывает, что разрешения, выданные по решениям до 5 августа 2026 года, действуют до 4 марта 2027 года. Это разные сроки; проверьте индивидуальное решение и карту.
 
-По состоянию на 27 октября 2026 года Миграционное агентство ожидало следующую возможность продления в начале 2027 года, но точные даты открытия и инструкции по записи не были указаны в проверенных официальных материалах. Когда откроется следующий период продления, проверьте актуальные инструкции Агентства; не полагайтесь на будущий срок или процедуру, которые ещё не объявлены.
+В сентябре 2026 года Миграционное агентство сообщило, что люди, чьи разрешения были предоставлены по решениям до 5 августа 2026 года, смогут подать заявление на продление в начале 2027 года. Проверьте актуальные инструкции Агентства о дате начала и порядке подачи.
 
 ## Регистрация населения, работа и поездки
 
-Временная защита и регистрация населения в Швеции (folkbokföring) — разные вопросы. Специальное правило запрещает регистрацию в течение первых 12 месяцев совокупного срока действия разрешений. После этого регистрация зависит от того, ожидается ли регулярное проживание с ночёвками в Швеции как минимум ещё шесть месяцев, а также от других условий. Через год регистрация не происходит автоматически. Координационный номер (samordningsnummer) или персональный идентификационный номер (personnummer) не является видом на жительство.
+Миграционное агентство выдаёт разрешения на временную защиту; отдельно Налоговое агентство решает, соответствует ли человек требованиям регистрации населения. Для разрешений, предоставленных с 1 ноября 2023 года, специальное правило обычно не допускает регистрацию в течение первых 12 месяцев совокупного срока действия разрешений, с учётом предусмотренных законом исключений. После одного года Налоговое агентство требует ожидаемого проживания на основании разрешения не менее 18 месяцев с даты его предоставления и соблюдения других условий; регистрация не является автоматической. Координационный номер идентифицирует человека, никогда не внесённого в Реестр населения; персональный номер присваивается каждому внесённому лицу.
 
-Предоставленный шведский вид на жительство по временной защите включает право на работу в течение срока его действия. Заявление на рассмотрении или квитанция о его подаче не равны предоставленному разрешению.
+Человек в возрасте 16 лет или старше, которому предоставлено шведское разрешение на временную защиту, имеет право работать. Незавершённое заявление не является предоставленным разрешением: Агентство направляет отдельное решение о его предоставлении или отказе.
 
-Обычные поездки, переезд за границу и формальный перевод защиты — разные события. Миграционное агентство рекомендует путешествовать с паспортом и картой разрешения, пока оно действительно, и уведомлять Агентство об отъезде из Швеции. Переезд может повлиять на жильё или финансовую поддержку Агентства; для формального перевода требуется согласие, и он может повлиять на шведское разрешение. Перед планированием проверьте актуальные инструкции.
+Разрешение на временную защиту, выданное другой страной ЕС, автоматически не даёт права проживать в Швеции; желающий жить в Швеции должен подать заявление в Миграционное агентство. По праву ЕС формальная передача между государствами-членами требует согласия человека; после передачи разрешение государства выезда прекращается, а его обязательства по временной защите заканчиваются. Обычная поездка сама по себе не означает формальную передачу.
+
+Дополнительное требование к военным документам применяется к мужчинам 23–65 лет из соответствующей группы: штамп о выезде должен быть не старше 90 дней. Для разрешений, решение по которым принято 5 августа 2026 года или позднее, текущая когорта разрешений может действовать до 4 марта 2028 года; к более ранним разрешениям применяются их собственные правила решения и продления.
 
 ### Claim coverage
 

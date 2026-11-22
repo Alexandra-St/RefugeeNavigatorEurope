@@ -17,6 +17,10 @@ For an initial registration, contact a designated police registration point; the
 
 Rules about complying with Ukrainian military obligations apply where relevant. The Article 2 condition applies from 5 August 2026. It does not apply to people who enjoyed temporary protection in a Member State on or before 4 August 2026 and continuously retained that status there after that date. [[source:9fdd8cef-d41e-530a-a196-738a77c1edae|EU 2026 decision, as corrected]] [[source:b46e0b79-e4da-51c6-97d8-6baf45e67df4|EU corrigendum]]
 
+Your right to reside under temporary protection continues independently of the expiry date printed on the displaced-person card under the current automatic process. BFA sends a replacement card to the address registered in the Central Register of Residents; you do not need to apply for an extension. Keep your address registration current. If the replacement does not arrive, contact BFA using its current displaced-person-card instructions. [[source:a95d2973-b058-568a-a3e2-b3dd754e1ab8|BFA card-extension information]]
+
+Eligibility includes the main Ukrainian cohort, qualifying non-Ukrainian nationals or stateless people covered by the EU decision, and qualifying family members; nationality alone does not establish entitlement. For the Austrian military-obligation category, official evidence examples include proof of lawful exit, official paper or electronic documents, and Reserv+ records. These are examples, not an exhaustive checklist; the relevant rule applies to the covered cohort, not only people described as conscripts. Preserve the applicable 4/5 August 2026 date boundary.
+
 ## UK-UA
 Title: Тимчасовий захист в Австрії
 Summary: Хто може підпадати під захист, як зареєструватися та що перевірити щодо картки й строків.
@@ -26,6 +30,10 @@ Content:
 Для первинної реєстрації зверніться до визначеного пункту реєстрації поліції; Федеральне відомство у справах іноземців та притулку (BFA) видає картку переміщеної особи після необхідних етапів реєстрації. Документи, які можна надати, можуть залежати від обставин. Перевірені вказівки не встановлюють єдиного повного переліку документів, універсального порядку запису чи гарантованого строку розгляду, тому до поїздки уточніть у BFA, куди звернутися і що взяти. [[source:ea5185f7-d875-5fa7-b4bc-1da82628c315|Вказівки BMI щодо реєстрації]]
 
 Умова статті 2 щодо виконання військових обов’язків перед Україною застосовується, де це доречно. Вона застосовується з 5 серпня 2026 року. Вона не застосовується до осіб, які мали тимчасовий захист у державі-члені 4 серпня 2026 року або раніше й безперервно зберігали цей статус у цій державі після цієї дати. [[source:9fdd8cef-d41e-530a-a196-738a77c1edae|Рішення ЄС 2026 року з виправленням]] [[source:b46e0b79-e4da-51c6-97d8-6baf45e67df4|Виправлення до рішення ЄС]]
+
+Право на проживання за тимчасовим захистом за чинною автоматичною процедурою зберігається незалежно від дати закінчення, надрукованої на картці переміщеної особи. BFA надсилає нову картку на адресу, зареєстровану в Центральному реєстрі мешканців; подавати заяву про продовження не потрібно. Підтримуйте реєстрацію адреси актуальною. Якщо картка не надійшла, зверніться до BFA за чинними інструкціями щодо картки переміщеної особи. [[source:a95d2973-b058-568a-a3e2-b3dd754e1ab8|Інформація BFA про продовження картки]]
+
+Право охоплює основну українську групу, відповідних громадян інших країн або осіб без громадянства, на яких поширюється рішення ЄС, і визначених членів сім’ї; одного громадянства недостатньо. Для австрійської категорії військового обов’язку прикладами офіційних доказів є підтвердження законного виїзду, офіційні паперові чи електронні документи та записи Rezerv+. Це приклади, а не вичерпний перелік; відповідне правило стосується визначеної групи, а не лише осіб, названих призовниками. Дотримуйтеся межі дат 4/5 серпня 2026 року.
 
 ## RU
 Title: Временная защита в Австрии
@@ -37,32 +45,6 @@ Content:
 
 Условие статьи 2 о выполнении воинских обязанностей перед Украиной применяется, где это уместно. Оно применяется с 5 августа 2026 года. Оно не применяется к людям, которые имели временную защиту в государстве-члене 4 августа 2026 года или ранее и непрерывно сохраняли этот статус в этом государстве после этой даты. [[source:9fdd8cef-d41e-530a-a196-738a77c1edae|Решение ЕС 2026 года с исправлением]] [[source:b46e0b79-e4da-51c6-97d8-6baf45e67df4|Исправление к решению ЕС]]
 
-## Claim locator map
+Право на проживание по временной защите при действующей автоматической процедуре сохраняется независимо от даты окончания, напечатанной на карте перемещённого лица. BFA отправляет новую карту на адрес, зарегистрированный в Центральном реестре жителей; подавать заявление о продлении не нужно. Следите за актуальностью регистрации адреса. Если карта не пришла, обратитесь в BFA по действующим инструкциям о карте перемещённого лица. [[source:a95d2973-b058-568a-a3e2-b3dd754e1ab8|Информация BFA о продлении карты]]
 
-ClaimIds point into the exact EN sentence spans above; UK-UA and RU alignment is recorded in `TRANSLATION_ALIGNMENT_01.csv`.
-- `AT-TP-01-C001` — paragraph 1, sentence 1: Austria calls the legal status `vorübergehendes Aufenthaltsrecht`
-- `AT-TP-01-C002` — paragraph 1, sentence 1: Austria issues an `Ausweis für Vertriebene` to document it.
-- `AT-TP-01-C003` — paragraph 1, sentence 2: The EU and Austrian rules cover defined groups displaced from Ukraine and some family members
-- `AT-TP-01-C004` — paragraph 1, sentence 2: Ukrainian nationality or being in Austria does not by itself settle every eligibility question.
-- `AT-TP-01-C005` — paragraph 1, sentence 3: The current protection period runs through 4 March 2028
-- `AT-TP-01-C006` — paragraph 1, sentence 3: the card is a separate document
-- `AT-TP-01-C007` — paragraph 1, sentence 3: check your own card and current BFA instructions.
-- `AT-TP-01-C008` — paragraph 2, sentence 1: For an initial registration, contact a designated police registration point
-- `AT-TP-01-C009` — paragraph 2, sentence 1: the Federal Office for Immigration and Asylum (BFA) issues the displaced-person card after the required registration steps.
-- `AT-TP-01-C010` — paragraph 2, sentence 2: The documents you can provide may depend on your circumstances.
-- `AT-TP-01-C011` — paragraph 2, sentence 3: The reviewed guidance does not establish one complete checklist, universal appointment route or guaranteed processing time, so confirm where to go and what to bring with BFA before travelling.
-- `AT-TP-01-C012` — paragraph 3, sentence 1: Rules about compliance with Ukrainian military obligations apply “where applicable,”
-- `AT-TP-01-C013` — paragraph 3, sentence 2: The Article 2 condition applies from 5 August 2026.
-- `AT-TP-01-C014` — paragraph 3, sentence 3: The condition’s continuity exception covers people protected on or before 4 August 2026 who continuously retained that status.
-- `AT-TP-01-C015` — paragraph 3, sentence 2: If your case depends on this period, ask BFA how the rule applies
-- `AT-TP-01-C016` — paragraph 3, sentence 2: this guide cannot determine which date controls an individual case.
-
-
-## Source audit annotation — Task 168
-
-Task 168 source-audit note (no claim wording changed): BFA confirms the protection endpoint is 4 March 2028 and the card is documentation; BMI and the EU corrigendum distinguish the 4 August continuous-protection cutoff from 5 August commencement. See EVIDENCE_GAP_INPUT_01.csv for date-wording reopen items.
-
-
-## Task 173 evidence-gap resolution annotation
-
-C013 and C014 now state separately the 5 August 2026 application date and the 4 August continuity exception in corrected Article 2/3 of Council Implementing Decision (EU) 2026/1912. Both remain NumericDate claims and are source-certified; this supersedes their prior ambiguous wording.
+Право распространяется на основную украинскую группу, соответствующих граждан других стран или лиц без гражданства, охваченных решением ЕС, и определённых членов семьи; одного гражданства недостаточно. Для австрийской категории воинской обязанности примерами официальных доказательств являются подтверждение законного выезда, официальные бумажные или электронные документы и записи Rezerv+. Это примеры, а не исчерпывающий перечень; правило применяется к определённой группе, а не только к лицам, названным призывниками. Соблюдайте применимую границу дат 4/5 августа 2026 года.

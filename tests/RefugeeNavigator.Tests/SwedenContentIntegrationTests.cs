@@ -213,7 +213,11 @@ public sealed class SwedenContentIntegrationTests
                 Assert.False(string.IsNullOrWhiteSpace(translation.Title));
                 Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
                 Assert.False(string.IsNullOrWhiteSpace(translation.Content));
-                Assert.Equal(CertifiedArticleTimestamp, translation.LastUpdatedAt);
+                var expectedDate = new HashSet<Guid>
+                { Guid.Parse("d2ab273d-21b7-44e4-b408-f4269a8753d8"), Guid.Parse("befa7777-af70-4269-883c-8918961554dc"), Guid.Parse("55949af5-b4fe-404e-bcb7-6ebb37131bab"), Guid.Parse("cac58c0c-ce69-41ac-877e-4fd124105b89") }.Contains(entry.Id)
+                    ? new DateTimeOffset(2026, 11, 22, 0, 0, 0, TimeSpan.Zero)
+                    : CertifiedArticleTimestamp;
+                Assert.Equal(expectedDate, translation.LastUpdatedAt);
             });
         });
         Assert.Equal(new[] { 2, 2, 1, 1, 1, 1 }, Categories.Select(category =>
@@ -435,7 +439,7 @@ public sealed class SwedenContentIntegrationTests
             .SelectMany(aspect => aspect.Facts.Where(fact => fact.CountrySlug == "sweden").Select(fact => (aspect.Id, Fact: fact)))
             .ToArray();
         Assert.Equal(24, swedenFacts.Length);
-        Assert.Equal(65, swedenFacts.Sum(item => item.Fact.OfficialSourceIds.Count));
+        Assert.Equal(69, swedenFacts.Sum(item => item.Fact.OfficialSourceIds.Count));
         foreach (var (aspectId, fact) in swedenFacts)
         {
             Assert.Equal(expected[aspectId], fact.OfficialSourceIds.Order().ToArray());

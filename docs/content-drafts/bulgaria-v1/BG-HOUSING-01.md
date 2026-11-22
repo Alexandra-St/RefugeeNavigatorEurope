@@ -22,6 +22,10 @@ You may rent a home privately under an ordinary lease, subject to agreement with
 
 Program 3 reimburses eligible accommodation providers; it is not rent money paid directly to a displaced person. The latest rate located was published in 2025 and is not a confirmed current 2026 euro rate, so no current individual amount can be stated here. General social assistance is a separate application route and does not create a universal rent allowance. [[source:530d3b5c-ab37-595c-83a0-c5708fa044af|Provider reimbursement process]] [[source:08595874-44ef-5b19-92fa-6c341a3352b3|Social-assistance information]]
 
+Under the current Program 3 rules, accommodation is generally limited to one stay of up to 60 days. Eligible people in defined risk groups may use the route for the full applicable temporary-protection period under the current rules. Individual and family eligibility conditions still apply, and neither a place nor a particular location is guaranteed. This is accommodation support for qualifying beneficiaries, not an unconditional cash payment to every displaced person. [[source:8ccb8ced-a074-5702-8441-c3cd529cec4b|Program 3 amendment information]]
+
+Under Programme 3, the standard one-time accommodation limit is 60 days. Qualifying risk groups may use the route for the full applicable temporary-protection period, subject to individual and family eligibility rules; accommodation or a particular location is not guaranteed. The current provider reimbursement is €8.40 per accommodated person excluding VAT (€9.16 or €10.08 including VAT, depending on category and rate). This is paid to an eligible provider, not to the displaced resident.
+
 ### Claim coverage and editorial exclusions
 
 No guaranteed accommodation place, direct Program 3 rent payment, current 2026 reimbursement amount or universal private-lease deposit cap is asserted.
@@ -40,6 +44,10 @@ Content:
 
 За Програмою 3 кошти відшкодовують відповідним надавачам житла; це не орендна виплата безпосередньо переміщеній людині. Останню знайдену ставку оприлюднили у 2025 році; це не підтверджена поточна сума в євро на 2026 рік, тому тут не можна вказати актуальну виплату конкретній людині. Загальна соціальна допомога подається окремо й не створює універсальної житлової субсидії. [[source:530d3b5c-ab37-595c-83a0-c5708fa044af|Відшкодування надавачам житла]] [[source:08595874-44ef-5b19-92fa-6c341a3352b3|Інформація про соціальну допомогу]]
 
+За чинними правилами Програми 3 проживання зазвичай обмежене одним перебуванням до 60 днів. Особи, які належать до визначених груп ризику, можуть користуватися маршрутом протягом усього відповідного періоду тимчасового захисту. Застосовуються умови для окремих осіб і сімей; місце чи конкретне розташування не гарантуються. Це житлова підтримка для визначених бенефіціарів, а не безумовна грошова виплата кожній переміщеній особі. [[source:8ccb8ced-a074-5702-8441-c3cd529cec4b|Інформація про зміни Програми 3]]
+
+За Програмою 3 стандартний одноразовий строк розміщення становить 60 днів. Відповідні групи ризику можуть користуватися маршрутом протягом усього застосовного періоду тимчасового захисту за умови відповідності індивідуальним і сімейним критеріям; місце проживання чи конкретна локація не гарантуються. Чинне відшкодування провайдеру становить 8,40 євро за розміщену особу без ПДВ (9,16 або 10,08 євро з ПДВ залежно від категорії та ставки). Кошти виплачуються відповідному провайдеру, а не переміщеній особі.
+
 ### Claim coverage and editorial exclusions
 
 Не стверджується гарантоване місце проживання, пряма орендна виплата за Програмою 3, чинна сума відшкодування на 2026 рік чи універсальне обмеження застави за приватною орендою.
@@ -57,6 +65,10 @@ Content:
 Вы можете арендовать жильё частным образом по обычному договору, с согласия арендодателя и по общим нормам гражданского права. Настоятельно рекомендуется подписанный письменный договор; в нём следует определить аренду, коммунальные платежи, залог, срок и условия прекращения. Исследование не установило универсальный установленный законом предел залога или единый актуальный список документов для регистрации адреса всех арендаторов с временной защитой. Уточните требования к документам и адресу в соответствующем органе применительно к вашей ситуации. [[source:94fa7cba-f8a1-5b34-bcbc-21b8cb4aa20f|Закон об обязательствах и договорах]]
 
 По Программе 3 средства возмещаются подходящим поставщикам жилья; это не деньги на аренду, выплачиваемые непосредственно перемещённому человеку. Последняя найденная ставка была опубликована в 2025 году и не является подтверждённой текущей суммой в евро на 2026 год, поэтому здесь нельзя указать актуальную выплату конкретному человеку. За общей социальной помощью обращаются отдельно; она не создаёт универсальную жилищную субсидию. [[source:530d3b5c-ab37-595c-83a0-c5708fa044af|Возмещение поставщикам жилья]] [[source:08595874-44ef-5b19-92fa-6c341a3352b3|Информация о социальной помощи]]
+
+По действующим правилам Программы 3 проживание обычно ограничено одним периодом до 60 дней. Лица из определённых групп риска могут пользоваться этим маршрутом весь применимый период временной защиты. Действуют условия для отдельных лиц и семей; место и конкретное расположение не гарантируются. Это жилищная поддержка для отвечающих условиям лиц, а не безусловная денежная выплата каждому перемещённому человеку. [[source:8ccb8ced-a074-5702-8441-c3cd529cec4b|Информация об изменении Программы 3]]
+
+По Программе 3 стандартный разовый срок размещения составляет 60 дней. Соответствующие группы риска могут пользоваться маршрутом в течение всего применимого периода временной защиты при соблюдении индивидуальных и семейных критериев; размещение или конкретное место не гарантируются. Действующее возмещение поставщику услуг составляет 8,40 евро за размещённого человека без НДС (9,16 или 10,08 евро с НДС в зависимости от категории и ставки). Выплата предназначена соответствующему поставщику, а не перемещённому жителю.
 
 ### Claim coverage and editorial exclusions
 

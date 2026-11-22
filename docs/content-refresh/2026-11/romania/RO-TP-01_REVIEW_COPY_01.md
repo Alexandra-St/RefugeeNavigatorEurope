@@ -17,6 +17,9 @@ Temporary protection in Romania follows EU Decision 2022/382 and Romanian implem
 IGI registers temporary-protection beneficiaries. Its published procedure requires each person to appear in person for identity checks. IGI photographs each person during registration. IGI issues the temporary-protection residence permit without charge. See [[source:d4f3d26a-e604-5eb1-972b-de9ae691af0b|IGI registration procedure]].
 
 The current EU scheme ends on 4 March 2028 and the extension applies from 5 March 2027. A separate military-obligation condition for the specified category applies from 5 August 2026, with the decision’s continuous-same-state exception. Romanian permit validity follows the applicable protection period. See [[source:8fe9a340-b48b-5e35-a76d-2a37a3fb748c|the current EU decision]] and [[source:822e16b8-0279-5560-b821-541b80d5b5c8|Romanian permit rules]].
+
+Romanian eligibility also includes people who were already in Romania before 24 February 2022 and specified family or close-relative categories, subject to the statutory conditions. For the covered military-obligation group, Border Police guidance gives examples of evidence such as a lawful-exit stamp or an official paper/electronic Reserv+ document; the examples are not exhaustive. Applications must include Romanian residence/address information. If supporting address documents are unavailable, give your current Romanian address to IGI during the in-person registration so the authority can record it in the application; ask the IGI office how to complete its applicable declaration fallback.
+
 ## UK-UA
 Title: Тимчасовий захист у Румунії: подання заяви та збереження статусу
 Summary: Умови, подання та межі чинності тимчасового захисту в Румунії.
@@ -26,6 +29,9 @@ Content:
 Реєстрацію проводить IGI. За опублікованою процедурою кожна особа має особисто з’явитися до компетентного підрозділу IGI. Під час реєстрації IGI фотографує кожну особу. IGI видає посвідку на тимчасовий захист безкоштовно. Див. [[source:d4f3d26a-e604-5eb1-972b-de9ae691af0b|процедуру реєстрації IGI]].
 
 Чинна схема ЄС діє до 4 березня 2028 року. Продовження застосовується з 5 березня 2027 року. Окрема умова щодо військового обов’язку для визначеної категорії діє з 5 серпня 2026 року; рішення містить виняток для безперервного захисту в тій самій державі. Строк дії румунського дозволу пов’язаний із періодом тимчасового захисту. Див. [[source:8fe9a340-b48b-5e35-a76d-2a37a3fb748c|чинне рішення ЄС]] і [[source:822e16b8-0279-5560-b821-541b80d5b5c8|румунські правила щодо дозволу]].
+
+Право в Румунії також охоплює осіб, які перебували в країні до 24 лютого 2022 року, та визначені категорії членів сім’ї або близьких родичів за встановлених законом умов. Для відповідної групи з військовим обов’язком рекомендації Прикордонної поліції наводять приклади доказів: штамп про законний виїзд або офіційний паперовий/електронний документ Rezerv+; перелік не є вичерпним. У заяві потрібно зазначити місце проживання/адресу в Румунії. Якщо підтвердних документів про адресу немає, повідомте IGI свою поточну адресу в Румунії під час особистої реєстрації, щоб орган міг внести її до заяви; уточніть у відділенні IGI, як оформити передбачену декларацію замість документів.
+
 ## RU
 Title: Временная защита в Румынии: подача заявления и сохранение статуса
 Summary: Условия, подача и границы срока действия временной защиты в Румынии.
@@ -36,18 +42,4 @@ Content:
 
 Схема временной защиты ЕС действует до 4 марта 2028 года. Продление применяется с 5 марта 2027 года. Отдельное условие о воинской обязанности для указанной категории действует с 5 августа 2026 года; решение предусматривает исключение для непрерывной защиты в том же государстве. Срок действия румынского разрешения связан с периодом временной защиты. См. [[source:8fe9a340-b48b-5e35-a76d-2a37a3fb748c|действующее решение ЕС]] и [[source:822e16b8-0279-5560-b821-541b80d5b5c8|румынские правила о разрешении]].
 
-## Final atomic claim locator map (reconciled)
-
-- `RO-TP-01-C001` — EU temporary protection covers defined groups, including Ukrainian nationals displaced from Ukraine who fall within the supported EU cohort and qualifying family members. (final wording in the three localized content blocks above).
-- `RO-TP-01-C002` — It also covers people who had international or equivalent protection in Ukraine. (final wording in the three localized content blocks above).
-- `RO-TP-01-C003-S01` — EU temporary protection includes stateless people and third-country nationals who held permanent residence in Ukraine and cannot safely and durably return. (final wording in the three localized content blocks above).
-- `RO-TP-01-C003-S02` — Romania provides for additional national temporary-protection categories. (final wording in the three localized content blocks above).
-- `RO-TP-01-C004-S01` — From 5 August 2026, the EU military-obligation condition applies to the covered category specified in Council Implementing Decision (EU) 2026/1912, Article 2. (final wording in the three localized content blocks above).
-- `RO-TP-01-C004-S02` — A narrow exception applies to people continuously protected in the same Member State on 4 August 2026. (final wording in the three localized content blocks above).
-- `RO-TP-01-C005` — Temporary protection is granted by IGI under the applicable rules. (final wording in the three localized content blocks above).
-- `RO-TP-01-C006-S01` — Each person registering for temporary protection must appear in person before the competent IGI structure. (final wording in the three localized content blocks above).
-- `RO-TP-01-C006-S02` — IGI photographs each person during temporary-protection registration. (final wording in the three localized content blocks above).
-- `RO-TP-01-C006-S03` — IGI issues the temporary-protection residence permit without charge. (final wording in the three localized content blocks above).
-- `RO-TP-01-C008-S01` — The EU temporary-protection scheme runs through 4 March 2028. (final wording in the three localized content blocks above).
-- `RO-TP-01-C008-S02` — The extension applies from 5 March 2027. (final wording in the three localized content blocks above).
-- `RO-TP-01-C009` — Romanian implementing rules tie the permit validity period to the EU temporary-protection period; the current EU scheme ends on 4 March 2028. (final wording in the three localized content blocks above).
+Право в Румынии также распространяется на лиц, уже находившихся в стране до 24 февраля 2022 года, и на определённые категории членов семьи или близких родственников при соблюдении установленных законом условий. Для соответствующей группы с воинской обязанностью рекомендации Пограничной полиции приводят примеры доказательств: штамп о законном выезде или официальный бумажный/электронный документ Reserv+; список не является исчерпывающим. В заявлении необходимо указать место жительства/адрес в Румынии. Если подтверждающих адрес документов нет, сообщите IGI текущий адрес в Румынии при личной регистрации, чтобы орган мог внести его в заявление; уточните в отделении IGI, как оформить предусмотренную декларацию вместо документов.

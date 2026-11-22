@@ -49,7 +49,10 @@ public sealed class SlovakiaContentIntegrationTests
             Assert.All(translations, item =>
             {
                 Assert.Equal(VerificationStatus.Verified, item.VerificationStatus);
-                Assert.Equal(new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero), item.LastUpdatedAt);
+                var expectedDate = expected.Id == Guid.Parse("09d72fd2-1fa7-51a2-886b-9ebd93f4678d") || expected.Id == Guid.Parse("c26f0cc5-6316-5051-8ea8-8aa53d5d8742") || expected.Id == Guid.Parse("7e043916-46d8-5767-b00e-0ddc38c6c24e") || expected.Id == Guid.Parse("88047ea9-f8a9-5e74-9af7-9b8aeb684a24") || expected.Id == Guid.Parse("47762263-5800-578e-964b-13806a059f7f") || expected.Id == Guid.Parse("3e90b7d3-8cc3-5e78-a375-878d1b71b054")
+                    ? new DateTimeOffset(2026, 11, 22, 0, 0, 0, TimeSpan.Zero)
+                    : new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero);
+                Assert.Equal(expectedDate, item.LastUpdatedAt);
                 Assert.False(string.IsNullOrWhiteSpace(item.Title));
                 Assert.False(string.IsNullOrWhiteSpace(item.Summary));
                 Assert.False(string.IsNullOrWhiteSpace(item.Content));
@@ -71,7 +74,7 @@ public sealed class SlovakiaContentIntegrationTests
         var ids = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => ids.Contains(item.InformationEntryId)).ToArray();
         Assert.Equal(78, sources.Length);
-        Assert.Equal(1560, catalog.OfficialSources.Count);
+        Assert.Equal(1563, catalog.OfficialSources.Count);
         var removedIds = new[]
         {
             Guid.Parse("97ffc889-36c7-51f1-b119-e6b5afdf1aa1"),
@@ -250,7 +253,7 @@ public sealed class SlovakiaContentIntegrationTests
             ["residence-filing"] = ["764171d4-60e3-52a1-818c-d893f6388d68", "0ad1bc01-1675-5d83-86d5-a410cdcda966", "f37818da-31fc-57c8-9406-379be23970be"],
             ["employment-institutions"] = ["3efe28b7-6ffd-5510-b00f-317f84c1176d", "273c5aad-7526-5161-884b-72d93b43a8bb"],
             ["employment-assistance-conditions"] = ["3efe28b7-6ffd-5510-b00f-317f84c1176d", "3ea86fc1-1e8a-51e6-bc3e-820e241f465b", "a0f81409-3a9d-5d0e-acca-4ae5618f92c0"],
-            ["work-minimum-pay"] = ["0ee76a27-1a5b-55c6-94cd-f7ce78a0f0b3", "ec5c2ea1-fd6e-564f-825e-73fd0a5c7429", "6ab4517b-bc98-5890-aef1-ff0bb9c6f227", "ae4b6e26-5c1f-598e-ba51-8f67451bc621", "7be4136e-5c35-5491-99d2-39de492cea0b"],
+            ["work-minimum-pay"] = ["0ee76a27-1a5b-55c6-94cd-f7ce78a0f0b3", "ec5c2ea1-fd6e-564f-825e-73fd0a5c7429", "6ab4517b-bc98-5890-aef1-ff0bb9c6f227", "ae4b6e26-5c1f-598e-ba51-8f67451bc621", "7be4136e-5c35-5491-99d2-39de492cea0b", "c4015793-bfba-529b-b9c3-fbda351a68d6", "28c61de2-1ddb-5984-8020-b9e19bb986e8"],
             ["healthcare-access"] = ["88261d23-1430-5fda-bd4c-666ba5bc0ac9", "ab4942bd-3d65-56d0-bac6-fa3a247a9a65", "5604f5aa-f855-56a1-a76a-05e0bc267711", "84ac063a-2b96-5676-b97c-ab372f94fd75"],
             ["healthcare-proof"] = ["ab4942bd-3d65-56d0-bac6-fa3a247a9a65", "5604f5aa-f855-56a1-a76a-05e0bc267711", "47be309d-df73-563f-9833-5dbe138239f0", "88261d23-1430-5fda-bd4c-666ba5bc0ac9"],
             ["healthcare-urgent"] = ["88261d23-1430-5fda-bd4c-666ba5bc0ac9", "8b5b3ce8-2067-5ebc-abde-1d66f6ccd0cf", "84ac063a-2b96-5676-b97c-ab372f94fd75", "40dc0568-def5-51d8-9ca3-848ca71ec70e", "2586fa5d-8fc5-5387-a15f-97570efbcd2f", "88dc09a3-92be-5b0e-aaa3-0b7186ee3d9c"],

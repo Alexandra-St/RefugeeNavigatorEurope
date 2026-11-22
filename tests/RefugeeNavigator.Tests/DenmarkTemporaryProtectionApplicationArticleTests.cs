@@ -56,7 +56,7 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
             Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
             Assert.False(string.IsNullOrWhiteSpace(translation.Content));
             Assert.Equal(7, Regex.Matches(translation.Content, "(?m)^## ").Count);
-            Assert.Equal(new DateOnly(2026, 11, 17), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
+            Assert.Equal(new DateOnly(2026, 11, 22), DateOnly.FromDateTime(translation.LastUpdatedAt.UtcDateTime));
             Assert.DoesNotContain("L 43", translation.Title + translation.Summary + translation.Content);
         });
 

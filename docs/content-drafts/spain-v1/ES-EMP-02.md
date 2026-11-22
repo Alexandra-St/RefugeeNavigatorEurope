@@ -47,6 +47,7 @@ The Labour and Social Security Inspectorate (ITSS) supervises compliance with la
 
 The Workers' Statute provides a 20-working-day limitation period for an action against dismissal or termination of a temporary contract. The type of action and the facts matter. If this may concern you, seek qualified, timely support rather than relying on this overview to calculate a personal deadline.
 
+From 1 January 2027, the enacted Spanish minimum wage is €1,286 per month, €42.87 per day, or €18,004 per year, under [[source:55dfb9f1-bee9-54a7-867a-0c2379dca38e|Royal Decree 1013/2026]]. These are 2027 rates; the separate 2026 rates apply through 31 December 2026.
 
 ### Claim coverage
 
@@ -99,6 +100,7 @@ Content:
 
 Статут працівників передбачає строк 20 робочих днів для позову щодо звільнення або припинення тимчасового договору. Значення мають вид позову й обставини. Якщо це може стосуватися вас, своєчасно зверніться по кваліфіковану підтримку, а не використовуйте цей огляд для розрахунку особистого строку.
 
+З 1 січня 2027 року встановлена в Іспанії мінімальна зарплата становить 1 286 євро на місяць, 42,87 євро на день або 18 004 євро на рік відповідно до Королівського декрету 1013/2026. Це ставки на 2027 рік; окремі ставки 2026 року діють до 31 грудня 2026 року.
 
 ### Claim coverage
 
@@ -151,6 +153,7 @@ Content:
 
 Статут работников предусматривает срок в 20 рабочих дней для иска об увольнении или прекращении временного договора. Значение имеют вид иска и обстоятельства. Если это может касаться вас, своевременно обратитесь за квалифицированной поддержкой, а не рассчитывайте личный срок по этому обзору.
 
+С 1 января 2027 года установленная в Испании минимальная зарплата составляет 1 286 евро в месяц, 42,87 евро в день или 18 004 евро в год согласно Королевскому декрету 1013/2026. Это ставки на 2027 год; отдельные ставки 2026 года действуют до 31 декабря 2026 года.
 
 ### Claim coverage
 

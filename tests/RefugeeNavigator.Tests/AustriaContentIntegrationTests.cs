@@ -64,7 +64,10 @@ public sealed class AustriaContentIntegrationTests
             Assert.All(translations, item =>
             {
                 Assert.Equal(VerificationStatus.Verified, item.VerificationStatus);
-                Assert.Equal(new DateTimeOffset(2026, 11, 20, 0, 0, 0, TimeSpan.Zero), item.LastUpdatedAt);
+                var expectedDate = expected.Id == Guid.Parse("cae7f1a1-51c1-5b6c-a01d-b5bea8fb9cd2") || expected.Id == Guid.Parse("dc76be21-d9dc-5070-83ca-9a7468d78e71") || expected.Id == Guid.Parse("28c9cf8a-012f-5018-b9e0-48c8fcc4f8d5")
+                    ? new DateTimeOffset(2026, 11, 22, 0, 0, 0, TimeSpan.Zero)
+                    : new DateTimeOffset(2026, 11, 20, 0, 0, 0, TimeSpan.Zero);
+                Assert.Equal(expectedDate, item.LastUpdatedAt);
             });
         }
 
@@ -85,7 +88,7 @@ public sealed class AustriaContentIntegrationTests
         var entryIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(item => entryIds.Contains(item.InformationEntryId)).ToArray();
         Assert.Equal(63, sources.Length);
-        Assert.Equal(1560, catalog.OfficialSources.Count);
+        Assert.Equal(1563, catalog.OfficialSources.Count);
         Assert.Equal(63, sources.Select(item => item.Id).Distinct().Count());
         var sourceById = catalog.OfficialSources.ToDictionary(item => item.Id);
         Assert.All(sources, item =>

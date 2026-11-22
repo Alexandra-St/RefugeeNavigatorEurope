@@ -62,7 +62,10 @@ public sealed class RomaniaContentIntegrationTests
             Assert.All(translations, translation =>
             {
                 Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
-                Assert.Equal(new DateTimeOffset(2026, 11, 21, 12, 0, 0, TimeSpan.Zero), translation.LastUpdatedAt);
+                var expectedDate = expected.Id == Guid.Parse("24d0ab3d-935c-50b7-8385-c1c54583ec51") || expected.Id == Guid.Parse("6b966a1f-335e-596a-9825-005d30ab23d4") || expected.Id == Guid.Parse("61d13a69-6704-50ee-8b7b-e673a2828e65")
+                    ? new DateTimeOffset(2026, 11, 22, 0, 0, 0, TimeSpan.Zero)
+                    : new DateTimeOffset(2026, 11, 21, 12, 0, 0, TimeSpan.Zero);
+                Assert.Equal(expectedDate, translation.LastUpdatedAt);
                 Assert.False(string.IsNullOrWhiteSpace(translation.Title));
                 Assert.False(string.IsNullOrWhiteSpace(translation.Summary));
                 Assert.False(string.IsNullOrWhiteSpace(translation.Content));
@@ -112,8 +115,8 @@ public sealed class RomaniaContentIntegrationTests
         var sourceById = catalog.OfficialSources.ToDictionary(source => source.Id);
         var romaniaEntryIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(source => romaniaEntryIds.Contains(source.InformationEntryId)).ToArray();
-        Assert.Equal(57, sources.Length);
-        Assert.Equal(1560, catalog.OfficialSources.Count);
+        Assert.Equal(60, sources.Length);
+        Assert.Equal(1563, catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(source => source.Id).Distinct().Count());
         var sourceIds = sources.Select(source => source.Id).ToHashSet();
         Assert.All(new[]
@@ -142,7 +145,7 @@ public sealed class RomaniaContentIntegrationTests
             Assert.False(string.IsNullOrWhiteSpace(source.Title));
             Assert.InRange(source.LastCheckedAt,
                 new DateTimeOffset(2026, 11, 5, 0, 0, 0, TimeSpan.Zero),
-                new DateTimeOffset(2026, 11, 21, 0, 0, 0, TimeSpan.Zero));
+                new DateTimeOffset(2026, 11, 22, 0, 0, 0, TimeSpan.Zero));
         });
 
         foreach (var (code, expected) in Articles)
@@ -151,9 +154,9 @@ public sealed class RomaniaContentIntegrationTests
             var expectedSourceCount = code switch
             {
                 "RO-TP-01" => 5,
-                "RO-TP-02" => 7,
-                "RO-EMP-01" => 9,
-                "RO-EMP-02" => 9,
+                "RO-TP-02" => 8,
+                "RO-EMP-01" => 10,
+                "RO-EMP-02" => 10,
                 "RO-HEALTH-01" => 6,
                 "RO-HOUSING-01" => 4,
                 "RO-EDU-01" => 10,
