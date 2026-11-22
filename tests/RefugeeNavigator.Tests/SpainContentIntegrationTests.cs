@@ -233,7 +233,7 @@ public sealed class SpainContentIntegrationTests
             .LoadAsync(catalog);
         var wage = Assert.Single(comparison.Topics.SelectMany(topic => topic.Aspects)
             .Single(aspect => aspect.Id == "work-minimum-pay").Facts, fact => fact.CountrySlug == "spain");
-        Assert.Equal(new[] { Guid.Parse("2b15b8cb-2568-4b24-b5eb-4afd6b3682a7"), Guid.Parse("55dfb9f1-bee9-54a7-867a-0c2379dca38e") }, wage.OfficialSourceIds);
+        Assert.Equal(new[] { Guid.Parse("2b15b8cb-2568-4b24-b5eb-4afd6b3682a7"), Guid.Parse("55dfb9f1-bee9-54a7-867a-0c2379dca38e"), Guid.Parse("8af0cba6-f3a1-4e5b-a6f9-35c62bd4471c") }, wage.OfficialSourceIds);
         Assert.Contains("€1,221", wage.Values["en"]);
         Assert.Contains("€18,004 per year from 1 January 2027", wage.Values["en"]);
         Assert.DoesNotContain("€1,286", wage.Values["en"]);

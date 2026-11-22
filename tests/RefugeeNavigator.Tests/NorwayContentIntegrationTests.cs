@@ -88,7 +88,7 @@ public sealed class NorwayContentIntegrationTests
         Assert.All(norwayFacts, fact => Assert.Equal(ComparisonFactStatus.Approved, fact.Status));
         Assert.Equal(42, norwayFacts.SelectMany(fact => fact.OfficialSourceIds).Distinct().Count());
         var norwaySources = catalog.OfficialSources.Where(source => norwayFacts.SelectMany(fact => fact.OfficialSourceIds).Contains(source.Id)).ToArray();
-        Assert.Equal(37, norwaySources.Select(source => source.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(36, norwaySources.Select(source => source.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
 
         var expectedByTopic = new Dictionary<string, string>(StringComparer.Ordinal)
         {

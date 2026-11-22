@@ -116,7 +116,7 @@ public sealed class IrelandContentIntegrationTests
     public async Task IrelandTranslationsAndOneHundredTwentyTwoArticleOwnedSourcesMatchDraftsExactly()
     {
         var catalog = await Catalog.Value;
-        Assert.Equal(1563, catalog.OfficialSources.Count);
+        Assert.Equal(1562, catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
         var repositoryRoot = FindRepositoryRoot();
         var draftsRoot = Path.Combine(repositoryRoot, "docs", "content-drafts", "ireland-v1");

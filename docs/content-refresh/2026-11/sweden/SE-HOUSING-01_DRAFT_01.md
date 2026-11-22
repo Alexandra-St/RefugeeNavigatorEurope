@@ -38,6 +38,8 @@ For a second-hand apartment rental, guidance describes reasonable-rent rules and
 
 Separate rules may apply when renting a home from a private individual. Some disputes may be brought to the Rent Tribunal, depending on the dwelling and rental type. The Consumer Agency provides practical information but does not give individual legal advice; check which rules and route apply to your situation.
 
+For daily allowance under the new Reception Act, a new application had to reach the Migration Agency by 30 September 2026 for payments from 1 October 2026. The deadline has passed. An application received later does not cover days before its receipt; apply promptly if you still need support and confirm the current process with the Agency. [[source:15871cb1-c621-4275-ab06-ed2e6d2fdf32|Reception Act]] [[source:48a66397-3f08-4dd6-83fd-be6273d70663|Migration Agency accommodation guidance]]
+
 ## UK
 
 Title: Пошук житла у Швеції
@@ -74,6 +76,8 @@ Content:
 
 Під час оренди житла у приватної особи можуть застосовуватися окремі правила. Залежно від житла та виду оренди деякі спори можна передати до Житлового трибуналу. Агентство у справах споживачів надає практичну інформацію, але не індивідуальні юридичні консультації; перевірте, які правила та порядок застосовуються у вашій ситуації.
 
+Для щоденної допомоги за новим Законом про прийом нову заяву потрібно було подати до Міграційного агентства до 30 вересня 2026 року, щоб виплати здійснювалися з 1 жовтня 2026 року. Строк минув. Заява, отримана пізніше, не покриває дні до її отримання; якщо підтримка вам досі потрібна, подайте заяву якнайшвидше й уточніть чинну процедуру в Агентстві. [[source:15871cb1-c621-4275-ab06-ed2e6d2fdf32|Закон про прийом]] [[source:48a66397-3f08-4dd6-83fd-be6273d70663|Інформація Міграційного агентства про житло]]
+
 ## RU
 
 Title: Поиск жилья в Швеции
@@ -109,3 +113,5 @@ Content:
 ## Аренда жилья у частного лица
 
 При аренде жилья у частного лица могут действовать отдельные правила. В зависимости от жилья и вида найма некоторые споры можно передать в Жилищный трибунал. Агентство по защите прав потребителей предоставляет практическую информацию, но не индивидуальные юридические консультации; проверьте, какие правила и порядок применяются в вашей ситуации.
+
+Для ежедневного пособия по новому Закону о приёме новое заявление нужно было подать в Миграционное агентство до 30 сентября 2026 года, чтобы выплаты шли с 1 октября 2026 года. Срок прошёл. Заявление, полученное позже, не покрывает дни до его получения; если поддержка вам всё ещё нужна, подайте заявление как можно скорее и уточните действующий порядок в Агентстве. [[source:15871cb1-c621-4275-ab06-ed2e6d2fdf32|Закон о приёме]] [[source:48a66397-3f08-4dd6-83fd-be6273d70663|Информация Миграционного агентства о жилье]]

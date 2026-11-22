@@ -52,6 +52,8 @@ Under fee rules effective 1 October 2026, a temporary Swedish residence permit f
 
 The Swedish Council for Higher Education (UHR) can evaluate completed foreign qualifications and issue a statement comparing them with Swedish education. That statement does not award a Swedish qualification. UHR does not issue professional authorization for regulated professions; the competent authority assesses those qualifications. UHR does not assess incomplete qualifications for credit transfer; the higher education institution decides whether and which credits can be transferred. A UHR recognition statement does not itself grant university admission.
 
+SFI participation is generally limited to three years, with extensions possible in qualifying cases. Transitional arrangements apply to learners accepted before 1 January 2026. New course plans apply to courses starting after 31 December 2026; these rules concern course duration and planning, not basic eligibility.
+
 ## UK
 
 Title: Освіта та вивчення шведської мови у Швеції
@@ -102,6 +104,8 @@ University Admissions і Antagning — національні канали по�
 
 Висновок UHR про визнання порівнює завершену іноземну кваліфікацію зі шведською системою освіти, але не присуджує шведську кваліфікацію. UHR не надає професійних дозволів для регульованих професій; їх оцінює компетентний орган. UHR не оцінює незавершені кваліфікації для переведення кредитів; рішення про можливе зарахування кредитів ухвалює заклад вищої освіти. Висновок UHR сам по собі не надає права на вступ до університету.
 
+Навчання на SFI зазвичай обмежене трьома роками, але у відповідних випадках можливе продовження. Для учнів, прийнятих до 1 січня 2026 року, діють перехідні положення. Нові навчальні плани застосовуються до курсів, що починаються після 31 грудня 2026 року; ці правила стосуються тривалості та планування навчання, а не базового права на участь.
+
 ## RU
 
 Title: Образование и изучение шведского языка в Швеции
@@ -151,3 +155,5 @@ University Admissions и Antagning — национальные каналы п�
 ## Оценка иностранной квалификации
 
 Заключение UHR о признании сравнивает завершённую иностранную квалификацию со шведской системой образования, но не присуждает шведскую квалификацию. UHR не выдаёт профессиональные разрешения для регулируемых профессий; их оценивает компетентный орган. UHR не оценивает незавершённые квалификации для перевода кредитов; решение о возможном зачёте кредитов принимает вуз. Заключение UHR само по себе не даёт права на поступление в университет.
+
+Обучение SFI обычно ограничено тремя годами, но в соответствующих случаях возможно продление. Для учащихся, принятых до 1 января 2026 года, действуют переходные положения. Новые учебные планы применяются к курсам, начинающимся после 31 декабря 2026 года; эти правила касаются продолжительности и планирования обучения, а не базового права на участие.

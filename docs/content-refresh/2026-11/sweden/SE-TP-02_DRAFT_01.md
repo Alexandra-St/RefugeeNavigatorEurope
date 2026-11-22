@@ -34,6 +34,8 @@ Granting another permit may affect Migration Agency accommodation, allowances or
 
 Swedish permanent residence and Swedish long-term resident status are different routes. The Migration Agency’s long-term-residence test requires five years of continuous residence with a residence permit or lawful residence on another basis, with certain temporary stays excluded. Directive 2003/109/EC separately excludes people currently authorized to reside on temporary-protection grounds or awaiting a decision on that status.
 
+Time under Sweden’s Temporary Protection Directive permit does not count toward the five-year qualifying period for EU long-term resident status. A later residence permit may count if it independently meets the applicable rules.
+
 ## UK
 
 Title: Інші варіанти проживання у Швеції під час тимчасового захисту
@@ -66,6 +68,8 @@ Content:
 
 Шведське постійне проживання та статус довгострокового резидента у Швеції — різні маршрути. Для статусу довгострокового резидента Міграційне агентство вимагає п’ять років безперервного проживання з дозволом на проживання або на іншій законній підставі; певні тимчасові види перебування виключаються. Директива 2003/109/ЄС окремо не поширюється на осіб, які зараз мають дозвіл на проживання на підставі тимчасового захисту або очікують рішення щодо такого статусу.
 
+Час перебування у Швеції за дозволом відповідно до Директиви про тимчасовий захист не зараховується до п’ятирічного періоду для статусу довгострокового резидента ЄС. Подальший дозвіл на проживання може зараховуватися, якщо самостійно відповідає відповідним правилам.
+
 ## RU
 
 Title: Другие варианты проживания в Швеции при временной защите
@@ -97,3 +101,5 @@ Content:
 ## Долгосрочное проживание зависит от маршрута
 
 Шведский постоянный вид на жительство и статус долгосрочного резидента в Швеции — разные маршруты. Для статуса долгосрочного резидента Миграционное агентство требует пять лет непрерывного проживания с видом на жительство или на другом законном основании; некоторые временные виды пребывания исключаются. Директива 2003/109/ЕС отдельно не распространяется на лиц, которые сейчас имеют разрешение на проживание на основании временной защиты или ожидают решения по этому статусу.
+
+Время пребывания в Швеции по разрешению согласно Директиве о временной защите не засчитывается в пятилетний период для статуса долгосрочного резидента ЕС. Последующий вид на жительство может засчитываться, если сам по себе соответствует применимым правилам.

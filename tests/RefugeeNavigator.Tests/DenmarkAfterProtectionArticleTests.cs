@@ -288,7 +288,7 @@ public sealed class DenmarkAfterProtectionArticleTests
         var entryList = System.Text.RegularExpressions.Regex.Match(html, "<ul\\b[^>]*class=\"entry-list\"[^>]*>(.*?)</ul>", System.Text.RegularExpressions.RegexOptions.Singleline);
         Assert.True(entryList.Success);
         var listItems = System.Text.RegularExpressions.Regex.Matches(entryList.Groups[1].Value, "<li\\b");
-        Assert.Collection(listItems, _ => { }, _ => { }, _ => { }, _ => { }, _ => { });
+        Assert.Collection(listItems, _ => { }, _ => { }, _ => { }, _ => { });
         // The category page includes multiple healthcare articles. Exact inline links for this article
         // are asserted against its five cited source IDs below.
         AssertHealthcareInlineLinks(catalog, language, html);

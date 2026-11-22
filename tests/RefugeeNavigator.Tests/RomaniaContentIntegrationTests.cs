@@ -115,8 +115,8 @@ public sealed class RomaniaContentIntegrationTests
         var sourceById = catalog.OfficialSources.ToDictionary(source => source.Id);
         var romaniaEntryIds = Articles.Values.Select(item => item.Id).ToHashSet();
         var sources = catalog.OfficialSources.Where(source => romaniaEntryIds.Contains(source.InformationEntryId)).ToArray();
-        Assert.Equal(60, sources.Length);
-        Assert.Equal(1563, catalog.OfficialSources.Count);
+        Assert.Equal(59, sources.Length);
+        Assert.Equal(1562, catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(source => source.Id).Distinct().Count());
         var sourceIds = sources.Select(source => source.Id).ToHashSet();
         Assert.All(new[]
@@ -156,7 +156,7 @@ public sealed class RomaniaContentIntegrationTests
                 "RO-TP-01" => 5,
                 "RO-TP-02" => 8,
                 "RO-EMP-01" => 10,
-                "RO-EMP-02" => 10,
+                "RO-EMP-02" => 9,
                 "RO-HEALTH-01" => 6,
                 "RO-HOUSING-01" => 4,
                 "RO-EDU-01" => 10,

@@ -40,6 +40,8 @@ Employment-protection rules address how employment can end, and written employme
 
 Employers are responsible for the work environment. Arbetsmiljöverket, the Swedish Work Environment Authority, provides official information about workplace-safety responsibilities. It is a source of safety guidance, not a service that resolves every employment dispute.
 
+An employer’s notification to the Swedish Tax Agency is not required for every third-country worker; official exceptions include EU long-term residents and specified family members covered by free-movement rules. Where notification is required, it must be filed by the end of the third month after the calendar month in which the employee started work.
+
 ## UK
 
 Title: Дозвіл на роботу та права працівників у Швеції
@@ -79,6 +81,8 @@ Content:
 
 Роботодавці відповідають за робоче середовище. Шведське управління з питань робочого середовища (Arbetsmiljöverket) надає офіційну інформацію про обов’язки щодо безпеки праці. Це джерело рекомендацій з безпеки, а не служба, що вирішує кожен трудовий спір.
 
+Повідомлення роботодавця до Податкового агентства Швеції потрібне не для кожного працівника з третьої країни; офіційні винятки охоплюють довгострокових резидентів ЄС та визначених членів сімей, на яких поширюються правила вільного пересування. Якщо повідомлення потрібне, його слід подати до кінця третього місяця після календарного місяця, у якому працівник почав роботу.
+
 ## RU
 
 Title: Разрешение на работу и права работников в Швеции
@@ -116,3 +120,5 @@ Content:
 Правила защиты занятости регулируют порядок прекращения трудовых отношений. Результат зависит от вида и продолжительности работы, причины и применимых правил.
 
 Работодатели отвечают за рабочую среду. Шведское управление по вопросам рабочей среды (Arbetsmiljöverket) предоставляет официальную информацию об обязанностях по безопасности труда. Это источник рекомендаций по безопасности, а не служба, которая разрешает каждый трудовой спор.
+
+Уведомление работодателя в Налоговое агентство Швеции требуется не для каждого работника из третьей страны; официальные исключения включают долгосрочных резидентов ЕС и определённых членов семей, на которых распространяются правила свободного передвижения. Если уведомление требуется, его нужно подать до конца третьего месяца после календарного месяца, в котором сотрудник начал работу.

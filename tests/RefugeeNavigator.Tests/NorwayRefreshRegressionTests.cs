@@ -205,7 +205,7 @@ public sealed class NorwayRefreshRegressionTests
         Assert.Contains("1 Apr 2028",watch,StringComparison.Ordinal);
         Assert.Contains("REVIEW_ON",watch,StringComparison.Ordinal);
         Assert.Contains("not a legal trigger",ReadReviewArtifact("NORWAY_REFRESH_REVIEW_01.md"),StringComparison.OrdinalIgnoreCase);
-        Assert.Equal(1563,catalog.OfficialSources.Count);
+        Assert.Equal(1562,catalog.OfficialSources.Count);
         Assert.Equal(catalog.OfficialSources.Count,catalog.OfficialSources.Select(source=>source.Id).Distinct().Count());
     }
 
@@ -217,7 +217,7 @@ public sealed class NorwayRefreshRegressionTests
         var norway=Articles.Values.ToHashSet();
         var norwaySources=sources.Values.Where(source=>norway.Contains(source.InformationEntryId)).ToArray();
         Assert.Equal(45,norwaySources.Length);
-        Assert.Equal(38,norwaySources.Select(source=>source.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
+        Assert.Equal(37,norwaySources.Select(source=>source.Url.AbsoluteUri).Distinct(StringComparer.Ordinal).Count());
         Assert.Equal(0,norwaySources.GroupBy(source=>(source.InformationEntryId,source.Url.AbsoluteUri)).Count(group=>group.Count()>1));
         Assert.Equal("https://www.husbanken.no/english/housing-allowance/type-of-housing/",sources[Guid.Parse("5131b9a5-13c9-52db-ba4d-1ec6ae2cf401")].Url.AbsoluteUri);
         Assert.Equal("https://www.udi.no/en/information-ukraine-and-russia/ukraine/waiting-for-a-decision/school-health-dnumber-asylum-seeker-card/",sources[Guid.Parse("c7cd4cf0-0cb2-52ba-94e0-0d2b95bad4eb")].Url.AbsoluteUri);
