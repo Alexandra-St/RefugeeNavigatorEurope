@@ -198,11 +198,11 @@ public sealed class SlovakiaContentIntegrationTests
             .SelectMany(aspect => aspect.Facts)
             .Where(item => item.CountrySlug == "slovakia" && item.InformationEntryId == articleId));
 
-        var bookingMarkers = new Dictionary<string, (string Reservation, string System, string Availability, string Electronic, string Separate, string NotMandatory, string OldHorizon)>
+        var bookingMarkers = new Dictionary<string, (string Reservation, string ArticleSystem, string CompareSystem, string ArticleAvailability, string CompareAvailability, string ArticleCategory, string CompareCategory, string Electronic, string Separate, string NotMandatory, string OldHorizon)>
         {
-            ["en"] = ("Reserve", "reservation system", "available", "electronic declaration", "separate", "not stated to be mandatory", "21 days"),
-            ["uk"] = ("Запишіться", "система", "доступні", "електронна декларація", "окрема", "не названа обов’язковою", "21 день"),
-            ["ru"] = ("Запишитесь", "система", "доступные", "электронная декларация", "отдельна", "не названа обязательной", "21 день")
+            ["en"] = ("Reserve", "reservation system", "live system", "available offices and dates", "available dates", "user/access category", "user/access category", "electronic declaration", "separate", "not stated to be mandatory", "21 days"),
+            ["uk"] = ("Запишіться", "система", "система", "доступні підрозділи та дати", "доступні дати", "категорії користувача", "категорії користувача", "електронна декларація", "окрема", "не названа обов’язковою", "21 день"),
+            ["ru"] = ("Запишитесь", "система", "система", "доступные отделения и даты", "доступные даты", "категории пользователя", "категории пользователя", "электронная декларация", "отдельна", "не названа обязательной", "21 день")
         };
         foreach (var (language, markers) in bookingMarkers)
         {
@@ -210,8 +210,9 @@ public sealed class SlovakiaContentIntegrationTests
                 item => item.InformationEntryId == articleId && item.LanguageCode == language).Content;
             Assert.Contains("DOČASNÉ ÚTOČISKO", content, StringComparison.Ordinal);
             Assert.Contains(markers.Reservation, content, StringComparison.OrdinalIgnoreCase);
-            Assert.Contains(markers.System, content, StringComparison.OrdinalIgnoreCase);
-            Assert.Contains(markers.Availability, content, StringComparison.OrdinalIgnoreCase);
+            Assert.Contains(markers.ArticleSystem, content, StringComparison.OrdinalIgnoreCase);
+            Assert.Contains(markers.ArticleAvailability, content, StringComparison.OrdinalIgnoreCase);
+            Assert.Contains(markers.ArticleCategory, content, StringComparison.OrdinalIgnoreCase);
             Assert.Contains(markers.Electronic, content, StringComparison.OrdinalIgnoreCase);
             Assert.Contains(markers.Separate, content, StringComparison.OrdinalIgnoreCase);
             Assert.Contains(markers.NotMandatory, content, StringComparison.OrdinalIgnoreCase);
@@ -220,8 +221,9 @@ public sealed class SlovakiaContentIntegrationTests
             var value = fact.Values[language];
             Assert.Contains("DOČASNÉ ÚTOČISKO", value, StringComparison.Ordinal);
             Assert.Contains(markers.Reservation, value, StringComparison.OrdinalIgnoreCase);
-            Assert.Contains(markers.System, value, StringComparison.OrdinalIgnoreCase);
-            Assert.Contains(markers.Availability, value, StringComparison.OrdinalIgnoreCase);
+            Assert.Contains(markers.CompareSystem, value, StringComparison.OrdinalIgnoreCase);
+            Assert.Contains(markers.CompareAvailability, value, StringComparison.OrdinalIgnoreCase);
+            Assert.Contains(markers.CompareCategory, value, StringComparison.OrdinalIgnoreCase);
             Assert.Contains(markers.Electronic, value, StringComparison.OrdinalIgnoreCase);
             Assert.Contains(markers.Separate, value, StringComparison.OrdinalIgnoreCase);
             Assert.Contains(markers.NotMandatory, value, StringComparison.OrdinalIgnoreCase);
