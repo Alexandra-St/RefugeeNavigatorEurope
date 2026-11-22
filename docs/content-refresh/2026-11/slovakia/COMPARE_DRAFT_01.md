@@ -52,9 +52,9 @@
 - **Disposition:** KEEP
 - **Article:** `53272a98-60f0-507d-be15-eea36295bdf2`
 - **Availability:** true
-- **EN:** The pre-end §131o route requires the eligible Slovak purpose/activity for six months immediately before filing; the post-end route tests six months before refuge ends plus uninterrupted continuation to filing. Cross-reference ambiguity remains.
-- **UK:** Для раннього подання за §131o потрібна відповідна діяльність у Словаччині шість місяців перед поданням; після завершення перевіряють шість місяців до завершення та безперервність до подання. У перехресному посиланні лишається неоднозначність.
-- **RU:** Для ранней подачи по §131o требуется подходящая деятельность в Словакии шесть месяцев до подачи; после окончания проверяются шесть месяцев до окончания и непрерывность до подачи. В перекрёстной ссылке остаётся неоднозначность.
+- **EN:** The pre-end §131o route requires the eligible Slovak purpose/activity for six months immediately before filing; the post-end route tests six months before refuge ends plus uninterrupted continuation to filing within the statutory one-year post-termination period for the specified cohort, subject to statutory exceptions. Cross-reference ambiguity remains.
+- **UK:** Для раннього подання за §131o потрібна відповідна діяльність у Словаччині шість місяців перед поданням; після завершення перевіряють шість місяців до завершення та безперервність до подання в межах установленого §131o однорічного періоду після припинення укриття для визначеної категорії, з урахуванням законодавчих винятків. У перехресному посиланні лишається неоднозначність.
+- **RU:** Для ранней подачи по §131o требуется подходящая деятельность в Словакии шесть месяцев до подачи; после окончания проверяются шесть месяцев до окончания и непрерывность до подачи в пределах установленного §131o годичного периода после прекращения убежища для определённой категории, с учётом законодательных исключений. В перекрёстной ссылке остаётся неоднозначность.
 - **Final proposed SourceIds:** `764171d4-60e3-52a1-818c-d893f6388d68`, `0ad1bc01-1675-5d83-86d5-a410cdcda966`
 - **Binding action:** KEEP; existing bindings retained and checked for scope/ownership.
 - **Evidence needed / note:** Current wording is unchanged; final source bindings were checked in Task 81 and independently reviewed in Task 82.
