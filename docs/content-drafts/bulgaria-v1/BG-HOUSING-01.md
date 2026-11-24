@@ -24,8 +24,6 @@ Program 3 reimburses eligible accommodation providers; it is not rent money paid
 
 Under the current Program 3 rules, accommodation is generally limited to one stay of up to 60 days. Eligible people in defined risk groups may use the route for the full applicable temporary-protection period under the current rules. Individual and family eligibility conditions still apply, and neither a place nor a particular location is guaranteed. This is accommodation support for qualifying beneficiaries, not an unconditional cash payment to every displaced person. [[source:8ccb8ced-a074-5702-8441-c3cd529cec4b|Program 3 amendment information]]
 
-Under Programme 3, the standard one-time accommodation limit is 60 days. Qualifying risk groups may use the route for the full applicable temporary-protection period, subject to individual and family eligibility rules; accommodation or a particular location is not guaranteed. The current provider reimbursement is €8.40 per accommodated person excluding VAT (€9.16 or €10.08 including VAT, depending on category and rate). This is paid to an eligible provider, not to the displaced resident.
-
 ### Claim coverage and editorial exclusions
 
 No guaranteed accommodation place, direct Program 3 rent payment, current 2026 reimbursement amount or universal private-lease deposit cap is asserted.

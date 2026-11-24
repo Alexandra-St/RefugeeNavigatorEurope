@@ -15,7 +15,7 @@ Summary: Healthcare entitlement, separate HSE card routes, proof and urgent-care
 
 Content:
 
-A person with valid Irish TP permission has entitlement to medical care on the same conditions as an Irish citizen. HSE’s UKR Medical Card is a separate application route for a person from Ukraine who arrived less than a year ago and has TP; it requires a PPSN and form. For an applicant without a GP, HSE says to leave section 3 blank and that it will assign a GP to the applicant or family. A public-hospital ED attendance may be subject to a statutory charge, depending on eligibility and exemptions. [[source:c53c975b-f313-572b-b8bc-0e0969e7e2c0|International Protection Act 2026, section 237]] [[source:f6eb3634-c3c5-5e83-9959-0f55cacc85b1|HSE UKR Medical Card]] [[source:79ccdfbe-5be6-5248-844d-ca744c6de269|HSE Pharmacy Circular 011/25]] [[source:4f7c5150-4700-5c07-8b44-126545a53e9a|HSE guidance on PPSN]]
+A person with valid Irish TP permission has entitlement to medical care on the same conditions as an Irish citizen. HSE’s UKR Medical Card is a separate application route for a person from Ukraine who arrived less than a year ago and has TP; it requires a PPSN and form. For an applicant without a GP, HSE says to leave section 3 blank and that it will assign a GP to the applicant or family. A public-hospital ED attendance costs €100 unless an exemption applies, including a medical card or a medical/GP or injury-unit referral. [[source:c53c975b-f313-572b-b8bc-0e0969e7e2c0|International Protection Act 2026, section 237]] [[source:f6eb3634-c3c5-5e83-9959-0f55cacc85b1|HSE UKR Medical Card]] [[source:79ccdfbe-5be6-5248-844d-ca744c6de269|HSE Pharmacy Circular 011/25]] [[source:4f7c5150-4700-5c07-8b44-126545a53e9a|HSE guidance on PPSN]]
 
 The ordinary Medical Card and GP Visit Card are separate HSE schemes with their own assessments. PPSN helps HSE identify a patient and link records, but is not a general prerequisite for care; HSE says care can still be provided without one. TP permission, a card application and an HSE card decision are different things. [[source:5f9d91d3-784e-5f4b-8beb-e8455e04583f|HSE Medical Card coverage and eligibility]] [[source:4f7c5150-4700-5c07-8b44-126545a53e9a|HSE guidance on PPSN]]
 
@@ -23,10 +23,6 @@ For serious illness or injury, call 112 or 999; calls are free. A public-hospita
 
 
 The HSE’s interim generic medical-card numbers for Ukrainian nationals expired and were stood down in 2025; individuals were directed to obtain their own PPSN and apply for a card. The current UKR Medical Card remains a separate application route for eligible TP beneficiaries who arrived less than one year ago; it requires a PPSN and completed form. After one year, applicants use the ordinary Medical Card assessment route. This does not mean care is unavailable without a PPSN or that all care is free.
-
-### Claim coverage and editorial exclusions
-
-Content and exclusions are governed by the final Ireland claim ledger and approved review copy.
 
 ## UK
 

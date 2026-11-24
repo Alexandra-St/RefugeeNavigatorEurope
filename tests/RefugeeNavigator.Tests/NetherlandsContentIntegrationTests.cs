@@ -270,14 +270,28 @@ public sealed class NetherlandsContentIntegrationTests
         Assert.Equal(1560, catalog.OfficialSources.Count);
         Assert.Equal(49, sources.Select(item => item.Url.AbsoluteUri).Distinct(StringComparer.OrdinalIgnoreCase).Count());
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(item => item.Id).Distinct().Count());
+        var recheckedOnNov24 = new HashSet<Guid>
+        {
+            Guid.Parse("fda6d123-58d8-5858-9e91-311f5266f5ee"),
+            Guid.Parse("1f249289-a637-55f3-ad23-582657f3ca7c"),
+            Guid.Parse("77d933ef-360d-5a89-ad06-1b8077ddbdb2"),
+            Guid.Parse("af04791b-c4e2-595a-8512-6b923e4488fb"),
+            Guid.Parse("6dae1849-408f-5504-a344-b88a1b3832dd"),
+            Guid.Parse("4b84ead2-52e5-5810-ac8c-cad22c7145d2"),
+            Guid.Parse("7ec8ae01-c6cc-5df9-901c-b0addeaa316b"),
+            Guid.Parse("1aed58a4-b9a4-513d-93cc-5efdff100645")
+        };
         Assert.All(sources, source =>
         {
             Assert.Contains(source.InformationEntryId, entryIds);
             Assert.True(source.Url.IsAbsoluteUri);
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
             Assert.False(string.IsNullOrWhiteSpace(source.Title));
-            Assert.InRange(source.LastCheckedAt.UtcDateTime.Date,
-                new DateTime(2026, 11, 16), new DateTime(2026, 11, 21));
+            if (recheckedOnNov24.Contains(source.Id))
+                Assert.Equal(new DateTime(2026, 11, 24), source.LastCheckedAt.UtcDateTime.Date);
+            else
+                Assert.InRange(source.LastCheckedAt.UtcDateTime.Date,
+                    new DateTime(2026, 11, 16), new DateTime(2026, 11, 21));
         });
 
         foreach (var (key, expectedCount) in ExpectedSourceCounts)
@@ -294,6 +308,17 @@ public sealed class NetherlandsContentIntegrationTests
                 expected.Add(
                     "https://www.rijksoverheid.nl/documenten/vraag-en-antwoord/eerstelijnszorg/wat-moet-ik-doen-als-iemand-dringend-medische-hulp-nodig-heeft",
                     urgentCareTitle);
+            }
+            if (key == "NL-SOC-01")
+            {
+                var budgetSourceId = Guid.Parse("1aed58a4-b9a4-513d-93cc-5efdff100645");
+                var budgetSource = Assert.Single(ownedSources, item => item.Id == budgetSourceId);
+                const string reviewedUrl = "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/toeslagen/kindgebonden-budget/maximaal-vermogen-kindgebonden-budget/";
+                Assert.Equal(reviewedUrl, expected.Keys.Single(url => url.Contains("kindgebonden-budget", StringComparison.Ordinal)));
+                Assert.NotEqual(reviewedUrl, budgetSource.Url.AbsoluteUri);
+                Assert.True(expected.Remove(reviewedUrl, out var budgetTitle));
+                Assert.Equal("https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/toeslagen/kindgebonden-budget/voorwaarden/vermogen/vermogen-kindgebonden-budget", budgetSource.Url.AbsoluteUri);
+                expected.Add(budgetSource.Url.AbsoluteUri, budgetTitle);
             }
             Assert.True(expectedCount == expected.Count, $"Editorial source count mismatch for {key}: expected {expectedCount}, actual {expected.Count}.");
             Assert.True(expectedCount == ownedSources.Length, $"Owned source count mismatch for {key}: expected {expectedCount}, actual {ownedSources.Length}.");

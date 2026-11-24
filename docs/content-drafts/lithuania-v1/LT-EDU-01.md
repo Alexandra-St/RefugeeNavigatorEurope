@@ -60,7 +60,7 @@ Covers school access and local enrolment for children with relevant residence ri
 
 - `LT-EDU-01-S02` → `c47e1d25-76d9-5159-9bae-21b19793b1c8` — Ministry Ukraine-pupil FAQ. (research source Task 71; [official source](https://smsm.lrv.lt/lt/informacija-del-karo-pabegeliu-is-ukrainos/duk-pitannia-shcho-chasto-zadaiutsia-frequently-asked-questions/bendrasis-ugdymas-zagalna-osvita-general-education/))
 
-- `LT-EDU-01-S03` → `088fd097-e7d9-57a6-b725-1ff3e9e587dd` — municipal school contacts. (research source Task 71; [official source](https://smsm.lrv.lt/lt/informacija-del-karo-pabegeliu-is-ukrainos/informacija-ukrainos-pilieciams-ir-ju-seimu-nariams-informatsiia-dlia-gromadian-ukrayini-information-for-ukrainian-citizens/ukrainieciu-vaiku-mokymas-navchannia-u-litvi-kudi-zvertatisia-education-lithuania-where-to-apply/))
+- `LT-EDU-01-S03` → `088fd097-e7d9-57a6-b725-1ff3e9e587dd` — Municipal school contacts / Education in Lithuania: where to apply (research source Task 71; [official source](https://smsm.lrv.lt/lt/informacija-del-karo-pabegeliu-is-ukrainos/informacija-ukrainos-pilieciams-ir-ju-seimu-nariams-informatsiia-dlia-gromadian-ukrayini-information-for-ukrainian-citizens/ukrainieciu-vaiku-mokymas-navchannia-u-litvi-kudi-zvertatisia-education-in-lithuania-where-to-apply/))
 
 - `LT-EDU-01-S04` → `634a26ac-c608-5b64-a86d-447265a873de` — class-placement procedure. (research source Task 71; [official source](https://e-seimas.lrs.lt/portal/legalActPrint/lt?actualEditionId=EzLQZRQLsD&category=TAD&documentId=TAIS.253802&jfwid=-bz5727fws))
 

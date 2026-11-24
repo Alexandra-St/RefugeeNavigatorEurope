@@ -22,7 +22,7 @@ Norway has no nationwide statutory minimum wage covering every job. Statutory mi
 
 ## Self-employment
 
-UDI distinguishes employment from self-employment: before starting or operating an independent business, check whether your residence permit allows self-employed work. Registering a business by itself is not work authorization. Registration, tax, VAT and regulated-profession requirements are separate.
+UDI distinguishes employment from self-employment: before starting or operating an independent business, check whether your residence permit allows self-employed work. Registering a business by itself is not work authorization. Registration, tax, VAT and regulated-profession requirements are separate. [[source:176b7699-9b1f-5b09-9e67-8c6970823253|UDI: skilled-worker permits and self-employment]] [[source:1a57b6ab-e0ae-5960-bcae-94c99a3e1cbb|Norwegian Tax Administration: foreign sole-proprietor registration]]
 
 ## Official sources
 

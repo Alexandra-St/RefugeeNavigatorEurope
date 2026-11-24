@@ -218,12 +218,20 @@ public sealed class BelgiumContentIntegrationTests
             Guid.Parse("0e853ef8-2b3b-5592-833b-6d1ce463c196")
         };
         var checkedOnNov14 = Guid.Parse("38f01c1d-3688-5be0-b94b-97b5f0d8bdf3");
+        var recheckedOnNov24 = new HashSet<Guid>
+        {
+            Guid.Parse("c0794ee2-3a4a-56e7-97b8-89e51b9a54fe"),
+            Guid.Parse("759e9eb4-8170-56fc-9d2b-81e0d071708a"),
+            Guid.Parse("536ee853-3420-5e84-900a-c4e773ace826")
+        };
         Assert.All(sources, source =>
         {
             Assert.Contains(source.InformationEntryId, articleIds);
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
             Assert.Equal(
-                refreshedOnReleaseDate.Contains(source.Id)
+                recheckedOnNov24.Contains(source.Id)
+                    ? new DateTimeOffset(2026, 11, 24, 0, 0, 0, TimeSpan.Zero)
+                    : refreshedOnReleaseDate.Contains(source.Id)
                     ? new DateTimeOffset(2026, 11, 16, 0, 0, 0, TimeSpan.Zero)
                     : source.Id == checkedOnNov14
                         ? new DateTimeOffset(2026, 11, 14, 0, 0, 0, TimeSpan.Zero)
@@ -505,7 +513,7 @@ public sealed class BelgiumContentIntegrationTests
     private static string FindRepositoryRoot()
     {
         var directory = new DirectoryInfo(AppContext.BaseDirectory);
-        while (directory is not null && !Directory.Exists(Path.Combine(directory.FullName, ".git")))
+        while (directory is not null && !(Directory.Exists(Path.Combine(directory.FullName, ".git")) || File.Exists(Path.Combine(directory.FullName, ".git"))))
             directory = directory.Parent;
         return directory?.FullName ?? throw new DirectoryNotFoundException("Could not locate repository root.");
     }

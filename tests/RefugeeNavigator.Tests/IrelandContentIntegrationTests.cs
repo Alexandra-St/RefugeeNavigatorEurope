@@ -131,7 +131,10 @@ public sealed class IrelandContentIntegrationTests
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
             var refreshedSourceIds = new HashSet<Guid>
             { Guid.Parse("7e6c51ae-784c-5494-acdd-6e44526fef30"), Guid.Parse("01c93379-a45d-5da0-9b7f-07cfd595013b"), Guid.Parse("3ec94ac7-3c1a-51f1-9cc6-93118307cc0b") };
-            Assert.Equal(refreshedSourceIds.Contains(source.Id)
+            var recheckedOnNov24 = source.Id == Guid.Parse("1a773d94-d40a-52e7-a918-ed4d517c58e9") || source.Id == Guid.Parse("79ccdfbe-5be6-5248-844d-ca744c6de269");
+            Assert.Equal(recheckedOnNov24
+                ? new DateTimeOffset(2026, 11, 24, 0, 0, 0, TimeSpan.Zero)
+                : refreshedSourceIds.Contains(source.Id)
                 ? new DateTimeOffset(2026, 11, 22, 0, 0, 0, TimeSpan.Zero)
                 : new DateTimeOffset(2026, 11, 18, 0, 0, 0, TimeSpan.Zero), source.LastCheckedAt);
         });
@@ -163,7 +166,7 @@ public sealed class IrelandContentIntegrationTests
             foreach (var (language, section) in new[] { ("en", "EN"), ("uk", "UK"), ("ru", "RU") })
             {
                 var match = Regex.Match(draft,
-                    $@"(?ms)^## {section}\s+Title: (?<title>.*?)\s+Summary: (?<summary>.*?)\s+Content:\s+(?<content>.*?)(?=^### Claim coverage and editorial exclusions$)");
+                    $@"(?ms)^## {section}\s+Title: (?<title>.*?)\s+Summary: (?<summary>.*?)\s+Content:\s+(?<content>.*?)(?=^## (?:EN|UK|RU)$|^### Claim coverage and editorial exclusions$)");
                 Assert.True(match.Success, $"Missing {section} in {articleCode}.");
                 var translation = Assert.Single(catalog.InformationEntryTranslations,
                     item => item.InformationEntryId == expected.Id && item.LanguageCode == language);
@@ -359,7 +362,7 @@ public sealed class IrelandContentIntegrationTests
     private static string FindRepositoryRoot()
     {
         var directory = new DirectoryInfo(AppContext.BaseDirectory);
-        while (directory is not null && !Directory.Exists(Path.Combine(directory.FullName, ".git")))
+        while (directory is not null && !(Directory.Exists(Path.Combine(directory.FullName, ".git")) || File.Exists(Path.Combine(directory.FullName, ".git"))))
             directory = directory.Parent;
         return directory?.FullName ?? throw new DirectoryNotFoundException("Could not locate repository root.");
     }

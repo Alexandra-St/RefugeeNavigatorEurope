@@ -1656,7 +1656,7 @@
     "InformationEntryId": "829b9986-d949-5dd8-80c4-b9b4b7cf4d44",
     "Title": "Informace o nástupu občana EU/EHP a Švýcarska nebo jeho rodinného příslušníka, nebo cizince, který nepotřebuje pracovní oprávnění do zaměstnání",
     "Url": "https://mpsv.gov.cz/informace-o-nastupu-u-obcana-eu-ehp-a-svycarska-nebo-jeho-rodinneho-prislusnika-nebo-cizince-ktery-nepotrebuje-pracovni-opravneni-do-zamestnani-k-vysl?inheritRedirect=true",
-    "LastCheckedAt": "2026-11-17T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-24T00:00:00+00:00"
   },
   {
     "Id": "f4f235e4-f298-555a-ad9c-e74e4bce8a28",
@@ -2811,7 +2811,7 @@
     "InformationEntryId": "c5f5f833-0ab7-5e1a-9325-87a92b21d2ad",
     "Title": "Government.nl, Long term policy: return and stay",
     "Url": "https://www.government.nl/themes/migration-and-travel/reception-of-refugees-from-ukraine/long-term-policy-return-and-stay",
-    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-24T00:00:00+00:00"
   },
   {
     "Id": "98966301-dedb-5b6c-907c-adc84b07dfbb",
@@ -2860,14 +2860,14 @@
     "InformationEntryId": "6a077f79-89c2-55d6-81f3-9ba7279979c9",
     "Title": "Government.nl, Minimum wage amounts",
     "Url": "https://www.government.nl/themes/work/minimum-wage/minimum-wage-amounts",
-    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-24T00:00:00+00:00"
   },
   {
     "Id": "77d933ef-360d-5a89-ad06-1b8077ddbdb2",
     "InformationEntryId": "6a077f79-89c2-55d6-81f3-9ba7279979c9",
     "Title": "Government.nl, What if I receive less than the hourly minimum wage?",
     "Url": "https://www.government.nl/themes/work/minimum-wage/less-than-the-minimum-wage",
-    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-24T00:00:00+00:00"
   },
   {
     "Id": "1feadcf3-b8a8-5837-b478-90b1796d04ff",
@@ -2979,7 +2979,7 @@
     "InformationEntryId": "19dde97c-cb42-5a90-97f7-e344f2139d2e",
     "Title": "Government.nl, Step-by-step plan for tenants",
     "Url": "https://www.government.nl/themes/building-and-housing/housing/rented-housing/step-by-step-plan-for-tenants",
-    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-24T00:00:00+00:00"
   },
   {
     "Id": "870388b4-4e7a-5412-84a3-3627fd43344d",
@@ -3007,21 +3007,21 @@
     "InformationEntryId": "7633a085-4555-5a8f-a9a8-747a0f6e0545",
     "Title": "Government.nl, Education for the children of Ukrainian refugees",
     "Url": "https://www.government.nl/themes/migration-and-travel/reception-of-refugees-from-ukraine/education",
-    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-24T00:00:00+00:00"
   },
   {
     "Id": "4b84ead2-52e5-5810-ac8c-cad22c7145d2",
     "InformationEntryId": "7633a085-4555-5a8f-a9a8-747a0f6e0545",
     "Title": "Government.nl, Exemptions from compulsory school attendance",
     "Url": "https://www.government.nl/themes/education/compulsory-school-attendance/exemptions-from-compulsory-school-attendance",
-    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-24T00:00:00+00:00"
   },
   {
     "Id": "7ec8ae01-c6cc-5df9-901c-b0addeaa316b",
     "InformationEntryId": "7633a085-4555-5a8f-a9a8-747a0f6e0545",
     "Title": "Government.nl, Language disadvantage at primary school",
     "Url": "https://www.government.nl/themes/education/language-disadvantage/language-disadvantage-at-primary-school",
-    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-24T00:00:00+00:00"
   },
   {
     "Id": "82c68617-079f-55ad-b652-2cd30daec7e1",
@@ -5693,9 +5693,9 @@
   {
     "Id": "088fd097-e7d9-57a6-b725-1ff3e9e587dd",
     "InformationEntryId": "bacfcf91-7365-5c28-a240-b6db41c1aa0f",
-    "Title": "municipal school contacts.",
-    "Url": "https://smsm.lrv.lt/lt/informacija-del-karo-pabegeliu-is-ukrainos/informacija-ukrainos-pilieciams-ir-ju-seimu-nariams-informatsiia-dlia-gromadian-ukrayini-information-for-ukrainian-citizens/ukrainieciu-vaiku-mokymas-navchannia-u-litvi-kudi-zvertatisia-education-lithuania-where-to-apply/",
-    "LastCheckedAt": "2026-11-17T00:00:00+00:00"
+    "Title": "Municipal school contacts / Education in Lithuania: where to apply",
+    "Url": "https://smsm.lrv.lt/lt/informacija-del-karo-pabegeliu-is-ukrainos/informacija-ukrainos-pilieciams-ir-ju-seimu-nariams-informatsiia-dlia-gromadian-ukrayini-information-for-ukrainian-citizens/ukrainieciu-vaiku-mokymas-navchannia-u-litvi-kudi-zvertatisia-education-in-lithuania-where-to-apply/",
+    "LastCheckedAt": "2026-11-24T00:00:00+00:00"
   },
   {
     "Id": "634a26ac-c608-5b64-a86d-447265a873de",
@@ -6108,7 +6108,7 @@
     "InformationEntryId": "864a1ff8-dc63-56bf-ae78-860a452a8f04",
     "Title": "HSE, “Wexford General Hospital Emergency Department”",
     "Url": "https://www2.hse.ie/services/find-urgent-emergency-care/wexford-general-hospital-emergency-department/",
-    "LastCheckedAt": "2026-11-18T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-24T00:00:00+00:00"
   },
   {
     "Id": "e3d51e0a-6f8c-5951-91f7-4e1ad5807875",
@@ -6129,7 +6129,7 @@
     "InformationEntryId": "864a1ff8-dc63-56bf-ae78-860a452a8f04",
     "Title": "HCP Pharmacy Circular 011/25: Ukrainian nationals generic card numbers",
     "Url": "https://about.hse.ie/publications/hcp-pharmacy-circular-01125-ukrainian-nationals-generic-card-numbers/",
-    "LastCheckedAt": "2026-11-18T00:00:00+00:00"
+    "LastCheckedAt": "2026-11-24T00:00:00+00:00"
   },
   {
     "Id": "4f1a222d-934c-52a3-ad9d-66f64870bf2d",
@@ -7556,8 +7556,8 @@
     "Id": "14b56222-4944-58f6-be6b-035ec0c7eab9",
     "InformationEntryId": "2a2094da-e321-50bd-8a45-bf3988be06c9",
     "Title": "EDUFI, FAQ “How do I get my child to early education or primary and lower secondary education?”",
-    "Url": "https://www.oph.fi/en/faq/how-do-i-get-my-child-to-early-education-or-primary-and-lower-secondary-education",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+    "Url": "https://www.oph.fi/en/faq/how-do-i-get-my-child-early-education-or-primary-and-lower-secondary-education",
+    "LastCheckedAt": "2026-11-24T00:00:00+00:00"
   },
   {
     "Id": "e2d9734a-5b52-55d1-9545-c767783f3971",
@@ -8129,9 +8129,9 @@
   {
     "Id": "c0794ee2-3a4a-56e7-97b8-89e51b9a54fe",
     "InformationEntryId": "55fa79e5-89a2-518b-90b2-85a2735f171b",
-    "Title": "FPS Social Security / National Office of Annual Holidays (ONVA/RJV), “Vacances annuelles des travailleurs salariés”",
-    "Url": "https://www.socialsecurity.be/citizen/fr/conge-annuel",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+    "Title": "FPS Social Security / National Office of Annual Holidays (ONVA/RJV), annual leave",
+    "Url": "https://www.socialsecurity.be/citizen/fr/conges-credit-temps-et-interruption-de-carriere/vacances-annuelles",
+    "LastCheckedAt": "2026-11-24T00:00:00+00:00"
   },
   {
     "Id": "8a61e3c3-d1ea-5e1a-b606-b6969fac6184",
@@ -8458,9 +8458,9 @@
   {
     "Id": "759e9eb4-8170-56fc-9d2b-81e0d071708a",
     "InformationEntryId": "ac80dcbd-4289-5c77-8340-f9e4226a47f6",
-    "Title": "Vlaanderen, “Inschrijven in het basis- en secundair onderwijs”",
-    "Url": "https://www.vlaanderen.be/onderwijs-en-vorming/inschrijving-en-toelating-in-onderwijs/inschrijven-in-het-basis-en-secundair-onderwijs",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+    "Title": "Flanders, enrolment in primary and secondary education",
+    "Url": "https://www.vlaanderen.be/onderwijs-en-vorming/inschrijving-en-toelating-in-onderwijs/basis-en-secundair-onderwijs",
+    "LastCheckedAt": "2026-11-24T00:00:00+00:00"
   },
   {
     "Id": "a12e3080-07a0-5320-99de-631048c72889",
@@ -8528,9 +8528,9 @@
   {
     "Id": "536ee853-3420-5e84-900a-c4e773ace826",
     "InformationEntryId": "ac80dcbd-4289-5c77-8340-f9e4226a47f6",
-    "Title": "NARIC-Vlaanderen, “Academic recognition of foreign diplomas”",
-    "Url": "https://www.vlaanderen.be/en/naric-vlaanderen/academic-recognition-of-foreign-diplomas",
-    "LastCheckedAt": "2026-11-11T00:00:00+00:00"
+    "Title": "NARIC-Vlaanderen, recognition and equivalence of a foreign diploma or certificate",
+    "Url": "https://www.vlaanderen.be/en/recognition-and-equivalence-of-a-foreign-diploma-or-certificate-in-flanders",
+    "LastCheckedAt": "2026-11-24T00:00:00+00:00"
   },
   {
     "Id": "9934a200-35bc-531f-9718-7826071b4cd6",
@@ -9291,9 +9291,9 @@
   {
     "Id": "f4947770-00a0-56ad-ad04-f2feca260773",
     "InformationEntryId": "e0fd251b-cf52-5a45-9a8d-b07e91580985",
-    "Title": "Tempus Public Foundation / Stipendium Hungaricum, “Students at Risk Subprogramme…”",
-    "Url": "https://stipendiumhungaricum.hu/studentsatrisk/",
-    "LastCheckedAt": "2026-11-12T00:00:00+00:00"
+    "Title": "Tempus Public Foundation / Stipendium Hungaricum, application information and Students at Risk subprogramme",
+    "Url": "https://stipendiumhungaricum.hu/apply/",
+    "LastCheckedAt": "2026-11-24T00:00:00+00:00"
   },
   {
     "Id": "f2b7fef8-875a-54f8-a9f3-abfe54a12680",
@@ -10076,8 +10076,8 @@
     "Id": "1aed58a4-b9a4-513d-93cc-5efdff100645",
     "InformationEntryId": "8d466e7d-93f7-596e-a44f-188e04396aa0",
     "Title": "Dienst Toeslagen, Maximum assets for child-related budget (kindgebonden budget)",
-    "Url": "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/toeslagen/kindgebonden-budget/maximaal-vermogen-kindgebonden-budget/",
-    "LastCheckedAt": "2026-11-16T00:00:00+00:00"
+    "Url": "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/toeslagen/kindgebonden-budget/voorwaarden/vermogen/vermogen-kindgebonden-budget",
+    "LastCheckedAt": "2026-11-24T00:00:00+00:00"
   },
   {
     "Id": "6924cd87-635c-5b58-9b67-79f14fe0ddfd",

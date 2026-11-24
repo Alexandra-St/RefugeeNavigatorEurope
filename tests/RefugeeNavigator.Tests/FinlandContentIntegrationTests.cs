@@ -125,7 +125,9 @@ public sealed class FinlandContentIntegrationTests
         {
             Assert.Contains(source.InformationEntryId, articleIds);
             Assert.Equal(Uri.UriSchemeHttps, source.Url.Scheme);
-            Assert.Equal(source.Id == Guid.Parse("6bb34b1e-6949-58ff-99ba-9ffa3769e03b") || source.Id == Guid.Parse("2c6d81a3-3527-5c5b-8fee-48615f8a7639") || source.Id == Guid.Parse("cd369471-8188-5489-83e8-4802155b2617") || source.Id == Guid.Parse("0f5f6d43-b764-5cc5-9813-3e86e9ccb296")
+            Assert.Equal(source.Id == Guid.Parse("14b56222-4944-58f6-be6b-035ec0c7eab9")
+                ? new DateTimeOffset(2026, 11, 24, 0, 0, 0, TimeSpan.Zero)
+                : source.Id == Guid.Parse("6bb34b1e-6949-58ff-99ba-9ffa3769e03b") || source.Id == Guid.Parse("2c6d81a3-3527-5c5b-8fee-48615f8a7639") || source.Id == Guid.Parse("cd369471-8188-5489-83e8-4802155b2617") || source.Id == Guid.Parse("0f5f6d43-b764-5cc5-9813-3e86e9ccb296")
                 ? new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero)
                 : new DateTimeOffset(2026, 11, 11, 0, 0, 0, TimeSpan.Zero), source.LastCheckedAt);
         });
@@ -443,7 +445,7 @@ public sealed class FinlandContentIntegrationTests
     private static string FindRepositoryRoot()
     {
         var directory = new DirectoryInfo(AppContext.BaseDirectory);
-        while (directory is not null && !Directory.Exists(Path.Combine(directory.FullName, ".git")))
+        while (directory is not null && !(Directory.Exists(Path.Combine(directory.FullName, ".git")) || File.Exists(Path.Combine(directory.FullName, ".git"))))
             directory = directory.Parent;
         return directory?.FullName ?? throw new DirectoryNotFoundException("Could not locate repository root.");
     }

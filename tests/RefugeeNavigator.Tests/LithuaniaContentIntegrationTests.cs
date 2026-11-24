@@ -82,7 +82,8 @@ public sealed class LithuaniaContentIntegrationTests
         Assert.Equal(71, sources.Select(s => s.Id).Distinct().Count());
         Assert.Equal(catalog.OfficialSources.Count, catalog.OfficialSources.Select(s => s.Id).Distinct().Count());
         var historicalDeclarationId = Guid.Parse("c8dedc7c-e90b-5d75-8d9a-1099a67d17a1");
-        Assert.All(sources, s => { Assert.Contains(s.InformationEntryId, ids); Assert.Equal("https", s.Url.Scheme); Assert.Equal(historicalDeclarationId == s.Id ? new DateTimeOffset(2026, 11, 9, 0, 0, 0, TimeSpan.Zero) : new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero), s.LastCheckedAt); });
+        var recheckedOnNov24 = Guid.Parse("088fd097-e7d9-57a6-b725-1ff3e9e587dd");
+        Assert.All(sources, s => { Assert.Contains(s.InformationEntryId, ids); Assert.Equal("https", s.Url.Scheme); Assert.Equal(historicalDeclarationId == s.Id ? new DateTimeOffset(2026, 11, 9, 0, 0, 0, TimeSpan.Zero) : recheckedOnNov24 == s.Id ? new DateTimeOffset(2026, 11, 24, 0, 0, 0, TimeSpan.Zero) : new DateTimeOffset(2026, 11, 17, 0, 0, 0, TimeSpan.Zero), s.LastCheckedAt); });
         Assert.All(sources.GroupBy(s => (s.InformationEntryId, s.Url.AbsoluteUri)), g => Assert.Single(g));
         var sourceById = catalog.OfficialSources.ToDictionary(s => s.Id);
         var inlineCitationCount = 0;
@@ -222,7 +223,7 @@ public sealed class LithuaniaContentIntegrationTests
     private static string FindRepositoryRoot()
     {
         var directory = new DirectoryInfo(AppContext.BaseDirectory);
-        while (directory is not null && !Directory.Exists(Path.Combine(directory.FullName, ".git"))) directory = directory.Parent;
+        while (directory is not null && !(Directory.Exists(Path.Combine(directory.FullName, ".git")) || File.Exists(Path.Combine(directory.FullName, ".git")))) directory = directory.Parent;
         return directory?.FullName ?? throw new DirectoryNotFoundException();
     }
     private static string Normalize(string value) => Regex.Replace(value.Trim(), @"\s+", " ");

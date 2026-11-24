@@ -258,7 +258,7 @@ public sealed class RomaniaContentIntegrationTests
     private static string FindRepositoryRoot()
     {
         var directory = new DirectoryInfo(AppContext.BaseDirectory);
-        while (directory is not null && !Directory.Exists(Path.Combine(directory.FullName, ".git")))
+        while (directory is not null && !(Directory.Exists(Path.Combine(directory.FullName, ".git")) || File.Exists(Path.Combine(directory.FullName, ".git"))))
             directory = directory.Parent;
         if (directory is null) throw new DirectoryNotFoundException("Could not locate repository root.");
         return directory.FullName;
