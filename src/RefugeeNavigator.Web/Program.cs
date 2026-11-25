@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpOverrides;
 using RefugeeNavigator.Web.Components;
 using RefugeeNavigator.Web.Comparison;
 using RefugeeNavigator.Web.Localization;
+using RefugeeNavigator.Web.Contact;
 using RefugeeNavigator.Web.Guides;
 using RefugeeNavigator.Web.Security;
 using RefugeeNavigator.Data;
@@ -21,6 +22,7 @@ var trustedProxyAddresses = PrivateAlphaAccessOptions.ParseTrustedProxyAddresses
     builder.Configuration["PRIVATE_ALPHA_TRUSTED_PROXY_IPS"]);
 builder.Services.AddSingleton(accessOptions);
 builder.Services.AddRazorComponents().AddInteractiveServerComponents();
+builder.Services.AddHttpClient<ContactSubmissionService>();
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 var catalog = await new JsonCatalogProvider(builder.Environment.ContentRootPath).LoadAsync();
 CountryComparisonTopicMap.Validate(catalog);
@@ -38,12 +40,7 @@ var guideCatalog = await new JsonStepByStepGuideProvider(
 StepByStepGuideLocalizationValidator.Validate(guideCatalog, resourceManager.GetString);
 builder.Services.AddSingleton(guideCatalog);
 
-var supportedCultures = new[]
-{
-    new CultureInfo("uk"),
-    new CultureInfo("en"),
-    new CultureInfo("ru")
-};
+var supportedCultures = SupportedCultures.All.ToArray();
 
 builder.Services.Configure<RequestLocalizationOptions>(options =>
 {

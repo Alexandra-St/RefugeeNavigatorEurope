@@ -408,4 +408,113 @@
   <data name="Country.Hungary.In" xml:space="preserve"><value>в Венгрии</value></data>
   <data name="Country.Norway" xml:space="preserve"><value>Норвегия</value></data>
   <data name="Country.Norway.In" xml:space="preserve"><value>в Норвегии</value></data>
+  <data name="About.PageTitle" xml:space="preserve"><value>О RNE — информация для украинцев в Европе</value></data>
+  <data name="About.MetaDescription" xml:space="preserve"><value>Узнайте, как Refugee Navigator Europe готовит и обновляет практическую информацию для украинцев о временной защите и жизни в Европе.</value></data>
+  <data name="About.Heading" xml:space="preserve"><value>О Refugee Navigator Europe</value></data>
+  <data name="About.MissionTitle" xml:space="preserve"><value>Наша цель</value></data>
+  <data name="About.Mission" xml:space="preserve"><value>Цель Refugee Navigator Europe — сделать официальную информацию доступнее и понятнее, чтобы украинские беженцы и вынужденно перемещённые люди могли увереннее ориентироваться во временной защите и обустраивать жизнь в Европе.</value></data>
+  <data name="About.CoverageTitle" xml:space="preserve"><value>О чём этот ресурс</value></data>
+  <data name="About.Coverage" xml:space="preserve"><value>Изучайте информацию по странам о временной защите, проживании и переезде, праве на работу и трудоустройстве, здравоохранении, жилье, социальной помощи и выплатах, а также образовании. Сравнивайте отдельные темы, чтобы увидеть различия в правилах и условиях европейских стран.</value></data>
+  <data name="About.StatisticsTitle" xml:space="preserve"><value>Проект в цифрах</value></data>
+  <data name="About.Countries" xml:space="preserve"><value>Страны</value></data>
+  <data name="About.Articles" xml:space="preserve"><value>Опубликованные статьи</value></data>
+  <data name="About.Sources" xml:space="preserve"><value>Официальные источники</value></data>
+  <data name="About.Languages" xml:space="preserve"><value>Языки</value></data>
+  <data name="About.ResearchTitle" xml:space="preserve"><value>Исследование и официальные источники</value></data>
+  <data name="About.Research" xml:space="preserve"><value>Информация готовится на основе официальных источников, включая государственные ведомства и публичные учреждения. В статьях есть ссылки на использованные источники, чтобы читатели могли проверить детали у ответственного органа. Сравнения стран основаны на опубликованных статьях и указанных в них источниках.</value></data>
+  <data name="About.MaintenanceTitle" xml:space="preserve"><value>Проверка и обновление</value></data>
+  <data name="About.Maintenance" xml:space="preserve"><value>Перед публикацией материалы проверяются по указанным источникам. Ссылки, соответствующие правила, важные даты и события отслеживаются и пересматриваются в рамках текущего обслуживания; статьи могут обновляться, если такая проверка выявит изменения. Обновления не обязательно происходят сразу. Дата в статье указывает, когда её обновляли в последний раз; она не гарантирует, что все сведения остаются актуальными.</value></data>
+  <data name="About.IndependenceTitle" xml:space="preserve"><value>Независимый проект</value></data>
+  <data name="About.Independence" xml:space="preserve"><value>Refugee Navigator Europe — независимый информационный проект. Это не государственная служба; проект не представляет органы власти или организации, на источники которых ссылается.</value></data>
+  <data name="About.DisclaimerTitle" xml:space="preserve"><value>Важная информация</value></data>
+  <data name="About.Disclaimer" xml:space="preserve"><value>Сайт содержит общую информацию, а не юридические, медицинские или другие профессиональные консультации. Правила и личные обстоятельства различаются и могут меняться. Перед принятием решений проверяйте действующие требования у соответствующего официального органа. Информация на сайте не подтверждает право на защиту, работу, услуги или выплаты.</value></data>
+  <data name="About.SupportTitle" xml:space="preserve"><value>Поддержать проект</value></data>
+  <data name="About.Support" xml:space="preserve"><value>Если этот ресурс полезен для вас, вы можете поддержать развитие проекта, исследовательскую работу и поддержание актуальности информации.</value></data>
+  <data name="About.SupportVoluntary" xml:space="preserve"><value>Поддержка полностью добровольная. Доступ к информации бесплатный независимо от того, решите ли вы поддержать проект.</value></data>
+  <data name="About.SupportCta" xml:space="preserve"><value>Поддержать на Ko-fi</value></data>
+  <data name="Contact.PageTitle" xml:space="preserve"><value>Контакты — Refugee Navigator Europe</value></data>
+  <data name="Contact.MetaDescription" xml:space="preserve"><value>Свяжитесь с Refugee Navigator Europe, чтобы сообщить об ошибке в информации или переводе, оставить отзыв о доступности или предложить сотрудничество.</value></data>
+  <data name="Contact.Heading" xml:space="preserve"><value>Контакты</value></data>
+  <data name="Contact.Introduction" xml:space="preserve"><value>Сообщите о неточной или устаревшей информации, неработающих ссылках на источники или ошибках перевода, оставьте отзыв о доступности, предложение, запрос о сотрудничестве или общий вопрос. За советом по вашей ситуации обратитесь в соответствующий официальный орган.</value></data>
+  <data name="Contact.FormHeading" xml:space="preserve"><value>Отправить сообщение</value></data>
+  <data name="Contact.Unavailable" xml:space="preserve"><value>Форма связи временно недоступна. Попробуйте позже.</value></data>
+  <data name="Contact.TopicLabel" xml:space="preserve"><value>Тема сообщения</value></data>
+  <data name="Contact.TopicPlaceholder" xml:space="preserve"><value>Выберите тему</value></data>
+  <data name="Contact.Topic.IncorrectOrOutdated" xml:space="preserve"><value>Ошибка или устаревшая информация</value></data>
+  <data name="Contact.Topic.BrokenSource" xml:space="preserve"><value>Неработающая ссылка на источник</value></data>
+  <data name="Contact.Topic.TranslationError" xml:space="preserve"><value>Ошибка перевода</value></data>
+  <data name="Contact.Topic.Accessibility" xml:space="preserve"><value>Отзыв о доступности</value></data>
+  <data name="Contact.Topic.Suggestion" xml:space="preserve"><value>Предложение по улучшению</value></data>
+  <data name="Contact.Topic.Collaboration" xml:space="preserve"><value>Сотрудничество</value></data>
+  <data name="Contact.Topic.GeneralEnquiry" xml:space="preserve"><value>Общий вопрос</value></data>
+  <data name="Contact.NameLabel" xml:space="preserve"><value>Имя (необязательно)</value></data>
+  <data name="Contact.EmailLabel" xml:space="preserve"><value>Электронная почта для ответа (необязательно)</value></data>
+  <data name="Contact.WebsiteLabel" xml:space="preserve"><value>Веб-сайт</value></data>
+  <data name="Contact.MessageLabel" xml:space="preserve"><value>Сообщение</value></data>
+  <data name="Contact.PrivacyNotice" xml:space="preserve"><value>Formspree обрабатывает сообщение и пересылает его владельцу проекта. Подробнее — в Политике конфиденциальности.</value></data>
+  <data name="Contact.SensitiveDataWarning" xml:space="preserve"><value>Не отправляйте документы, удостоверяющие личность, медицинскую информацию или другие чувствительные персональные данные.</value></data>
+  <data name="Contact.Submit" xml:space="preserve"><value>Отправить</value></data>
+  <data name="Contact.Sending" xml:space="preserve"><value>Отправка…</value></data>
+  <data name="Contact.Success" xml:space="preserve"><value>Сервис формы принял сообщение для пересылки. Это не подтверждает доставку электронного письма.</value></data>
+  <data name="Contact.Failure" xml:space="preserve"><value>Не удалось отправить сообщение. Введённый текст сохранён — попробуйте ещё раз.</value></data>
+  <data name="Contact.ValidationFailed" xml:space="preserve"><value>Проверьте поля формы и попробуйте ещё раз.</value></data>
+  <data name="Contact.TopicRequired" xml:space="preserve"><value>Выберите тему сообщения.</value></data>
+  <data name="Contact.MessageRequired" xml:space="preserve"><value>Введите сообщение.</value></data>
+  <data name="Contact.MessageTooLong" xml:space="preserve"><value>Сообщение должно содержать не более 5000 символов.</value></data>
+  <data name="Contact.NameTooLong" xml:space="preserve"><value>Имя должно содержать не более 100 символов.</value></data>
+  <data name="Contact.EmailTooLong" xml:space="preserve"><value>Адрес электронной почты должен содержать не более 254 символов.</value></data>
+  <data name="Contact.EmailInvalid" xml:space="preserve"><value>Введите корректный адрес электронной почты или оставьте поле пустым.</value></data>
+  <data name="Contact.Topic.PrivacyData" xml:space="preserve"><value>Конфиденциальность и персональные данные</value></data>
+  <data name="Contact.PrivacyLinkPrefix" xml:space="preserve"><value>Перед отправкой прочитайте:</value></data>
+  <data name="Contact.PrivacyLink" xml:space="preserve"><value>Политика конфиденциальности</value></data>
+  <data name="Footer.Description" xml:space="preserve"><value>Практическая информация для украинцев о временной защите и жизни в Европе.</value></data>
+  <data name="Footer.NavigationLabel" xml:space="preserve"><value>Навигация внизу страницы</value></data>
+  <data name="Footer.About" xml:space="preserve"><value>О проекте</value></data>
+  <data name="Footer.Contact" xml:space="preserve"><value>Контакты</value></data>
+  <data name="Footer.Privacy" xml:space="preserve"><value>Политика конфиденциальности</value></data>
+  <data name="Footer.Disclaimer" xml:space="preserve"><value>Правовая информация</value></data>
+  <data name="Privacy.PageTitle" xml:space="preserve"><value>Политика конфиденциальности — Refugee Navigator Europe</value></data>
+  <data name="Privacy.MetaDescription" xml:space="preserve"><value>Узнайте, как Refugee Navigator Europe использует данные для выбора языка и темы оформления, работы сайта и контактных сообщений.</value></data>
+  <data name="Privacy.Heading" xml:space="preserve"><value>Политика конфиденциальности</value></data>
+  <data name="Privacy.Introduction" xml:space="preserve"><value>В этом уведомлении описаны известные проекту текущие технические особенности сайта и обработка данных контактной формы. Сведения, которые ещё требуют подтверждения, указаны отдельно.</value></data>
+  <data name="Privacy.OwnerPending" xml:space="preserve"><value>Ожидает проверки владельца: требует ли применимое законодательство дополнительных контактных сведений, например почтового адреса для обращений, и какой способ связи, не раскрывающий домашний адрес, можно опубликовать; сроки хранения; условия договоров с поставщиками; порядок международной передачи. После проверки уведомление нужно будет обновить.</value></data>
+  <data name="Privacy.OperatorTitle" xml:space="preserve"><value>Контролёр персональных данных</value></data>
+  <data name="Privacy.Operator" xml:space="preserve"><value>Проект ведёт Alexandra Strona как физическое лицо, а не зарегистрированная компания или организация. По вопросам конфиденциальности воспользуйтесь контактной формой и выберите тему «Конфиденциальность и персональные данные». Личный адрес электронной почты и место жительства здесь не публикуются.</value></data>
+  <data name="Privacy.ContactLink" xml:space="preserve"><value>Перейти к контактам</value></data>
+  <data name="Privacy.TechnicalTitle" xml:space="preserve"><value>Запросы к сайту и хостинг</value></data>
+  <data name="Privacy.Technical" xml:space="preserve"><value>Сайт размещён на Render. Чтобы открыть страницу, браузер передаёт сетевые и технические сведения; среди них могут быть IP-адрес, запрошенный путь, время и данные user-agent браузера. В приложении нет учётных записей посетителей или пользовательской базы данных; поля контактной формы намеренно не записываются в журналы приложения. Какие именно технические данные записывает Render, кто имеет к ним доступ и как долго они хранятся, пока не подтверждено.</value></data>
+  <data name="Privacy.PreferencesTitle" xml:space="preserve"><value>Язык, тема и отслеживание</value></data>
+  <data name="Privacy.Preferences" xml:space="preserve"><value>Когда вы выбираете язык, сайт сохраняет его в cookie на один год. У cookie установлены атрибут HttpOnly и SameSite=Lax; для HTTPS-запросов также используется Secure. Если cookie с выбором языка нет, сайт может использовать заголовок Accept-Language браузера. Выбранная светлая или тёмная тема хранится в localStorage браузера под ключом «theme», пока вы не измените или не удалите её. Если сохранённого выбора нет, используется системная цветовая схема устройства. В приложении сейчас нет аналитики и рекламных трекеров.</value></data>
+  <data name="Privacy.ContactTitle" xml:space="preserve"><value>Сообщения через форму связи</value></data>
+  <data name="Privacy.ContactData" xml:space="preserve"><value>При отправке контактной формы передаются выбранная тема и сообщение, а также имя и адрес для ответа, если вы их указали. Эти персональные данные используются для обработки обращения, ответа на него и поддержки проекта. Приложение отправляет форму на Formspree по HTTPS; в базе данных проекта она не сохраняется.</value></data>
+  <data name="Privacy.Processors" xml:space="preserve"><value>Formspree получает и обрабатывает каждое сообщение и пересылает его владельцу проекта. Архив отправок Formspree отключён. Автоматическая фильтрация спама Formshield включена; CAPTCHA не используется. Владелец получает переписку через Proton Mail. Отключённый архив не означает, что поставщик совсем не хранит данные или удаляет их немедленно. Адрес почтового ящика здесь не публикуется. Не отправляйте документы, удостоверяющие личность, медицинские сведения или другие чувствительные персональные данные.</value></data>
+  <data name="Privacy.TransfersTitle" xml:space="preserve"><value>Поставщики и международная обработка</value></data>
+  <data name="Privacy.Transfers" xml:space="preserve"><value>Render размещает сайт, Formspree обрабатывает сообщения из контактной формы, а Proton Mail обслуживает почтовый ящик проекта. Место обработки может зависеть от инфраструктуры и настроек аккаунтов поставщиков. Проект пока не подтвердил фактические места обработки, применимые договоры с поставщиками или гарантии международной передачи. Ссылки ниже приведены для ознакомления и не означают, что проект проверил конкретные гарантии или соответствие требованиям закона.</value></data>
+  <data name="Privacy.RetentionTitle" xml:space="preserve"><value>Сроки хранения</value></data>
+  <data name="Privacy.Retention" xml:space="preserve"><value>Переписка в аккаунте Proton Mail владельца хранится только столько, сколько необходимо для обработки обращения и выполнения применимых требований закона. Архив отправок Formspree отключён, но это не гарантирует немедленного удаления или полного отсутствия хранения у поставщика. Сроки хранения данных об обработке и технических журналов поставщика здесь не указаны; на них могут распространяться политики и условия поставщиков, их нужно проверить отдельно. Само приложение не хранит контактные сообщения в базе данных.</value></data>
+  <data name="Privacy.RightsTitle" xml:space="preserve"><value>Ваши права в отношении данных</value></data>
+  <data name="Privacy.Rights" xml:space="preserve"><value>В зависимости от применимого закона и обстоятельств вы можете иметь право получить доступ к персональным данным, исправить их, запросить удаление или ограничение обработки, возразить против обработки либо запросить перенос данных. Эти права предоставляются на условиях соответствующего законодательства. Чтобы отправить запрос, воспользуйтесь страницей контактов и выберите тему «Конфиденциальность и персональные данные». Дополнительные обязательные контактные сведения оператора и порядок рассмотрения запросов ещё требуют проверки владельцем. Общую информацию предоставляет Европейская комиссия.</value></data>
+  <data name="Privacy.Complaints" xml:space="preserve"><value>Если это предусмотрено применимым законодательством, вы также можете подать жалобу в компетентный надзорный орган по защите данных. Подходящий орган зависит от ваших обстоятельств и применимого закона; в этом уведомлении проект пока не определил ведущий надзорный орган.</value></data>
+  <data name="Privacy.ThirdPartiesTitle" xml:space="preserve"><value>Внешние ссылки и другие сервисы</value></data>
+  <data name="Privacy.ThirdParties" xml:space="preserve"><value>Ссылки на официальные источники открывают внешние сайты, только если вы решите перейти по ним. Ko-fi — внешняя площадка для добровольной поддержки; виджет Ko-fi на сайте не встроен. Если вы посетите Ko-fi или воспользуетесь им, к обрабатываемым там данным применяется его политика конфиденциальности. Политики и условия внешних сервисов могут меняться.</value></data>
+  <data name="Privacy.ProviderPrivacy" xml:space="preserve"><value>Информация о конфиденциальности</value></data>
+  <data name="Privacy.ProviderDpa" xml:space="preserve"><value>Дополнение об обработке данных</value></data>
+  <data name="Privacy.ProviderSecurity" xml:space="preserve"><value>Информация о безопасности</value></data>
+  <data name="Privacy.EuGuidance" xml:space="preserve"><value>Европейская комиссия: информация для граждан</value></data>
+  <data name="Privacy.AuthorityGuide" xml:space="preserve"><value>Информация об органах по защите данных</value></data>
+  <data name="Disclaimer.PageTitle" xml:space="preserve"><value>Ограничение информации — Refugee Navigator Europe</value></data>
+  <data name="Disclaimer.MetaDescription" xml:space="preserve"><value>Узнайте о назначении и ограничениях общей информации Refugee Navigator Europe, официальных источников и сравнений стран.</value></data>
+  <data name="Disclaimer.Heading" xml:space="preserve"><value>Правовая информация</value></data>
+  <data name="Disclaimer.PurposeTitle" xml:space="preserve"><value>Общая информация</value></data>
+  <data name="Disclaimer.Purpose" xml:space="preserve"><value>Refugee Navigator Europe предоставляет общую информацию, чтобы помочь разобраться в темах временной защиты и жизни в Европе. Это не индивидуальная юридическая, медицинская, финансовая или иная профессиональная консультация.</value></data>
+  <data name="Disclaimer.ChangesTitle" xml:space="preserve"><value>Правила и обстоятельства меняются</value></data>
+  <data name="Disclaimer.Changes" xml:space="preserve"><value>Законодательство, официальные процедуры, услуги и личные обстоятельства могут меняться. Информация может не учитывать все последние изменения или местную практику. Дата в статье показывает, когда её обновляли в последний раз, но не гарантирует, что каждая деталь остаётся актуальной.</value></data>
+  <data name="Disclaimer.EligibilityTitle" xml:space="preserve"><value>Индивидуальное право на статус или услугу</value></data>
+  <data name="Disclaimer.Eligibility" xml:space="preserve"><value>Общая информация на сайте не определяет, имеет ли конкретный человек право на временную защиту, проживание, разрешение на работу, медицинскую помощь, жильё, выплаты или другую услугу. Право и решение зависят от действующих правил и личных обстоятельств.</value></data>
+  <data name="Disclaimer.SourcesTitle" xml:space="preserve"><value>Уточняйте у официальных органов</value></data>
+  <data name="Disclaimer.Sources" xml:space="preserve"><value>По возможности мы добавляем ссылки на официальные внешние источники. Прежде чем действовать, уточните действующие требования и процедуры у соответствующего органа или поставщика услуг. Содержание внешнего источника может измениться или стать недоступным.</value></data>
+  <data name="Disclaimer.IndependenceTitle" xml:space="preserve"><value>Независимый проект</value></data>
+  <data name="Disclaimer.Independence" xml:space="preserve"><value>Refugee Navigator Europe — независимый информационный проект. Это не государственная служба; проект не представляет органы власти или другие организации, на источники которых ссылается.</value></data>
+  <data name="Disclaimer.ComparisonsTitle" xml:space="preserve"><value>Сравнение стран</value></data>
+  <data name="Disclaimer.Comparisons" xml:space="preserve"><value>Сравнения стран — это информационные инструменты, в которых обобщены отдельные темы. Они могут не охватывать все различия, исключения и личные обстоятельства и не определяют, какая страна или возможность подходит конкретному человеку.</value></data>
 </root>

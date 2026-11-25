@@ -1,0 +1,10 @@
+.site-footer { padding: 1.35rem 1.5rem; border-top: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text); }
+.site-footer-content { display: flex; width: min(100%, 72rem); align-items: center; justify-content: space-between; gap: 1.5rem; margin: 0 auto; }
+.site-footer-about { max-width: 34rem; }
+.site-footer-brand { color: var(--color-heading); font-weight: 750; text-decoration: none; }
+.site-footer-about p { margin: .35rem 0 0; color: var(--color-muted); font-size: .92rem; line-height: 1.5; }
+.site-footer nav ul { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .25rem 1rem; margin: 0; padding: 0; list-style: none; }
+.site-footer nav a { display: inline-flex; min-height: 44px; align-items: center; padding: 0 .45rem; border-radius: .3rem; color: var(--color-primary); text-decoration: none; text-underline-offset: .2em; }
+.site-footer nav a:hover { background: var(--color-selected); text-decoration: underline; }
+.site-footer a:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 3px; }
+@media (max-width: 44rem) { .site-footer { padding: 1.1rem 1rem; } .site-footer-content { align-items: flex-start; flex-direction: column; gap: .7rem; } .site-footer nav ul { justify-content: flex-start; } }

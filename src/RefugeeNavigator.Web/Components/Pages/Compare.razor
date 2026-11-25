@@ -508,26 +508,7 @@
     };
 
     private bool CanRenderFact(CountryComparisonFact fact)
-    {
-        if (!fact.IsAvailable || !Catalog.InformationEntries.Any(entry => entry.Id == fact.InformationEntryId))
-        {
-            return false;
-        }
-
-        var languageCode = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
-        var translation = Catalog.InformationEntryTranslations.SingleOrDefault(item =>
-            item.InformationEntryId == fact.InformationEntryId && item.LanguageCode == languageCode);
-        var isDevelopment = HostEnvironment.IsDevelopment();
-        var statusAllowsRendering = fact.Status == ComparisonFactStatus.Approved ||
-            (isDevelopment && fact.Status == ComparisonFactStatus.Draft);
-        var translationAllowsRendering = translation?.VerificationStatus == VerificationStatus.Verified ||
-            (isDevelopment && fact.Status == ComparisonFactStatus.Draft &&
-             translation?.VerificationStatus == VerificationStatus.NeedsReview);
-        var hasValidOwnedSources = fact.OfficialSourceIds.Count > 0 && fact.OfficialSourceIds.All(sourceId =>
-            Catalog.OfficialSources.Any(source => source.Id == sourceId && source.InformationEntryId == fact.InformationEntryId));
-
-        return statusAllowsRendering && translationAllowsRendering && hasValidOwnedSources;
-    }
+        => ComparisonFactVisibility.CanRender(fact, Catalog, CultureInfo.CurrentUICulture.TwoLetterISOLanguageName, HostEnvironment.IsDevelopment());
 
     private IReadOnlyList<OfficialSource> AvailableFactSources(CountryComparisonFact fact) =>
         Catalog.OfficialSources.Where(source => fact.OfficialSourceIds.Contains(source.Id) && source.InformationEntryId == fact.InformationEntryId).ToArray();

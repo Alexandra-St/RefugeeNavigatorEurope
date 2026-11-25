@@ -410,4 +410,113 @@
   <data name="Country.Hungary.In" xml:space="preserve"><value>Hungary</value></data>
   <data name="Country.Norway" xml:space="preserve"><value>Norway</value></data>
   <data name="Country.Norway.In" xml:space="preserve"><value>Norway</value></data>
+  <data name="About.PageTitle" xml:space="preserve"><value>About RNE — Information for Ukrainians in Europe</value></data>
+  <data name="About.MetaDescription" xml:space="preserve"><value>Learn how Refugee Navigator Europe researches and maintains practical information for Ukrainians navigating temporary protection and life across Europe.</value></data>
+  <data name="About.Heading" xml:space="preserve"><value>About Refugee Navigator Europe</value></data>
+  <data name="About.MissionTitle" xml:space="preserve"><value>Our mission</value></data>
+  <data name="About.Mission" xml:space="preserve"><value>Refugee Navigator Europe exists to make reliable public information easier to find and understand, so Ukrainian refugees and displaced people can navigate temporary protection and build their lives in Europe with greater clarity.</value></data>
+  <data name="About.CoverageTitle" xml:space="preserve"><value>What we cover</value></data>
+  <data name="About.Coverage" xml:space="preserve"><value>Browse country information on temporary protection, residence and relocation, work authorization and employment, healthcare, housing, social assistance and benefits, and education. Compare selected topics to see how rules and arrangements vary between European countries.</value></data>
+  <data name="About.StatisticsTitle" xml:space="preserve"><value>Project at a glance</value></data>
+  <data name="About.Countries" xml:space="preserve"><value>Countries</value></data>
+  <data name="About.Articles" xml:space="preserve"><value>Published articles</value></data>
+  <data name="About.Sources" xml:space="preserve"><value>Official sources</value></data>
+  <data name="About.Languages" xml:space="preserve"><value>Supported languages</value></data>
+  <data name="About.ResearchTitle" xml:space="preserve"><value>Research and official sources</value></data>
+  <data name="About.Research" xml:space="preserve"><value>Information is researched using official sources, including government agencies and public institutions. Articles link to the sources used so readers can check details with the responsible authority. Country comparisons draw on published articles and their cited sources.</value></data>
+  <data name="About.MaintenanceTitle" xml:space="preserve"><value>Verification and maintenance</value></data>
+  <data name="About.Maintenance" xml:space="preserve"><value>Content is checked against its cited sources before publication. Source links, relevant rules, and important dates or events are monitored and reviewed as part of ongoing maintenance; articles may be updated when this review identifies a change. Updates are not necessarily immediate. The date shown on an article means when its content was last updated; it is not a guarantee that every detail is current.</value></data>
+  <data name="About.IndependenceTitle" xml:space="preserve"><value>Independent project</value></data>
+  <data name="About.Independence" xml:space="preserve"><value>Refugee Navigator Europe is an independent information project. It is not a government service and does not represent the authorities or organizations whose sources it references.</value></data>
+  <data name="About.DisclaimerTitle" xml:space="preserve"><value>Important information</value></data>
+  <data name="About.Disclaimer" xml:space="preserve"><value>This website provides general information, not legal, medical or other professional advice. Rules and individual circumstances differ and may change. Check current requirements with the relevant official authority before making decisions. Information here does not establish eligibility for protection, work, services or benefits.</value></data>
+  <data name="About.SupportTitle" xml:space="preserve"><value>Support the project</value></data>
+  <data name="About.Support" xml:space="preserve"><value>If you find this resource useful, you can support its continued development, research and efforts to keep information up to date.</value></data>
+  <data name="About.SupportVoluntary" xml:space="preserve"><value>Support is entirely voluntary. Access to information is free regardless of whether you choose to support the project.</value></data>
+  <data name="About.SupportCta" xml:space="preserve"><value>Support on Ko-fi</value></data>
+  <data name="Contact.PageTitle" xml:space="preserve"><value>Contact Refugee Navigator Europe</value></data>
+  <data name="Contact.MetaDescription" xml:space="preserve"><value>Contact Refugee Navigator Europe to report an information or translation issue, share accessibility feedback, suggest an improvement or ask about collaboration.</value></data>
+  <data name="Contact.Heading" xml:space="preserve"><value>Contact</value></data>
+  <data name="Contact.Introduction" xml:space="preserve"><value>Report incorrect or outdated information, broken source links or translation issues, or send accessibility feedback, suggestions, collaboration enquiries or general questions. For advice about your circumstances, contact the relevant official authority.</value></data>
+  <data name="Contact.FormHeading" xml:space="preserve"><value>Send a message</value></data>
+  <data name="Contact.Unavailable" xml:space="preserve"><value>The contact form is temporarily unavailable. Please try again later.</value></data>
+  <data name="Contact.TopicLabel" xml:space="preserve"><value>What is your message about?</value></data>
+  <data name="Contact.TopicPlaceholder" xml:space="preserve"><value>Select a topic</value></data>
+  <data name="Contact.Topic.IncorrectOrOutdated" xml:space="preserve"><value>Incorrect or outdated information</value></data>
+  <data name="Contact.Topic.BrokenSource" xml:space="preserve"><value>Broken source link</value></data>
+  <data name="Contact.Topic.TranslationError" xml:space="preserve"><value>Translation error</value></data>
+  <data name="Contact.Topic.Accessibility" xml:space="preserve"><value>Accessibility feedback</value></data>
+  <data name="Contact.Topic.Suggestion" xml:space="preserve"><value>Suggestion or improvement</value></data>
+  <data name="Contact.Topic.Collaboration" xml:space="preserve"><value>Collaboration</value></data>
+  <data name="Contact.Topic.GeneralEnquiry" xml:space="preserve"><value>General enquiry</value></data>
+  <data name="Contact.NameLabel" xml:space="preserve"><value>Name (optional)</value></data>
+  <data name="Contact.EmailLabel" xml:space="preserve"><value>Reply email (optional)</value></data>
+  <data name="Contact.WebsiteLabel" xml:space="preserve"><value>Website</value></data>
+  <data name="Contact.MessageLabel" xml:space="preserve"><value>Message</value></data>
+  <data name="Contact.PrivacyNotice" xml:space="preserve"><value>Formspree processes your message and forwards it to the project owner. See the Privacy Policy for details.</value></data>
+  <data name="Contact.SensitiveDataWarning" xml:space="preserve"><value>Please do not include identity documents, medical information or other sensitive personal details.</value></data>
+  <data name="Contact.Submit" xml:space="preserve"><value>Send message</value></data>
+  <data name="Contact.Sending" xml:space="preserve"><value>Sending…</value></data>
+  <data name="Contact.Success" xml:space="preserve"><value>Your message was accepted by the form service for forwarding. This does not confirm email delivery.</value></data>
+  <data name="Contact.Failure" xml:space="preserve"><value>We could not submit your message. Your text is still here; please try again.</value></data>
+  <data name="Contact.ValidationFailed" xml:space="preserve"><value>Please check the form fields and try again.</value></data>
+  <data name="Contact.TopicRequired" xml:space="preserve"><value>Select a topic for your message.</value></data>
+  <data name="Contact.MessageRequired" xml:space="preserve"><value>Enter a message.</value></data>
+  <data name="Contact.MessageTooLong" xml:space="preserve"><value>Your message must be 5,000 characters or fewer.</value></data>
+  <data name="Contact.NameTooLong" xml:space="preserve"><value>Your name must be 100 characters or fewer.</value></data>
+  <data name="Contact.EmailTooLong" xml:space="preserve"><value>Your reply email must be 254 characters or fewer.</value></data>
+  <data name="Contact.EmailInvalid" xml:space="preserve"><value>Enter a valid email address or leave this field empty.</value></data>
+  <data name="Contact.Topic.PrivacyData" xml:space="preserve"><value>Privacy and personal data</value></data>
+  <data name="Contact.PrivacyLinkPrefix" xml:space="preserve"><value>Before sending a message, read:</value></data>
+  <data name="Contact.PrivacyLink" xml:space="preserve"><value>Privacy Policy</value></data>
+  <data name="Footer.Description" xml:space="preserve"><value>Practical information for Ukrainians navigating temporary protection and life across Europe.</value></data>
+  <data name="Footer.NavigationLabel" xml:space="preserve"><value>Footer navigation</value></data>
+  <data name="Footer.About" xml:space="preserve"><value>About</value></data>
+  <data name="Footer.Contact" xml:space="preserve"><value>Contact</value></data>
+  <data name="Footer.Privacy" xml:space="preserve"><value>Privacy Policy</value></data>
+  <data name="Footer.Disclaimer" xml:space="preserve"><value>Disclaimer</value></data>
+  <data name="Privacy.PageTitle" xml:space="preserve"><value>Privacy Policy — Refugee Navigator Europe</value></data>
+  <data name="Privacy.MetaDescription" xml:space="preserve"><value>Learn what information Refugee Navigator Europe uses for language and theme preferences, website requests and contact messages.</value></data>
+  <data name="Privacy.Heading" xml:space="preserve"><value>Privacy Policy</value></data>
+  <data name="Privacy.Introduction" xml:space="preserve"><value>This notice describes the website’s current technical behaviour and the contact form data flow known to the project. Details that still need confirmation are identified below.</value></data>
+  <data name="Privacy.OwnerPending" xml:space="preserve"><value>Pending owner review: whether applicable law requires additional contact details, such as a postal address, and what contact method that does not disclose a home address may be published; retention periods; provider contract terms; and international transfer arrangements have not yet been confirmed. This notice will need updating when those details are verified.</value></data>
+  <data name="Privacy.OperatorTitle" xml:space="preserve"><value>Data controller</value></data>
+  <data name="Privacy.Operator" xml:space="preserve"><value>The project is operated by Alexandra Strona, an individual, not a registered company or organization. For privacy enquiries, use the contact form and select “Privacy and personal data”. No personal email address or residential address is published here.</value></data>
+  <data name="Privacy.ContactLink" xml:space="preserve"><value>Go to Contact</value></data>
+  <data name="Privacy.TechnicalTitle" xml:space="preserve"><value>Website requests and hosting</value></data>
+  <data name="Privacy.Technical" xml:space="preserve"><value>The website is hosted on Render. A browser request necessarily provides network and technical details to deliver the page; these may include an IP address, requested path, time and browser user-agent. The application has no visitor account system or user database, and it does not intentionally record contact form fields in application logs. The exact technical fields Render logs, who can access them and how long they are retained have not been confirmed.</value></data>
+  <data name="Privacy.PreferencesTitle" xml:space="preserve"><value>Language, theme and tracking</value></data>
+  <data name="Privacy.Preferences" xml:space="preserve"><value>When you choose a language, the site stores that preference in a cookie for one year. It is marked HttpOnly, uses SameSite=Lax and is Secure on HTTPS requests. The selected language is also available from your browser’s Accept-Language header when no preference cookie takes priority. Your light or dark theme choice is stored in your browser’s localStorage under “theme” until changed or cleared; the site uses your device’s colour-scheme setting when no saved choice exists. The application currently contains no analytics or advertising trackers.</value></data>
+  <data name="Privacy.ContactTitle" xml:space="preserve"><value>Contact messages</value></data>
+  <data name="Privacy.ContactData" xml:space="preserve"><value>If you submit the contact form, it sends your selected topic and message, plus your name and reply email if you provide them. This personal information is used to handle your enquiry, provide a reply and maintain the project. The submission goes from the application server to Formspree over HTTPS; it is not saved in a project database.</value></data>
+  <data name="Privacy.Processors" xml:space="preserve"><value>Formspree receives and processes each submission and forwards the message to the owner. Formspree Submission Archive is disabled. Formshield automated spam filtering is enabled; CAPTCHA is not enabled. The owner receives correspondence in Proton Mail. Disabling the archive does not mean zero provider-side retention or immediate deletion. The mailbox address is not published here. Do not include identity documents, medical information or other sensitive personal details.</value></data>
+  <data name="Privacy.TransfersTitle" xml:space="preserve"><value>Providers and international processing</value></data>
+  <data name="Privacy.Transfers" xml:space="preserve"><value>Render hosts the site; Formspree handles contact submissions; Proton Mail handles the project mailbox. Their processing locations can depend on their infrastructure and account configuration. The project has not yet confirmed the locations applicable to these services, the governing provider contracts or any transfer safeguards. The provider policy links below are references for your review, not a claim that the project has verified a particular safeguard or legal compliance.</value></data>
+  <data name="Privacy.RetentionTitle" xml:space="preserve"><value>Retention</value></data>
+  <data name="Privacy.Retention" xml:space="preserve"><value>Correspondence in the owner’s Proton Mail account is retained only for as long as necessary to handle the enquiry and meet applicable legal obligations. Formspree Submission Archive is disabled, but this does not guarantee immediate deletion or zero provider-side retention. Retention of provider processing data and technical logs is not specified here; provider policies and terms may apply, and these periods require separate review. The application itself does not keep contact submissions in a database.</value></data>
+  <data name="Privacy.RightsTitle" xml:space="preserve"><value>Your privacy rights</value></data>
+  <data name="Privacy.Rights" xml:space="preserve"><value>Depending on the data protection law that applies and the circumstances, you may be able to request access, correction, erasure, restriction, object to processing or request portability of your personal data. These rights are subject to the conditions in applicable law. To make a request, use the contact page and select “Privacy and personal data”. Additional contact details legally required for the project operator and the procedure for handling requests still need owner review. General information is available from the European Commission.</value></data>
+  <data name="Privacy.Complaints" xml:space="preserve"><value>Where applicable law provides, you may also complain to the data protection supervisory authority competent for you. The appropriate authority depends on your circumstances and the applicable law; the project has not identified a lead authority in this notice.</value></data>
+  <data name="Privacy.ThirdPartiesTitle" xml:space="preserve"><value>External links and other services</value></data>
+  <data name="Privacy.ThirdParties" xml:space="preserve"><value>Links to official sources open those external websites when you choose to follow them. Ko-fi is an optional external support link; the site does not embed a Ko-fi widget. If you visit or use Ko-fi, its own privacy information applies to data it processes there. External provider policies and terms may change.</value></data>
+  <data name="Privacy.ProviderPrivacy" xml:space="preserve"><value>Privacy information</value></data>
+  <data name="Privacy.ProviderDpa" xml:space="preserve"><value>Data Processing Addendum</value></data>
+  <data name="Privacy.ProviderSecurity" xml:space="preserve"><value>Security information</value></data>
+  <data name="Privacy.EuGuidance" xml:space="preserve"><value>European Commission: information for individuals</value></data>
+  <data name="Privacy.AuthorityGuide" xml:space="preserve"><value>Find information about data protection authorities</value></data>
+  <data name="Disclaimer.PageTitle" xml:space="preserve"><value>Disclaimer — Refugee Navigator Europe</value></data>
+  <data name="Disclaimer.MetaDescription" xml:space="preserve"><value>Understand the scope and limits of Refugee Navigator Europe’s general information, official sources and country comparisons.</value></data>
+  <data name="Disclaimer.Heading" xml:space="preserve"><value>Disclaimer</value></data>
+  <data name="Disclaimer.PurposeTitle" xml:space="preserve"><value>General information</value></data>
+  <data name="Disclaimer.Purpose" xml:space="preserve"><value>Refugee Navigator Europe provides general information to help readers explore topics related to temporary protection and life in Europe. It is not individual legal, medical, financial or other professional advice.</value></data>
+  <data name="Disclaimer.ChangesTitle" xml:space="preserve"><value>Rules and circumstances change</value></data>
+  <data name="Disclaimer.Changes" xml:space="preserve"><value>Legislation, official procedures, services and personal circumstances can change. Information may not reflect every recent change or local practice. An article’s update date indicates when its content was last updated; it does not guarantee that every detail remains current.</value></data>
+  <data name="Disclaimer.EligibilityTitle" xml:space="preserve"><value>Individual eligibility</value></data>
+  <data name="Disclaimer.Eligibility" xml:space="preserve"><value>General information on this site cannot determine whether a particular person qualifies for temporary protection, residence, work authorization, healthcare, housing, benefits or another service. Eligibility and decisions depend on current rules and individual circumstances.</value></data>
+  <data name="Disclaimer.SourcesTitle" xml:space="preserve"><value>Check with official authorities</value></data>
+  <data name="Disclaimer.Sources" xml:space="preserve"><value>We link to official external sources where available. Before acting, check current requirements and procedures with the relevant authority or service provider for your situation. A linked source may change or become unavailable.</value></data>
+  <data name="Disclaimer.IndependenceTitle" xml:space="preserve"><value>Independent project</value></data>
+  <data name="Disclaimer.Independence" xml:space="preserve"><value>Refugee Navigator Europe is an independent information project. It is not a government service and does not represent the authorities or other organizations whose sources it references.</value></data>
+  <data name="Disclaimer.ComparisonsTitle" xml:space="preserve"><value>Country comparisons</value></data>
+  <data name="Disclaimer.Comparisons" xml:space="preserve"><value>Country comparisons are informational tools that summarize selected topics. They may not cover every difference, exception or individual circumstance, and they do not establish which country or option is suitable for a particular person.</value></data>
 </root>

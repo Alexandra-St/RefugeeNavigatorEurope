@@ -1,0 +1,18 @@
+@inject IStringLocalizer<SharedResource> Localizer
+
+<footer class="site-footer">
+    <div class="site-footer-content">
+        <div class="site-footer-about">
+            <a class="site-footer-brand" href="/">Refugee Navigator Europe</a>
+            <p>@Localizer["Footer.Description"]</p>
+        </div>
+        <nav aria-label="@Localizer["Footer.NavigationLabel"]">
+            <ul>
+                <li><a href="/about">@Localizer["Footer.About"]</a></li>
+                <li><a href="/contact">@Localizer["Footer.Contact"]</a></li>
+                <li><a href="/privacy">@Localizer["Footer.Privacy"]</a></li>
+                <li><a href="/disclaimer">@Localizer["Footer.Disclaimer"]</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>

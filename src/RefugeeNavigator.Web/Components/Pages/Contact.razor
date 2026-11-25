@@ -1,0 +1,119 @@
+@page "/contact"
+@rendermode InteractiveServer
+@using RefugeeNavigator.Web.Contact
+@inject ContactSubmissionService SubmissionService
+@inject IStringLocalizer<SharedResource> Localizer
+
+<PageTitle>@Localizer["Contact.PageTitle"]</PageTitle>
+<HeadContent>
+    <meta name="description" content="@Localizer["Contact.MetaDescription"]" />
+    <meta property="og:title" content="@Localizer["Contact.PageTitle"]" />
+    <meta property="og:description" content="@Localizer["Contact.MetaDescription"]" />
+</HeadContent>
+
+<main id="main-content" class="contact-page">
+    <div class="contact-content">
+        <header class="contact-header">
+            <h1>@Localizer["Contact.Heading"]</h1>
+            <p>@Localizer["Contact.Introduction"]</p>
+        </header>
+
+        <section class="contact-form-section" aria-labelledby="contact-form-heading">
+            <h2 id="contact-form-heading">@Localizer["Contact.FormHeading"]</h2>
+            <p class="contact-privacy-link">@Localizer["Contact.PrivacyLinkPrefix"] <a href="/privacy">@Localizer["Contact.PrivacyLink"]</a></p>
+            @if (!SubmissionService.IsAvailable)
+            {
+                <p class="contact-notice" role="status">@Localizer["Contact.Unavailable"]</p>
+            }
+            else
+            {
+                <form novalidate @onsubmit="SubmitAsync" @onsubmit:preventDefault="true">
+                    <div class="contact-field">
+                        <label for="contact-topic">@Localizer["Contact.TopicLabel"] <span aria-hidden="true">*</span></label>
+                        <select id="contact-topic" @bind="_form.Topic" required disabled="@_isSubmitting">
+                            <option value="">@Localizer["Contact.TopicPlaceholder"]</option>
+                            @foreach (var topic in TopicOptions)
+                            {
+                                <option value="@topic">@Localizer[$"Contact.Topic.{topic}"]</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="contact-field">
+                        <label for="contact-name">@Localizer["Contact.NameLabel"]</label>
+                        <input id="contact-name" type="text" @bind="_form.Name" maxlength="100" autocomplete="name" disabled="@_isSubmitting" />
+                    </div>
+                    <div class="contact-field">
+                        <label for="contact-email">@Localizer["Contact.EmailLabel"]</label>
+                        <input id="contact-email" type="email" @bind="_form.ReplyEmail" maxlength="254" autocomplete="email" disabled="@_isSubmitting" />
+                    </div>
+                    <div class="contact-field">
+                        <label for="contact-message">@Localizer["Contact.MessageLabel"] <span aria-hidden="true">*</span></label>
+                        <textarea id="contact-message" @bind="_form.Message" maxlength="5000" rows="7" required disabled="@_isSubmitting"></textarea>
+                    </div>
+                    <div class="contact-honeypot" aria-hidden="true">
+                        <label for="contact-website">@Localizer["Contact.WebsiteLabel"]</label>
+                        <input id="contact-website" type="text" tabindex="-1" autocomplete="off" @bind="_form.Honeypot" />
+                    </div>
+
+                    <p class="contact-privacy-note">@Localizer["Contact.PrivacyNotice"]</p>
+                    <p class="contact-privacy-warning">@Localizer["Contact.SensitiveDataWarning"]</p>
+                    @if (!string.IsNullOrEmpty(_messageKey))
+                    {
+                        <p class="contact-feedback @(_isSuccess ? "success" : "error")" role="@(_isSuccess ? "status" : "alert")" aria-live="polite">@Localizer[_messageKey]</p>
+                    }
+                    <button class="contact-submit" type="submit" disabled="@_isSubmitting">
+                        @(_isSubmitting ? Localizer["Contact.Sending"] : Localizer["Contact.Submit"])
+                    </button>
+                </form>
+            }
+        </section>
+
+        <section class="contact-support about-support" aria-labelledby="contact-support-heading">
+            <h2 id="contact-support-heading">@Localizer["About.SupportTitle"]</h2>
+            <p>@Localizer["About.Support"]</p>
+            <p>@Localizer["About.SupportVoluntary"]</p>
+            <a class="project-support-link" href="https://ko-fi.com/alexandra_st" target="_blank" rel="noopener noreferrer">@Localizer["About.SupportCta"] <span aria-hidden="true">↗</span></a>
+        </section>
+    </div>
+</main>
+
+@code {
+    private static readonly string[] TopicOptions = ["IncorrectOrOutdated", "BrokenSource", "TranslationError", "Accessibility", "Suggestion", "Collaboration", "GeneralEnquiry", "PrivacyData"];
+    private readonly ContactFormInput _form = new();
+    private bool _isSubmitting;
+    private bool _isSuccess;
+    private string? _messageKey;
+
+    private async Task SubmitAsync()
+    {
+        if (_isSubmitting) return;
+        _messageKey = ContactFormValidation.ErrorKey(_form);
+        _isSuccess = false;
+        if (_messageKey is not null) return;
+
+        _isSubmitting = true;
+        try
+        {
+            var result = await SubmissionService.SubmitAsync(_form, Localizer[$"Contact.Topic.{_form.Topic}"].Value);
+            _messageKey = result switch
+            {
+                ContactSubmissionResult.Accepted => "Contact.Success",
+                ContactSubmissionResult.Unavailable => "Contact.Unavailable",
+                ContactSubmissionResult.Invalid => ContactFormValidation.ErrorKey(_form) ?? "Contact.ValidationFailed",
+                _ => "Contact.Failure"
+            };
+            _isSuccess = result == ContactSubmissionResult.Accepted;
+            if (_isSuccess)
+            {
+                _form.Topic = string.Empty;
+                _form.Name = string.Empty;
+                _form.ReplyEmail = string.Empty;
+                _form.Message = string.Empty;
+            }
+        }
+        finally
+        {
+            _isSubmitting = false;
+        }
+    }
+}

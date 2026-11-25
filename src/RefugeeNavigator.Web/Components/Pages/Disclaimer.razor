@@ -1,0 +1,22 @@
+@page "/disclaimer"
+@inject IStringLocalizer<SharedResource> Localizer
+
+<PageTitle>@Localizer["Disclaimer.PageTitle"]</PageTitle>
+<HeadContent>
+    <meta name="description" content="@Localizer["Disclaimer.MetaDescription"]" />
+    <meta property="og:title" content="@Localizer["Disclaimer.PageTitle"]" />
+    <meta property="og:description" content="@Localizer["Disclaimer.MetaDescription"]" />
+</HeadContent>
+
+<main id="main-content" class="legal-page">
+    <article class="legal-content">
+        <header class="legal-header"><h1>@Localizer["Disclaimer.Heading"]</h1></header>
+        <p class="legal-notice">@Localizer["Common.Disclaimer"]</p>
+        <section aria-labelledby="disclaimer-purpose"><h2 id="disclaimer-purpose">@Localizer["Disclaimer.PurposeTitle"]</h2><p>@Localizer["Disclaimer.Purpose"]</p></section>
+        <section aria-labelledby="disclaimer-changes"><h2 id="disclaimer-changes">@Localizer["Disclaimer.ChangesTitle"]</h2><p>@Localizer["Disclaimer.Changes"]</p></section>
+        <section aria-labelledby="disclaimer-eligibility"><h2 id="disclaimer-eligibility">@Localizer["Disclaimer.EligibilityTitle"]</h2><p>@Localizer["Disclaimer.Eligibility"]</p></section>
+        <section aria-labelledby="disclaimer-sources"><h2 id="disclaimer-sources">@Localizer["Disclaimer.SourcesTitle"]</h2><p>@Localizer["Disclaimer.Sources"]</p></section>
+        <section aria-labelledby="disclaimer-independence"><h2 id="disclaimer-independence">@Localizer["Disclaimer.IndependenceTitle"]</h2><p>@Localizer["Disclaimer.Independence"]</p></section>
+        <section aria-labelledby="disclaimer-comparison"><h2 id="disclaimer-comparison">@Localizer["Disclaimer.ComparisonsTitle"]</h2><p>@Localizer["Disclaimer.Comparisons"]</p></section>
+    </article>
+</main>
