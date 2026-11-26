@@ -10,6 +10,10 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.FileProviders;
+using Microsoft.Extensions.Configuration;
+using Microsoft.JSInterop;
+using RefugeeNavigator.Web.Security;
+using RefugeeNavigator.Web.Seo;
 using RefugeeNavigator.Data;
 using RefugeeNavigator.Domain;
 using RefugeeNavigator.Web.Components.Pages;
@@ -48,6 +52,31 @@ public sealed class CategoryRenderingTests
         ["\r\n \t\r\nFirst paragraph.\r\n\r\nSecond paragraph.\r\n  \r\n", new[] { "First paragraph.", "Second paragraph." }]
     ];
 
+    [Theory]
+    [InlineData("en")]
+    [InlineData("uk")]
+    [InlineData("ru")]
+    public async Task Existing_empty_category_has_noindex_and_no_public_entities(string language)
+    {
+        var catalog = await CreateCatalogAsync([
+            FixtureEntry(Guid.NewGuid(), status: VerificationStatus.Outdated),
+            FixtureEntry(Guid.NewGuid(), categoryId: OtherCategoryId, status: VerificationStatus.Verified)
+        ]);
+        var guides = new StepByStepGuideCatalog([]);
+        var availability = new SeoTranslationAvailability(catalog, guides);
+        var urls = new SeoMetadataGenerator("https://canonical.example", availability);
+        var rendered = await RenderAsync(catalog, language, guides: guides, environmentName: "Production",
+            seo: urls);
+        Assert.Contains(Resources.GetString("Category.InformationComingSoon", CultureInfo.GetCultureInfo(language))!,
+            WebUtility.HtmlDecode(rendered));
+        Assert.Contains($"href=\"/{language}/countries/denmark\"", rendered);
+        Assert.Contains("name=\"robots\" content=\"noindex, follow\"", rendered);
+        Assert.DoesNotContain("rel=\"canonical\"", rendered);
+        Assert.DoesNotContain("hreflang=", rendered);
+        Assert.DoesNotContain("application/ld+json", WebUtility.HtmlDecode(rendered));
+        Assert.DoesNotContain($"/{language}/countries/denmark/categories/employment", new SeoSitemap(catalog, guides, availability, urls).Xml);
+    }
+
     [Fact]
     public async Task EmptyCategoryRendersExistingPlaceholder()
     {
@@ -75,7 +104,7 @@ public sealed class CategoryRenderingTests
         Assert.Contains(Resources.GetString("Category.GuideCalloutTitle", culture)!, html);
         Assert.Contains(Resources.GetString("Category.GuideCalloutDescription", culture)!, html);
         Assert.Contains(Resources.GetString("Category.GuideCalloutLink", culture)!, html);
-        Assert.Contains("href=\"/guides/germany/temporary-protection\"", html);
+        Assert.Contains($"href=\"/{language}/guides/germany/temporary-protection\"", html);
         Assert.Contains("class=\"guide-callout\"", html);
     }
 
@@ -104,11 +133,11 @@ public sealed class CategoryRenderingTests
         var germanyEmployment = await RenderAsync(catalog, "en", "germany", "employment", guides, "Production");
 
         Assert.Contains("class=\"guide-callout\"", denmark);
-        Assert.Contains("href=\"/guides/denmark/temporary-protection\"", denmark);
+        Assert.Contains("href=\"/en/guides/denmark/temporary-protection\"", denmark);
         Assert.Contains("class=\"guide-callout\"", denmarkDevelopment);
-        Assert.Contains("href=\"/guides/denmark/temporary-protection\"", denmarkDevelopment);
+        Assert.Contains("href=\"/en/guides/denmark/temporary-protection\"", denmarkDevelopment);
         Assert.Contains("class=\"guide-callout\"", poland);
-        Assert.Contains("href=\"/guides/poland/temporary-protection\"", poland);
+        Assert.Contains("href=\"/en/guides/poland/temporary-protection\"", poland);
         Assert.Contains("class=\"guide-callout\"", polandDevelopment);
         Assert.DoesNotContain("class=\"guide-callout\"", germanyHealthcare);
         Assert.DoesNotContain("class=\"guide-callout\"", denmarkHealthcare);
@@ -132,8 +161,8 @@ public sealed class CategoryRenderingTests
 
         Assert.Contains("class=\"guide-callout\"", production);
         Assert.Contains("class=\"guide-callout\"", development);
-        Assert.Contains("href=\"/guides/poland/temporary-protection\"", production);
-        Assert.Contains("href=\"/guides/poland/temporary-protection\"", development);
+        Assert.Contains($"href=\"/{language}/guides/poland/temporary-protection\"", production);
+        Assert.Contains($"href=\"/{language}/guides/poland/temporary-protection\"", development);
         Assert.Contains(Resources.GetString("Category.GuideCalloutTitle", culture)!, production);
         Assert.Contains(Resources.GetString("Category.GuideCalloutDescription", culture)!, production);
         Assert.Contains(Resources.GetString("Category.GuideCalloutLink", culture)!, production);
@@ -819,7 +848,8 @@ public sealed class CategoryRenderingTests
         string countrySlug = "denmark",
         string categorySlug = "employment",
         StepByStepGuideCatalog? guides = null,
-        string environmentName = "Development")
+        string environmentName = "Development",
+        SeoMetadataGenerator? seo = null)
     {
         var priorCulture = CultureInfo.CurrentCulture;
         var priorUiCulture = CultureInfo.CurrentUICulture;
@@ -837,6 +867,16 @@ public sealed class CategoryRenderingTests
             services.AddSingleton<IWebHostEnvironment>(new TestWebHostEnvironment(environmentName));
             services.AddSingleton<NavigationManager>(new TestNavigationManager(
                 $"http://localhost/countries/{countrySlug}/categories/{categorySlug}"));
+            if (seo is not null)
+            {
+                var publicMode = new ConfigurationBuilder().AddInMemoryCollection(new Dictionary<string, string?>
+                {
+                    ["PRIVATE_ALPHA_ACCESS_MODE"] = "public"
+                }).Build();
+                services.AddSingleton(PrivateAlphaAccessOptions.FromConfiguration(publicMode, false));
+                services.AddSingleton(seo);
+                services.AddSingleton<IJSRuntime, StubJsRuntime>();
+            }
             using var serviceProvider = services.BuildServiceProvider();
             await using var renderer = new HtmlRenderer(serviceProvider, serviceProvider.GetRequiredService<ILoggerFactory>());
 
@@ -848,7 +888,9 @@ public sealed class CategoryRenderingTests
                     [nameof(Category.CategorySlug)] = categorySlug
                 });
                 var component = await renderer.RenderComponentAsync<Category>(parameters);
-                return component.ToHtmlString();
+                if (seo is null) return component.ToHtmlString();
+                var head = await renderer.RenderComponentAsync<HeadOutlet>(ParameterView.Empty);
+                return head.ToHtmlString() + component.ToHtmlString();
             });
         }
         finally
@@ -883,6 +925,13 @@ public sealed class CategoryRenderingTests
         string Summary,
         string Content,
         VerificationStatus Status);
+
+    private sealed class StubJsRuntime : IJSRuntime
+    {
+        public ValueTask<T> InvokeAsync<T>(string identifier, object?[]? args) => ValueTask.FromResult(default(T)!);
+        public ValueTask<T> InvokeAsync<T>(string identifier, CancellationToken token, object?[]? args) =>
+            ValueTask.FromResult(default(T)!);
+    }
 
     private sealed class TestNavigationManager : NavigationManager
     {

@@ -291,7 +291,7 @@ public sealed class FinlandContentIntegrationTests
         };
         var productionHome = await RenderAsync<Home>("Production", language);
         Assert.Equal(19, Regex.Matches(productionHome.Html, "class=\"country-card\"").Count);
-        Assert.Contains("href=\"/countries/finland\"", productionHome.Html);
+        Assert.Contains($"href=\"/{language}/countries/finland\"", productionHome.Html);
         var productionSearch = await RenderAsync<Search>("Production", language, "/search");
         Assert.Contains("finland", SelectValues(productionSearch.Html, "country"));
         var productionOverview = await RenderAsync<CountryOverview>("Production", language, "/countries/finland",
@@ -334,7 +334,7 @@ public sealed class FinlandContentIntegrationTests
 
         var developmentHome = await RenderAsync<Home>("Development", language);
         Assert.Equal(19, Regex.Matches(developmentHome.Html, "class=\"country-card\"").Count);
-        Assert.Contains("href=\"/countries/finland\"", developmentHome.Html);
+        Assert.Contains($"href=\"/{language}/countries/finland\"", developmentHome.Html);
         var developmentOverview = await RenderAsync<CountryOverview>("Development", language, "/countries/finland",
             new() { [nameof(CountryOverview.CountrySlug)] = "finland" });
         Assert.False(developmentOverview.NotFound);

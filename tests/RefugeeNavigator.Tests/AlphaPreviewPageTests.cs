@@ -37,15 +37,15 @@ public sealed class AlphaPreviewPageTests
         var html = await RenderAsync<Home>(language);
         var visibleHtml = WebUtility.HtmlDecode(html);
 
-        Assert.Contains("href=\"/search\"", visibleHtml);
-        Assert.Contains("href=\"/compare\"", visibleHtml);
+        Assert.Contains($"href=\"/{language}/search\"", visibleHtml);
+        Assert.Contains($"href=\"/{language}/compare\"", visibleHtml);
         Assert.Contains(searchTitle, visibleHtml);
         Assert.Contains(compareTitle, visibleHtml);
 
         var expectedCountryRoutes = new[] { "/countries/denmark", "/countries/germany", "/countries/poland" };
-        var routePositions = expectedCountryRoutes.Select(route => visibleHtml.IndexOf($"href=\"{route}\"", StringComparison.Ordinal)).ToArray();
+        var routePositions = expectedCountryRoutes.Select(route => visibleHtml.IndexOf($"href=\"/{language}{route}\"", StringComparison.Ordinal)).ToArray();
         Assert.All(routePositions, position => Assert.True(position >= 0));
-        var searchLink = Regex.Match(visibleHtml, "<a\\b[^>]*href=\"/search\"[^>]*>(?<content>.*?)</a>", RegexOptions.Singleline);
+        var searchLink = Regex.Match(visibleHtml, $"<a\\b[^>]*href=\"/{language}/search\"[^>]*>(?<content>.*?)</a>", RegexOptions.Singleline);
         Assert.True(searchLink.Success);
         Assert.Contains(searchCta, searchLink.Groups["content"].Value);
         Assert.DoesNotContain(oldPreviewLabel, visibleHtml);
@@ -65,19 +65,15 @@ public sealed class AlphaPreviewPageTests
         string searchLabel,
         string compareLabel)
     {
-        var html = WebUtility.HtmlDecode(await RenderAsync<SiteHeader>(language, currentPath: "/search?q=jobs"));
+        var html = WebUtility.HtmlDecode(await RenderAsync<SiteHeader>(language, currentPath: $"/{language}/search?q=jobs"));
 
         Assert.Contains($"aria-label=\"{navigationName}\"", html);
         Assert.Collection(Regex.Matches(html, "<nav\\b").Cast<Match>(), _ => { }, _ => { });
         Assert.Contains($"aria-label=\"{GetResource("Common.LanguageSelection", language)}\"", html);
-        AssertNavigationLink(html, "/", "Refugee Navigator", isCurrent: false);
-        AssertNavigationLink(html, "/search", searchLabel, isCurrent: true);
-        AssertNavigationLink(html, "/compare", compareLabel, isCurrent: false);
-        var rendered = await RenderAsync<SiteHeader>(language, currentPath: "/search?q=jobs");
-        Assert.Contains("href=\"/set-language?culture=uk&amp;returnUrl=%2Fsearch%3Fq%3Djobs\"", rendered);
-        AssertLanguageSwitchLabel(html, "uk", "УКР");
-        AssertLanguageSwitchLabel(html, "en", "ENG");
-        AssertLanguageSwitchLabel(html, "ru", "РУ");
+        AssertNavigationLink(html, $"/{language}/", "Refugee Navigator", isCurrent: false);
+        AssertNavigationLink(html, $"/{language}/search", searchLabel, isCurrent: true);
+        AssertNavigationLink(html, $"/{language}/compare", compareLabel, isCurrent: false);
+        AssertLanguageSwitchLinks(html, language, "/search?q=jobs");
         Assert.DoesNotContain($">{GetResource("Common.Home", language)}</a>", html);
         Assert.DoesNotContain("Navigation.", html);
     }
@@ -88,16 +84,9 @@ public sealed class AlphaPreviewPageTests
     [InlineData("ru")]
     public async Task LanguageSwitchLinksDisableEnhancedNavigationAndPreserveReturnUrl(string language)
     {
-        var rendered = await RenderAsync<SiteHeader>(language, currentPath: "/guides/germany/temporary-protection?step=3");
-        var html = WebUtility.HtmlDecode(rendered);
-        var languageLinks = Regex.Matches(html, "<a\\b(?<attributes>[^>]*)>(?<content>.*?)</a>", RegexOptions.Singleline)
-            .Cast<Match>()
-            .Where(match => match.Groups["attributes"].Value.Contains("/set-language?culture=", StringComparison.Ordinal))
-            .ToArray();
-
-        Assert.Equal(3, languageLinks.Length);
-        Assert.All(languageLinks, link => Assert.Contains("data-enhance-nav=\"false\"", link.Groups["attributes"].Value));
-        Assert.All(languageLinks, link => Assert.Contains("returnUrl=%2Fguides%2Fgermany%2Ftemporary-protection%3Fstep%3D3", link.Groups["attributes"].Value));
+        const string destination = "/guides/germany/temporary-protection?step=3";
+        var rendered = await RenderAsync<SiteHeader>(language, currentPath: $"/{language}{destination}");
+        AssertLanguageSwitchLinks(rendered, language, destination);
     }
 
     [Theory]
@@ -107,10 +96,8 @@ public sealed class AlphaPreviewPageTests
     public async Task AllCategoryComparisonQueryIsPreservedInLanguageSwitchReturnUrl(string language)
     {
         const string currentPath = "/compare?country1=germany&country2=poland&category=all";
-        var html = await RenderAsync<SiteHeader>(language, currentPath: currentPath);
-
-        Assert.Contains("returnUrl=%2Fcompare%3Fcountry1%3Dgermany%26country2%3Dpoland%26category%3Dall", html);
-        Assert.Equal(3, Regex.Matches(html, "data-enhance-nav=\"false\"").Count);
+        var html = await RenderAsync<SiteHeader>(language, currentPath: $"/{language}{currentPath}");
+        AssertLanguageSwitchLinks(html, language, currentPath);
     }
 
     [Theory]
@@ -119,14 +106,14 @@ public sealed class AlphaPreviewPageTests
     [InlineData("/compare?country1=denmark", "/compare")]
     public async Task GlobalNavigationMarksTheCurrentSection(string currentPath, string activeRoute)
     {
-        var html = WebUtility.HtmlDecode(await RenderAsync<SiteHeader>("en", currentPath: currentPath));
+        var html = WebUtility.HtmlDecode(await RenderAsync<SiteHeader>("en", currentPath: "/en" + currentPath));
         var activeLinks = Regex.Matches(html, "<a\\b(?<attributes>[^>]*)>(?<content>.*?)</a>", RegexOptions.Singleline)
             .Cast<Match>()
             .Where(match => Regex.IsMatch(match.Groups["attributes"].Value, "aria-current=\"page\""))
             .Select(match => Regex.Match(match.Groups["attributes"].Value, "href=\"(?<route>[^\"]+)\"").Groups["route"].Value)
             .ToArray();
 
-        Assert.Equal([activeRoute], activeLinks);
+        Assert.Equal(["/en" + activeRoute], activeLinks);
     }
 
     [Theory]
@@ -175,7 +162,7 @@ public sealed class AlphaPreviewPageTests
 
         foreach (var page in pages)
         {
-            AssertHomeLinksAtTopAndBottom(page, homeLabel);
+            AssertHomeLinksAtTopAndBottom(page, language, homeLabel);
             Assert.Single(Regex.Matches(page, "<main\\b"));
         }
 
@@ -216,7 +203,7 @@ public sealed class AlphaPreviewPageTests
         {
             var link = Regex.Match(
                 html,
-                $@"<a(?<attributes>[^>]*href=""/countries/{Regex.Escape(country.Slug)}""[^>]*)>(?<content>.*?)</a>",
+                $@"<a(?<attributes>[^>]*href=""/{language}/countries/{Regex.Escape(country.Slug)}""[^>]*)>(?<content>.*?)</a>",
                 RegexOptions.Singleline);
 
             Assert.True(link.Success, $"Expected a link to {country.Slug}.");
@@ -224,7 +211,7 @@ public sealed class AlphaPreviewPageTests
             Assert.Contains("aria-hidden=\"true\"", link.Groups["content"].Value);
 
             var flag = CountryFlagFor(country.Slug);
-            var countryCard = Regex.Match(visibleHtml, $"<article class=\"country-card\"[^>]*>(?<content>.*?)href=\"/countries/{Regex.Escape(country.Slug)}\".*?</article>", RegexOptions.Singleline);
+            var countryCard = Regex.Match(visibleHtml, $"<article class=\"country-card\"[^>]*>(?<content>.*?)href=\"/{language}/countries/{Regex.Escape(country.Slug)}\".*?</article>", RegexOptions.Singleline);
             Assert.True(countryCard.Success, $"Expected card for {country.Slug}.");
             Assert.Matches(
                 $"<span[^>]*>{Regex.Escape(country.Name)}</span>\\s*<span[^>]*aria-hidden=\"true\"[^>]*>{Regex.Escape(flag)}</span>",
@@ -278,7 +265,7 @@ public sealed class AlphaPreviewPageTests
         var countryCard = Regex.Matches(html, @"<article class=""country-card""[^>]*>(?<content>.*?)</article>", RegexOptions.Singleline)
             .Cast<Match>()
             .Select(match => match.Groups["content"].Value)
-            .SingleOrDefault(content => content.Contains($"href=\"/countries/{slug}\"", StringComparison.Ordinal));
+            .SingleOrDefault(content => content.Contains($"href=\"/en/countries/{slug}\"", StringComparison.Ordinal));
         Assert.NotNull(countryCard);
         Assert.Contains(flag, countryCard);
     }
@@ -301,11 +288,11 @@ public sealed class AlphaPreviewPageTests
         Assert.Matches($"<h1[^>]*>{Regex.Escape(searchHeading)}</h1>", visibleSearchHtml);
         Assert.Single(Regex.Matches(searchHtml, "<h1\\b").Cast<Match>());
         Assert.Contains("method=\"get\"", searchHtml);
-        Assert.Contains("action=\"/search\"", searchHtml);
+        Assert.Contains($"action=\"/{language}/search\"", searchHtml);
         Assert.Contains("name=\"q\"", searchHtml);
         Assert.Contains(searchScope, visibleSearchHtml);
         Assert.DoesNotContain("Search.", visibleSearchHtml);
-        Assert.Contains("href=\"/\"", searchHtml);
+        Assert.Contains($"href=\"/{language}/\"", searchHtml);
         Assert.Contains(GetResource("Common.Disclaimer", language), visibleSearchHtml);
 
         var visibleCompareHtml = WebUtility.HtmlDecode(compareHtml);
@@ -313,7 +300,7 @@ public sealed class AlphaPreviewPageTests
         Assert.Matches($"<h1[^>]*>{Regex.Escape(compareHeading)}</h1>", visibleCompareHtml);
         Assert.Single(Regex.Matches(compareHtml, "<h1\\b").Cast<Match>());
         Assert.Contains("method=\"get\"", compareHtml);
-        Assert.Contains("action=\"/compare\"", compareHtml);
+        Assert.Contains($"action=\"/{language}/compare\"", compareHtml);
         Assert.Contains("name=\"country1\"", compareHtml);
         Assert.Contains("name=\"country2\"", compareHtml);
         Assert.Contains("name=\"category\"", compareHtml);
@@ -339,14 +326,14 @@ public sealed class AlphaPreviewPageTests
         var html = await RenderAsync<CountryOverview>(language, parameters);
         var visibleHtml = WebUtility.HtmlDecode(html);
 
-        AssertCountryCategoryIcons(visibleHtml, "denmark");
+        AssertCountryCategoryIcons(visibleHtml, language, "denmark");
 
         foreach (var slug in new[]
         {
             "temporary-protection", "employment", "healthcare", "housing", "education", "social-assistance"
         })
         {
-            Assert.Contains($"href=\"/countries/denmark/categories/{slug}\"", visibleHtml);
+            Assert.Contains($"href=\"/{language}/countries/denmark/categories/{slug}\"", visibleHtml);
         }
     }
 
@@ -362,7 +349,7 @@ public sealed class AlphaPreviewPageTests
         };
         var html = WebUtility.HtmlDecode(await RenderAsync<CountryOverview>("en", parameters, $"/countries/{countrySlug}"));
 
-        AssertCountryCategoryIcons(html, countrySlug);
+        AssertCountryCategoryIcons(html, "en", countrySlug);
     }
 
     [Theory]
@@ -383,7 +370,7 @@ public sealed class AlphaPreviewPageTests
             "Production"));
 
         Assert.Contains("class=\"country-guide-callout\"", html);
-        Assert.Contains($"href=\"/guides/{slug}/temporary-protection\"", html);
+        Assert.Contains($"href=\"/en/guides/{slug}/temporary-protection\"", html);
         Assert.Single(Regex.Matches(html, "class=\"country-guide-callout\""));
         Assert.True(html.IndexOf("class=\"country-guide-callout\"", StringComparison.Ordinal) <
                     html.IndexOf("class=\"categories\"", StringComparison.Ordinal));
@@ -501,7 +488,7 @@ public sealed class AlphaPreviewPageTests
             $"<h3[^>]*class=\"country-name\"[^>]*>\\s*<span[^>]*>{Regex.Escape(nominativeName)}</span>\\s*<span[^>]*aria-hidden=\"true\"[^>]*>{Regex.Escape(expectedFlag)}</span>",
             homeHtml);
         Assert.Contains(string.Format(CultureInfo.GetCultureInfo(language), GetResource("Home.CountryDescription", language), locationPhrase), homeHtml);
-        Assert.Contains($"href=\"/countries/{slug}\"", homeHtml);
+        Assert.Contains($"href=\"/{language}/countries/{slug}\"", homeHtml);
         Assert.Matches($"<h1\\b[^>]*>{Regex.Escape(nominativeName)}</h1>", overviewHtml);
         Assert.Contains(livingHeading, overviewHtml);
         Assert.Contains(locationPhrase, overviewHtml);
@@ -509,7 +496,8 @@ public sealed class AlphaPreviewPageTests
         Assert.DoesNotContain("»", homeHtml + overviewHtml);
         Assert.DoesNotContain("в в ", homeHtml + overviewHtml);
         Assert.DoesNotContain("у у ", homeHtml + overviewHtml);
-        Assert.Contains($"href=\"/countries/{slug}/categories/", overviewHtml);
+        LocalizedRouteAssertions.HasCategoryLinks(overviewHtml, language, slug,
+            ["temporary-protection", "employment", "healthcare", "housing", "education", "social-assistance"]);
     }
 
     [Theory]
@@ -517,10 +505,7 @@ public sealed class AlphaPreviewPageTests
     [InlineData(typeof(Compare), "/compare")]
     public void PreviewPagesUsePermanentRoutes(Type componentType, string expectedRoute)
     {
-        var route = componentType.GetCustomAttribute<RouteAttribute>();
-
-        Assert.NotNull(route);
-        Assert.Equal(expectedRoute, route!.Template);
+        LocalizedRouteAssertions.HasRouteSet(componentType, expectedRoute);
     }
 
     private static string GetResource(string key, string language) =>
@@ -534,7 +519,7 @@ public sealed class AlphaPreviewPageTests
         _ => throw new InvalidOperationException("Unexpected country slug.")
     };
 
-    private static void AssertCountryCategoryIcons(string html, string countrySlug)
+    private static void AssertCountryCategoryIcons(string html, string language, string countrySlug)
     {
         var categorySlugs = new[]
         {
@@ -566,7 +551,7 @@ public sealed class AlphaPreviewPageTests
             Assert.True(
                 Regex.IsMatch(cards[index], "<div class=\"category-card-heading\"[^>]*>.*?<h3[^>]*>.+?</h3>", RegexOptions.Singleline),
                 "The category title should remain in the icon heading row.");
-            Assert.Contains($"href=\"/countries/{countrySlug}/categories/{slug}\"", cards[index]);
+            Assert.Contains($"href=\"/{language}/countries/{countrySlug}/categories/{slug}\"", cards[index]);
         }
     }
 
@@ -681,12 +666,12 @@ public sealed class AlphaPreviewPageTests
         }
     }
 
-    private static void AssertHomeLinksAtTopAndBottom(string html, string expectedLabel)
+    private static void AssertHomeLinksAtTopAndBottom(string html, string language, string expectedLabel)
     {
         var links = Regex.Matches(html, "<a\\b(?<attributes>[^>]*)>(?<content>.*?)</a>", RegexOptions.Singleline)
             .Cast<Match>()
             .Where(link => Regex.IsMatch(link.Groups["attributes"].Value, "class=\"home-return-link\"") &&
-                           Regex.IsMatch(link.Groups["attributes"].Value, "href=\"/\""))
+                           Regex.IsMatch(link.Groups["attributes"].Value, $"href=\"/{language}/\""))
             .ToArray();
 
         Assert.Equal(2, links.Length);
@@ -712,15 +697,22 @@ public sealed class AlphaPreviewPageTests
         Assert.Equal(isCurrent, Regex.IsMatch(link.Groups["attributes"].Value, "aria-current=\"page\""));
     }
 
-    private static void AssertLanguageSwitchLabel(string html, string culture, string label)
+    private static void AssertLanguageSwitchLinks(string html, string currentLanguage, string destination)
     {
-        var link = Regex.Match(
-            html,
-            $"<a\\b(?<attributes>[^>]*lang=\\\"{Regex.Escape(culture)}\\\"[^>]*)>(?<content>.*?)</a>",
-            RegexOptions.Singleline);
-
-        Assert.True(link.Success, $"Expected a language link for {culture}.");
-        Assert.Equal(label, WebUtility.HtmlDecode(link.Groups["content"].Value).Trim());
-        Assert.Contains("data-enhance-nav=\"false\"", link.Groups["attributes"].Value);
+        var links = Regex.Matches(html, """<a\b(?<attrs>[^>]*)>(?<content>.*?)</a>""", RegexOptions.Singleline)
+            .Where(match => Regex.IsMatch(match.Groups["attrs"].Value, "\\slang=\"[^\"]+\""))
+            .ToArray();
+        Assert.Equal(3, links.Length);
+        foreach (var (language, label) in new[] { ("uk", "УКР"), ("en", "ENG"), ("ru", "РУ") })
+        {
+            var link = Assert.Single(links, item =>
+                Regex.IsMatch(item.Groups["attrs"].Value, $"\\slang=\"{language}\""));
+            var attributes = link.Groups["attrs"].Value;
+            var href = WebUtility.HtmlDecode(Regex.Match(attributes, "\\shref=\"([^\"]+)\"").Groups[1].Value);
+            Assert.Equal($"/{language}{destination}", href);
+            Assert.Equal(label, WebUtility.HtmlDecode(link.Groups["content"].Value).Trim());
+            Assert.Contains("data-enhance-nav=\"false\"", attributes);
+            Assert.Equal(language == currentLanguage, attributes.Contains("aria-current=\"true\"", StringComparison.Ordinal));
+        }
     }
 }

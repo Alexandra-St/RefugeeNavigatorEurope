@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpOverrides;
 using RefugeeNavigator.Web.Components;
 using RefugeeNavigator.Web.Comparison;
 using RefugeeNavigator.Web.Localization;
+using RefugeeNavigator.Web.Seo;
 using RefugeeNavigator.Web.Contact;
 using RefugeeNavigator.Web.Guides;
 using RefugeeNavigator.Web.Security;
@@ -39,6 +40,12 @@ var guideCatalog = await new JsonStepByStepGuideProvider(
     Path.Combine(builder.Environment.ContentRootPath, "Data", "step-by-step-guides.json")).LoadAsync(catalog);
 StepByStepGuideLocalizationValidator.Validate(guideCatalog, resourceManager.GetString);
 builder.Services.AddSingleton(guideCatalog);
+builder.Services.AddSingleton<ArticleUrlResolver>();
+builder.Services.AddSingleton<SeoTranslationAvailability>();
+builder.Services.AddSingleton(sp => new SeoMetadataGenerator(
+    builder.Configuration["Seo:CanonicalOrigin"], sp.GetRequiredService<SeoTranslationAvailability>()));
+
+builder.Services.AddSingleton<SeoSitemap>();
 
 var supportedCultures = SupportedCultures.All.ToArray();
 
@@ -49,6 +56,7 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
     options.SupportedUICultures = supportedCultures;
     options.RequestCultureProviders = new IRequestCultureProvider[]
     {
+        new CircuitRequestCultureProvider(),
         new CookieRequestCultureProvider(),
         new AcceptLanguageHeaderRequestCultureProvider()
     };
@@ -86,6 +94,7 @@ if (!app.Environment.IsDevelopment())
 app.UseMiddleware<PrivateAlphaAuthenticationMiddleware>();
 app.UseHttpsRedirection();
 app.UseRequestLocalization();
+app.UseMiddleware<LanguagePathMiddleware>();
 app.UseStatusCodePagesWithReExecute("/not-found");
 app.UseAntiforgery();
 app.MapGet("/set-language", (HttpContext context, string? culture, string? returnUrl) =>
@@ -114,6 +123,12 @@ app.MapGet("/set-language", (HttpContext context, string? culture, string? retur
 
     return Results.LocalRedirect(redirectUrl);
 });
+app.MapGet("/robots.txt", (SeoMetadataGenerator seo, PrivateAlphaAccessOptions access) =>
+    Results.Text(SeoRoutePolicy.Robots(access.Mode, seo), "text/plain; charset=utf-8"));
+app.MapGet("/sitemap.xml", (SeoSitemap sitemap, PrivateAlphaAccessOptions access) =>
+    SeoRoutePolicy.ExposesSitemap(access.Mode)
+        ? Results.Text(sitemap.Xml, "application/xml; charset=utf-8")
+        : Results.NotFound());
 app.MapStaticAssets();
 app.MapRazorComponents<App>().AddInteractiveServerRenderMode();
 app.Run();

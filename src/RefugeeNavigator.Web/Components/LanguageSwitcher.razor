@@ -16,8 +16,5 @@
     private static bool IsCurrentLanguage(string culture) => CurrentLanguage == culture;
 
     private string BuildSwitchUrl(string culture)
-    {
-        var returnUrl = new Uri(Navigation.Uri).PathAndQuery;
-        return $"/set-language?culture={Uri.EscapeDataString(culture)}&returnUrl={Uri.EscapeDataString(returnUrl)}";
-    }
+        => LocalizedUrl.ForLanguageSwitch(new Uri(Navigation.Uri), culture);
 }

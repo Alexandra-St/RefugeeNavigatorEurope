@@ -3,15 +3,15 @@
 <footer class="site-footer">
     <div class="site-footer-content">
         <div class="site-footer-about">
-            <a class="site-footer-brand" href="/">Refugee Navigator Europe</a>
+            <a class="site-footer-brand" href="@LocalizedUrl.ForCurrentCulture("/", CultureInfo.CurrentUICulture.TwoLetterISOLanguageName)">Refugee Navigator Europe</a>
             <p>@Localizer["Footer.Description"]</p>
         </div>
         <nav aria-label="@Localizer["Footer.NavigationLabel"]">
             <ul>
-                <li><a href="/about">@Localizer["Footer.About"]</a></li>
-                <li><a href="/contact">@Localizer["Footer.Contact"]</a></li>
-                <li><a href="/privacy">@Localizer["Footer.Privacy"]</a></li>
-                <li><a href="/disclaimer">@Localizer["Footer.Disclaimer"]</a></li>
+                <li><a href="@LocalizedUrl.ForCurrentCulture("/about", CultureInfo.CurrentUICulture.TwoLetterISOLanguageName)">@Localizer["Footer.About"]</a></li>
+                <li><a href="@LocalizedUrl.ForCurrentCulture("/contact", CultureInfo.CurrentUICulture.TwoLetterISOLanguageName)">@Localizer["Footer.Contact"]</a></li>
+                <li><a href="@LocalizedUrl.ForCurrentCulture("/privacy", CultureInfo.CurrentUICulture.TwoLetterISOLanguageName)">@Localizer["Footer.Privacy"]</a></li>
+                <li><a href="@LocalizedUrl.ForCurrentCulture("/disclaimer", CultureInfo.CurrentUICulture.TwoLetterISOLanguageName)">@Localizer["Footer.Disclaimer"]</a></li>
             </ul>
         </nav>
     </div>

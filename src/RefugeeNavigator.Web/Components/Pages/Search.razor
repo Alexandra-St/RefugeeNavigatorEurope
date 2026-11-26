@@ -1,4 +1,7 @@
 @page "/search"
+@page "/en/search"
+@page "/uk/search"
+@page "/ru/search"
 @using Microsoft.AspNetCore.Components
 @using System.Globalization
 @using Microsoft.AspNetCore.Hosting
@@ -13,7 +16,15 @@
 @inject NavigationManager Navigation
 @inject IStringLocalizer<SharedResource> Localizer
 
-<PageTitle>@Localizer["Search.PageTitle"]</PageTitle>
+@if (SeoRoutePolicy.HasFunctionalQuery("/search", QueryParameters))
+{
+    <FilteredPageSeo Title="@Localizer["Search.PageTitle"].Value" />
+}
+else
+{
+    <StaticPageSeo Path="/search" Title="@Localizer["Search.PageTitle"].Value"
+                   Description="@Localizer["Search.Description"].Value" />
+}
 
 <HomeLink Placement="top" />
 
@@ -25,7 +36,7 @@
             <p class="scope-note">@Localizer["Search.Scope"]</p>
         </header>
 
-        <form class="search-form" method="get" action="/search">
+        <form class="search-form" method="get" action="@LocalizedUrl.ForCurrentCulture("/search", CultureInfo.CurrentUICulture.TwoLetterISOLanguageName)">
             <div class="query-field">
                 <label for="search-query">@Localizer["Search.InputLabel"]</label>
                 <input id="search-query" type="search" name="q" value="@Query" placeholder="@Localizer["Search.Placeholder"]" />
@@ -58,7 +69,7 @@
 
             <div class="form-actions">
                 <button type="submit">@Localizer["Search.Submit"]</button>
-                <a class="reset-link" href="/search">@Localizer["Search.Reset"]</a>
+                <a class="reset-link" href="@LocalizedUrl.ForCurrentCulture("/search", CultureInfo.CurrentUICulture.TwoLetterISOLanguageName)">@Localizer["Search.Reset"]</a>
             </div>
         </form>
 
@@ -90,7 +101,16 @@
                             .Where(source => source.InformationEntryId == result.Entry.Id)
                             .ToArray();
                         <article class="result-card">
-                            <h3><a href="/countries/@result.Country.Slug/categories/@result.Category.Slug">@result.Translation.Title</a></h3>
+                            <h3>
+                                @if (ArticleResolver.Generate(result.Entry, CultureInfo.CurrentUICulture.TwoLetterISOLanguageName) is { } articleUrl)
+                                {
+                                    <a href="@articleUrl">@result.Translation.Title</a>
+                                }
+                                else
+                                {
+                                    @result.Translation.Title
+                                }
+                            </h3>
                             <p class="result-summary">
                                 @foreach (var part in ArticleContentFormatter.ParseInline(result.Translation.Summary, result.Entry.Id, resultSources))
                                 {
@@ -116,6 +136,8 @@
 </main>
 
 @code {
+    private ArticleUrlResolver ArticleResolver => new(Catalog);
+
     private IReadOnlyDictionary<string, Microsoft.Extensions.Primitives.StringValues> QueryParameters =>
         QueryHelpers.ParseQuery(new Uri(Navigation.Uri).Query);
 

@@ -17,12 +17,28 @@
     <SiteHeader />
     <Routes />
     <SiteFooter />
-    <script src="@Assets["_framework/blazor.web.js"]"></script>
+    <script src="@Assets["_framework/blazor.web.js"]" autostart="false"></script>
     <script>
         window.syncThemeToggle();
     </script>
     <script>
+        const documentCulture = document.documentElement.lang;
+        const circuitUrl = new URL("_blazor", document.baseURI);
+        circuitUrl.searchParams.set("@CircuitRequestCultureProvider.QueryKey", documentCulture);
+
+        Blazor.start({
+            circuit: {
+                configureSignalR: builder => builder.withUrl(circuitUrl.href)
+            }
+        });
         Blazor.addEventListener("enhancedload", () => {
+            // A different URL language needs a new document and circuit.
+            const routeCulture = window.location.pathname.split("/")[1];
+            if (["en", "uk", "ru"].includes(routeCulture) && routeCulture !== documentCulture) {
+                window.location.reload();
+                return;
+            }
+
             window.applyEffectiveTheme();
             window.syncThemeToggle();
         });

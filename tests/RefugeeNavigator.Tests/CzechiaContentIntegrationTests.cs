@@ -219,7 +219,7 @@ public sealed class CzechiaContentIntegrationTests
         Assert.Contains(name, html);
         Assert.Contains(locationName, html);
         Assert.Contains("🇨🇿", html);
-        Assert.Contains("href=\"/countries/czechia\"", html);
+        Assert.Contains($"href=\"/{language}/countries/czechia\"", html);
     }
 
     [Theory]
@@ -232,12 +232,10 @@ public sealed class CzechiaContentIntegrationTests
             new Dictionary<string, object?> { [nameof(CountryOverview.CountrySlug)] = "czechia" },
             "http://localhost/countries/czechia"));
         Assert.Contains(countryName, html);
-        Assert.Equal(6, html.Split("href=\"/countries/czechia/categories/", StringSplitOptions.None).Length - 1);
+        Assert.Equal(6, Categories.Length);
+        LocalizedRouteAssertions.HasCategoryLinks(html, language, "czechia", Categories);
         Assert.DoesNotContain("country-guide-callout", html, StringComparison.Ordinal);
-        foreach (var category in Categories)
-        {
-            Assert.Contains($"/countries/czechia/categories/{category}", html);
-        }
+        LocalizedRouteAssertions.HasNoGuideLinks(html, "czechia");
     }
 
     [Theory]

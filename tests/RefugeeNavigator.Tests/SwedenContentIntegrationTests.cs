@@ -319,7 +319,7 @@ public sealed class SwedenContentIntegrationTests
         Assert.Contains(name, html);
         Assert.Contains(locationName, html);
         Assert.Contains("🇸🇪", html);
-        Assert.Contains("href=\"/countries/sweden\"", html);
+        Assert.Contains($"href=\"/{language}/countries/sweden\"", html);
         Assert.DoesNotContain("Country.Sweden", html, StringComparison.Ordinal);
     }
 
@@ -333,10 +333,11 @@ public sealed class SwedenContentIntegrationTests
             new Dictionary<string, object?> { [nameof(CountryOverview.CountrySlug)] = "sweden" },
             "http://localhost/countries/sweden"));
         Assert.Contains(countryName, html);
-        Assert.Equal(6, html.Split("href=\"/countries/sweden/categories/", StringSplitOptions.None).Length - 1);
+        Assert.Equal(6, Categories.Length);
+        LocalizedRouteAssertions.HasCategoryLinks(html, language, "sweden", Categories);
         Assert.DoesNotContain("country-guide-callout", html, StringComparison.Ordinal);
+        LocalizedRouteAssertions.HasNoGuideLinks(html, "sweden");
         Assert.DoesNotContain("Country.Sweden", html, StringComparison.Ordinal);
-        foreach (var category in Categories) Assert.Contains($"/countries/sweden/categories/{category}", html);
     }
 
     [Theory]

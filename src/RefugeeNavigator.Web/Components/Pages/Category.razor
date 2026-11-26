@@ -1,4 +1,10 @@
 @page "/countries/{CountrySlug}/categories/{CategorySlug}"
+@page "/en/countries/{CountrySlug}/categories/{CategorySlug}"
+@page "/uk/countries/{CountrySlug}/categories/{CategorySlug}"
+@page "/ru/countries/{CountrySlug}/categories/{CategorySlug}"
+@page "/en/articles/{CountrySlug}/{CategorySlug}/{ArticleKey}"
+@page "/uk/articles/{CountrySlug}/{CategorySlug}/{ArticleKey}"
+@page "/ru/articles/{CountrySlug}/{CategorySlug}/{ArticleKey}"
 @using Microsoft.AspNetCore.Components
 @using Microsoft.AspNetCore.Hosting
 @using System.Globalization
@@ -13,20 +19,48 @@
 @inject IStringLocalizer<SharedResource> Localizer
 @inject IServiceProvider Services
 
+@if (Article is { } resolvedArticle)
+{
+    <SharedSeoMetadata Metadata="@ArticleSeo" Kind="StructuredPageKind.Article"
+                       Parents="@BreadcrumbParents" DateModified="@resolvedArticle.Translation.LastUpdatedAt" />
+}
+
 @if (CountryName is { } countryName && CategoryDetails is { } category)
 {
-    <PageTitle>@Localizer["Category.PageTitle", category.Name, countryName]</PageTitle>
+    @if (!IsStandaloneArticle)
+    {
+        var title = Localizer["Category.PageTitle", category.Name, countryName].Value;
+        var metadata = Services.GetService<SeoMetadataGenerator>()?.CreateCategory(
+            title, category.Description, Country!.Slug, SelectedCategory!.Slug);
+        @if (metadata is not null)
+        {
+            <SharedSeoMetadata Metadata="@metadata" Kind="StructuredPageKind.CollectionPage"
+                               Name="@category.Name" Parents="@BreadcrumbParents" />
+        }
+        else
+        {
+            <FilteredPageSeo Title="@title" />
+        }
+    }
 
     <HomeLink Placement="top" />
 
     <main id="main-content" class="category-page">
         <div class="page-content">
-            <a class="back-link" href="/countries/@CountrySlug" aria-label="@Localizer["Category.BackToCountry", countryName]"><span aria-hidden="true">←</span> @Localizer["Category.BackToCountry", countryName]</a>
+            <a class="back-link" href="@BackHref" aria-label="@BackLabel"><span aria-hidden="true">←</span> @BackLabel</a>
 
             <header class="category-header">
-                <p class="eyebrow">@countryName</p>
-                <h1>@category.Name</h1>
-                <p class="subtitle">@category.Description</p>
+                @if (Article is { } article)
+                {
+                    <p class="eyebrow"><a href="@CountryHref">@countryName</a> · <a href="@BackHref">@category.Name</a></p>
+                    <h1 id="article-title-@article.Entry.Id.ToString("N")">@article.Translation.Title</h1>
+                }
+                else
+                {
+                    <p class="eyebrow">@countryName</p>
+                    <h1>@category.Name</h1>
+                    <p class="subtitle">@category.Description</p>
+                }
             </header>
 
             @if (GuideForCurrentCategory is not null)
@@ -52,8 +86,21 @@
                 <section class="information-entries" aria-label="@category.Name">
                     @foreach (var item in _renderedEntries)
                     {
-                        <article class="information-entry" aria-labelledby="entry-heading-@item.Entry.Id.ToString("N")" id="entry-@item.Entry.Id.ToString("N")">
-                            <h2 id="entry-heading-@item.Entry.Id.ToString("N")">@item.Translation.Title</h2>
+                        <article class="information-entry" aria-labelledby="@ArticleLabelId(item.Entry.Id)" id="entry-@item.Entry.Id.ToString("N")">
+                            @if (!IsStandaloneArticle)
+                            {
+                                var articleUrl = ArticleResolver.Generate(item.Entry, CurrentLanguage);
+                                <h2 id="entry-heading-@item.Entry.Id.ToString("N")">
+                                    @if (articleUrl is not null)
+                                    {
+                                        <a href="@articleUrl">@item.Translation.Title</a>
+                                    }
+                                    else
+                                    {
+                                        @item.Translation.Title
+                                    }
+                                </h2>
+                            }
                             <p class="entry-summary">
                                 @foreach (var part in ArticleContentFormatter.ParseInline(item.Translation.Summary, item.Entry.Id, item.Sources))
                                 {
@@ -175,6 +222,13 @@
                             }
 
                             <dl class="entry-metadata">
+                                @if (Article is { } articleMetadata)
+                                {
+                                    <div>
+                                        <dt>@Localizer["Article.ReviewStatus"]</dt>
+                                        <dd>@Localizer[$"Category.Status.{articleMetadata.Translation.VerificationStatus}"]</dd>
+                                    </div>
+                                }
                                 <div>
                                     <dt>@Localizer["Category.LastUpdated"]</dt>
                                     <dd><time datetime="@item.Translation.LastUpdatedAt.ToString("O", CultureInfo.InvariantCulture)">@FormatDate(item.Translation.LastUpdatedAt)</time></dd>
@@ -218,6 +272,58 @@
     [Parameter]
     public string CategorySlug { get; set; } = string.Empty;
 
+    [Parameter]
+    public string? ArticleKey { get; set; }
+
+    private bool IsStandaloneArticle => !string.IsNullOrWhiteSpace(ArticleKey);
+    private string CurrentLanguage => CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+    private ResolvedArticleUrl? Article { get; set; }
+    private string BackHref => Article is { } article
+        ? LocalizedUrl.ForCurrentCulture($"/countries/{article.Country.Slug}/categories/{article.Category.Slug}", CurrentLanguage)
+        : LocalizedUrl.ForCurrentCulture($"/countries/{CountrySlug}", CurrentLanguage);
+    private string CountryHref => Article is { } article
+        ? LocalizedUrl.ForCurrentCulture($"/countries/{article.Country.Slug}", CurrentLanguage)
+        : LocalizedUrl.ForCurrentCulture($"/countries/{CountrySlug}", CurrentLanguage);
+    private string BackLabel => Article is null
+        ? Localizer["Category.BackToCountry", CountryName ?? string.Empty].Value
+        : Localizer["Article.BackToCategory", CategoryDetails?.Name ?? string.Empty].Value;
+    private string ArticleLabelId(Guid id) => IsStandaloneArticle ? $"article-title-{id:N}" : $"entry-heading-{id:N}";
+    private IReadOnlyList<SeoBreadcrumb> BreadcrumbParents
+    {
+        get
+        {
+            var countryPath = $"/countries/{Country!.Slug}";
+            var parents = new List<SeoBreadcrumb>
+            {
+                new(Localizer["Common.Home"].Value, "/"),
+                new(CountryName!, countryPath)
+            };
+            if (Article is not null)
+                parents.Add(new(CategoryDetails!.Value.Name, $"{countryPath}/categories/{SelectedCategory!.Slug}"));
+            return parents;
+        }
+    }
+
+    private SeoMetadata? ArticleSeo => Article is { } article &&
+        Services.GetService<SeoMetadataGenerator>() is { } seoGenerator &&
+        Services.GetService<SeoTranslationAvailability>() is { } seoAvailability
+        ? seoGenerator.Create(article.Translation.Title, ArticleDescription(article), article.Path,
+            seoAvailability.Article(article.Entry.Id))
+        : null;
+    private ArticleUrlResolver ArticleResolver => Services.GetService<ArticleUrlResolver>() ?? new(Catalog);
+
+    private string ArticleDescription(ResolvedArticleUrl article) => string.Concat(
+        ArticleContentFormatter.ParseInline(article.Translation.Summary, article.Entry.Id,
+                Catalog.OfficialSources.Where(source => source.InformationEntryId == article.Entry.Id).ToArray())
+            .Select(part => part switch
+            {
+                ArticleContentText text => text.Value,
+                ArticleContentStrong strong => strong.Value,
+                ArticleContentCode code => code.Value,
+                ArticleContentSourceLink sourceLink => sourceLink.Label,
+                _ => string.Empty
+            })).Trim();
+
     private IReadOnlyList<RenderedInformationEntry> _renderedEntries = Array.Empty<RenderedInformationEntry>();
 
     private GuideDefinition? GuideForCurrentCategory
@@ -241,7 +347,7 @@
     }
 
     private string? GuideHref => GuideForCurrentCategory is { } guide && Country is { } country
-        ? $"/guides/{country.Slug}/{guide.Slug}"
+        ? LocalizedUrl.ForCurrentCulture($"/guides/{country.Slug}/{guide.Slug}", CultureInfo.CurrentUICulture.TwoLetterISOLanguageName)
         : null;
 
     private string SectionHref(string? anchorId)
@@ -367,6 +473,25 @@
 
     protected override void OnParametersSet()
     {
+        Article = null;
+        if (IsStandaloneArticle)
+        {
+            Article = ArticleResolver.Resolve(CurrentLanguage, CountrySlug, CategorySlug, ArticleKey);
+            if (Article is null)
+            {
+                _renderedEntries = Array.Empty<RenderedInformationEntry>();
+                Navigation.NotFound();
+                return;
+            }
+
+            _renderedEntries =
+            [
+                new RenderedInformationEntry(Article.Entry, Article.Translation,
+                    Catalog.OfficialSources.Where(source => source.InformationEntryId == Article.Entry.Id).ToArray())
+            ];
+            return;
+        }
+
         if (Country is null || SelectedCategory is null)
         {
             Navigation.NotFound();

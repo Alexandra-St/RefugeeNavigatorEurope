@@ -93,7 +93,7 @@ public sealed class AboutStatisticsTests
     [Fact]
     public void AboutPageUsesExpectedRoute()
     {
-        Assert.Equal("/about", Assert.Single(typeof(About).GetCustomAttributes<RouteAttribute>()).Template);
+        LocalizedRouteAssertions.HasRouteSet(typeof(About), "/about");
     }
 
     private static CatalogData WithStatuses(CatalogData catalog, HashSet<Guid> entryIds, VerificationStatus status)

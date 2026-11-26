@@ -343,7 +343,7 @@ public sealed class NetherlandsContentIntegrationTests
         Assert.Contains(name, home);
         Assert.Contains(locationName, home);
         Assert.Contains("🇳🇱", home);
-        Assert.Contains("href=\"/countries/netherlands\"", home);
+        Assert.Contains($"href=\"/{language}/countries/netherlands\"", home);
         Assert.DoesNotContain("Country.Netherlands", home, StringComparison.Ordinal);
 
         var overview = WebUtility.HtmlDecode(await RenderAsync<CountryOverview>(language,
@@ -351,7 +351,8 @@ public sealed class NetherlandsContentIntegrationTests
             "http://localhost/countries/netherlands"));
         Assert.Contains(name, overview);
         Assert.Contains(locationName, overview);
-        Assert.Equal(6, overview.Split("href=\"/countries/netherlands/categories/", StringSplitOptions.None).Length - 1);
+        Assert.Equal(6, Categories.Length);
+        LocalizedRouteAssertions.HasCategoryLinks(overview, language, "netherlands", Categories);
         foreach (var category in Categories)
             Assert.Contains($"/countries/netherlands/categories/{category}", overview);
         Assert.DoesNotContain("Country.Netherlands", overview, StringComparison.Ordinal);

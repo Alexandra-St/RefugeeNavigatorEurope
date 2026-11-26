@@ -876,7 +876,7 @@ public sealed class CountryComparisonTests
                 Assert.Contains($"href=\"{source.Url.AbsoluteUri}\"", productionHtml);
             }
             var topic = Assert.Single(facts.Topics, item => item.Aspects.Any(aspect => aspect.Facts.Contains(fact)));
-            Assert.Contains($"/countries/czechia/categories/{topic.CategorySlug}#entry-{fact.InformationEntryId:N}", productionHtml);
+            Assert.Contains($"href=\"/{language}/articles/czechia/{topic.CategorySlug}/{fact.InformationEntryId:D}#entry-{fact.InformationEntryId:N}\"", productionHtml);
         }
 
         foreach (var category in new[] { "temporary-protection", "employment", "healthcare", "housing", "education", "social-assistance" })
@@ -930,7 +930,7 @@ public sealed class CountryComparisonTests
         Assert.Contains("class=\"comparison-topic\"", productionHtml);
         Assert.Contains(GetResource("Compare.ReadDetails", "en"), productionHtml);
         Assert.Contains("class=\"source-details\"", productionHtml);
-        Assert.Contains("href=\"/countries/germany/categories/employment#entry-", productionHtml);
+        Assert.Matches("href=\"/en/articles/germany/employment/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}#entry-[0-9a-f]{32}\"", productionHtml);
         Assert.Matches("<details\\b[^>]*class=\"full-article-comparison\"[^>]*>", productionHtml);
         Assert.DoesNotMatch("<details\\b[^>]*class=\"full-article-comparison\"[^>]*\\bopen(?:\\s|>)", productionHtml);
         Assert.Contains("class=\"comparison-topic\"", localHtml);
@@ -1153,7 +1153,7 @@ public sealed class CountryComparisonTests
             Assert.Contains(germanyFact.IsAvailable
                 ? germanyFact.Values[language]
                 : GetResource("Compare.NotEstablishedInReviewedSources", language), allHtml);
-            Assert.Contains($"/countries/spain/categories/{topic.CategorySlug}#entry-{spainFact.InformationEntryId:N}", allHtml);
+            Assert.Contains($"href=\"/{language}/articles/spain/{topic.CategorySlug}/{spainFact.InformationEntryId:D}#entry-{spainFact.InformationEntryId:N}\"", allHtml);
 
             if (spainFact.IsAvailable)
             {
@@ -1364,7 +1364,7 @@ public sealed class CountryComparisonTests
                     var translation = Assert.Single(catalog.InformationEntryTranslations, item =>
                         item.InformationEntryId == articleId && item.LanguageCode == language);
                     Assert.Contains(translation.Title, visibleHtml);
-                    Assert.Contains($"href=\"/countries/{countrySlug}/categories/{category.Slug}#entry-{articleId:N}\"", html);
+                    Assert.Contains($"href=\"/{language}/articles/{countrySlug}/{category.Slug}/{articleId:D}#entry-{articleId:N}\"", html);
                 }
 
                 var structuredTopic = Assert.Single(factCatalog.Topics, item => item.TopicResourceKey == topic.ResourceKey);
@@ -1652,7 +1652,7 @@ public sealed class CountryComparisonTests
                 {
                     Assert.DoesNotContain(translation.Title, visibleHtml);
                     Assert.DoesNotContain(translation.Summary, visibleHtml);
-                    Assert.DoesNotContain($"href=\"/countries/{countrySlug}/categories/{categorySlug}#entry-{entryId:N}\"", html);
+                    Assert.DoesNotContain($"href=\"/{language}/articles/{countrySlug}/{categorySlug}/{entryId:D}#entry-{entryId:N}\"", html);
                     continue;
                 }
                 Assert.Equal(VerificationStatus.Verified, translation.VerificationStatus);
@@ -1668,7 +1668,7 @@ public sealed class CountryComparisonTests
                 {
                     throw new Xunit.Sdk.XunitException($"Inline source rendering failed for {countrySlug}/{categorySlug}/{language}: {exception.Message}");
                 }
-                Assert.Contains($"href=\"/countries/{countrySlug}/categories/{categorySlug}#entry-{entryId:N}\"", html);
+                Assert.Contains($"href=\"/{language}/articles/{countrySlug}/{categorySlug}/{entryId:D}#entry-{entryId:N}\"", html);
 
                 foreach (var source in sources)
                 {
@@ -1795,7 +1795,7 @@ public sealed class CountryComparisonTests
 
         Assert.Contains(GetResource("Compare.InformationUnavailable", language), visibleHtml);
         Assert.Contains("class=\"topic-country\"", html);
-        Assert.Contains("href=\"/countries/germany/categories/healthcare#entry-", html);
+        Assert.Matches($"href=\"/{language}/articles/germany/healthcare/[0-9a-f]{{8}}-[0-9a-f]{{4}}-[0-9a-f]{{4}}-[0-9a-f]{{4}}-[0-9a-f]{{12}}#entry-[0-9a-f]{{32}}\"", html);
     }
 
     [Theory]
@@ -1884,7 +1884,7 @@ public sealed class CountryComparisonTests
         Assert.Contains("name=\"country2\" required", initial);
         Assert.Contains("name=\"category\" required", initial);
         Assert.DoesNotContain("class=\"comparison-topic\"", initial);
-        Assert.Contains("href=\"/compare\"", initial);
+        Assert.Contains($"href=\"/{language}/compare\"", initial);
 
         var partial = await RenderAsync(await LoadCatalogAsync(), language, "?country1=denmark");
         Assert.Contains("selected", partial);

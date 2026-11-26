@@ -1,7 +1,11 @@
 @page "/not-found"
+@page "/en/not-found"
+@page "/uk/not-found"
+@page "/ru/not-found"
+@using Microsoft.AspNetCore.Diagnostics
 @inject IStringLocalizer<SharedResource> Localizer
 
-<PageTitle>@Localizer["NotFound.PageTitle"]</PageTitle>
+<FilteredPageSeo Title="@Localizer["NotFound.PageTitle"].Value" />
 
 <HomeLink Placement="top" />
 
@@ -20,3 +24,30 @@
         </footer>
     </div>
 </main>
+
+@code {
+    [CascadingParameter] public HttpContext? RequestContext { get; set; }
+
+    protected override void OnInitialized()
+    {
+        // This SSR endpoint renders the error page itself, so it must not re-execute in the same request scope.
+        if (RequestContext?.Response is { HasStarted: false, StatusCode: StatusCodes.Status200OK } response)
+        {
+            if (RequestContext.Features.Get<IStatusCodePagesFeature>() is { } statusCodePages)
+            {
+                statusCodePages.Enabled = false;
+            }
+            // Blazor discards buffered HTML for an unhandled 404 before flushing.
+            // Set the status when headers are about to be sent, after that SSR decision.
+            response.OnStarting(static state =>
+            {
+                var pendingResponse = (HttpResponse)state;
+                if (pendingResponse.StatusCode == StatusCodes.Status200OK)
+                {
+                    pendingResponse.StatusCode = StatusCodes.Status404NotFound;
+                }
+                return Task.CompletedTask;
+            }, response);
+        }
+    }
+}

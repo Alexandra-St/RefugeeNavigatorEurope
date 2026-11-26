@@ -4,7 +4,9 @@
 @using RefugeeNavigator.Data
 @using RefugeeNavigator.Web.Guides
 @using RefugeeNavigator.Web.Localization
+@using RefugeeNavigator.Web.Seo
 @inject IStringLocalizer<SharedResource> Localizer
+@inject IServiceProvider Services
 
 @if (!IsAvailable || Guide is null)
 {
@@ -17,7 +19,25 @@ else
 {
     var language = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
     var guideText = Guide.Translations[language];
-    <PageTitle>@guideText.Title</PageTitle>
+    var country = Catalog.Countries.FirstOrDefault(item => item.Id == Guide.CountryId);
+    var countrySlug = country?.Slug;
+    var metadata = countrySlug is null ? null : Services.GetService<SeoMetadataGenerator>()?.CreateGuide(
+        guideText.Title, guideText.Description, countrySlug, Guide.Slug);
+    @if (metadata is not null)
+    {
+        var parents = new List<SeoBreadcrumb> { new(Localizer["Common.Home"].Value, "/") };
+        if (country is not null && Services.GetService<SeoTranslationAvailability>()?.Country(country.Slug)
+            .Any(alternate => alternate.Language == language) == true)
+        {
+            parents.Add(new(Localizer[CatalogLocalizationKeyResolver.CountryName(country)].Value,
+                $"/countries/{country.Slug}"));
+        }
+        <SharedSeoMetadata Metadata="@metadata" Parents="@parents" />
+    }
+    else
+    {
+        <PageTitle>@guideText.Title</PageTitle>
+    }
     <HomeLink Placement="top" />
     <main id="main-content" class="guide-page">
         <div class="guide-shell">
@@ -110,7 +130,10 @@ else
                             </ul>
                         </section>
 
-                        <a class="article-link" href="@BuildArticleUrl(step.ArticleId)">@Localizer["Guide.ReadArticle"]</a>
+                        @if (BuildArticleUrl(step.ArticleId) is { } articleUrl)
+                        {
+                            <a class="article-link" href="@articleUrl">@Localizer["Guide.ReadArticle"]</a>
+                        }
                     </article>
 
                     <nav class="step-navigation" aria-label="@Localizer["Guide.Progress", StepIndex + 1, orderedSteps.Length]">
@@ -144,12 +167,11 @@ else
     [Parameter] public EventCallback OnNext { get; set; }
     [Parameter] public EventCallback OnChangeSituation { get; set; }
 
-    private string BuildArticleUrl(Guid articleId)
+    private string? BuildArticleUrl(Guid articleId)
     {
         var article = Catalog.InformationEntries.Single(entry => entry.Id == articleId);
-        var country = Catalog.Countries.Single(item => item.Id == article.CountryId);
-        var category = Catalog.Categories.Single(item => item.Id == article.CategoryId);
-        return $"/countries/{country.Slug}/categories/{category.Slug}#entry-{articleId:N}";
+        var path = new ArticleUrlResolver(Catalog).Generate(article, CultureInfo.CurrentUICulture.TwoLetterISOLanguageName);
+        return path is null ? null : $"{path}#entry-{articleId:N}";
     }
 
     private string ActionKindLabel(GuideActionKind kind) => Localizer[kind switch

@@ -40,6 +40,18 @@ unset RENDER_TARGET_URL PRIVATE_ALPHA_USERNAME PRIVATE_ALPHA_PASSWORD
 - [ ] **MANUAL — NOT YET VERIFIED:** Review the published Denmark employment article and its source links.
 - [ ] **MANUAL — NOT YET VERIFIED:** Check page layout, text wrapping, and source list visually.
 
+## Public launch privacy and contact checks
+
+- [ ] **LEGAL REVIEW — NOT YET RESOLVED:** Determine whether Decreto-Lei n.º 7/2004, Articles 3 and 10, apply to the project's actual activities and what operator identification/contact information must be published. Do not infer an answer from the operator being an individual or from this checklist.
+- [ ] **LEGAL REVIEW — NOT YET RESOLVED:** Confirm that the localized Contact form alone is a sufficient public operator contact arrangement; do not publish a personal email or home address without explicit operator approval.
+- [ ] **LEGAL REVIEW — NOT YET RESOLVED:** Confirm the lawful basis for each processing purpose and any required balancing assessment; do not use consent as a blanket basis.
+- [ ] **PROVIDER REVIEW — NOT YET RESOLVED:** Confirm the Formspree DPA and international-transfer safeguards applicable to this account. Provider policy statements or a linked DPA do not establish an executed or applicable customer agreement.
+- [ ] **PROVIDER CONFIGURATION — NOT YET VERIFIED:** Confirm that the Formspree dashboard setting labelled “HTTP API disabled” is compatible with the application’s HTTPS JSON POST to the configured Formspree form endpoint; verify this during the synthetic production submission.
+- [ ] **PROVIDER REVIEW — NOT YET RESOLVED:** Review the implications of the existing Ko-fi support link for the project's processing and disclosures.
+- [ ] **MANDATORY BEFORE PUBLIC LAUNCH — NOT YET VERIFIED:** With Basic Auth still enabled, submit one synthetic message through the deployed Contact form; confirm Formspree accepts/processes it and the operator receives it in Proton Mail; verify localized success feedback; inspect application logs to ensure message contents are not exposed. Do not use real personal data in the synthetic submission.
+
+The Privacy page records the operator-confirmed 12-month correspondence-retention period, Render Hobby application-log period, and current provider configuration. Actual production delivery from Contact through Formspree to Proton Mail remains unverified until the check above passes.
+
 ## Family testing
 
 - [ ] **MANUAL — NOT YET VERIFIED:** Share the URL only after approval.

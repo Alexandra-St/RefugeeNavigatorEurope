@@ -237,7 +237,7 @@ public sealed class IrelandContentIntegrationTests
         var catalog = await Catalog.Value;
         var productionHome = await RenderAsync<Home>("Production", language);
         Assert.Equal(19, Regex.Matches(productionHome.Html, "class=\"country-card\"").Count);
-        Assert.Contains("href=\"/countries/ireland\"", productionHome.Html);
+        Assert.Contains($"href=\"/{language}/countries/ireland\"", productionHome.Html);
         var productionSearch = await RenderAsync<Search>("Production", language, "/search");
         Assert.Contains("ireland", SelectValues(productionSearch.Html, "country"));
         var productionOverview = await RenderAsync<CountryOverview>("Production", language, "/countries/ireland",
@@ -261,7 +261,7 @@ public sealed class IrelandContentIntegrationTests
 
         var developmentHome = await RenderAsync<Home>("Development", language);
         Assert.Equal(19, Regex.Matches(developmentHome.Html, "class=\"country-card\"").Count);
-        Assert.Contains("href=\"/countries/ireland\"", developmentHome.Html);
+        Assert.Contains($"href=\"/{language}/countries/ireland\"", developmentHome.Html);
         var developmentOverview = await RenderAsync<CountryOverview>("Development", language, "/countries/ireland",
             new() { [nameof(CountryOverview.CountrySlug)] = "ireland" });
         Assert.False(developmentOverview.NotFound);

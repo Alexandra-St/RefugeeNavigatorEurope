@@ -291,13 +291,13 @@ public sealed class DenmarkTemporaryProtectionApplicationArticleTests
         var catalog = await LoadCatalogWithTargetTranslationStatusAsync("en", VerificationStatus.NeedsReview);
         var searchHtml = await RenderAsync<Search>(catalog, "en",
             "/search?q=Temporary%20protection%20in%20Denmark%3A%20how%20to%20apply&country=denmark&category=temporary-protection");
-        Assert.DoesNotContain("/countries/denmark/categories/temporary-protection", searchHtml);
+        Assert.DoesNotContain($"/en/articles/denmark/temporary-protection/{ArticleId:D}", searchHtml);
         Assert.DoesNotContain("Temporary protection in Denmark: how to apply and extend your permit", WebUtility.HtmlDecode(searchHtml));
 
         var compareHtml = await RenderAsync<Compare>(catalog, "en",
             "/compare?country1=denmark&country2=germany&category=temporary-protection");
         Assert.DoesNotContain("Temporary protection in Denmark: how to apply and extend your permit", WebUtility.HtmlDecode(compareHtml));
-        Assert.DoesNotContain($"/countries/denmark/categories/temporary-protection#entry-{ArticleId:N}", compareHtml);
+        Assert.DoesNotContain($"/en/articles/denmark/temporary-protection/{ArticleId:D}", compareHtml);
     }
 
     private static async Task<CatalogData> LoadCatalogWithTargetTranslationStatusAsync(

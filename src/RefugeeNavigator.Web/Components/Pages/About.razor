@@ -1,4 +1,7 @@
 @page "/about"
+@page "/en/about"
+@page "/uk/about"
+@page "/ru/about"
 @using System.Globalization
 @using RefugeeNavigator.Data
 @using RefugeeNavigator.Web.Content
@@ -7,17 +10,34 @@
 @inject CatalogData Catalog
 @inject ComparisonFactCatalog ComparisonFacts
 @inject IStringLocalizer<SharedResource> Localizer
+@inject SeoMetadataGenerator SeoGenerator
 
-<PageTitle>@Localizer["About.PageTitle"]</PageTitle>
-<HeadContent>
-    <meta name="description" content="@Localizer["About.MetaDescription"]" />
-    <meta property="og:title" content="@Localizer["About.PageTitle"]" />
-    <meta property="og:description" content="@Localizer["About.MetaDescription"]" />
-</HeadContent>
+<SharedSeoMetadata Metadata="@AboutSeo" Kind="StructuredPageKind.AboutPage" />
 
 @{
     var stats = AboutStatisticsProvider.Create(Catalog, ComparisonFacts,
         SupportedCultures.All.Select(culture => culture.TwoLetterISOLanguageName).ToArray());
+}
+
+@code {
+    private SeoMetadata AboutSeo
+    {
+        get
+        {
+            var culture = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+            const string logicalPath = "/about";
+            var alternatives = SupportedCultures.All.Select(item =>
+            {
+                var language = item.TwoLetterISOLanguageName;
+                return (language, LocalizedUrl.ForCurrentCulture(logicalPath, language));
+            });
+            return SeoGenerator.Create(
+                Localizer["About.PageTitle"].Value,
+                Localizer["About.MetaDescription"].Value,
+                LocalizedUrl.ForCurrentCulture(logicalPath, culture),
+                alternatives);
+        }
+    }
 }
 
 <main id="main-content" class="about-page">

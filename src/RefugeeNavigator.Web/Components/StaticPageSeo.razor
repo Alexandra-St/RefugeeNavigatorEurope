@@ -1,0 +1,23 @@
+@inject IServiceProvider Services
+
+@if (Services.GetService<SeoMetadataGenerator>()?.CreateStaticPage(Title, Description, Path) is { } metadata)
+{
+    <SharedSeoMetadata Metadata="@metadata" Kind="@Kind" />
+}
+else
+{
+    <PageTitle>@Title</PageTitle>
+}
+
+@code {
+    private StructuredPageKind Kind => Path switch
+    {
+        "/" => StructuredPageKind.Home,
+        "/contact" => StructuredPageKind.ContactPage,
+        _ => StructuredPageKind.WebPage
+    };
+
+    [Parameter, EditorRequired] public string Path { get; set; } = string.Empty;
+    [Parameter, EditorRequired] public string Title { get; set; } = string.Empty;
+    [Parameter, EditorRequired] public string Description { get; set; } = string.Empty;
+}

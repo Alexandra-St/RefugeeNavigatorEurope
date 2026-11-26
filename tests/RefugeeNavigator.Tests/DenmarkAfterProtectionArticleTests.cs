@@ -1,6 +1,7 @@
 using System.Globalization;
 using System.Net;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using System.Text.Json.Nodes;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -95,6 +96,7 @@ public sealed class DenmarkAfterProtectionArticleTests
                 [nameof(Category.CategorySlug)] = "temporary-protection"
             });
         var visibleHtml = WebUtility.HtmlDecode(html);
+        var visibleText = WebUtility.HtmlDecode(Regex.Replace(html, "<[^>]*>", string.Empty));
 
         Assert.Contains(expectedTitle, visibleHtml);
         Assert.Contains(expectedRegulation, visibleHtml);
@@ -105,7 +107,8 @@ public sealed class DenmarkAfterProtectionArticleTests
         Assert.DoesNotContain("Перевірено", visibleHtml);
         Assert.Equal(RequiredSources.Length, RequiredSources.Count(url => html.Contains($"href=\"{url}\"", StringComparison.Ordinal)));
         Assert.Contains(expectedSourceLabel, visibleHtml);
-        Assert.DoesNotContain("2d106fd3-e981-4ef9-9733-568b654dfca5", visibleHtml);
+        Assert.DoesNotContain("2d106fd3-e981-4ef9-9733-568b654dfca5", visibleText);
+        Assert.Contains($"href=\"/{language}/articles/denmark/temporary-protection/{ArticleId:D}\"", html);
         Assert.Single(System.Text.RegularExpressions.Regex.Matches(html, "<h1\\b").Cast<System.Text.RegularExpressions.Match>());
         var existingArticle = System.Text.RegularExpressions.Regex.Match(
             html,
@@ -303,7 +306,7 @@ public sealed class DenmarkAfterProtectionArticleTests
         var catalog = await LoadProductionCatalogAsync();
         var searchHtml = await RenderAsync<Search>(catalog, "en",
             "/search?q=How%20to%20access%20healthcare%20in%20Denmark&country=denmark&category=healthcare");
-        Assert.Contains("href=\"/countries/denmark/categories/healthcare\"", searchHtml);
+        Assert.Contains($"href=\"/en/articles/denmark/healthcare/{HealthcareArticleId:D}\"", searchHtml);
 
         var categoryHtml = await RenderAsync<Category>(catalog, "en",
             "/countries/denmark/categories/healthcare",

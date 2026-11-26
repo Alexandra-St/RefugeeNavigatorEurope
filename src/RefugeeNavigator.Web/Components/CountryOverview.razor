@@ -5,15 +5,30 @@
 @using RefugeeNavigator.Web.Content
 @using RefugeeNavigator.Web.Guides
 @page "/countries/{CountrySlug}"
+@page "/en/countries/{CountrySlug}"
+@page "/uk/countries/{CountrySlug}"
+@page "/ru/countries/{CountrySlug}"
 @inject CatalogData Catalog
 @inject NavigationManager Navigation
 @inject IStringLocalizer<SharedResource> Localizer
 @inject StepByStepGuideCatalog GuideCatalog
 @inject IWebHostEnvironment HostEnvironment
+@inject IServiceProvider Services
 
-@if (Country is not null)
+@if (Country is { } resolvedCountry)
 {
-<PageTitle>@Localizer["Country.PageTitle", CountryDisplayName]</PageTitle>
+    var title = Localizer["Country.PageTitle", CountryDisplayName].Value;
+    var metadata = Services.GetService<SeoMetadataGenerator>()?.CreateCountry(
+        title, Localizer["Country.LivingDescription", CountryLocationName].Value, resolvedCountry.Slug);
+    @if (metadata is not null)
+    {
+        <SharedSeoMetadata Metadata="@metadata" Kind="StructuredPageKind.CollectionPage" Name="@CountryDisplayName"
+                           Parents="@(new SeoBreadcrumb[] { new(Localizer["Common.Home"].Value, "/") })" />
+    }
+    else
+    {
+        <PageTitle>@title</PageTitle>
+    }
 
 <HomeLink Placement="top" />
 
@@ -37,7 +52,7 @@
                     <h2 id="country-guide-heading">@Localizer["Country.GuideCalloutTitle"]</h2>
                     <p>@Localizer["Country.GuideCalloutDescription"]</p>
                 </div>
-                <a href="@($"/guides/{country.Slug}/{guide.Slug}")">@Localizer["Country.GuideCalloutLink"]</a>
+                <a href="@LocalizedUrl.ForCurrentCulture($"/guides/{country.Slug}/{guide.Slug}", CultureInfo.CurrentUICulture.TwoLetterISOLanguageName)">@Localizer["Country.GuideCalloutLink"]</a>
             </aside>
         }
 
@@ -59,7 +74,7 @@
                             <h3>@categoryName</h3>
                         </div>
                         <p>@categoryDescription</p>
-                        <a class="category-link" href="/countries/@CountrySlug/categories/@category.Slug">@Localizer["Country.ExploreCategory", categoryName] <span aria-hidden="true">→</span></a>
+                        <a class="category-link" href="@LocalizedUrl.ForCurrentCulture($"/countries/{CountrySlug}/categories/{category.Slug}", CultureInfo.CurrentUICulture.TwoLetterISOLanguageName)">@Localizer["Country.ExploreCategory", categoryName] <span aria-hidden="true">→</span></a>
                     </article>
                 }
             </div>

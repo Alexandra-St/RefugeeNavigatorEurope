@@ -77,8 +77,8 @@ public sealed class ArticleSearchTests
 
         Assert.Contains("value=\" job \"", html);
         Assert.Contains("selected", html);
-        Assert.Contains("href=\"/search\"", html);
-        Assert.Contains("href=\"/countries/denmark/categories/employment\"", html);
+        Assert.Contains("href=\"/en/search\"", html);
+        Assert.Contains($"href=\"/en/articles/denmark/employment/{FirstEntryId:D}\"", html);
         Assert.Contains("Job &lt;guide&gt;", html);
         Assert.Contains("&amp; practical", html);
         Assert.DoesNotContain("<guide>", html);

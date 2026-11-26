@@ -5,9 +5,9 @@
 <header class="site-header">
     <nav class="primary-navigation" aria-label="@Localizer["Navigation.Label"]">
         <ul>
-            <li><a class="brand-link" href="/" aria-current="@CurrentPage("/")">Refugee Navigator</a></li>
-            <li><a href="/search" aria-current="@CurrentPage("/search")">@Localizer["Navigation.Search"]</a></li>
-            <li><a href="/compare" aria-current="@CurrentPage("/compare")">@Localizer["Navigation.Compare"]</a></li>
+            <li><a class="brand-link" href="@Url("/")" aria-current="@CurrentPage("/")">Refugee Navigator</a></li>
+            <li><a href="@Url("/search")" aria-current="@CurrentPage("/search")">@Localizer["Navigation.Search"]</a></li>
+            <li><a href="@Url("/compare")" aria-current="@CurrentPage("/compare")">@Localizer["Navigation.Compare"]</a></li>
         </ul>
     </nav>
     <LanguageSwitcher />
@@ -15,11 +15,14 @@
 </header>
 
 @code {
+    private string Url(string path) => LocalizedUrl.ForCurrentCulture(path, CultureInfo.CurrentUICulture.TwoLetterISOLanguageName);
     private string CurrentPath
     {
         get
         {
             var path = new Uri(Navigation.Uri).AbsolutePath.TrimEnd('/');
+            var first = path.Split('/', StringSplitOptions.RemoveEmptyEntries).FirstOrDefault();
+            if (first is "en" or "uk" or "ru") path = path.Length == first.Length + 1 ? string.Empty : path[(first.Length + 1)..];
             return path.Length == 0 ? "/" : path;
         }
     }

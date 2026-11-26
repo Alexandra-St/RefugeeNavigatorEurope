@@ -270,7 +270,7 @@ public sealed class StepByStepGuideTests
                 Assert.Contains(translation.Explanation, html);
                 Assert.Contains(translation.Authority, html);
                 Assert.Contains(translation.Warning, html);
-                Assert.Contains($"/countries/{country.Slug}/categories/{category.Slug}#entry-{step.ArticleId:N}", html);
+                Assert.Contains($"/{language}/articles/{country.Slug}/{category.Slug}/{step.ArticleId:D}#entry-{step.ArticleId:N}", html);
                 Assert.All(step.OfficialSourceIds, id => Assert.Contains(catalog.OfficialSources.Single(source => source.Id == id).Url.AbsoluteUri, html));
             }
         }
@@ -459,9 +459,16 @@ public sealed class StepByStepGuideTests
     [Fact]
     public void GuidePageUsesCountryAndGuideSlugRoute()
     {
-        var route = typeof(RefugeeNavigator.Web.Components.Pages.StepByStepGuide)
-            .GetCustomAttributes(typeof(RouteAttribute), inherit: false).Cast<RouteAttribute>().Single();
-        Assert.Equal("/guides/{CountrySlug}/{GuideSlug}", route.Template);
+        var routes = typeof(RefugeeNavigator.Web.Components.Pages.StepByStepGuide)
+            .GetCustomAttributes(typeof(RouteAttribute), inherit: false).Cast<RouteAttribute>()
+            .Select(route => route.Template).OrderBy(template => template, StringComparer.Ordinal).ToArray();
+        Assert.Equal(new[]
+        {
+            "/en/guides/{CountrySlug}/{GuideSlug}",
+            "/guides/{CountrySlug}/{GuideSlug}",
+            "/ru/guides/{CountrySlug}/{GuideSlug}",
+            "/uk/guides/{CountrySlug}/{GuideSlug}"
+        }.OrderBy(template => template, StringComparer.Ordinal), routes);
     }
 
     [Fact]
@@ -594,7 +601,7 @@ public sealed class StepByStepGuideTests
         Assert.Contains(text.Warning, html);
         Assert.Contains(source.Url.AbsoluteUri, html);
         AssertExternalSourceLink(renderedHtml, source, language);
-        Assert.Contains($"/countries/germany/categories/temporary-protection#entry-{step.ArticleId:N}", html);
+        Assert.Contains($"/{language}/articles/germany/temporary-protection/{step.ArticleId:D}#entry-{step.ArticleId:N}", html);
         Assert.Contains(Resources.GetString("Guide.ChangeSituation", CultureInfo.GetCultureInfo(language))!, html);
         Assert.Contains(Resources.GetString("Guide.Next", CultureInfo.GetCultureInfo(language))!, html);
         Assert.Contains("<progress", html);
@@ -615,8 +622,8 @@ public sealed class StepByStepGuideTests
         var scenario = guide.Scenarios.OrderBy(item => item.Order).First();
         var step = scenario.Steps.OrderBy(item => item.Order).First();
         var html = await RenderAsync(language, Environments.Development, scenario, 0, guide);
-        Assert.Contains($"/countries/denmark/categories/temporary-protection#entry-{step.ArticleId:N}", html);
-        Assert.DoesNotContain("/countries/germany/categories", html);
+        Assert.Contains($"/{language}/articles/denmark/temporary-protection/{step.ArticleId:D}#entry-{step.ArticleId:N}", html);
+        Assert.DoesNotContain($"/{language}/articles/germany/", html);
         Assert.DoesNotContain(Resources.GetString("Guide.DraftPreviewNotice", CultureInfo.GetCultureInfo(language))!, System.Net.WebUtility.HtmlDecode(html));
     }
 

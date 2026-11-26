@@ -1,4 +1,7 @@
 @page "/"
+@page "/en"
+@page "/uk"
+@page "/ru"
 @using System.Globalization
 @using RefugeeNavigator.Data
 @using Microsoft.AspNetCore.Hosting
@@ -7,7 +10,8 @@
 @inject IWebHostEnvironment HostEnvironment
 @inject IStringLocalizer<SharedResource> Localizer
 
-<PageTitle>@Localizer["Home.PageTitle"]</PageTitle>
+<StaticPageSeo Path="/" Title="@Localizer["Home.PageTitle"].Value"
+               Description="@Localizer["Home.IntroductionDescription"].Value" />
 
 <main id="main-content" class="landing-page">
     <div class="page-content">
@@ -27,13 +31,13 @@
                 <article class="feature-card">
                     <h3>@Localizer["Home.SearchTitle"]</h3>
                     <p>@Localizer["Home.SearchDescription"]</p>
-                    <a href="/search">@Localizer["Home.OpenSearch"] <span aria-hidden="true">→</span></a>
+                    <a href="@LocalizedUrl.ForCurrentCulture("/search", CultureInfo.CurrentUICulture.TwoLetterISOLanguageName)">@Localizer["Home.OpenSearch"] <span aria-hidden="true">→</span></a>
                 </article>
 
                 <article class="feature-card">
                     <h3>@Localizer["Home.CompareTitle"]</h3>
                     <p>@Localizer["Home.CompareDescription"]</p>
-                    <a href="/compare">@Localizer["Home.OpenComparison"] <span aria-hidden="true">→</span></a>
+                    <a href="@LocalizedUrl.ForCurrentCulture("/compare", CultureInfo.CurrentUICulture.TwoLetterISOLanguageName)">@Localizer["Home.OpenComparison"] <span aria-hidden="true">→</span></a>
                 </article>
             </div>
         </div>
@@ -57,7 +61,7 @@
                             <span class="country-flag" aria-hidden="true">@CountryFlag(country.Slug)</span>
                         </h3>
                         <p>@Localizer["Home.CountryDescription", countryLocationName]</p>
-                        <a href="/countries/@country.Slug">
+                        <a href="@LocalizedUrl.ForCurrentCulture($"/countries/{country.Slug}", CultureInfo.CurrentUICulture.TwoLetterISOLanguageName)">
                             @Localizer["Home.ExploreCountry", countryDisplayName] <span aria-hidden="true">→</span>
                         </a>
                     </article>

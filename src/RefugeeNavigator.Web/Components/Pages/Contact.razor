@@ -1,15 +1,14 @@
 @page "/contact"
+@page "/en/contact"
+@page "/uk/contact"
+@page "/ru/contact"
 @rendermode InteractiveServer
 @using RefugeeNavigator.Web.Contact
 @inject ContactSubmissionService SubmissionService
 @inject IStringLocalizer<SharedResource> Localizer
 
-<PageTitle>@Localizer["Contact.PageTitle"]</PageTitle>
-<HeadContent>
-    <meta name="description" content="@Localizer["Contact.MetaDescription"]" />
-    <meta property="og:title" content="@Localizer["Contact.PageTitle"]" />
-    <meta property="og:description" content="@Localizer["Contact.MetaDescription"]" />
-</HeadContent>
+<StaticPageSeo Path="/contact" Title="@Localizer["Contact.PageTitle"].Value"
+               Description="@Localizer["Contact.MetaDescription"].Value" />
 
 <main id="main-content" class="contact-page">
     <div class="contact-content">
@@ -20,7 +19,7 @@
 
         <section class="contact-form-section" aria-labelledby="contact-form-heading">
             <h2 id="contact-form-heading">@Localizer["Contact.FormHeading"]</h2>
-            <p class="contact-privacy-link">@Localizer["Contact.PrivacyLinkPrefix"] <a href="/privacy">@Localizer["Contact.PrivacyLink"]</a></p>
+            <p class="contact-privacy-link">@Localizer["Contact.PrivacyLinkPrefix"] <a href="@LocalizedUrl.ForCurrentCulture("/privacy", CultureInfo.CurrentUICulture.TwoLetterISOLanguageName)">@Localizer["Contact.PrivacyLink"]</a></p>
             @if (!SubmissionService.IsAvailable)
             {
                 <p class="contact-notice" role="status">@Localizer["Contact.Unavailable"]</p>

@@ -1,4 +1,7 @@
 @page "/compare"
+@page "/en/compare"
+@page "/uk/compare"
+@page "/ru/compare"
 @using System.Globalization
 @using Microsoft.AspNetCore.Hosting
 @using Microsoft.AspNetCore.WebUtilities
@@ -13,7 +16,15 @@
 @inject NavigationManager Navigation
 @inject IStringLocalizer<SharedResource> Localizer
 
-<PageTitle>@Localizer["Compare.PageTitle"]</PageTitle>
+@if (SeoRoutePolicy.HasFunctionalQuery("/compare", QueryParameters))
+{
+    <FilteredPageSeo Title="@Localizer["Compare.PageTitle"].Value" />
+}
+else
+{
+    <StaticPageSeo Path="/compare" Title="@Localizer["Compare.PageTitle"].Value"
+                   Description="@Localizer["Compare.Description"].Value" />
+}
 
 <HomeLink Placement="top" />
 
@@ -24,7 +35,7 @@
             <p class="description">@Localizer["Compare.Description"]</p>
         </header>
 
-        <form class="compare-form" method="get" action="/compare">
+        <form class="compare-form" method="get" action="@LocalizedUrl.ForCurrentCulture("/compare", CultureInfo.CurrentUICulture.TwoLetterISOLanguageName)">
             <div class="selection-grid">
                 <div class="selection-field">
                     <label for="country-one">@Localizer["Compare.CountryOne"]</label>
@@ -60,7 +71,7 @@
             </div>
             <div class="form-actions">
                 <button type="submit">@Localizer["Compare.Submit"]</button>
-                <a class="reset-link" href="/compare">@Localizer["Compare.Reset"]</a>
+                <a class="reset-link" href="@LocalizedUrl.ForCurrentCulture("/compare", CultureInfo.CurrentUICulture.TwoLetterISOLanguageName)">@Localizer["Compare.Reset"]</a>
             </div>
         </form>
 
@@ -157,7 +168,10 @@
                                                 }
                                             </div>
                                         </details>
-                                        <a class="article-link" href="/countries/@country.Slug/categories/@topic.CategorySlug#entry-@article.Entry!.Id.ToString("N")">@Localizer["Compare.OpenArticle"]</a>
+                                        @if (BuildArticleUrl(article.Entry!.Id) is { } articleUrl)
+                                        {
+                                            <a class="article-link" href="@articleUrl">@Localizer["Compare.OpenArticle"]</a>
+                                        }
                                     }
                                     else
                                     {
@@ -363,6 +377,15 @@
 </main>
 
 @code {
+    private ArticleUrlResolver ArticleResolver => new(Catalog);
+
+    private string? BuildArticleUrl(Guid articleId)
+    {
+        var entry = Catalog.InformationEntries.FirstOrDefault(item => item.Id == articleId);
+        var path = entry is null ? null : ArticleResolver.Generate(entry, CultureInfo.CurrentUICulture.TwoLetterISOLanguageName);
+        return path is null ? null : $"{path}#entry-{articleId:N}";
+    }
+
     private string SectionHref(string? anchorId)
     {
         if (string.IsNullOrWhiteSpace(anchorId))

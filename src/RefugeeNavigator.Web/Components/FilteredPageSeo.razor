@@ -1,0 +1,8 @@
+<PageTitle>@Title</PageTitle>
+<HeadContent>
+    <meta name="robots" content="noindex, follow" />
+</HeadContent>
+
+@code {
+    [Parameter, EditorRequired] public string Title { get; set; } = string.Empty;
+}

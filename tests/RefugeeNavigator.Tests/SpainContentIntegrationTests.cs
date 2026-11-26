@@ -255,7 +255,7 @@ public sealed class SpainContentIntegrationTests
         Assert.Contains(name, html);
         Assert.Contains(locationName, html);
         Assert.Contains("🇪🇸", html);
-        Assert.Contains("href=\"/countries/spain\"", html);
+        Assert.Contains($"href=\"/{language}/countries/spain\"", html);
     }
 
     [Theory]
@@ -269,13 +269,11 @@ public sealed class SpainContentIntegrationTests
             "http://localhost/countries/spain"));
 
         Assert.Contains(countryName, html);
-        Assert.Equal(6, html.Split("href=\"/countries/spain/categories/", StringSplitOptions.None).Length - 1);
+        Assert.Equal(6, Categories.Length);
+        LocalizedRouteAssertions.HasCategoryLinks(html, language, "spain", Categories);
         Assert.DoesNotContain("country-guide-callout", html, StringComparison.Ordinal);
+        LocalizedRouteAssertions.HasNoGuideLinks(html, "spain");
         Assert.DoesNotContain("Country.Spain", html, StringComparison.Ordinal);
-        foreach (var category in Categories)
-        {
-            Assert.Contains($"/countries/spain/categories/{category}", html);
-        }
     }
 
     [Theory]

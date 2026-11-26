@@ -1,7 +1,7 @@
 @inject IStringLocalizer<SharedResource> Localizer
 
 <div class="home-link-area @Placement">
-    <a class="home-return-link" href="/">
+    <a class="home-return-link" href="@LocalizedUrl.ForCurrentCulture("/", CultureInfo.CurrentUICulture.TwoLetterISOLanguageName)">
         <span aria-hidden="true">←</span>
         @Localizer["Common.Home"]
     </a>

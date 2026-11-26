@@ -1,0 +1,33 @@
+@using RefugeeNavigator.Web.Seo
+@using RefugeeNavigator.Web.Security
+@inject IServiceProvider Services
+@if (Metadata is not null)
+{
+    <PageTitle>@Metadata.Title</PageTitle>
+    <HeadContent>
+        <meta name="description" content="@Metadata.Description" />
+        <link rel="canonical" href="@Metadata.CanonicalUrl" />
+        @foreach (var alternate in Metadata.Alternates)
+        {
+            <link rel="alternate" hreflang="@alternate.Language" href="@alternate.Url" />
+        }
+        <meta property="og:title" content="@Metadata.OpenGraphTitle" />
+        <meta property="og:description" content="@Metadata.OpenGraphDescription" />
+        <meta property="og:url" content="@Metadata.OpenGraphUrl" />
+        @if (Services.GetService<PrivateAlphaAccessOptions>()?.Mode == PrivateAlphaAccessMode.Public
+            && Services.GetService<SeoMetadataGenerator>() is { } urls)
+        {
+            <script type="application/ld+json">@((MarkupString)SeoStructuredData.Serialize(
+                Metadata, urls, Kind, CultureInfo.CurrentUICulture.TwoLetterISOLanguageName,
+                Name, Parents, DateModified))</script>
+        }
+    </HeadContent>
+}
+
+@code {
+    [Parameter, EditorRequired] public SeoMetadata? Metadata { get; set; }
+    [Parameter] public StructuredPageKind Kind { get; set; }
+    [Parameter] public string? Name { get; set; }
+    [Parameter] public IReadOnlyList<SeoBreadcrumb>? Parents { get; set; }
+    [Parameter] public DateTimeOffset? DateModified { get; set; }
+}
