@@ -74,7 +74,7 @@ async function main() {
       try {
         const page = await context.newPage();
         page.setDefaultTimeout(20_000);
-        const categoryResponse = await page.goto(`${baseUrl}/countries/netherlands/categories/temporary-protection`, { waitUntil: 'networkidle' });
+        const categoryResponse = await page.goto(`${baseUrl}/${language}/countries/netherlands/categories/temporary-protection`, { waitUntil: 'networkidle' });
         assert.ok(categoryResponse?.ok(), `Category page returned ${categoryResponse?.status()}`);
         await assertLanguage(page, language);
         const article = page.locator(`#entry-${manifest.reviewedArticleId.replaceAll('-', '')}`);
@@ -104,7 +104,7 @@ async function main() {
           records.push(await saveFullPage(page, `core-category-${language}-${viewport.width}x${viewport.height}.png`, viewport));
         }
 
-        const compareResponse = await page.goto(`${baseUrl}/compare?country1=netherlands&country2=denmark&category=all`, { waitUntil: 'networkidle' });
+        const compareResponse = await page.goto(`${baseUrl}/${language}/compare?country1=netherlands&country2=denmark&category=all`, { waitUntil: 'networkidle' });
         assert.ok(compareResponse?.ok(), `Comparison page returned ${compareResponse?.status()}`);
         await assertLanguage(page, language);
         assert.ok(await page.locator('.structured-comparison').count(), 'Structured comparison did not render in Production');

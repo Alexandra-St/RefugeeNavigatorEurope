@@ -33,7 +33,7 @@ request_status() {
   shift 2
   local status
   status="$(curl --silent --connect-timeout 2 --max-time 10 \
-    --output "$work_dir/response-body" --write-out '%{http_code}' "$@" "$base_url$path")" \
+    --dump-header "$work_dir/response-headers" --output "$work_dir/response-body" --write-out '%{http_code}' "$@" "$base_url$path")" \
     || status="000"
   printf '%s' "$status"
 }
@@ -48,18 +48,28 @@ assert_status() {
   [[ "$actual" == "$expected" ]] || fail "$path returned HTTP $actual; expected $expected"
 }
 
+assert_location() {
+  local expected="$1"
+  local actual
+  actual="$(awk 'tolower($1) == "location:" { sub(/^[^:]+:[[:space:]]*/, ""); sub(/\r$/, ""); print }' "$2")"
+  [[ "$actual" == "$expected" ]] || fail "redirect destination did not match $expected"
+}
+
 wait_for_status() {
   local expected="$1"
   local base_url="$2"
   local path="$3"
-  shift 3
+  local container="$4"
+  shift 4
   local attempt actual
   for attempt in $(seq 1 30); do
     actual="$(request_status "$base_url" "$path" "$@")"
     [[ "$actual" == "$expected" ]] && return 0
     sleep 2
   done
-  fail "$path did not become ready with HTTP $expected"
+  docker inspect --format '{{.Name}} state={{.State.Status}} exit={{.State.ExitCode}} oom={{.State.OOMKilled}}' "$container" >&2 || true
+  docker logs "$container" 2>&1 | grep -oE 'Now listening on|Application started|Application is shutting down|Unhandled exception|Application startup exception' | tail -10 >&2 || true
+  fail "$path did not become ready with HTTP $expected; last observed HTTP $actual (000 means no HTTP response)"
 }
 
 check_startup_logs() {
@@ -90,18 +100,19 @@ expect_startup_failure() {
 
 printf 'Checking production image in public packaging mode...\n'
 public_url="$(start_container "$public_container" --env PORT=10000 --env PRIVATE_ALPHA_ACCESS_MODE=public)"
-wait_for_status 200 "$public_url" /
+wait_for_status 200 "$public_url" /uk/ "$public_container"
 
-for route in \
-  / \
-  /search \
-  /compare \
-  /countries/denmark \
-  /countries/denmark/categories/employment; do
-  assert_status 200 "$public_url" "$route"
+for route in / /search /compare /countries/denmark /countries/denmark/categories/employment; do
+  assert_status 308 "$public_url" "$route" -H 'Accept-Language: en'
+  assert_location "/uk$route" "$work_dir/response-headers"
+  for culture in en uk ru; do
+    assert_status 200 "$public_url" "/$culture$route"
+  done
 done
+assert_status 308 "$public_url" '/search?q=permit'
+assert_location '/uk/search?q=permit' "$work_dir/response-headers"
 
-assert_status 200 "$public_url" /
+assert_status 200 "$public_url" /uk/
 mapfile -t stylesheet_urls < <(grep --only-matching --extended-regexp 'href="[^"]+\.css[^"]*"' \
   "$work_dir/response-body" | sed -E 's/^href="([^"]+)"$/\1/')
 [[ "${#stylesheet_urls[@]}" -ge 2 ]] || fail "the page did not publish both global and isolated CSS assets"
@@ -120,7 +131,7 @@ for culture in uk en ru; do
     en) localized_heading='Page not found' ;;
     ru) localized_heading='Страница не найдена' ;;
   esac
-  assert_status 200 "$public_url" /not-found -H "Accept-Language: $culture"
+  assert_status 404 "$public_url" "/$culture/not-found"
   grep --ignore-case --fixed-strings "<html lang=\"$culture\"" "$work_dir/response-body" >/dev/null \
     || fail "the $culture document language was not rendered"
   if ! python3 - "$work_dir/response-body" "$localized_heading" <<'PY'
@@ -154,27 +165,29 @@ private_url="$(start_container "$private_container" \
   --env RENDER_EXTERNAL_URL=https://ci-smoke.onrender.com \
   --env "PRIVATE_ALPHA_USERNAME=$test_username" \
   --env "PRIVATE_ALPHA_PASSWORD=$test_password")"
-wait_for_status 401 "$private_url" /
+wait_for_status 401 "$private_url" /en/ "$private_container"
 
+assert_status 401 "$private_url" /en/
 assert_status 401 "$private_url" /
-assert_status 401 "$private_url" / --user "$test_username:incorrect-ci-password"
-assert_status 200 "$private_url" / --user "$test_username:$test_password"
+assert_status 401 "$private_url" /en/ --user "$test_username:incorrect-ci-password"
+assert_status 200 "$private_url" /en/ --user "$test_username:$test_password"
 assert_status 401 "$private_url" "$primary_stylesheet_path"
 assert_status 200 "$private_url" "$primary_stylesheet_path" --user "$test_username:$test_password"
-assert_status 401 "$private_url" '/set-language?culture=en&returnUrl=%2F'
+assert_status 401 "$private_url" '/set-language?culture=en&returnUrl=%2Fen%2F'
 
 language_status="$(curl --silent --connect-timeout 2 --max-time 10 \
   --user "$test_username:$test_password" \
   --dump-header "$work_dir/language-headers" --output /dev/null --write-out '%{http_code}' \
-  "$private_url/set-language?culture=en&returnUrl=%2F")" || language_status="000"
+  "$private_url/set-language?culture=en&returnUrl=%2Fen%2F")" || language_status="000"
 [[ "$language_status" == 302 ]] || fail "/set-language returned HTTP $language_status; expected 302"
+assert_location /en/ "$work_dir/language-headers"
 grep --ignore-case --extended-regexp '^Set-Cookie:.*;[[:space:]]*secure([;[:space:]]|$)' \
   "$work_dir/language-headers" >/dev/null || fail "the language cookie was not marked Secure"
 
 grep --ignore-case --fixed-strings 'X-Robots-Tag: noindex, nofollow' \
   "$work_dir/language-headers" >/dev/null || fail "private response omitted X-Robots-Tag"
 
-for route in /search /compare; do
+for route in /en/search /en/compare; do
   assert_status 200 "$private_url" "$route" --user "$test_username:$test_password"
 done
 check_startup_logs "$private_container"
