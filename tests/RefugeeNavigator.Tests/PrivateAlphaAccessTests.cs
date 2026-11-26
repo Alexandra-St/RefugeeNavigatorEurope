@@ -156,10 +156,10 @@ public sealed class PrivateAlphaAccessTests
     }
 
     [Theory]
-    [InlineData("public", false)]
+    [InlineData("public", true)]
     [InlineData(null, true)]
     [InlineData("private", true)]
-    public void RenderFreeTlsModeRequiresNonDevelopmentPrivateMode(string? mode, bool isDevelopment)
+    public void RenderFreeTlsModeRequiresNonDevelopmentEnvironment(string? mode, bool isDevelopment)
     {
         Assert.Throws<InvalidOperationException>(() => CreateOptions(
             mode,

@@ -224,15 +224,16 @@ public sealed class RemainingPageSeoTests(SeoHttpFixture http) : IClassFixture<S
     }
 }
 
-public sealed class SeoHttpFixture : IAsyncLifetime
+public class SeoHttpFixture : IAsyncLifetime
 {
+    protected virtual bool UsePublicRenderEdge => false;
     private Process? _server;
     public Uri Origin { get; private set; } = null!;
     public string Password { get; private set; } = string.Empty;
 
     public async Task InitializeAsync()
     {
-        if (Environment.GetEnvironmentVariable("RNE_SEO_TEST_URL") is { } endpoint)
+        if (!UsePublicRenderEdge && Environment.GetEnvironmentVariable("RNE_SEO_TEST_URL") is { } endpoint)
         {
             Origin = new Uri(endpoint);
             if (Origin.Scheme != "http" || Origin.Host != "127.0.0.1" || Origin.Port == 5088)
@@ -257,6 +258,19 @@ public sealed class SeoHttpFixture : IAsyncLifetime
         start.Environment["PRIVATE_ALPHA_TLS_MODE"] = "strict";
         start.Environment["PRIVATE_ALPHA_USERNAME"] = "rne-smoke";
         start.Environment["PRIVATE_ALPHA_PASSWORD"] = Password;
+        if (UsePublicRenderEdge)
+        {
+            start.Environment["ASPNETCORE_ENVIRONMENT"] = "Production";
+            start.Environment["DOTNET_ENVIRONMENT"] = "Production";
+            start.Environment["PRIVATE_ALPHA_ACCESS_MODE"] = "public";
+            start.Environment["PRIVATE_ALPHA_TLS_MODE"] = "render-free-edge";
+            start.Environment.Remove("PRIVATE_ALPHA_USERNAME");
+            start.Environment.Remove("PRIVATE_ALPHA_PASSWORD");
+            start.Environment.Remove("PRIVATE_ALPHA_TRUSTED_PROXY_IPS");
+            start.Environment["RENDER"] = "true";
+            start.Environment["RENDER_SERVICE_TYPE"] = "web";
+            start.Environment["RENDER_EXTERNAL_URL"] = "https://rne-test.onrender.com";
+        }
         _server = Process.Start(start) ?? throw new InvalidOperationException("Could not start the SEO test server.");
         var output = new StringBuilder();
         using var timeout = new CancellationTokenSource(TimeSpan.FromSeconds(30));

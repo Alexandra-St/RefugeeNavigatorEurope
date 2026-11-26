@@ -70,10 +70,7 @@ public sealed class PrivateAlphaAccessOptions
         {
             if (tlsMode == PrivateAlphaTlsMode.RenderFreeEdge)
             {
-                ValidateRenderFreeEdgeConfiguration(
-                    configuration,
-                    PrivateAlphaAccessMode.Development,
-                    isDevelopment);
+                ValidateRenderFreeEdgeConfiguration(configuration, isDevelopment);
             }
 
             return new PrivateAlphaAccessOptions(
@@ -94,7 +91,7 @@ public sealed class PrivateAlphaAccessOptions
 
         if (tlsMode == PrivateAlphaTlsMode.RenderFreeEdge)
         {
-            ValidateRenderFreeEdgeConfiguration(configuration, mode, isDevelopment);
+            ValidateRenderFreeEdgeConfiguration(configuration, isDevelopment);
         }
 
         if (mode == PrivateAlphaAccessMode.Public)
@@ -175,13 +172,12 @@ public sealed class PrivateAlphaAccessOptions
 
     private static void ValidateRenderFreeEdgeConfiguration(
         IConfiguration configuration,
-        PrivateAlphaAccessMode mode,
         bool isDevelopment)
     {
-        if (isDevelopment || mode != PrivateAlphaAccessMode.Private)
+        if (isDevelopment)
         {
             throw new InvalidOperationException(
-                "PRIVATE_ALPHA_TLS_MODE=render-free-edge requires non-Development private access mode.");
+                "PRIVATE_ALPHA_TLS_MODE=render-free-edge requires a non-Development environment.");
         }
 
         if (!string.Equals(configuration["RENDER"]?.Trim(), "true", StringComparison.OrdinalIgnoreCase)
